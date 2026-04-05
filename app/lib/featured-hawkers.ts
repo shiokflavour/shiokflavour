@@ -330,7 +330,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Hipster Favourite",
     hours: "6am–9pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
     description:
       "In Singapore's trendiest neighbourhood — a gorgeous Art Deco market building with heritage hawker stalls downstairs and a wet market above.",
     mustTry: ["Tiong Bahru Chwee Kueh", "Lor Mee", "Bao Today", "Tiong Bahru Bakery"],
@@ -484,8 +484,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     address: "105 Yishun Ring Road, Yishun",
     region: "North",
     tag: "Local Favourite",
-    hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1496116218417-1a781b1eca40?w=800&q=80",
+    hours: "6am–10pm daily",0
+    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
     description:
       "A large and popular market in Yishun serving the northern heartland community with a huge variety of food.",
     mustTry: ["Carrot Cake", "Char Kway Teow", "Mee Goreng", "Fresh Juice"],
@@ -528,7 +528,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3df1?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
     description:
       "A classic HDB heartland hawker centre in Toa Payoh — one of Singapore's oldest public housing estates with strong food heritage.",
     mustTry: ["Toa Payoh Lor Mee", "Wanton Mee", "Chicken Rice", "Soon Kueh"],
