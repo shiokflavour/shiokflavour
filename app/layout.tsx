@@ -50,6 +50,12 @@ export default function RootLayout({
 `,
           }}
         />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9032910149204767"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="min-h-full flex flex-col bg-sf-bg text-sf-cream">
         {children}
