@@ -4,7 +4,11 @@ import { HeroSection } from "./components/hero-section";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { getRegion, type HawkerRegion } from "./lib/hawker-api";
-import { REGION_FILTERS, type RegionFilter } from "./lib/featured-hawkers";
+import {
+  FEATURED_HAWKERS,
+  REGION_FILTERS,
+  type RegionFilter,
+} from "./lib/featured-hawkers";
 
 const flavourTrails = [
   {
@@ -66,6 +70,14 @@ type HawkerRow = {
   region: HawkerRegion;
 };
 
+/** Original 6 centres — fallback when data.gov.sg fails on Vercel or returns empty. */
+const STATIC_HAWKERS: HawkerRow[] = FEATURED_HAWKERS.map((h) => ({
+  id: h.id,
+  name: h.name,
+  address: `${h.area} · ${h.region} region`,
+  region: h.region,
+}));
+
 function mapRecord(r: ApiRecord): HawkerRow | null {
   const rawId = r._id ?? r.id;
   if (rawId === undefined || rawId === null) return null;
@@ -90,7 +102,10 @@ export default async function Home({
   const sp = await searchParams;
   const activeFilter = (sp.region as RegionFilter | undefined) ?? "All";
 
-  let rawRecords: ApiRecord[] = [];
+  let hawkers: ApiRecord[] | HawkerRow[] = STATIC_HAWKERS;
+  let listingFromApi = false;
+  let stallSum = 0;
+
   try {
     const response = await fetch(
       "https://data.gov.sg/api/action/datastore_search?resource_id=d_4a086da0a5553be1d89383cd90d07ecd&limit=100",
@@ -99,20 +114,63 @@ export default async function Home({
     const data = (await response.json()) as {
       result?: { records?: ApiRecord[] };
     };
-    if (Array.isArray(data?.result?.records)) {
-      rawRecords = data.result!.records!;
+    if (
+      response.ok &&
+      Array.isArray(data.result?.records) &&
+      data.result.records.length > 0
+    ) {
+      hawkers = data.result.records;
+      listingFromApi = true;
+    } else if (!response.ok) {
+      console.log(
+        "[ShiokFlavour] API HTTP",
+        response.status,
+        "— using static data,",
+        STATIC_HAWKERS.length,
+        "centres",
+      );
+    } else {
+      console.log(
+        "[ShiokFlavour] API returned no records; using static data,",
+        STATIC_HAWKERS.length,
+        "centres",
+      );
     }
-  } catch {
-    rawRecords = [];
+  } catch (e) {
+    console.log("[ShiokFlavour] API failed, using static data", e);
   }
 
-  const allRows: HawkerRow[] = [];
-  for (let i = 0; i < rawRecords.length; i++) {
-    const row = mapRecord(rawRecords[i]!);
-    if (row) allRows.push(row);
+  let allRows: HawkerRow[];
+  if (listingFromApi && Array.isArray(hawkers) && hawkers.length > 0) {
+    const rawRecords = hawkers as ApiRecord[];
+    allRows = [];
+    for (let i = 0; i < rawRecords.length; i++) {
+      const row = mapRecord(rawRecords[i]!);
+      if (row) allRows.push(row);
+    }
+    if (allRows.length === 0) {
+      listingFromApi = false;
+      allRows = STATIC_HAWKERS;
+      stallSum = 0;
+      console.log(
+        "[ShiokFlavour] API records unmappable; using static data (",
+        STATIC_HAWKERS.length,
+        "centres)",
+      );
+    } else {
+      stallSum = rawRecords.reduce((s, r) => s + parseStalls(r), 0);
+    }
+  } else {
+    allRows = STATIC_HAWKERS;
+    stallSum = 0;
   }
 
-  const stallSum = rawRecords.reduce((s, r) => s + parseStalls(r), 0);
+  console.log(
+    "[ShiokFlavour] Hawker listing source:",
+    listingFromApi ? "data.gov.sg API" : "STATIC_HAWKERS fallback",
+    "| count:",
+    allRows.length,
+  );
 
   const filtered =
     activeFilter === "All"
@@ -200,9 +258,9 @@ export default async function Home({
                 Hawker centres
               </h2>
               <p className="mt-3 text-sf-muted">
-                {allRows.length > 0
+                {listingFromApi
                   ? `Showing ${filtered.length.toLocaleString("en-SG")} of ${allRows.length.toLocaleString("en-SG")} centres from data.gov.sg.`
-                  : "No hawker data could be loaded from data.gov.sg right now."}
+                  : `Showing ${filtered.length.toLocaleString("en-SG")} of ${allRows.length.toLocaleString("en-SG")} featured centres (offline fallback).`}
               </p>
             </div>
 
