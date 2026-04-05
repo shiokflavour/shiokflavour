@@ -85,6 +85,32 @@ export function getRegion(address: string): HawkerRegion {
   return "Central";
 }
 
+/**
+ * Read a text field from a CKAN datastore row. Tries exact keys first (e.g. NAME,
+ * ADDRESS_MYENV), then case-insensitive match on the row — data.gov.sg uses uppercase ids.
+ */
+export function readDatastoreText(
+  record: Record<string, unknown>,
+  ...candidates: string[]
+): string {
+  for (const key of candidates) {
+    const v = record[key];
+    if (v === undefined || v === null || v === "") continue;
+    const s = String(v).trim();
+    if (s !== "") return s;
+  }
+  for (const key of candidates) {
+    const want = key.trim().toLowerCase();
+    for (const [k, v] of Object.entries(record)) {
+      if (k.trim().toLowerCase() !== want) continue;
+      if (v === undefined || v === null || v === "") continue;
+      const s = String(v).trim();
+      if (s !== "") return s;
+    }
+  }
+  return "";
+}
+
 function pickField(record: Record<string, unknown>, ...keys: string[]): unknown {
   for (const k of keys) {
     if (record[k] !== undefined && record[k] !== null && record[k] !== "")
@@ -102,20 +128,16 @@ function parseStalls(v: unknown): number | null {
 function mapRecord(record: Record<string, unknown>): HawkerCentre | null {
   const rawId = pickField(record, "_id", "id");
   if (rawId === null) return null;
-  const name = String(
-    pickField(record, "NAME", "name", "Name") ?? "",
-  ).trim();
-  const address = String(
-    pickField(
-      record,
-      "ADDRESS_MYENV",
-      "address_myenv",
-      "Address_MYENV",
-    ) ?? "",
-  ).trim();
+  const name = readDatastoreText(record, "NAME", "name", "Name");
+  const address = readDatastoreText(
+    record,
+    "ADDRESS_MYENV",
+    "address_myenv",
+    "Address_MYENV",
+  );
   if (!name && !address) return null;
 
-  const stalls = pickField(
+  const stallText = readDatastoreText(
     record,
     "NUMBER_OF_COOKED_FOOD_STALLS",
     "number_of_cooked_food_stalls",
@@ -129,7 +151,7 @@ function mapRecord(record: Record<string, unknown>): HawkerCentre | null {
     address: address || "—",
     latitude: null,
     longitude: null,
-    noOfStalls: parseStalls(stalls),
+    noOfStalls: stallText ? parseStalls(stallText) : null,
     region: getRegion(addrForRegion),
   };
 }

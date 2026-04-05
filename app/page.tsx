@@ -7,6 +7,7 @@ import {
   getHawkersForHome,
   getRegion,
   HAWKER_LIST_FETCH_URL,
+  readDatastoreText,
   type HawkerRegion,
 } from "./lib/hawker-api";
 import {
@@ -53,22 +54,16 @@ const VIBE_TAGS = [
 
 type ApiRecord = Record<string, unknown>;
 
-function strField(r: ApiRecord, ...keys: string[]): string {
-  for (const k of keys) {
-    const v = r[k];
-    if (v !== undefined && v !== null && v !== "") return String(v).trim();
-  }
-  return "";
-}
-
 /** Maps NUMBER_OF_COOKED_FOOD_STALLS → numeric stall count for hero stats. */
 function parseStallCount(r: ApiRecord): number {
-  const v =
-    r.NUMBER_OF_COOKED_FOOD_STALLS ??
-    r.number_of_cooked_food_stalls ??
-    r.Number_Of_Cooked_Food_Stalls;
-  if (v === undefined || v === null || v === "") return 0;
-  const n = Number.parseInt(String(v), 10);
+  const s = readDatastoreText(
+    r,
+    "NUMBER_OF_COOKED_FOOD_STALLS",
+    "number_of_cooked_food_stalls",
+    "Number_Of_Cooked_Food_Stalls",
+  );
+  if (!s) return 0;
+  const n = Number.parseInt(s, 10);
   return Number.isFinite(n) ? n : 0;
 }
 
@@ -90,9 +85,14 @@ const STATIC_HAWKERS: HawkerRow[] = FEATURED_HAWKERS.map((h) => ({
 function mapRecord(r: ApiRecord): HawkerRow | null {
   const rawId = r._id ?? r.id;
   if (rawId === undefined || rawId === null) return null;
-  const name = strField(r, "NAME", "name", "Name") || "Hawker centre";
+  const name = readDatastoreText(r, "NAME", "name", "Name") || "Hawker centre";
   const address =
-    strField(r, "ADDRESS_MYENV", "address_myenv", "Address_MYENV") || "—";
+    readDatastoreText(
+      r,
+      "ADDRESS_MYENV",
+      "address_myenv",
+      "Address_MYENV",
+    ) || "—";
   const region = getRegion(address || name);
   return {
     id: String(rawId),

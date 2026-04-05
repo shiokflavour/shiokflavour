@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FEATURED_HAWKERS } from "../lib/featured-hawkers";
 
+/** Shape mirrors data.gov.sg row ids (NAME, ADDRESS_MYENV) for consistency. */
 export const STATIC_CARDS = FEATURED_HAWKERS.map((h) => ({
   id: h.id,
-  name: h.name,
-  address_myenv: `${h.area} · ${h.region} region`,
+  NAME: h.name,
+  ADDRESS_MYENV: `${h.area} · ${h.region} region`,
   tag: h.tag,
   hours: h.hours,
   imageUrl: h.imageUrl,
@@ -61,10 +62,10 @@ export function HawkerGrid() {
                     {record.tag}
                   </span>
                   <h3 className="text-lg font-semibold text-sf-cream group-hover:text-sf-primary/95">
-                    {record.name}
+                    {record.NAME}
                   </h3>
                   <p className="mt-1 line-clamp-3 text-sm text-sf-muted">
-                    {record.address_myenv}
+                    {record.ADDRESS_MYENV}
                   </p>
                   <div className="mt-4 border-t border-white/10 pt-4">
                     <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
