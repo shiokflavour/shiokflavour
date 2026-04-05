@@ -67,7 +67,7 @@ export function HeroSection({
 
         <div className="mt-10 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center sm:gap-4">
           <Link
-            href="#hawker-centres"
+            href="/hawker-centres"
             className="inline-flex min-h-12 items-center justify-center rounded-xl bg-sf-primary px-8 text-sm font-semibold text-white shadow-lg shadow-sf-primary/25 transition hover:bg-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-cream"
           >
             Explore Hawker Centres

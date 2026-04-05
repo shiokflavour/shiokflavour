@@ -3,18 +3,10 @@ import { HeroSection } from "./components/hero-section";
 import { HawkerCentreCard } from "./components/hawker-centre-card";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
-import {
-  getHawkersForHome,
-  getRegion,
-  HAWKER_LIST_FETCH_URL,
-  readDatastoreText,
-  type HawkerRegion,
-} from "./lib/hawker-api";
-import {
-  FEATURED_HAWKERS,
-  REGION_FILTERS,
-  type RegionFilter,
-} from "./lib/featured-hawkers";
+import { getHawkersForHome } from "./lib/hawker-api";
+import { FEATURED_HAWKERS } from "./lib/featured-hawkers";
+
+const EDITOR_PICK_IDS = [1, 5, 6] as const;
 
 const flavourTrails = [
   {
@@ -34,206 +26,23 @@ const flavourTrails = [
   },
 ];
 
-const CARD_IMAGES = [
-  "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400",
-  "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400",
-  "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=400",
-  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400",
-  "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400",
-  "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400",
-];
-
-const VIBE_TAGS = [
-  "Local Favourite",
-  "Tourist Must-Visit",
-  "Budget Eats",
-  "Supper Spot",
-  "Halal Haven",
-  "Michelin Alert",
-  "Office Favourite",
-  "Hipster Favourite",
-];
-
-type ApiRecord = Record<string, unknown>;
-
-/** Maps NUMBER_OF_COOKED_FOOD_STALLS → numeric stall count for hero stats. */
-function parseStallCount(r: ApiRecord): number {
-  const s = readDatastoreText(
-    r,
-    "NUMBER_OF_COOKED_FOOD_STALLS",
-    "number_of_cooked_food_stalls",
-    "Number_Of_Cooked_Food_Stalls",
-  );
-  if (!s) return 0;
-  const n = Number.parseInt(s, 10);
-  return Number.isFinite(n) ? n : 0;
-}
-
-type HawkerRow = {
-  id: string;
-  name: string;
-  address: string;
-  region: HawkerRegion;
-  tag?: string;
-  hours?: string;
-  imageUrl?: string;
-  mustTry?: string[];
-  michelinNote?: string;
-  halal?: boolean;
-  openLate?: boolean;
-  budgetPerPax?: string;
-  nearestMRT?: string;
-};
-
-/** Featured guide — fallback when data.gov.sg fails or returns empty. */
-const STATIC_HAWKERS: HawkerRow[] = FEATURED_HAWKERS.map((h) => ({
-  id: String(h.id),
-  name: h.name,
-  address: h.address,
-  region: h.region,
-  tag: h.tag,
-  hours: h.hours,
-  imageUrl: h.imageUrl,
-  mustTry: h.mustTry,
-  michelinNote: h.michelinNote,
-  halal: h.halal,
-  openLate: h.openLate,
-  budgetPerPax: h.budgetPerPax,
-  nearestMRT: h.nearestMRT,
-}));
-
-function mapRecord(r: ApiRecord): HawkerRow | null {
-  const rawId = r._id ?? r.id;
-  if (rawId === undefined || rawId === null) return null;
-  const name = readDatastoreText(r, "NAME", "name", "Name") || "Hawker centre";
-  const address =
-    readDatastoreText(
-      r,
-      "ADDRESS_MYENV",
-      "address_myenv",
-      "Address_MYENV",
-    ) || "—";
-  const region = getRegion(address || name);
-  return {
-    id: String(rawId),
-    name,
-    address,
-    region,
-  };
-}
-
-type SearchParams = Promise<{ region?: string }>;
-
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: SearchParams;
-}) {
-  const sp = await searchParams;
-  const activeFilter = (sp.region as RegionFilter | undefined) ?? "All";
-
-  let hawkers: ApiRecord[] | HawkerRow[] = STATIC_HAWKERS;
-  let listingFromApi = false;
-  let stallSum = 0;
-  let apiDatasetTotal: number | undefined;
-
+export default async function Home() {
+  let hawkerCentreCount: number | undefined;
+  let foodStallCount: number | undefined;
   try {
-    const response = await fetch(HAWKER_LIST_FETCH_URL, {
-      next: { revalidate: 86400 },
-    });
-    const data = (await response.json()) as {
-      result?: { records?: ApiRecord[]; total?: number };
-    };
-    if (typeof data.result?.total === "number" && data.result.total >= 0) {
-      apiDatasetTotal = data.result.total;
-    }
-    if (
-      response.ok &&
-      Array.isArray(data.result?.records) &&
-      data.result.records.length > 0
-    ) {
-      const first = data.result.records[0];
-      console.log(
-        "[ShiokFlavour] First API record (shape check):",
-        JSON.stringify(first, null, 2),
-      );
-      hawkers = data.result.records;
-      listingFromApi = true;
-    } else if (!response.ok) {
-      console.log(
-        "[ShiokFlavour] API HTTP",
-        response.status,
-        "— using static data,",
-        STATIC_HAWKERS.length,
-        "centres",
-      );
-    } else {
-      console.log(
-        "[ShiokFlavour] API returned no records; using static data,",
-        STATIC_HAWKERS.length,
-        "centres",
-      );
-    }
-  } catch (e) {
-    console.log("[ShiokFlavour] API failed, using static data", e);
-  }
-
-  let allRows: HawkerRow[];
-  if (listingFromApi && Array.isArray(hawkers) && hawkers.length > 0) {
-    const rawRecords = hawkers as ApiRecord[];
-    allRows = [];
-    for (let i = 0; i < rawRecords.length; i++) {
-      const row = mapRecord(rawRecords[i]!);
-      if (row) allRows.push(row);
-    }
-    if (allRows.length === 0) {
-      listingFromApi = false;
-      allRows = STATIC_HAWKERS;
-      stallSum = 0;
-      console.log(
-        "[ShiokFlavour] API records unmappable; using static data (",
-        STATIC_HAWKERS.length,
-        "centres)",
-      );
-    } else {
-      stallSum = rawRecords.reduce((s, r) => s + parseStallCount(r), 0);
-    }
-  } else {
-    allRows = STATIC_HAWKERS;
-    stallSum = 0;
-  }
-
-  console.log(
-    "[ShiokFlavour] Hawker listing source:",
-    listingFromApi ? "data.gov.sg API" : "STATIC_HAWKERS fallback",
-    "| count:",
-    allRows.length,
-  );
-
-  let heroHawkerCentreCount = allRows.length;
-  let heroFoodStallCount: number | undefined =
-    stallSum > 0 ? stallSum : undefined;
-  if (listingFromApi) {
     const full = await getHawkersForHome();
-    if (full.length >= allRows.length) {
-      heroHawkerCentreCount = full.length;
+    if (full.length > 0) {
+      hawkerCentreCount = full.length;
       const sum = full.reduce((s, h) => s + (h.noOfStalls ?? 0), 0);
-      if (sum > 0) heroFoodStallCount = sum;
-    } else if (
-      apiDatasetTotal != null &&
-      apiDatasetTotal > 0 &&
-      apiDatasetTotal > allRows.length
-    ) {
-      heroHawkerCentreCount = apiDatasetTotal;
+      if (sum > 0) foodStallCount = sum;
     }
+  } catch {
+    /* hero falls back to placeholders inside HeroSection */
   }
 
-  allRows = STATIC_HAWKERS;
-
-  const filtered =
-    activeFilter === "All"
-      ? allRows
-      : allRows.filter((h) => h.region === activeFilter);
+  const editorPicks = EDITOR_PICK_IDS.map((id) =>
+    FEATURED_HAWKERS.find((h) => h.id === id),
+  ).filter((h): h is (typeof FEATURED_HAWKERS)[number] => h != null);
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -241,8 +50,8 @@ export default async function Home({
 
       <main className="flex-1">
         <HeroSection
-          hawkerCentreCount={heroHawkerCentreCount}
-          foodStallCount={heroFoodStallCount}
+          hawkerCentreCount={hawkerCentreCount}
+          foodStallCount={foodStallCount}
         />
 
         <section
@@ -253,7 +62,7 @@ export default async function Home({
           <form
             className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-sf-surface/80 p-2 shadow-xl shadow-black/40 backdrop-blur-sm sm:flex-row sm:items-stretch sm:p-2"
             role="search"
-            action="/"
+            action="/hawker-centres"
             method="get"
           >
             <label htmlFor="search-query" className="sr-only">
@@ -276,121 +85,57 @@ export default async function Home({
         </section>
 
         <section
-          id="restaurants"
-          className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8"
-          aria-labelledby="restaurants-heading"
-        >
-          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-sf-surface/60 to-sf-bg px-6 py-8 sm:px-10 sm:py-10">
-            <h2
-              id="restaurants-heading"
-              className="text-2xl font-semibold text-sf-cream"
-            >
-              Restaurants & cafés
-            </h2>
-            <p className="mt-2 max-w-2xl text-sf-muted">
-              From zi char to mod-Sin tasting menus — browse by neighbourhood
-              and cuisine. Start with a search above or explore hawker gems
-              first.
-            </p>
-            <Link
-              href="#discover"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-sf-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
-            >
-              Search restaurants
-              <span aria-hidden>→</span>
-            </Link>
-          </div>
-        </section>
-
-        <section
-          id="hawker-centres"
+          id="editors-picks"
           className="border-t border-white/5 bg-black/20 px-4 py-16 sm:px-6 lg:px-8"
-          aria-labelledby="hawkers-heading"
+          aria-labelledby="editors-picks-heading"
         >
           <div className="mx-auto max-w-6xl">
-            <div className="mb-8 max-w-2xl">
+            <div className="mb-10 max-w-2xl">
               <h2
-                id="hawkers-heading"
+                id="editors-picks-heading"
                 className="text-3xl font-bold tracking-tight text-sf-cream sm:text-4xl"
               >
-                Hawker centres
+                Editor&apos;s picks
               </h2>
               <p className="mt-3 text-sf-muted">
-                {listingFromApi
-                  ? `Showing ${filtered.length.toLocaleString("en-SG")} of ${allRows.length.toLocaleString("en-SG")} centres from data.gov.sg.`
-                  : `Showing ${filtered.length.toLocaleString("en-SG")} of ${allRows.length.toLocaleString("en-SG")} featured centres (offline fallback).`}
+                Three hawker legends to start your flavour trail — from iconic
+                chicken rice to Little India and Crazy Rich Asians fame.
               </p>
             </div>
 
-            <div
-              className="mb-10 flex flex-wrap gap-2"
-              role="toolbar"
-              aria-label="Filter by region"
-            >
-              {REGION_FILTERS.map((region) => {
-                const isActive = activeFilter === region;
-                const href =
-                  region === "All" ? "/" : `/?region=${encodeURIComponent(region)}`;
-                return (
-                  <Link
-                    key={region}
-                    href={href}
-                    scroll={false}
-                    className={`rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary ${
-                      isActive
-                        ? "scale-[1.02] bg-sf-primary text-white shadow-md shadow-sf-primary/30"
-                        : "border border-white/20 bg-transparent text-sf-muted hover:border-sf-primary/50 hover:text-sf-cream"
-                    }`}
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    {region}
-                  </Link>
-                );
-              })}
-            </div>
+            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {editorPicks.map((h, index) => (
+                <HawkerCentreCard
+                  key={h.id}
+                  index={index}
+                  data={{
+                    id: String(h.id),
+                    name: h.name,
+                    address: h.address,
+                    region: h.region,
+                    imageUrl: h.imageUrl,
+                    primaryTag: h.tag,
+                    hoursLabel: h.hours,
+                    mustTry: h.mustTry,
+                    michelinNote: h.michelinNote,
+                    halal: h.halal,
+                    openLate: h.openLate,
+                    budgetPerPax: h.budgetPerPax,
+                    nearestMRT: h.nearestMRT,
+                  }}
+                />
+              ))}
+            </ul>
 
-            {filtered.length === 0 ? (
-              <p className="rounded-2xl border border-white/10 bg-sf-surface/40 px-6 py-10 text-center text-sf-muted">
-                No centres match this filter.{" "}
-                <Link
-                  href="/"
-                  className="font-semibold text-sf-primary underline decoration-sf-primary/50 underline-offset-2 hover:decoration-sf-primary"
-                >
-                  Show all
-                </Link>
-                .
-              </p>
-            ) : (
-              <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {filtered.map((h, index) => (
-                  <HawkerCentreCard
-                    key={h.id}
-                    index={index}
-                    data={{
-                      id: h.id,
-                      name: h.name,
-                      address: h.address,
-                      region: h.region,
-                      imageUrl:
-                        h.imageUrl ??
-                        CARD_IMAGES[index % CARD_IMAGES.length] ??
-                        CARD_IMAGES[0]!,
-                      primaryTag:
-                        h.tag ??
-                        VIBE_TAGS[index % VIBE_TAGS.length] ??
-                        "Local Favourite",
-                      hoursLabel: h.hours,
-                      mustTry: h.mustTry,
-                      michelinNote: h.michelinNote,
-                      halal: h.halal,
-                      openLate: h.openLate,
-                      budgetPerPax: h.budgetPerPax,
-                      nearestMRT: h.nearestMRT,
-                    }}
-                  />
-                ))}
-              </ul>
-            )}
+            <p className="mt-10">
+              <Link
+                href="/hawker-centres"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-sf-primary transition hover:text-sf-primary/90 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
+              >
+                View all 22 centres
+                <span aria-hidden>→</span>
+              </Link>
+            </p>
           </div>
         </section>
 

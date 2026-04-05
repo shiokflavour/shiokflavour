@@ -162,7 +162,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
               ← Back to homepage
             </Link>
             <Link
-              href="/#hawker-centres"
+              href="/hawker-centres"
               className="inline-flex min-h-11 items-center justify-center rounded-xl bg-sf-primary px-6 text-sm font-semibold text-white transition hover:bg-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-cream"
             >
               Hawker centres
@@ -217,7 +217,7 @@ function ApiHawkerPage({ hawker }: { hawker: HawkerCentre }) {
               ← Back to homepage
             </Link>
             <Link
-              href="/#hawker-centres"
+              href="/hawker-centres"
               className="inline-flex min-h-11 items-center justify-center rounded-xl bg-sf-primary px-6 text-sm font-semibold text-white transition hover:bg-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-cream"
             >
               Hawker centres

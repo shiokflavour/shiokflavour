@@ -1,7 +1,6 @@
 export const MAIN_NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/#hawker-centres", label: "Hawker Centres" },
-  { href: "/#restaurants", label: "Restaurants" },
+  { href: "/hawker-centres", label: "Hawker Centres" },
   { href: "/#flavour-trail", label: "Flavour Trail" },
   { href: "/#discover", label: "Near Me" },
 ] as const;
