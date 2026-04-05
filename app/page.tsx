@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { HeroSection } from "./components/hero-section";
+import { HawkerCentreCard } from "./components/hawker-centre-card";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import {
@@ -49,7 +49,9 @@ const VIBE_TAGS = [
   "Budget Eats",
   "Supper Spot",
   "Halal Haven",
-  "Local Favourite",
+  "Michelin Alert",
+  "Office Favourite",
+  "Hipster Favourite",
 ];
 
 type ApiRecord = Record<string, unknown>;
@@ -72,14 +74,32 @@ type HawkerRow = {
   name: string;
   address: string;
   region: HawkerRegion;
+  tag?: string;
+  hours?: string;
+  imageUrl?: string;
+  mustTry?: string[];
+  michelinNote?: string;
+  halal?: boolean;
+  openLate?: boolean;
+  budgetPerPax?: string;
+  nearestMRT?: string;
 };
 
-/** Original 6 centres — fallback when data.gov.sg fails on Vercel or returns empty. */
+/** Featured guide — fallback when data.gov.sg fails or returns empty. */
 const STATIC_HAWKERS: HawkerRow[] = FEATURED_HAWKERS.map((h) => ({
-  id: h.id,
+  id: String(h.id),
   name: h.name,
-  address: `${h.area} · ${h.region} region`,
+  address: h.address,
   region: h.region,
+  tag: h.tag,
+  hours: h.hours,
+  imageUrl: h.imageUrl,
+  mustTry: h.mustTry,
+  michelinNote: h.michelinNote,
+  halal: h.halal,
+  openLate: h.openLate,
+  budgetPerPax: h.budgetPerPax,
+  nearestMRT: h.nearestMRT,
 }));
 
 function mapRecord(r: ApiRecord): HawkerRow | null {
@@ -340,67 +360,33 @@ export default async function Home({
               </p>
             ) : (
               <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {filtered.map((h, index) => {
-                  const imageUrl =
-                    CARD_IMAGES[index % CARD_IMAGES.length] ?? CARD_IMAGES[0];
-                  const tag = VIBE_TAGS[index % VIBE_TAGS.length];
-                  return (
-                    <li
-                      key={h.id}
-                      className="sf-hawker-card-in"
-                      style={{
-                        animationDelay: `${Math.min(index, 20) * 40}ms`,
-                      }}
-                    >
-                      <article
-                        id={`hawker-${h.id}`}
-                        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-sf-primary/25 bg-gradient-to-br from-sf-primary/[0.14] via-sf-primary/[0.05] to-sf-surface/70 transition duration-300 ease-out hover:border-sf-primary/45 hover:shadow-lg hover:shadow-sf-primary/10"
-                      >
-                        <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden">
-                          <Image
-                            src={imageUrl}
-                            alt=""
-                            fill
-                            className="object-cover transition duration-500 ease-out group-hover:scale-[1.04]"
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          />
-                          <div
-                            className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e]/70 via-transparent to-transparent"
-                            aria-hidden
-                          />
-                        </div>
-                        <div className="flex flex-1 flex-col p-5">
-                          <span className="mb-3 inline-flex w-fit rounded-full border border-sf-primary/45 bg-sf-primary/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sf-primary">
-                            {tag}
-                          </span>
-                          <h3 className="text-lg font-semibold text-sf-cream group-hover:text-sf-primary/95">
-                            {h.name}
-                          </h3>
-                          <p className="mt-1 line-clamp-3 text-sm text-sf-muted">
-                            {h.address}
-                          </p>
-                          <p className="mt-0.5 text-xs text-sf-muted/90">
-                            {h.region} region
-                          </p>
-                          <div className="mt-4 border-t border-white/10 pt-4">
-                            <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
-                              Opening hours
-                            </p>
-                            <p className="mt-1 text-sm text-sf-cream/95">
-                              Varies by stall
-                            </p>
-                          </div>
-                          <Link
-                            href={`/hawker/${encodeURIComponent(h.id)}`}
-                            className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-sf-primary px-4 text-sm font-semibold text-white transition hover:bg-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-cream"
-                          >
-                            View Centre
-                          </Link>
-                        </div>
-                      </article>
-                    </li>
-                  );
-                })}
+                {filtered.map((h, index) => (
+                  <HawkerCentreCard
+                    key={h.id}
+                    index={index}
+                    data={{
+                      id: h.id,
+                      name: h.name,
+                      address: h.address,
+                      region: h.region,
+                      imageUrl:
+                        h.imageUrl ??
+                        CARD_IMAGES[index % CARD_IMAGES.length] ??
+                        CARD_IMAGES[0]!,
+                      primaryTag:
+                        h.tag ??
+                        VIBE_TAGS[index % VIBE_TAGS.length] ??
+                        "Local Favourite",
+                      hoursLabel: h.hours,
+                      mustTry: h.mustTry,
+                      michelinNote: h.michelinNote,
+                      halal: h.halal,
+                      openLate: h.openLate,
+                      budgetPerPax: h.budgetPerPax,
+                      nearestMRT: h.nearestMRT,
+                    }}
+                  />
+                ))}
               </ul>
             )}
           </div>
