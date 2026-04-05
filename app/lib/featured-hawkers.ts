@@ -484,7 +484,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     address: "105 Yishun Ring Road, Yishun",
     region: "North",
     tag: "Local Favourite",
-    hours: "6am–10pm daily",0
+    hours: "6am–10pm daily",
     imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
     description:
       "A large and popular market in Yishun serving the northern heartland community with a huge variety of food.",
