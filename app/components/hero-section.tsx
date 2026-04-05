@@ -50,7 +50,7 @@ export function HeroSection() {
             alt=""
             fill
             priority={i === 0}
-            className={`absolute inset-0 object-cover transition-opacity duration-[1500ms] ease-in-out ${
+            className={`absolute inset-0 object-cover transition-opacity ease-in-out duration-[1500ms] ${
               activeBg === i ? "z-[2] opacity-100" : "z-[1] opacity-0"
             }`}
             sizes="100vw"
