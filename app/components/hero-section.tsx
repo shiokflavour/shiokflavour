@@ -4,7 +4,27 @@ import Link from "next/link";
 const HERO_BG =
   "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&q=80";
 
-export function HeroSection() {
+export type HeroSectionProps = {
+  hawkerCentreCount?: number;
+  foodStallCount?: number;
+};
+
+function formatStat(n: number): string {
+  return n.toLocaleString("en-SG");
+}
+
+export function HeroSection({
+  hawkerCentreCount,
+  foodStallCount,
+}: HeroSectionProps = {}) {
+  const centreLabel =
+    hawkerCentreCount != null
+      ? formatStat(hawkerCentreCount)
+      : "130+";
+  const stallLabel =
+    foodStallCount != null && foodStallCount > 0
+      ? formatStat(foodStallCount)
+      : "1,000+";
   return (
     <section
       className="relative flex min-h-[90vh] w-full flex-col justify-center overflow-hidden border-b border-white/5 px-4 py-20 sm:px-6 lg:px-8"
@@ -66,7 +86,7 @@ export function HeroSection() {
         >
           <li className="sf-hero-stat rounded-xl border border-white/10 bg-black/25 px-4 py-4 backdrop-blur-sm sm:py-5">
             <p className="text-2xl font-bold tabular-nums text-sf-primary sm:text-3xl">
-              130+
+              {centreLabel}
             </p>
             <p className="mt-1 text-sm font-medium text-sf-cream/90">
               Hawker Centres
@@ -74,7 +94,7 @@ export function HeroSection() {
           </li>
           <li className="sf-hero-stat rounded-xl border border-white/10 bg-black/25 px-4 py-4 backdrop-blur-sm sm:py-5">
             <p className="text-2xl font-bold tabular-nums text-sf-primary sm:text-3xl">
-              1,000+
+              {stallLabel}
             </p>
             <p className="mt-1 text-sm font-medium text-sf-cream/90">
               Food Stalls
