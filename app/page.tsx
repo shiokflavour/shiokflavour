@@ -42,6 +42,14 @@ export default async function Home() {
           className="mx-auto max-w-3xl -translate-y-8 px-4 sm:px-6 lg:px-8"
           aria-label="Search"
         >
+          <div className="mb-6 text-center sm:text-left">
+            <h2 className="text-3xl font-bold tracking-tight text-sf-cream sm:text-4xl">
+              Find your next meal
+            </h2>
+            <p className="mt-2 text-base text-sf-muted sm:text-lg">
+              Search hawker centres by name, dish or district.
+            </p>
+          </div>
           <form
             className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-sf-surface/80 p-2 shadow-xl shadow-black/40 backdrop-blur-sm sm:flex-row sm:items-stretch sm:p-2"
             role="search"

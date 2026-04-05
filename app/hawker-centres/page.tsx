@@ -13,6 +13,21 @@ import {
   type RegionFilter,
 } from "../lib/featured-hawkers";
 
+/** Case-insensitive substring match across name, address, region, tag, mustTry, vibes. */
+function matchesQuery(h: FeaturedHawker, raw: string): boolean {
+  const q = raw.trim().toLowerCase();
+  if (!q) return true;
+  const fields = [
+    h.name,
+    h.address,
+    h.region,
+    h.tag,
+    ...h.mustTry,
+    ...h.vibes,
+  ];
+  return fields.some((s) => String(s).toLowerCase().includes(q));
+}
+
 function matchesOccasionTag(h: FeaturedHawker, tag: string): boolean {
   const t = tag.toLowerCase().trim();
   switch (t) {
@@ -40,6 +55,7 @@ function matchesOccasionTag(h: FeaturedHawker, tag: string): boolean {
 function HawkerCentresInner() {
   const searchParams = useSearchParams();
   const tagParam = searchParams.get("tag");
+  const qParam = searchParams.get("q") ?? "";
 
   const [activeRegion, setActiveRegion] = useState<RegionFilter>("All");
 
@@ -51,8 +67,16 @@ function HawkerCentresInner() {
     if (tagParam) {
       list = list.filter((h) => matchesOccasionTag(h, tagParam));
     }
+    if (qParam.trim()) {
+      list = list.filter((h) => matchesQuery(h, qParam));
+    }
     return list;
-  }, [activeRegion, tagParam]);
+  }, [activeRegion, tagParam, qParam]);
+
+  const clearSearchHref =
+    tagParam != null && tagParam !== ""
+      ? `/hawker-centres?tag=${encodeURIComponent(tagParam)}`
+      : "/hawker-centres";
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -65,8 +89,24 @@ function HawkerCentresInner() {
           </h1>
           <p className="mt-2 max-w-2xl text-sf-muted">
             {FEATURED_HAWKERS.length} curated spots — filter by region
-            {tagParam ? " and occasion." : "."}
+            {tagParam ? " and occasion" : ""}, or search by name, dish, or area.
           </p>
+
+          {qParam.trim() ? (
+            <p className="mt-3 text-sm text-sf-cream/90">
+              Search:{" "}
+              <span className="font-semibold text-sf-primary">
+                &quot;{qParam.trim()}&quot;
+              </span>
+              {" · "}
+              <Link
+                href={clearSearchHref}
+                className="font-medium text-sf-primary underline decoration-sf-primary/50 underline-offset-2 hover:decoration-sf-primary"
+              >
+                Clear search
+              </Link>
+            </p>
+          ) : null}
 
           {tagParam ? (
             <p className="mt-3 text-sm text-sf-cream/90">
