@@ -55,7 +55,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Tourist Must-Visit",
     hours: "24 hours (most stalls 7am–10pm)",
-    imageUrl: "https://images.unsplash.com/photo-1529006557810-274f81e747bc?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
     description:
       "A Victorian cast-iron market building in the heart of the CBD. Famous for its Boon Tat Street satay stalls that fire up at night.",
     mustTry: ["Satay (Boon Tat Street)", "Rojak", "Carrot Cake", "Popiah"],
@@ -307,7 +307,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Office Favourite",
     hours: "7am–3pm (breakfast and lunch only)",
-    imageUrl: "https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=800&q=80",
     description:
       "A lunchtime institution in the CBD — packed with office workers daily. Some of the best traditional Singaporean breakfast and lunch options.",
     mustTry: ["A Noodle Story", "Hoo Kee Bak Chang", "Breakfast Popiah"],
