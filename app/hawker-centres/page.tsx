@@ -1,22 +1,58 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { Suspense, useMemo, useState } from "react";
 import { HawkerCentreCard } from "../components/hawker-centre-card";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
 import {
   FEATURED_HAWKERS,
   REGION_FILTERS,
+  type FeaturedHawker,
   type RegionFilter,
 } from "../lib/featured-hawkers";
 
-export default function HawkerCentresPage() {
+function matchesOccasionTag(h: FeaturedHawker, tag: string): boolean {
+  const t = tag.toLowerCase().trim();
+  switch (t) {
+    case "breakfast":
+      return /breakfast|6am|7am|8am|morning/i.test(
+        `${h.hours} ${h.description} ${h.vibes.join(" ")}`,
+      );
+    case "late-night":
+      return h.openLate === true;
+    case "halal":
+      return h.halal === true;
+    case "mrt":
+      return /\bMRT\b/i.test(h.nearestMRT);
+    case "budget":
+      return (
+        h.tag === "Budget Eats" || /^\$[3-4]/.test(h.budgetPerPax.trim())
+      );
+    case "michelin":
+      return h.michelinNote.trim().length > 0 || /michelin/i.test(h.tag);
+    default:
+      return true;
+  }
+}
+
+function HawkerCentresInner() {
+  const searchParams = useSearchParams();
+  const tagParam = searchParams.get("tag");
+
   const [activeRegion, setActiveRegion] = useState<RegionFilter>("All");
 
   const filtered = useMemo(() => {
-    if (activeRegion === "All") return FEATURED_HAWKERS;
-    return FEATURED_HAWKERS.filter((h) => h.region === activeRegion);
-  }, [activeRegion]);
+    let list = FEATURED_HAWKERS;
+    if (activeRegion !== "All") {
+      list = list.filter((h) => h.region === activeRegion);
+    }
+    if (tagParam) {
+      list = list.filter((h) => matchesOccasionTag(h, tagParam));
+    }
+    return list;
+  }, [activeRegion, tagParam]);
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -28,8 +64,25 @@ export default function HawkerCentresPage() {
             Hawker Centres
           </h1>
           <p className="mt-2 max-w-2xl text-sf-muted">
-            {FEATURED_HAWKERS.length} curated spots — filter by region.
+            {FEATURED_HAWKERS.length} curated spots — filter by region
+            {tagParam ? " and occasion." : "."}
           </p>
+
+          {tagParam ? (
+            <p className="mt-3 text-sm text-sf-cream/90">
+              Occasion:{" "}
+              <span className="font-semibold text-sf-primary">
+                {tagParam.replace(/-/g, " ")}
+              </span>
+              {" · "}
+              <Link
+                href="/hawker-centres"
+                className="font-medium text-sf-primary underline decoration-sf-primary/50 underline-offset-2 hover:decoration-sf-primary"
+              >
+                Clear occasion filter
+              </Link>
+            </p>
+          ) : null}
 
           <div
             className="mt-10 flex flex-wrap gap-2"
@@ -58,7 +111,14 @@ export default function HawkerCentresPage() {
 
           {filtered.length === 0 ? (
             <p className="mt-10 rounded-2xl border border-white/10 bg-sf-surface/40 px-6 py-10 text-center text-sf-muted">
-              No centres in this region.
+              No centres match these filters.{" "}
+              <Link
+                href="/hawker-centres"
+                className="font-semibold text-sf-primary underline decoration-sf-primary/50 underline-offset-2 hover:decoration-sf-primary"
+              >
+                Reset filters
+              </Link>
+              .
             </p>
           ) : (
             <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -90,5 +150,25 @@ export default function HawkerCentresPage() {
 
       <SiteFooter />
     </div>
+  );
+}
+
+function HawkerCentresFallback() {
+  return (
+    <div className="flex min-h-full flex-1 flex-col">
+      <SiteHeader />
+      <main className="flex flex-1 items-center justify-center px-4 py-16 text-sf-muted">
+        <p>Loading hawker centres…</p>
+      </main>
+      <SiteFooter />
+    </div>
+  );
+}
+
+export default function HawkerCentresPage() {
+  return (
+    <Suspense fallback={<HawkerCentresFallback />}>
+      <HawkerCentresInner />
+    </Suspense>
   );
 }

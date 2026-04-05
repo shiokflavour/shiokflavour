@@ -1,8 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-const HERO_BG =
-  "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&q=80";
+const HERO_IMAGES = [
+  "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1600&q=80",
+  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80",
+  "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=1600&q=80",
+  "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80",
+  "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1600&q=80",
+] as const;
+
+const OCCASION_TAGS = [
+  { label: "Breakfast", href: "/hawker-centres?tag=breakfast" },
+  { label: "Late Night", href: "/hawker-centres?tag=late-night" },
+  { label: "Halal", href: "/hawker-centres?tag=halal" },
+  { label: "Near MRT", href: "/hawker-centres?tag=mrt" },
+  { label: "Budget", href: "/hawker-centres?tag=budget" },
+  { label: "Michelin", href: "/hawker-centres?tag=michelin" },
+] as const;
 
 export type HeroSectionProps = {
   hawkerCentreCount?: number;
@@ -17,34 +34,47 @@ export function HeroSection({
   hawkerCentreCount,
   foodStallCount,
 }: HeroSectionProps = {}) {
+  const [activeBg, setActiveBg] = useState(0);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setActiveBg((i) => (i + 1) % HERO_IMAGES.length);
+    }, 4000);
+    return () => window.clearInterval(id);
+  }, []);
+
   const centreLabel =
-    hawkerCentreCount != null
-      ? formatStat(hawkerCentreCount)
-      : "130+";
+    hawkerCentreCount != null ? formatStat(hawkerCentreCount) : "130+";
   const stallLabel =
     foodStallCount != null && foodStallCount > 0
       ? formatStat(foodStallCount)
       : "1,000+";
+
   return (
     <section
       className="relative flex min-h-[90vh] w-full flex-col justify-center overflow-hidden border-b border-white/5 px-4 py-20 sm:px-6 lg:px-8"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0 z-0">
-        <Image
-          src={HERO_BG}
-          alt=""
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        {HERO_IMAGES.map((src, i) => (
+          <Image
+            key={src}
+            src={src}
+            alt=""
+            fill
+            priority={i === 0}
+            className={`absolute inset-0 object-cover transition-opacity duration-[1500ms] ease-in-out ${
+              activeBg === i ? "z-[2] opacity-100" : "z-[1] opacity-0"
+            }`}
+            sizes="100vw"
+          />
+        ))}
         <div
-          className="absolute inset-0 bg-gradient-to-b from-[#1c1c1e]/92 via-[#1c1c1e]/88 to-[#1c1c1e]/95"
+          className="absolute inset-0 z-[3] bg-gradient-to-b from-[#1c1c1e]/92 via-[#1c1c1e]/88 to-[#1c1c1e]/95"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-sf-primary/[0.06]"
+          className="absolute inset-0 z-[3] bg-sf-primary/[0.06]"
           aria-hidden
         />
       </div>
@@ -60,6 +90,22 @@ export function HeroSection({
           Discover Singapore&apos;s Most{" "}
           <span className="text-sf-primary">Shiok</span> Food
         </h1>
+
+        <nav
+          className="mt-6 flex max-w-2xl flex-wrap items-center justify-center gap-2"
+          aria-label="Occasion shortcuts"
+        >
+          {OCCASION_TAGS.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              className="rounded-full border border-white/25 bg-black/45 px-3 py-1.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:border-sf-primary hover:bg-sf-primary/30 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-sf-cream/85 sm:text-xl">
           Your guide to the best hawker centres and restaurants across
           Singapore
