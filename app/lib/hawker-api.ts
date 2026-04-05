@@ -9,13 +9,18 @@ export type HawkerCentre = {
   address: string;
   latitude: string | null;
   longitude: string | null;
+  /** Cooked food stall count from NUMBER_OF_COOKED_FOOD_STALLS. */
   noOfStalls: number | null;
   region: HawkerRegion;
 };
 
-const RESOURCE_ID = "d_4a086da0a5553be1d89383cd90d07ecd";
+/** Hawker centres dataset (correct resource id). */
+export const RESOURCE_ID = "d_68a42f09f350881996d83f9cd73ab02f";
 const PAGE_LIMIT = 100;
 const BASE_URL = `https://data.gov.sg/api/action/datastore_search?resource_id=${RESOURCE_ID}&limit=${PAGE_LIMIT}`;
+
+/** Single-page fetch URL (matches homepage `limit=100`). */
+export const HAWKER_LIST_FETCH_URL = `${BASE_URL}`;
 
 const REGION_RULES: { region: HawkerRegion; keywords: string[] }[] = [
   {
@@ -97,18 +102,24 @@ function parseStalls(v: unknown): number | null {
 function mapRecord(record: Record<string, unknown>): HawkerCentre | null {
   const rawId = pickField(record, "_id", "id");
   if (rawId === null) return null;
-  const name = String(pickField(record, "name", "Name") ?? "").trim();
+  const name = String(
+    pickField(record, "NAME", "name", "Name") ?? "",
+  ).trim();
   const address = String(
-    pickField(record, "address_myenv", "Address_MYENV") ?? "",
+    pickField(
+      record,
+      "ADDRESS_MYENV",
+      "address_myenv",
+      "Address_MYENV",
+    ) ?? "",
   ).trim();
   if (!name && !address) return null;
 
-  const lat = pickField(record, "latitude_hc", "Latitude_HC");
-  const lon = pickField(record, "longitude_hc", "Longitude_HC");
   const stalls = pickField(
     record,
-    "no_of_stalls_cooked_food",
-    "No_Of_Stalls_Cooked_Food",
+    "NUMBER_OF_COOKED_FOOD_STALLS",
+    "number_of_cooked_food_stalls",
+    "Number_Of_Cooked_Food_Stalls",
   );
 
   const addrForRegion = address || name;
@@ -116,8 +127,8 @@ function mapRecord(record: Record<string, unknown>): HawkerCentre | null {
     id: String(rawId),
     name: name || "Hawker centre",
     address: address || "—",
-    latitude: lat != null ? String(lat) : null,
-    longitude: lon != null ? String(lon) : null,
+    latitude: null,
+    longitude: null,
     noOfStalls: parseStalls(stalls),
     region: getRegion(addrForRegion),
   };
@@ -189,7 +200,7 @@ export async function getHawkerById(id: string): Promise<HawkerCentre | null> {
   return all.find((h) => String(h.id) === String(id)) ?? null;
 }
 
-const HOME_LIST_URL = `https://data.gov.sg/api/action/datastore_search?resource_id=${RESOURCE_ID}&limit=100`;
+const HOME_LIST_URL = HAWKER_LIST_FETCH_URL;
 
 /** Single-record lookup: filters query first, then scan first page (same as homepage). */
 export async function fetchHawkerByIdFromApi(

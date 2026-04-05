@@ -3,7 +3,12 @@ import Link from "next/link";
 import { HeroSection } from "./components/hero-section";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
-import { getRegion, type HawkerRegion } from "./lib/hawker-api";
+import {
+  getHawkersForHome,
+  getRegion,
+  HAWKER_LIST_FETCH_URL,
+  type HawkerRegion,
+} from "./lib/hawker-api";
 import {
   FEATURED_HAWKERS,
   REGION_FILTERS,
@@ -56,8 +61,12 @@ function strField(r: ApiRecord, ...keys: string[]): string {
   return "";
 }
 
-function parseStalls(r: ApiRecord): number {
-  const v = r.no_of_stalls_cooked_food ?? r.No_Of_Stalls_Cooked_Food;
+/** Maps NUMBER_OF_COOKED_FOOD_STALLS → numeric stall count for hero stats. */
+function parseStallCount(r: ApiRecord): number {
+  const v =
+    r.NUMBER_OF_COOKED_FOOD_STALLS ??
+    r.number_of_cooked_food_stalls ??
+    r.Number_Of_Cooked_Food_Stalls;
   if (v === undefined || v === null || v === "") return 0;
   const n = Number.parseInt(String(v), 10);
   return Number.isFinite(n) ? n : 0;
@@ -81,8 +90,9 @@ const STATIC_HAWKERS: HawkerRow[] = FEATURED_HAWKERS.map((h) => ({
 function mapRecord(r: ApiRecord): HawkerRow | null {
   const rawId = r._id ?? r.id;
   if (rawId === undefined || rawId === null) return null;
-  const name = strField(r, "name", "Name") || "Hawker centre";
-  const address = strField(r, "address_myenv", "Address_MYENV") || "—";
+  const name = strField(r, "NAME", "name", "Name") || "Hawker centre";
+  const address =
+    strField(r, "ADDRESS_MYENV", "address_myenv", "Address_MYENV") || "—";
   const region = getRegion(address || name);
   return {
     id: String(rawId),
@@ -105,20 +115,28 @@ export default async function Home({
   let hawkers: ApiRecord[] | HawkerRow[] = STATIC_HAWKERS;
   let listingFromApi = false;
   let stallSum = 0;
+  let apiDatasetTotal: number | undefined;
 
   try {
-    const response = await fetch(
-      "https://data.gov.sg/api/action/datastore_search?resource_id=d_4a086da0a5553be1d89383cd90d07ecd&limit=100",
-      { next: { revalidate: 86400 } },
-    );
+    const response = await fetch(HAWKER_LIST_FETCH_URL, {
+      next: { revalidate: 86400 },
+    });
     const data = (await response.json()) as {
-      result?: { records?: ApiRecord[] };
+      result?: { records?: ApiRecord[]; total?: number };
     };
+    if (typeof data.result?.total === "number" && data.result.total >= 0) {
+      apiDatasetTotal = data.result.total;
+    }
     if (
       response.ok &&
       Array.isArray(data.result?.records) &&
       data.result.records.length > 0
     ) {
+      const first = data.result.records[0];
+      console.log(
+        "[ShiokFlavour] First API record (shape check):",
+        JSON.stringify(first, null, 2),
+      );
       hawkers = data.result.records;
       listingFromApi = true;
     } else if (!response.ok) {
@@ -158,7 +176,7 @@ export default async function Home({
         "centres)",
       );
     } else {
-      stallSum = rawRecords.reduce((s, r) => s + parseStalls(r), 0);
+      stallSum = rawRecords.reduce((s, r) => s + parseStallCount(r), 0);
     }
   } else {
     allRows = STATIC_HAWKERS;
@@ -172,6 +190,24 @@ export default async function Home({
     allRows.length,
   );
 
+  let heroHawkerCentreCount = allRows.length;
+  let heroFoodStallCount: number | undefined =
+    stallSum > 0 ? stallSum : undefined;
+  if (listingFromApi) {
+    const full = await getHawkersForHome();
+    if (full.length >= allRows.length) {
+      heroHawkerCentreCount = full.length;
+      const sum = full.reduce((s, h) => s + (h.noOfStalls ?? 0), 0);
+      if (sum > 0) heroFoodStallCount = sum;
+    } else if (
+      apiDatasetTotal != null &&
+      apiDatasetTotal > 0 &&
+      apiDatasetTotal > allRows.length
+    ) {
+      heroHawkerCentreCount = apiDatasetTotal;
+    }
+  }
+
   const filtered =
     activeFilter === "All"
       ? allRows
@@ -183,8 +219,8 @@ export default async function Home({
 
       <main className="flex-1">
         <HeroSection
-          hawkerCentreCount={allRows.length}
-          foodStallCount={stallSum > 0 ? stallSum : undefined}
+          hawkerCentreCount={heroHawkerCentreCount}
+          foodStallCount={heroFoodStallCount}
         />
 
         <section
