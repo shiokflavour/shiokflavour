@@ -228,6 +228,8 @@ export default async function Home({
     }
   }
 
+  allRows = STATIC_HAWKERS;
+
   const filtered =
     activeFilter === "All"
       ? allRows
