@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { HawkerCentreCard } from "../../components/hawker-centre-card";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteHeader } from "../../components/site-header";
@@ -12,21 +12,23 @@ import {
 import {
   FEATURED_HAWKERS,
   getFeaturedHawkerById,
+  getFeaturedHawkerBySlug,
   type FeaturedHawker,
 } from "../../lib/featured-hawkers";
 
-type Props = { params: Promise<{ id: string }> };
+type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = await params;
-  const featured = getFeaturedHawkerById(id);
+  const { slug } = await params;
+  let featured = getFeaturedHawkerBySlug(slug);
+  if (!featured) featured = getFeaturedHawkerById(slug) ?? null;
   if (featured) {
     return {
       title: `${featured.name} | ShiokFlavour`,
       description: featured.description,
     };
   }
-  const hawker = await fetchHawkerByIdFromApi(id);
+  const hawker = await fetchHawkerByIdFromApi(slug);
   if (!hawker) return { title: "Not found | ShiokFlavour" };
   return {
     title: `${hawker.name} | ShiokFlavour`,
@@ -405,10 +407,10 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
               <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {related.map((r, index) => (
                   <HawkerCentreCard
-                    key={r.id}
+                    key={r.slug}
                     index={index}
                     data={{
-                      id: String(r.id),
+                      slug: r.slug,
                       name: r.name,
                       address: r.address,
                       region: r.region,
@@ -508,13 +510,18 @@ function ApiHawkerPage({ hawker }: { hawker: HawkerCentre }) {
 }
 
 export default async function HawkerDetailPage({ params }: Props) {
-  const { id } = await params;
-  const featured = getFeaturedHawkerById(id);
+  const { slug } = await params;
+  const featured = getFeaturedHawkerBySlug(slug);
   if (featured) {
     return <FeaturedHawkerPage h={featured} />;
   }
 
-  const hawker = await fetchHawkerByIdFromApi(id);
+  const legacyFeatured = getFeaturedHawkerById(slug);
+  if (legacyFeatured) {
+    redirect(`/hawker/${legacyFeatured.slug}`);
+  }
+
+  const hawker = await fetchHawkerByIdFromApi(slug);
   if (!hawker) notFound();
 
   return <ApiHawkerPage hawker={hawker} />;

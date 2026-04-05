@@ -2,6 +2,8 @@ export type HawkerRegion = "Central" | "North" | "South" | "East" | "West";
 
 export type FeaturedHawker = {
   id: number;
+  /** URL segment for `/hawker/{slug}` (SEO). */
+  slug: string;
   name: string;
   address: string;
   region: HawkerRegion;
@@ -23,6 +25,7 @@ export type FeaturedHawker = {
 export const FEATURED_HAWKERS: FeaturedHawker[] = [
   {
     id: 1,
+    slug: "maxwell-food-centre",
     name: "Maxwell Food Centre",
     address: "1 Kadayanallur Street, Tanjong Pagar",
     region: "Central",
@@ -50,6 +53,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 2,
+    slug: "lau-pa-sat",
     name: "Lau Pa Sat",
     address: "18 Raffles Quay, CBD",
     region: "Central",
@@ -73,6 +77,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 3,
+    slug: "old-airport-road-food-centre",
     name: "Old Airport Road Food Centre",
     address: "51 Old Airport Road, Geylang",
     region: "East",
@@ -101,6 +106,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 4,
+    slug: "chinatown-complex-food-centre",
     name: "Chinatown Complex Food Centre",
     address: "335 Smith Street, Chinatown",
     region: "Central",
@@ -128,6 +134,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 5,
+    slug: "newton-food-centre",
     name: "Newton Food Centre",
     address: "500 Clemenceau Avenue North, Newton",
     region: "Central",
@@ -156,6 +163,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 6,
+    slug: "tekka-centre",
     name: "Tekka Centre",
     address: "665 Buffalo Road, Little India",
     region: "Central",
@@ -179,6 +187,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 7,
+    slug: "adam-road-food-centre",
     name: "Adam Road Food Centre",
     address: "2 Adam Road, Bukit Timah",
     region: "Central",
@@ -202,6 +211,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 8,
+    slug: "bedok-interchange-hawker-centre",
     name: "Bedok Interchange Hawker Centre",
     address: "208 New Upper Changi Road, Bedok",
     region: "East",
@@ -229,6 +239,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 9,
+    slug: "bedok-85-fengshan-market",
     name: "Bedok 85 Fengshan Market",
     address: "85 Bedok North Street 4, Bedok",
     region: "East",
@@ -257,6 +268,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 10,
+    slug: "tampines-round-market",
     name: "Tampines Round Market",
     address: "137 Tampines Street 11, Tampines",
     region: "East",
@@ -279,6 +291,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 11,
+    slug: "geylang-serai-market",
     name: "Geylang Serai Market",
     address: "1 Geylang Serai, Geylang",
     region: "East",
@@ -302,6 +315,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 12,
+    slug: "amoy-street-food-centre",
     name: "Amoy Street Food Centre",
     address: "7 Maxwell Road, Tanjong Pagar",
     region: "Central",
@@ -325,6 +339,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 13,
+    slug: "tiong-bahru-market",
     name: "Tiong Bahru Market",
     address: "30 Seng Poh Road, Tiong Bahru",
     region: "Central",
@@ -348,6 +363,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 14,
+    slug: "abc-brickworks-market",
     name: "ABC Brickworks Market",
     address: "6 Jalan Bukit Merah, Bukit Merah",
     region: "Central",
@@ -370,6 +386,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 15,
+    slug: "buona-vista-market",
     name: "Buona Vista Market",
     address: "43 Holland Drive, Holland Village",
     region: "West",
@@ -392,6 +409,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 16,
+    slug: "clementi-448-market",
     name: "Clementi 448 Market",
     address: "448 Clementi Avenue 3, Clementi",
     region: "West",
@@ -414,6 +432,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 17,
+    slug: "jurong-west-505-market",
     name: "Jurong West 505 Market",
     address: "505 Jurong West Street 52, Jurong West",
     region: "West",
@@ -436,6 +455,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 18,
+    slug: "yishun-park-hawker-centre",
     name: "Yishun Park Hawker Centre",
     address: "51 Yishun Avenue 11, Yishun",
     region: "North",
@@ -458,6 +478,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 19,
+    slug: "sembawang-hills-food-centre",
     name: "Sembawang Hills Food Centre",
     address: "590 Upper Thomson Road, Sembawang",
     region: "North",
@@ -480,6 +501,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 20,
+    slug: "chong-pang-market",
     name: "Chong Pang Market",
     address: "105 Yishun Ring Road, Yishun",
     region: "North",
@@ -502,6 +524,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 21,
+    slug: "woodlands-centre-market",
     name: "Woodlands Centre Market",
     address: "Blk 6A Woodlands Centre Road, Woodlands",
     region: "North",
@@ -523,6 +546,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 22,
+    slug: "toa-payoh-lorong-8-market",
     name: "Toa Payoh Lorong 8 Market",
     address: "Blk 210 Lorong 8 Toa Payoh, Toa Payoh",
     region: "Central",
@@ -556,7 +580,14 @@ export const REGION_FILTERS = [
 
 export type RegionFilter = (typeof REGION_FILTERS)[number];
 
-/** Featured guide entries use numeric ids in URLs (`/hawker/1`). */
+/** Resolve a featured hawker by URL slug (`/hawker/maxwell-food-centre`). */
+export function getFeaturedHawkerBySlug(raw: string): FeaturedHawker | null {
+  const s = raw.trim().toLowerCase();
+  if (!s) return null;
+  return FEATURED_HAWKERS.find((h) => h.slug === s) ?? null;
+}
+
+/** @deprecated Prefer {@link getFeaturedHawkerBySlug}. Numeric id lookup for legacy links. */
 export function getFeaturedHawkerById(raw: string): FeaturedHawker | null {
   const trimmed = raw.trim();
   const n = Number.parseInt(trimmed, 10);

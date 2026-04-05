@@ -3,7 +3,8 @@ import Link from "next/link";
 import type { HawkerRegion } from "../lib/featured-hawkers";
 
 export type HawkerCentreCardData = {
-  id: string;
+  /** URL path segment: `/hawker/{slug}` */
+  slug: string;
   name: string;
   address: string;
   region: HawkerRegion;
@@ -25,7 +26,7 @@ type HawkerCentreCardProps = {
 
 export function HawkerCentreCard({ data, index }: HawkerCentreCardProps) {
   const {
-    id,
+    slug,
     name,
     address,
     region,
@@ -49,7 +50,7 @@ export function HawkerCentreCard({ data, index }: HawkerCentreCardProps) {
       style={{ animationDelay: `${Math.min(index, 20) * 40}ms` }}
     >
       <article
-        id={`hawker-${id}`}
+        id={`hawker-${slug}`}
         className="group flex h-full flex-col overflow-hidden rounded-2xl border border-sf-primary/25 bg-gradient-to-br from-sf-primary/[0.14] via-sf-primary/[0.05] to-sf-surface/70 transition duration-300 ease-out hover:border-sf-primary/45 hover:shadow-lg hover:shadow-sf-primary/10"
       >
         <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden">
@@ -125,7 +126,7 @@ export function HawkerCentreCard({ data, index }: HawkerCentreCardProps) {
             ) : null}
           </div>
           <Link
-            href={`/hawker/${encodeURIComponent(id)}`}
+            href={`/hawker/${encodeURIComponent(slug)}`}
             className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-sf-primary px-4 text-sm font-semibold text-white transition hover:bg-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-cream"
           >
             View Centre

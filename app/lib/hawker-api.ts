@@ -196,7 +196,7 @@ export async function fetchAllHawkerCentresFromApi(): Promise<HawkerCentre[]> {
 
 export function getStaticFallbackHawkers(): HawkerCentre[] {
   return FEATURED_HAWKERS.map((h) => ({
-    id: String(h.id),
+    id: h.slug,
     name: h.name,
     address: h.address,
     latitude: null,

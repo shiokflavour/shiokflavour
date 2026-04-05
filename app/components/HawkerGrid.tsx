@@ -25,10 +25,10 @@ export function HawkerGrid() {
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURED_HAWKERS.map((h, index) => (
             <HawkerCentreCard
-              key={h.id}
+              key={h.slug}
               index={index}
               data={{
-                id: String(h.id),
+                slug: h.slug,
                 name: h.name,
                 address: h.address,
                 region: h.region,
