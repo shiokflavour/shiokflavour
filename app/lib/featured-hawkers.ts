@@ -528,7 +528,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
     description:
       "A classic HDB heartland hawker centre in Toa Payoh — one of Singapore's oldest public housing estates with strong food heritage.",
     mustTry: ["Toa Payoh Lor Mee", "Wanton Mee", "Chicken Rice", "Soon Kueh"],
