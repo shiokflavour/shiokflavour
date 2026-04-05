@@ -21,19 +21,13 @@ const OCCASION_TAGS = [
   { label: "Michelin", href: "/hawker-centres?tag=michelin" },
 ] as const;
 
-export type HeroSectionProps = {
-  hawkerCentreCount?: number;
-  foodStallCount?: number;
-};
+const STAT_BOXES = [
+  { title: "500+ Dishes", sub: "To Discover" },
+  { title: "5 Regions", sub: "Island-wide" },
+  { title: "Rated by Locals", sub: "Not TripAdvisor" },
+] as const;
 
-function formatStat(n: number): string {
-  return n.toLocaleString("en-SG");
-}
-
-export function HeroSection({
-  hawkerCentreCount,
-  foodStallCount,
-}: HeroSectionProps = {}) {
+export function HeroSection() {
   const [activeBg, setActiveBg] = useState(0);
 
   useEffect(() => {
@@ -42,13 +36,6 @@ export function HeroSection({
     }, 4000);
     return () => window.clearInterval(id);
   }, []);
-
-  const centreLabel =
-    hawkerCentreCount != null ? formatStat(hawkerCentreCount) : "130+";
-  const stallLabel =
-    foodStallCount != null && foodStallCount > 0
-      ? formatStat(foodStallCount)
-      : "1,000+";
 
   return (
     <section
@@ -99,7 +86,7 @@ export function HeroSection({
             <Link
               key={href}
               href={href}
-              className="rounded-full border border-white/25 bg-black/45 px-3 py-1.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:border-sf-primary hover:bg-sf-primary/30 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
+              className="rounded-full border border-white/25 bg-black/45 px-3 py-1.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:border-sf-primary hover:bg-sf-primary/25 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
             >
               {label}
             </Link>
@@ -130,27 +117,17 @@ export function HeroSection({
           className="mt-14 grid w-full max-w-2xl gap-6 sm:mt-16 sm:grid-cols-3 sm:gap-4"
           aria-label="ShiokFlavour at a glance"
         >
-          <li className="sf-hero-stat rounded-xl border border-white/10 bg-black/25 px-4 py-4 backdrop-blur-sm sm:py-5">
-            <p className="text-2xl font-bold tabular-nums text-sf-primary sm:text-3xl">
-              {centreLabel}
-            </p>
-            <p className="mt-1 text-sm font-medium text-sf-cream/90">
-              Hawker Centres
-            </p>
-          </li>
-          <li className="sf-hero-stat rounded-xl border border-white/10 bg-black/25 px-4 py-4 backdrop-blur-sm sm:py-5">
-            <p className="text-2xl font-bold tabular-nums text-sf-primary sm:text-3xl">
-              {stallLabel}
-            </p>
-            <p className="mt-1 text-sm font-medium text-sf-cream/90">
-              Food Stalls
-            </p>
-          </li>
-          <li className="sf-hero-stat rounded-xl border border-white/10 bg-black/25 px-4 py-4 backdrop-blur-sm sm:py-5 sm:col-span-1">
-            <p className="text-lg font-semibold leading-snug text-sf-cream sm:text-xl">
-              Locals &amp; Tourists Welcome
-            </p>
-          </li>
+          {STAT_BOXES.map(({ title, sub }) => (
+            <li
+              key={title}
+              className="sf-hero-stat rounded-xl border border-white/10 bg-black/25 px-4 py-4 backdrop-blur-sm sm:py-5"
+            >
+              <p className="text-xl font-bold leading-tight text-sf-primary sm:text-2xl">
+                {title}
+              </p>
+              <p className="mt-1 text-sm font-medium text-sf-cream/90">{sub}</p>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

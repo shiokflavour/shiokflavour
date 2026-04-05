@@ -3,7 +3,6 @@ import { HeroSection } from "./components/hero-section";
 import { HawkerCentreCard } from "./components/hawker-centre-card";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
-import { getHawkersForHome } from "./lib/hawker-api";
 import { FEATURED_HAWKERS } from "./lib/featured-hawkers";
 
 const EDITOR_PICK_IDS = [1, 5, 6] as const;
@@ -27,19 +26,6 @@ const flavourTrails = [
 ];
 
 export default async function Home() {
-  let hawkerCentreCount: number | undefined;
-  let foodStallCount: number | undefined;
-  try {
-    const full = await getHawkersForHome();
-    if (full.length > 0) {
-      hawkerCentreCount = full.length;
-      const sum = full.reduce((s, h) => s + (h.noOfStalls ?? 0), 0);
-      if (sum > 0) foodStallCount = sum;
-    }
-  } catch {
-    /* hero falls back to placeholders inside HeroSection */
-  }
-
   const editorPicks = EDITOR_PICK_IDS.map((id) =>
     FEATURED_HAWKERS.find((h) => h.id === id),
   ).filter((h): h is (typeof FEATURED_HAWKERS)[number] => h != null);
@@ -49,10 +35,7 @@ export default async function Home() {
       <SiteHeader />
 
       <main className="flex-1">
-        <HeroSection
-          hawkerCentreCount={hawkerCentreCount}
-          foodStallCount={foodStallCount}
-        />
+        <HeroSection />
 
         <section
           id="discover"
