@@ -28,8 +28,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Tourist Must-Visit",
     hours: "8am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80",
     description:
       "One of Singapore's most famous hawker centres, steps from Chinatown. A pilgrimage site for food lovers visiting Singapore.",
     mustTry: [
@@ -56,8 +55,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Tourist Must-Visit",
     hours: "24 hours (most stalls 7am–10pm)",
-    imageUrl:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1529006557810-274f81e747bc?w=800&q=80",
     description:
       "A Victorian cast-iron market building in the heart of the CBD. Famous for its Boon Tat Street satay stalls that fire up at night.",
     mustTry: ["Satay (Boon Tat Street)", "Rojak", "Carrot Cake", "Popiah"],
@@ -65,12 +63,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Satay street — over 20 satay stalls line the closed road every evening from 7pm",
     michelinNote:
       "Featured in Michelin Guide Singapore as a must-visit hawker experience",
-    vibes: [
-      "Tourists",
-      "After-work drinks",
-      "Late night supper",
-      "Corporate crowd",
-    ],
+    vibes: ["Tourists", "After-work drinks", "Late night supper", "Corporate crowd"],
     nearestMRT: "Raffles Place (EW/NS Line) — 3 min walk",
     tipForVisitors:
       "Come after 7pm when Boon Tat Street closes to traffic and the satay stalls set up. Order a cold beer and watch the city.",
@@ -85,8 +78,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Local Favourite",
     hours: "6am–11pm (some stalls open late)",
-    imageUrl:
-      "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
     description:
       "A legendary hawker centre that locals consider one of the best in Singapore. Massive, buzzing and packed with heritage stalls.",
     mustTry: [
@@ -114,8 +106,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Michelin Alert",
     hours: "6am–11pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&q=80",
     description:
       "Singapore's largest hawker centre with over 260 stalls. Home to the world's cheapest Michelin-starred meal.",
     mustTry: [
@@ -142,8 +133,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Tourist Must-Visit",
     hours: "12pm–2am daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
     description:
       "The most internationally famous hawker centre in Singapore — featured in the movie Crazy Rich Asians and countless travel shows.",
     mustTry: [
@@ -171,8 +161,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Halal Haven",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
     description:
       "The heart of Little India — a vibrant wet market and food centre packed with authentic Indian, Malay and Muslim food.",
     mustTry: ["Roti Prata", "Biryani", "Fish Head Curry", "Teh Tarik", "Vadai"],
@@ -180,12 +169,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Best roti prata and biryani in Singapore. Completely halal food centre beloved by locals.",
     michelinNote:
       "Several stalls recommended in the Michelin Guide Singapore for authentic Indian cuisine",
-    vibes: [
-      "Muslim-friendly",
-      "Indian food lovers",
-      "Cultural experience",
-      "Breakfast crowd",
-    ],
+    vibes: ["Muslim-friendly", "Indian food lovers", "Cultural experience", "Breakfast crowd"],
     nearestMRT: "Little India (NE/DT Line) — 5 min walk",
     tipForVisitors:
       "Perfect for Muslim visitors — everything is halal. Best visited Sunday mornings when Little India is most vibrant. Try the roti prata with curry for breakfast.",
@@ -200,8 +184,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Supper Spot",
     hours: "7am–late night",
-    imageUrl:
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1562802378-063ec186a863?w=800&q=80",
     description:
       "A beloved neighbourhood hawker centre known for its famous nasi lemak and late night crowd. A local institution.",
     mustTry: ["Adam Road Nasi Lemak", "Roti John", "Mee Rebus", "Teh Tarik"],
@@ -209,12 +192,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Adam Road Nasi Lemak — consistently voted one of Singapore's best nasi lemak for decades",
     michelinNote:
       "Adam Road Nasi Lemak stall has received Michelin Bib Gourmand recognition",
-    vibes: [
-      "Late night supper",
-      "Malay food lovers",
-      "Halal options",
-      "Expat neighbourhood",
-    ],
+    vibes: ["Late night supper", "Malay food lovers", "Halal options", "Expat neighbourhood"],
     nearestMRT: "Botanic Gardens (CC/DT Line) — 10 min walk",
     tipForVisitors:
       "The nasi lemak stall has long queues — come before 9am or after 8pm. Great spot for late night supper after exploring the Botanic Gardens.",
@@ -229,8 +207,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Local Favourite",
     hours: "6am–11pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
     description:
       "A bustling hawker centre at the heart of Bedok — one of Singapore's most residential towns and beloved by East-siders.",
     mustTry: [
@@ -257,8 +234,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Supper Spot",
     hours: "24 hours (most stalls till late)",
-    imageUrl:
-      "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=800&q=80",
     description:
       "The ultimate supper destination for East Singapore. Famously packed late at night with locals fuelling up after a night out.",
     mustTry: [
@@ -286,8 +262,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Budget Eats",
     hours: "6am–11pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
     description:
       "A well-loved neighbourhood market and food centre in Tampines — affordable, no-frills and packed with regulars every morning.",
     mustTry: ["Laksa", "Wanton Mee", "Curry Puff", "Kopi"],
@@ -309,27 +284,15 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Halal Haven",
     hours: "6am–10pm (24hrs during Ramadan)",
-    imageUrl:
-      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
     description:
       "The cultural heart of Malay Singapore. A vibrant wet market and food centre that comes alive especially during Ramadan.",
-    mustTry: [
-      "Nasi Padang",
-      "Murtabak",
-      "Kueh Pie Tee",
-      "Bandung",
-      "Putu Piring",
-    ],
+    mustTry: ["Nasi Padang", "Murtabak", "Kueh Pie Tee", "Bandung", "Putu Piring"],
     famousFor:
       "Best Malay and Muslim food in Singapore. During Ramadan the bazaar outside is unmissable.",
     michelinNote:
       "Featured in Michelin Guide as essential Singapore food culture experience",
-    vibes: [
-      "Muslim-friendly",
-      "Malay culture",
-      "Ramadan bazaar",
-      "Cultural immersion",
-    ],
+    vibes: ["Muslim-friendly", "Malay culture", "Ramadan bazaar", "Cultural immersion"],
     nearestMRT: "Aljunied (EW Line) — 10 min walk",
     tipForVisitors:
       "Completely halal. Visit during Ramadan evenings for the incredible bazaar outside. Try the putu piring — traditional Malay steamed rice cakes.",
@@ -344,8 +307,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Office Favourite",
     hours: "7am–3pm (breakfast and lunch only)",
-    imageUrl:
-      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=800&q=80",
     description:
       "A lunchtime institution in the CBD — packed with office workers daily. Some of the best traditional Singaporean breakfast and lunch options.",
     mustTry: ["A Noodle Story", "Hoo Kee Bak Chang", "Breakfast Popiah"],
@@ -368,27 +330,15 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Hipster Favourite",
     hours: "6am–9pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
     description:
       "In Singapore's trendiest neighbourhood — a gorgeous Art Deco market building with heritage hawker stalls downstairs and a wet market above.",
-    mustTry: [
-      "Tiong Bahru Chwee Kueh",
-      "Lor Mee",
-      "Bao Today",
-      "Tiong Bahru Bakery",
-    ],
+    mustTry: ["Tiong Bahru Chwee Kueh", "Lor Mee", "Bao Today", "Tiong Bahru Bakery"],
     famousFor:
       "Chwee Kueh — the definitive version of this traditional dish. Also great for post-brunch hawker food after exploring Tiong Bahru.",
     michelinNote:
       "Tiong Bahru Chwee Kueh has received Michelin Bib Gourmand recognition",
-    vibes: [
-      "Hipsters",
-      "Expats",
-      "Families",
-      "Weekend brunch",
-      "Instagram-worthy",
-    ],
+    vibes: ["Hipsters", "Expats", "Families", "Weekend brunch", "Instagram-worthy"],
     nearestMRT: "Tiong Bahru (EW Line) — 10 min walk",
     tipForVisitors:
       "Pair with a walk around the Tiong Bahru art deco estate and indie cafes. Best on weekend mornings when the neighbourhood comes alive.",
@@ -403,20 +353,14 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
     description:
       "A hidden gem loved by locals — away from the tourist trail but packed with excellent food at very reasonable prices.",
     mustTry: ["Satay", "BBQ Chicken Wings", "Carrot Cake", "Popiah"],
     famousFor:
       "One of the best satay stalls in Singapore — locals drive across the island just for this.",
     michelinNote: "",
-    vibes: [
-      "Off the beaten path",
-      "Local families",
-      "Authentic experience",
-      "Budget dining",
-    ],
+    vibes: ["Off the beaten path", "Local families", "Authentic experience", "Budget dining"],
     nearestMRT: "Redhill (EW Line) — 10 min walk",
     tipForVisitors:
       "Worth the trek away from the tourist areas. This is where locals actually eat. Very affordable and no tourists.",
@@ -431,8 +375,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "West",
     tag: "Budget Eats",
     hours: "6am–9pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=800&q=80",
     description:
       "A neighbourhood market near Holland Village loved by students, expats and families for affordable, quality hawker food.",
     mustTry: ["Prawn Noodles", "Wanton Mee", "Nasi Lemak", "Kopi"],
@@ -454,8 +397,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "West",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
     description:
       "A well-loved neighbourhood hawker centre in Clementi serving the local community with consistent quality food.",
     mustTry: ["Hokkien Mee", "Char Siew Rice", "Laksa", "Economy Rice"],
@@ -477,20 +419,14 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "West",
     tag: "Budget Eats",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
     description:
       "A large neighbourhood hawker centre serving the Jurong West community with a wide variety of affordable food options.",
     mustTry: ["Bak Chor Mee", "Chicken Rice", "Nasi Lemak", "Teh Tarik"],
     famousFor:
       "One of the largest and most complete hawker centres in West Singapore.",
     michelinNote: "",
-    vibes: [
-      "West Singapore locals",
-      "Budget dining",
-      "Families",
-      "Industrial workers",
-    ],
+    vibes: ["West Singapore locals", "Budget dining", "Families", "Industrial workers"],
     nearestMRT: "Jurong West (EW Line) — 15 min walk",
     tipForVisitors:
       "Good stop if exploring Jurong area including Jurong Lake Gardens or the Science Centre.",
@@ -505,8 +441,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "North",
     tag: "Local Favourite",
     hours: "7am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
     description:
       "A modern hawker centre in Yishun with a good mix of traditional and contemporary hawker stalls.",
     mustTry: ["Laksa", "Chicken Rice", "Roti Prata", "Kopi"],
@@ -528,16 +463,10 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "North",
     tag: "Supper Spot",
     hours: "6am–late night",
-    imageUrl:
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80",
     description:
       "A beloved neighbourhood food centre along Upper Thomson Road — famous for its late night supper crowd and excellent local food.",
-    mustTry: [
-      "Bak Kut Teh",
-      "Carrot Cake",
-      "Prawn Noodles",
-      "Durian (seasonal)",
-    ],
+    mustTry: ["Bak Kut Teh", "Carrot Cake", "Prawn Noodles", "Durian (seasonal)"],
     famousFor:
       "Late night supper destination for North Singapore — famous bak kut teh and durian stalls.",
     michelinNote: "",
@@ -556,20 +485,14 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "North",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1496116218417-1a781b1eca40?w=800&q=80",
     description:
       "A large and popular market in Yishun serving the northern heartland community with a huge variety of food.",
     mustTry: ["Carrot Cake", "Char Kway Teow", "Mee Goreng", "Fresh Juice"],
     famousFor:
       "One of the most complete hawker centres in the North — everything you need under one roof.",
     michelinNote: "",
-    vibes: [
-      "North Singapore locals",
-      "Yishun residents",
-      "Families",
-      "Weekend market",
-    ],
+    vibes: ["North Singapore locals", "Yishun residents", "Families", "Weekend market"],
     nearestMRT: "Yishun (NS Line) — 10 min walk",
     tipForVisitors:
       "Large wet market upstairs is great for fresh produce. Food centre downstairs has a huge variety.",
@@ -584,8 +507,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "North",
     tag: "Budget Eats",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=800&q=80",
     description:
       "A neighbourhood hawker centre in Woodlands serving the northernmost community of Singapore close to the Causeway.",
     mustTry: ["Economy Rice", "Nasi Lemak", "Roti Prata", "Laksa"],
@@ -606,16 +528,10 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400",
+    imageUrl: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3df1?w=800&q=80",
     description:
       "A classic HDB heartland hawker centre in Toa Payoh — one of Singapore's oldest public housing estates with strong food heritage.",
-    mustTry: [
-      "Toa Payoh Lor Mee",
-      "Wanton Mee",
-      "Chicken Rice",
-      "Soon Kueh",
-    ],
+    mustTry: ["Toa Payoh Lor Mee", "Wanton Mee", "Chicken Rice", "Soon Kueh"],
     famousFor:
       "Heritage hawker food in one of Singapore's most iconic housing estates.",
     michelinNote: "",
