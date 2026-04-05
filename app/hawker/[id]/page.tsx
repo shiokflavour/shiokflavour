@@ -3,13 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteHeader } from "../../components/site-header";
-import { getHawkerById } from "../../lib/hawker-api";
+import { fetchHawkerByIdFromApi } from "../../lib/hawker-api";
 
 type Props = { params: Promise<{ id: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const hawker = await getHawkerById(id);
+  const hawker = await fetchHawkerByIdFromApi(id);
   if (!hawker) return { title: "Not found | ShiokFlavour" };
   return {
     title: `${hawker.name} | ShiokFlavour`,
@@ -19,8 +19,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function HawkerDetailPage({ params }: Props) {
   const { id } = await params;
-  const hawker = await getHawkerById(id);
+  const hawker = await fetchHawkerByIdFromApi(id);
   if (!hawker) notFound();
+
+  const stallsLabel =
+    hawker.noOfStalls != null && hawker.noOfStalls > 0
+      ? hawker.noOfStalls.toLocaleString("en-SG")
+      : "Not listed";
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -34,27 +39,30 @@ export default async function HawkerDetailPage({ params }: Props) {
             {hawker.name}
           </h1>
           <p className="mt-6 leading-relaxed text-sf-muted">{hawker.address}</p>
-          {(hawker.latitude && hawker.longitude) ? (
-            <p className="mt-4 text-sm text-sf-muted">
-              Coordinates: {hawker.latitude}, {hawker.longitude}
+
+          <div className="mt-8 rounded-2xl border border-white/10 bg-sf-surface/40 px-6 py-5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+              Cooked food stalls (dataset)
             </p>
-          ) : null}
-          {hawker.noOfStalls != null && hawker.noOfStalls > 0 ? (
-            <p className="mt-4 text-sm text-sf-muted">
-              Cooked food stalls (dataset):{" "}
-              <span className="font-medium text-sf-cream">
-                {hawker.noOfStalls.toLocaleString("en-SG")}
-              </span>
+            <p className="mt-2 text-2xl font-bold tabular-nums text-sf-primary">
+              {stallsLabel}
             </p>
-          ) : null}
-          <p className="mt-10">
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border-2 border-sf-primary bg-transparent px-6 text-sm font-semibold text-sf-cream transition hover:bg-sf-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
+            >
+              ← Back to homepage
+            </Link>
             <Link
               href="/#hawker-centres"
-              className="text-sm font-semibold text-sf-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl bg-sf-primary px-6 text-sm font-semibold text-white transition hover:bg-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-cream"
             >
-              ← Back to hawker centres
+              Hawker centres
             </Link>
-          </p>
+          </div>
         </div>
       </main>
       <SiteFooter />

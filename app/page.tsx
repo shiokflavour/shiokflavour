@@ -1,9 +1,10 @@
-import { Suspense } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { HomeMainAsync } from "./components/home-main-async";
-import { HomeMainSkeleton } from "./components/home-main-skeleton";
+import { HeroSection } from "./components/hero-section";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
+import { getRegion, type HawkerRegion } from "./lib/hawker-api";
+import { REGION_FILTERS, type RegionFilter } from "./lib/featured-hawkers";
 
 const flavourTrails = [
   {
@@ -23,15 +24,293 @@ const flavourTrails = [
   },
 ];
 
-export default function Home() {
+const CARD_IMAGES = [
+  "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400",
+  "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400",
+  "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=400",
+  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400",
+  "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400",
+  "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400",
+];
+
+const VIBE_TAGS = [
+  "Local Favourite",
+  "Tourist Must-Visit",
+  "Budget Eats",
+  "Supper Spot",
+  "Halal Haven",
+  "Local Favourite",
+];
+
+type ApiRecord = Record<string, unknown>;
+
+function strField(r: ApiRecord, ...keys: string[]): string {
+  for (const k of keys) {
+    const v = r[k];
+    if (v !== undefined && v !== null && v !== "") return String(v).trim();
+  }
+  return "";
+}
+
+function parseStalls(r: ApiRecord): number {
+  const v = r.no_of_stalls_cooked_food ?? r.No_Of_Stalls_Cooked_Food;
+  if (v === undefined || v === null || v === "") return 0;
+  const n = Number.parseInt(String(v), 10);
+  return Number.isFinite(n) ? n : 0;
+}
+
+type HawkerRow = {
+  id: string;
+  name: string;
+  address: string;
+  region: HawkerRegion;
+};
+
+function mapRecord(r: ApiRecord): HawkerRow | null {
+  const rawId = r._id ?? r.id;
+  if (rawId === undefined || rawId === null) return null;
+  const name = strField(r, "name", "Name") || "Hawker centre";
+  const address = strField(r, "address_myenv", "Address_MYENV") || "—";
+  const region = getRegion(address || name);
+  return {
+    id: String(rawId),
+    name,
+    address,
+    region,
+  };
+}
+
+type SearchParams = Promise<{ region?: string }>;
+
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const sp = await searchParams;
+  const activeFilter = (sp.region as RegionFilter | undefined) ?? "All";
+
+  let rawRecords: ApiRecord[] = [];
+  try {
+    const response = await fetch(
+      "https://data.gov.sg/api/action/datastore_search?resource_id=d_4a086da0a5553be1d89383cd90d07ecd&limit=100",
+      { next: { revalidate: 86400 } },
+    );
+    const data = (await response.json()) as {
+      result?: { records?: ApiRecord[] };
+    };
+    if (Array.isArray(data?.result?.records)) {
+      rawRecords = data.result!.records!;
+    }
+  } catch {
+    rawRecords = [];
+  }
+
+  const allRows: HawkerRow[] = [];
+  for (let i = 0; i < rawRecords.length; i++) {
+    const row = mapRecord(rawRecords[i]!);
+    if (row) allRows.push(row);
+  }
+
+  const stallSum = rawRecords.reduce((s, r) => s + parseStalls(r), 0);
+
+  const filtered =
+    activeFilter === "All"
+      ? allRows
+      : allRows.filter((h) => h.region === activeFilter);
+
   return (
     <div className="flex min-h-full flex-1 flex-col">
       <SiteHeader />
 
       <main className="flex-1">
-        <Suspense fallback={<HomeMainSkeleton />}>
-          <HomeMainAsync />
-        </Suspense>
+        <HeroSection
+          hawkerCentreCount={allRows.length}
+          foodStallCount={stallSum > 0 ? stallSum : undefined}
+        />
+
+        <section
+          id="discover"
+          className="mx-auto max-w-3xl -translate-y-8 px-4 sm:px-6 lg:px-8"
+          aria-label="Search"
+        >
+          <form
+            className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-sf-surface/80 p-2 shadow-xl shadow-black/40 backdrop-blur-sm sm:flex-row sm:items-stretch sm:p-2"
+            role="search"
+            action="/"
+            method="get"
+          >
+            <label htmlFor="search-query" className="sr-only">
+              Search by location or food type
+            </label>
+            <input
+              id="search-query"
+              type="search"
+              name="q"
+              placeholder="Search by location or food type (e.g. Tiong Bahru, laksa)…"
+              className="min-h-12 flex-1 rounded-xl border border-transparent bg-sf-bg/80 px-4 py-3 text-sf-cream placeholder:text-sf-muted/80 focus:border-sf-primary/50 focus:outline-none focus:ring-2 focus:ring-sf-primary/40"
+            />
+            <button
+              type="submit"
+              className="inline-flex min-h-12 items-center justify-center rounded-xl bg-sf-primary px-8 text-sm font-semibold text-white transition hover:bg-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-cream"
+            >
+              Search
+            </button>
+          </form>
+        </section>
+
+        <section
+          id="restaurants"
+          className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8"
+          aria-labelledby="restaurants-heading"
+        >
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-sf-surface/60 to-sf-bg px-6 py-8 sm:px-10 sm:py-10">
+            <h2
+              id="restaurants-heading"
+              className="text-2xl font-semibold text-sf-cream"
+            >
+              Restaurants & cafés
+            </h2>
+            <p className="mt-2 max-w-2xl text-sf-muted">
+              From zi char to mod-Sin tasting menus — browse by neighbourhood
+              and cuisine. Start with a search above or explore hawker gems
+              first.
+            </p>
+            <Link
+              href="#discover"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-sf-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
+            >
+              Search restaurants
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </section>
+
+        <section
+          id="hawker-centres"
+          className="border-t border-white/5 bg-black/20 px-4 py-16 sm:px-6 lg:px-8"
+          aria-labelledby="hawkers-heading"
+        >
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-8 max-w-2xl">
+              <h2
+                id="hawkers-heading"
+                className="text-3xl font-bold tracking-tight text-sf-cream sm:text-4xl"
+              >
+                Hawker centres
+              </h2>
+              <p className="mt-3 text-sf-muted">
+                {allRows.length > 0
+                  ? `Showing ${filtered.length.toLocaleString("en-SG")} of ${allRows.length.toLocaleString("en-SG")} centres from data.gov.sg.`
+                  : "No hawker data could be loaded from data.gov.sg right now."}
+              </p>
+            </div>
+
+            <div
+              className="mb-10 flex flex-wrap gap-2"
+              role="toolbar"
+              aria-label="Filter by region"
+            >
+              {REGION_FILTERS.map((region) => {
+                const isActive = activeFilter === region;
+                const href =
+                  region === "All" ? "/" : `/?region=${encodeURIComponent(region)}`;
+                return (
+                  <Link
+                    key={region}
+                    href={href}
+                    scroll={false}
+                    className={`rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary ${
+                      isActive
+                        ? "scale-[1.02] bg-sf-primary text-white shadow-md shadow-sf-primary/30"
+                        : "border border-white/20 bg-transparent text-sf-muted hover:border-sf-primary/50 hover:text-sf-cream"
+                    }`}
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {region}
+                  </Link>
+                );
+              })}
+            </div>
+
+            {filtered.length === 0 ? (
+              <p className="rounded-2xl border border-white/10 bg-sf-surface/40 px-6 py-10 text-center text-sf-muted">
+                No centres match this filter.{" "}
+                <Link
+                  href="/"
+                  className="font-semibold text-sf-primary underline decoration-sf-primary/50 underline-offset-2 hover:decoration-sf-primary"
+                >
+                  Show all
+                </Link>
+                .
+              </p>
+            ) : (
+              <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {filtered.map((h, index) => {
+                  const imageUrl =
+                    CARD_IMAGES[index % CARD_IMAGES.length] ?? CARD_IMAGES[0];
+                  const tag = VIBE_TAGS[index % VIBE_TAGS.length];
+                  return (
+                    <li
+                      key={h.id}
+                      className="sf-hawker-card-in"
+                      style={{
+                        animationDelay: `${Math.min(index, 20) * 40}ms`,
+                      }}
+                    >
+                      <article
+                        id={`hawker-${h.id}`}
+                        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-sf-primary/25 bg-gradient-to-br from-sf-primary/[0.14] via-sf-primary/[0.05] to-sf-surface/70 transition duration-300 ease-out hover:border-sf-primary/45 hover:shadow-lg hover:shadow-sf-primary/10"
+                      >
+                        <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden">
+                          <Image
+                            src={imageUrl}
+                            alt=""
+                            fill
+                            className="object-cover transition duration-500 ease-out group-hover:scale-[1.04]"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
+                          <div
+                            className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e]/70 via-transparent to-transparent"
+                            aria-hidden
+                          />
+                        </div>
+                        <div className="flex flex-1 flex-col p-5">
+                          <span className="mb-3 inline-flex w-fit rounded-full border border-sf-primary/45 bg-sf-primary/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sf-primary">
+                            {tag}
+                          </span>
+                          <h3 className="text-lg font-semibold text-sf-cream group-hover:text-sf-primary/95">
+                            {h.name}
+                          </h3>
+                          <p className="mt-1 line-clamp-3 text-sm text-sf-muted">
+                            {h.address}
+                          </p>
+                          <p className="mt-0.5 text-xs text-sf-muted/90">
+                            {h.region} region
+                          </p>
+                          <div className="mt-4 border-t border-white/10 pt-4">
+                            <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+                              Opening hours
+                            </p>
+                            <p className="mt-1 text-sm text-sf-cream/95">
+                              Varies by stall
+                            </p>
+                          </div>
+                          <Link
+                            href={`/hawker/${encodeURIComponent(h.id)}`}
+                            className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-sf-primary px-4 text-sm font-semibold text-white transition hover:bg-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-cream"
+                          >
+                            View Centre
+                          </Link>
+                        </div>
+                      </article>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
+        </section>
 
         <section
           id="flavour-trail"

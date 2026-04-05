@@ -189,6 +189,50 @@ export async function getHawkerById(id: string): Promise<HawkerCentre | null> {
   return all.find((h) => String(h.id) === String(id)) ?? null;
 }
 
+const HOME_LIST_URL = `https://data.gov.sg/api/action/datastore_search?resource_id=${RESOURCE_ID}&limit=100`;
+
+/** Single-record lookup: filters query first, then scan first page (same as homepage). */
+export async function fetchHawkerByIdFromApi(
+  id: string,
+): Promise<HawkerCentre | null> {
+  const trimmed = id.trim();
+  const numeric = Number.parseInt(trimmed, 10);
+  const filterValue =
+    Number.isFinite(numeric) && String(numeric) === trimmed
+      ? numeric
+      : trimmed;
+  const filters = encodeURIComponent(JSON.stringify({ _id: filterValue }));
+  const filterUrl = `https://data.gov.sg/api/action/datastore_search?resource_id=${RESOURCE_ID}&filters=${filters}&limit=1`;
+  try {
+    const res = await fetch(filterUrl, { next: { revalidate: 86400 } });
+    if (res.ok) {
+      const json = (await res.json()) as {
+        success?: boolean;
+        result?: { records?: Record<string, unknown>[] };
+      };
+      if (json.success !== false) {
+        const rec = json.result?.records?.[0];
+        const mapped = rec ? mapRecord(rec) : null;
+        if (mapped) return mapped;
+      }
+    }
+
+    const listRes = await fetch(HOME_LIST_URL, { next: { revalidate: 86400 } });
+    if (!listRes.ok) return null;
+    const listJson = (await listRes.json()) as {
+      result?: { records?: Record<string, unknown>[] };
+    };
+    const records = listJson.result?.records;
+    if (!Array.isArray(records)) return null;
+    const match = records.find(
+      (r) => String(r._id ?? r.id) === String(trimmed),
+    );
+    return match ? mapRecord(match) : null;
+  } catch {
+    return null;
+  }
+}
+
 export function sumStallCounts(hawkers: HawkerCentre[]): number {
   return hawkers.reduce((sum, h) => sum + (h.noOfStalls ?? 0), 0);
 }
