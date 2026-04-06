@@ -15,6 +15,7 @@ import { DishCarousel } from "../dish-carousel";
 import { HowToEat } from "../how-to-eat";
 import { KeyIngredients } from "../key-ingredients";
 import { BestStalls } from "../best-stalls";
+import { ShiokOMeter } from "../shiok-o-meter";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -152,6 +153,8 @@ export default async function FoodHeritageDishPage({ params }: Props) {
 
                 {/* How to Eat Like a Local */}
                 <HowToEat steps={dish.howToEat} />
+
+                <ShiokOMeter scores={dish.shiokOMeter} />
 
                 {/* Where to Find */}
                 <section className="rounded-2xl border-2 border-sf-primary/50 bg-sf-surface/50 p-6 sm:p-8">

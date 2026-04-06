@@ -22,6 +22,13 @@ export type FoodHeritageDish = {
     note: string;
     mapsUrl: string;
   }[];
+  shiokOMeter: {
+    spiceHit: number;
+    messFactor: number;
+    flavourDepth: number;
+    queueGame: number;
+    shiokValue: number;
+  };
 };
 
 export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
@@ -115,6 +122,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
           "https://maps.google.com/?q=Toa+Payoh+Lorong+8+Market+Char+Kway+Teow+Singapore",
       },
     ],
+    shiokOMeter: {
+      spiceHit: 5,
+      messFactor: 3,
+      flavourDepth: 10,
+      queueGame: 9,
+      shiokValue: 9,
+    },
   },
   {
     name: "Hainanese Chicken Rice",
@@ -207,6 +221,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
           "https://maps.google.com/?q=Boon+Tong+Kee+Chicken+Rice+Balestier+Singapore",
       },
     ],
+    shiokOMeter: {
+      spiceHit: 2,
+      messFactor: 1,
+      flavourDepth: 7,
+      queueGame: 9,
+      shiokValue: 10,
+    },
   },
   {
     name: "Laksa",
@@ -299,6 +320,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
           "https://maps.google.com/?q=Marine+Parade+Laksa+Food+Centre+Singapore",
       },
     ],
+    shiokOMeter: {
+      spiceHit: 8,
+      messFactor: 6,
+      flavourDepth: 9,
+      queueGame: 7,
+      shiokValue: 9,
+    },
   },
   {
     name: "Ice Kachang",
@@ -391,6 +419,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
           "https://maps.google.com/?q=Adam+Road+Food+Centre+Ice+Kachang+Singapore",
       },
     ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 5,
+      flavourDepth: 5,
+      queueGame: 4,
+      shiokValue: 10,
+    },
   },
   {
     name: "Kaya Toast",
@@ -482,6 +517,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
           "https://maps.google.com/?q=Ya+Kun+Kaya+Toast+Far+East+Square+Singapore",
       },
     ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 2,
+      flavourDepth: 6,
+      queueGame: 5,
+      shiokValue: 10,
+    },
   },
   {
     name: "Chilli Crab",
@@ -573,6 +615,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
           "https://maps.google.com/?q=No+Signboard+Seafood+Geylang+Road+Singapore",
       },
     ],
+    shiokOMeter: {
+      spiceHit: 7,
+      messFactor: 10,
+      flavourDepth: 9,
+      queueGame: 6,
+      shiokValue: 4,
+    },
   },
   {
     name: "Rojak",
@@ -664,6 +713,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
           "https://maps.google.com/?q=Marine+Parade+Food+Centre+Rojak+Singapore",
       },
     ],
+    shiokOMeter: {
+      spiceHit: 4,
+      messFactor: 4,
+      flavourDepth: 8,
+      queueGame: 4,
+      shiokValue: 9,
+    },
   },
   {
     name: "Bobo Cha Cha",
@@ -755,6 +811,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
           "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+East+Coast+Road+Singapore",
       },
     ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 1,
+      flavourDepth: 5,
+      queueGame: 3,
+      shiokValue: 9,
+    },
   },
 ];
 
