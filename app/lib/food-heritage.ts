@@ -41,7 +41,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Maxwell Food Centre, Chinatown Complex, and Serangoon Gardens hawker clusters are pilgrimage sites; many neighbourhoods have a 20-year stall locals won't trade away.",
     priceRange: "S$4–25 depending on stall and cut",
     imageUrl:
-      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1600&q=80",
+      "https://images.pexels.com/photos/6990118/pexels-photo-6990118.jpeg",
     funFact:
       "Singapore's hawker chicken rice stalls often judge quality by rice first—aromatic, separate grains, and gentle chicken flavour before you even touch the meat.",
     bestPairedWith:
@@ -77,7 +77,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Old Airport Road Food Centre, Chinatown Complex dessert stalls, and classic heartland hawker drink shops with long queues after school.",
     priceRange: "S$2–5",
     imageUrl:
-      "https://images.pexels.com/photos/5870643/pexels-photo-5870643.jpeg?w=1600",
+      "https://images.pexels.com/photos/5870643/pexels-photo-5870643.jpeg",
     funFact:
       "The name bundles \"ice\" with kachang (Malay for beans)—red beans remain the soul ingredient under all that colour.",
     bestPairedWith:
