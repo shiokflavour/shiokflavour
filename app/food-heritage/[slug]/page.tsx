@@ -72,77 +72,75 @@ export default async function FoodHeritageDishPage({ params }: Props) {
     <div className="flex min-h-full flex-1 flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <div className="relative w-full overflow-hidden aspect-[16/6]">
-          <FoodHeritageHeroImage
-            src={dish.imageUrl}
-            alt={dish.name}
-            className="object-cover"
-          />
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-sf-bg via-sf-bg/75 to-sf-bg/20"
-            aria-hidden
-          />
-          <div className="absolute inset-x-0 bottom-0 px-4 pb-8 sm:px-6 sm:pb-10 lg:px-10">
-            <div className="mx-auto max-w-6xl">
-              <h1 className="text-3xl font-bold tracking-tight text-sf-cream sm:text-4xl lg:text-5xl">
+        <section className="mx-auto max-w-6xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
+          <div className="grid items-start gap-10 lg:grid-cols-3 lg:gap-12">
+            <div className="space-y-5 lg:col-span-2">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-sf-primary sm:text-sm">
+                Singapore Food Heritage
+              </p>
+              <Link
+                href="/food-heritage"
+                className="inline-flex items-center gap-1 text-sm text-sf-muted transition hover:text-sf-cream"
+              >
+                ← Back to Food Heritage
+              </Link>
+              <h1 className="text-5xl font-bold leading-[1.05] tracking-tight text-sf-cream sm:text-6xl">
                 {dish.name}
               </h1>
-              <p className="mt-2 max-w-3xl text-sm font-medium uppercase tracking-wider text-sf-muted sm:text-base sm:normal-case sm:tracking-normal sm:text-sf-cream/90">
+              <p className="max-w-3xl text-base leading-relaxed text-sf-muted">
                 {dish.origin}
               </p>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex rounded-full bg-sf-primary px-4 py-2 text-sm font-semibold text-white">
+                  {dish.spiceLevel}
+                </span>
+                <span className="inline-flex rounded-full bg-sf-surface px-4 py-2 text-sm font-semibold text-sf-cream ring-1 ring-white/15">
+                  {dish.difficulty}
+                </span>
+                {dish.halal ? (
+                  <span className="inline-flex rounded-full bg-emerald-600/90 px-4 py-2 text-sm font-semibold text-white">
+                    Halal Friendly
+                  </span>
+                ) : null}
+              </div>
+              <aside className="rounded-2xl border border-white/[0.08] bg-sf-surface p-6 sm:p-8">
+                <p className="text-sm font-semibold text-sf-primary">
+                  Locals Say 🗣️
+                </p>
+                <div className="relative mt-5">
+                  <span
+                    className="font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
+                    aria-hidden
+                  >
+                    &ldquo;
+                  </span>
+                  <p className="-mt-2 pl-1 text-lg italic leading-relaxed text-white sm:pl-2 sm:text-xl">
+                    {dish.localSay}
+                  </p>
+                  <span
+                    className="-mt-2 block text-right font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
+                    aria-hidden
+                  >
+                    &rdquo;
+                  </span>
+                </div>
+              </aside>
+            </div>
+            <div className="lg:col-span-1">
+              <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl shadow-lg shadow-black/40 ring-1 ring-white/10 lg:max-w-none">
+                <FoodHeritageHeroImage
+                  src={dish.imageUrl}
+                  alt={dish.name}
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="border-b border-white/[0.06] bg-sf-bg">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-4 py-4 sm:px-6 lg:px-8">
-            <span className="inline-flex rounded-full bg-sf-primary px-4 py-2 text-sm font-semibold text-white">
-              {dish.spiceLevel}
-            </span>
-            <span className="inline-flex rounded-full bg-sf-surface px-4 py-2 text-sm font-semibold text-sf-cream ring-1 ring-white/15">
-              {dish.difficulty}
-            </span>
-            {dish.halal ? (
-              <span className="inline-flex rounded-full bg-emerald-600/90 px-4 py-2 text-sm font-semibold text-white">
-                Halal Friendly
-              </span>
-            ) : null}
-          </div>
-        </div>
+        </section>
 
         <div className="px-4 py-10 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
-            <Link
-              href="/food-heritage"
-              className="inline-flex items-center gap-1 text-sm font-medium text-sf-primary hover:underline"
-            >
-              ← Singapore Food Heritage
-            </Link>
-
-            <aside className="mt-8 rounded-2xl border border-white/[0.08] bg-sf-surface p-6 sm:p-8">
-              <p className="text-sm font-semibold text-sf-primary">
-                Locals Say 🗣️
-              </p>
-              <div className="relative mt-5">
-                <span
-                  className="font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
-                  aria-hidden
-                >
-                  &ldquo;
-                </span>
-                <p className="-mt-2 pl-1 text-lg italic leading-relaxed text-white sm:pl-2 sm:text-xl">
-                  {dish.localSay}
-                </p>
-                <span
-                  className="-mt-2 block text-right font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
-                  aria-hidden
-                >
-                  &rdquo;
-                </span>
-              </div>
-            </aside>
-
-            <div className="mt-10 grid gap-10 lg:grid-cols-3 lg:gap-12">
+            <div className="grid gap-10 lg:grid-cols-3 lg:gap-12">
               <div className="lg:col-span-2 space-y-10">
                 <section>
                   <h2 className="text-xl font-semibold text-sf-primary">
