@@ -648,19 +648,24 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     address: "1220 East Coast Pkwy, East Coast",
     region: "East",
     tag: "Supper Spot",
-    hours: "12pm–late daily",
+    hours: "12pm–late night daily",
     imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
     description:
-      "Open-air seaside hawker village famous for satay smoke, chilli crab, and sambal stingray — sea breeze included.",
-    mustTry: ["Satay", "Chilli Crab", "Sambal Stingray", "BBQ Wings"],
+      "Open-air seaside hawker village — satay smoke, chilli crab, sambal stingray, and BBQ wings with the sea steps away.",
+    mustTry: [
+      "Satay",
+      "Chilli Crab",
+      "Sambal Stingray",
+      "BBQ Chicken Wings",
+    ],
     famousFor:
-      "Seaside BBQ and seafood — a classic East Coast night out with the beach a few steps away.",
+      "Open-air seaside satay and seafood — a classic East Coast supper under the stars.",
     michelinNote:
       "Featured in Michelin Guide as a recommended Singapore experience",
     vibes: ["Sea breeze", "Supper crew", "Families", "Weekend nights"],
-    nearestMRT: "Bedok (EW Line) — then short ride or walk along park connector",
+    nearestMRT: "Bedok (EW Line) — then Grab",
     tipForVisitors:
-      "Many visitors train to Bedok and Grab or cycle in. Bring mosquito repellent after dark by the coast.",
+      "Train to Bedok and Grab in for convenience. Bring mosquito repellent after dark by the coast.",
     halal: false,
     openLate: true,
     budgetPerPax: "$12–$25",
@@ -675,10 +680,10 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     hours: "6am–10pm daily",
     imageUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&q=80",
     description:
-      "A friendly neighbourhood centre in Katong serving laksa, rojak, and satay bee hoon to east-side families.",
+      "Neighbourhood Katong hawker centre — laksa, rojak, and satay bee hoon for east-side families.",
     mustTry: ["Katong Laksa", "Rojak", "Satay Bee Hoon"],
     famousFor:
-      "The Katong/Marine Parade neighbourhood — heritage Peranakan-leaning plates without the tourist crush.",
+      "The neighbourhood Katong centre — heritage flavours a short walk from Marine Parade.",
     michelinNote: "",
     vibes: ["East Coast locals", "Families", "Katong", "Breakfast"],
     nearestMRT: "Marine Parade (TE Line) — 5 min walk",
@@ -715,13 +720,13 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 29,
     slug: "ghim-moh-market-food-centre",
     name: "Ghim Moh Market & Food Centre",
-    address: "20 Ghim Moh Road, Holland Village",
+    address: "20 Ghim Moh Road, Ghim Moh",
     region: "West",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
     imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
     description:
-      "A west-side institution where Michelin Bib Gourmand chwee kueh meets bowls of laksa and wonton noodles.",
+      "West-side institution home to Michelin Bib Gourmand chwee kueh, plus laksa and wonton noodles.",
     mustTry: ["Ghim Moh Chwee Kueh", "Laksa", "Wonton Noodles"],
     famousFor:
       "Ghim Moh Chwee Kueh — silky rice cakes with generous chai poh topping.",
@@ -791,10 +796,10 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     hours: "6am–10pm daily",
     imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
     description:
-      "A quieter west-coast centre near the Southern Ridges — underrated zi char energy without the city buzz.",
+      "A quiet underrated hawker centre near the Southern Ridges — zi char and stir-fry favourites without the city buzz.",
     mustTry: ["Zi Char", "Sambal Sotong", "Prawn Paste Chicken"],
     famousFor:
-      "Hidden gem zi char — perfect after a ridge walk or before sunset by the coast.",
+      "Quiet centre near the Southern Ridges — underrated zi char and wok favourites.",
     michelinNote: "",
     vibes: ["West Coast", "Zi char", "Quiet eats", "Hikers"],
     nearestMRT: "Pasir Panjang (CC Line) — 8 min walk",
