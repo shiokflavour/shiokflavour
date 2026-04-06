@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { getAllFoodHeritageSlugs } from "./lib/food-heritage";
 import { getHawkersForHome } from "./lib/hawker-api";
 
 const STATIC_ENTRIES: MetadataRoute.Sitemap = [
@@ -13,6 +14,12 @@ const STATIC_ENTRIES: MetadataRoute.Sitemap = [
     lastModified: new Date(),
     changeFrequency: "daily",
     priority: 0.9,
+  },
+  {
+    url: "https://www.shiokflavour.com/food-heritage",
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.85,
   },
   {
     url: "https://www.shiokflavour.com/#flavour-trail",
@@ -48,5 +55,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly" as const,
     priority: 0.75,
   }));
-  return [...STATIC_ENTRIES, ...hawkerUrls];
+  const foodHeritageUrls: MetadataRoute.Sitemap = getAllFoodHeritageSlugs().map(
+    (slug) => ({
+      url: `https://www.shiokflavour.com/food-heritage/${encodeURIComponent(slug)}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }),
+  );
+  return [...STATIC_ENTRIES, ...foodHeritageUrls, ...hawkerUrls];
 }
