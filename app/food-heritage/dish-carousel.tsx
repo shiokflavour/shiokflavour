@@ -20,19 +20,22 @@ type Props = {
 const VISIBLE = 3;
 const AUTOPLAY_MS = 4000;
 
+function wrapIndex(i: number, total: number) {
+  if (total <= 0) return 0;
+  return ((i % total) + total) % total;
+}
+
 export function DishCarousel({ dishes }: Props) {
   const total = dishes.length;
   const [start, setStart] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
 
-  const clamp = (i: number) => ((i % total) + total) % total;
-
   const advance = useCallback(
     (dir: 1 | -1) => {
       if (transitioning) return;
       setTransitioning(true);
-      setStart((prev) => clamp(prev + dir));
+      setStart((prev) => wrapIndex(prev + dir, total));
       setTimeout(() => setTransitioning(false), 350);
     },
     [transitioning, total],
@@ -45,7 +48,7 @@ export function DishCarousel({ dishes }: Props) {
   }, [isHovered, advance]);
 
   const visibleDishes = Array.from({ length: VISIBLE }, (_, i) =>
-    dishes[clamp(start + i)],
+    dishes[wrapIndex(start + i, total)],
   );
 
   return (

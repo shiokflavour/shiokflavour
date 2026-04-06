@@ -567,6 +567,243 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     openLate: false,
     budgetPerPax: "$3–$7",
   },
+  {
+    id: 23,
+    slug: "golden-shoe-market-street",
+    name: "Golden Shoe (Market Street Hawker Centre)",
+    address: "161 Market Street, CBD",
+    region: "Central",
+    tag: "Office Favourite",
+    hours: "Weekdays 7am–3pm",
+    imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+    description:
+      "A compact CBD hawker centre tucked under Market Street — a weekday lifesaver for office workers hunting chicken rice, wonton mee, and bak chor mee without leaving the district.",
+    mustTry: ["Chicken Rice", "Wonton Mee", "Bak Chor Mee"],
+    famousFor:
+      "The CBD lunch crowd — quick, affordable heritage plates between meetings in the heart of the financial district.",
+    michelinNote: "",
+    vibes: ["Office workers", "Weekday lunch", "CBD", "Quick meals"],
+    nearestMRT: "Raffles Place (EW/NS Line) — 3 min walk",
+    tipForVisitors:
+      "Arrive before noon; many stalls wind down by mid-afternoon on weekdays. Closed or quiet on weekends.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$4–$8",
+  },
+  {
+    id: 24,
+    slug: "hong-lim-market-food-centre",
+    name: "Hong Lim Market & Food Centre",
+    address: "531A Upper Cross Street, Chinatown",
+    region: "Central",
+    tag: "Michelin Alert",
+    hours: "6am–10pm daily",
+    imageUrl: "https://images.unsplash.com/photo-1555126634-323283e09fa9?w=800&q=80",
+    description:
+      "A Chinatown institution stacked with legendary stalls, including Michelin Bib Gourmand favourite Outram Park Fried Kway Teow Mee.",
+    mustTry: [
+      "Outram Park Fried Kway Teow Mee",
+      "Carrot Cake",
+      "Hakka Thunder Tea Rice",
+    ],
+    famousFor:
+      "Home of Outram Park Fried Kway Teow Mee — smoky plates that draw queues from across the island.",
+    michelinNote:
+      "Outram Park Fried Kway Teow Mee holds Michelin Bib Gourmand recognition",
+    vibes: ["Foodies", "Chinatown", "Michelin hunters", "Lunch queues"],
+    nearestMRT: "Chinatown (NE/DT Line) — 5 min walk",
+    tipForVisitors:
+      "Come early for fried kway teow; stalls can sell out. Explore the upper floors for lesser-known gems.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$4–$8",
+  },
+  {
+    id: 25,
+    slug: "peoples-park-food-centre",
+    name: "People's Park Food Centre",
+    address: "32 New Market Road, Chinatown",
+    region: "Central",
+    tag: "Local Favourite",
+    hours: "6am–10pm daily",
+    imageUrl: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+    description:
+      "A bustling Chinatown complex where Teochew and Cantonese hawker classics rule — hearty soups, noodles, and claypot comfort.",
+    mustTry: ["Bak Kut Teh", "Yong Tau Foo", "Wonton Noodles"],
+    famousFor:
+      "Authentic Teochew and Cantonese hawker food steps from New Bridge Road and the heart of Chinatown.",
+    michelinNote: "",
+    vibes: ["Chinatown locals", "Families", "Heritage flavours", "Budget dining"],
+    nearestMRT: "Chinatown (NE/DT Line) — 3 min walk",
+    tipForVisitors:
+      "Pair with a wander through People's Park Complex — wet market upstairs, food hall below.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$4–$8",
+  },
+  {
+    id: 26,
+    slug: "east-coast-lagoon-food-village",
+    name: "East Coast Lagoon Food Village",
+    address: "1220 East Coast Pkwy, East Coast",
+    region: "East",
+    tag: "Supper Spot",
+    hours: "12pm–late daily",
+    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+    description:
+      "Open-air seaside hawker village famous for satay smoke, chilli crab, and sambal stingray — sea breeze included.",
+    mustTry: ["Satay", "Chilli Crab", "Sambal Stingray", "BBQ Wings"],
+    famousFor:
+      "Seaside BBQ and seafood — a classic East Coast night out with the beach a few steps away.",
+    michelinNote:
+      "Featured in Michelin Guide as a recommended Singapore experience",
+    vibes: ["Sea breeze", "Supper crew", "Families", "Weekend nights"],
+    nearestMRT: "Bedok (EW Line) — then short ride or walk along park connector",
+    tipForVisitors:
+      "Many visitors train to Bedok and Grab or cycle in. Bring mosquito repellent after dark by the coast.",
+    halal: false,
+    openLate: true,
+    budgetPerPax: "$12–$25",
+  },
+  {
+    id: 27,
+    slug: "marine-parade-food-centre",
+    name: "Marine Parade Food Centre",
+    address: "76 Marine Parade Central, Marine Parade",
+    region: "East",
+    tag: "Local Favourite",
+    hours: "6am–10pm daily",
+    imageUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&q=80",
+    description:
+      "A friendly neighbourhood centre in Katong serving laksa, rojak, and satay bee hoon to east-side families.",
+    mustTry: ["Katong Laksa", "Rojak", "Satay Bee Hoon"],
+    famousFor:
+      "The Katong/Marine Parade neighbourhood — heritage Peranakan-leaning plates without the tourist crush.",
+    michelinNote: "",
+    vibes: ["East Coast locals", "Families", "Katong", "Breakfast"],
+    nearestMRT: "Marine Parade (TE Line) — 5 min walk",
+    tipForVisitors:
+      "Combine with a walk toward Katong shophouses — perfect east-side food crawl.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$4–$8",
+  },
+  {
+    id: 28,
+    slug: "jalan-berseh-food-centre",
+    name: "Jalan Berseh Food Centre",
+    address: "166 Jalan Besar, Jalan Besar",
+    region: "Central",
+    tag: "Local Favourite",
+    hours: "6am–10pm daily",
+    imageUrl: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+    description:
+      "A Jalan Besar-area favourite anchored by charcoal-fired Sungei Road Laksa bowls for under a few dollars.",
+    mustTry: ["Sungei Road Laksa", "Curry Noodles", "Oyster Cake"],
+    famousFor:
+      "Sungei Road Laksa — charcoal-tinged gravy and bee hoon in a bowl locals defend fiercely.",
+    michelinNote: "Sungei Road Laksa recognised by Michelin Guide",
+    vibes: ["Jalan Besar", "Foodies", "Laksa lovers", "Budget eats"],
+    nearestMRT: "Jalan Besar (DT Line) — 5 min walk",
+    tipForVisitors:
+      "Go early — laksa queues build fast. Explore nearby Little India after.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$3–$6",
+  },
+  {
+    id: 29,
+    slug: "ghim-moh-market-food-centre",
+    name: "Ghim Moh Market & Food Centre",
+    address: "20 Ghim Moh Road, Holland Village",
+    region: "West",
+    tag: "Local Favourite",
+    hours: "6am–10pm daily",
+    imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
+    description:
+      "A west-side institution where Michelin Bib Gourmand chwee kueh meets bowls of laksa and wonton noodles.",
+    mustTry: ["Ghim Moh Chwee Kueh", "Laksa", "Wonton Noodles"],
+    famousFor:
+      "Ghim Moh Chwee Kueh — silky rice cakes with generous chai poh topping.",
+    michelinNote:
+      "Ghim Moh Chwee Kueh holds Michelin Bib Gourmand recognition",
+    vibes: ["Westies", "Breakfast", "Families", "Hawker heritage"],
+    nearestMRT: "Buona Vista (EW/CC Line) — 10 min walk",
+    tipForVisitors:
+      "Morning is busiest for chwee kueh and market shopping — come before 9am on weekends.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$3–$7",
+  },
+  {
+    id: 30,
+    slug: "alexandra-village-food-centre",
+    name: "Alexandra Village Food Centre",
+    address: "120 Bukit Merah Lane 1, Alexandra",
+    region: "Central",
+    tag: "Local Favourite",
+    hours: "6am–11pm daily",
+    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
+    description:
+      "A well-loved Alexandra-Bukit Merah hub stacking heritage stalls from Hock Lam beef noodles to cult-status wings.",
+    mustTry: ["Hock Lam Beef Noodles", "BBQ Chicken Wings", "Char Kway Teow"],
+    famousFor:
+      "Multiple heritage favourites under one roof — a foodie's Alexandra pilgrimage.",
+    michelinNote: "",
+    vibes: ["Alexandra", "Local foodies", "Dinner", "Families"],
+    nearestMRT: "Queenstown (EW Line) — 10 min walk",
+    tipForVisitors:
+      "Arrive hungry and share plates — portions are generous and queues move in waves.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$4–$8",
+  },
+  {
+    id: 31,
+    slug: "bishan-street-13-food-centre",
+    name: "Bishan Street 13 Food Centre",
+    address: "Blk 510 Bishan Street 13, Bishan",
+    region: "Central",
+    tag: "Local Favourite",
+    hours: "6am–10pm daily",
+    imageUrl: "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=800&q=80",
+    description:
+      "A popular heartland centre where families queue for prata, chicken rice, and bak chor mee before school and work.",
+    mustTry: ["Roti Prata", "Chicken Rice", "Bak Chor Mee"],
+    famousFor:
+      "Heartland breakfast and dinner — a true Bishan neighbourhood canteen.",
+    michelinNote: "",
+    vibes: ["Bishan", "Families", "Breakfast", "Heartland"],
+    nearestMRT: "Bishan (NS/CC Line) — 8 min walk",
+    tipForVisitors:
+      "Weekend mornings see the longest prata lines — patience pays off.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$3–$7",
+  },
+  {
+    id: 32,
+    slug: "pasir-panjang-food-centre",
+    name: "Pasir Panjang Food Centre",
+    address: "121 Pasir Panjang Road, Pasir Panjang",
+    region: "West",
+    tag: "Hidden Gem",
+    hours: "6am–10pm daily",
+    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
+    description:
+      "A quieter west-coast centre near the Southern Ridges — underrated zi char energy without the city buzz.",
+    mustTry: ["Zi Char", "Sambal Sotong", "Prawn Paste Chicken"],
+    famousFor:
+      "Hidden gem zi char — perfect after a ridge walk or before sunset by the coast.",
+    michelinNote: "",
+    vibes: ["West Coast", "Zi char", "Quiet eats", "Hikers"],
+    nearestMRT: "Pasir Panjang (CC Line) — 8 min walk",
+    tipForVisitors:
+      "Pair with Kent Ridge or Southern Ridges — reward yourself with a communal zi char feast.",
+    halal: false,
+    openLate: false,
+    budgetPerPax: "$5–$12",
+  },
 ];
 
 export const REGION_FILTERS = [
