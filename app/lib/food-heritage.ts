@@ -59,7 +59,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Katong and Joo Chiat for the coconut curry style; Sungei Road and Marine Parade hawker centres for neighbourhood favourites. Early hours mean fresher rempah in some spots.",
     priceRange: "S$4–10 per bowl",
     imageUrl:
-      "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=1600&q=80",
+      "https://images.pexels.com/photos/32107041/pexels-photo-32107041.jpeg",
     funFact:
       "Traditional Katong laksa is eaten with only a spoon—the noodles are snipped short so you never fish awkwardly in public.",
     bestPairedWith:
