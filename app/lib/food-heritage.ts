@@ -23,7 +23,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Lau Pa Sat and Maxwell Food Centre host legendary stalls; East Coast and Old Airport Road hawker centres are known for queues at peak hours. Look for long waits and a soot-dark wok.",
     priceRange: "S$4–8 per plate",
     imageUrl:
-      "https://images.unsplash.com/photo-1555126634-323283e09fa9?auto=format&fit=crop&w=1600&q=80",
+      "https://i.ibb.co/4gFx40Hp/Char-Kway-Teow-28-scaled.jpg",
     funFact:
       "Some iconic stalls still fry one or two portions at a time—refusing to overload the wok—to preserve the elusive wok hei that locals swear they can smell from across the food centre.",
     bestPairedWith:
@@ -41,7 +41,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Maxwell Food Centre, Chinatown Complex, and Serangoon Gardens hawker clusters are pilgrimage sites; many neighbourhoods have a 20-year stall locals won't trade away.",
     priceRange: "S$4–25 depending on stall and cut",
     imageUrl:
-      "https://images.unsplash.com/photo-1598514983318-2f32f8014326?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1600&q=80",
     funFact:
       "Singapore's hawker chicken rice stalls often judge quality by rice first—aromatic, separate grains, and gentle chicken flavour before you even touch the meat.",
     bestPairedWith:
@@ -59,7 +59,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Katong and Joo Chiat for the coconut curry style; Sungei Road and Marine Parade hawker centres for neighbourhood favourites. Early hours mean fresher rempah in some spots.",
     priceRange: "S$4–10 per bowl",
     imageUrl:
-      "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=1600&q=80",
     funFact:
       "Traditional Katong laksa is eaten with only a spoon—the noodles are snipped short so you never fish awkwardly in public.",
     bestPairedWith:
@@ -77,7 +77,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Old Airport Road Food Centre, Chinatown Complex dessert stalls, and classic heartland hawker drink shops with long queues after school.",
     priceRange: "S$2–5",
     imageUrl:
-      "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1600&q=80",
+      "https://images.pexels.com/photos/5870643/pexels-photo-5870643.jpeg?w=1600",
     funFact:
       "The name bundles \"ice\" with kachang (Malay for beans)—red beans remain the soul ingredient under all that colour.",
     bestPairedWith:
@@ -94,8 +94,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Ya Kun and Killiney-style chains, plus independent kopitiams in Tanjong Pagar, Tiong Bahru, and heartland void-deck coffee shops serving sets till mid-morning.",
     priceRange: "S$2–6 for toast set with eggs and drink",
-    imageUrl:
-      "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1600&q=80",
+    imageUrl: "https://i.ibb.co/pvKLjXTJ/kaya-toast.jpg",
     funFact:
       "Purists argue over Hainanese crisp toast versus softer white; both camps dunk fingers of toast into wobbly eggs seasoned with dark soy and white pepper.",
     bestPairedWith:
@@ -112,8 +111,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "East Coast Seafood Centre for the breezy classic experience; Joo Chiat and Geylang zi char alleys; quality hawker zi char that still steams mantou to order.",
     priceRange: "S$40–90+ per crab depending on season and venue",
-    imageUrl:
-      "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=1600&q=80",
+    imageUrl: "https://i.ibb.co/5xTkxsK2/Chilli-Crab-Jelco.jpg",
     funFact:
       "The sauce's silkiness often comes from eggs ribboned in at the last moment—timing separates pool-worthy gravy from overcooked curds.",
     bestPairedWith:
@@ -130,8 +128,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Toa Payoh and Balestier heritage hawker clusters, Old Airport Road, and famous stalls where uncles still hand-cut fruit to order.",
     priceRange: "S$4–10",
-    imageUrl:
-      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80",
+    imageUrl: "https://i.ibb.co/Dg84fk5X/rojak.jpg",
     funFact:
       "Veteran rojak masters toast you tiao to different crispness levels so some bites stay crunchy after dressing soaks in.",
     bestPairedWith:
@@ -148,8 +145,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Peranakan restaurants in Joo Chiat, dessert-focused hawker stalls in Chinatown Complex and Maxwell, and heartland zi char that still finish meals with traditional sweets.",
     priceRange: "S$3–8",
-    imageUrl:
-      "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1600&q=80",
+    imageUrl: "https://i.ibb.co/FLVK9THC/Bubur-cha-cha-scaled.jpg",
     funFact:
       "Some stalls differentiate themselves with firmer yam chips versus melt-away cubes—texture debates are as serious as syrup sweetness.",
     bestPairedWith:
