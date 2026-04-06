@@ -12,6 +12,10 @@ import {
   pickShiokFactorSentence,
 } from "../../lib/food-heritage";
 import { FoodHeritageHeroImage } from "../food-heritage-hero-image";
+import { DishCarousel } from "../dish-carousel";
+import { HowToEat } from "../how-to-eat";
+import { KeyIngredients } from "../key-ingredients";
+import { BestStalls } from "../best-stalls";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -22,9 +26,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const dish = getDishBySlug(slug);
-  if (!dish) {
-    return { title: "Dish not found | ShiokFlavour" };
-  }
+  if (!dish) return { title: "Dish not found | ShiokFlavour" };
   return {
     title: `${dish.name} | Singapore Food Heritage | ShiokFlavour`,
     description: dish.description.slice(0, 155).trim() + "…",
@@ -43,13 +45,6 @@ function pairedWithTags(text: string): string[] {
     .filter(Boolean);
 }
 
-function otherHeritageDishes(currentSlug: string, count: number) {
-  return FOOD_HERITAGE_DISHES.filter((d) => d.slug !== currentSlug).slice(
-    0,
-    count,
-  );
-}
-
 function hawkerCentreLabel(slug: string): string {
   const h = getFeaturedHawkerBySlug(slug);
   if (h) return h.name;
@@ -64,7 +59,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
   const dish = getDishBySlug(slug);
   if (!dish) notFound();
 
-  const related = otherHeritageDishes(dish.slug, 3);
+  const otherDishes = FOOD_HERITAGE_DISHES.filter((d) => d.slug !== dish.slug);
   const tags = pairedWithTags(dish.bestPairedWith);
   const shiok = pickShiokFactorSentence(dish.description);
 
@@ -72,6 +67,8 @@ export default async function FoodHeritageDishPage({ params }: Props) {
     <div className="flex min-h-full flex-1 flex-col">
       <SiteHeader />
       <main className="flex-1">
+
+        {/* Hero */}
         <section className="mx-auto max-w-6xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-3 lg:gap-12">
             <div className="space-y-5 lg:col-span-2">
@@ -108,19 +105,13 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                   Locals Say 🗣️
                 </p>
                 <div className="relative mt-5">
-                  <span
-                    className="font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
-                    aria-hidden
-                  >
+                  <span className="font-serif text-5xl leading-none text-sf-primary sm:text-6xl" aria-hidden>
                     &ldquo;
                   </span>
                   <p className="-mt-2 pl-1 text-lg italic leading-relaxed text-white sm:pl-2 sm:text-xl">
                     {dish.localSay}
                   </p>
-                  <span
-                    className="-mt-2 block text-right font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
-                    aria-hidden
-                  >
+                  <span className="-mt-2 block text-right font-serif text-5xl leading-none text-sf-primary sm:text-6xl" aria-hidden>
                     &rdquo;
                   </span>
                 </div>
@@ -128,69 +119,58 @@ export default async function FoodHeritageDishPage({ params }: Props) {
             </div>
             <div className="lg:col-span-1">
               <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl shadow-lg shadow-black/40 ring-1 ring-white/10 lg:max-w-none">
-                <FoodHeritageHeroImage
-                  src={dish.imageUrl}
-                  alt={dish.name}
-                  className="object-cover"
-                />
+                <FoodHeritageHeroImage src={dish.imageUrl} alt={dish.name} className="object-cover" />
               </div>
             </div>
           </div>
         </section>
 
+        {/* Body */}
         <div className="px-4 py-10 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-10 lg:grid-cols-3 lg:gap-12">
-              <div className="lg:col-span-2 space-y-10">
+
+              {/* Left column */}
+              <div className="space-y-10 lg:col-span-2">
+
+                {/* Story */}
                 <section>
-                  <h2 className="text-xl font-semibold text-sf-primary">
-                    Story
-                  </h2>
+                  <h2 className="text-xl font-semibold text-sf-primary">Story</h2>
                   <div className="mt-5 space-y-5 text-lg leading-relaxed text-sf-muted">
-                    {shiok.before ? (
-                      <p className="whitespace-pre-line">{shiok.before}</p>
-                    ) : null}
+                    {shiok.before ? <p className="whitespace-pre-line">{shiok.before}</p> : null}
                     {shiok.quote ? (
                       <blockquote className="relative border-l-4 border-sf-primary py-2 pl-5">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
-                          Shiok Factor
-                        </p>
-                        <p className="mt-2 text-xl font-medium italic text-sf-primary sm:text-2xl">
-                          {shiok.quote}
-                        </p>
+                        <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">Shiok Factor</p>
+                        <p className="mt-2 text-xl font-medium italic text-sf-primary sm:text-2xl">{shiok.quote}</p>
                       </blockquote>
                     ) : null}
-                    {shiok.after ? (
-                      <p className="whitespace-pre-line">{shiok.after}</p>
-                    ) : null}
+                    {shiok.after ? <p className="whitespace-pre-line">{shiok.after}</p> : null}
                   </div>
                 </section>
 
+                {/* Key Ingredients */}
+                <KeyIngredients ingredients={dish.keyIngredients} />
+
+                {/* How to Eat Like a Local */}
+                <HowToEat steps={dish.howToEat} />
+
+                {/* Where to Find */}
                 <section className="rounded-2xl border-2 border-sf-primary/50 bg-sf-surface/50 p-6 sm:p-8">
-                  <h2 className="text-xl font-semibold text-sf-cream">
-                    Where to Find the Best
-                  </h2>
-                  <p className="mt-4 leading-relaxed text-sf-muted">
-                    {dish.whereToFind}
-                  </p>
+                  <h2 className="text-xl font-semibold text-sf-cream">Where to Find the Best</h2>
+                  <p className="mt-4 leading-relaxed text-sf-muted">{dish.whereToFind}</p>
                 </section>
 
+                {/* Fun Fact */}
                 <aside className="rounded-2xl border border-white/[0.08] bg-sf-surface p-6 sm:p-8">
                   <p className="text-sm font-semibold text-sf-primary">
-                    <span className="mr-2" aria-hidden>
-                      💡
-                    </span>
-                    Fun fact
+                    <span className="mr-2" aria-hidden>💡</span>Fun fact
                   </p>
-                  <p className="mt-3 leading-relaxed text-sf-cream">
-                    {dish.funFact}
-                  </p>
+                  <p className="mt-3 leading-relaxed text-sf-cream">{dish.funFact}</p>
                 </aside>
 
+                {/* Best Paired With */}
                 <section>
-                  <h2 className="text-xl font-semibold text-sf-primary">
-                    Best Paired With
-                  </h2>
+                  <h2 className="text-xl font-semibold text-sf-primary">Best Paired With</h2>
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {tags.map((tag) => (
                       <li key={tag}>
@@ -203,23 +183,18 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                 </section>
               </div>
 
+              {/* Right sidebar */}
               <div className="lg:col-span-1">
                 <aside className="sticky top-24 space-y-6 rounded-2xl border border-white/[0.08] bg-sf-surface p-6">
-                  <h2 className="text-lg font-semibold text-sf-cream">
-                    Quick Facts
-                  </h2>
+                  <h2 className="text-lg font-semibold text-sf-cream">Quick Facts</h2>
                   <dl className="space-y-4 text-sm">
                     <div>
-                      <dt className="font-medium text-sf-muted">
-                        Price range
-                      </dt>
+                      <dt className="font-medium text-sf-muted">Price range</dt>
                       <dd className="mt-1 text-sf-cream">{dish.priceRange}</dd>
                     </div>
                     {dish.halal ? (
                       <div>
-                        <dt className="font-medium text-sf-muted">
-                          Dietary
-                        </dt>
+                        <dt className="font-medium text-sf-muted">Dietary</dt>
                         <dd className="mt-1">
                           <span className="inline-flex rounded-full bg-emerald-600/25 px-2.5 py-1 text-xs font-semibold text-emerald-300 ring-1 ring-emerald-500/40">
                             Halal friendly
@@ -229,9 +204,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                     ) : null}
                     <div>
                       <dt className="font-medium text-sf-muted">Origin</dt>
-                      <dd className="mt-1 leading-relaxed text-sf-cream">
-                        {dish.origin}
-                      </dd>
+                      <dd className="mt-1 leading-relaxed text-sf-cream">{dish.origin}</dd>
                     </div>
                   </dl>
                   <Link
@@ -244,6 +217,12 @@ export default async function FoodHeritageDishPage({ params }: Props) {
               </div>
             </div>
 
+            {/* Best Stalls — full width */}
+            <div className="mt-16">
+              <BestStalls dishName={dish.name} stalls={dish.bestStalls} />
+            </div>
+
+            {/* Hawker Centres */}
             <section className="mt-16 border-t border-white/10 pt-14">
               <h2 className="text-2xl font-bold tracking-tight text-sf-cream">
                 Find It At These Hawker Centres
@@ -258,48 +237,15 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                       <span className="font-semibold text-sf-cream group-hover:text-sf-primary">
                         {hawkerCentreLabel(hawkerSlug)}
                       </span>
-                      <span className="mt-2 text-xs text-sf-muted">
-                        View hawker centre →
-                      </span>
+                      <span className="mt-2 text-xs text-sf-muted">View hawker centre →</span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </section>
 
-            <section className="mt-16 border-t border-white/10 pt-14">
-              <h2 className="text-2xl font-bold tracking-tight text-sf-cream">
-                More Singapore Heritage Dishes
-              </h2>
-              <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {related.map((r) => (
-                  <li key={r.slug}>
-                    <Link
-                      href={`/food-heritage/${r.slug}`}
-                      className="group block overflow-hidden rounded-2xl border border-white/[0.08] bg-sf-surface transition hover:border-sf-primary/40"
-                    >
-                      <div className="relative aspect-[4/3]">
-                        <Image
-                          src={r.imageUrl}
-                          alt={r.name}
-                          fill
-                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                          className="object-cover transition duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <p className="font-semibold text-sf-cream group-hover:text-sf-primary">
-                          {r.name}
-                        </p>
-                        <p className="mt-2 line-clamp-2 text-sm text-sf-muted">
-                          {r.description}
-                        </p>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            {/* Rotating carousel */}
+            <DishCarousel dishes={otherDishes} />
           </div>
         </div>
       </main>
