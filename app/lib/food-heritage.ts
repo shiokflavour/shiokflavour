@@ -9,6 +9,10 @@ export type FoodHeritageDish = {
   funFact: string;
   bestPairedWith: string;
   halal: boolean;
+  spiceLevel: string;
+  difficulty: string;
+  localSay: string;
+  hawkersThatServeIt: string[];
 };
 
 export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
@@ -29,6 +33,15 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Calamansi lime squeeze, sambal on the side, and a cold sugar-cane juice to cut the richness.",
     halal: false,
+    spiceLevel: "Medium 🌶️🌶️",
+    difficulty: "Easy to eat",
+    localSay:
+      "Wah, the wok hei damn shiok lah! Queue 30 minutes also worth it one.",
+    hawkersThatServeIt: [
+      "old-airport-road-food-centre",
+      "bedok-interchange-hawker-centre",
+      "tiong-bahru-market",
+    ],
   },
   {
     name: "Hainanese Chicken Rice",
@@ -47,6 +60,15 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A clear chicken broth bowl, blanched greens with oyster sauce, and extra lime-chilli dip.",
     halal: true,
+    spiceLevel: "None 😌",
+    difficulty: "Easy to eat",
+    localSay:
+      "This one cannot anyhow eat — must find the uncle who been cooking 30 years already.",
+    hawkersThatServeIt: [
+      "maxwell-food-centre",
+      "toa-payoh-lorong-8-market",
+      "tampines-round-market",
+    ],
   },
   {
     name: "Laksa",
@@ -65,6 +87,15 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Otak-otak on the side, sambal spooned in slowly, and a lime cordial or teh peng.",
     halal: true,
+    spiceLevel: "Hot 🌶️🌶️🌶️",
+    difficulty: "Easy to eat",
+    localSay:
+      "Katong laksa no need chopsticks one — spoon only, that's the rule lah.",
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "old-airport-road-food-centre",
+      "tiong-bahru-market",
+    ],
   },
   {
     name: "Ice Kachang",
@@ -83,6 +114,15 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Curry puff or goreng pisang afterwards if you like sweet-savoury contrast—or share a bowl after spicy noodles.",
     halal: true,
+    spiceLevel: "None 😌",
+    difficulty: "Easy to eat",
+    localSay:
+      "Eat until shiok, then regret because finish already. Order another one lah!",
+    hawkersThatServeIt: [
+      "newton-food-centre",
+      "maxwell-food-centre",
+      "bedok-interchange-hawker-centre",
+    ],
   },
   {
     name: "Kaya Toast",
@@ -100,6 +140,15 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Kopi si or teh, soft-boiled eggs, and sometimes a light chee cheong fun on the side.",
     halal: false,
+    spiceLevel: "None 😌",
+    difficulty: "Easy to eat",
+    localSay:
+      "Soft boiled egg must be half done — if fully cooked, uncle confirm kena scold.",
+    hawkersThatServeIt: [
+      "maxwell-food-centre",
+      "tiong-bahru-market",
+      "amoy-street-food-centre",
+    ],
   },
   {
     name: "Chilli Crab",
@@ -117,6 +166,15 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Fried mantou, fragrant steamed rice, and a lime juice or cold beer to balance the heat.",
     halal: false,
+    spiceLevel: "Hot 🌶️🌶️🌶️",
+    difficulty: "Adventure eat",
+    localSay:
+      "Wear old clothes lah — this one confirm get sauce everywhere one.",
+    hawkersThatServeIt: [
+      "newton-food-centre",
+      "lau-pa-sat",
+      "east-coast-lagoon",
+    ],
   },
   {
     name: "Rojak",
@@ -134,6 +192,15 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Ice jelly, sugar-cane juice, or a small plate of satay to follow the bold paste.",
     halal: true,
+    spiceLevel: "Mild 🌶️",
+    difficulty: "Easy to eat",
+    localSay:
+      "Wah this one like Singapore lor — everything also got, everything also shiok together.",
+    hawkersThatServeIt: [
+      "lau-pa-sat",
+      "newton-food-centre",
+      "chinatown-complex-food-centre",
+    ],
   },
   {
     name: "Bobo Cha Cha",
@@ -151,8 +218,63 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "After laksa or nasi lemak for contrast, or alongside ondeh-ondeh for a full Peranakan sweet spread.",
     halal: true,
+    spiceLevel: "None 😌",
+    difficulty: "Easy to eat",
+    localSay:
+      "Ah ma used to make this every weekend — now only can find at old school hawker centres.",
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "tiong-bahru-market",
+      "tekka-centre",
+    ],
   },
 ];
+
+/** Splits story around the strongest “Shiok Factor” line for pull-quote layout. */
+export function pickShiokFactorSentence(description: string): {
+  before: string;
+  quote: string;
+  after: string;
+} {
+  const text = description.trim().replace(/\n\n+/g, " ");
+  const sentences = text
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (sentences.length === 0) return { before: "", quote: text, after: "" };
+  if (sentences.length === 1) {
+    return { before: "", quote: sentences[0]!.replace(/\.$/, ""), after: "" };
+  }
+
+  const quoteIdx = pickShiokSentenceIndex(sentences);
+  const quote = sentences[quoteIdx]!.replace(/\.$/, "").trim();
+  const before = sentences.slice(0, quoteIdx).join(" ").trim();
+  const after = sentences.slice(quoteIdx + 1).join(" ").trim();
+  return { before, quote, after };
+}
+
+function pickShiokSentenceIndex(sentences: string[]): number {
+  if (sentences.length <= 2) return sentences.length - 1;
+  let best = 1;
+  for (let i = 1; i < sentences.length; i++) {
+    if (shiokScore(sentences[i]!) > shiokScore(sentences[best]!)) best = i;
+  }
+  return best;
+}
+
+function shiokScore(s: string): number {
+  let n = 0;
+  if (/!/.test(s)) n += 2;
+  if (
+    /wok hei|theatrical|not just|national dish|unmistakably|living heritage|hallmark|collective relief|flavour laboratories|diplomacy|shiok|encodes|mirrors|prove heritage/i.test(
+      s,
+    )
+  )
+    n += 5;
+  if (/UNESCO/i.test(s)) n += 2;
+  n += Math.min(s.length / 45, 4);
+  return n;
+}
 
 const bySlug = new Map(
   FOOD_HERITAGE_DISHES.map((dish) => [dish.slug, dish] as const),

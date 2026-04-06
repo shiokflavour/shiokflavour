@@ -4,10 +4,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteHeader } from "../../components/site-header";
+import { getFeaturedHawkerBySlug } from "../../lib/featured-hawkers";
 import {
   FOOD_HERITAGE_DISHES,
   getAllFoodHeritageSlugs,
   getDishBySlug,
+  pickShiokFactorSentence,
 } from "../../lib/food-heritage";
 import { FoodHeritageHeroImage } from "../food-heritage-hero-image";
 
@@ -48,6 +50,15 @@ function otherHeritageDishes(currentSlug: string, count: number) {
   );
 }
 
+function hawkerCentreLabel(slug: string): string {
+  const h = getFeaturedHawkerBySlug(slug);
+  if (h) return h.name;
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
 export default async function FoodHeritageDishPage({ params }: Props) {
   const { slug } = await params;
   const dish = getDishBySlug(slug);
@@ -55,6 +66,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
 
   const related = otherHeritageDishes(dish.slug, 3);
   const tags = pairedWithTags(dish.bestPairedWith);
+  const shiok = pickShiokFactorSentence(dish.description);
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -82,6 +94,22 @@ export default async function FoodHeritageDishPage({ params }: Props) {
           </div>
         </div>
 
+        <div className="border-b border-white/[0.06] bg-sf-bg">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-4 py-4 sm:px-6 lg:px-8">
+            <span className="inline-flex rounded-full bg-sf-primary px-4 py-2 text-sm font-semibold text-white">
+              {dish.spiceLevel}
+            </span>
+            <span className="inline-flex rounded-full bg-sf-surface px-4 py-2 text-sm font-semibold text-sf-cream ring-1 ring-white/15">
+              {dish.difficulty}
+            </span>
+            {dish.halal ? (
+              <span className="inline-flex rounded-full bg-emerald-600/90 px-4 py-2 text-sm font-semibold text-white">
+                Halal Friendly
+              </span>
+            ) : null}
+          </div>
+        </div>
+
         <div className="px-4 py-10 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <Link
@@ -91,6 +119,29 @@ export default async function FoodHeritageDishPage({ params }: Props) {
               ← Singapore Food Heritage
             </Link>
 
+            <aside className="mt-8 rounded-2xl border border-white/[0.08] bg-sf-surface p-6 sm:p-8">
+              <p className="text-sm font-semibold text-sf-primary">
+                Locals Say 🗣️
+              </p>
+              <div className="relative mt-5">
+                <span
+                  className="font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
+                  aria-hidden
+                >
+                  &ldquo;
+                </span>
+                <p className="-mt-2 pl-1 text-lg italic leading-relaxed text-white sm:pl-2 sm:text-xl">
+                  {dish.localSay}
+                </p>
+                <span
+                  className="-mt-2 block text-right font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
+                  aria-hidden
+                >
+                  &rdquo;
+                </span>
+              </div>
+            </aside>
+
             <div className="mt-10 grid gap-10 lg:grid-cols-3 lg:gap-12">
               <div className="lg:col-span-2 space-y-10">
                 <section>
@@ -98,9 +149,22 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                     Story
                   </h2>
                   <div className="mt-5 space-y-5 text-lg leading-relaxed text-sf-muted">
-                    {dish.description.split("\n\n").map((para, i) => (
-                      <p key={`${dish.slug}-p-${i}`}>{para}</p>
-                    ))}
+                    {shiok.before ? (
+                      <p className="whitespace-pre-line">{shiok.before}</p>
+                    ) : null}
+                    {shiok.quote ? (
+                      <blockquote className="relative border-l-4 border-sf-primary py-2 pl-5">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+                          Shiok Factor
+                        </p>
+                        <p className="mt-2 text-xl font-medium italic text-sf-primary sm:text-2xl">
+                          {shiok.quote}
+                        </p>
+                      </blockquote>
+                    ) : null}
+                    {shiok.after ? (
+                      <p className="whitespace-pre-line">{shiok.after}</p>
+                    ) : null}
                   </div>
                 </section>
 
@@ -181,6 +245,29 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                 </aside>
               </div>
             </div>
+
+            <section className="mt-16 border-t border-white/10 pt-14">
+              <h2 className="text-2xl font-bold tracking-tight text-sf-cream">
+                Find It At These Hawker Centres
+              </h2>
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {dish.hawkersThatServeIt.map((hawkerSlug) => (
+                  <li key={hawkerSlug}>
+                    <Link
+                      href={`/hawker/${hawkerSlug}`}
+                      className="group flex h-full flex-col justify-center rounded-2xl border border-white/[0.1] bg-sf-surface p-5 transition hover:border-sf-primary/45 hover:bg-sf-surface/80"
+                    >
+                      <span className="font-semibold text-sf-cream group-hover:text-sf-primary">
+                        {hawkerCentreLabel(hawkerSlug)}
+                      </span>
+                      <span className="mt-2 text-xs text-sf-muted">
+                        View hawker centre →
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
 
             <section className="mt-16 border-t border-white/10 pt-14">
               <h2 className="text-2xl font-bold tracking-tight text-sf-cream">
