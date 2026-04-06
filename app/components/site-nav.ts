@@ -2,7 +2,7 @@ export const MAIN_NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/hawker-centres", label: "Hawker Centres" },
   { href: "/food-heritage", label: "Food Heritage" },
-  { href: "/#flavour-trail", label: "Flavour Trail" },
+  { href: "/flavour-trail", label: "Flavour Trail" },
   { href: "/#discover", label: "Near Me" },
 ] as const;
 
