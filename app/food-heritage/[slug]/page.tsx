@@ -38,6 +38,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function DishStructuredData({
+  dish,
+}: {
+  dish: {
+    name: string;
+    slug: string;
+    description: string;
+    imageUrl: string;
+    origin: string;
+  };
+}) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${dish.name} | Singapore Food Heritage`,
+    description: dish.description.slice(0, 200),
+    image: dish.imageUrl,
+    author: { "@type": "Organization", name: "ShiokFlavour" },
+    publisher: {
+      "@type": "Organization",
+      name: "ShiokFlavour",
+      url: "https://www.shiokflavour.com",
+    },
+    mainEntityOfPage: `https://www.shiokflavour.com/food-heritage/${dish.slug}`,
+    about: {
+      "@type": "FoodEstablishment",
+      servesCuisine: "Singaporean",
+      name: dish.name,
+      description: dish.origin,
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      // JSON-LD needs to be raw text inside script.
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 function pairedWithTags(text: string): string[] {
   return text
     .split(",")
@@ -67,6 +108,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
     <div className="flex min-h-full flex-1 flex-col">
       <SiteHeader />
       <main className="flex-1">
+        <DishStructuredData dish={dish} />
 
         {/* Hero */}
         <section className="mx-auto max-w-6xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">

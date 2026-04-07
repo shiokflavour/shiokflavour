@@ -26,6 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: `${featured.name} | ShiokFlavour`,
       description: featured.description,
+      openGraph: {
+        title: `${featured.name} | ShiokFlavour`,
+        description: `${featured.description} ${featured.address}`.trim(),
+        url: `https://www.shiokflavour.com/hawker/${encodeURIComponent(featured.slug)}`,
+        images: [{ url: featured.imageUrl, alt: featured.name }],
+      },
     };
   }
   const hawker = await fetchHawkerByIdFromApi(slug);
@@ -33,7 +39,42 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${hawker.name} | ShiokFlavour`,
     description: hawker.address,
+    openGraph: {
+      title: `${hawker.name} | ShiokFlavour`,
+      description: hawker.address,
+      url: `https://www.shiokflavour.com/hawker/${encodeURIComponent(slug)}`,
+    },
   };
+}
+
+function HawkerStructuredData({ hawker }: { hawker: FeaturedHawker }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    name: hawker.name,
+    description: hawker.description,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: hawker.address,
+      addressCountry: "SG",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: hawker.lat,
+      longitude: hawker.lng,
+    },
+    url: `https://www.shiokflavour.com/hawker/${hawker.slug}`,
+    servesCuisine: "Singaporean",
+    priceRange: hawker.budgetPerPax,
+    openingHours: hawker.hours,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
 }
 
 function mapsDirectionsUrl(name: string, address: string): string {
@@ -147,6 +188,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
   return (
     <div className="flex min-h-full flex-1 flex-col bg-sf-bg">
       <SiteHeader />
+      <HawkerStructuredData hawker={h} />
 
       {/* Hero — full bleed 16/6 */}
       <div className="relative w-full overflow-hidden aspect-[16/6] min-h-[200px]">

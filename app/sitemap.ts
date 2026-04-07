@@ -22,7 +22,13 @@ const STATIC_ENTRIES: MetadataRoute.Sitemap = [
     priority: 0.85,
   },
   {
-    url: "https://www.shiokflavour.com/#flavour-trail",
+    url: "https://www.shiokflavour.com/flavour-trail",
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  },
+  {
+    url: "https://www.shiokflavour.com/near-me",
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.8,
