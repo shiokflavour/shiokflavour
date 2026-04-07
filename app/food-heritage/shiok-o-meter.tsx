@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
 
 type Scores = {
@@ -10,126 +9,156 @@ type Scores = {
   shiokValue: number;
 };
 
-type MetricKey = keyof Scores;
-
-const METRICS: readonly {
-  key: MetricKey;
-  label: string;
-  emoji: string;
-  subtitle: string;
-}[] = [
+const METRICS = [
   {
-    key: "spiceHit",
+    key: "spiceHit" as const,
     label: "Spice Hit",
     emoji: "🌶️",
-    subtitle: "Zero to 'call ambulance'",
+    comments: [
+      "Like drinking warm water lah",
+      "Got a little kick, not bad",
+      "Confirm sweat a bit",
+      "Call ambulance already",
+    ],
   },
   {
-    key: "messFactor",
+    key: "messFactor" as const,
     label: "Mess Factor",
     emoji: "🙈",
-    subtitle: "Wet wipes required",
+    comments: [
+      "Eat with one hand, no problem",
+      "Better grab extra napkins",
+      "Shirt already kena sauce",
+      "Wear your worst clothes",
+    ],
   },
   {
-    key: "flavourDepth",
+    key: "flavourDepth" as const,
     label: "Flavour Depth",
     emoji: "🎵",
-    subtitle: "One note or full symphony",
+    comments: [
+      "Simple, honest, decent lah",
+      "Got layers, worth exploring",
+      "Cannot stop eating",
+      "Cannot stop thinking about it",
+    ],
   },
   {
-    key: "queueGame",
+    key: "queueGame" as const,
     label: "Queue Game",
     emoji: "🕐",
-    subtitle: "Minutes you'd sacrifice",
+    comments: [
+      "Walk in, sit down, eat",
+      "10 min wait, ok lah",
+      "Worth every minute standing",
+      "Queue in the rain also worth it",
+    ],
   },
   {
-    key: "shiokValue",
+    key: "shiokValue" as const,
     label: "Shiok Value",
     emoji: "💰",
-    subtitle: "Dollar-for-dollar happiness",
+    comments: [
+      "Aiyah, a bit ex leh",
+      "Fair price, no complaints",
+      "Money well spent",
+      "Best dollar spent in Singapore",
+    ],
   },
 ];
 
-function ShiokBadge() {
-  return (
-    <span className="ml-2 inline-flex animate-bounce items-center gap-1 rounded-full border border-amber-400/50 bg-amber-400/20 px-2 py-0.5 text-xs font-bold text-amber-400">
-      🔥 SHIOK!
-    </span>
-  );
+function getCommentIndex(score: number): number {
+  if (score <= 5) return 0;
+  if (score <= 7) return 1;
+  if (score <= 9) return 2;
+  return 3;
+}
+
+function getBarColour(score: number): string {
+  if (score === 10) return "bg-amber-400";
+  if (score >= 8) return "bg-sf-primary";
+  if (score >= 5) return "bg-orange-600/70";
+  return "bg-slate-500/60";
+}
+
+function MetricBadge({ score, animated }: { score: number; animated: boolean }) {
+  if (!animated) return null;
+  if (score === 10) {
+    return (
+      <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-amber-400/60 bg-amber-400/15 px-2.5 py-0.5 text-xs font-bold text-amber-400 animate-pulse shadow-[0_0_10px_rgba(251,191,36,0.3)]">
+        🏆 Peak Shiok-ness
+      </span>
+    );
+  }
+  if (score >= 8) {
+    return (
+      <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-sf-primary/50 bg-sf-primary/15 px-2.5 py-0.5 text-xs font-bold text-sf-primary animate-bounce">
+        ✨ SHIOK!
+      </span>
+    );
+  }
+  return null;
+}
+
+function getOverallLabel(score: number): { label: string; colour: string } {
+  if (score >= 90) return { label: "🏆 Peak Shiok-ness. No Questions Asked.", colour: "text-amber-400" };
+  if (score >= 80) return { label: "✨ Damn Shiok", colour: "text-sf-primary" };
+  if (score >= 70) return { label: "👍 Solid Lah", colour: "text-orange-400" };
+  if (score >= 60) return { label: "😌 Not Bad Not Bad", colour: "text-slate-400" };
+  return { label: "🤷 Try First, See How", colour: "text-slate-500" };
 }
 
 export function ShiokOMeter({ scores }: { scores: Scores }) {
   const [animated, setAnimated] = useState(false);
-  const sectionRef = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setAnimated(true);
-      },
-      { threshold: 0.2 },
+      ([entry]) => { if (entry.isIntersecting) setAnimated(true); },
+      { threshold: 0.2 }
     );
-    observer.observe(el);
+    if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
-  const values = Object.values(scores);
   const avgScore = Math.round(
-    (values.reduce((a, b) => a + b, 0) / values.length) * 10,
+    (scores.spiceHit + scores.messFactor + scores.flavourDepth + scores.queueGame + scores.shiokValue) / 5 * 10
   );
-
-  const getBarColour = (score: number) => {
-    if (score >= 9) return "bg-amber-400";
-    if (score >= 7) return "bg-sf-primary";
-    if (score >= 4) return "bg-orange-600";
-    return "bg-slate-500";
-  };
+  const overall = getOverallLabel(avgScore);
 
   return (
-    <section ref={sectionRef}>
-      <h2 className="text-xl font-semibold text-sf-primary">
-        🌡️ Shiok-O-Meter
-      </h2>
-      <p className="mt-2 text-sm text-sf-cream/60">
-        Rated by locals, not algorithms
-      </p>
+    <section ref={ref}>
+      <h2 className="text-xl font-semibold text-sf-primary">🌡️ Shiok-O-Meter</h2>
+      <p className="mt-2 text-sm text-sf-cream/60">Rated by locals, not algorithms</p>
 
-      <div className="mt-6 space-y-6">
-        {METRICS.map(({ key, label, emoji, subtitle }) => {
+      <div className="mt-6 space-y-7">
+        {METRICS.map(({ key, label, emoji, comments }) => {
           const score = scores[key];
-          const isSHIOK = score === 10;
+          const commentIdx = getCommentIndex(score);
           return (
             <div key={key}>
-              <div className="mb-2 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="text-xl">{emoji}</span>
-                  <div>
-                    <p className="text-sm font-semibold leading-tight text-sf-cream">
-                      {label}
-                    </p>
-                    <p className="text-xs italic text-sf-cream/45">
-                      {subtitle}
-                    </p>
+              <div className="flex items-start justify-between mb-2 gap-2">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-xl shrink-0">{emoji}</span>
+                  <div className="min-w-0">
+                    <div className="flex items-center flex-wrap gap-1">
+                      <p className="text-sm font-semibold text-sf-cream">{label}</p>
+                      <MetricBadge score={score} animated={animated} />
+                    </div>
+                    <p className="text-xs text-sf-cream/45 italic mt-0.5">{comments[commentIdx]}</p>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <span
-                    className={`text-base font-bold ${isSHIOK ? "text-amber-400" : "text-sf-primary"}`}
-                  >
-                    {score}/10
-                  </span>
-                  {isSHIOK && animated ? <ShiokBadge /> : null}
-                </div>
+                <span className={`text-sm font-bold shrink-0 ${score === 10 ? "text-amber-400" : score >= 8 ? "text-sf-primary" : "text-sf-cream/60"}`}>
+                  {score}/10
+                </span>
               </div>
-              <div className="h-3 w-full overflow-hidden rounded-full bg-white/[0.08]">
+              <div className="h-2.5 w-full rounded-full bg-white/[0.07] overflow-hidden">
                 <div
-                  className={`h-full rounded-full transition-all ease-out ${getBarColour(score)} ${isSHIOK ? "shadow-[0_0_8px_rgba(251,191,36,0.6)]" : ""}`}
+                  className={`h-full rounded-full transition-all ease-out ${getBarColour(score)} ${score === 10 ? "shadow-[0_0_8px_rgba(251,191,36,0.5)]" : ""}`}
                   style={{
                     width: animated ? `${score * 10}%` : "0%",
-                    transitionDuration: "800ms",
-                    transitionDelay: "150ms",
+                    transitionDuration: "900ms",
+                    transitionDelay: "100ms",
                   }}
                 />
               </div>
@@ -138,22 +167,14 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
         })}
       </div>
 
-      <div className="mt-8 flex items-center justify-between rounded-2xl border border-sf-primary/30 bg-sf-primary/10 px-6 py-5">
+      <div className={`mt-8 rounded-2xl border px-6 py-5 flex items-center justify-between ${avgScore >= 90 ? "border-amber-400/40 bg-amber-400/10" : "border-sf-primary/30 bg-sf-primary/10"}`}>
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-sf-primary">
-            Overall Shiok Score
-          </p>
-          <p className="mt-1 text-xs text-sf-cream/40">
-            Averaged across all 5 metrics
-          </p>
+          <p className="text-xs font-bold uppercase tracking-widest text-sf-cream/50">Overall Shiok Score</p>
+          <p className={`text-base font-bold mt-1 ${overall.colour}`}>{overall.label}</p>
         </div>
-        <div className="text-right">
-          <p className="text-4xl font-bold leading-none text-sf-primary">
-            {avgScore}
-            <span className="text-base font-normal text-sf-cream/40">
-              /100
-            </span>
-          </p>
+        <div className={`text-4xl font-bold leading-none ${avgScore >= 90 ? "text-amber-400" : "text-sf-primary"}`}>
+          {animated ? avgScore : 0}
+          <span className="text-sm font-normal text-sf-cream/40">/100</span>
         </div>
       </div>
     </section>
