@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BookOpen, Globe, Sparkles, Users } from "lucide-react";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 
@@ -42,10 +41,8 @@ export default function AboutPage() {
         {/* UNESCO section */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
-            <div className="text-4xl">
-              <Globe className="w-6 h-6 text-sf-primary" strokeWidth={1.5} />
-            </div>
-            <div className="mt-4">
+            <div>
+              <div className="w-8 h-px bg-sf-primary mb-4" />
               <h2 className="text-2xl font-bold text-sf-cream">
                 A Heritage Recognised by the World
               </h2>
@@ -86,10 +83,8 @@ export default function AboutPage() {
         {/* What we are */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
-            <div className="text-4xl">
-              <BookOpen className="w-6 h-6 text-sf-primary" strokeWidth={1.5} />
-            </div>
-            <div className="mt-4">
+            <div>
+              <div className="w-8 h-px bg-sf-primary mb-4" />
               <h2 className="text-2xl font-bold text-sf-cream">
                 What ShiokFlavour Is
               </h2>
@@ -122,10 +117,8 @@ export default function AboutPage() {
         {/* What shiok means */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
-            <div className="text-4xl">
-              <Sparkles className="w-6 h-6 text-sf-primary" strokeWidth={1.5} />
-            </div>
-            <div className="mt-4">
+            <div>
+              <div className="w-8 h-px bg-sf-primary mb-4" />
               <h2 className="text-2xl font-bold text-sf-cream">
                 What Does Shiok Mean?
               </h2>
@@ -153,10 +146,8 @@ export default function AboutPage() {
         {/* Who it's for */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
-            <div className="text-4xl">
-              <Users className="w-6 h-6 text-sf-primary" strokeWidth={1.5} />
-            </div>
-            <div className="mt-4">
+            <div>
+              <div className="w-8 h-px bg-sf-primary mb-4" />
               <h2 className="text-2xl font-bold text-sf-cream">
                 Who We Are Built For
               </h2>
