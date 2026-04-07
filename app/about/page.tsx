@@ -154,9 +154,9 @@ export default function AboutPage() {
             ))}
           </div>
           <p className="mt-8 text-lg text-sf-cream font-medium leading-relaxed">
-            ShiokFlavour is for anyone who believes that a hawker uncle who has
-            spent forty years perfecting one dish deserves to have his story
-            told — and found.
+            ShiokFlavour is for anyone who believes that every hawker uncle and
+            auntie who has spent forty years perfecting one dish deserves to
+            have their story told — and found.
           </p>
         </section>
 
