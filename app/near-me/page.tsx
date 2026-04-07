@@ -64,13 +64,13 @@ export default function NearMePage() {
         {/* Hero */}
         <section className="mx-auto max-w-4xl px-4 pt-16 pb-10 text-center sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary">
-            Hawker Centres
+            You Are Here
           </p>
           <h1 className="mt-3 text-5xl font-bold tracking-tight text-sf-cream sm:text-6xl">
             Near Me
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-sf-muted">
-            Find the nearest hawker centres to where you are right now — sorted by distance, with must-try dishes and directions.
+            Hungry? Good. Singapore has over 100 hawker centres and at least one is closer than you think. Let us find the nearest ones — with what to order, how far to walk, and zero excuses to eat badly.
           </p>
 
           {status === "idle" && (
@@ -78,23 +78,28 @@ export default function NearMePage() {
               onClick={findNearest}
               className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-sf-primary px-8 py-4 text-base font-bold text-white shadow-lg transition hover:opacity-90 active:scale-95"
             >
-              📍 Use My Location
+              📍 Find What&apos;s Shiok Near Me
             </button>
           )}
 
           {status === "loading" && (
             <div className="mt-8 flex flex-col items-center gap-3">
               <div className="h-10 w-10 animate-spin rounded-full border-4 border-sf-primary border-t-transparent" />
-              <p className="text-sm text-sf-muted">Finding hawker centres near you...</p>
+              <p className="text-sm text-sf-muted">
+                Sniffing out the good stuff near you...
+              </p>
             </div>
           )}
 
           {status === "denied" && (
             <div className="mt-8 rounded-2xl border border-white/10 bg-sf-surface p-6 text-center">
               <p className="text-2xl mb-2">🔒</p>
-              <p className="font-semibold text-sf-cream">Location access was denied</p>
+              <p className="font-semibold text-sf-cream">
+                Eh, we need your location lah
+              </p>
               <p className="mt-2 text-sm text-sf-muted">
-                Please allow location access in your browser settings, then try again.
+                Allow location access in your browser settings and we&apos;ll
+                point you straight to the good stuff.
               </p>
               <button
                 onClick={findNearest}
@@ -126,7 +131,11 @@ export default function NearMePage() {
         {status === "success" && (
           <section className="mx-auto max-w-4xl px-4 pb-20 sm:px-6 lg:px-8">
             <p className="text-sm text-sf-muted mb-6">
-              Showing <span className="font-semibold text-sf-cream">{results.length} hawker centres</span> sorted by distance from your location
+              Found{" "}
+              <span className="font-semibold text-sf-cream">
+                {results.length} hawker centres
+              </span>{" "}
+              near you. Your next shiok meal is closer than you think.
             </p>
             <ul className="space-y-4">
               {results.map((h, i) => {
