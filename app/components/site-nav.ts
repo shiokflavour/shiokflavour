@@ -4,6 +4,7 @@ export const MAIN_NAV_LINKS = [
   { href: "/food-heritage", label: "Food Heritage" },
   { href: "/flavour-trail", label: "Flavour Trail" },
   { href: "/near-me", label: "Near Me" },
+  { href: "/about", label: "About" },
 ] as const;
 
 export const LEGAL_FOOTER_LINKS = [

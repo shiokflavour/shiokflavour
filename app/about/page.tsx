@@ -14,19 +14,25 @@ export default function AboutPage() {
       <SiteHeader />
       <main className="flex-1">
         {/* Hero */}
-        <section className="mx-auto max-w-3xl px-4 pt-20 pb-16 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
-            About ShiokFlavour
-          </p>
-          <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight text-sf-cream sm:text-6xl">
-            More Than a Meal.
-          </h1>
-          <p className="mt-6 text-xl leading-relaxed text-sf-muted">
-            ShiokFlavour is a cultural guide to Singapore&apos;s hawker heritage
-            — built for the curious traveller, the proud local, and everyone in
-            between who believes that food is the most honest way to understand
-            a place.
-          </p>
+        <section className="bg-gradient-to-br from-sf-surface via-black/60 to-sf-bg">
+          <div className="mx-auto max-w-3xl px-4 pt-20 pb-16 sm:px-6 lg:px-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
+              About ShiokFlavour
+            </p>
+            <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight text-sf-cream sm:text-6xl">
+              More Than a Meal.
+            </h1>
+            <p className="mt-6 text-xl leading-relaxed text-sf-muted">
+              ShiokFlavour is a cultural guide to Singapore&apos;s hawker
+              heritage — built for the curious traveller, the proud local, and
+              everyone in between who believes that food is the most honest way
+              to understand a place.
+            </p>
+
+            <p className="mt-10 text-2xl italic leading-relaxed text-sf-primary/80">
+              Food is the most honest way to understand a place.
+            </p>
+          </div>
         </section>
 
         {/* Divider */}
@@ -34,13 +40,9 @@ export default function AboutPage() {
 
         {/* UNESCO section */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-6">
-            <div className="shrink-0 mt-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sf-primary/15 border border-sf-primary/30 text-2xl">
-                🏛️
-              </div>
-            </div>
-            <div>
+          <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
+            <div className="text-4xl">🏛️</div>
+            <div className="mt-4">
               <h2 className="text-2xl font-bold text-sf-cream">
                 A Heritage Recognised by the World
               </h2>
@@ -68,18 +70,21 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Divider */}
-        <div className="border-t border-white/[0.08]" />
+        {/* Pull quote */}
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <blockquote className="border-l-4 border-sf-primary/70 pl-6">
+            <p className="text-xl italic text-sf-cream">
+              Where a $4 plate of chicken rice can carry sixty years of history
+              in a single bite.
+            </p>
+          </blockquote>
+        </section>
 
         {/* What we are */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-6">
-            <div className="shrink-0 mt-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sf-primary/15 border border-sf-primary/30 text-2xl">
-                🍜
-              </div>
-            </div>
-            <div>
+          <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
+            <div className="text-4xl">🍜</div>
+            <div className="mt-4">
               <h2 className="text-2xl font-bold text-sf-cream">
                 What ShiokFlavour Is
               </h2>
@@ -111,13 +116,9 @@ export default function AboutPage() {
 
         {/* What shiok means */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-6">
-            <div className="shrink-0 mt-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sf-primary/15 border border-sf-primary/30 text-2xl">
-                ✨
-              </div>
-            </div>
-            <div>
+          <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
+            <div className="text-4xl">✨</div>
+            <div className="mt-4">
               <h2 className="text-2xl font-bold text-sf-cream">
                 What Does Shiok Mean?
               </h2>
@@ -144,13 +145,9 @@ export default function AboutPage() {
 
         {/* Who it's for */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-6">
-            <div className="shrink-0 mt-1">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sf-primary/15 border border-sf-primary/30 text-2xl">
-                🌏
-              </div>
-            </div>
-            <div>
+          <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
+            <div className="text-4xl">🌏</div>
+            <div className="mt-4">
               <h2 className="text-2xl font-bold text-sf-cream">
                 Who We Are Built For
               </h2>
@@ -175,27 +172,29 @@ export default function AboutPage() {
 
         {/* Closing */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 text-center">
-          <p className="text-2xl font-semibold text-sf-cream leading-relaxed">
-            Singapore&apos;s hawker culture feeds millions every day.
-            <br />
-            We are here to make sure the world knows why that matters.
-          </p>
-          <p className="mt-4 text-base text-sf-muted">
-            Start exploring Singapore&apos;s hawker heritage below.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/hawker-centres"
-              className="inline-flex items-center gap-2 rounded-xl bg-sf-primary px-6 py-3 text-base font-semibold text-white transition hover:opacity-90"
-            >
-              🏪 Explore Hawker Centres
-            </Link>
-            <Link
-              href="/food-heritage"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-sf-cream transition hover:border-sf-primary/50"
-            >
-              🍜 Discover Food Heritage
-            </Link>
+          <div className="rounded-2xl border border-sf-primary/20 bg-gradient-to-r from-sf-primary/10 via-transparent to-sf-primary/10 p-12">
+            <p className="text-2xl font-semibold text-sf-cream leading-relaxed">
+              Singapore&apos;s hawker culture feeds millions every day.
+              <br />
+              We are here to make sure the world knows why that matters.
+            </p>
+            <p className="mt-4 text-base text-sf-muted">
+              Start exploring Singapore&apos;s hawker heritage below.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/hawker-centres"
+                className="inline-flex items-center gap-2 rounded-xl bg-sf-primary px-6 py-3 text-base font-semibold text-white transition hover:opacity-90"
+              >
+                🏪 Explore Hawker Centres
+              </Link>
+              <Link
+                href="/food-heritage"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-sf-cream transition hover:border-sf-primary/50"
+              >
+                🍜 Discover Food Heritage
+              </Link>
+            </div>
           </div>
         </section>
       </main>
