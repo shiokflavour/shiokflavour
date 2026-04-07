@@ -62,7 +62,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     story:
       "Maxwell Food Centre has been feeding Singapore since 1986, built on the site of the old Maxwell Market which dates back to the 1930s. It sits at the crossroads of Chinatown and Tanjong Pagar — two of Singapore's oldest and most storied neighbourhoods. When Anthony Bourdain filmed here for No Reservations in 2009, queueing at Tian Tian like everyone else, it confirmed what locals already knew: this is where Singapore's hawker soul lives. The centre survived urban redevelopment, a pandemic, and decades of food trend cycles without losing its character. It remains the most visited hawker centre in Singapore for good reason.",
     vibeCheck: "Where tourists discover what locals already knew",
-    localQuote: "Maxwell chicken rice, best in Singapore. Dun argue.",
+    localQuote:
+      "The chicken rice here is in a league of its own. There is simply nothing else like it in Singapore.",
     timeline: [
       {
         year: "1930s",
@@ -139,7 +140,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     vibeCheck:
       "A colonial monument that smells like satay smoke and tastes like Singapore history",
     localQuote:
-      "After work, Lau Pa Sat satay and cold beer. Best therapy in Singapore.",
+      "After work, the satay stalls come alive. Cold beer, charcoal smoke, and the whole city humming around you — this is Singapore at its best.",
     timeline: [
       {
         year: "1894",
@@ -222,7 +223,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Built in 1973 on the site of Singapore's first civilian airport, Old Airport Road Food Centre carries history in its very address. The Kallang Airport opened in 1937 and was the pride of British colonial Singapore — by 1973 it had been replaced by Paya Lebar Airport and the old terminal demolished. The hawker centre that rose in its place became legendary for different reasons: over 150 stalls, multiple Michelin-recognised hawkers, and a reputation among serious food people as the single best hawker centre in Singapore. It is never the most famous but consistently the most respected.",
     vibeCheck:
       "The hawker centre that serious food people call their favourite",
-    localQuote: "Old Airport Road, everything also good one. Cannot go wrong.",
+    localQuote:
+      "Everything here is good. You genuinely cannot make a bad choice — just follow the queues.",
     timeline: [
       {
         year: "1937",
@@ -303,7 +305,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Singapore's largest hawker centre with over 260 stalls, the Chinatown Complex is a living document of Chinese immigrant food culture. Built in 1983 as part of the HDB Chinatown redevelopment, it replaced the street hawkers who had fed the area's Hokkien, Cantonese and Teochew communities for generations. In 2016, Chan Hon Meng's humble soya sauce chicken stall became the first street food in the world to receive a Michelin Star — making a $2 plate of chicken rice the cheapest Michelin meal on Earth. The queue that formed the next day stretched around the block and has barely shortened since.",
     vibeCheck:
       "Where a $2 plate of chicken became the world's most famous Michelin meal",
-    localQuote: "Hawker Chan, Michelin star also, still $2. Singapore magic lah.",
+    localQuote:
+      "A Michelin star for two dollars. Only in Singapore could this be possible.",
     timeline: [
       {
         year: "1983",
@@ -385,7 +388,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     story:
       "Newton Food Centre opened in 1971 and quickly became the most internationally recognisable hawker centre in Singapore — not because of the food, but because of the movies. Featured in Crazy Rich Asians, countless travel documentaries, and every 'best of Singapore' list written in the last three decades, Newton operates in two realities: the tourist destination and the actual local supper spot. Skip the stalls with aggressive touts and find the quieter ones serving excellent BBQ seafood, oyster omelette, and satay to the after-work crowd who've been coming here for decades.",
     vibeCheck: "Famous enough to be in the movies, real enough to still matter",
-    localQuote: "Newton got tourist price but the BBQ seafood still worth it lah.",
+    localQuote:
+      "The BBQ seafood is worth every cent, tourist prices and all. Some things are simply worth it.",
     timeline: [
       {
         year: "1971",
@@ -463,7 +467,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Tekka Centre sits in the heart of Little India, the neighbourhood that has been home to Singapore's South Indian community since the 1820s. The building — a sprawling complex of wet market, hawker food, and retail — is the cultural anchor of the area. The food here reflects generations of Tamil, Malayalee, and North Indian communities who came to Singapore as labourers and traders and stayed to build one of the city's most vibrant enclaves. Everything is halal. The roti prata here is judged differently — not by tourist standards but by the Indian uncles who eat it every morning before work.",
     vibeCheck: "The most authentically South Asian 10 square metres in Southeast Asia",
     localQuote:
-      "Tekka prata, best in Singapore. The Indian uncles say so, cannot wrong.",
+      "The roti prata here is judged by the Indian community who eat it every morning. That is the only review that matters.",
     timeline: [
       {
         year: "1820s",
@@ -540,7 +544,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     story:
       "Adam Road Food Centre is the kind of place that doesn't try to be famous and is famous anyway. Tucked between the Botanic Gardens and the expatriate enclave of Bukit Timah, it serves one of Singapore's most mixed communities — Malay families, expats, students from the nearby universities, and late-night supper hunters from across the island. The nasi lemak stall that operates from the early hours has been a Michelin Bib Gourmand recipient and a weekend queue institution. The centre's late-night atmosphere — warm, buzzing, cross-cultural — captures something essential about Singapore's food culture.",
     vibeCheck: "The supper spot that belongs to everyone and is owned by no one",
-    localQuote: "Adam Road nasi lemak, queue like crazy but cannot skip one.",
+    localQuote:
+      "The nasi lemak queue starts forming before most people have woken up. It tells you everything you need to know.",
     timeline: [
       {
         year: "1960s",
@@ -622,7 +627,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Bedok Interchange Hawker Centre sits directly above Bedok MRT station, making it the most conveniently located hawker centre in Singapore's East. Bedok is one of Singapore's most densely populated towns and one of its oldest — the community that has lived here for generations has very strong opinions about where to eat. The chwee kueh stall here is Michelin recognised and has been serving the same recipe since the centre opened. The centre's position at the interchange means it serves a cross-section of all of East Singapore — from school children to retirees — every single day.",
     vibeCheck: "East Singapore's living room — everyone passes through eventually",
     localQuote:
-      "Bedok chwee kueh, eat every morning also never sick of it.",
+      "Chwee kueh for breakfast every morning and you would never tire of it. That is how good it is.",
     timeline: [
       {
         year: "1980s",
@@ -699,7 +704,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     story:
       "Bedok 85 — known to everyone in East Singapore simply as '85' — is the definitive Singapore supper centre. What started as a neighbourhood market has become a midnight pilgrimage site. The BBQ chicken wings stall has queues that stretch around the block every night from 10pm onwards. The centre operates on a different clock to the rest of Singapore: quiet in the afternoon, buzzing by 9pm, packed past midnight. It represents a side of Singapore food culture that tourists rarely see — the late-night, beer-in-hand, sharing-plates supper culture that locals consider the best part of any night out.",
     vibeCheck: "Singapore's midnight kitchen — where the night always ends well",
-    localQuote: "85 chicken wings, queue 45 minutes also must eat. That's the rule.",
+    localQuote:
+      "The chicken wings are worth a 45-minute queue. Every single person in that queue knows it too.",
     timeline: [
       {
         year: "1970s",
@@ -776,7 +782,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Tampines Round Market gets its name from its distinctive circular architecture — one of the few curved hawker centres in Singapore. Built to serve the rapidly growing Tampines New Town in the 1980s, it has been feeding generations of East-siders who grew up in the surrounding HDB blocks. The centre has no Michelin stars and no celebrity visitors. What it has is something rarer: a community of regulars who have been eating the same stalls for 30 years, and stalls that have been cooking for those same regulars just as long. It's what hawker culture actually is when nobody is watching.",
     vibeCheck: "No stars, no tourists, all heart",
     localQuote:
-      "My family eat here since I was small. Some things must not change.",
+      "My family has been eating here since I was a child. Some places should simply never change.",
     timeline: [
       {
         year: "1980s",
@@ -849,7 +855,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Geylang Serai is the cultural heartland of Malay Singapore. The market has stood here since the 1950s when the area was the centre of the Malay kampung community. The food tells that story directly — nasi padang, murtabak, putu piring, kueh, bandung — a full catalogue of Malay and Indonesian culinary heritage kept alive by stalls that pass recipes between generations. During Ramadan, the bazaar outside becomes one of Singapore's most spectacular food events, drawing hundreds of thousands over the fasting month. Everything sold here is halal and the welcome is universal.",
     vibeCheck: "The heartland of Malay Singapore — food as cultural memory",
     localQuote:
-      "Geylang Serai murtabak, eat until cannot breathe. Confirm worth it.",
+      "The murtabak here is the real thing — generous, fragrant, and made by people who have been perfecting it for generations.",
     timeline: [
       {
         year: "1950s",
@@ -926,7 +932,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     story:
       "Amoy Street Food Centre occupies a corner of Singapore's CBD that was once the centre of Hokkien immigrant life in the 1800s. The street's name — Amoy being the old name for Xiamen in Fujian province — marks where the first waves of Hokkien traders settled. Today the centre operates on a different rhythm to any other hawker centre in Singapore: breakfast and lunch only, closed by 3pm, and packed with bankers, lawyers, and architects who work in the surrounding towers. A Noodle Story — a modern Singapore ramen that's won Michelin recognition — is perhaps the most talked-about queue in the CBD.",
     vibeCheck: "The CBD's best-kept secret — closes before the tourists arrive",
-    localQuote: "Amoy Street, go early or go hungry. No lunch after 1pm.",
+    localQuote:
+      "Come early or go hungry. The best stalls here sell out before 1pm without exception.",
     timeline: [
       {
         year: "1800s",
@@ -1004,7 +1011,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     vibeCheck:
       "Singapore's most beautiful hawker building in its most charming neighbourhood",
     localQuote:
-      "Tiong Bahru market, eat first, then walk around. Best morning in Singapore.",
+      "Breakfast at Tiong Bahru Market, then a walk around the estate. It is the best morning Singapore has to offer.",
     timeline: [
       {
         year: "1930s",
@@ -1077,6 +1084,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    localQuote:
+      "Very few tourists know about this place. That is precisely what keeps the satay so good.",
   },
   {
     id: 15,
@@ -1102,6 +1111,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    localQuote:
+      "Close to Holland Village but without the Holland Village prices. The sensible choice, every time.",
   },
   {
     id: 16,
@@ -1127,6 +1138,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    localQuote:
+      "Clementi residents have been eating here since their school days. Some loyalties simply never change.",
   },
   {
     id: 17,
@@ -1152,6 +1165,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    localQuote:
+      "Jurong West people know their food. And they know that 505 has everything they need.",
   },
   {
     id: 18,
@@ -1177,6 +1192,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    localQuote:
+      "The north of Singapore has its own excellent food culture. You do not need to travel to the city centre to eat well.",
   },
   {
     id: 19,
@@ -1202,6 +1219,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: true,
     budgetPerPax: "$5–$10",
+    localQuote:
+      "Eating under the trees at midnight with a bowl of bak kut teh — this is what Singapore supper culture is all about.",
   },
   {
     id: 20,
@@ -1227,6 +1246,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    localQuote:
+      "Chong Pang feels different from the newer estates. More old Singapore. More genuine.",
   },
   {
     id: 21,
@@ -1251,6 +1272,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    localQuote:
+      "Woodlands residents wake up at 5am, eat here, and cross to Johor for work. The food gives them the energy to do it.",
   },
   {
     id: 22,
@@ -1276,6 +1299,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    localQuote:
+      "Toa Payoh people are deeply loyal to their stalls. The same families have been eating here for thirty years without question.",
   },
   {
     id: 23,
@@ -1301,6 +1326,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    localQuote:
+      "The best chicken rice in the CBD, eaten standing up by people in suits. Boardroom decisions have been made on a full stomach from here.",
   },
   {
     id: 24,
@@ -1331,6 +1358,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    localQuote:
+      "The char kway teow uncle fries one portion at a time and refuses to rush. The queue respects this completely.",
   },
   {
     id: 25,
@@ -1356,6 +1385,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    localQuote:
+      "Tourists walk straight past. Locals walk right in. That is the entire story of this place.",
   },
   {
     id: 26,
@@ -1387,6 +1418,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: true,
     budgetPerPax: "$12–$25",
+    localQuote:
+      "Satay by the sea with a cold beer as the sun goes down. Singapore does not get more perfect than this.",
   },
   {
     id: 27,
@@ -1412,6 +1445,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    localQuote:
+      "The best laksa is not always at the famous place. The Katong locals know exactly where to go.",
   },
   {
     id: 28,
@@ -1437,6 +1472,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    localQuote:
+      "Charcoal-fired laksa for under four dollars. It is one of the last of its kind in Singapore and it is extraordinary.",
   },
   {
     id: 29,
@@ -1463,6 +1500,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    localQuote:
+      "The chwee kueh here has been made the same way for five decades. Generations of Holland Road families will confirm it is the best.",
   },
   {
     id: 30,
@@ -1488,6 +1527,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    localQuote:
+      "Those who know about this place tend to keep it to themselves. The food quality here is exceptional and consistently so.",
   },
   {
     id: 31,
@@ -1513,6 +1554,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    localQuote:
+      "The roti prata before the football match is a Bishan tradition. Win or lose, the prata is always excellent.",
   },
   {
     id: 32,
@@ -1538,6 +1581,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$5–$12",
+    localQuote:
+      "Come after hiking the Southern Ridges. It is the best possible reward for the effort.",
   },
 ];
 

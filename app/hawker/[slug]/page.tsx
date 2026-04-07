@@ -338,17 +338,24 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                   Heritage Timeline
                 </h2>
                 {h.timeline && h.timeline.length > 0 ? (
-                  <ol className="relative mt-5 border-l border-sf-primary/35 pl-6">
-                    {h.timeline.map((item, idx) => (
-                      <li key={`${item.year}-${idx}`} className="relative pb-6">
-                        <span className="absolute -left-[9px] top-1.5 h-3 w-3 rounded-full bg-sf-primary" />
-                        <p className="font-bold text-sf-primary">{item.year}</p>
-                        <p className="mt-1 text-sm leading-relaxed text-sf-muted">
-                          {item.event}
-                        </p>
-                      </li>
-                    ))}
-                  </ol>
+                  <div className="mt-6 border-l-2 border-sf-primary/30 pl-6">
+                    <div className="space-y-6">
+                      {h.timeline.map((item, idx) => (
+                        <div
+                          key={`${item.year}-${idx}`}
+                          className="relative pl-6"
+                        >
+                          <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-sf-primary border-2 border-sf-bg" />
+                          <p className="text-lg font-bold text-sf-primary">
+                            {item.year}
+                          </p>
+                          <p className="mt-1 text-sm text-sf-muted">
+                            {item.event}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 ) : null}
               </section>
 
