@@ -22,6 +22,11 @@ export type FeaturedHawker = {
   halal: boolean;
   openLate: boolean;
   budgetPerPax: string;
+  story?: string;
+  vibeCheck?: string;
+  localQuote?: string;
+  timeline?: { year: string; event: string }[];
+  legendaryStalls?: { name: string; dish: string; story: string }[];
 };
 
 export const FEATURED_HAWKERS: FeaturedHawker[] = [
@@ -54,6 +59,55 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "Maxwell Food Centre has been feeding Singapore since 1986, built on the site of the old Maxwell Market which dates back to the 1930s. It sits at the crossroads of Chinatown and Tanjong Pagar — two of Singapore's oldest and most storied neighbourhoods. When Anthony Bourdain filmed here for No Reservations in 2009, queueing at Tian Tian like everyone else, it confirmed what locals already knew: this is where Singapore's hawker soul lives. The centre survived urban redevelopment, a pandemic, and decades of food trend cycles without losing its character. It remains the most visited hawker centre in Singapore for good reason.",
+    vibeCheck: "Where tourists discover what locals already knew",
+    localQuote: "Maxwell chicken rice, best in Singapore. Dun argue.",
+    timeline: [
+      {
+        year: "1930s",
+        event:
+          "Maxwell Market established on this site during British colonial era",
+      },
+      {
+        year: "1986",
+        event: "Maxwell Food Centre opens in its current form after redevelopment",
+      },
+      {
+        year: "2009",
+        event:
+          "Anthony Bourdain visits Tian Tian, cementing Maxwell's global reputation",
+      },
+      {
+        year: "2016",
+        event: "Tian Tian receives Michelin Bib Gourmand recognition",
+      },
+      {
+        year: "2020",
+        event:
+          "UNESCO inscribes Singapore hawker culture — Maxwell named as exemplary centre",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Tian Tian Hainanese Chicken Rice",
+        dish: "Chicken Rice",
+        story:
+          "Madam Foo Kui Lian started this stall in 1987. The queue forms before the stall opens. Bourdain called it one of the best things he ever ate. The broth-soaked rice is judged before you even touch the chicken.",
+      },
+      {
+        name: "Maxwell Fuzhou Oyster Cake",
+        dish: "Oyster Cake",
+        story:
+          "A rare Fuzhou specialty — crispy batter shell filled with oysters, pork, and peanuts. One of the last stalls in Singapore keeping this dying recipe alive.",
+      },
+      {
+        name: "Zhen Zhen Porridge",
+        dish: "Cantonese Porridge",
+        story:
+          "Opens at 6am and sells out by 11am. Three generations of the same family. The fish porridge is silky, precise, and unchanged since the stall opened.",
+      },
+    ],
   },
   {
     id: 2,
@@ -80,6 +134,59 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: true,
     budgetPerPax: "$8–$15",
+    story:
+      "Lau Pa Sat — literally 'old market' in Hokkien — is one of Singapore's most architecturally significant buildings. Designed by George Coleman and cast in Glasgow in 1894, the Victorian wrought-iron structure was shipped to Singapore piece by piece. It survived Japanese occupation, served as a market for over a century, and was gazetted as a national monument in 1973. Today it houses hawker stalls by day and transforms into Singapore's most atmospheric supper spot by night when Boon Tat Street closes to traffic and satay smoke fills the colonial arches.",
+    vibeCheck:
+      "A colonial monument that smells like satay smoke and tastes like Singapore history",
+    localQuote:
+      "After work, Lau Pa Sat satay and cold beer. Best therapy in Singapore.",
+    timeline: [
+      {
+        year: "1894",
+        event:
+          "Cast-iron structure assembled from parts shipped from Glasgow, Scotland",
+      },
+      {
+        year: "1973",
+        event:
+          "Gazetted as a national monument — one of Singapore's first",
+      },
+      {
+        year: "1985",
+        event:
+          "Restored and reopened as a hawker centre after years of conservation work",
+      },
+      {
+        year: "2000s",
+        event:
+          "Boon Tat Street satay tradition established — becomes iconic evening ritual",
+      },
+      {
+        year: "2016",
+        event:
+          "Featured in Michelin Guide Singapore as essential hawker experience",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Boon Tat Street Satay",
+        dish: "Charcoal Satay",
+        story:
+          "Every evening at 7pm, the road closes and over 20 satay stalls set up under the stars. The charcoal smoke, the peanut sauce, the cold beer — it's the most cinematic meal in Singapore.",
+      },
+      {
+        name: "Lau Pa Sat Rojak",
+        dish: "Rojak",
+        story:
+          "One of the few remaining stalls serving traditional rojak with hand-cut fruit. The shrimp paste dressing is made fresh daily from a recipe that hasn't changed in decades.",
+      },
+      {
+        name: "Carrot Cake Station",
+        dish: "Carrot Cake",
+        story:
+          "Both black and white versions done properly — the white version is rarer and harder to find elsewhere. The hawker fries each portion individually to order.",
+      },
+    ],
   },
   {
     id: 3,
@@ -111,6 +218,57 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: true,
     budgetPerPax: "$4–$8",
+    story:
+      "Built in 1973 on the site of Singapore's first civilian airport, Old Airport Road Food Centre carries history in its very address. The Kallang Airport opened in 1937 and was the pride of British colonial Singapore — by 1973 it had been replaced by Paya Lebar Airport and the old terminal demolished. The hawker centre that rose in its place became legendary for different reasons: over 150 stalls, multiple Michelin-recognised hawkers, and a reputation among serious food people as the single best hawker centre in Singapore. It is never the most famous but consistently the most respected.",
+    vibeCheck:
+      "The hawker centre that serious food people call their favourite",
+    localQuote: "Old Airport Road, everything also good one. Cannot go wrong.",
+    timeline: [
+      {
+        year: "1937",
+        event:
+          "Kallang Airport opens — Singapore's first civilian airport on this site",
+      },
+      {
+        year: "1955",
+        event:
+          "Paya Lebar Airport replaces Kallang — the old terminal begins closure",
+      },
+      {
+        year: "1973",
+        event: "Old Airport Road Food Centre opens on the former airport grounds",
+      },
+      {
+        year: "2000s",
+        event:
+          "Multiple stalls receive Michelin recognition — centre's reputation peaks",
+      },
+      {
+        year: "2016",
+        event:
+          "Regarded by food critics as Singapore's finest all-round hawker centre",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Outram Park Fried Kway Teow Mee",
+        dish: "Char Kway Teow",
+        story:
+          "Michelin Bib Gourmand. The uncle fries one or two portions at a time, refuses to compromise on wok hei. Queues begin before the stall opens.",
+      },
+      {
+        name: "Toa Payoh Lor Mee",
+        dish: "Lor Mee",
+        story:
+          "Thick starchy gravy, braised pork, fish cake and vinegar. One of the most underrated dishes in Singapore done at its absolute best.",
+      },
+      {
+        name: "Hua Kee Chicken Wings",
+        dish: "BBQ Chicken Wings",
+        story:
+          "Marinated overnight and grilled to order. The skin is lacquered, the meat stays juicy. Locals drive from across the island specifically for these.",
+      },
+    ],
   },
   {
     id: 4,
@@ -141,6 +299,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$8",
+    story:
+      "Singapore's largest hawker centre with over 260 stalls, the Chinatown Complex is a living document of Chinese immigrant food culture. Built in 1983 as part of the HDB Chinatown redevelopment, it replaced the street hawkers who had fed the area's Hokkien, Cantonese and Teochew communities for generations. In 2016, Chan Hon Meng's humble soya sauce chicken stall became the first street food in the world to receive a Michelin Star — making a $2 plate of chicken rice the cheapest Michelin meal on Earth. The queue that formed the next day stretched around the block and has barely shortened since.",
+    vibeCheck:
+      "Where a $2 plate of chicken became the world's most famous Michelin meal",
+    localQuote: "Hawker Chan, Michelin star also, still $2. Singapore magic lah.",
+    timeline: [
+      {
+        year: "1983",
+        event:
+          "Chinatown Complex Food Centre opens as part of major HDB redevelopment",
+      },
+      {
+        year: "2000s",
+        event:
+          "Chan Hon Meng perfects his soya sauce chicken recipe after 30 years of cooking",
+      },
+      {
+        year: "2016",
+        event:
+          "Chan Hon Meng receives a Michelin Star — world's first and cheapest starred hawker",
+      },
+      {
+        year: "2017",
+        event:
+          "Queue for Hawker Chan exceeds 2 hours daily as global media coverage explodes",
+      },
+      {
+        year: "2020",
+        event:
+          "Named in UNESCO inscription of Singapore hawker culture as exemplary centre",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Chan Hon Meng Soya Sauce Chicken",
+        dish: "Soya Sauce Chicken Rice",
+        story:
+          "The world's first Michelin-starred hawker stall. Chan Hon Meng spent 30 years perfecting his recipe. A plate costs $2. The queue can reach 2 hours. Every minute is worth it.",
+      },
+      {
+        name: "Liao Fan Hong Kong Soya Sauce Chicken Rice",
+        dish: "Soya Sauce Chicken Noodles",
+        story:
+          "The original outlet that made history. The dark, aromatic soya broth is slow-cooked and the chicken is silky smooth. Order noodles instead of rice to try a different dimension.",
+      },
+      {
+        name: "168 CMY Satay",
+        dish: "Pork and Chicken Satay",
+        story:
+          "Cooked to order over charcoal, minimum 10 skewers. The pork satay is tender and sweet — the kind locals will queue for on a Friday afternoon.",
+      },
+    ],
   },
   {
     id: 5,
@@ -172,6 +382,57 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: true,
     budgetPerPax: "$10–$20",
+    story:
+      "Newton Food Centre opened in 1971 and quickly became the most internationally recognisable hawker centre in Singapore — not because of the food, but because of the movies. Featured in Crazy Rich Asians, countless travel documentaries, and every 'best of Singapore' list written in the last three decades, Newton operates in two realities: the tourist destination and the actual local supper spot. Skip the stalls with aggressive touts and find the quieter ones serving excellent BBQ seafood, oyster omelette, and satay to the after-work crowd who've been coming here for decades.",
+    vibeCheck: "Famous enough to be in the movies, real enough to still matter",
+    localQuote: "Newton got tourist price but the BBQ seafood still worth it lah.",
+    timeline: [
+      {
+        year: "1971",
+        event:
+          "Newton Food Centre established as one of Singapore's first organised hawker centres",
+      },
+      {
+        year: "1990s",
+        event:
+          "Featured in early Singapore tourism campaigns — international profile begins",
+      },
+      {
+        year: "2000s",
+        event:
+          "Becomes the go-to recommendation in every Singapore travel guide published",
+      },
+      {
+        year: "2018",
+        event:
+          "Featured prominently in Crazy Rich Asians — global recognition peaks",
+      },
+      {
+        year: "2020",
+        event:
+          "Continues as Singapore's most visited hawker centre by international tourists",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Alliance Seafood",
+        dish: "Chilli Crab",
+        story:
+          "One of the most consistent chilli crab stalls in Singapore at hawker prices. The sauce is rich, the crab is fresh, and the mantou is always perfectly fried.",
+      },
+      {
+        name: "Hup Kee Oyster Omelette",
+        dish: "Oyster Omelette",
+        story:
+          "Crispy on the edges, eggy in the middle, generously loaded with fresh oysters. A dish that separates the great hawker stalls from the average ones.",
+      },
+      {
+        name: "Newton Satay Club",
+        dish: "Charcoal Satay",
+        story:
+          "The collective of satay stalls that made Newton famous before the movies did. Beef, chicken, mutton — all marinated overnight and grilled over real charcoal.",
+      },
+    ],
   },
   {
     id: 6,
@@ -198,6 +459,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: true,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "Tekka Centre sits in the heart of Little India, the neighbourhood that has been home to Singapore's South Indian community since the 1820s. The building — a sprawling complex of wet market, hawker food, and retail — is the cultural anchor of the area. The food here reflects generations of Tamil, Malayalee, and North Indian communities who came to Singapore as labourers and traders and stayed to build one of the city's most vibrant enclaves. Everything is halal. The roti prata here is judged differently — not by tourist standards but by the Indian uncles who eat it every morning before work.",
+    vibeCheck: "The most authentically South Asian 10 square metres in Southeast Asia",
+    localQuote:
+      "Tekka prata, best in Singapore. The Indian uncles say so, cannot wrong.",
+    timeline: [
+      {
+        year: "1820s",
+        event:
+          "Little India established as Singapore's South Indian community enclave",
+      },
+      {
+        year: "1915",
+        event:
+          "Buffalo Road wet market established — predecessor to Tekka Centre",
+      },
+      {
+        year: "1982",
+        event:
+          "Current Tekka Centre complex opens, anchoring the Little India precinct",
+      },
+      {
+        year: "2000s",
+        event:
+          "Allauddin's Briyani achieves Michelin recognition — confirms Tekka's food credentials",
+      },
+      {
+        year: "2019",
+        event:
+          "Little India gazetted as historic district — Tekka named as cultural landmark",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Allauddin's Briyani",
+        dish: "Chicken Briyani",
+        story:
+          "Michelin Bib Gourmand. The biryani pots are filled fresh each morning. The rice is fragrant with whole spices, the chicken falls off the bone. Queues form before opening.",
+      },
+      {
+        name: "Raj's Banana Leaf",
+        dish: "Fish Head Curry",
+        story:
+          "Served on a banana leaf the size of a dinner plate. The curry is coconut-rich and fiery, the fish head is fresh. A sensory experience that Little India does better than anywhere.",
+      },
+      {
+        name: "Konar Mess Prata",
+        dish: "Roti Prata",
+        story:
+          "Prata that's judged by the Indian community, not tourists. Paper-thin, lacey at the edges, with a curry that's been simmering since 5am. The benchmark for Singapore prata.",
+      },
+    ],
   },
   {
     id: 7,
@@ -224,6 +537,57 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: true,
     openLate: true,
     budgetPerPax: "$4–$8",
+    story:
+      "Adam Road Food Centre is the kind of place that doesn't try to be famous and is famous anyway. Tucked between the Botanic Gardens and the expatriate enclave of Bukit Timah, it serves one of Singapore's most mixed communities — Malay families, expats, students from the nearby universities, and late-night supper hunters from across the island. The nasi lemak stall that operates from the early hours has been a Michelin Bib Gourmand recipient and a weekend queue institution. The centre's late-night atmosphere — warm, buzzing, cross-cultural — captures something essential about Singapore's food culture.",
+    vibeCheck: "The supper spot that belongs to everyone and is owned by no one",
+    localQuote: "Adam Road nasi lemak, queue like crazy but cannot skip one.",
+    timeline: [
+      {
+        year: "1960s",
+        event:
+          "Hawker stalls begin operating along Adam Road serving the local community",
+      },
+      {
+        year: "1975",
+        event:
+          "Formal hawker centre established to organise the growing number of stalls",
+      },
+      {
+        year: "1980s",
+        event:
+          "Nasi lemak stall establishes itself as the centre's signature — queues begin",
+      },
+      {
+        year: "2016",
+        event:
+          "Adam Road Nasi Lemak receives Michelin Bib Gourmand recognition",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains one of Singapore's best late-night supper destinations",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Adam Road Nasi Lemak",
+        dish: "Nasi Lemak",
+        story:
+          "Michelin Bib Gourmand. The coconut rice is cooked in pandan and served with sambal, ikan bilis, egg, and cucumber. Opens at 7am and the queue begins immediately.",
+      },
+      {
+        name: "Nasi Padang Minang",
+        dish: "Nasi Padang",
+        story:
+          "Indonesian-Malay rice with a spread of curries and sides. The rendang is slow-cooked and the curries are freshly made each morning. A proper Padang spread rarely found this good.",
+      },
+      {
+        name: "Roti John Station",
+        dish: "Roti John",
+        story:
+          "A Malay-Singapore original — minced meat and egg fried into a French loaf. Best eaten fresh off the griddle with sambal and mayonnaise at midnight.",
+      },
+    ],
   },
   {
     id: 8,
@@ -254,6 +618,53 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    story:
+      "Bedok Interchange Hawker Centre sits directly above Bedok MRT station, making it the most conveniently located hawker centre in Singapore's East. Bedok is one of Singapore's most densely populated towns and one of its oldest — the community that has lived here for generations has very strong opinions about where to eat. The chwee kueh stall here is Michelin recognised and has been serving the same recipe since the centre opened. The centre's position at the interchange means it serves a cross-section of all of East Singapore — from school children to retirees — every single day.",
+    vibeCheck: "East Singapore's living room — everyone passes through eventually",
+    localQuote:
+      "Bedok chwee kueh, eat every morning also never sick of it.",
+    timeline: [
+      {
+        year: "1980s",
+        event:
+          "Bedok MRT station opens — hawker centre established as part of the interchange",
+      },
+      {
+        year: "1990s",
+        event:
+          "Chwee kueh stall becomes the centre's signature — daily queues established",
+      },
+      {
+        year: "2016",
+        event:
+          "Bedok Chwee Kueh receives Michelin Bib Gourmand recognition",
+      },
+      {
+        year: "2020",
+        event:
+          "Centre expands — remains the primary food hub for Bedok's 200,000 residents",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Bedok Chwee Kueh",
+        dish: "Chwee Kueh",
+        story:
+          "Michelin Bib Gourmand. Steamed rice cakes topped with preserved radish and chilli. The texture is silky and the topping is salty-sweet. A uniquely Singaporean breakfast that most visitors never discover.",
+      },
+      {
+        name: "Bedok Interchange Mutton Soup",
+        dish: "Mutton Soup",
+        story:
+          "Clear, deeply savoury broth with tender mutton pieces and a squeeze of lime. A hangover cure and a comfort food that East-siders have been drinking for decades.",
+      },
+      {
+        name: "Famous Sungei Road Trishaw Laksa",
+        dish: "Laksa",
+        story:
+          "A branch of one of Singapore's most legendary laksa brands. The coconut broth is thick and spiced, the noodles are pre-cut. Authentic Katong-style laksa at interchange prices.",
+      },
+    ],
   },
   {
     id: 9,
@@ -285,6 +696,57 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: true,
     budgetPerPax: "$5–$10",
+    story:
+      "Bedok 85 — known to everyone in East Singapore simply as '85' — is the definitive Singapore supper centre. What started as a neighbourhood market has become a midnight pilgrimage site. The BBQ chicken wings stall has queues that stretch around the block every night from 10pm onwards. The centre operates on a different clock to the rest of Singapore: quiet in the afternoon, buzzing by 9pm, packed past midnight. It represents a side of Singapore food culture that tourists rarely see — the late-night, beer-in-hand, sharing-plates supper culture that locals consider the best part of any night out.",
+    vibeCheck: "Singapore's midnight kitchen — where the night always ends well",
+    localQuote: "85 chicken wings, queue 45 minutes also must eat. That's the rule.",
+    timeline: [
+      {
+        year: "1970s",
+        event:
+          "Fengshan Market established serving the growing Bedok North community",
+      },
+      {
+        year: "1985",
+        event:
+          "Centre earns its '85' nickname from its address — becomes a local institution",
+      },
+      {
+        year: "1990s",
+        event:
+          "BBQ chicken wings stall establishes the midnight queue tradition",
+      },
+      {
+        year: "2016",
+        event:
+          "BBQ chicken wing stall receives Michelin Bib Gourmand recognition",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains Singapore's most famous supper destination among locals",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Bedok 85 BBQ Chicken Wings",
+        dish: "BBQ Chicken Wings",
+        story:
+          "Michelin Bib Gourmand. Marinated in a secret blend and grilled over charcoal until the skin is lacquered and slightly charred. Queue starts at 9pm. Don't come after 11pm and expect short lines.",
+      },
+      {
+        name: "Carrot Cake Master",
+        dish: "Carrot Cake",
+        story:
+          "Both white and black versions done with serious wok technique. The black version is stickier and sweeter from the dark sauce. A dish that tastes completely different from what the name suggests.",
+      },
+      {
+        name: "Satay Bee Hoon 85",
+        dish: "Satay Bee Hoon",
+        story:
+          "Thin rice noodles in a rich peanut-based gravy with satay, cockles, and vegetables. A dish unique to Singapore — comforting, peanutty, and unlike anything else.",
+      },
+    ],
   },
   {
     id: 10,
@@ -310,6 +772,53 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    story:
+      "Tampines Round Market gets its name from its distinctive circular architecture — one of the few curved hawker centres in Singapore. Built to serve the rapidly growing Tampines New Town in the 1980s, it has been feeding generations of East-siders who grew up in the surrounding HDB blocks. The centre has no Michelin stars and no celebrity visitors. What it has is something rarer: a community of regulars who have been eating the same stalls for 30 years, and stalls that have been cooking for those same regulars just as long. It's what hawker culture actually is when nobody is watching.",
+    vibeCheck: "No stars, no tourists, all heart",
+    localQuote:
+      "My family eat here since I was small. Some things must not change.",
+    timeline: [
+      {
+        year: "1980s",
+        event:
+          "Tampines New Town develops rapidly — Round Market built to serve new residents",
+      },
+      {
+        year: "1990s",
+        event:
+          "Centre establishes its regular community — the same families eat here weekly",
+      },
+      {
+        year: "2000s",
+        event:
+          "Distinctive circular architecture becomes a local landmark and informal meeting point",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains one of Tampines' primary community food hubs despite newer competition",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Tampines Laksa",
+        dish: "Laksa",
+        story:
+          "A neighbourhood laksa that locals will stack against any famous stall. The broth is rich and properly spiced. No tourists, no queue hype — just consistently excellent laksa.",
+      },
+      {
+        name: "Ah Hock Wanton Mee",
+        dish: "Wanton Mee",
+        story:
+          "Springy egg noodles with char siew, wanton dumplings, and a sauce that coats every strand. The kind of stall with a sign that hasn't changed since 1988.",
+      },
+      {
+        name: "Tampines Kopi Corner",
+        dish: "Kopi and Kaya Toast",
+        story:
+          "Old-school kopitiam coffee made with a sock filter. The kaya is house-made and slightly eggy. The kind of breakfast that makes a neighbourhood feel like home.",
+      },
+    ],
   },
   {
     id: 11,
@@ -336,6 +845,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: true,
     openLate: true,
     budgetPerPax: "$4–$9",
+    story:
+      "Geylang Serai is the cultural heartland of Malay Singapore. The market has stood here since the 1950s when the area was the centre of the Malay kampung community. The food tells that story directly — nasi padang, murtabak, putu piring, kueh, bandung — a full catalogue of Malay and Indonesian culinary heritage kept alive by stalls that pass recipes between generations. During Ramadan, the bazaar outside becomes one of Singapore's most spectacular food events, drawing hundreds of thousands over the fasting month. Everything sold here is halal and the welcome is universal.",
+    vibeCheck: "The heartland of Malay Singapore — food as cultural memory",
+    localQuote:
+      "Geylang Serai murtabak, eat until cannot breathe. Confirm worth it.",
+    timeline: [
+      {
+        year: "1950s",
+        event:
+          "Geylang Serai established as centre of Singapore's Malay kampung community",
+      },
+      {
+        year: "1964",
+        event:
+          "Geylang Serai Market formalised — becomes the cultural anchor of the precinct",
+      },
+      {
+        year: "1990s",
+        event:
+          "Ramadan bazaar tradition grows into Singapore's largest annual food event",
+      },
+      {
+        year: "2011",
+        event:
+          "Market conserved and upgraded while preserving its Malay cultural character",
+      },
+      {
+        year: "2020",
+        event:
+          "UNESCO hawker inscription specifically references Geylang Serai as exemplary",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Hjh Maimunah",
+        dish: "Nasi Padang",
+        story:
+          "One of Singapore's most beloved Malay restaurants with roots at Geylang Serai. The beef rendang is slow-cooked for hours and the spread of curries changes daily.",
+      },
+      {
+        name: "Ramadan Murtabak Stalls",
+        dish: "Murtabak",
+        story:
+          "During Ramadan, the bazaar murtabak stalls draw queues stretching the length of the market. Thick pancakes stuffed with mutton or chicken, egg, and onion — a community ritual.",
+      },
+      {
+        name: "Putu Piring",
+        dish: "Putu Piring",
+        story:
+          "Steamed rice cakes filled with palm sugar and dusted with coconut. Made fresh in small batches throughout the day. One of the most beautiful traditional Malay sweets still made by hand.",
+      },
+    ],
   },
   {
     id: 12,
@@ -362,6 +923,56 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$5–$9",
+    story:
+      "Amoy Street Food Centre occupies a corner of Singapore's CBD that was once the centre of Hokkien immigrant life in the 1800s. The street's name — Amoy being the old name for Xiamen in Fujian province — marks where the first waves of Hokkien traders settled. Today the centre operates on a different rhythm to any other hawker centre in Singapore: breakfast and lunch only, closed by 3pm, and packed with bankers, lawyers, and architects who work in the surrounding towers. A Noodle Story — a modern Singapore ramen that's won Michelin recognition — is perhaps the most talked-about queue in the CBD.",
+    vibeCheck: "The CBD's best-kept secret — closes before the tourists arrive",
+    localQuote: "Amoy Street, go early or go hungry. No lunch after 1pm.",
+    timeline: [
+      {
+        year: "1800s",
+        event:
+          "Amoy Street established as heart of Hokkien immigrant community in colonial Singapore",
+      },
+      {
+        year: "1983",
+        event:
+          "Amoy Street Food Centre opens — becomes primary lunch destination for CBD workers",
+      },
+      {
+        year: "2000s",
+        event:
+          "Centre evolves as CBD grows — increasingly popular with finance and legal professionals",
+      },
+      {
+        year: "2016",
+        event:
+          "A Noodle Story receives Michelin Bib Gourmand — first modern hawker concept to do so",
+      },
+      {
+        year: "2020",
+        event: "Named by food critics as Singapore's best CBD hawker centre",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "A Noodle Story",
+        dish: "Singapore-Style Ramen",
+        story:
+          "Michelin Bib Gourmand. A modern hawker concept — Singapore egg noodles topped with a Japanese-style soft egg, prawn wonton, and aromatic pork. The queue starts at 11am.",
+      },
+      {
+        name: "Hoo Kee Bak Chang",
+        dish: "Bak Chang (Rice Dumpling)",
+        story:
+          "One of the last surviving Hokkien bak chang stalls in Singapore. The glutinous rice dumplings are wrapped in bamboo leaves and filled with pork, chestnuts, and mushrooms.",
+      },
+      {
+        name: "Singapore Famous Fried Hokkien Prawn Mee",
+        dish: "Hokkien Mee",
+        story:
+          "Wok-fried yellow and rice noodles in a rich prawn broth. The sambal on the side is the secret weapon. A CBD lunch that regulars have been eating for 20 years.",
+      },
+    ],
   },
   {
     id: 13,
@@ -388,6 +999,59 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "Tiong Bahru is Singapore's oldest public housing estate, built by the Singapore Improvement Trust in the 1930s in a distinctive Streamline Moderne style that still defines the neighbourhood. The market sits at its heart, occupying a gorgeous curved building that locals fought to preserve during Singapore's redevelopment wave. The hawker stalls below and wet market above operate in a building that feels genuinely historic. As the surrounding neighbourhood gentrified and filled with independent cafes and bookshops, the market remained anchored to its original community — a place where third-generation residents eat the same breakfast their grandparents ate.",
+    vibeCheck:
+      "Singapore's most beautiful hawker building in its most charming neighbourhood",
+    localQuote:
+      "Tiong Bahru market, eat first, then walk around. Best morning in Singapore.",
+    timeline: [
+      {
+        year: "1930s",
+        event:
+          "Tiong Bahru estate built — Singapore's first public housing project in Art Deco style",
+      },
+      {
+        year: "1955",
+        event:
+          "Tiong Bahru Market established in its current building as the neighbourhood's food hub",
+      },
+      {
+        year: "1990s",
+        event:
+          "Conservation movement saves the estate from redevelopment — market protected",
+      },
+      {
+        year: "2010s",
+        event:
+          "Tiong Bahru gentrification wave — market remains community anchor amid change",
+      },
+      {
+        year: "2016",
+        event:
+          "Tiong Bahru Chwee Kueh receives Michelin Bib Gourmand recognition",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Jian Bo Shui Kueh (Chwee Kueh)",
+        dish: "Chwee Kueh",
+        story:
+          "Michelin Bib Gourmand. The most famous chwee kueh stall in Singapore. Silky steamed rice cakes with preserved radish. The texture is the standard all other stalls are measured against.",
+      },
+      {
+        name: "Lor Mee 178",
+        dish: "Lor Mee",
+        story:
+          "Thick starchy gravy over noodles with braised pork, fish cake, and a punchy vinegar. The kind of dish that Tiong Bahru regulars eat every Saturday morning without variation.",
+      },
+      {
+        name: "Tiong Bahru Hainanese Boneless Chicken Rice",
+        dish: "Chicken Rice",
+        story:
+          "Hainanese-run since the 1950s, the chicken is poached in a broth kept running for decades. The rice has a fragrance that hits you before you sit down.",
+      },
+    ],
   },
   {
     id: 14,

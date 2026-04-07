@@ -279,6 +279,110 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                 </p>
               </section>
 
+              <section aria-labelledby="story-heading">
+                <h2
+                  id="story-heading"
+                  className="text-xl font-semibold text-sf-primary"
+                >
+                  📖 The Story
+                </h2>
+                {h.story ? (
+                  <p className="mt-4 text-base leading-relaxed text-sf-muted">
+                    {h.story}
+                  </p>
+                ) : null}
+              </section>
+
+              <section aria-label="Vibe check">
+                {h.vibeCheck ? (
+                  <blockquote className="border-l-4 border-sf-primary/70 pl-5">
+                    <p className="text-base italic text-sf-primary">
+                      ✨ Vibe: {h.vibeCheck}
+                    </p>
+                  </blockquote>
+                ) : null}
+              </section>
+
+              <section aria-labelledby="local-quote-heading">
+                <h2 id="local-quote-heading" className="sr-only">
+                  Local Quote
+                </h2>
+                {h.localQuote ? (
+                  <aside className="rounded-2xl border border-white/[0.08] bg-sf-surface p-6 sm:p-8">
+                    <div className="relative">
+                      <span
+                        className="font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
+                        aria-hidden
+                      >
+                        &ldquo;
+                      </span>
+                      <p className="-mt-2 pl-1 text-lg italic leading-relaxed text-white sm:pl-2 sm:text-xl">
+                        {h.localQuote}
+                      </p>
+                      <span
+                        className="-mt-2 block text-right font-serif text-5xl leading-none text-sf-primary sm:text-6xl"
+                        aria-hidden
+                      >
+                        &rdquo;
+                      </span>
+                    </div>
+                  </aside>
+                ) : null}
+              </section>
+
+              <section aria-labelledby="timeline-heading">
+                <h2
+                  id="timeline-heading"
+                  className="text-xl font-semibold text-sf-primary"
+                >
+                  Heritage Timeline
+                </h2>
+                {h.timeline && h.timeline.length > 0 ? (
+                  <ol className="relative mt-5 border-l border-sf-primary/35 pl-6">
+                    {h.timeline.map((item, idx) => (
+                      <li key={`${item.year}-${idx}`} className="relative pb-6">
+                        <span className="absolute -left-[9px] top-1.5 h-3 w-3 rounded-full bg-sf-primary" />
+                        <p className="font-bold text-sf-primary">{item.year}</p>
+                        <p className="mt-1 text-sm leading-relaxed text-sf-muted">
+                          {item.event}
+                        </p>
+                      </li>
+                    ))}
+                  </ol>
+                ) : null}
+              </section>
+
+              <section aria-labelledby="legendary-stalls-heading">
+                <h2
+                  id="legendary-stalls-heading"
+                  className="text-xl font-semibold text-sf-primary"
+                >
+                  Legendary Stalls
+                </h2>
+                {h.legendaryStalls && h.legendaryStalls.length > 0 ? (
+                  <ul className="mt-5 grid gap-4 sm:grid-cols-2">
+                    {h.legendaryStalls.map((stall) => (
+                      <li
+                        key={stall.name}
+                        className="rounded-2xl border border-white/[0.08] bg-sf-surface p-5"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <p className="font-semibold text-sf-cream">
+                            {stall.name}
+                          </p>
+                          <span className="shrink-0 rounded-full bg-sf-primary/15 px-2.5 py-1 text-xs font-semibold text-sf-primary ring-1 ring-sf-primary/30">
+                            {stall.dish}
+                          </span>
+                        </div>
+                        <p className="mt-3 text-sm leading-relaxed text-sf-muted">
+                          {stall.story}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+
               <section aria-labelledby="must-try-heading">
                 <h2
                   id="must-try-heading"
