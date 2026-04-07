@@ -33,7 +33,7 @@ export default function AboutPage() {
               to understand a place.
             </p>
             <p className="mt-8 text-2xl font-medium italic text-sf-primary">
-              &quot;Food is the most honest way to understand a place.&quot;
+              &quot;Every queue is a vote. Every empty plate is a standing ovation.&quot;
             </p>
           </div>
         </section>
