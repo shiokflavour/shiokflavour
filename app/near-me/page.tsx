@@ -130,14 +130,31 @@ export default function NearMePage() {
         {/* Results */}
         {status === "success" && (
           <section className="mx-auto max-w-4xl px-4 pb-20 sm:px-6 lg:px-8">
-            <p className="text-sm text-sf-muted mb-6">
+            <style>{`
+              @keyframes fadeInUp {
+                from {
+                  opacity: 0;
+                  transform: translateY(20px);
+                }
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+              .animate-fade-in {
+                animation: fadeInUp 0.4s ease forwards;
+                opacity: 0;
+              }
+            `}</style>
+
+            <p className="animate-fade-in text-sm text-sf-muted mb-6">
               Found{" "}
               <span className="font-semibold text-sf-cream">
                 {results.length} hawker centres
               </span>{" "}
               near you. Your next shiok meal is closer than you think.
             </p>
-            <ul className="space-y-4">
+            <ul className="near-me-results space-y-4">
               {results.map((h, i) => {
                 const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${h.lat},${h.lng}`;
                 const tooFar = h.distanceKm > 50;
@@ -145,6 +162,11 @@ export default function NearMePage() {
                   <li
                     key={h.slug}
                     className="flex gap-4 rounded-2xl border border-white/[0.08] bg-sf-surface p-5 transition hover:border-sf-primary/30"
+                    style={{
+                      animation: "fadeInUp 0.5s ease forwards",
+                      opacity: 0,
+                      animationDelay: `${i * 80}ms`,
+                    }}
                   >
                     {/* Rank */}
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sf-primary/15 text-sm font-bold text-sf-primary">
