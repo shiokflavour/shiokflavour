@@ -40,8 +40,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Tourist Must-Visit",
     hours: "8am–10pm daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Lunch_time_at_Maxwell_Food_Centre.JPG/800px-Lunch_time_at_Maxwell_Food_Centre.JPG",
+    imageUrl: "https://images.unsplash.com/photo-1561339429-34e0a9e46de6?w=800&q=80",
     description:
       "One of Singapore's most famous hawker centres, steps from Chinatown. A pilgrimage site for food lovers visiting Singapore.",
     mustTry: [
@@ -121,8 +120,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Tourist Must-Visit",
     hours: "24 hours (most stalls 7am–10pm)",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Laupasat.JPG/800px-Laupasat.JPG",
+    imageUrl: "https://images.unsplash.com/photo-1585030924-7e40c0e5060d?w=800&q=80",
     description:
       "A Victorian cast-iron market building in the heart of the CBD. Famous for its Boon Tat Street satay stalls that fire up at night.",
     mustTry: ["Satay (Boon Tat Street)", "Rojak", "Carrot Cake", "Popiah"],
@@ -201,8 +199,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Local Favourite",
     hours: "6am–11pm (some stalls open late)",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Old_Airport_Road_Food_Centre_interior.jpg/800px-Old_Airport_Road_Food_Centre_interior.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
     description:
       "A legendary hawker centre that locals consider one of the best in Singapore. Massive, buzzing and packed with heritage stalls.",
     mustTry: [
@@ -285,8 +282,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Michelin Alert",
     hours: "6am–11pm daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Chinatown_Complex_Food_Centre%2C_Singapore_-_20130703.jpg/800px-Chinatown_Complex_Food_Centre%2C_Singapore_-_20130703.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&q=80",
     description:
       "Singapore's largest hawker centre with over 260 stalls. Home to the world's cheapest Michelin-starred meal.",
     mustTry: [
@@ -369,8 +365,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Tourist Must-Visit",
     hours: "12pm–2am daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Newton_Food_Centre.jpg/800px-Newton_Food_Centre.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
     description:
       "The most internationally famous hawker centre in Singapore — featured in the movie Crazy Rich Asians and countless travel shows.",
     mustTry: [
@@ -453,8 +448,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Halal Haven",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tekka_Centre%2C_Singapore_-_20140525.jpg/800px-Tekka_Centre%2C_Singapore_-_20140525.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
     description:
       "The heart of Little India — a vibrant wet market and food centre packed with authentic Indian, Malay and Muslim food.",
     mustTry: ["Roti Prata", "Biryani", "Fish Head Curry", "Teh Tarik", "Vadai"],
@@ -842,8 +836,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Halal Haven",
     hours: "6am–10pm (24hrs during Ramadan)",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Geylang_Serai_Market%2C_Singapore_-_20140525.jpg/800px-Geylang_Serai_Market%2C_Singapore_-_20140525.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
     description:
       "The cultural heart of Malay Singapore. A vibrant wet market and food centre that comes alive especially during Ramadan.",
     mustTry: ["Nasi Padang", "Murtabak", "Kueh Pie Tee", "Bandung", "Putu Piring"],
@@ -921,8 +914,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Office Favourite",
     hours: "7am–3pm (breakfast and lunch only)",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Amoy_Street_Food_Centre%2C_Singapore_-_20130703.jpg/800px-Amoy_Street_Food_Centre%2C_Singapore_-_20130703.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=800&q=80",
     description:
       "A lunchtime institution in the CBD — packed with office workers daily. Some of the best traditional Singaporean breakfast and lunch options.",
     mustTry: ["A Noodle Story", "Hoo Kee Bak Chang", "Breakfast Popiah"],
@@ -999,8 +991,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Hipster Favourite",
     hours: "6am–9pm daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tiong_Bahru_Market_and_Food_Centre.JPG/800px-Tiong_Bahru_Market_and_Food_Centre.JPG",
+    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
     description:
       "In Singapore's trendiest neighbourhood — a gorgeous Art Deco market building with heritage hawker stalls downstairs and a wet market above.",
     mustTry: ["Tiong Bahru Chwee Kueh", "Lor Mee", "Bao Today", "Tiong Bahru Bakery"],
@@ -1321,8 +1312,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Office Favourite",
     hours: "Weekdays 7am–3pm",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Golden_Shoe_Market_Street_Hawker_Centre%2C_Singapore.jpg/800px-Golden_Shoe_Market_Street_Hawker_Centre%2C_Singapore.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
     description:
       "A compact CBD hawker centre tucked under Market Street — a weekday lifesaver for office workers hunting chicken rice, wonton mee, and bak chor mee without leaving the district.",
     mustTry: ["Chicken Rice", "Wonton Mee", "Bak Chor Mee"],
@@ -1349,8 +1339,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Michelin Alert",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Hong_Lim_Market_%26_Food_Centre%2C_Singapore_-_20130703.jpg/800px-Hong_Lim_Market_%26_Food_Centre%2C_Singapore_-_20130703.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
     description:
       "A Chinatown institution stacked with legendary stalls, including Michelin Bib Gourmand favourite Outram Park Fried Kway Teow Mee.",
     mustTry: [
@@ -1382,8 +1371,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/People%27s_Park_Complex%2C_Singapore_-_20131012_-_02.jpg/800px-People%27s_Park_Complex%2C_Singapore_-_20131012_-_02.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
     description:
       "A bustling Chinatown complex where Teochew and Cantonese hawker classics rule — hearty soups, noodles, and claypot comfort.",
     mustTry: ["Bak Kut Teh", "Yong Tau Foo", "Wonton Noodles"],
@@ -1470,8 +1458,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Jalan_Berseh_Food_Centre%2C_Singapore_-_20130703.jpg/800px-Jalan_Berseh_Food_Centre%2C_Singapore_-_20130703.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
     description:
       "A Jalan Besar-area favourite anchored by charcoal-fired Sungei Road Laksa bowls for under a few dollars.",
     mustTry: ["Sungei Road Laksa", "Curry Noodles", "Oyster Cake"],
@@ -1498,8 +1485,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "West",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ghim_Moh_Market_%26_Food_Centre%2C_Singapore_-_20140525.jpg/800px-Ghim_Moh_Market_%26_Food_Centre%2C_Singapore_-_20140525.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=800&q=80",
     description:
       "West-side institution home to Michelin Bib Gourmand chwee kueh, plus laksa and wonton noodles.",
     mustTry: ["Ghim Moh Chwee Kueh", "Laksa", "Wonton Noodles"],
