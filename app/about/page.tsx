@@ -40,24 +40,33 @@ export default function AboutPage() {
 
         {/* Stats bar */}
         <section className="border-y border-white/[0.08] bg-sf-surface/40">
-          <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-3 gap-6 text-center">
               <div>
-                <p className="text-3xl font-bold text-sf-primary">32</p>
-                <p className="text-xs text-sf-muted mt-1 uppercase tracking-wider">
+                <p className="text-5xl font-bold text-sf-primary">32</p>
+                <p className="text-sm font-semibold text-sf-cream mt-2">
                   Hawker Centres
+                </p>
+                <p className="text-xs text-sf-muted mt-1 italic">
+                  from Chinatown to the heartlands
                 </p>
               </div>
               <div className="border-x border-white/[0.08]">
-                <p className="text-3xl font-bold text-sf-primary">8</p>
-                <p className="text-xs text-sf-muted mt-1 uppercase tracking-wider">
+                <p className="text-5xl font-bold text-sf-primary">8</p>
+                <p className="text-sm font-semibold text-sf-cream mt-2">
                   Heritage Dishes
+                </p>
+                <p className="text-xs text-sf-muted mt-1 italic">
+                  each one a chapter of Singapore&apos;s story
                 </p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-sf-primary">1</p>
-                <p className="text-xs text-sf-muted mt-1 uppercase tracking-wider">
+                <p className="text-5xl font-bold text-sf-primary">1</p>
+                <p className="text-sm font-semibold text-sf-cream mt-2">
                   UNESCO Recognition
+                </p>
+                <p className="text-xs text-sf-muted mt-1 italic">
+                  the world finally caught up with what we knew
                 </p>
               </div>
             </div>
