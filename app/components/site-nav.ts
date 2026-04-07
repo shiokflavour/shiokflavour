@@ -3,7 +3,7 @@ export const MAIN_NAV_LINKS = [
   { href: "/hawker-centres", label: "Hawker Centres" },
   { href: "/food-heritage", label: "Food Heritage" },
   { href: "/flavour-trail", label: "Flavour Trail" },
-  { href: "/#discover", label: "Near Me" },
+  { href: "/near-me", label: "Near Me" },
 ] as const;
 
 export const LEGAL_FOOTER_LINKS = [
