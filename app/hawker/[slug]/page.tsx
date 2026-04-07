@@ -190,62 +190,117 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
       <SiteHeader />
       <HawkerStructuredData hawker={h} />
 
-      {/* Hero — full bleed 16/6 */}
-      <div className="relative w-full overflow-hidden aspect-[16/6] min-h-[200px]">
-        <Image
-          src={h.imageUrl}
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/25"
-          aria-hidden
-        />
-        <div className="absolute inset-x-0 bottom-0 z-10 px-4 pb-8 pt-16 sm:px-6 sm:pb-10 md:px-8 md:pb-12">
-          <div className="mx-auto max-w-6xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sf-primary">
-              {h.region}
-            </p>
-            <h1 className="mt-2 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-              {h.name}
-            </h1>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {h.halal ? (
-                <span className="rounded-full border border-emerald-400/50 bg-emerald-950/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-100">
-                  Halal
+      {/* New Hero — split layout, no blurry background image */}
+      <section className="border-b border-white/10 bg-gradient-to-br from-sf-surface to-black/40">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-8 lg:grid-cols-5 lg:gap-12">
+            {/* Left — all key info, 3 columns wide */}
+            <div className="space-y-5 lg:col-span-3">
+              <Link
+                href="/hawker-centres"
+                className="inline-flex items-center gap-1 text-sm text-sf-muted transition hover:text-sf-cream"
+              >
+                ← Back to Hawker Centres
+              </Link>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full border border-sf-primary/40 bg-sf-primary/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sf-primary">
+                  {h.region}
                 </span>
-              ) : null}
-              {h.openLate ? (
-                <span className="rounded-full border border-violet-400/50 bg-violet-950/50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-violet-100">
-                  Open Late
+                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-sf-cream">
+                  {h.tag}
                 </span>
-              ) : null}
+                {h.halal && (
+                  <span className="rounded-full border border-emerald-600/30 bg-emerald-700/20 px-3 py-1 text-xs font-semibold text-emerald-400">
+                    Halal Friendly
+                  </span>
+                )}
+                {h.openLate && (
+                  <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-sf-muted">
+                    🌙 Open Late
+                  </span>
+                )}
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight text-sf-cream sm:text-5xl lg:text-6xl">
+                {h.name}
+              </h1>
+              <p className="text-base text-sf-muted">{h.address}</p>
+
+              {/* Quick stats row */}
+              <div className="grid grid-cols-3 gap-3 pt-2">
+                <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3 text-center">
+                  <p className="mb-1 text-xs text-sf-muted">Budget</p>
+                  <p className="text-sm font-semibold text-sf-cream">
+                    {h.budgetPerPax}
+                  </p>
+                </div>
+                <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3 text-center">
+                  <p className="mb-1 text-xs text-sf-muted">Hours</p>
+                  <p className="text-sm font-semibold leading-tight text-sf-cream">
+                    {h.hours.split("(")[0].trim()}
+                  </p>
+                </div>
+                <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3 text-center">
+                  <p className="mb-1 text-xs text-sf-muted">MRT</p>
+                  <p className="text-sm font-semibold leading-tight text-sf-cream">
+                    {h.nearestMRT.split("—")[0].trim()}
+                  </p>
+                </div>
+              </div>
+
+              {/* Must try pills */}
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-sf-muted">
+                  Must Try
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {h.mustTry.slice(0, 3).map((dish) => (
+                    <span
+                      key={dish}
+                      className="rounded-full border border-sf-primary/25 bg-sf-primary/10 px-3 py-1 text-sm text-sf-cream"
+                    >
+                      🍜 {dish}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Get directions button */}
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  `${h.name} ${h.address} Singapore`,
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-sf-primary px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+              >
+                📍 Get Directions
+              </a>
+            </div>
+
+            {/* Right — contained image card, 2 columns wide */}
+            <div className="lg:col-span-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10">
+                <Image
+                  src={h.imageUrl}
+                  alt={h.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                {showMichelin && (
+                  <div className="absolute bottom-3 left-3">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-yellow-500/40 bg-black/70 px-3 py-1 text-xs font-semibold text-yellow-400 backdrop-blur-sm">
+                      ⭐ Michelin Recognised
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Sticky sub-navigation */}
-      <nav
-        className="sticky top-14 z-40 border-b border-white/10 bg-sf-bg/95 backdrop-blur-md supports-[backdrop-filter]:bg-sf-bg/80"
-        aria-label="Hawker page navigation"
-      >
-        <div className="mx-auto grid max-w-6xl grid-cols-[1fr_minmax(0,1.5fr)_1fr] items-center gap-3 px-4 py-3 sm:px-6">
-          <Link
-            href="/hawker-centres"
-            className="justify-self-start text-sm font-semibold text-sf-primary transition hover:text-sf-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
-          >
-            ← Back to Hawker Centres
-          </Link>
-          <p className="truncate text-center text-sm font-semibold text-sf-cream sm:text-base">
-            {h.name}
-          </p>
-          <span className="hidden sm:block" aria-hidden />
-        </div>
-      </nav>
+      </section>
 
       <main className="flex-1">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
