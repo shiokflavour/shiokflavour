@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BookOpen, Globe, Sparkles, Users } from "lucide-react";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 
@@ -41,7 +42,9 @@ export default function AboutPage() {
         {/* UNESCO section */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
-            <div className="text-4xl">🏛️</div>
+            <div className="text-4xl">
+              <Globe className="w-6 h-6 text-sf-primary" strokeWidth={1.5} />
+            </div>
             <div className="mt-4">
               <h2 className="text-2xl font-bold text-sf-cream">
                 A Heritage Recognised by the World
@@ -83,7 +86,9 @@ export default function AboutPage() {
         {/* What we are */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
-            <div className="text-4xl">🍜</div>
+            <div className="text-4xl">
+              <BookOpen className="w-6 h-6 text-sf-primary" strokeWidth={1.5} />
+            </div>
             <div className="mt-4">
               <h2 className="text-2xl font-bold text-sf-cream">
                 What ShiokFlavour Is
@@ -117,7 +122,9 @@ export default function AboutPage() {
         {/* What shiok means */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
-            <div className="text-4xl">✨</div>
+            <div className="text-4xl">
+              <Sparkles className="w-6 h-6 text-sf-primary" strokeWidth={1.5} />
+            </div>
             <div className="mt-4">
               <h2 className="text-2xl font-bold text-sf-cream">
                 What Does Shiok Mean?
@@ -146,7 +153,9 @@ export default function AboutPage() {
         {/* Who it's for */}
         <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-white/[0.08] bg-sf-surface/60 p-8">
-            <div className="text-4xl">🌏</div>
+            <div className="text-4xl">
+              <Users className="w-6 h-6 text-sf-primary" strokeWidth={1.5} />
+            </div>
             <div className="mt-4">
               <h2 className="text-2xl font-bold text-sf-cream">
                 Who We Are Built For
@@ -186,13 +195,13 @@ export default function AboutPage() {
                 href="/hawker-centres"
                 className="inline-flex items-center gap-2 rounded-xl bg-sf-primary px-6 py-3 text-base font-semibold text-white transition hover:opacity-90"
               >
-                🏪 Explore Hawker Centres
+                Explore Hawker Centres <span>→</span>
               </Link>
               <Link
                 href="/food-heritage"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-sf-cream transition hover:border-sf-primary/50"
               >
-                🍜 Discover Food Heritage
+                Discover Food Heritage <span>→</span>
               </Link>
             </div>
           </div>
