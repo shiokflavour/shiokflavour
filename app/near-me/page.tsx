@@ -163,9 +163,9 @@ export default function NearMePage() {
                     key={h.slug}
                     className="flex gap-4 rounded-2xl border border-white/[0.08] bg-sf-surface p-5 transition hover:border-sf-primary/30"
                     style={{
-                      animation: "fadeInUp 0.5s ease forwards",
+                      animation: "fadeInUp 0.8s ease forwards",
                       opacity: 0,
-                      animationDelay: `${i * 80}ms`,
+                      animationDelay: `${i * 120}ms`,
                     }}
                   >
                     {/* Rank */}
