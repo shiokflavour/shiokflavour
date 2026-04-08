@@ -22,8 +22,8 @@ const OCCASION_TAGS = [
 ] as const;
 
 const STAT_BOXES = [
-  { title: "500+ Dishes", sub: "To Discover" },
-  { title: "5 Regions", sub: "Island-wide" },
+  { title: "500+ Dishes", sub: "reasons to skip the restaurant" },
+  { title: "5 Regions", sub: "from Woodlands to the East Coast" },
   { title: "Rated by Locals", sub: "Not TripAdvisor" },
 ] as const;
 
@@ -68,7 +68,7 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center text-center">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-sf-primary">
-          Singapore food discovery
+          UNESCO recognised · since forever
         </p>
         <h1
           id="hero-heading"
@@ -94,8 +94,8 @@ export function HeroSection() {
         </nav>
 
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-sf-cream/85 sm:text-xl">
-          Your guide to the best hawker centres and restaurants across
-          Singapore
+          Not a restaurant guide. Not a listicle. A love letter to the uncles
+          and aunties who woke up at 4am so you could eat well.
         </p>
 
         <div className="mt-10 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center sm:gap-4">

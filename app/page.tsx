@@ -44,10 +44,11 @@ export default async function Home() {
         >
           <div className="mb-6 text-center sm:text-left">
             <h2 className="text-3xl font-bold tracking-tight text-sf-cream sm:text-4xl">
-              Find your next meal
+              Where are you eating today?
             </h2>
             <p className="mt-2 text-base text-sf-muted sm:text-lg">
-              Search hawker centres by name, dish or district.
+              Every queue worth joining. Every stall worth finding. All in one
+              place.
             </p>
           </div>
           <form
