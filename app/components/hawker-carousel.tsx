@@ -26,7 +26,7 @@ export function HawkerCarousel() {
   return (
     <section
       id="editors-picks"
-      className="border-t border-white/5 bg-black/20 py-16 px-4 sm:px-6 lg:px-8"
+      className="relative z-10 border-t border-white/5 bg-[#121212] py-16 px-4 sm:px-6 lg:px-8"
       aria-labelledby="hawker-carousel-heading"
     >
       <div className="mx-auto max-w-6xl">

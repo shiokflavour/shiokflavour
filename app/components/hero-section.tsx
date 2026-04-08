@@ -39,7 +39,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative flex min-h-[90vh] w-full flex-col justify-center overflow-hidden border-b border-white/5 px-4 py-20 sm:px-6 lg:px-8"
+      className="relative flex h-[90vh] w-full flex-col justify-center overflow-hidden border-b border-white/5 px-4 py-20 sm:px-6 lg:px-8"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0 z-0">
