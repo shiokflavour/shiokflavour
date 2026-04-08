@@ -26,7 +26,7 @@ export function HawkerCarousel() {
   return (
     <section
       id="editors-picks"
-      className="relative z-10 border-t border-white/5 bg-[#121212] py-16 px-4 sm:px-6 lg:px-8"
+      className="relative z-10 border-t border-white/5 bg-[#1a1a1a] py-16 px-4 sm:px-6 lg:px-8"
       aria-labelledby="hawker-carousel-heading"
     >
       <div className="mx-auto max-w-6xl">
@@ -64,7 +64,7 @@ export function HawkerCarousel() {
             <Link
               key={`${hawker.slug}-${start}-${i}`}
               href={`/hawker/${hawker.slug}`}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-sf-surface transition-all duration-500 hover:border-sf-primary/40 hover:scale-[1.02] transition-opacity duration-700"
+              className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#242424] transition-all duration-500 hover:border-sf-primary/40 hover:scale-[1.02] transition-opacity duration-700"
             >
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden bg-black/20">
