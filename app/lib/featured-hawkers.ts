@@ -526,7 +526,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Supper Spot",
     hours: "7am–late night",
-    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+    imageUrl: "/images/hawkers/adam-road.webp",
     description:
       "A beloved neighbourhood hawker centre known for its famous nasi lemak and late night crowd. A local institution.",
     mustTry: ["Adam Road Nasi Lemak", "Roti John", "Mee Rebus", "Teh Tarik"],
@@ -604,7 +604,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Local Favourite",
     hours: "6am–11pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+    imageUrl: "/images/hawkers/bedok-interchange.jpg",
     description:
       "A bustling hawker centre at the heart of Bedok — one of Singapore's most residential towns and beloved by East-siders.",
     mustTry: [
@@ -681,7 +681,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Supper Spot",
     hours: "24 hours (most stalls till late)",
-    imageUrl: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=800&q=80",
+    imageUrl: "/images/hawkers/bedok-85.jpg",
     description:
       "The ultimate supper destination for East Singapore. Famously packed late at night with locals fuelling up after a night out.",
     mustTry: [
@@ -764,7 +764,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Budget Eats",
     hours: "6am–11pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+    imageUrl: "/images/hawkers/tampines-round.jpg",
     description:
       "A well-loved neighbourhood market and food centre in Tampines — affordable, no-frills and packed with regulars every morning.",
     mustTry: ["Laksa", "Wanton Mee", "Curry Puff", "Kopi"],
@@ -1070,7 +1070,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
+    imageUrl: "/images/hawkers/abc-brickworks.jpg",
     description:
       "A hidden gem loved by locals — away from the tourist trail but packed with excellent food at very reasonable prices.",
     mustTry: ["Satay", "BBQ Chicken Wings", "Carrot Cake", "Popiah"],
@@ -1097,7 +1097,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "West",
     tag: "Budget Eats",
     hours: "6am–9pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=800&q=80",
+    imageUrl: "/images/hawkers/buona-vista.webp",
     description:
       "A neighbourhood market near Holland Village loved by students, expats and families for affordable, quality hawker food.",
     mustTry: ["Prawn Noodles", "Wanton Mee", "Nasi Lemak", "Kopi"],
@@ -1124,7 +1124,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "West",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+    imageUrl: "/images/hawkers/clementi-448.jpg",
     description:
       "A well-loved neighbourhood hawker centre in Clementi serving the local community with consistent quality food.",
     mustTry: ["Hokkien Mee", "Char Siew Rice", "Laksa", "Economy Rice"],
@@ -1151,7 +1151,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "West",
     tag: "Budget Eats",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
+    imageUrl: "/images/hawkers/jurong-west-505.webp",
     description:
       "A large neighbourhood hawker centre serving the Jurong West community with a wide variety of affordable food options.",
     mustTry: ["Bak Chor Mee", "Chicken Rice", "Nasi Lemak", "Teh Tarik"],
@@ -1178,7 +1178,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "North",
     tag: "Local Favourite",
     hours: "7am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
+    imageUrl: "/images/hawkers/yishun-park.jpg",
     description:
       "A modern hawker centre in Yishun with a good mix of traditional and contemporary hawker stalls.",
     mustTry: ["Laksa", "Chicken Rice", "Roti Prata", "Kopi"],
@@ -1205,7 +1205,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "North",
     tag: "Supper Spot",
     hours: "6am–late night",
-    imageUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80",
+    imageUrl: "/images/hawkers/sembawang-hills.jpg",
     description:
       "A beloved neighbourhood food centre along Upper Thomson Road — famous for its late night supper crowd and excellent local food.",
     mustTry: ["Bak Kut Teh", "Carrot Cake", "Prawn Noodles", "Durian (seasonal)"],
@@ -1232,7 +1232,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "North",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
+    imageUrl: "/images/hawkers/chong-pang.jpg",
     description:
       "A large and popular market in Yishun serving the northern heartland community with a huge variety of food.",
     mustTry: ["Carrot Cake", "Char Kway Teow", "Mee Goreng", "Fresh Juice"],
@@ -1259,7 +1259,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "North",
     tag: "Budget Eats",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=800&q=80",
+    imageUrl: "/images/hawkers/woodlands-centre.jpg",
     description:
       "A neighbourhood hawker centre in Woodlands serving the northernmost community of Singapore close to the Causeway.",
     mustTry: ["Economy Rice", "Nasi Lemak", "Roti Prata", "Laksa"],
@@ -1285,7 +1285,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+    imageUrl: "/images/hawkers/toa-payoh.jpg",
     description:
       "A classic HDB heartland hawker centre in Toa Payoh — one of Singapore's oldest public housing estates with strong food heritage.",
     mustTry: ["Toa Payoh Lor Mee", "Wanton Mee", "Chicken Rice", "Soon Kueh"],
@@ -1312,7 +1312,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Office Favourite",
     hours: "Weekdays 7am–3pm",
-    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
+    imageUrl: "/images/hawkers/golden-shoe.jpg",
     description:
       "A compact CBD hawker centre tucked under Market Street — a weekday lifesaver for office workers hunting chicken rice, wonton mee, and bak chor mee without leaving the district.",
     mustTry: ["Chicken Rice", "Wonton Mee", "Bak Chor Mee"],
@@ -1371,7 +1371,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
+    imageUrl: "/images/hawkers/peoples-park.jpg",
     description:
       "A bustling Chinatown complex where Teochew and Cantonese hawker classics rule — hearty soups, noodles, and claypot comfort.",
     mustTry: ["Bak Kut Teh", "Yong Tau Foo", "Wonton Noodles"],
@@ -1398,7 +1398,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Supper Spot",
     hours: "12pm–late night daily",
-    imageUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+    imageUrl: "/images/hawkers/east-coast-lagoon.jpg",
     description:
       "Open-air seaside hawker village — satay smoke, chilli crab, sambal stingray, and BBQ wings with the sea steps away.",
     mustTry: [
@@ -1431,7 +1431,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
+    imageUrl: "/images/hawkers/marine-parade.jpg",
     description:
       "Neighbourhood Katong hawker centre — laksa, rojak, and satay bee hoon for east-side families.",
     mustTry: ["Katong Laksa", "Rojak", "Satay Bee Hoon"],
@@ -1513,7 +1513,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–11pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
+    imageUrl: "/images/hawkers/alexandra-village.jpg",
     description:
       "A well-loved Alexandra-Bukit Merah hub stacking heritage stalls from Hock Lam beef noodles to cult-status wings.",
     mustTry: ["Hock Lam Beef Noodles", "BBQ Chicken Wings", "Char Kway Teow"],
@@ -1540,7 +1540,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+    imageUrl: "/images/hawkers/bishan-st13.jpg",
     description:
       "A popular heartland centre where families queue for prata, chicken rice, and bak chor mee before school and work.",
     mustTry: ["Roti Prata", "Chicken Rice", "Bak Chor Mee"],
@@ -1567,7 +1567,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "West",
     tag: "Hidden Gem",
     hours: "6am–10pm daily",
-    imageUrl: "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=800&q=80",
+    imageUrl: "/images/hawkers/pasir-panjang.webp",
     description:
       "A quiet underrated hawker centre near the Southern Ridges — zi char and stir-fry favourites without the city buzz.",
     mustTry: ["Zi Char", "Sambal Sotong", "Prawn Paste Chicken"],
