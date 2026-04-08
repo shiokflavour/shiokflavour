@@ -15,7 +15,7 @@ export function HawkerCarousel() {
     if (paused) return;
     const timer = setInterval(() => {
       setStart((prev) => (prev + 1) % total);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(timer);
   }, [paused, total]);
 
@@ -29,18 +29,6 @@ export function HawkerCarousel() {
       className="border-t border-white/5 bg-black/20 py-16 px-4 sm:px-6 lg:px-8"
       aria-labelledby="hawker-carousel-heading"
     >
-      <style>{`
-        @keyframes fadeInCard {
-          from {
-            opacity: 0;
-            transform: translateY(12px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="mb-8 flex items-end justify-between">
@@ -76,12 +64,7 @@ export function HawkerCarousel() {
             <Link
               key={`${hawker.slug}-${start}-${i}`}
               href={`/hawker/${hawker.slug}`}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-sf-surface transition-all duration-300 hover:scale-[1.02] hover:border-sf-primary/40"
-              style={{
-                animation: "fadeInCard 0.5s ease forwards",
-                opacity: 0,
-                animationDelay: `${i * 60}ms`,
-              }}
+              className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-sf-surface transition-all duration-500 hover:border-sf-primary/40 hover:scale-[1.02] transition-opacity duration-700"
             >
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden bg-black/20">
