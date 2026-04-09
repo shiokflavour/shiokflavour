@@ -16,27 +16,43 @@ const CATEGORY_ORDER = [
 
 type CategoryName = (typeof CATEGORY_ORDER)[number];
 
-const CATEGORY_MOOD_LINE: Record<CategoryName, string> = {
-  "Singaporean Classics": "No passport required. No explanation needed.",
-  "Malay & Muslim Heritage": "Cooked before sunrise. Eaten by everyone.",
-  "Peranakan (Nyonya)": "Five generations of flavour. Nothing written down.",
-  "Chinese Dialect Heritage": "The dialects may be different. The queue is the same.",
-  "Indian & South Asian Heritage":
-    "Spiced, pulled, fried, and absolutely non-negotiable.",
-};
-
-const CATEGORY_IMAGE: Record<CategoryName, string> = {
-  "Singaporean Classics":
-    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80",
-  "Malay & Muslim Heritage":
-    "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1200&q=80",
-  "Peranakan (Nyonya)":
-    "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=1200&q=80",
-  "Chinese Dialect Heritage":
-    "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=1200&q=80",
-  "Indian & South Asian Heritage":
-    "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=80",
-};
+const categories = [
+  {
+    name: "Singaporean Classics",
+    imageUrl: "/images/food/chicken-rice.jpg",
+    moodLine: "No passport required. No explanation needed.",
+    dishTeaser: "Chicken Rice · Char Kway Teow · Satay · Hokkien Mee · and 10 more",
+  },
+  {
+    name: "Malay & Muslim Heritage",
+    imageUrl: "/images/food/nasi-lemak.jpg",
+    moodLine: "Cooked before sunrise. Eaten by everyone.",
+    dishTeaser: "Nasi Lemak · Murtabak · Nasi Padang · Mee Rebus · and 3 more",
+  },
+  {
+    name: "Peranakan (Nyonya)",
+    imageUrl: "/images/food/ondeh-ondeh.jpg",
+    moodLine: "Five generations of flavour. Nothing written down.",
+    dishTeaser: "Ayam Buah Keluak · Ondeh Ondeh · Kueh Pie Tee · Ngoh Hiang",
+  },
+  {
+    name: "Chinese Dialect Heritage",
+    imageUrl: "/images/food/bak-kut-teh.jpg",
+    moodLine: "The dialects may be different. The queue is the same.",
+    dishTeaser: "Bak Kut Teh · Lor Mee · Hae Mee · Yong Tau Foo · Bak Chang",
+  },
+  {
+    name: "Indian & South Asian Heritage",
+    imageUrl: "/images/food/roti-prata.jpg",
+    moodLine: "Spiced, pulled, fried, and absolutely non-negotiable.",
+    dishTeaser: "Roti Prata · Fish Head Curry · Biryani · Teh Tarik · and 2 more",
+  },
+] as const satisfies readonly {
+  name: CategoryName;
+  imageUrl: string;
+  moodLine: string;
+  dishTeaser: string;
+}[];
 
 function spiceLevelToDots(spiceLevel: string) {
   if (spiceLevel === "Hot" || spiceLevel === "Adventure") return 3;
@@ -48,22 +64,17 @@ function spiceLevelToDots(spiceLevel: string) {
 export default function FoodHeritagePage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-  const categories = CATEGORY_ORDER.map((name) => {
-    const dishes = FOOD_HERITAGE_DISHES.filter((d) => d.category === name);
-    return {
-      name,
-      moodLine: CATEGORY_MOOD_LINE[name],
-      imageUrl: CATEGORY_IMAGE[name],
-      dishCount: dishes.length,
-    };
-  });
+  const categoriesWithCounts = categories.map((cat) => ({
+    ...cat,
+    dishCount: FOOD_HERITAGE_DISHES.filter((d) => d.category === cat.name).length,
+  }));
 
   const dishesInActiveCategory = activeCategory
     ? FOOD_HERITAGE_DISHES.filter((d) => d.category === activeCategory)
     : [];
 
   const activeMoodLine = activeCategory
-    ? (CATEGORY_MOOD_LINE[activeCategory as CategoryName] ?? "")
+    ? (categories.find((c) => c.name === activeCategory)?.moodLine ?? "")
     : "";
 
   if (activeCategory) {
@@ -163,53 +174,61 @@ export default function FoodHeritagePage() {
     <div>
       <SiteHeader />
 
-      {/* HERO SECTION */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-6">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <p className="text-xs font-semibold tracking-[0.25em] text-sf-primary uppercase mb-6">
           Food Heritage
         </p>
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-10 max-w-4xl">
+
+        <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-[1.0] mb-10 max-w-4xl">
           Singapore&apos;s
           <br />
           Food Heritage
         </h1>
-        <div className="max-w-2xl space-y-5">
-          <p className="text-sf-muted text-base sm:text-lg leading-relaxed">
-            Singapore does not have a national monument that tells you who we
-            are. We have a plate of chicken rice. A bowl of laksa. A roti prata
-            folded at 5am by someone who has been doing it for forty years.
-          </p>
-          <p className="text-sf-muted text-base sm:text-lg leading-relaxed">
-            These are not just dishes. They are the accumulated decisions of
-            every immigrant community that came to this island, cooked what they
-            knew, and fed their neighbours without asking where they were from.
-            The hawker centre is not where Singapore goes to eat. It is where
-            Singapore goes to be itself.
-          </p>
-          <p className="text-sf-muted text-base sm:text-lg leading-relaxed">
-            UNESCO recognised Singapore&apos;s hawker culture as Intangible
-            Cultural Heritage in 2020. The uncles and aunties already knew.
+
+        <div className="border-l-2 border-sf-primary pl-6 mb-12 max-w-2xl">
+          <p className="text-white/80 text-xl sm:text-2xl italic leading-relaxed font-light">
+            &quot;Some cultures write their history in stone. Singapore writes it
+            in broth, sambal, and wok hei.&quot;
           </p>
         </div>
-        <div className="w-12 h-px bg-sf-primary mt-10 mb-10" />
-        <div className="flex flex-wrap gap-10">
+
+        <div className="max-w-2xl space-y-5 mb-12">
+          <p className="text-sf-muted text-base sm:text-lg leading-relaxed">
+            Singapore does not have a national monument that tells you who we are.
+            We have a plate of chicken rice. A bowl of laksa. A roti prata folded
+            at 5am by someone who has been doing it for forty years.
+          </p>
+          <p className="text-sf-muted text-base sm:text-lg leading-relaxed">
+            These are not just dishes. They are the accumulated decisions of every
+            immigrant community that came to this island, cooked what they knew,
+            and fed their neighbours without asking where they were from. The
+            hawker centre is not where Singapore goes to eat. It is where Singapore
+            goes to be itself.
+          </p>
+          <p className="text-sf-muted text-base sm:text-lg leading-relaxed">
+            UNESCO recognised Singapore&apos;s hawker culture as Intangible Cultural
+            Heritage in 2020. The uncles and aunties already knew.
+          </p>
+        </div>
+
+        <div className="w-full h-px bg-white/5 mb-10" />
+
+        <div className="flex flex-wrap gap-12">
           <div>
-            <p className="text-3xl font-bold text-white">
-              {FOOD_HERITAGE_DISHES.length}
-            </p>
-            <p className="text-xs text-sf-muted uppercase tracking-widest mt-1">
+            <p className="text-5xl font-bold text-white">38</p>
+            <p className="text-xs text-sf-muted uppercase tracking-[0.15em] mt-2">
               Heritage Dishes
             </p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-white">5</p>
-            <p className="text-xs text-sf-muted uppercase tracking-widest mt-1">
+            <p className="text-5xl font-bold text-white">5</p>
+            <p className="text-xs text-sf-muted uppercase tracking-[0.15em] mt-2">
               Cultural Lineages
             </p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-white">2020</p>
-            <p className="text-xs text-sf-muted uppercase tracking-widest mt-1">
+            <p className="text-5xl font-bold text-white">2020</p>
+            <p className="text-xs text-sf-muted uppercase tracking-[0.15em] mt-2">
               UNESCO Recognised
             </p>
           </div>
@@ -219,11 +238,11 @@ export default function FoodHeritagePage() {
       {/* CATEGORY GRID */}
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-32">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {categories.map((cat) => (
+          {categoriesWithCounts.map((cat) => (
             <button
               key={cat.name}
               onClick={() => setActiveCategory(cat.name)}
-              className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer text-left w-full"
+              className="group relative rounded-2xl overflow-hidden h-80 cursor-pointer text-left w-full"
               type="button"
             >
               <Image
@@ -233,20 +252,39 @@ export default function FoodHeritagePage() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 group-hover:from-black/80 transition-all duration-300" />
+
+              {/* Strong gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10 transition-all duration-300" />
+
+              {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-2">
-                  {cat.dishCount} dishes
-                </p>
-                <h2 className="text-white font-bold text-xl leading-snug mb-2 group-hover:text-sf-primary transition-colors duration-200">
+                {/* Dish count pill */}
+                <div className="inline-flex items-center gap-1.5 bg-sf-primary/20 border border-sf-primary/30 rounded-full px-3 py-1 mb-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sf-primary" />
+                  <span className="text-sf-primary text-[10px] font-bold tracking-widest uppercase">
+                    {cat.dishCount} dishes
+                  </span>
+                </div>
+
+                {/* Category name */}
+                <h2 className="text-white font-bold text-xl leading-tight mb-1 group-hover:text-sf-primary transition-colors duration-200">
                   {cat.name}
                 </h2>
-                <p className="text-white/60 text-xs italic leading-relaxed">
+
+                {/* Mood line */}
+                <p className="text-white/50 text-xs italic leading-relaxed mb-3">
                   {cat.moodLine}
                 </p>
-                <div className="flex items-center gap-2 mt-4">
-                  <div className="w-6 h-px bg-sf-primary" />
-                  <span className="text-sf-primary text-xs font-semibold">
+
+                {/* Dish teaser */}
+                <p className="text-white/40 text-[11px] leading-relaxed mb-4 line-clamp-1">
+                  {cat.dishTeaser}
+                </p>
+
+                {/* Explore CTA — appears on hover */}
+                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-5 h-px bg-sf-primary" />
+                  <span className="text-sf-primary text-xs font-bold tracking-widest uppercase">
                     Explore
                   </span>
                 </div>
