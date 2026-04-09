@@ -91,7 +91,7 @@ export default function HawkerGuidePage() {
 
       {/* Hero */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <p className="text-xs font-semibold tracking-[0.25em] text-sf-primary uppercase mb-6">
+        <p className="text-[15px] font-semibold tracking-[0.25em] text-sf-primary uppercase mb-6">
           Hawker Guide
         </p>
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.0] mb-8 max-w-3xl">
@@ -125,7 +125,7 @@ export default function HawkerGuidePage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide whitespace-nowrap transition-all duration-200 ${
+                className={`rounded-full px-4 py-1.5 text-[15px] font-semibold tracking-wide whitespace-nowrap transition-all duration-200 ${
                   activeTab === tab.id
                     ? "bg-sf-primary text-white"
                     : "bg-white/5 text-sf-muted hover:bg-white/10 border border-white/5"
@@ -144,7 +144,7 @@ export default function HawkerGuidePage() {
         {activeTab === "kopi-decoder" && (
           <div>
             <div className="mb-10">
-              <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
+              <p className="text-[15px] font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
                 Interactive
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
@@ -161,7 +161,7 @@ export default function HawkerGuidePage() {
               <div className="bg-[#1a1a1a] rounded-2xl p-6 space-y-6">
                 {/* Base */}
                 <div>
-                  <p className="text-xs font-semibold tracking-widest text-sf-primary uppercase mb-3">
+                  <p className="text-[15px] font-semibold tracking-widest text-sf-primary uppercase mb-3">
                     Coffee or Tea?
                   </p>
                   <div className="flex gap-3">
@@ -183,7 +183,7 @@ export default function HawkerGuidePage() {
 
                 {/* Milk */}
                 <div>
-                  <p className="text-xs font-semibold tracking-widest text-sf-primary uppercase mb-3">
+                  <p className="text-[15px] font-semibold tracking-widest text-sf-primary uppercase mb-3">
                     Milk?
                   </p>
                   <div className="flex gap-2 flex-wrap">
@@ -195,7 +195,7 @@ export default function HawkerGuidePage() {
                       <button
                         key={m.id}
                         onClick={() => setKopiMilk(m.id as any)}
-                        className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+                        className={`px-4 py-2 rounded-full text-[15px] font-semibold transition-all ${
                           kopiMilk === m.id
                             ? "bg-sf-primary text-white"
                             : "bg-white/5 text-sf-muted hover:bg-white/10"
@@ -209,7 +209,7 @@ export default function HawkerGuidePage() {
 
                 {/* Sugar */}
                 <div>
-                  <p className="text-xs font-semibold tracking-widest text-sf-primary uppercase mb-3">
+                  <p className="text-[15px] font-semibold tracking-widest text-sf-primary uppercase mb-3">
                     Sweetness?
                   </p>
                   <div className="flex gap-2 flex-wrap">
@@ -222,7 +222,7 @@ export default function HawkerGuidePage() {
                       <button
                         key={s.id}
                         onClick={() => setKopiSugar(s.id as any)}
-                        className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+                        className={`px-4 py-2 rounded-full text-[15px] font-semibold transition-all ${
                           kopiSugar === s.id
                             ? "bg-sf-primary text-white"
                             : "bg-white/5 text-sf-muted hover:bg-white/10"
@@ -236,7 +236,7 @@ export default function HawkerGuidePage() {
 
                 {/* Strength */}
                 <div>
-                  <p className="text-xs font-semibold tracking-widest text-sf-primary uppercase mb-3">
+                  <p className="text-[15px] font-semibold tracking-widest text-sf-primary uppercase mb-3">
                     Strength?
                   </p>
                   <div className="flex gap-2 flex-wrap">
@@ -248,7 +248,7 @@ export default function HawkerGuidePage() {
                       <button
                         key={s.id}
                         onClick={() => setKopiStrength(s.id as any)}
-                        className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+                        className={`px-4 py-2 rounded-full text-[15px] font-semibold transition-all ${
                           kopiStrength === s.id
                             ? "bg-sf-primary text-white"
                             : "bg-white/5 text-sf-muted hover:bg-white/10"
@@ -262,7 +262,7 @@ export default function HawkerGuidePage() {
 
                 {/* Temperature */}
                 <div>
-                  <p className="text-xs font-semibold tracking-widest text-sf-primary uppercase mb-3">
+                  <p className="text-[15px] font-semibold tracking-widest text-sf-primary uppercase mb-3">
                     Temperature?
                   </p>
                   <div className="flex gap-2 flex-wrap">
@@ -274,7 +274,7 @@ export default function HawkerGuidePage() {
                       <button
                         key={t.id}
                         onClick={() => setKopiTemp(t.id as any)}
-                        className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+                        className={`px-4 py-2 rounded-full text-[15px] font-semibold transition-all ${
                           kopiTemp === t.id
                             ? "bg-sf-primary text-white"
                             : "bg-white/5 text-sf-muted hover:bg-white/10"
@@ -289,7 +289,7 @@ export default function HawkerGuidePage() {
 
               {/* Result */}
               <div className="bg-[#1a1a1a] rounded-2xl p-6 flex flex-col justify-center">
-                <p className="text-xs font-semibold tracking-widest text-sf-primary uppercase mb-4">
+                <p className="text-[15px] font-semibold tracking-widest text-sf-primary uppercase mb-4">
                   Your Order
                 </p>
                 <div className="bg-black/40 rounded-xl p-6 mb-5 text-center">
@@ -300,7 +300,7 @@ export default function HawkerGuidePage() {
                     {buildDescription()}
                   </p>
                 </div>
-                <p className="text-white/40 text-xs text-center italic">
+                <p className="text-white/60 text-[15px] text-center italic">
                   Walk up to the drink stall. Say this clearly. Collect your
                   drink.
                 </p>
@@ -309,7 +309,7 @@ export default function HawkerGuidePage() {
 
             {/* Modifier Reference */}
             <div className="mb-4">
-              <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
+              <p className="text-[15px] font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
                 Reference
               </p>
               <h3 className="text-2xl font-bold text-white mb-8">
@@ -328,9 +328,9 @@ export default function HawkerGuidePage() {
                   <p className="text-white font-semibold text-sm mb-1">
                     {mod.meaning}
                   </p>
-                  <p className="text-sf-muted text-xs mb-2">{mod.origin}</p>
+                  <p className="text-sf-muted text-[15px] mb-2">{mod.origin}</p>
                   {mod.example && (
-                    <p className="text-white/40 text-xs italic">
+                    <p className="text-white/60 text-[15px] italic">
                       {mod.example}
                     </p>
                   )}
@@ -344,7 +344,7 @@ export default function HawkerGuidePage() {
         {activeTab === "oldschool" && (
           <div>
             <div className="mb-10">
-              <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
+              <p className="text-[15px] font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
                 Kopitiam Heritage
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
@@ -367,7 +367,7 @@ export default function HawkerGuidePage() {
                       {drink.name}
                     </h3>
                     {drink.alternateNames && (
-                      <p className="text-sf-primary text-xs font-semibold uppercase tracking-wider">
+                      <p className="text-sf-primary text-[15px] font-semibold uppercase tracking-wider">
                         {drink.alternateNames.join(" / ")}
                       </p>
                     )}
@@ -377,7 +377,7 @@ export default function HawkerGuidePage() {
                   </p>
                   {drink.story && (
                     <div className="border-t border-white/5 pt-4">
-                      <p className="text-white/50 text-xs leading-relaxed italic">
+                      <p className="text-white/50 text-[15px] leading-relaxed italic">
                         {drink.story}
                       </p>
                     </div>
@@ -392,7 +392,7 @@ export default function HawkerGuidePage() {
         {activeTab === "etiquette" && (
           <div>
             <div className="mb-10">
-              <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
+              <p className="text-[15px] font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
                 How It Works
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
@@ -422,7 +422,7 @@ export default function HawkerGuidePage() {
                   </p>
                   {tip.localSay && (
                     <div className="bg-black/30 rounded-lg px-4 py-3">
-                      <p className="text-white/60 text-xs italic">
+                      <p className="text-white/60 text-[15px] italic">
                         &quot;{tip.localSay}&quot;
                       </p>
                     </div>
@@ -437,7 +437,7 @@ export default function HawkerGuidePage() {
         {activeTab === "singlish" && (
           <div>
             <div className="mb-10">
-              <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
+              <p className="text-[15px] font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
                 The Language
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
@@ -460,7 +460,7 @@ export default function HawkerGuidePage() {
                       {term.term}
                     </h3>
                     {term.pronunciation && (
-                      <p className="text-sf-primary text-xs font-medium mt-0.5">
+                      <p className="text-sf-primary text-[15px] font-medium mt-0.5">
                         /{term.pronunciation}/
                       </p>
                     )}
@@ -469,7 +469,7 @@ export default function HawkerGuidePage() {
                     {term.meaning}
                   </p>
                   <div className="bg-black/30 rounded-lg px-4 py-2.5">
-                    <p className="text-white/50 text-xs italic">
+                    <p className="text-white/50 text-[15px] italic">
                       &quot;{term.usedIn}&quot;
                     </p>
                   </div>

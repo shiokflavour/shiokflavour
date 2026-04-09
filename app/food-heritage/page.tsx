@@ -97,7 +97,7 @@ export default function FoodHeritagePage() {
 
         {/* Category header */}
         <div className="mb-12">
-          <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
+          <p className="text-[15px] font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
             Food Heritage
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-3">
@@ -128,7 +128,7 @@ export default function FoodHeritagePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   {dish.halal && (
-                    <span className="absolute top-3 left-3 text-[10px] font-bold bg-green-700 text-white px-2 py-0.5 rounded-full">
+                    <span className="absolute top-3 left-3 text-[15px] font-bold bg-green-700 text-white px-2 py-0.5 rounded-full">
                       Halal
                     </span>
                   )}
@@ -149,14 +149,14 @@ export default function FoodHeritagePage() {
                   <h3 className="text-white font-semibold text-base leading-snug mb-1 group-hover:text-sf-primary transition-colors duration-200">
                     {dish.name}
                   </h3>
-                  <p className="text-sf-muted text-xs leading-relaxed line-clamp-2 mb-3">
+                  <p className="text-sf-muted text-[15px] leading-relaxed line-clamp-2 mb-3">
                     {dish.description.slice(0, 100)}...
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sf-muted text-xs">
+                    <span className="text-sf-muted text-[15px]">
                       {dish.priceRange}
                     </span>
-                    <span className="text-sf-primary text-xs font-semibold group-hover:underline">
+                    <span className="text-sf-primary text-[15px] font-semibold group-hover:underline">
                       Explore →
                     </span>
                   </div>
@@ -175,7 +175,7 @@ export default function FoodHeritagePage() {
       <SiteHeader />
 
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <p className="text-xs font-semibold tracking-[0.25em] text-sf-primary uppercase mb-6">
+        <p className="text-[15px] font-semibold tracking-[0.25em] text-sf-primary uppercase mb-6">
           Food Heritage
         </p>
 
@@ -216,19 +216,19 @@ export default function FoodHeritagePage() {
         <div className="flex flex-wrap gap-12">
           <div>
             <p className="text-5xl font-bold text-white">38</p>
-            <p className="text-xs text-sf-muted uppercase tracking-[0.15em] mt-2">
+            <p className="text-[15px] text-sf-muted uppercase tracking-[0.15em] mt-2">
               Heritage Dishes
             </p>
           </div>
           <div>
             <p className="text-5xl font-bold text-white">5</p>
-            <p className="text-xs text-sf-muted uppercase tracking-[0.15em] mt-2">
+            <p className="text-[15px] text-sf-muted uppercase tracking-[0.15em] mt-2">
               Cultural Lineages
             </p>
           </div>
           <div>
             <p className="text-5xl font-bold text-white">2020</p>
-            <p className="text-xs text-sf-muted uppercase tracking-[0.15em] mt-2">
+            <p className="text-[15px] text-sf-muted uppercase tracking-[0.15em] mt-2">
               UNESCO Recognised
             </p>
           </div>
@@ -261,7 +261,7 @@ export default function FoodHeritagePage() {
                 {/* Dish count pill */}
                 <div className="inline-flex items-center gap-1.5 bg-sf-primary/20 border border-sf-primary/30 rounded-full px-3 py-1 mb-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-sf-primary" />
-                  <span className="text-sf-primary text-xs font-bold tracking-widest uppercase">
+                  <span className="text-sf-primary text-[15px] font-bold tracking-widest uppercase">
                     {cat.dishCount} dishes
                   </span>
                 </div>
@@ -280,14 +280,14 @@ export default function FoodHeritagePage() {
                 </p>
 
                 {/* Dish teaser */}
-                <p className="text-white/55 text-xs leading-relaxed mb-4 line-clamp-2">
+                <p className="text-white/55 text-[15px] leading-relaxed mb-4 line-clamp-2">
                   {cat.dishTeaser}
                 </p>
 
                 {/* Explore CTA — appears on hover */}
                 <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-5 h-px bg-sf-primary" />
-                  <span className="text-sf-primary text-xs font-bold tracking-widest uppercase">
+                  <span className="text-sf-primary text-[15px] font-bold tracking-widest uppercase">
                     Explore
                   </span>
                 </div>
