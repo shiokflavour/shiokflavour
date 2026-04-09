@@ -16,7 +16,7 @@ export function BestStalls({ dishName, stalls }: Props) {
               <p className="text-base font-semibold text-white">{stall.name}</p>
               <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5">
                 <span className="text-sm font-medium text-sf-primary">{stall.area}</span>
-                <span className="text-xs text-white/20">•</span>
+                <span className="text-[15px] text-white/20">•</span>
                 <span className="text-sm text-sf-cream/60">{stall.address}</span>
               </div>
               <p className="mt-2 text-base leading-relaxed text-sf-cream/75">{stall.note}</p>

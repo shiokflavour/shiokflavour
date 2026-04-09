@@ -46,7 +46,7 @@ export default function FlavourTrailPage() {
 
         {/* Hero */}
         <section className="mx-auto max-w-4xl px-4 pt-20 pb-12 text-center sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary">
+          <p className="text-[15px] font-semibold uppercase tracking-[0.2em] text-sf-primary">
             Coming Soon
           </p>
           <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight text-sf-cream sm:text-6xl">
@@ -84,7 +84,7 @@ export default function FlavourTrailPage() {
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-sf-surface p-6"
               >
                 <div className="absolute inset-0 flex items-center justify-center rounded-2xl backdrop-blur-[2px] bg-black/30 z-10">
-                  <span className="rounded-full border border-sf-primary/50 bg-sf-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-sf-primary">
+                  <span className="rounded-full border border-sf-primary/50 bg-sf-primary/10 px-4 py-1.5 text-[15px] font-semibold uppercase tracking-wider text-sf-primary">
                     Coming Soon
                   </span>
                 </div>
@@ -94,7 +94,7 @@ export default function FlavourTrailPage() {
                 <p className="mt-2 text-sm leading-relaxed text-sf-muted">
                   {trail.description}
                 </p>
-                <div className="mt-4 flex gap-4 text-xs text-sf-muted">
+                <div className="mt-4 flex gap-4 text-[15px] text-sf-muted">
                   <span>📍 {trail.stops} stops</span>
                   <span>⏱ {trail.duration}</span>
                 </div>

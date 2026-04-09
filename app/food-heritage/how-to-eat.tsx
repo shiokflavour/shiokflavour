@@ -15,7 +15,7 @@ export function HowToEat({ steps }: Props) {
           </li>
         ))}
       </ol>
-      <p className="mt-3 text-center text-xs text-sf-muted">Tap each step to highlight</p>
+      <p className="mt-3 text-center text-[15px] text-sf-muted">Tap each step to highlight</p>
     </section>
   );
 }

@@ -63,7 +63,7 @@ export default function NearMePage() {
 
         {/* Hero */}
         <section className="mx-auto max-w-4xl px-4 pt-16 pb-10 text-center sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary">
+          <p className="text-[15px] font-semibold uppercase tracking-[0.2em] text-sf-primary">
             You Are Here
           </p>
           <h1 className="mt-3 text-5xl font-bold tracking-tight text-sf-cream sm:text-6xl">
@@ -183,7 +183,7 @@ export default function NearMePage() {
                           >
                             {h.name}
                           </Link>
-                          <p className="text-xs text-sf-muted mt-0.5">{h.address}</p>
+                          <p className="text-[15px] text-sf-muted mt-0.5">{h.address}</p>
                         </div>
                         <div className="text-right shrink-0">
                           <p className="text-base font-bold text-sf-primary">
@@ -191,50 +191,50 @@ export default function NearMePage() {
                               ? `${Math.round(h.distanceKm * 1000)}m`
                               : `${h.distanceKm.toFixed(1)}km`}
                           </p>
-                          <p className="text-xs text-sf-muted">{getWalkTime(h.distanceKm)}</p>
+                          <p className="text-[15px] text-sf-muted">{getWalkTime(h.distanceKm)}</p>
                         </div>
                       </div>
 
                       {/* Tags row */}
                       <div className="mt-2 flex flex-wrap gap-2">
-                        <span className="rounded-full bg-sf-primary/10 border border-sf-primary/20 px-2.5 py-0.5 text-xs font-medium text-sf-primary">
+                        <span className="rounded-full bg-sf-primary/10 border border-sf-primary/20 px-2.5 py-0.5 text-[15px] font-medium text-sf-primary">
                           {h.tag}
                         </span>
                         {h.halal && (
-                          <span className="rounded-full bg-emerald-700/20 border border-emerald-600/30 px-2.5 py-0.5 text-xs font-medium text-emerald-400">
+                          <span className="rounded-full bg-emerald-700/20 border border-emerald-600/30 px-2.5 py-0.5 text-[15px] font-medium text-emerald-400">
                             Halal
                           </span>
                         )}
                         {h.openLate && (
-                          <span className="rounded-full bg-white/5 border border-white/10 px-2.5 py-0.5 text-xs text-sf-muted">
+                          <span className="rounded-full bg-white/5 border border-white/10 px-2.5 py-0.5 text-[15px] text-sf-muted">
                             🌙 Open Late
                           </span>
                         )}
-                        <span className="rounded-full bg-white/5 border border-white/10 px-2.5 py-0.5 text-xs text-sf-muted">
+                        <span className="rounded-full bg-white/5 border border-white/10 px-2.5 py-0.5 text-[15px] text-sf-muted">
                           💰 {h.budgetPerPax}
                         </span>
                       </div>
 
                       {/* Must try */}
-                      <p className="mt-2 text-xs text-sf-muted">
+                      <p className="mt-2 text-[15px] text-sf-muted">
                         <span className="text-sf-cream/70 font-medium">Must try: </span>
                         {h.mustTry.slice(0, 3).join(" · ")}
                       </p>
 
                       {/* MRT + directions */}
                       <div className="mt-3 flex flex-wrap items-center gap-3">
-                        <span className="text-xs text-sf-muted">🚇 {h.nearestMRT}</span>
+                        <span className="text-[15px] text-sf-muted">🚇 {h.nearestMRT}</span>
                         <a
                           href={mapsUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-sf-cream transition hover:border-sf-primary/50 hover:text-sf-primary"
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-[15px] font-medium text-sf-cream transition hover:border-sf-primary/50 hover:text-sf-primary"
                         >
                           📍 Get Directions
                         </a>
                         <Link
                           href={`/hawker/${h.slug}`}
-                          className="text-xs font-medium text-sf-primary hover:opacity-80 transition"
+                          className="text-[15px] font-medium text-sf-primary hover:opacity-80 transition"
                         >
                           View centre →
                         </Link>

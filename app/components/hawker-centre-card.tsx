@@ -67,7 +67,7 @@ export function HawkerCentreCard({ data, index }: HawkerCentreCardProps) {
           />
         </div>
         <div className="flex flex-1 flex-col p-5">
-          <span className="mb-3 inline-flex w-fit rounded-full border border-sf-primary/45 bg-sf-primary/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sf-primary">
+          <span className="mb-3 inline-flex w-fit rounded-full border border-sf-primary/45 bg-sf-primary/15 px-3 py-1 text-[15px] font-semibold uppercase tracking-wide text-sf-primary">
             {primaryTag}
           </span>
           <h3 className="text-lg font-semibold text-sf-cream group-hover:text-sf-primary/95">
@@ -75,7 +75,7 @@ export function HawkerCentreCard({ data, index }: HawkerCentreCardProps) {
           </h3>
           <p className="mt-1 line-clamp-3 text-sm text-sf-muted">{address}</p>
           {nearestMRT ? (
-            <p className="mt-2 text-xs leading-snug text-sf-muted/90">
+            <p className="mt-2 text-[15px] leading-snug text-sf-muted/90">
               {nearestMRT}
             </p>
           ) : null}
@@ -84,40 +84,40 @@ export function HawkerCentreCard({ data, index }: HawkerCentreCardProps) {
               {mustTryPreview.map((dish) => (
                 <span
                   key={dish}
-                  className="rounded-md border border-white/15 bg-black/20 px-2 py-0.5 text-[11px] font-medium text-sf-cream/90"
+                  className="rounded-md border border-white/15 bg-black/20 px-2 py-0.5 text-[15px] font-medium text-sf-cream/90"
                 >
                   {dish}
                 </span>
               ))}
             </div>
           ) : null}
-          <p className="mt-2 text-xs text-sf-muted/90">{region} region</p>
+          <p className="mt-2 text-[15px] text-sf-muted/90">{region} region</p>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {showMichelin ? (
-              <span className="rounded-full border border-amber-400/40 bg-amber-500/15 px-2.5 py-0.5 text-[11px] font-semibold text-amber-200">
+              <span className="rounded-full border border-amber-400/40 bg-amber-500/15 px-2.5 py-0.5 text-[15px] font-semibold text-amber-200">
                 ⭐ Michelin Recognised
               </span>
             ) : null}
             {halal ? (
-              <span className="rounded-full border border-emerald-500/35 bg-emerald-500/15 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-200">
+              <span className="rounded-full border border-emerald-500/35 bg-emerald-500/15 px-2.5 py-0.5 text-[15px] font-semibold text-emerald-200">
                 ✓ Halal
               </span>
             ) : null}
             {openLate ? (
-              <span className="rounded-full border border-violet-400/30 bg-violet-500/10 px-2.5 py-0.5 text-[11px] font-semibold text-violet-100">
+              <span className="rounded-full border border-violet-400/30 bg-violet-500/10 px-2.5 py-0.5 text-[15px] font-semibold text-violet-100">
                 🌙 Open Late
               </span>
             ) : null}
           </div>
           <div className="mt-4 border-t border-white/10 pt-4">
-            <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+            <p className="text-[15px] font-semibold uppercase tracking-wider text-sf-muted">
               Opening hours
             </p>
             <p className="mt-1 text-sm text-sf-cream/95">
               {hoursLabel ?? "Varies by stall"}
             </p>
             {budgetPerPax ? (
-              <p className="mt-1.5 text-xs text-sf-muted">
+              <p className="mt-1.5 text-[15px] text-sf-muted">
                 Budget:{" "}
                 <span className="font-medium text-sf-cream/90">
                   {budgetPerPax}

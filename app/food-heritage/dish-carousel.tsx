@@ -60,7 +60,7 @@ export function DishCarousel({ dishes }: Props) {
       {/* Header row */}
       <div className="flex items-end justify-between gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sf-primary">
+          <p className="text-[15px] font-semibold uppercase tracking-[0.18em] text-sf-primary">
             Keep Exploring
           </p>
           <h2 className="mt-1 text-2xl font-bold tracking-tight text-sf-cream">
@@ -110,11 +110,11 @@ export function DishCarousel({ dishes }: Props) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
-                  <span className="rounded-full bg-black/60 px-2.5 py-0.5 text-xs text-white backdrop-blur-sm">
+                  <span className="rounded-full bg-black/60 px-2.5 py-0.5 text-[15px] text-white backdrop-blur-sm">
                     {dish.spiceLevel}
                   </span>
                   {dish.halal && (
-                    <span className="rounded-full bg-emerald-700/80 px-2.5 py-0.5 text-xs font-medium text-white backdrop-blur-sm">
+                    <span className="rounded-full bg-emerald-700/80 px-2.5 py-0.5 text-[15px] font-medium text-white backdrop-blur-sm">
                       Halal friendly
                     </span>
                   )}
@@ -129,7 +129,7 @@ export function DishCarousel({ dishes }: Props) {
                 <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-sf-muted">
                   {dish.description}
                 </p>
-                <p className="mt-3 flex items-center gap-1 text-xs font-semibold text-sf-primary">
+                <p className="mt-3 flex items-center gap-1 text-[15px] font-semibold text-sf-primary">
                   Explore
                   <span className="transition-transform duration-200 group-hover:translate-x-1">
                     →

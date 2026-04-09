@@ -85,14 +85,14 @@ function MetricBadge({ score, animated }: { score: number; animated: boolean }) 
   if (!animated) return null;
   if (score === 10) {
     return (
-      <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-amber-400/60 bg-amber-400/15 px-2.5 py-0.5 text-xs font-bold text-amber-400 animate-pulse shadow-[0_0_10px_rgba(251,191,36,0.3)]">
+      <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-amber-400/60 bg-amber-400/15 px-2.5 py-0.5 text-[15px] font-bold text-amber-400 animate-pulse shadow-[0_0_10px_rgba(251,191,36,0.3)]">
         🏆 Peak Shiok-ness
       </span>
     );
   }
   if (score >= 8) {
     return (
-      <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-sf-primary/50 bg-sf-primary/15 px-2.5 py-0.5 text-xs font-bold text-sf-primary animate-bounce">
+      <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-sf-primary/50 bg-sf-primary/15 px-2.5 py-0.5 text-[15px] font-bold text-sf-primary animate-bounce">
         ✨ SHIOK!
       </span>
     );
@@ -145,7 +145,7 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
                       <p className="text-sm font-semibold text-sf-cream">{label}</p>
                       <MetricBadge score={score} animated={animated} />
                     </div>
-                    <p className="text-xs text-sf-cream/45 italic mt-0.5">{comments[commentIdx]}</p>
+                    <p className="text-[15px] text-sf-cream/45 italic mt-0.5">{comments[commentIdx]}</p>
                   </div>
                 </div>
                 <span className={`text-sm font-bold shrink-0 ${score === 10 ? "text-amber-400" : score >= 8 ? "text-sf-primary" : "text-sf-cream/60"}`}>
@@ -169,7 +169,7 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
 
       <div className={`mt-8 rounded-2xl border px-6 py-5 flex items-center justify-between ${avgScore >= 90 ? "border-amber-400/40 bg-amber-400/10" : "border-sf-primary/30 bg-sf-primary/10"}`}>
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-sf-cream/50">Overall Shiok Score</p>
+          <p className="text-[15px] font-bold uppercase tracking-widest text-sf-cream/50">Overall Shiok Score</p>
           <p className={`text-base font-bold mt-1 ${overall.colour}`}>{overall.label}</p>
         </div>
         <div className={`text-4xl font-bold leading-none ${avgScore >= 90 ? "text-amber-400" : "text-sf-primary"}`}>
