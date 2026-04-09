@@ -50,7 +50,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Calamansi lime squeeze, sambal on the side, and a cold sugar-cane juice to cut the richness.",
     halal: false,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "Wah, the wok hei damn shiok lah! Queue 30 minutes also worth it one.",
@@ -150,7 +150,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A clear chicken broth bowl, blanched greens with oyster sauce, and extra lime-chilli dip.",
     halal: true,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "This one cannot anyhow eat — must find the uncle who been cooking 30 years already.",
@@ -250,7 +250,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Otak-otak on the side, sambal spooned in slowly, and a lime cordial or teh peng.",
     halal: true,
-    spiceLevel: "Hot 🌶️🌶️🌶️",
+    spiceLevel: "Hot",
     difficulty: "Easy to eat",
     localSay:
       "Katong laksa no need chopsticks one — spoon only, that's the rule lah.",
@@ -350,7 +350,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Curry puff or goreng pisang afterwards if you like sweet-savoury contrast—or share a bowl after spicy noodles.",
     halal: true,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "Eat until shiok, then regret because finish already. Order another one lah!",
@@ -449,7 +449,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Kopi si or teh, soft-boiled eggs, and sometimes a light chee cheong fun on the side.",
     halal: false,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "Soft boiled egg must be half done — if fully cooked, uncle confirm kena scold.",
@@ -548,7 +548,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Fried mantou, fragrant steamed rice, and a lime juice or cold beer to balance the heat.",
     halal: false,
-    spiceLevel: "Hot 🌶️🌶️🌶️",
+    spiceLevel: "Hot",
     difficulty: "Adventure eat",
     localSay:
       "Wear old clothes lah — this one confirm get sauce everywhere one.",
@@ -647,7 +647,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Ice jelly, sugar-cane juice, or a small plate of satay to follow the bold paste.",
     halal: true,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Wah this one like Singapore lor — everything also got, everything also shiok together.",
@@ -746,7 +746,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "After laksa or nasi lemak for contrast, or alongside ondeh-ondeh for a full Peranakan sweet spread.",
     halal: true,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "Ah ma used to make this every weekend — now only can find at old school hawker centres.",
@@ -846,7 +846,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A bowl of clear pork broth on the side, a cup of teh, and nothing else — bak chor mee demands full attention.",
     halal: false,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "Dry version, extra vinegar, more chilli — that's the order. Every time. No variation.",
@@ -945,7 +945,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Sambal belacan mixed to your heat preference, calamansi halved and squeezed tableside, and a cold Yeo's soya bean drink.",
     halal: false,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Charcoal one is different. You squeeze the lime, smell the smoke — confirm different lah.",
@@ -1044,7 +1044,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A bowl of wanton soup on the side, a cup of kopi-o, and a folded newspaper. This is a breakfast ritual, not just a meal.",
     halal: false,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "The char siew must be slightly burnt at the edges — if it's pale, the uncle never heated the oven right.",
@@ -1143,7 +1143,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A bowl of soup from the same stall (usually free or S$0.50), a cold packet drink, and absolutely no menu.",
     halal: false,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "Point faster — the auntie is waiting and the lunch queue behind you has no patience.",
@@ -1236,7 +1236,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Cold beer or lime juice, ketupat dipped in peanut sauce, and raw cucumber and onion between skewers to cleanse the palate.",
     halal: true,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Minimum ten skewers. You always think ten is enough. It is never enough.",
@@ -1326,7 +1326,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Teh tarik or sugarcane juice, and nothing more — roti john is a complete meal that needs no accompaniment.",
     halal: true,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Best eaten standing up at midnight. Anything less and you are not doing it right.",
@@ -1416,7 +1416,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A bowl of soup or teh, and nothing else — popiah is light enough to eat four of and filling enough that four is actually enough.",
     halal: false,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Don't squeeze — the skin tears and everything falls out. Let the uncle roll it properly lah.",
@@ -1464,7 +1464,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Kopi-o or teh-o, and a you tiao on the side for anyone who needs more than six pieces to feel complete.",
     halal: false,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Must eat fresh from the steamer — cold chwee kueh is a completely different, inferior experience.",
@@ -1513,7 +1513,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Teh tarik, a side of otah, and a piece of fried chicken if the stall offers it. Eat before 9am for the full experience.",
     halal: true,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "The sambal must have ikan bilis in it — not just on the side. That's the rule and there are no exceptions.",
@@ -1560,7 +1560,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "The gravy's thickness comes from blended sweet potato — not starch or flour. The sweet potato also gives the gravy its natural sweetness, which is why the dish tastes complex without being complicated.",
     bestPairedWith: "Teh tarik, a side of otah, and extra calamansi squeezed tableside.",
     halal: true,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "The gravy must be thick enough to hold the spoon upright. If it pours like water, something went wrong.",
@@ -1608,7 +1608,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A glass of bandung (rose syrup milk) for contrast, or teh tarik for the classic Malay breakfast pairing.",
     halal: true,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "Must squeeze the calamansi yourself — adding it in the kitchen kills the freshness. The sourness should be yours to control.",
@@ -1656,7 +1656,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Teh tarik, a piece of serunding (dry-fried meat floss) on the side, and time — lontong is a weekend breakfast that should not be rushed.",
     halal: true,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "The lodeh must be thick, not watery. If the curry is thin, the auntie didn't cook it long enough.",
@@ -1704,7 +1704,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Thin mutton curry for dipping, pickled onion to cut the richness, and a glass of bandung or teh tarik.",
     halal: true,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Mutton murtabak. Not chicken. Mutton is the original and the correct choice. Full stop.",
@@ -1748,7 +1748,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Teh tarik, sambal on the side for extra heat, and the understanding that you will order more than you need every single time.",
     halal: true,
-    spiceLevel: "Hot 🌶️🌶️🌶️",
+    spiceLevel: "Hot",
     difficulty: "Easy to eat",
     localSay:
       "Rendang must be dry, not wet. If there is gravy in the rendang, it has not been cooked long enough.",
@@ -1792,7 +1792,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Calamansi squeezed over the top, a cold sugarcane juice, and the appreciation that you are eating something increasingly rare.",
     halal: false,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "This one getting harder to find lah. When you see it, must order — cannot take for granted.",
@@ -1841,7 +1841,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "White rice (absolutely essential), a cooling vegetable dish like chap chye, and a cold lime juice.",
     halal: false,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Adventure eat",
     localSay:
       "Scoop the paste from inside the nut — that black stuff is the whole point. Don't waste it.",
@@ -1889,7 +1889,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A glass of lime juice or cold barley water — the freshness complements the sweet braised filling and the crispy pastry.",
     halal: false,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Careful eater",
     localSay:
       "One bite only — if you try to eat half, the cup shatters and the filling goes everywhere. Trust the engineering.",
@@ -1937,7 +1937,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Sweet plum sauce for the pork rolls, chilli sauce for the prawn fritters, and a bowl of congee for the complete ngoh hiang experience.",
     halal: false,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Always order the pork roll — that's the ngoh hiang. Everything else is supporting cast.",
@@ -1985,7 +1985,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Nothing — ondeh ondeh is a standalone experience. Eat it with full attention or not at all.",
     halal: true,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "Put the whole thing in your mouth at once. If you bite halfway, the gula melaka goes everywhere and on everyone.",
@@ -2035,7 +2035,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Steamed white rice, you tiao for dipping in the broth, dark soy for the pork, and a pot of strong Chinese tea throughout.",
     halal: false,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "Teochew must be clear and peppery. Hokkien must be dark and herbal. They are not the same dish and arguing about which is better is the point.",
@@ -2083,7 +2083,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Extra black vinegar on the side, garlic vinegar if the stall offers it, and a cold drink to balance the richness.",
     halal: false,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay: "Add vinegar until you're scared, then add a little more. That's the right amount.",
     hawkersThatServeIt: [
@@ -2130,7 +2130,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Sambal belacan mixed to your heat preference, calamansi, and extra lard if the stall offers it.",
     halal: false,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "The broth colour tells you everything. Pale means under-reduced. Dark orange means they did it right.",
@@ -2178,7 +2178,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "The clear soup version is lighter and lets you taste each stuffed piece individually; the dry version with sweet sauce concentrates the flavours. Both are correct.",
     halal: false,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "The bitter gourd stuffed with fish paste is the test. If that's good, everything else will be good.",
@@ -2226,7 +2226,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "A cup of Chinese tea, specifically pu-erh or oolong — the tea cuts through the richness of the glutinous rice and the braised pork.",
     halal: false,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "Unwrap slowly — the leaves tear if you rush and the rice sticks to them. This cannot be hurried.",
@@ -2277,7 +2277,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Fish curry for the purists, mutton curry for the initiated, and a glass of teh tarik to complete the ritual.",
     halal: true,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Plain prata with fish curry. Two pieces. One teh tarik. Everything else is optional and everything else is wrong.",
@@ -2325,7 +2325,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Rice on a banana leaf, papadum, raita to cool the heat, and lassi or lime juice.",
     halal: true,
-    spiceLevel: "Hot 🌶️🌶️🌶️",
+    spiceLevel: "Hot",
     difficulty: "Adventure eat",
     localSay:
       "The cheek meat is the best part of the fish. If you are afraid of the head, you are eating the wrong part.",
@@ -2369,7 +2369,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Raita (yoghurt with cucumber), a side of curry, and a cold lime juice or lassi.",
     halal: true,
-    spiceLevel: "Medium 🌶️🌶️",
+    spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "The rice must be fragrant before you even take a bite. If you cannot smell the basmati from across the table, something is wrong.",
@@ -2417,7 +2417,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Roti prata, murtabak, or nasi lemak — teh tarik pairs with all Malay and Indian food and is the default drink of any mamak meal.",
     halal: true,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "Must have froth on top. Flat teh tarik is just tea. The froth is the whole point of the pulling.",
@@ -2465,7 +2465,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Coconut chutney, sambar for dipping, and a cup of filter coffee or teh tarik.",
     halal: true,
-    spiceLevel: "Mild 🌶️",
+    spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Must eat hot — cold vadai is a completely different and inferior experience. Order only what you can eat immediately.",
@@ -2513,7 +2513,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Coconut milk sweetened with a little sugar poured over the soft centre; or vegetable ishtu (a mild coconut-based vegetable stew) for the savoury version.",
     halal: true,
-    spiceLevel: "None 😌",
+    spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
       "The centre must be soft — if it is cooked through completely, the auntie left it on the heat too long.",
