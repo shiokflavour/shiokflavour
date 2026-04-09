@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { SiteHeader } from "../components/site-header";
 import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
 
 const CATEGORY_ORDER = [
@@ -67,7 +68,10 @@ export default function FoodHeritagePage() {
 
   if (activeCategory) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-32">
+      <div>
+        <SiteHeader />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-32">
         {/* Back button */}
         <button
           onClick={() => setActiveCategory(null)}
@@ -150,12 +154,15 @@ export default function FoodHeritagePage() {
             );
           })}
         </div>
+        </div>
       </div>
     );
   }
 
   return (
     <div>
+      <SiteHeader />
+
       {/* HERO SECTION */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-6">
