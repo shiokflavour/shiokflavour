@@ -143,8 +143,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Maxwell Food Centre, Chinatown Complex, and Serangoon Gardens hawker clusters are pilgrimage sites; many neighbourhoods have a 20-year stall locals won't trade away.",
     priceRange: "S$4–25 depending on stall and cut",
-    imageUrl:
-      "https://images.pexels.com/photos/6990118/pexels-photo-6990118.jpeg",
+    imageUrl: "/images/food/chicken-rice.jpg",
     funFact:
       "Singapore's hawker chicken rice stalls often judge quality by rice first—aromatic, separate grains, and gentle chicken flavour before you even touch the meat.",
     bestPairedWith:
@@ -243,8 +242,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Katong and Joo Chiat for the coconut curry style; Sungei Road and Marine Parade hawker centres for neighbourhood favourites. Early hours mean fresher rempah in some spots.",
     priceRange: "S$4–10 per bowl",
-    imageUrl:
-      "https://images.pexels.com/photos/32107041/pexels-photo-32107041.jpeg",
+    imageUrl: "/images/food/laksa.jpg",
     funFact:
       "Traditional Katong laksa is eaten with only a spoon—the noodles are snipped short so you never fish awkwardly in public.",
     bestPairedWith:
@@ -343,8 +341,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Old Airport Road Food Centre, Chinatown Complex dessert stalls, and classic heartland hawker drink shops with long queues after school.",
     priceRange: "S$2–5",
-    imageUrl:
-      "https://images.pexels.com/photos/5870643/pexels-photo-5870643.jpeg",
+    imageUrl: "/images/food/ice-kachang.jpg",
     funFact:
       "The name bundles \"ice\" with kachang (Malay for beans)—red beans remain the soul ingredient under all that colour.",
     bestPairedWith:
@@ -840,7 +837,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Chinatown Complex, Old Airport Road Food Centre, and Toa Payoh heartland stalls — the best ones often have a handwritten sign and a 45-minute queue by 11am.",
     priceRange: "S$4–8 per bowl",
-    imageUrl: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+    imageUrl: "/images/food/bak-chor-mee.jpg",
     funFact:
       "The dry version (with vinegar-lard sauce) and the soup version are completely different eating experiences — locals are fiercely loyal to one or the other and rarely cross over.",
     bestPairedWith:
@@ -939,7 +936,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Newton Food Centre and East Coast Lagoon for atmosphere; Old Airport Road and Geylang for serious versions without the tourist markup. Look for charcoal-fired stalls.",
     priceRange: "S$5–10 per plate",
-    imageUrl: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+    imageUrl: "/images/food/hokkien-mee.jpg",
     funFact:
       "Traditional Hokkien mee is cooked over charcoal, not gas — the heat is more intense and uneven, which is precisely what creates the smokiness locals call wok hei.",
     bestPairedWith:
@@ -1038,7 +1035,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Every hawker centre in Singapore has a wanton mee stall. The best ones are never the most famous. Find your neighbourhood uncle and stay loyal.",
     priceRange: "S$3.50–7 per plate",
-    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
+    imageUrl: "/images/food/wanton-mee.jpg",
     funFact:
       "Singapore wanton mee uses a darker, sweeter char siew sauce than the Hong Kong or Malaysian versions — a local adaptation that happened quietly over decades and is now considered the standard.",
     bestPairedWith:
@@ -1137,7 +1134,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Every hawker centre in Singapore. Economy rice is not a destination dish — it is a daily constant. The best stall is the one nearest to where you are at noon.",
     priceRange: "S$2.50–5 depending on dishes chosen",
-    imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+    imageUrl: "/images/food/economy-rice.jpg",
     funFact:
       "The pricing at economy rice stalls is entirely discretionary — the auntie calculates the total in her head based on what she sees on your plate, and she is never wrong.",
     bestPairedWith:
@@ -1230,7 +1227,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Lau Pa Sat's Boon Tat Street after 7pm for the most cinematic setting; Newton Food Centre for tourist-friendly portions; East Coast Lagoon for the sea-breeze version.",
     priceRange: "S$0.60–1 per skewer, minimum 10 skewers usually",
-    imageUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+    imageUrl: "/images/food/satay.jpg",
     funFact:
       "The peanut sauce at serious satay stalls is made fresh daily from roasted peanuts — you can tell by the texture, which should be thick and slightly grainy, never smooth.",
     bestPairedWith:
@@ -1320,7 +1317,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Geylang Serai Ramadan Bazaar for the definitive version; Adam Road Food Centre late at night; most Malay-run hawker stalls that operate into the evening.",
     priceRange: "S$3–6 per portion",
-    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
+    imageUrl: "/images/food/roti-john.jpg",
     funFact:
       "The name 'John' is a colonial-era Singaporean slang term for a Western person — the dish was literally named after the type of customer who first ordered it.",
     bestPairedWith:
@@ -1410,7 +1407,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Tiong Bahru Market and Old Airport Road for the best hawker versions; Katong and Joo Chiat for Peranakan-style. Look for stalls with a visible spreading station.",
     priceRange: "S$1.50–4 per roll",
-    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
+    imageUrl: "/images/food/popiah.jpg",
     funFact:
       "The turnip filling (bang kuang) must be braised for hours until it collapses into strands — the cooking time is the clearest indicator of how seriously a stall takes their popiah.",
     bestPairedWith:
@@ -1458,7 +1455,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Tiong Bahru Market, Bedok Interchange, and Ghim Moh for the three most respected versions. Arrive before 9am — good chwee kueh sells out before lunch.",
     priceRange: "S$1.20–3 for 4–6 pieces",
-    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
+    imageUrl: "/images/food/chwee-kueh.jpg",
     funFact:
       "The chai poh (preserved radish) topping must be fried before serving — raw chai poh is too salty and sharp. The frying caramelises it slightly and makes it the perfect complement to the plain rice cake.",
     bestPairedWith:
@@ -1507,7 +1504,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Adam Road Food Centre for the Michelin-recognised version; Geylang Serai and Tekka Centre for authentically Malay settings; every mamak and Malay stall island-wide for daily sustenance.",
     priceRange: "S$1.50–6 depending on accompaniments",
-    imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
+    imageUrl: "/images/food/nasi-lemak.jpg",
     funFact:
       "The sambal is the stall's signature — every nasi lemak auntie guards her sambal recipe fiercely, and regulars can identify their preferred stall's sambal by smell alone.",
     bestPairedWith:
@@ -1555,7 +1552,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Geylang Serai Market and Tekka Centre for the most authentic versions; heartland Malay stalls across the island for neighbourhood versions that are often just as good.",
     priceRange: "S$3–6 per bowl",
-    imageUrl: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+    imageUrl: "/images/food/mee-rebus.jpg",
     funFact:
       "The gravy's thickness comes from blended sweet potato — not starch or flour. The sweet potato also gives the gravy its natural sweetness, which is why the dish tastes complex without being complicated.",
     bestPairedWith: "Teh tarik, a side of otah, and extra calamansi squeezed tableside.",
@@ -1602,7 +1599,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Tekka Centre and Geylang Serai for authentic Malay versions; most hawker centres have at least one mee siam stall that the neighbourhood regulars know about.",
     priceRange: "S$3–5 per bowl",
-    imageUrl: "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=800&q=80",
+    imageUrl: "/images/food/mee-siam.jpg",
     funFact:
       "The key to mee siam gravy is tamarind — not lime, not vinegar, but the slow sourness of tamarind that takes minutes to develop on the palate rather than hitting immediately.",
     bestPairedWith:
@@ -1650,7 +1647,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Geylang Serai Market and Tekka Centre for the most traditional versions; Malay food stalls across the island serve it for breakfast and on weekends.",
     priceRange: "S$3–6 per bowl",
-    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
+    imageUrl: "/images/food/lontong.jpg",
     funFact:
       "The rice cakes (lontong) are made by cooking rice inside tightly packed banana leaves until it compresses into a dense cylinder — the banana leaf imparts a faint grassy fragrance that store-bought lontong never achieves.",
     bestPairedWith:
@@ -1698,7 +1695,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Kampong Glam's Arab Street area for the most traditional Indian-Muslim version; Geylang Serai Ramadan Bazaar for the most festive; Singapore Zam Zam on North Bridge Road year-round.",
     priceRange: "S$6–12 per portion",
-    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
+    imageUrl: "/images/food/murtabak.jpg",
     funFact:
       "A skilled murtabak maker stretches the dough by spinning it in the air — the technique is the same as pizza tossing and creates the paper-thin layers that give murtabak its distinctive flaky texture.",
     bestPairedWith:
@@ -1742,7 +1739,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Geylang Serai Market, Hjh Maimunah in Jalan Besar, and Tekka Centre for the most authentic spreads. Look for stalls with the widest selection of dishes displayed in covered pots.",
     priceRange: "S$5–15 depending on dishes selected",
-    imageUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80",
+    imageUrl: "/images/food/nasi-padang.jpg",
     funFact:
       "Traditional Nasi Padang restaurants bring all available dishes to the table at once and you only pay for what you eat — a system that requires absolute trust between hawker and customer that has worked for generations.",
     bestPairedWith:
@@ -1786,7 +1783,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Bedok 85 Fengshan Market and Marine Parade Food Centre for the best surviving versions. The dish is increasingly rare — find the stalls that still make it and go.",
     priceRange: "S$4–8 per plate",
-    imageUrl: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+    imageUrl: "/images/food/satay-bee-hoon.jpg",
     funFact:
       "Satay bee hoon is one of Singapore's endangered dishes — fewer than a dozen stalls still make it properly, and the number decreases each year as veteran hawkers retire.",
     bestPairedWith:
@@ -1835,7 +1832,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Peranakan restaurants in Katong, Joo Chiat, and Dempsey Hill — this dish is rarely found at hawker centres. True Nyonya ayam buah keluak requires days of preparation.",
     priceRange: "S$18–40 at restaurants",
-    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
+    imageUrl: "/images/food/ayam-buah-keluak.jpg",
     funFact:
       "Buah keluak nuts contain hydrogen cyanide in their raw state — the multi-day soaking and boiling process removes the toxin completely. It is one of the most laborious ingredient preparations in Southeast Asian cooking.",
     bestPairedWith:
@@ -1883,7 +1880,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Peranakan restaurants in Katong and Joo Chiat; some hawker stalls in Tiong Bahru and Maxwell occasionally serve them. Most reliably found at Peranakan restaurants.",
     priceRange: "S$8–18 for a plate at restaurants",
-    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
+    imageUrl: "/images/food/kueh-pie-tee.jpg",
     funFact:
       "The mould for frying kueh pie tee cups is a specialised tool passed between generations — the shape produces a perfectly even cup that can hold filling without softening for several minutes.",
     bestPairedWith:
@@ -1931,7 +1928,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Old Airport Road Food Centre, Geylang Serai, and various hawker centres island-wide — most hawker centres have at least one ngoh hiang stall with a glass case display.",
     priceRange: "S$4–10 per selection",
-    imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+    imageUrl: "/images/food/ngoh-hiang.webp",
     funFact:
       "The tofu skin (tau kee) wrapper must be soaked in water before use to become pliable — if it's too dry it tears during rolling, and if it's too wet it doesn't crisp during frying.",
     bestPairedWith:
@@ -1979,7 +1976,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Bengawan Solo island-wide for the most consistent version; Katong and Joo Chiat Peranakan kueh shops for the traditional version; some hawker dessert stalls on weekends.",
     priceRange: "S$1–2 per piece, S$6–12 per box",
-    imageUrl: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=800&q=80",
+    imageUrl: "/images/food/ondeh-ondeh.jpg",
     funFact:
       "The green colour comes from pandan juice pressed fresh from pandan leaves — stalls that use artificial colouring produce a flatter green; the natural version is slightly uneven and more fragrant.",
     bestPairedWith:
@@ -2029,7 +2026,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Geylang and Upper Thomson Road for the Teochew peppery version; Jurong West and the heartland for the Hokkien herbal version. Klang-style (Malaysian) dark herbal is also available in Singapore.",
     priceRange: "S$10–20 per claypot",
-    imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
+    imageUrl: "/images/food/bak-kut-teh.jpg",
     funFact:
       "The 'tea' in bak kut teh refers to the Chinese tea drunk alongside the soup — traditionally believed to help digest the fatty pork and cut through the richness of the broth.",
     bestPairedWith:
@@ -2077,7 +2074,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Old Airport Road Food Centre, Toa Payoh, and Bedok for the most respected versions — lor mee is a heartland staple that most hawker centres have at least one version of.",
     priceRange: "S$4–7 per bowl",
-    imageUrl: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+    imageUrl: "/images/food/lor-mee.jpg",
     funFact:
       "The gravy's viscosity is achieved with cornstarch — the ratio must be precise or the gravy is either watery (too little) or gluey (too much). The ideal consistency should coat a spoon without dripping.",
     bestPairedWith:
@@ -2124,7 +2121,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Beach Road Prawn Noodle House, Blanco Court Prawn Mee, and hawker versions at Old Airport Road and Tekka Centre. The best stalls are identified by a dark, deeply orange broth.",
     priceRange: "S$5–12 per bowl depending on prawn size",
-    imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
+    imageUrl: "/images/food/hae-mee.jpg",
     funFact:
       "The richest hae mee broths are made by first dry-frying prawn shells and heads until charred, then adding them to the stock pot — the charred shells add a smoky depth that un-roasted shells cannot produce.",
     bestPairedWith:
@@ -2172,7 +2169,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Ampang Yong Tau Foo in the CBD; Hakka restaurants in the heartland; most hawker centres have at least one display-style stall where you point and choose.",
     priceRange: "S$4–10 depending on number of pieces chosen",
-    imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80",
+    imageUrl: "/images/food/yong-tau-foo.jpg",
     funFact:
       "The fish paste used to stuff the vegetables must be bouncy and springy — if it's dense and crumbly, the fish content is too low and it has been padded with flour.",
     bestPairedWith:
@@ -2220,7 +2217,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Amoy Street Food Centre for the most respected hawker version; Chinatown Complex and Old Airport Road for variety; everywhere during Dumpling Festival in May or June.",
     priceRange: "S$3–8 per dumpling",
-    imageUrl: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
+    imageUrl: "/images/food/bak-chang.webp",
     funFact:
       "The tying technique for bak chang determines how evenly it cooks — a perfectly tied dumpling has uniform density throughout; a loosely tied one has pockets of undercooked rice or overcompressed filling.",
     bestPairedWith:
@@ -2271,7 +2268,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Casuarina Curry Restaurant on Upper Thomson Road for the most debated version; Al-Ameen near Farrer Park; every residential estate with a mamak stall for the daily version.",
     priceRange:
       "S$1–2 for plain prata; S$2–5 for egg, coin, or tissue variations",
-    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
+    imageUrl: "/images/food/roti-prata.jpg",
     funFact:
       "The tissue prata — stretched until it's almost transparent, then folded into a towering cone — requires the most technical skill of any prata variation and is ordered primarily to watch it being made.",
     bestPairedWith:
@@ -2319,7 +2316,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Race Course Road's Indian restaurants for the original; Tekka Centre for the hawker version; banana-leaf restaurants in Little India for the full ceremonial experience.",
     priceRange: "S$20–45 per head depending on fish size and venue",
-    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
+    imageUrl: "/images/food/fish-head-curry.jpg",
     funFact:
       "The tamarind in the curry serves as a natural preservative as well as a flavour element — fish head curry actually improves over 24 hours as the tamarind continues to work into the fish.",
     bestPairedWith:
@@ -2363,7 +2360,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Tekka Centre for Allauddin's Briyani (Michelin Bib Gourmand); Geylang Serai for the Malay-Muslim interpretation; Islamic Restaurant on North Bridge Road for the restaurant version.",
     priceRange: "S$5–15 per plate",
-    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
+    imageUrl: "/images/food/biryani.jpg",
     funFact:
       "Dum biryani is cooked sealed — the pot is covered with dough or a heavy lid and the rice cooks in the steam from the meat and broth below. The moment of opening the pot releases the accumulated fragrance in one aromatic burst.",
     bestPairedWith:
@@ -2411,7 +2408,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Every mamak stall and Indian-Muslim food centre in Singapore — teh tarik is available everywhere but the best versions are from stalls that pour it properly rather than just stirring.",
     priceRange: "S$1–2 per glass",
-    imageUrl: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
+    imageUrl: "/images/food/teh-tarik.jpg",
     funFact:
       "The pulling cools the tea to drinking temperature at the same time as it froths it — a skilled teh tarik maker can produce a glass at exactly the right temperature every time without checking.",
     bestPairedWith:
@@ -2459,7 +2456,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Tekka Centre for the most consistent daily supply; banana leaf restaurants in Little India; Indian bakeries and snack stalls in the Serangoon Road area.",
     priceRange: "S$0.80–1.50 per piece",
-    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
+    imageUrl: "/images/food/vadai.jpg",
     funFact:
       "The batter for medu vadai must be ground to a specific consistency — too coarse and the vadai is dense; too fine and it doesn't fry properly. Traditional grinding is done on a wet stone grinder overnight.",
     bestPairedWith:
@@ -2507,7 +2504,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Little India's early morning restaurants and hawker stalls; Tekka Centre on weekend mornings; Sri Lankan restaurants in the Serangoon Road area.",
     priceRange: "S$1.50–3 per appam",
-    imageUrl: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
+    imageUrl: "/images/food/appam.webp",
     funFact:
       "Appam batter must ferment for a minimum of 8 hours — the fermentation creates the slight sourness that balances the coconut's sweetness and produces the gas bubbles that give the lacy edges their characteristic holes.",
     bestPairedWith:
