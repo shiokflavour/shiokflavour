@@ -242,7 +242,7 @@ export default function FoodHeritagePage() {
             <button
               key={cat.name}
               onClick={() => setActiveCategory(cat.name)}
-              className="group relative rounded-2xl overflow-hidden h-80 cursor-pointer text-left w-full"
+              className="group relative rounded-2xl overflow-hidden h-96 cursor-pointer text-left w-full"
               type="button"
             >
               <Image
@@ -254,30 +254,33 @@ export default function FoodHeritagePage() {
               />
 
               {/* Strong gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10 transition-all duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/15 transition-all duration-300" />
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 {/* Dish count pill */}
                 <div className="inline-flex items-center gap-1.5 bg-sf-primary/20 border border-sf-primary/30 rounded-full px-3 py-1 mb-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-sf-primary" />
-                  <span className="text-sf-primary text-[10px] font-bold tracking-widest uppercase">
+                  <span className="text-sf-primary text-xs font-bold tracking-widest uppercase">
                     {cat.dishCount} dishes
                   </span>
                 </div>
 
                 {/* Category name */}
-                <h2 className="text-white font-bold text-xl leading-tight mb-1 group-hover:text-sf-primary transition-colors duration-200">
+                <h2
+                  className="text-white font-bold text-2xl leading-tight mb-2 group-hover:text-sf-primary transition-colors duration-200"
+                  style={{ textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}
+                >
                   {cat.name}
                 </h2>
 
                 {/* Mood line */}
-                <p className="text-white/50 text-xs italic leading-relaxed mb-3">
+                <p className="text-white/70 text-sm leading-relaxed mb-3">
                   {cat.moodLine}
                 </p>
 
                 {/* Dish teaser */}
-                <p className="text-white/40 text-[11px] leading-relaxed mb-4 line-clamp-1">
+                <p className="text-white/55 text-xs leading-relaxed mb-4 line-clamp-2">
                   {cat.dishTeaser}
                 </p>
 
