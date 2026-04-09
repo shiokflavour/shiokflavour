@@ -1084,8 +1084,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "ABC Brickworks takes its name from the brick kilns that once operated along the Alexandra Canal — a reminder that this part of Singapore was industrial long before it was residential. The hawker centre grew organically from the surrounding Bukit Merah community, a neighbourhood of old HDB blocks and longtime residents who have strong opinions about where to eat and even stronger opinions about where not to. The satay stall here has built a following that crosses postal codes. No marketing. No Michelin. Just charcoal, skewers, and the kind of queue that forms because people genuinely cannot stay away.",
+    vibeCheck: "Off the tourist map, deep on the locals' radar",
     localQuote:
       "Very few tourists know about this place. That is precisely what keeps the satay so good.",
+    timeline: [
+      {
+        year: "1960s",
+        event:
+          "Brick kilns operate along Alexandra Canal — the area's industrial identity established",
+      },
+      {
+        year: "1975",
+        event:
+          "Bukit Merah estate develops rapidly — hawker stalls emerge to feed the growing community",
+      },
+      {
+        year: "1985",
+        event:
+          "ABC Brickworks Market formalised — satay stall begins building its loyal following",
+      },
+      {
+        year: "2000s",
+        event:
+          "Word spreads across Singapore — regulars drive from across the island for the satay",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains one of the most respected off-the-beaten-path hawker centres in Central Singapore",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "ABC Satay",
+        dish: "Charcoal Satay",
+        story:
+          "The stall that built the centre's reputation. Beef, chicken, and mutton skewers over real charcoal, peanut sauce made fresh daily. No Michelin star, no Instagram fame — just the queue that forms every evening without fail.",
+      },
+      {
+        name: "Brickworks BBQ Chicken Wings",
+        dish: "BBQ Chicken Wings",
+        story:
+          "Marinated in a dark soy and spice blend, grilled until the edges catch and caramelise. The kind of wings that make people order doubles before they've finished the first round.",
+      },
+      {
+        name: "ABC Carrot Cake",
+        dish: "Carrot Cake",
+        story:
+          "Both white and black versions, fried individually to order. The black version is stickier, richer, and the one regulars always choose. A neighbourhood benchmark that holds its own against any famous stall.",
+      },
+    ],
   },
   {
     id: 15,
@@ -1111,8 +1161,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    story:
+      "Buona Vista sits in one of Singapore's most unlikely food pockets — tucked between the polished cafes of Holland Village and the sprawling research campuses of one-north. The market serves a community that is part old-guard neighbourhood, part international academic, and entirely unpretentious. Students from INSEAD and NUS eat alongside the retirees who have lived in the surrounding flats since the 1970s. The prices reflect none of the Holland Village premium that exists just minutes away. That is the entire point.",
+    vibeCheck: "Holland Village's sensible, delicious secret",
     localQuote:
       "Close to Holland Village but without the Holland Village prices. The sensible choice, every time.",
+    timeline: [
+      {
+        year: "1970s",
+        event:
+          "Holland Drive estate established — Buona Vista market serves the new residential community",
+      },
+      {
+        year: "1985",
+        event:
+          "INSEAD Singapore campus opens nearby — student population adds to the centre's daily crowd",
+      },
+      {
+        year: "2000s",
+        event:
+          "one-north research district develops — a new generation of weekday lunch regulars arrives",
+      },
+      {
+        year: "2010s",
+        event:
+          "Holland Village gentrification accelerates — Buona Vista remains resolutely affordable",
+      },
+      {
+        year: "2020",
+        event:
+          "Continues as the neighbourhood's primary food hub — untouched by the café culture next door",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Buona Vista Prawn Noodles",
+        dish: "Prawn Noodles",
+        story:
+          "Rich, deeply reduced prawn broth that takes hours to build. The shells are cracked and simmered until the stock turns a deep amber. A bowl that professors and cleaners queue for with equal patience.",
+      },
+      {
+        name: "Holland Drive Wanton Mee",
+        dish: "Wanton Mee",
+        story:
+          "Springy egg noodles tossed in a char siew sauce with crispy lard. The wantons are hand-folded and thin-skinned. A breakfast that has been starting the neighbourhood's mornings for thirty years.",
+      },
+      {
+        name: "Buona Vista Kaya Toast & Kopi",
+        dish: "Kaya Toast Set",
+        story:
+          "Old-school kopitiam coffee from a sock filter, kaya toast with cold butter, soft-boiled eggs with white pepper and dark soy. The most Singaporean breakfast there is, done without theatrics.",
+      },
+    ],
   },
   {
     id: 16,
@@ -1138,8 +1238,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    story:
+      "Clementi 448 Market sits at the edge of one of Singapore's most student-dense neighbourhoods — NUS to the south, Ngee Ann Polytechnic to the north, and decades of HDB families in every direction. The market has fed generations of students who arrived broke, hungry, and grateful for a $3.50 plate of hokkien mee that could carry them through a five-hour lecture. Those same students are now parents bringing their own children here on weekend mornings. That cycle of loyalty is what a neighbourhood hawker centre actually means.",
+    vibeCheck: "Where three generations of students became regulars without planning to",
     localQuote:
       "Clementi residents have been eating here since their school days. Some loyalties simply never change.",
+    timeline: [
+      {
+        year: "1970s",
+        event:
+          "Clementi New Town develops — 448 Market established to serve the growing HDB population",
+      },
+      {
+        year: "1980s",
+        event:
+          "NUS expansion brings a surge of students — the market becomes a daily institution",
+      },
+      {
+        year: "1990s",
+        event:
+          "Core stalls establish themselves — regulars begin forming that last decades",
+      },
+      {
+        year: "2000s",
+        event:
+          "Students from the polytechnic join the lunch crowd — the market's cross-generational mix sets",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains the definitive food centre for Clementi's 150,000 residents",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Clementi Hokkien Mee",
+        dish: "Hokkien Mee",
+        story:
+          "Wok-fried yellow and rice noodles in a prawn and pork broth, finished with sambal and lime. The wok hei is proper — the uncle has been working the same wok for over twenty years.",
+      },
+      {
+        name: "448 Char Siew Rice",
+        dish: "Char Siew Rice",
+        story:
+          "The char siew is roasted in-house, lacquered and slightly charred at the edges. Served over fragrant rice with dark sauce. Students have been ordering this as their one hot meal of the day for decades.",
+      },
+      {
+        name: "Clementi Laksa",
+        dish: "Laksa",
+        story:
+          "Thick coconut broth, cockles, tau pok, and rice noodles. The sambal on the side is house-made and properly spicy. A bowl that the neighbourhood considers the benchmark — quietly, without any fuss.",
+      },
+    ],
   },
   {
     id: 17,
@@ -1165,8 +1315,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    story:
+      "Jurong West 505 serves the furthest reaches of Singapore's western edge — a town that was marshland and rubber plantations within living memory, transformed into one of the country's largest residential districts in the span of a generation. The people who moved here first built their communities around places like this market. The food reflects that diversity: Malay, Chinese, Indian, and everything in between, cooked by families who have run the same stalls since the 1980s. In Singapore's West, 505 is simply where you eat.",
+    vibeCheck: "The West's most reliable, most honest, most complete hawker centre",
     localQuote:
       "Jurong West people know their food. And they know that 505 has everything they need.",
+    timeline: [
+      {
+        year: "1970s",
+        event:
+          "Jurong West developed as a new industrial and residential town on reclaimed land",
+      },
+      {
+        year: "1982",
+        event:
+          "505 Market established to serve the rapidly growing Jurong West population",
+      },
+      {
+        year: "1990s",
+        event:
+          "Industrial workers and families establish the centre's daily rhythms — breakfast at 6am, dinner at 7pm",
+      },
+      {
+        year: "2000s",
+        event:
+          "Second generation of stall operators takes over — recipes and regulars pass between generations",
+      },
+      {
+        year: "2020",
+        event:
+          "505 Market remains the primary food hub for one of Singapore's largest towns",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Jurong West Bak Chor Mee",
+        dish: "Bak Chor Mee",
+        story:
+          "Minced pork noodles with vinegar, lard, and braised mushrooms. The dry version is the one to order — every strand coated, every bite balanced between acid and richness. A bowl worth the drive from the East.",
+      },
+      {
+        name: "505 Nasi Lemak",
+        dish: "Nasi Lemak",
+        story:
+          "Coconut rice wrapped in pandan leaf, served with ikan bilis, egg, sambal, and otah on the side. Opens at 6am and sells out before 9. The West's answer to Adam Road — quieter, just as good.",
+      },
+      {
+        name: "West Coast Teh Tarik Stall",
+        dish: "Teh Tarik & Roti",
+        story:
+          "Pulled tea with a proper froth, kaya toast done on a charcoal grill. The uncle has been opening at 5:30am for twenty years. The kind of stall that powers an entire community before the sun is fully up.",
+      },
+    ],
   },
   {
     id: 18,
@@ -1192,8 +1392,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    story:
+      "Yishun Park Hawker Centre opened in 2016 as part of NEA's push to build a new generation of hawker centres — better ventilated, cleaner, designed with both hawkers and diners in mind. What it inherited was something no design brief can manufacture: a community. Yishun has always had a complicated reputation in Singapore's cultural imagination, but its residents know something outsiders don't — the food up here is excellent, unpretentious, and priced for real people. The hawker centre filled with regulars almost immediately. The North always knew how to eat.",
+    vibeCheck: "New building, old soul — the North feeds its own well",
     localQuote:
       "The north of Singapore has its own excellent food culture. You do not need to travel to the city centre to eat well.",
+    timeline: [
+      {
+        year: "1980s",
+        event:
+          "Yishun New Town established — one of Singapore's largest northern residential estates",
+      },
+      {
+        year: "2000s",
+        event:
+          "Food scene in Yishun matures — residents develop strong local food preferences",
+      },
+      {
+        year: "2016",
+        event:
+          "Yishun Park Hawker Centre opens as part of NEA's new-generation hawker centre programme",
+      },
+      {
+        year: "2017",
+        event:
+          "Centre fills quickly with regulars — proves the community's appetite for a proper local hawker",
+      },
+      {
+        year: "2020",
+        event:
+          "Established as one of the North's most popular and well-regarded food centres",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Yishun Laksa",
+        dish: "Laksa",
+        story:
+          "Rich coconut gravy with thick bee hoon, cockles, and tau pok. The broth is made fresh each morning — you can tell by the colour. North Singapore has always had good laksa. This stall proves it.",
+      },
+      {
+        name: "Park Chicken Rice",
+        dish: "Hainanese Chicken Rice",
+        story:
+          "Poached chicken, fragrant rice, clear soup, three dipping sauces. The chicken is silky and properly rested. The regulars have been coming since the first week the centre opened and have never considered leaving.",
+      },
+      {
+        name: "Yishun Roti Prata",
+        dish: "Roti Prata",
+        story:
+          "Crispy-edged, fluffy-centred prata cooked on a well-seasoned griddle. The curry on the side has been simmering since before dawn. Weekend mornings here feel like the right way to start a day.",
+      },
+    ],
   },
   {
     id: 19,
@@ -1219,8 +1469,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: true,
     budgetPerPax: "$5–$10",
+    story:
+      "Sembawang Hills Food Centre sits along Upper Thomson Road — one of Singapore's last great supper streets, a corridor of old trees and older food traditions that survived the city's relentless redevelopment. The food centre anchors the northern end of the strip, surrounded by bak kut teh restaurants, durian stalls, and the kind of old coffee shops that still use ceiling fans instead of air-conditioning. Late at night, it draws a cross-section of Singapore that you rarely see elsewhere: families, bikers, couples, insomniacs, and people who simply know that the best eating happens after 11pm.",
+    vibeCheck: "Where Upper Thomson comes alive after midnight",
     localQuote:
       "Eating under the trees at midnight with a bowl of bak kut teh — this is what Singapore supper culture is all about.",
+    timeline: [
+      {
+        year: "1960s",
+        event:
+          "Upper Thomson Road establishes itself as a food corridor serving the northern kampung communities",
+      },
+      {
+        year: "1975",
+        event:
+          "Sembawang Hills Food Centre formalised — anchors the Thomson Road supper strip",
+      },
+      {
+        year: "1990s",
+        event:
+          "Bak kut teh and durian stalls multiply along Thomson Road — the area's identity crystallises",
+      },
+      {
+        year: "2000s",
+        event:
+          "Supper culture peaks — the centre becomes a midnight destination for all of Singapore",
+      },
+      {
+        year: "2020",
+        event:
+          "Upper Thomson Road gazetted for conservation — food centre protected as part of the strip's character",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Sembawang Bak Kut Teh",
+        dish: "Bak Kut Teh",
+        story:
+          "Peppery, clear Teochew-style broth with tender pork ribs. Ordered with you tiao for dipping and a pot of strong Chinese tea. A bowl that has been closing nights on Upper Thomson for thirty years.",
+      },
+      {
+        name: "Thomson Carrot Cake",
+        dish: "Carrot Cake",
+        story:
+          "Both versions, properly executed — the white is eggy and soft, the black is sweet and slightly charred. Fried individually, never rushed. The kind of stall that defines a neighbourhood's food memory.",
+      },
+      {
+        name: "Hills Prawn Noodles",
+        dish: "Prawn Noodles",
+        story:
+          "A broth built from prawn shells roasted until deeply caramelised. Served with yellow noodles, bee hoon, prawns, and pork ribs. The late-night crowd orders this as the first bowl of the evening, not the last.",
+      },
+    ],
   },
   {
     id: 20,
@@ -1246,8 +1546,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    story:
+      "Chong Pang Market is one of the last hawker centres in Singapore that still feels like it belongs to another era. Built in the early years of Yishun's development, it has the generous proportions and unhurried atmosphere of a time when hawker centres were the centre of community life, not an amenity alongside it. The wet market upstairs is as important as the food centre below — residents come for both, spending Saturday mornings the way their parents did. The food here is the kind that travels — people drive from the city centre for specific stalls and leave wondering why they don't come more often.",
+    vibeCheck: "Old Singapore energy, running on full",
     localQuote:
       "Chong Pang feels different from the newer estates. More old Singapore. More genuine.",
+    timeline: [
+      {
+        year: "1980s",
+        event:
+          "Yishun New Town built — Chong Pang Market established as the neighbourhood's primary food hub",
+      },
+      {
+        year: "1990s",
+        event:
+          "Market becomes the social anchor for Yishun's community — wet market and hawker centre inseparable",
+      },
+      {
+        year: "2000s",
+        event:
+          "Reputation for quality spreads — food lovers begin making the trip from other parts of Singapore",
+      },
+      {
+        year: "2010s",
+        event:
+          "Several stalls pass to second generation — recipes preserved, regulars retained",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains one of the most complete and characterful hawker centres in the North",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Chong Pang Char Kway Teow",
+        dish: "Char Kway Teow",
+        story:
+          "The uncle fries in small batches over high heat — proper wok hei that you can smell from the entrance. Dark soy, lard, cockles, Chinese sausage. A plate that Northerners will put against any CBD version without hesitation.",
+      },
+      {
+        name: "Yishun Mee Goreng",
+        dish: "Mee Goreng",
+        story:
+          "Malay-style fried noodles with tomato, egg, and a sambal that has been building flavour since the stall opened decades ago. Bright orange, slightly sweet, properly spiced. The North's best-kept fried noodle.",
+      },
+      {
+        name: "Chong Pang Fresh Juice",
+        dish: "Fresh-Pressed Juice",
+        story:
+          "Sugarcane, watermelon, starfruit — pressed to order, no syrup, no ice from a bag. The kind of drink that makes Singapore's humidity feel manageable. Regulars order before they've even chosen their food.",
+      },
+    ],
   },
   {
     id: 21,
@@ -1272,8 +1622,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$6",
+    story:
+      "Woodlands is Singapore's northernmost town, separated from Malaysia by the Causeway and defined by the daily rhythm of that crossing. The food centre at Woodlands Centre reflects that geography — it serves a community that moves between two countries, that wakes before dawn to cross the border, and that returns hungry in the evening. The food is fuel as much as culture: nasi lemak at 5am for the workers crossing to Johor, economy rice at noon for the civil servants and shop owners, roti prata in the evening for families who have been here since Woodlands was jungle.",
+    vibeCheck: "Singapore's northern gate — where every meal fuels a crossing",
     localQuote:
       "Woodlands residents wake up at 5am, eat here, and cross to Johor for work. The food gives them the energy to do it.",
+    timeline: [
+      {
+        year: "1970s",
+        event:
+          "Woodlands developed as Singapore's northernmost residential town near the Causeway",
+      },
+      {
+        year: "1981",
+        event:
+          "Woodlands Centre Market established as the community's primary food hub",
+      },
+      {
+        year: "1990s",
+        event:
+          "Causeway traffic increases — the market becomes a daily stop for cross-border commuters",
+      },
+      {
+        year: "2000s",
+        event:
+          "Woodlands Regional Centre grows — new residents add to the market's diverse crowd",
+      },
+      {
+        year: "2019",
+        event:
+          "Thomson-East Coast Line opens Woodlands stations — fresh wave of commuters discovers the market",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Woodlands Nasi Lemak",
+        dish: "Nasi Lemak",
+        story:
+          "Open from 5am for the pre-dawn Causeway crowd. Coconut rice, fried egg, sambal, ikan bilis, and a curry chicken wing. The kind of breakfast that carries people through a full morning of work across the border.",
+      },
+      {
+        name: "Causeway Roti Prata",
+        dish: "Roti Prata",
+        story:
+          "Thin, flaky prata fried fresh on a cast-iron griddle. The curry is mutton-based and properly spiced. Popular with both the Malay and Indian communities who share the northern neighbourhoods.",
+      },
+      {
+        name: "Woodlands Economy Rice",
+        dish: "Economy Rice",
+        story:
+          "A full spread of cooked dishes — vegetables, tofu, meat, eggs — served over white rice. The selection changes daily. Regulars point without looking at prices. That is the economy rice way.",
+      },
+    ],
   },
   {
     id: 22,
@@ -1299,8 +1699,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    story:
+      "Toa Payoh was Singapore's first major Housing Development Board satellite town — a model of what public housing could be, built in the late 1960s to prove that Singapore could house its people with dignity. The residents who moved into the first Toa Payoh blocks have watched the town age around them. The hawker centre at Lorong 8 is part of that original fabric. It has not changed dramatically because it has not needed to. The same families eat here across three generations. The same stalls serve the same dishes. In a city that reinvents itself constantly, Toa Payoh Lorong 8 is quietly, stubbornly itself.",
+    vibeCheck: "Singapore's original new town, still feeding its own the original way",
     localQuote:
       "Toa Payoh people are deeply loyal to their stalls. The same families have been eating here for thirty years without question.",
+    timeline: [
+      {
+        year: "1968",
+        event:
+          "Toa Payoh New Town built — Singapore's first major HDB satellite town, a national milestone",
+      },
+      {
+        year: "1970s",
+        event:
+          "Lorong 8 Market established to serve the new town's rapidly growing population",
+      },
+      {
+        year: "1980s",
+        event:
+          "First generation of stall operators establishes core dishes — lor mee, wanton mee, chicken rice",
+      },
+      {
+        year: "2000s",
+        event:
+          "Second generation takes over stalls — recipes passed down, regulars retained without interruption",
+      },
+      {
+        year: "2020",
+        event:
+          "Toa Payoh Lorong 8 remains one of Singapore's most community-anchored hawker centres",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Toa Payoh Lor Mee",
+        dish: "Lor Mee",
+        story:
+          "Thick starchy gravy ladled over flat noodles with braised pork, fish cake, and a hard-boiled egg. A splash of vinegar cuts through the richness. The original Toa Payoh lor mee — the one all the others are measured against.",
+      },
+      {
+        name: "Lorong 8 Wanton Mee",
+        dish: "Wanton Mee",
+        story:
+          "Springy noodles in a char siew sauce with crispy lard and soup wantons on the side. The char siew is house-roasted and properly lacquered. A bowl that has started Toa Payoh mornings since before most of its customers were born.",
+      },
+      {
+        name: "Toa Payoh Soon Kueh",
+        dish: "Soon Kueh",
+        story:
+          "Steamed dumplings filled with bamboo shoot, turnip, and dried shrimp. A Teochew specialty that is increasingly rare. The skin is translucent and delicate — the filling is earthy and satisfying. One of the last proper soon kueh stalls in the heartland.",
+      },
+    ],
   },
   {
     id: 23,
@@ -1326,8 +1776,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "Golden Shoe — officially Market Street Hawker Centre — takes its name from the shape of the roads around it, which early Singaporeans said resembled a golden shoe on the map. It sits deep in the CBD, tucked under an office building, operating on the compressed schedule of the financial district: open before the bankers arrive, closed before the tourists start looking for dinner. For decades it has fed the suits and clerks who power the Raffles Place district. The chicken rice here has been eaten standing up, briefcase in hand, by people who have gone on to run companies. That is the kind of hawker centre this is.",
+    vibeCheck: "The CBD's best lunch eaten fastest by the people who can least afford to stop",
     localQuote:
       "The best chicken rice in the CBD, eaten standing up by people in suits. Boardroom decisions have been made on a full stomach from here.",
+    timeline: [
+      {
+        year: "1970s",
+        event:
+          "Market Street area develops as Singapore's financial district — demand for affordable lunch grows",
+      },
+      {
+        year: "1978",
+        event:
+          "Golden Shoe Market established under Market Street — becomes the CBD's primary hawker centre",
+      },
+      {
+        year: "1990s",
+        event:
+          "Raffles Place financial district expands — the centre's lunch crowd grows exponentially",
+      },
+      {
+        year: "2000s",
+        event:
+          "Office towers multiply around the centre — Golden Shoe feeds a district of 50,000 daily workers",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains the most beloved weekday hawker centre in Singapore's Central Business District",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Golden Shoe Chicken Rice",
+        dish: "Hainanese Chicken Rice",
+        story:
+          "Poached chicken with oily rice, three dipping sauces, and clear soup. Ordered by pointing, eaten quickly, remembered for longer than you expect. The CBD's most dependable plate — consistent for three decades.",
+      },
+      {
+        name: "Market Street Wonton Mee",
+        dish: "Wonton Mee",
+        story:
+          "Thin egg noodles with char siew, a pair of wonton dumplings, and soup on the side. The char siew is roasted daily. Bankers eat this at 11:45am to beat the queue. It is absolutely worth the strategy.",
+      },
+      {
+        name: "Golden Shoe Bak Chor Mee",
+        dish: "Bak Chor Mee",
+        story:
+          "Minced pork noodles with vinegar, mushrooms, and lard. The dry version coats every strand. A bowl complex enough to make you forget you're eating at your desk. The CBD's most satisfying working lunch.",
+      },
+    ],
   },
   {
     id: 24,
@@ -1358,8 +1858,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "Hong Lim Market & Food Centre stands at the edge of Chinatown, on ground that has been a centre of Chinese community life since the 1880s. The original Hong Lim Green — the open space the centre looks out onto — was where early Hokkien and Cantonese immigrants gathered, traded, and argued. The food centre that rose here carries that history without announcing it. The char kway teow uncle who fries one portion at a time and refuses to rush is not being difficult — he is being precise. In this part of Singapore, that kind of precision has always been the point.",
+    vibeCheck: "Chinatown's most serious hawker centre — no shortcuts, no shortcuts accepted",
     localQuote:
       "The char kway teow uncle fries one portion at a time and refuses to rush. The queue respects this completely.",
+    timeline: [
+      {
+        year: "1880s",
+        event:
+          "Hong Lim Green established as a gathering point for Hokkien and Cantonese immigrant communities",
+      },
+      {
+        year: "1960s",
+        event:
+          "Hawker stalls formalise around Hong Lim Green — Chinatown's street food moves indoors",
+      },
+      {
+        year: "1978",
+        event:
+          "Hong Lim Market & Food Centre opens in its current form — multiple floors of stalls",
+      },
+      {
+        year: "2016",
+        event:
+          "Outram Park Fried Kway Teow Mee receives Michelin Bib Gourmand recognition",
+      },
+      {
+        year: "2020",
+        event:
+          "Named by food writers as one of Singapore's most authentic Chinese hawker experiences",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Outram Park Fried Kway Teow Mee",
+        dish: "Char Kway Teow",
+        story:
+          "Michelin Bib Gourmand. One or two portions at a time, over the highest possible heat. Dark soy, lard, cockles, Chinese sausage, beansprouts. The wok hei is the kind you feel in your chest. One of the great plates of Singapore.",
+      },
+      {
+        name: "Hong Lim Carrot Cake",
+        dish: "Carrot Cake",
+        story:
+          "White and black, both versions done with patience. The white is eggy and delicate. The black is sticky and slightly sweet. Fried in a seasoned wok that has not been cleaned into blandness. A reliable benchmark.",
+      },
+      {
+        name: "Hakka Thunder Tea Rice",
+        dish: "Lei Cha Fan",
+        story:
+          "A Hakka specialty almost extinct in Singapore — green tea poured over rice with an array of blanched vegetables and toppings. Earthy, herbal, and unlike anything else in the hawker centre repertoire. One of the last proper versions in the city.",
+      },
+    ],
   },
   {
     id: 25,
@@ -1385,8 +1935,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "People's Park Food Centre sits inside People's Park Complex — a brutalist megastructure built in 1973 that was Singapore's first mixed-use development and a template for how the country would build for the next fifty years. The complex itself is a relic worth visiting: a vertical town of apartments, shops, and food stalls stacked above a wet market. The hawker centre below draws the Chinatown community that has lived in and around the complex since it opened — Teochew and Cantonese families whose parents came from Guangdong province and whose grandchildren still eat here every Sunday. The bak kut teh is peppery. The wonton noodles are precise. The prices have not kept pace with the century.",
+    vibeCheck: "A brutalist icon that feeds its community the way it always has — without apology",
     localQuote:
       "Tourists walk straight past. Locals walk right in. That is the entire story of this place.",
+    timeline: [
+      {
+        year: "1973",
+        event:
+          "People's Park Complex opens — Singapore's first mixed-use megastructure, a national landmark",
+      },
+      {
+        year: "1975",
+        event:
+          "Food centre established on the lower floors — Chinatown community adopts it immediately",
+      },
+      {
+        year: "1990s",
+        event:
+          "Teochew and Cantonese hawker traditions cement themselves — regulars span three generations",
+      },
+      {
+        year: "2010s",
+        event:
+          "Complex gazetted for conservation — food centre protected as part of Singapore's heritage",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains one of Chinatown's most authentic and community-rooted food destinations",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "People's Park Bak Kut Teh",
+        dish: "Bak Kut Teh",
+        story:
+          "Teochew-style: clear, peppery broth with pork ribs so tender they fall from the bone. Served with rice and dark soy for dipping. The pepper builds slowly — by the third rib you understand what all the fuss is about.",
+      },
+      {
+        name: "Park Yong Tau Foo",
+        dish: "Yong Tau Foo",
+        story:
+          "Choose your pieces — stuffed tofu, bitter gourd, chilli, fish balls — then choose your soup or dry. The stuffing is hand-made fresh each morning. A Hakka dish that has become quintessentially Singaporean.",
+      },
+      {
+        name: "Chinatown Wonton Noodles",
+        dish: "Wonton Noodles",
+        story:
+          "Thin egg noodles with silky wontons in a clear broth. The Cantonese way — subtle, precise, the quality entirely in the technique. The kind of stall where you understand, after the first bite, why simplicity is the hardest thing to do well.",
+      },
+    ],
   },
   {
     id: 26,
@@ -1418,8 +2018,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: true,
     budgetPerPax: "$12–$25",
+    story:
+      "East Coast Lagoon Food Village is the most cinematic hawker centre in Singapore. Open to the sea breeze, framed by casuarina trees, with the sound of waves competing with the sizzle of satay — it operates on a frequency that no indoor hawker centre can replicate. It was established in the 1970s when East Coast Park was reclaimed from the sea and handed to the public as parkland. The food village grew alongside the park's culture of cycling, barbecues, and weekend escapes. Today it is the definitive Singapore Saturday evening: sambal stingray on a banana leaf, cold beer in a plastic cup, and the sea just close enough to remind you that this city is an island.",
+    vibeCheck: "Singapore by the sea — the meal, the breeze, the whole improbable thing",
     localQuote:
       "Satay by the sea with a cold beer as the sun goes down. Singapore does not get more perfect than this.",
+    timeline: [
+      {
+        year: "1970s",
+        event:
+          "East Coast Park created on reclaimed land — food village established as part of the public park",
+      },
+      {
+        year: "1980s",
+        event:
+          "Satay stalls and seafood vendors anchor the village — the open-air format becomes iconic",
+      },
+      {
+        year: "1990s",
+        event:
+          "East Coast Park becomes Singapore's most popular recreational green — food village follows",
+      },
+      {
+        year: "2000s",
+        event:
+          "Sambal stingray becomes the village's signature dish — banana leaf service becomes its ritual",
+      },
+      {
+        year: "2020",
+        event:
+          "East Coast Lagoon named in Michelin Guide — confirms what East-siders already knew",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "East Coast Satay",
+        dish: "Charcoal Satay",
+        story:
+          "Beef, chicken, and mutton skewers grilled over real charcoal with a peanut sauce that is thick and properly complex. Ordered by the dozen. Eaten outdoors with the sea in the background. The most Singapore thing you can do on a weekend evening.",
+      },
+      {
+        name: "Lagoon Sambal Stingray",
+        dish: "Sambal Stingray",
+        story:
+          "Stingray grilled on a banana leaf, loaded with house-made sambal, covered and steamed until the flesh pulls easily from the cartilage. Eaten with kangkong and rice. The East Coast signature that other hawker centres have tried and failed to replicate.",
+      },
+      {
+        name: "BBQ Seafood Station",
+        dish: "BBQ Chilli Crab & Wings",
+        story:
+          "Chilli crab with mantou, BBQ chicken wings, and lala in broth. Best ordered as a table spread and eaten over two hours. The East Coast way of eating — slow, communal, unhurried by anything except the tide.",
+      },
+    ],
   },
   {
     id: 27,
@@ -1445,8 +2095,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "Marine Parade is Katong's neighbourhood market — the one that serves the community between the famous shophouses on East Coast Road and the sea. Built in the 1970s to serve the Marine Parade estate, it has been feeding the families of this predominantly Peranakan and Eurasian neighbourhood for fifty years. The laksa here is Katong-style — thick coconut broth, cockles, and cut noodles short enough to eat with a spoon alone. The neighbourhood has gentrified considerably around it. The food centre has not followed suit. That is not stubbornness. That is dignity.",
+    vibeCheck: "Katong's neighbourhood kitchen — the one the locals actually use",
     localQuote:
       "The best laksa is not always at the famous place. The Katong locals know exactly where to go.",
+    timeline: [
+      {
+        year: "1970s",
+        event:
+          "Marine Parade estate developed on reclaimed land — food centre built as the community anchor",
+      },
+      {
+        year: "1980s",
+        event:
+          "Katong-style laksa establishes itself as the centre's signature — a neighbourhood ritual begins",
+      },
+      {
+        year: "2000s",
+        event:
+          "East Coast Road gentrifies — Marine Parade Food Centre remains affordable and local",
+      },
+      {
+        year: "2011",
+        event:
+          "Marine Parade MRT station planned — new accessibility brings the centre wider recognition",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains the definitive neighbourhood food centre for Marine Parade's long-term community",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Marine Parade Katong Laksa",
+        dish: "Katong Laksa",
+        story:
+          "Thick, coconut-rich broth with cut bee hoon, cockles, tau pok, and a sambal that is properly spiced. The noodles are pre-cut so you can eat with a spoon. The Katong way — unpretentious, deeply flavoured, impossible to stop at one bowl.",
+      },
+      {
+        name: "Katong Rojak",
+        dish: "Rojak",
+        story:
+          "Pineapple, cucumber, turnip, you tiao, and tau pok dressed in a thick shrimp paste sauce and crushed peanuts. The sauce is the thing — dark, sweet, and funky in exactly the right way. A dish that tourists overlook and locals prioritise.",
+      },
+      {
+        name: "Marine Parade Satay Bee Hoon",
+        dish: "Satay Bee Hoon",
+        story:
+          "Thin rice noodles in a peanut-based gravy with satay, cockles, and vegetables. A dish unique to Singapore's east coast hawker centres — rich, peanutty, and unlike anything else. The kind of plate that makes you wonder why it isn't everywhere.",
+      },
+    ],
   },
   {
     id: 28,
@@ -1527,8 +2227,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
+    story:
+      "Alexandra Village Food Centre occupies a corner of Bukit Merah that has always resisted the homogenising forces of Singapore's development. The village it sits in — a cluster of low-rise light-industrial and residential blocks — has a texture that most of Singapore has lost. The food centre reflects that. The beef noodles here have been made from the same recipe for decades. The BBQ chicken wings draw queues that stretch past the entrance on weekend evenings. The char kway teow uncle finishes each portion with a finality that suggests he has somewhere else to be, even though he has been standing at the same wok for twenty years.",
+    vibeCheck: "Alexandra's open secret — exceptional food that the neighbourhood guards quietly",
     localQuote:
       "Those who know about this place tend to keep it to themselves. The food quality here is exceptional and consistently so.",
+    timeline: [
+      {
+        year: "1960s",
+        event:
+          "Alexandra Village develops as a light-industrial and residential enclave south of Queenstown",
+      },
+      {
+        year: "1975",
+        event:
+          "Alexandra Village Food Centre established — community immediately adopts it as their primary dining spot",
+      },
+      {
+        year: "1985",
+        event:
+          "Hock Lam beef noodle stall establishes itself — begins building its cross-island following",
+      },
+      {
+        year: "2000s",
+        event:
+          "BBQ chicken wings stall rises to prominence — weekend queues become an Alexandra ritual",
+      },
+      {
+        year: "2020",
+        event:
+          "Named by food critics as one of Singapore's most underrated hawker centres — regulars quietly agree",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Hock Lam Beef Noodles",
+        dish: "Beef Noodles",
+        story:
+          "Slow-braised beef in a clear, deeply savoury broth. The tendon is silky, the beef slices are thin and yielding. A Teochew beef noodle done the old way — no shortcuts, no substitutions. One of the last proper versions in Singapore.",
+      },
+      {
+        name: "Alexandra BBQ Chicken Wings",
+        dish: "BBQ Chicken Wings",
+        story:
+          "Marinated in a dark soy and five spice blend, grilled over charcoal until the skin blisters and chars. The meat stays moist. Weekend queues form by 6pm. Regulars have standing orders before they arrive.",
+      },
+      {
+        name: "Village Char Kway Teow",
+        dish: "Char Kway Teow",
+        story:
+          "Dark soy, cockles, lard, and beansprouts over high heat. The uncle fries fast and decisively — there is no adjusting mid-plate. A portion arrives as a complete statement. The regulars never request modifications. They have learned better.",
+      },
+    ],
   },
   {
     id: 31,
@@ -1554,8 +2304,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$3–$7",
+    story:
+      "Bishan Street 13 Food Centre sits in the middle of one of Singapore's most well-planned towns — a place of wide pavements, mature trees, and the kind of thoughtful HDB architecture that the government built in the 1980s when it was trying to prove that public housing could be beautiful. The food centre is the social engine of the neighbourhood: where children eat before school, where retirees linger over kopi, where families settle in on Sunday mornings with no particular urgency. The roti prata before a football match is a Bishan institution. So is everything else here.",
+    vibeCheck: "Bishan's heartbeat — the place where the neighbourhood actually lives",
     localQuote:
       "The roti prata before the football match is a Bishan tradition. Win or lose, the prata is always excellent.",
+    timeline: [
+      {
+        year: "1980s",
+        event:
+          "Bishan New Town developed — one of Singapore's most thoughtfully planned HDB estates",
+      },
+      {
+        year: "1986",
+        event:
+          "Bishan Street 13 Food Centre opens — immediately becomes the neighbourhood's primary food hub",
+      },
+      {
+        year: "1990s",
+        event:
+          "Core stalls establish themselves — prata, chicken rice, bak chor mee become Bishan staples",
+      },
+      {
+        year: "2000s",
+        event:
+          "Second generation of stall operators takes over — the centre's character is preserved without interruption",
+      },
+      {
+        year: "2020",
+        event:
+          "Remains the most-visited food centre in Bishan — a genuine community institution",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Bishan Roti Prata",
+        dish: "Roti Prata",
+        story:
+          "Thin, flaky prata fried on a well-seasoned cast-iron plate. The edges are crispy, the centre is soft. The curry on the side has been simmering since before the first customers arrived. Weekend mornings here require patience and reward it.",
+      },
+      {
+        name: "Street 13 Chicken Rice",
+        dish: "Hainanese Chicken Rice",
+        story:
+          "Poached chicken, fragrant rice cooked in chicken broth, three dipping sauces, and a bowl of clear soup. The kind of chicken rice that makes you understand why Singapore considers this a national dish. Reliable, precise, and never rushed.",
+      },
+      {
+        name: "Bishan Bak Chor Mee",
+        dish: "Bak Chor Mee",
+        story:
+          "Minced pork noodles with vinegar, mushrooms, and lard. The dry version coats every strand in the sauce. The soup is clear and properly seasoned. A bowl complex enough to sustain a Bishan resident through an entire working morning.",
+      },
+    ],
   },
   {
     id: 32,
@@ -1581,8 +2381,58 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     halal: false,
     openLate: false,
     budgetPerPax: "$5–$12",
+    story:
+      "Pasir Panjang — 'long sand' in Malay — was the beach that edged Singapore's southwestern shore before land reclamation pushed the coast outward. The food centre that bears the name sits near the Southern Ridges, surrounded by the last traces of the old kampung life that once defined this part of the island. The zi char stalls here cook for serious eaters — people who have hiked the ridges and arrived with genuine appetites. The sambal sotong is made fresh. The prawn paste chicken is fried to order. In a city that often favours novelty, Pasir Panjang Food Centre is quietly, confidently old.",
+    vibeCheck: "The Southern Ridges' reward — zi char for people who have earned it",
     localQuote:
       "Come after hiking the Southern Ridges. It is the best possible reward for the effort.",
+    timeline: [
+      {
+        year: "1950s",
+        event:
+          "Pasir Panjang establishes itself as a kampung community along Singapore's southwestern shore",
+      },
+      {
+        year: "1972",
+        event:
+          "Battle of Pasir Panjang memorial established nearby — the area's wartime history formalised",
+      },
+      {
+        year: "1980s",
+        event:
+          "Pasir Panjang Food Centre opens — serves the remaining kampung community and new HDB residents",
+      },
+      {
+        year: "2000s",
+        event:
+          "Southern Ridges park connector opens — hikers discover the food centre as a post-trail destination",
+      },
+      {
+        year: "2020",
+        event:
+          "Quiet, consistent, and completely beloved by the community that has always known about it",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Pasir Panjang Zi Char",
+        dish: "Zi Char Spread",
+        story:
+          "A full zi char menu cooked to order over high heat. The sambal kangkong is properly blistered, the tofu is silky inside and crispy out. Best ordered as a table of four after the Southern Ridges walk — portions are made for sharing and for hunger.",
+      },
+      {
+        name: "Southern Ridges Sambal Sotong",
+        dish: "Sambal Sotong",
+        story:
+          "Squid wok-fried in a house-made sambal with onion and fresh chilli. The sambal is made each morning — you can taste the difference from the pre-made versions. Tender, spiced, and deeply satisfying in the way that only fresh sambal achieves.",
+      },
+      {
+        name: "Prawn Paste Chicken",
+        dish: "Har Cheong Gai",
+        story:
+          "Chicken marinated in fermented prawn paste and fried until the crust shatters. The prawn paste is pungent and complex — it perfumes the meat all the way through. A dish that rewards the adventurous and converts the hesitant without fail.",
+      },
+    ],
   },
 ];
 
