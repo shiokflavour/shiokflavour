@@ -203,19 +203,19 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                 ← Back to Hawker Centres
               </Link>
               <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full border border-sf-primary/40 bg-sf-primary/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sf-primary">
+                <span className="rounded-full border border-sf-primary/40 bg-sf-primary/20 px-3 py-1 text-[15px] font-semibold uppercase tracking-wider text-sf-primary">
                   {h.region}
                 </span>
-                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-sf-cream">
+                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[15px] font-medium text-sf-cream">
                   {h.tag}
                 </span>
                 {h.halal && (
-                  <span className="rounded-full border border-emerald-600/30 bg-emerald-700/20 px-3 py-1 text-xs font-semibold text-emerald-400">
+                  <span className="rounded-full border border-emerald-600/30 bg-emerald-700/20 px-3 py-1 text-[15px] font-semibold text-emerald-400">
                     Halal Friendly
                   </span>
                 )}
                 {h.openLate && (
-                  <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-sf-muted">
+                  <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[15px] text-sf-muted">
                     🌙 Open Late
                   </span>
                 )}
@@ -228,19 +228,19 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
               {/* Quick stats row */}
               <div className="grid grid-cols-3 gap-3 pt-2">
                 <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3 text-center">
-                  <p className="mb-1 text-xs text-sf-muted">Budget</p>
+                  <p className="mb-1 text-[15px] text-sf-muted">Budget</p>
                   <p className="text-sm font-semibold text-sf-cream">
                     {h.budgetPerPax}
                   </p>
                 </div>
                 <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3 text-center">
-                  <p className="mb-1 text-xs text-sf-muted">Hours</p>
+                  <p className="mb-1 text-[15px] text-sf-muted">Hours</p>
                   <p className="text-sm font-semibold leading-tight text-sf-cream">
                     {h.hours.split("(")[0].trim()}
                   </p>
                 </div>
                 <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3 text-center">
-                  <p className="mb-1 text-xs text-sf-muted">MRT</p>
+                  <p className="mb-1 text-[15px] text-sf-muted">MRT</p>
                   <p className="text-sm font-semibold leading-tight text-sf-cream">
                     {h.nearestMRT.split("—")[0].trim()}
                   </p>
@@ -249,7 +249,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
 
               {/* Must try pills */}
               <div>
-                <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-sf-muted">
+                <p className="mb-2 text-[15px] font-semibold uppercase tracking-wider text-sf-muted">
                   Must Try
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -291,7 +291,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 {showMichelin && (
                   <div className="absolute bottom-3 left-3">
-                    <span className="inline-flex items-center gap-1 rounded-full border border-yellow-500/40 bg-black/70 px-3 py-1 text-xs font-semibold text-yellow-400 backdrop-blur-sm">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-yellow-500/40 bg-black/70 px-3 py-1 text-[15px] font-semibold text-yellow-400 backdrop-blur-sm">
                       ⭐ Michelin Recognised
                     </span>
                   </div>
@@ -325,7 +325,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
               >
                 <h2
                   id="famous-heading"
-                  className="text-xs font-bold uppercase tracking-[0.2em] text-sf-primary"
+                  className="text-[15px] font-bold uppercase tracking-[0.2em] text-sf-primary"
                 >
                   Famous For
                 </h2>
@@ -432,7 +432,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                           <p className="font-semibold text-sf-cream">
                             {stall.name}
                           </p>
-                          <span className="shrink-0 rounded-full bg-sf-primary/15 px-2.5 py-1 text-xs font-semibold text-sf-primary ring-1 ring-sf-primary/30">
+                          <span className="shrink-0 rounded-full bg-sf-primary/15 px-2.5 py-1 text-[15px] font-semibold text-sf-primary ring-1 ring-sf-primary/30">
                             {stall.dish}
                           </span>
                         </div>
@@ -469,7 +469,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
               >
                 <h2
                   id="tip-heading"
-                  className="text-xs font-bold uppercase tracking-[0.2em] text-sf-primary"
+                  className="text-[15px] font-bold uppercase tracking-[0.2em] text-sf-primary"
                 >
                   Local Tip
                 </h2>
@@ -488,7 +488,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {h.vibes.map((v) => (
                     <li key={v}>
-                      <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-sf-muted">
+                      <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-[15px] font-medium text-sf-muted">
                         {v}
                       </span>
                     </li>
@@ -529,7 +529,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                     <div className="flex gap-3">
                       <IconClock className="mt-0.5 h-5 w-5 shrink-0 text-sf-primary" />
                       <div>
-                        <dt className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+                        <dt className="text-[15px] font-semibold uppercase tracking-wider text-sf-muted">
                           Opening Hours
                         </dt>
                         <dd className="mt-1 text-sm text-sf-cream/95">
@@ -540,7 +540,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                     <div className="flex gap-3">
                       <IconWallet className="mt-0.5 h-5 w-5 shrink-0 text-sf-primary" />
                       <div>
-                        <dt className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+                        <dt className="text-[15px] font-semibold uppercase tracking-wider text-sf-muted">
                           Budget
                         </dt>
                         <dd className="mt-1 text-sm text-sf-cream/95">
@@ -551,7 +551,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                     <div className="flex gap-3">
                       <IconMapPin className="mt-0.5 h-5 w-5 shrink-0 text-sf-primary" />
                       <div>
-                        <dt className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+                        <dt className="text-[15px] font-semibold uppercase tracking-wider text-sf-muted">
                           Region
                         </dt>
                         <dd className="mt-1 text-sm text-sf-cream/95">
@@ -562,7 +562,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                     <div className="flex gap-3">
                       <IconTrain className="mt-0.5 h-5 w-5 shrink-0 text-sf-primary" />
                       <div>
-                        <dt className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+                        <dt className="text-[15px] font-semibold uppercase tracking-wider text-sf-muted">
                           Nearest MRT
                         </dt>
                         <dd className="mt-1 text-sm text-sf-cream/95">
@@ -574,12 +574,12 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
 
                   <div className="mt-6 flex flex-wrap gap-2 border-t border-white/10 pt-6">
                     {h.halal ? (
-                      <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-1 text-xs font-semibold text-emerald-200">
+                      <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-1 text-[15px] font-semibold text-emerald-200">
                         Halal
                       </span>
                     ) : null}
                     {h.openLate ? (
-                      <span className="rounded-full border border-violet-400/40 bg-violet-500/10 px-2.5 py-1 text-xs font-semibold text-violet-100">
+                      <span className="rounded-full border border-violet-400/40 bg-violet-500/10 px-2.5 py-1 text-[15px] font-semibold text-violet-100">
                         Open Late
                       </span>
                     ) : null}
@@ -694,7 +694,7 @@ function ApiHawkerPage({ hawker }: { hawker: HawkerCentre }) {
             {hawker.address}
           </p>
           <div className="rounded-2xl border border-white/10 bg-sf-surface/40 p-6">
-            <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">
+            <p className="text-[15px] font-semibold uppercase tracking-wider text-sf-muted">
               Cooked food stalls (dataset)
             </p>
             <p className="mt-2 text-3xl font-bold tabular-nums text-sf-primary">

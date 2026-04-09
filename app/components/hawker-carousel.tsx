@@ -66,7 +66,7 @@ export function HawkerCarousel() {
         {/* Header */}
         <div className="mb-10 flex items-start justify-between">
           <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-sf-primary">
+            <p className="mb-3 text-[15px] font-semibold uppercase tracking-widest text-sf-primary">
               Hawker Centres
             </p>
             <h2
@@ -118,7 +118,7 @@ export function HawkerCarousel() {
 
                       {h.halal && (
                         <div className="absolute left-3 top-3">
-                          <span className="rounded-full bg-emerald-700 px-2 py-0.5 text-xs font-bold text-white">
+                          <span className="rounded-full bg-emerald-700 px-2 py-0.5 text-[15px] font-bold text-white">
                             Halal
                           </span>
                         </div>
@@ -126,7 +126,7 @@ export function HawkerCarousel() {
 
                       {showMichelin && (
                         <div className="absolute right-3 top-3">
-                          <span className="flex items-center gap-1 rounded-full bg-black/70 px-2 py-0.5 text-xs font-bold text-yellow-300 backdrop-blur-sm">
+                          <span className="flex items-center gap-1 rounded-full bg-black/70 px-2 py-0.5 text-[15px] font-bold text-yellow-300 backdrop-blur-sm">
                             ★ Michelin
                           </span>
                         </div>
@@ -137,10 +137,10 @@ export function HawkerCarousel() {
                       <h3 className="mb-1 line-clamp-1 text-sm font-semibold leading-snug text-white transition-colors group-hover:text-sf-primary">
                         {h.name}
                       </h3>
-                      <p className="mb-1 text-xs font-medium text-sf-primary">
+                      <p className="mb-1 text-[15px] font-medium text-sf-primary">
                         {h.region}
                       </p>
-                      <p className="line-clamp-1 text-xs text-sf-muted">
+                      <p className="line-clamp-1 text-[15px] text-sf-muted">
                         {h.tag}
                       </p>
                     </div>

@@ -20,7 +20,7 @@ export default function AboutPage() {
           {/* Decorative warm glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sf-primary/10 blur-[120px] rounded-full pointer-events-none" />
           <div className="relative mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sf-primary mb-6">
+            <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-sf-primary mb-6">
               About ShiokFlavour
             </p>
             <h1 className="text-5xl sm:text-7xl font-bold leading-tight tracking-tight text-sf-cream">
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 <p className="text-sm font-semibold text-sf-cream mt-2">
                   Hawker Centres
                 </p>
-                <p className="text-xs text-sf-muted mt-1 italic">
+                <p className="text-[15px] text-sf-muted mt-1 italic">
                   from Chinatown to the heartlands
                 </p>
               </div>
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 <p className="text-sm font-semibold text-sf-cream mt-2">
                   Heritage Dishes
                 </p>
-                <p className="text-xs text-sf-muted mt-1 italic">
+                <p className="text-[15px] text-sf-muted mt-1 italic">
                   each one a chapter of Singapore&apos;s story
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
                 <p className="text-sm font-semibold text-sf-cream mt-2">
                   UNESCO Recognition
                 </p>
-                <p className="text-xs text-sf-muted mt-1 italic">
+                <p className="text-[15px] text-sf-muted mt-1 italic">
                   the world finally caught up with what we knew
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default function AboutPage() {
         <section className="bg-gradient-to-br from-sf-surface via-black/60 to-sf-bg py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div className="w-8 h-px bg-sf-primary mb-6" />
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary mb-4">
+            <p className="text-[15px] font-semibold uppercase tracking-[0.2em] text-sf-primary mb-4">
               16 December 2020
             </p>
             <h2 className="text-3xl font-bold text-sf-cream mb-6">

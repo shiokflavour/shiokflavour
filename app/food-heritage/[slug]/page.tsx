@@ -114,7 +114,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
         <section className="mx-auto max-w-6xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-3 lg:gap-12">
             <div className="space-y-5 lg:col-span-2">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-sf-primary sm:text-sm">
+              <p className="text-[15px] font-medium uppercase tracking-[0.2em] text-sf-primary sm:text-sm">
                 Singapore Food Heritage
               </p>
               <Link
@@ -182,7 +182,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                     {shiok.before ? <p className="whitespace-pre-line">{shiok.before}</p> : null}
                     {shiok.quote ? (
                       <blockquote className="relative border-l-4 border-sf-primary py-2 pl-5">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-sf-muted">Shiok Factor</p>
+                        <p className="text-[15px] font-semibold uppercase tracking-wider text-sf-muted">Shiok Factor</p>
                         <p className="mt-2 text-xl font-medium italic text-sf-primary sm:text-2xl">{shiok.quote}</p>
                       </blockquote>
                     ) : null}
@@ -240,7 +240,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                       <div>
                         <dt className="font-medium text-sf-muted">Dietary</dt>
                         <dd className="mt-1">
-                          <span className="inline-flex rounded-full bg-emerald-600/25 px-2.5 py-1 text-xs font-semibold text-emerald-300 ring-1 ring-emerald-500/40">
+                          <span className="inline-flex rounded-full bg-emerald-600/25 px-2.5 py-1 text-[15px] font-semibold text-emerald-300 ring-1 ring-emerald-500/40">
                             Halal friendly
                           </span>
                         </dd>
@@ -281,7 +281,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                       <span className="font-semibold text-sf-cream group-hover:text-sf-primary">
                         {hawkerCentreLabel(hawkerSlug)}
                       </span>
-                      <span className="mt-2 text-xs text-sf-muted">View hawker centre →</span>
+                      <span className="mt-2 text-[15px] text-sf-muted">View hawker centre →</span>
                     </Link>
                   </li>
                 ))}
