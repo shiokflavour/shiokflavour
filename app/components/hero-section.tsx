@@ -69,7 +69,7 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center text-center">
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "0.75rem" }}>
           <img
-            src="/images/sf_icon_transparent.png"
+            src="/images/SF_logomark_transparent.png"
             alt="ShiokFlavour"
             className="fire-glow"
             style={{

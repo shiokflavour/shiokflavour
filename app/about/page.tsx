@@ -35,7 +35,7 @@ export default function AboutPage() {
           <div className="relative mx-auto max-w-3xl text-center">
             <div style={{display:'flex',flexDirection:'column',alignItems:'center',marginBottom:'1.5rem',gap:'1rem'}}>
               <img
-                src="/images/sf_icon_transparent.png"
+                src="/images/SF_logomark_transparent.png"
                 alt="ShiokFlavour Icon"
                 className="fire-glow"
                 style={{width:'min(180px,30vw)',height:'min(180px,30vw)',objectFit:'contain'}}
