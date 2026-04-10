@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { HawkerCarousel } from "./components/hawker-carousel";
 import { HeroSection } from "./components/hero-section";
 import { SiteFooter } from "./components/site-footer";
@@ -25,6 +26,21 @@ const flavourTrails = [
 export default function Home() {
   return (
     <div className="flex min-h-full flex-1 flex-col">
+      <style>{`
+        @keyframes fireGlow {
+          0%, 100% {
+            filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.4)) drop-shadow(0 0 20px rgba(249, 115, 22, 0.2));
+            transform: scale(1);
+          }
+          50% {
+            filter: drop-shadow(0 0 16px rgba(249, 115, 22, 0.8)) drop-shadow(0 0 40px rgba(249, 115, 22, 0.4));
+            transform: scale(1.03);
+          }
+        }
+        .fire-glow {
+          animation: fireGlow 2.5s ease-in-out infinite;
+        }
+      `}</style>
       <SiteHeader />
 
       <main className="flex-1">
