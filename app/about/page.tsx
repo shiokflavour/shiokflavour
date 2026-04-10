@@ -38,7 +38,7 @@ export default function AboutPage() {
                 src="/images/SF_logomark_transparent.png"
                 alt="ShiokFlavour Icon"
                 className="fire-glow"
-                style={{width:'min(180px,30vw)',height:'min(180px,30vw)',objectFit:'contain'}}
+                style={{width:'min(364px, 40vw)',height:'min(364px, 40vw)',objectFit:'contain'}}
               />
             </div>
             <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-sf-primary mb-6">
