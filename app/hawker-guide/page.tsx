@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { SiteHeader } from "@/app/components/site-header";
+import ChopstickDivider from "@/app/components/chopstick-divider";
 import {
   DRINK_MODIFIERS,
   DRINKS,
@@ -116,6 +117,8 @@ export default function HawkerGuidePage() {
         </p>
         <div className="w-12 h-px bg-sf-primary mt-10" />
       </section>
+
+      <ChopstickDivider />
 
       {/* Sticky Tab Bar */}
       <div className="sticky top-[57px] z-40 bg-[#111111]/95 backdrop-blur-sm border-b border-white/5">

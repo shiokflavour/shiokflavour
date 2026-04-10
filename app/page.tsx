@@ -4,6 +4,7 @@ import { HawkerCarousel } from "./components/hawker-carousel";
 import { HeroSection } from "./components/hero-section";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
+import ChopstickDivider from "@/app/components/chopstick-divider";
 
 const flavourTrails = [
   {
@@ -45,6 +46,7 @@ export default function Home() {
 
       <main className="flex-1">
         <HeroSection />
+        <ChopstickDivider />
 
         <section
           id="discover"

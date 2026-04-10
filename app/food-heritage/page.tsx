@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "../components/site-header";
 import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
+import ChopstickDivider from "@/app/components/chopstick-divider";
 
 const CATEGORY_ORDER = [
   "Singaporean Classics",
@@ -234,6 +235,8 @@ export default function FoodHeritagePage() {
           </div>
         </div>
       </section>
+
+      <ChopstickDivider />
 
       {/* CATEGORY GRID */}
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-32">

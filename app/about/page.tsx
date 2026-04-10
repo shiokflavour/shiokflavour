@@ -3,6 +3,7 @@ import { FOOD_HERITAGE_DISHES } from "../lib/food-heritage";
 import { FEATURED_HAWKERS } from "../lib/featured-hawkers";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
+import ChopstickDivider from "@/app/components/chopstick-divider";
 
 export const metadata = {
   title: "About ShiokFlavour | Singapore's Hawker Heritage Guide",
@@ -60,6 +61,8 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
+
+        <ChopstickDivider />
 
         {/* Stats bar */}
         <section className="border-y border-white/[0.08] bg-sf-surface/40">
