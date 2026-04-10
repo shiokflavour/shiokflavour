@@ -9,6 +9,8 @@ type Scores = {
   shiokValue: number;
 };
 
+type MetricKey = keyof Scores;
+
 const METRICS = [
   {
     key: "spiceHit" as const,
@@ -81,45 +83,58 @@ function getBarColour(score: number): string {
   return "bg-slate-500/60";
 }
 
-function NapkinAlertBadge({ messFactor }: { messFactor: number }) {
-  if (messFactor >= 7) {
-    return (
-      <span className="shrink-0 rounded-full bg-green-700 px-3 py-1 text-[15px] font-bold text-white">
-        Clean Eat
-      </span>
-    );
-  }
-  if (messFactor >= 4) {
-    return (
-      <span className="shrink-0 rounded-full bg-amber-600 px-3 py-1 text-[15px] font-bold text-white">
-        Bring Napkins
-      </span>
-    );
-  }
-  return (
-    <span className="shrink-0 rounded-full bg-red-700 px-3 py-1 text-[15px] font-bold text-white">
-      Dangerous! Wear Old Clothes
-    </span>
-  );
+/** Badge pill: higher = spicier */
+function pillSpiceHit(score: number): { text: string; className: string } {
+  if (score === 0) return { text: "No Heat", className: "bg-white/10 text-white/60" };
+  if (score <= 3) return { text: "Mild Lah", className: "bg-green-700 text-white" };
+  if (score <= 6) return { text: "Getting Warm", className: "bg-amber-600 text-white" };
+  if (score <= 8) return { text: "Solid Kick", className: "bg-orange-600 text-white" };
+  return { text: "Call the Ambulance", className: "bg-red-700 text-white" };
 }
 
-function MetricBadge({ score, animated }: { score: number; animated: boolean }) {
-  if (!animated) return null;
-  if (score === 10) {
-    return (
-      <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-amber-400/60 bg-amber-400/15 px-2.5 py-0.5 text-[15px] font-bold text-amber-400 animate-pulse shadow-[0_0_10px_rgba(251,191,36,0.3)]">
-        🏆 Peak Shiok-ness
-      </span>
-    );
+/** invertedScore = 10 - messFactor; lower messFactor = messier → higher inverted = worse mess */
+function pillNapkinAlert(invertedScore: number): { text: string; className: string } {
+  if (invertedScore <= 3) return { text: "Clean Eat", className: "bg-green-700 text-white" };
+  if (invertedScore <= 6) return { text: "Bring Napkins", className: "bg-amber-600 text-white" };
+  return { text: "Dangerous! Wear Old Clothes", className: "bg-red-700 text-white" };
+}
+
+function pillFlavourDepth(score: number): { text: string; className: string } {
+  if (score <= 3) return { text: "Still Looking", className: "bg-white/10 text-white/60" };
+  if (score <= 6) return { text: "Not Bad Lah", className: "bg-amber-600 text-white" };
+  if (score <= 8) return { text: "Very The Solid", className: "bg-orange-600 text-white" };
+  return { text: "Cannot Stop Eating", className: "bg-sf-primary text-white" };
+}
+
+function pillQueueGame(score: number): { text: string; className: string } {
+  if (score <= 3) return { text: "Walk Right In", className: "bg-green-700 text-white" };
+  if (score <= 6) return { text: "Short Wait", className: "bg-amber-600 text-white" };
+  if (score <= 8) return { text: "Queue Up Lah", className: "bg-orange-600 text-white" };
+  return { text: "Die Die Must Queue", className: "bg-red-700 text-white" };
+}
+
+/** Higher = better value (bands aligned with existing copy; spec was truncated in brief) */
+function pillShiokValue(score: number): { text: string; className: string } {
+  if (score <= 3) return { text: "Aiyah, A Bit Ex Leh", className: "bg-white/10 text-white/60" };
+  if (score <= 6) return { text: "Fair Price Lah", className: "bg-amber-600 text-white" };
+  if (score <= 8) return { text: "Money Well Spent", className: "bg-orange-600 text-white" };
+  return { text: "Best Dollar in Singapore", className: "bg-sf-primary text-white" };
+}
+
+function getMetricPill(key: MetricKey, scores: Scores): { text: string; className: string } {
+  const s = scores[key];
+  switch (key) {
+    case "spiceHit":
+      return pillSpiceHit(s);
+    case "messFactor":
+      return pillNapkinAlert(10 - scores.messFactor);
+    case "flavourDepth":
+      return pillFlavourDepth(s);
+    case "queueGame":
+      return pillQueueGame(s);
+    case "shiokValue":
+      return pillShiokValue(s);
   }
-  if (score >= 8) {
-    return (
-      <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-sf-primary/50 bg-sf-primary/15 px-2.5 py-0.5 text-[15px] font-bold text-sf-primary animate-bounce">
-        ✨ SHIOK!
-      </span>
-    );
-  }
-  return null;
 }
 
 function getOverallLabel(score: number): { label: string; colour: string } {
@@ -136,15 +151,23 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setAnimated(true); },
-      { threshold: 0.2 }
+      ([entry]) => {
+        if (entry.isIntersecting) setAnimated(true);
+      },
+      { threshold: 0.2 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
   const avgScore = Math.round(
-    (scores.spiceHit + scores.messFactor + scores.flavourDepth + scores.queueGame + scores.shiokValue) / 5 * 10
+    ((scores.spiceHit +
+      scores.messFactor +
+      scores.flavourDepth +
+      scores.queueGame +
+      scores.shiokValue) /
+      5) *
+      10,
   );
   const overall = getOverallLabel(avgScore);
 
@@ -157,35 +180,37 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
         {METRICS.map(({ key, label, emoji, comments }) => {
           const score = scores[key];
           const commentIdx = getCommentIndex(score);
-          const isNapkinAlert = key === "messFactor";
+          const pill = getMetricPill(key, scores);
           return (
             <div key={key}>
-              <div className="flex items-start justify-between mb-2 gap-2">
-                <div className="flex items-center gap-2 min-w-0">
+              <div className="mb-2 flex items-start justify-between gap-2">
+                <div className="flex min-w-0 items-center gap-2">
                   {emoji ? (
-                    <span className="text-xl shrink-0">{emoji}</span>
+                    <span className="shrink-0 text-xl">{emoji}</span>
                   ) : (
                     <span className="inline-block w-7 shrink-0 text-xl" aria-hidden />
                   )}
                   <div className="min-w-0">
-                    <div className="flex items-center flex-wrap gap-1">
-                      <p className="text-sm font-semibold text-sf-cream">{label}</p>
-                      {!isNapkinAlert ? (
-                        <MetricBadge score={score} animated={animated} />
-                      ) : null}
-                    </div>
-                    <p className="text-[15px] text-sf-cream/45 italic mt-0.5">{comments[commentIdx]}</p>
+                    <p className="text-sm font-semibold text-sf-cream">{label}</p>
+                    <p className="mt-0.5 text-[15px] italic text-sf-cream/45">{comments[commentIdx]}</p>
                   </div>
                 </div>
-                {isNapkinAlert ? (
-                  <NapkinAlertBadge messFactor={scores.messFactor} />
-                ) : (
-                  <span className={`text-sm font-bold shrink-0 ${score === 10 ? "text-amber-400" : score >= 8 ? "text-sf-primary" : "text-sf-cream/60"}`}>
+                <div className="flex shrink-0 flex-col items-end text-right">
+                  <span
+                    className={`text-sm font-bold ${
+                      score === 10 ? "text-amber-400" : score >= 8 ? "text-sf-primary" : "text-sf-cream/60"
+                    }`}
+                  >
                     {score}/10
                   </span>
-                )}
+                  <span
+                    className={`mt-1 inline-block rounded-full px-3 py-1 text-[15px] font-bold ${pill.className}`}
+                  >
+                    {pill.text}
+                  </span>
+                </div>
               </div>
-              <div className="h-2.5 w-full rounded-full bg-white/[0.07] overflow-hidden">
+              <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/[0.07]">
                 <div
                   className={`h-full rounded-full transition-all ease-out ${getBarColour(score)} ${score === 10 ? "shadow-[0_0_8px_rgba(251,191,36,0.5)]" : ""}`}
                   style={{
@@ -200,10 +225,12 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
         })}
       </div>
 
-      <div className={`mt-8 rounded-2xl border px-6 py-5 flex items-center justify-between ${avgScore >= 90 ? "border-amber-400/40 bg-amber-400/10" : "border-sf-primary/30 bg-sf-primary/10"}`}>
+      <div
+        className={`mt-8 flex items-center justify-between rounded-2xl border px-6 py-5 ${avgScore >= 90 ? "border-amber-400/40 bg-amber-400/10" : "border-sf-primary/30 bg-sf-primary/10"}`}
+      >
         <div>
           <p className="text-[15px] font-bold uppercase tracking-widest text-sf-cream/50">Overall Shiok Score</p>
-          <p className={`text-base font-bold mt-1 ${overall.colour}`}>{overall.label}</p>
+          <p className={`mt-1 text-base font-bold ${overall.colour}`}>{overall.label}</p>
         </div>
         <div className={`text-4xl font-bold leading-none ${avgScore >= 90 ? "text-amber-400" : "text-sf-primary"}`}>
           {animated ? avgScore : 0}
