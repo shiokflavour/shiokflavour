@@ -4,10 +4,10 @@ import Link from "next/link";
 export function BrandLogo() {
   return (
     <Image
-      src="/images/primary_SF_transparent.png"
+      src="/images/primary_SF_v2_transparent.png"
       alt="ShiokFlavour"
-      width={140}
-      height={40}
+      width={180}
+      height={32}
       className="h-8 w-auto object-contain"
       priority
     />
