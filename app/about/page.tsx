@@ -13,6 +13,19 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="flex min-h-full flex-1 flex-col">
+      <style>{`
+        @keyframes fireGlow {
+          0%, 100% {
+            filter: drop-shadow(0 0 8px rgba(249,115,22,0.4)) drop-shadow(0 0 20px rgba(249,115,22,0.2));
+            transform: scale(1);
+          }
+          50% {
+            filter: drop-shadow(0 0 16px rgba(249,115,22,0.8)) drop-shadow(0 0 40px rgba(249,115,22,0.4));
+            transform: scale(1.03);
+          }
+        }
+        .fire-glow { animation: fireGlow 2.5s ease-in-out infinite; }
+      `}</style>
       <SiteHeader />
       <main className="flex-1">
         {/* Hero — warm gradient, large statement */}
@@ -20,6 +33,19 @@ export default function AboutPage() {
           {/* Decorative warm glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sf-primary/10 blur-[120px] rounded-full pointer-events-none" />
           <div className="relative mx-auto max-w-3xl text-center">
+            <div style={{display:'flex',flexDirection:'column',alignItems:'center',marginBottom:'1.5rem',gap:'1rem'}}>
+              <img
+                src="/images/sf_icon_transparent.png"
+                alt="ShiokFlavour Icon"
+                className="fire-glow"
+                style={{width:'min(180px,30vw)',height:'min(180px,30vw)',objectFit:'contain'}}
+              />
+              <img
+                src="/images/primary_SF_transparent.png"
+                alt="ShiokFlavour"
+                style={{width:'min(280px,50vw)',height:'auto',objectFit:'contain'}}
+              />
+            </div>
             <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-sf-primary mb-6">
               About ShiokFlavour
             </p>
