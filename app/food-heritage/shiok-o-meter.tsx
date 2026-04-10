@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 type Scores = {
   spiceHit: number;
@@ -137,6 +137,34 @@ function getMetricPill(key: MetricKey, scores: Scores): { text: string; classNam
   }
 }
 
+const PEAK_GOLD_STYLE: CSSProperties = {
+  background: "linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b)",
+  boxShadow: "0 0 12px rgba(251, 191, 36, 0.6)",
+};
+
+const PEAK_SPICE_STYLE: CSSProperties = {
+  background: "linear-gradient(135deg, #dc2626, #ef4444, #dc2626)",
+  boxShadow: "0 0 12px rgba(239, 68, 68, 0.6)",
+};
+
+/** Peak tier: Spice Hit 9–10 (red bounce); others gold bounce; non-peak unchanged */
+function getPeakBadgeVariant(key: MetricKey, scores: Scores): "none" | "spice" | "gold" {
+  switch (key) {
+    case "spiceHit":
+      return scores.spiceHit >= 9 ? "spice" : "none";
+    case "messFactor": {
+      const invertedMess = 10 - scores.messFactor;
+      return invertedMess >= 7 ? "gold" : "none";
+    }
+    case "flavourDepth":
+      return scores.flavourDepth >= 9 ? "gold" : "none";
+    case "queueGame":
+      return scores.queueGame >= 9 ? "gold" : "none";
+    case "shiokValue":
+      return scores.shiokValue >= 9 ? "gold" : "none";
+  }
+}
+
 function getOverallLabel(score: number): { label: string; colour: string } {
   if (score >= 90) return { label: "🏆 Peak Shiok-ness. No Questions Asked.", colour: "text-amber-400" };
   if (score >= 80) return { label: "✨ Damn Shiok", colour: "text-sf-primary" };
@@ -181,6 +209,7 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
           const score = scores[key];
           const commentIdx = getCommentIndex(score);
           const pill = getMetricPill(key, scores);
+          const peakVariant = getPeakBadgeVariant(key, scores);
           return (
             <div key={key}>
               <div className="mb-2 flex items-start justify-between gap-2">
@@ -203,11 +232,27 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
                   >
                     {score}/10
                   </span>
-                  <span
-                    className={`mt-1 inline-block rounded-full px-3 py-1 text-[15px] font-bold ${pill.className}`}
-                  >
-                    {pill.text}
-                  </span>
+                  {peakVariant === "spice" ? (
+                    <span
+                      className="mt-1 inline-block animate-bounce rounded-full px-4 py-1.5 text-[15px] font-bold text-white"
+                      style={PEAK_SPICE_STYLE}
+                    >
+                      {pill.text}
+                    </span>
+                  ) : peakVariant === "gold" ? (
+                    <span
+                      className="mt-1 inline-block animate-bounce rounded-full px-4 py-1.5 text-[15px] font-bold text-black"
+                      style={PEAK_GOLD_STYLE}
+                    >
+                      {pill.text}
+                    </span>
+                  ) : (
+                    <span
+                      className={`mt-1 inline-block rounded-full px-3 py-1 text-[15px] font-bold ${pill.className}`}
+                    >
+                      {pill.text}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/[0.07]">
