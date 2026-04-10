@@ -23,8 +23,8 @@ const METRICS = [
   },
   {
     key: "messFactor" as const,
-    label: "Mess Factor",
-    emoji: "🙈",
+    label: "Napkin Alert",
+    emoji: "",
     comments: [
       "Eat with one hand, no problem",
       "Better grab extra napkins",
@@ -81,6 +81,28 @@ function getBarColour(score: number): string {
   return "bg-slate-500/60";
 }
 
+function NapkinAlertBadge({ messFactor }: { messFactor: number }) {
+  if (messFactor >= 7) {
+    return (
+      <span className="shrink-0 rounded-full bg-green-700 px-3 py-1 text-[15px] font-bold text-white">
+        Clean Eat
+      </span>
+    );
+  }
+  if (messFactor >= 4) {
+    return (
+      <span className="shrink-0 rounded-full bg-amber-600 px-3 py-1 text-[15px] font-bold text-white">
+        Bring Napkins
+      </span>
+    );
+  }
+  return (
+    <span className="shrink-0 rounded-full bg-red-700 px-3 py-1 text-[15px] font-bold text-white">
+      Dangerous! Wear Old Clothes
+    </span>
+  );
+}
+
 function MetricBadge({ score, animated }: { score: number; animated: boolean }) {
   if (!animated) return null;
   if (score === 10) {
@@ -135,22 +157,33 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
         {METRICS.map(({ key, label, emoji, comments }) => {
           const score = scores[key];
           const commentIdx = getCommentIndex(score);
+          const isNapkinAlert = key === "messFactor";
           return (
             <div key={key}>
               <div className="flex items-start justify-between mb-2 gap-2">
                 <div className="flex items-center gap-2 min-w-0">
-                  <span className="text-xl shrink-0">{emoji}</span>
+                  {emoji ? (
+                    <span className="text-xl shrink-0">{emoji}</span>
+                  ) : (
+                    <span className="inline-block w-7 shrink-0 text-xl" aria-hidden />
+                  )}
                   <div className="min-w-0">
                     <div className="flex items-center flex-wrap gap-1">
                       <p className="text-sm font-semibold text-sf-cream">{label}</p>
-                      <MetricBadge score={score} animated={animated} />
+                      {!isNapkinAlert ? (
+                        <MetricBadge score={score} animated={animated} />
+                      ) : null}
                     </div>
                     <p className="text-[15px] text-sf-cream/45 italic mt-0.5">{comments[commentIdx]}</p>
                   </div>
                 </div>
-                <span className={`text-sm font-bold shrink-0 ${score === 10 ? "text-amber-400" : score >= 8 ? "text-sf-primary" : "text-sf-cream/60"}`}>
-                  {score}/10
-                </span>
+                {isNapkinAlert ? (
+                  <NapkinAlertBadge messFactor={scores.messFactor} />
+                ) : (
+                  <span className={`text-sm font-bold shrink-0 ${score === 10 ? "text-amber-400" : score >= 8 ? "text-sf-primary" : "text-sf-cream/60"}`}>
+                    {score}/10
+                  </span>
+                )}
               </div>
               <div className="h-2.5 w-full rounded-full bg-white/[0.07] overflow-hidden">
                 <div
