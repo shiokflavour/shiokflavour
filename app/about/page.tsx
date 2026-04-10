@@ -40,11 +40,6 @@ export default function AboutPage() {
                 className="fire-glow"
                 style={{width:'min(180px,30vw)',height:'min(180px,30vw)',objectFit:'contain'}}
               />
-              <img
-                src="/images/primary_SF_transparent.png"
-                alt="ShiokFlavour"
-                style={{width:'min(280px,50vw)',height:'auto',objectFit:'contain'}}
-              />
             </div>
             <p className="text-[15px] font-semibold uppercase tracking-[0.3em] text-sf-primary mb-6">
               About ShiokFlavour
