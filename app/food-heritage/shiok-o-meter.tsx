@@ -92,11 +92,18 @@ function pillSpiceHit(score: number): { text: string; className: string } {
   return { text: "Call the Ambulance", className: "bg-red-700 text-white" };
 }
 
-/** invertedMess = 10 - messFactor. Badge uses invertedMess; x/10 shows raw messFactor. */
-function pillNapkinAlert(messFactor: number): { text: string; className: string } {
+/** invertedMess = 10 - messFactor (higher inverted = cleaner / easier to eat). x/10 shows raw messFactor. */
+function napkinTier(messFactor: number): "clean" | "napkins" | "dangerous" {
   const invertedMess = 10 - messFactor;
-  if (invertedMess <= 3) return { text: "Clean Eat", className: "bg-green-700 text-white" };
-  if (invertedMess <= 6) return { text: "Bring Napkins", className: "bg-amber-600 text-white" };
+  if (invertedMess >= 8) return "clean";
+  if (invertedMess >= 4 && invertedMess <= 6) return "napkins";
+  return "dangerous";
+}
+
+function pillNapkinAlert(messFactor: number): { text: string; className: string } {
+  const tier = napkinTier(messFactor);
+  if (tier === "clean") return { text: "Clean Eat", className: "bg-green-700 text-white" };
+  if (tier === "napkins") return { text: "Bring Napkins", className: "bg-amber-600 text-white" };
   return { text: "Dangerous! Wear Old Clothes", className: "bg-red-700 text-white" };
 }
 
@@ -152,10 +159,8 @@ function getPeakBadgeVariant(key: MetricKey, scores: Scores): "none" | "spice" |
   switch (key) {
     case "spiceHit":
       return scores.spiceHit >= 9 ? "spice" : "none";
-    case "messFactor": {
-      const invertedMess = 10 - scores.messFactor;
-      return invertedMess >= 7 ? "gold" : "none";
-    }
+    case "messFactor":
+      return napkinTier(scores.messFactor) === "dangerous" ? "gold" : "none";
     case "flavourDepth":
       return scores.flavourDepth >= 9 ? "gold" : "none";
     case "queueGame":
