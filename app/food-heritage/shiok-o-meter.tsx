@@ -92,10 +92,11 @@ function pillSpiceHit(score: number): { text: string; className: string } {
   return { text: "Call the Ambulance", className: "bg-red-700 text-white" };
 }
 
-/** invertedScore = 10 - messFactor; lower messFactor = messier → higher inverted = worse mess */
-function pillNapkinAlert(invertedScore: number): { text: string; className: string } {
-  if (invertedScore <= 3) return { text: "Clean Eat", className: "bg-green-700 text-white" };
-  if (invertedScore <= 6) return { text: "Bring Napkins", className: "bg-amber-600 text-white" };
+/** invertedMess = 10 - messFactor. Badge uses invertedMess; x/10 shows raw messFactor. */
+function pillNapkinAlert(messFactor: number): { text: string; className: string } {
+  const invertedMess = 10 - messFactor;
+  if (invertedMess <= 3) return { text: "Clean Eat", className: "bg-green-700 text-white" };
+  if (invertedMess <= 6) return { text: "Bring Napkins", className: "bg-amber-600 text-white" };
   return { text: "Dangerous! Wear Old Clothes", className: "bg-red-700 text-white" };
 }
 
@@ -113,12 +114,11 @@ function pillQueueGame(score: number): { text: string; className: string } {
   return { text: "Die Die Must Queue", className: "bg-red-700 text-white" };
 }
 
-/** Higher = better value (bands aligned with existing copy; spec was truncated in brief) */
 function pillShiokValue(score: number): { text: string; className: string } {
-  if (score <= 3) return { text: "Aiyah, A Bit Ex Leh", className: "bg-white/10 text-white/60" };
-  if (score <= 6) return { text: "Fair Price Lah", className: "bg-amber-600 text-white" };
-  if (score <= 8) return { text: "Money Well Spent", className: "bg-orange-600 text-white" };
-  return { text: "Best Dollar in Singapore", className: "bg-sf-primary text-white" };
+  if (score <= 3) return { text: "Aiyah Ex Leh", className: "bg-red-700 text-white" };
+  if (score <= 6) return { text: "Can Accept", className: "bg-amber-600 text-white" };
+  if (score <= 8) return { text: "Good Value", className: "bg-green-700 text-white" };
+  return { text: "Steady Pom Pi Pi", className: "bg-sf-primary text-white" };
 }
 
 function getMetricPill(key: MetricKey, scores: Scores): { text: string; className: string } {
@@ -127,7 +127,7 @@ function getMetricPill(key: MetricKey, scores: Scores): { text: string; classNam
     case "spiceHit":
       return pillSpiceHit(s);
     case "messFactor":
-      return pillNapkinAlert(10 - scores.messFactor);
+      return pillNapkinAlert(scores.messFactor);
     case "flavourDepth":
       return pillFlavourDepth(s);
     case "queueGame":
@@ -160,16 +160,16 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
     return () => observer.disconnect();
   }, []);
 
-  const avgScore = Math.round(
+  const overallScore = Math.round(
     ((scores.spiceHit +
       scores.messFactor +
       scores.flavourDepth +
       scores.queueGame +
       scores.shiokValue) /
-      5) *
-      10,
+      50) *
+      100,
   );
-  const overall = getOverallLabel(avgScore);
+  const overall = getOverallLabel(overallScore);
 
   return (
     <section ref={ref}>
@@ -226,14 +226,14 @@ export function ShiokOMeter({ scores }: { scores: Scores }) {
       </div>
 
       <div
-        className={`mt-8 flex items-center justify-between rounded-2xl border px-6 py-5 ${avgScore >= 90 ? "border-amber-400/40 bg-amber-400/10" : "border-sf-primary/30 bg-sf-primary/10"}`}
+        className={`mt-8 flex items-center justify-between rounded-2xl border px-6 py-5 ${overallScore >= 90 ? "border-amber-400/40 bg-amber-400/10" : "border-sf-primary/30 bg-sf-primary/10"}`}
       >
         <div>
           <p className="text-[15px] font-bold uppercase tracking-widest text-sf-cream/50">Overall Shiok Score</p>
           <p className={`mt-1 text-base font-bold ${overall.colour}`}>{overall.label}</p>
         </div>
-        <div className={`text-4xl font-bold leading-none ${avgScore >= 90 ? "text-amber-400" : "text-sf-primary"}`}>
-          {animated ? avgScore : 0}
+        <div className={`text-4xl font-bold leading-none ${overallScore >= 90 ? "text-amber-400" : "text-sf-primary"}`}>
+          {overallScore}
           <span className="text-sm font-normal text-sf-cream/40">/100</span>
         </div>
       </div>
