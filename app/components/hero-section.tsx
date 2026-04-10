@@ -39,7 +39,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative flex h-[90vh] w-full flex-col justify-center overflow-hidden border-b border-white/5 px-4 py-20 sm:px-6 lg:px-8"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden border-b border-white/5 px-4 py-8 sm:px-6 lg:px-8"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -67,12 +67,16 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.5rem" }}>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "0.75rem" }}>
           <img
             src="/images/sf_icon_transparent.png"
             alt="ShiokFlavour"
             className="fire-glow"
-            style={{ width: "364px", height: "364px", objectFit: "contain" }}
+            style={{
+              width: "min(364px, 40vw)",
+              height: "min(364px, 40vw)",
+              objectFit: "contain",
+            }}
           />
         </div>
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-sf-primary">
