@@ -72,7 +72,7 @@ export function HeroSection() {
             src="/images/sf_icon_transparent.png"
             alt="ShiokFlavour"
             className="fire-glow"
-            style={{ width: "280px", height: "280px", objectFit: "contain" }}
+            style={{ width: "364px", height: "364px", objectFit: "contain" }}
           />
         </div>
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-sf-primary">
