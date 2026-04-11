@@ -39,7 +39,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
     stops: 8,
     bestTime: "Saturday or Sunday, start by 8.30am",
     difficulty: "Easy",
-    heroImage: "/images/food/laksa.jpg",
+    heroImage: "/images/trails/katong/328-katong-laksa.jpg",
     intro:
       "Katong is not just a neighbourhood. It is a living argument about what Singapore actually is.\n\nAlong this one stretch of East Coast Road and Joo Chiat, you will eat the breakfast that Singaporeans have been eating for a hundred years, walk past shophouses that have not changed since the 1920s, and sit down to the laksa that made this postcode famous. You will finish full, slightly sweaty, and considerably more informed about why people who grow up in the East never want to leave.\n\nThis trail runs from East Coast Road into Joo Chiat and back. Start by 8.30am. Bring cash. Wear comfortable shoes.",
     pullQuote:
@@ -59,7 +59,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         ],
         tip: "Open since 1925. The ceiling fans are original. The marble tables are original. The kaya recipe is original. Sit slowly. Do not look at your phone. This is the right way to start a morning in Singapore.",
         duration: "30–40 mins",
-        image: "/images/food/kaya-toast.jpg",
+        image: "/images/trails/katong/chin-mee-chin.jpg",
       },
       {
         number: 2,
@@ -75,7 +75,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         ],
         tip: "Ranked the best roti prata in Singapore by multiple independent food writers. Mr Mohgan has been making prata since he was twelve years old. Opens at 6.30am. Closed Wednesdays. There will be a queue. It moves.",
         duration: "20–30 mins",
-        image: "/images/food/roti-prata.jpg",
+        image: "/images/trails/katong/mohgan-prata.jpg",
       },
       {
         number: 3,
@@ -86,7 +86,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         whatToOrder: [],
         tip: "Walk five minutes north to Koon Seng Road. The two rows of Peranakan terrace houses here — pastel coloured, two storeys, ornate ceramic tiles — are among the best preserved in Singapore. Look at the shutters. Look at the tiles. Look at how each house is slightly different from the one next to it. This neighbourhood was designated Singapore's first Heritage Town in 2011. While you're here: the Katong Antique House is at 208 East Coast Road — worth booking in advance for a proper Peranakan artefact tour. Free to walk past, S$20–30 for a guided visit.",
         duration: "15–20 mins",
-        image: "/images/food/ondeh-ondeh.jpg",
+        image: "/images/trails/katong/koon-seng-road.jpg",
       },
       {
         number: 4,
@@ -98,7 +98,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         whatToOrder: [],
         tip: "A Peranakan home turned private museum, filled with family heirlooms, antique porcelain, hand-beaded slippers and colonial-era photographs collected by owner Peter Wee. Best experienced by appointment — call ahead. Free to walk past and admire the facade, S$20–30 for a guided visit. If you book nothing else on this trail, book this.",
         duration: "30–45 mins (by appointment)",
-        image: "/images/food/kaya-toast.jpg",
+        image: "/images/trails/katong/katong-antique-house.jpg",
       },
       {
         number: 5,
@@ -110,7 +110,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         whatToOrder: [],
         tip: "One of Singapore's oldest and most ornate Hindu temples, built in 1855 and dedicated to Lord Ganesha. Free entry, walk-in welcome. Remove your shoes before entering. The gopuram — the intricately carved tower above the entrance — is worth studying closely. This is Singapore in one frame: a century-old Tamil temple, two minutes from a Peranakan kopitiam and a Muslim prata stall.",
         duration: "10–15 mins",
-        image: "/images/food/kaya-toast.jpg",
+        image: "/images/trails/katong/sri-senpaga-temple.jpg",
       },
       {
         number: 6,
@@ -125,7 +125,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         ],
         tip: "Making kueh since 1945. The shophouse has a heritage gallery upstairs — worth a quick look. Downstairs is all business: buy kueh, eat kueh. The kueh pie tee shells are fried fresh. Order more than you think you need. You will want more.",
         duration: "15–20 mins",
-        image: "/images/food/kueh-pie-tee.jpg",
+        image: "/images/trails/katong/kim-choo-kueh.jpg",
       },
       {
         number: 7,
@@ -140,7 +140,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         ],
         tip: "The noodles are cut short so the entire bowl is eaten with just a spoon — no chopsticks, no fork. This is deliberate. The broth should be rich, coconut-heavy, and slightly sweet. The sambal on the side is serious. Beat Gordon Ramsay in a laksa cook-off in 2013. The uncle was not impressed.",
         duration: "20–30 mins",
-        image: "/images/food/laksa.jpg",
+        image: "/images/trails/katong/328-katong-laksa.jpg",
       },
       {
         number: 8,
@@ -155,7 +155,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         ],
         tip: "End the trail with something cold. Birds of Paradise makes artisanal gelato from natural botanicals — no artificial flavours, no commercial syrups. The pandan is made with real pandan leaf. On a Singapore afternoon, after a full morning of eating, this is the only logical conclusion. Sit outside. You earned it.",
         duration: "15–20 mins",
-        image: "/images/food/ondeh-ondeh.jpg",
+        image: "/images/trails/katong/birds-of-paradise.jpg",
       },
     ],
     endNote:
