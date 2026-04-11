@@ -78,8 +78,11 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-12 max-w-2xl">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary">
-            Send Us A Message
+          <p className="text-xs font-semibold tracking-[0.2em] text-sf-primary uppercase mb-2">
+            This Counter Is Open
+          </p>
+          <p className="text-white/70 text-lg italic mb-6">
+            Got something shiok to share?
           </p>
           <form
             action="https://formspree.io/f/xjgpngvb"
