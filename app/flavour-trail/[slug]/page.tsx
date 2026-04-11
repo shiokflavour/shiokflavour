@@ -233,14 +233,35 @@ export default async function TrailPage({ params }: Props) {
         <p className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
           End Of Trail
         </p>
-        {trail.endNote.split("\n\n").map((para, i) => (
-          <p
-            key={i}
-            className="mb-6 text-base leading-relaxed text-sf-muted sm:text-lg"
-          >
-            {para}
-          </p>
-        ))}
+        {trail.endNote.split("\n\n").map((para, i) => {
+          if (para.startsWith("—")) {
+            return (
+              <div key={i} className="mt-10 border-t border-white/10 pt-8">
+                <p className="text-white/60 text-sm leading-relaxed whitespace-pre-line">
+                  {para}
+                </p>
+              </div>
+            );
+          }
+          if (para.startsWith("Enjoy this trail?")) {
+            return (
+              <div
+                key={i}
+                className="mt-6 rounded-2xl border border-white/5 bg-[#1a1a1a] p-6"
+              >
+                <p className="text-sm leading-relaxed text-white/70">{para}</p>
+              </div>
+            );
+          }
+          return (
+            <p
+              key={i}
+              className="mb-6 text-base leading-relaxed text-sf-muted sm:text-lg"
+            >
+              {para}
+            </p>
+          );
+        })}
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
