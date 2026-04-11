@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/app/components/site-header";
 import { SiteFooter } from "@/app/components/site-footer";
@@ -35,30 +34,90 @@ export default function DiscoverPage() {
           {/* Pillar 1 — The Flavour Files */}
           <Link
             href="/blog"
-            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-sf-primary/50 sm:h-96"
+            className="group relative rounded-2xl overflow-hidden cursor-pointer block"
+            style={{
+              position: "relative",
+              height: "380px",
+              background: "#1a1a1a",
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
           >
-            <Image
+            <img
               src="/images/food/nasi-lemak.jpg"
-              alt=""
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
-              sizes="100vw"
+              alt="The Flavour Files"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                opacity: 0.5,
+              }}
             />
-            <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/70 to-black/30" />
-            <div className="absolute inset-0 z-20 flex flex-col justify-center px-8 sm:px-12">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 100%)",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                padding: "3rem",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  letterSpacing: "0.2em",
+                  color: "#f97316",
+                  textTransform: "uppercase",
+                  marginBottom: "12px",
+                }}
+              >
                 Pillar 01 — Articles & Guides
               </p>
-              <h2 className="mb-4 text-4xl font-bold text-white transition-colors duration-200 group-hover:text-sf-primary sm:text-5xl">
+              <h2
+                style={{
+                  fontSize: "3rem",
+                  fontWeight: 800,
+                  color: "white",
+                  marginBottom: "16px",
+                  lineHeight: 1.1,
+                }}
+              >
                 The Flavour Files
               </h2>
-              <p className="mb-6 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  color: "rgba(255,255,255,0.7)",
+                  maxWidth: "500px",
+                  lineHeight: 1.6,
+                  marginBottom: "24px",
+                }}
+              >
                 Stories, guides and opinions from the hawker centre floor. For
                 the curious traveller and the proud local.
               </p>
-              <div className="flex items-center gap-3">
-                <div className="h-px w-8 bg-sf-primary" />
-                <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
+              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                <div style={{ width: "32px", height: "1px", background: "#f97316" }} />
+                <span
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: 700,
+                    color: "#f97316",
+                    letterSpacing: "0.15em",
+                    textTransform: "uppercase",
+                  }}
+                >
                   Read Now
                 </span>
               </div>
@@ -68,30 +127,90 @@ export default function DiscoverPage() {
           {/* Pillar 2 — Flavour Trail */}
           <Link
             href="/flavour-trail"
-            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-sf-primary/50 sm:h-96"
+            className="group relative rounded-2xl overflow-hidden cursor-pointer block"
+            style={{
+              position: "relative",
+              height: "380px",
+              background: "#1a1a1a",
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
           >
-            <Image
+            <img
               src="/images/food/satay.jpg"
-              alt=""
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
-              sizes="100vw"
+              alt="Flavour Trail"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                opacity: 0.5,
+              }}
             />
-            <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/70 to-black/30" />
-            <div className="absolute inset-0 z-20 flex flex-col justify-center px-8 sm:px-12">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 100%)",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                padding: "3rem",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  letterSpacing: "0.2em",
+                  color: "#f97316",
+                  textTransform: "uppercase",
+                  marginBottom: "12px",
+                }}
+              >
                 Pillar 02 — Walking Food Routes
               </p>
-              <h2 className="mb-4 text-4xl font-bold text-white transition-colors duration-200 group-hover:text-sf-primary sm:text-5xl">
+              <h2
+                style={{
+                  fontSize: "3rem",
+                  fontWeight: 800,
+                  color: "white",
+                  marginBottom: "16px",
+                  lineHeight: 1.1,
+                }}
+              >
                 Flavour Trail
               </h2>
-              <p className="mb-6 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  color: "rgba(255,255,255,0.7)",
+                  maxWidth: "500px",
+                  lineHeight: 1.6,
+                  marginBottom: "24px",
+                }}
+              >
                 Curated routes through Singapore&apos;s greatest eating streets.
                 Walk, eat, repeat.
               </p>
-              <div className="flex items-center gap-3">
-                <div className="h-px w-8 bg-sf-primary" />
-                <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
+              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                <div style={{ width: "32px", height: "1px", background: "#f97316" }} />
+                <span
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: 700,
+                    color: "#f97316",
+                    letterSpacing: "0.15em",
+                    textTransform: "uppercase",
+                  }}
+                >
                   Explore Trails
                 </span>
               </div>
@@ -101,30 +220,90 @@ export default function DiscoverPage() {
           {/* Pillar 3 — Food Heritage */}
           <Link
             href="/food-heritage"
-            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-sf-primary/50 sm:h-96"
+            className="group relative rounded-2xl overflow-hidden cursor-pointer block"
+            style={{
+              position: "relative",
+              height: "380px",
+              background: "#1a1a1a",
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
           >
-            <Image
-              src="/images/food/laksa.jpg"
-              alt=""
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
-              sizes="100vw"
+            <img
+              src="/images/food/ondeh-ondeh.jpg"
+              alt="Food Heritage"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                opacity: 0.5,
+              }}
             />
-            <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/70 to-black/30" />
-            <div className="absolute inset-0 z-20 flex flex-col justify-center px-8 sm:px-12">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 100%)",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                padding: "3rem",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  letterSpacing: "0.2em",
+                  color: "#f97316",
+                  textTransform: "uppercase",
+                  marginBottom: "12px",
+                }}
+              >
                 Pillar 03 — Heritage & Culture
               </p>
-              <h2 className="mb-4 text-4xl font-bold text-white transition-colors duration-200 group-hover:text-sf-primary sm:text-5xl">
+              <h2
+                style={{
+                  fontSize: "3rem",
+                  fontWeight: 800,
+                  color: "white",
+                  marginBottom: "16px",
+                  lineHeight: 1.1,
+                }}
+              >
                 Food Heritage
               </h2>
-              <p className="mb-6 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  color: "rgba(255,255,255,0.7)",
+                  maxWidth: "500px",
+                  lineHeight: 1.6,
+                  marginBottom: "24px",
+                }}
+              >
                 The dishes that built Singapore. UNESCO recognised. Deeply human.
                 One story at a time.
               </p>
-              <div className="flex items-center gap-3">
-                <div className="h-px w-8 bg-sf-primary" />
-                <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
+              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                <div style={{ width: "32px", height: "1px", background: "#f97316" }} />
+                <span
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: 700,
+                    color: "#f97316",
+                    letterSpacing: "0.15em",
+                    textTransform: "uppercase",
+                  }}
+                >
                   Discover Dishes
                 </span>
               </div>
