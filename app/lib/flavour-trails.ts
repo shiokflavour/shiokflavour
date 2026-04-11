@@ -2,6 +2,7 @@ export type TrailStop = {
   number: number;
   name: string;
   type: "eat" | "drink" | "eat & drink" | "walk" | "experience";
+  intro: string;
   address: string;
   mapsUrl: string;
   whatToOrder: string[];
@@ -49,6 +50,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 1,
         name: "Chin Mee Chin Confectionery",
         type: "eat & drink",
+        intro:
+          "One of the last surviving Hainanese kopitiams in Singapore. The charcoal-grilled kaya toast arrives with a cold slab of butter that melts on contact — the kaya underneath is house-made, fragrant with pandan and coconut. The kopi is thick, dark, and slightly sweet in a way that no chain coffee shop has ever managed to replicate. This is the breakfast Singapore was built on.",
         address: "204 East Coast Road, Singapore 428903",
         mapsUrl:
           "https://maps.google.com/?q=Chin+Mee+Chin+Confectionery+Singapore",
@@ -65,6 +68,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 2,
         name: "Mr & Mrs Mohgan's Super Crispy Roti Prata",
         type: "eat",
+        intro:
+          "Mr Mohgan has been making prata since he was twelve years old. That is over forty years of muscle memory in every flick of the wrist. The result is a flatbread with shatteringly crisp edges and a soft, layered interior — the kind you keep tearing pieces off even when you think you are done. Paired with fish curry that is bright, slightly sour, and deeply spiced. This is the best roti prata in Singapore. Many people who have eaten a lot of prata will tell you so.",
         address: "Tin Yeang Restaurant, 300 Joo Chiat Road, Singapore 427551",
         mapsUrl:
           "https://maps.google.com/?q=Mr+Mrs+Mohgan+Roti+Prata+Joo+Chiat",
@@ -81,6 +86,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 3,
         name: "Koon Seng Road Heritage Walk",
         type: "walk",
+        intro:
+          "Step off East Coast Road and into Koon Seng Road for five minutes. The two rows of Peranakan terrace houses here — pastel-coloured, two storeys, ornate ceramic tiles, each one slightly different from the one next door — are among the finest preserved examples of Straits Chinese architecture in Southeast Asia. This is also Singapore's first designated Heritage Town. You will not find this in the brochure. Walk slowly.",
         address: "Koon Seng Road, Singapore 427037",
         mapsUrl: "https://maps.google.com/?q=Koon+Seng+Road+Singapore",
         whatToOrder: [],
@@ -92,6 +99,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 4,
         name: "Katong Antique House",
         type: "experience",
+        intro:
+          "Behind the facade of a conserved Peranakan shophouse on East Coast Road is one of the most intimate museum experiences in Singapore. Owner Peter Wee has spent decades collecting family heirlooms — hand-beaded slippers, colonial-era photographs, porcelain, furniture — each piece with a story. This is not a curated museum. It is a family home that happens to be full of extraordinary things. Worth every minute of the visit.",
         address: "208 East Coast Road, Singapore 428903",
         mapsUrl:
           "https://maps.google.com/?q=Katong+Antique+House+208+East+Coast+Road+Singapore",
@@ -104,6 +113,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 5,
         name: "Sri Senpaga Vinayagar Temple",
         type: "experience",
+        intro:
+          "Built in 1855 and dedicated to Lord Ganesha, this is one of Singapore's oldest Hindu temples and arguably its most ornate. The gopuram — the intricately carved tower above the entrance — rises seven tiers above the street, dense with sculpted figures. Remove your shoes before entering. Stand in front of it and look up. This is Singapore in one frame: a Tamil temple from 1855, two minutes from a Peranakan kopitiam and a Muslim prata stall, on the same street.",
         address: "19 Ceylon Road, Singapore 429006",
         mapsUrl:
           "https://maps.google.com/?q=Sri+Senpaga+Vinayagar+Temple+Ceylon+Road+Singapore",
@@ -116,6 +127,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 6,
         name: "Kim Choo Kueh Chang",
         type: "eat",
+        intro:
+          "Making kueh since 1945 out of the same East Coast Road shophouse. The kueh pie tee shells are fried fresh — small crispy cups filled with braised turnip, prawn and a drizzle of dark sauce. The kueh dadar is a pandan crepe wrapped around grated coconut and palm sugar, green and fragrant and gone in two bites. These are the snacks that Peranakan families have been making for generations. Buy more than you think you need.",
         address: "109 East Coast Road, Singapore 428800",
         mapsUrl: "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+Katong",
         whatToOrder: [
@@ -131,6 +144,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 7,
         name: "328 Katong Laksa",
         type: "eat",
+        intro:
+          "This is the laksa that made Katong famous. A rich coconut curry broth — thick, slightly sweet, deeply spiced — served with short-cut rice noodles, plump prawns, cockles and fish cake. The noodles are cut short deliberately so the entire bowl is eaten with just a spoon. No chopsticks. No fork. In 2013 this stall beat Gordon Ramsay in a laksa cook-off on television. The uncle at the stall was not particularly impressed. The broth has not changed.",
         address: "51 East Coast Road, Singapore 428770",
         mapsUrl: "https://maps.google.com/?q=328+Katong+Laksa+East+Coast+Road",
         whatToOrder: [
@@ -146,6 +161,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 8,
         name: "Birds of Paradise Gelato",
         type: "eat",
+        intro:
+          "End here. Birds of Paradise makes artisanal gelato using real botanical ingredients — actual pandan leaf, white chrysanthemum, lychee, blue ginger. No artificial flavours. No commercial syrups. The pandan is floral, fragrant and unmistakably Southeast Asian in a way that will make you understand why Singaporeans are so possessive about this leaf. On a Singapore afternoon, after a full morning of eating through Katong, a scoop of this is the only logical conclusion.",
         address: "63 East Coast Road, Singapore 428776",
         mapsUrl: "https://maps.google.com/?q=Birds+of+Paradise+Gelato+Katong",
         whatToOrder: [

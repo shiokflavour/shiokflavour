@@ -164,6 +164,15 @@ export default async function TrailPage({ params }: Props) {
                       </a>
                     </div>
 
+                    {/* Intro — orange accent bar */}
+                    {stop.intro && (
+                      <div className="border-l-4 border-sf-primary pl-4 mb-5 mt-4">
+                        <p className="text-white/80 text-sm sm:text-base leading-relaxed">
+                          {stop.intro}
+                        </p>
+                      </div>
+                    )}
+
                     {/* What to order */}
                     {stop.whatToOrder.length > 0 && (
                       <div className="mb-4 rounded-xl border border-white/5 bg-[#1a1a1a] p-5">
