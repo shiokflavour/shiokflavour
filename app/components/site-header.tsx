@@ -5,7 +5,12 @@ import { usePathname } from "next/navigation";
 import { BrandLogoLink } from "./brand-logo";
 import { MAIN_NAV_LINKS } from "./site-nav";
 
-function navLinkClass(active: boolean) {
+function linkClassName(active: boolean, isDiscover: boolean) {
+  if (isDiscover) {
+    return active
+      ? "text-sm font-semibold text-sf-primary transition-colors"
+      : "text-sm font-semibold text-white transition-colors";
+  }
   return active
     ? "text-sm font-semibold text-sf-primary transition-colors"
     : "text-sm text-sf-muted transition-colors hover:text-white";
@@ -24,11 +29,12 @@ export function SiteHeader() {
         <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
           {MAIN_NAV_LINKS.map(({ href, label }) => {
             const active = pathname === href;
+            const isDiscover = href === "/discover";
             return (
               <li key={label}>
                 <Link
                   href={href}
-                  className={`${navLinkClass(active)} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary`}
+                  className={`${linkClassName(active, isDiscover)} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary`}
                 >
                   {label}
                 </Link>
