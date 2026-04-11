@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { SiteHeader } from "@/app/components/site-header";
+import { SiteFooter } from "../components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import {
   DRINK_MODIFIERS,
@@ -482,6 +483,7 @@ export default function HawkerGuidePage() {
           </div>
         )}
       </div>
+      <SiteFooter />
     </>
   );
 }

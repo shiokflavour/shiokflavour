@@ -8,7 +8,7 @@ export function BrandLogo() {
       alt="ShiokFlavour"
       width={180}
       height={32}
-      className="h-8 w-auto object-contain"
+      className="h-10 w-auto object-contain"
       priority
     />
   );

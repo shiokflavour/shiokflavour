@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "../components/site-header";
+import { SiteFooter } from "../components/site-footer";
 import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
@@ -167,6 +168,7 @@ export default function FoodHeritagePage() {
           })}
         </div>
         </div>
+        <SiteFooter />
       </div>
     );
   }
@@ -299,6 +301,7 @@ export default function FoodHeritagePage() {
           ))}
         </div>
       </section>
+      <SiteFooter />
     </div>
   );
 }
