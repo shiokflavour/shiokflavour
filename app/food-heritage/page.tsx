@@ -257,7 +257,7 @@ function FoodHeritagePageContent() {
               </div>
               <Link
                 href={`/food-heritage?category=${category.slug}`}
-                className="mb-1 hidden flex-shrink-0 items-center gap-2 text-sm font-semibold text-sf-primary hover:underline sm:flex"
+                className="mb-1 flex flex-shrink-0 items-center gap-2 text-sm font-semibold text-sf-primary hover:underline"
               >
                 Explore all {category.dishCount} dishes
                 <svg
@@ -283,6 +283,31 @@ function FoodHeritagePageContent() {
               className="hide-scrollbar flex gap-4 overflow-x-auto pb-4"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
+              <Link
+                href={`/food-heritage?category=${category.slug}`}
+                className="group flex h-36 w-48 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-white/10 bg-[#1a1a1a] transition-all hover:border-sf-primary/50 sm:h-44 sm:w-56"
+              >
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-sf-primary transition-all group-hover:bg-sf-primary">
+                  <svg
+                    className="h-4 w-4 text-sf-primary transition-colors group-hover:text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
+                <p className="text-center text-sm font-semibold text-white">
+                  See all {category.dishCount} dishes
+                </p>
+                <p className="mt-1 text-xs text-white/40">{category.name}</p>
+              </Link>
+
               {category.dishes.map((dish) => (
                 <Link
                   key={dish.slug}
@@ -317,31 +342,6 @@ function FoodHeritagePageContent() {
                   </p>
                 </Link>
               ))}
-
-              <Link
-                href={`/food-heritage?category=${category.slug}`}
-                className="group flex h-36 w-48 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-white/10 bg-[#1a1a1a] transition-all hover:border-sf-primary/50 sm:h-44 sm:w-56"
-              >
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-sf-primary transition-all group-hover:bg-sf-primary">
-                  <svg
-                    className="h-4 w-4 text-sf-primary transition-colors group-hover:text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </div>
-                <p className="text-center text-sm font-semibold text-white">
-                  See all {category.dishCount} dishes
-                </p>
-                <p className="mt-1 text-xs text-white/40">{category.name}</p>
-              </Link>
             </div>
           </div>
         </section>
