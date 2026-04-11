@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import type { ReactNode } from "react";
 import { SiteHeader } from "@/app/components/site-header";
 import { SiteFooter } from "@/app/components/site-footer";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
@@ -27,16 +26,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function parseInline(text: string): ReactNode {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return <strong key={i}>{part.slice(2, -2)}</strong>;
-    }
-    return part;
-  });
-}
-
 function renderArticleBody(markdown: string) {
   const blocks = markdown.split(/\n\n+/).filter((b) => b.trim());
   return blocks.map((block, i) => {
@@ -45,10 +34,51 @@ function renderArticleBody(markdown: string) {
       return (
         <h2
           key={i}
-          className="mt-10 scroll-mt-24 text-2xl font-bold text-white first:mt-0 sm:text-3xl"
+          className="mt-16 mb-6 scroll-mt-24 border-b border-white/10 pb-3 text-2xl font-bold text-white first:mt-0 sm:text-3xl"
         >
-          {t.slice(3)}
+          {t.replace(/^## /, "")}
         </h2>
+      );
+    }
+    if (t.startsWith("![")) {
+      const match = t.match(/!\[.*?\]\((.*?)\)/);
+      if (match) {
+        return (
+          <div key={i} className="my-8 overflow-hidden rounded-2xl">
+            <img
+              src={match[1]}
+              alt=""
+              className="h-64 w-full object-cover sm:h-80"
+            />
+          </div>
+        );
+      }
+    }
+    if (t.startsWith("---")) {
+      return <div key={i} className="my-8 border-t border-white/10" />;
+    }
+    if (t.startsWith("> ")) {
+      return (
+        <div
+          key={i}
+          className="my-6 rounded-xl border-l-4 border-sf-primary bg-[#1a1a1a] px-6 py-4"
+        >
+          <p className="text-sm font-medium text-sf-muted">
+            {t.replace(/^> /, "")}
+          </p>
+        </div>
+      );
+    }
+    if (t.startsWith("**Where to find it:**")) {
+      return (
+        <div
+          key={i}
+          className="my-4 rounded-xl border border-sf-primary/20 bg-sf-primary/10 px-5 py-4"
+        >
+          <p className="text-sm font-semibold text-sf-primary">
+            📍 {t.replace("**Where to find it:**", "Where to find it:")}
+          </p>
+        </div>
       );
     }
     const lines = t.split("\n").filter((l) => l.trim());
@@ -62,14 +92,39 @@ function renderArticleBody(markdown: string) {
           className="my-4 list-disc space-y-2 pl-6 text-sf-muted marker:text-sf-primary"
         >
           {lines.map((l, j) => (
-            <li key={j}>{parseInline(l.replace(/^-\s+/, "").trim())}</li>
+            <li key={j}>
+              {l
+                .replace(/^-\s+/, "")
+                .trim()
+                .split("**")
+                .map((part, k) =>
+                  k % 2 === 1 ? (
+                    <strong key={k} className="font-semibold text-white">
+                      {part}
+                    </strong>
+                  ) : (
+                    part
+                  ),
+                )}
+            </li>
           ))}
         </ul>
       );
     }
     return (
-      <p key={i} className="my-4 leading-relaxed text-sf-muted">
-        {parseInline(t.replace(/\n/g, " "))}
+      <p
+        key={i}
+        className="mb-6 text-base leading-relaxed text-sf-muted sm:text-lg"
+      >
+        {t.replace(/\n/g, " ").split("**").map((part, j) =>
+          j % 2 === 1 ? (
+            <strong key={j} className="font-semibold text-white">
+              {part}
+            </strong>
+          ) : (
+            part
+          ),
+        )}
       </p>
     );
   });
