@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/app/components/site-header";
 import { SiteFooter } from "@/app/components/site-footer";
@@ -36,11 +37,14 @@ export default function DiscoverPage() {
             href="/blog"
             className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl sm:h-96"
           >
-            <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#1a1a1a] via-[#1a1a1a]/80 to-transparent" />
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/food/char-kway-teow.jpg')" }}
+            <Image
+              src="/images/food/char-kway-teow.jpg"
+              alt=""
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              sizes="100vw"
             />
+            <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/70 to-black/30" />
             <div className="absolute inset-0 z-20 flex flex-col justify-center px-8 sm:px-12">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
                 Pillar 01 — Articles & Guides
@@ -66,11 +70,14 @@ export default function DiscoverPage() {
             href="/flavour-trail"
             className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl sm:h-96"
           >
-            <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#1a1a1a] via-[#1a1a1a]/80 to-transparent" />
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/food/satay.jpg')" }}
+            <Image
+              src="/images/food/satay.jpg"
+              alt=""
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              sizes="100vw"
             />
+            <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/70 to-black/30" />
             <div className="absolute inset-0 z-20 flex flex-col justify-center px-8 sm:px-12">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
                 Pillar 02 — Walking Food Routes
@@ -96,11 +103,14 @@ export default function DiscoverPage() {
             href="/food-heritage"
             className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl sm:h-96"
           >
-            <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#1a1a1a] via-[#1a1a1a]/80 to-transparent" />
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/food/laksa.jpg')" }}
+            <Image
+              src="/images/food/laksa.jpg"
+              alt=""
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              sizes="100vw"
             />
+            <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/70 to-black/30" />
             <div className="absolute inset-0 z-20 flex flex-col justify-center px-8 sm:px-12">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
                 Pillar 03 — Heritage & Culture
