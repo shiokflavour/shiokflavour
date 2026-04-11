@@ -4,14 +4,14 @@ export default function ChopstickDivider() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '40px 0',
+      padding: '56px 0',
       opacity: 0.25
     }}>
       <img
         src="/images/SF_chopstick_transparent.png"
         alt=""
         style={{
-          width: 'min(200px, 40vw)',
+          width: 'min(240px, 40vw)',
           height: 'auto',
           objectFit: 'contain'
         }}
