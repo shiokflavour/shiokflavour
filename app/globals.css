@@ -64,3 +64,37 @@ body {
 .sf-hawker-card-in {
   animation: sf-hawker-card-in 0.45s ease-out both;
 }
+
+@keyframes kenBurns1 {
+  0%   { transform: scale(1) translate(0px, 0px); opacity: 0; }
+  8%   { opacity: 1; }
+  45%  { transform: scale(1.08) translate(-15px, -8px); opacity: 1; }
+  55%  { opacity: 1; }
+  65%  { transform: scale(1.12) translate(-20px, -10px); opacity: 0; }
+  100% { transform: scale(1.12) translate(-20px, -10px); opacity: 0; }
+}
+@keyframes kenBurns2 {
+  0%   { transform: scale(1.05) translate(10px, 5px); opacity: 0; }
+  8%   { opacity: 1; }
+  45%  { transform: scale(1.1) translate(-10px, 8px); opacity: 1; }
+  55%  { opacity: 1; }
+  65%  { transform: scale(1.15) translate(-15px, 10px); opacity: 0; }
+  100% { transform: scale(1.15) translate(-15px, 10px); opacity: 0; }
+}
+@keyframes kenBurns3 {
+  0%   { transform: scale(1.02) translate(-8px, 5px); opacity: 0; }
+  8%   { opacity: 1; }
+  45%  { transform: scale(1.08) translate(12px, -8px); opacity: 1; }
+  55%  { opacity: 1; }
+  65%  { transform: scale(1.12) translate(18px, -12px); opacity: 0; }
+  100% { transform: scale(1.12) translate(18px, -12px); opacity: 0; }
+}
+.kb-img-1a { animation: kenBurns1 12s ease-in-out infinite; }
+.kb-img-1b { animation: kenBurns2 12s ease-in-out infinite; animation-delay: -4s; }
+.kb-img-1c { animation: kenBurns3 12s ease-in-out infinite; animation-delay: -8s; }
+.kb-img-2a { animation: kenBurns2 14s ease-in-out infinite; }
+.kb-img-2b { animation: kenBurns3 14s ease-in-out infinite; animation-delay: -5s; }
+.kb-img-2c { animation: kenBurns1 14s ease-in-out infinite; animation-delay: -9s; }
+.kb-img-3a { animation: kenBurns3 13s ease-in-out infinite; animation-delay: -2s; }
+.kb-img-3b { animation: kenBurns1 13s ease-in-out infinite; animation-delay: -6s; }
+.kb-img-3c { animation: kenBurns2 13s ease-in-out infinite; animation-delay: -10s; }
