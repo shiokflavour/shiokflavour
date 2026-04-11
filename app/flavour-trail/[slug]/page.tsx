@@ -233,30 +233,25 @@ export default async function TrailPage({ params }: Props) {
         <p className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
           End Of Trail
         </p>
-        {trail.endNote.split("\n\n").map((para, i) => {
-          if (para.startsWith("—")) {
+        {trail.endNote.split('\n\n').map((para, i) => {
+          if (para.startsWith('—')) {
             return (
-              <div key={i} className="mt-10 border-t border-white/10 pt-8">
-                <p className="text-white/60 text-sm leading-relaxed whitespace-pre-line">
-                  {para}
-                </p>
+              <div key={i} className="mt-10 pt-8 border-t border-white/10">
+                <p className="text-white/60 text-sm leading-relaxed whitespace-pre-line">{para}</p>
               </div>
             );
           }
-          if (para.startsWith("Enjoy this trail?")) {
+          if (para.startsWith('Enjoy this trail?')) {
             return (
-              <div
-                key={i}
-                className="mt-6 rounded-2xl border border-white/5 bg-[#1a1a1a] p-6"
-              >
-                <p className="text-sm leading-relaxed text-white/70">{para}</p>
+              <div key={i} className="mt-6 bg-[#1a1a1a] rounded-2xl p-6 border border-white/5">
+                <p className="text-white/70 text-sm leading-relaxed">{para}</p>
               </div>
             );
           }
           return (
             <p
               key={i}
-              className="mb-6 text-base leading-relaxed text-sf-muted sm:text-lg"
+              className="text-sf-muted text-base sm:text-lg leading-relaxed mb-6"
             >
               {para}
             </p>

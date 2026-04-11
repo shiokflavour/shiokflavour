@@ -176,6 +176,6 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
       },
     ],
     endNote:
-      "You made it to the end of the trail. And if you ate everything on this list — the kaya toast, the prata, the laksa, the gelato — you now have a very good understanding of why people who grow up in the East never want to leave.\n\nThank you for walking this with us. Every stall on this trail is run by someone who has spent years — sometimes decades — perfecting one thing. When you eat there, you are keeping that alive. That matters more than you know.\n\nCome back hungry. Katong will be ready.\n\nEnjoy this trail? Share it with someone who deserves a good meal. And if you find a stall we missed — write to us. We are always hungry for a good tip.\n\n— The ShiokFlavour Team\nSingapore's hawker heritage, one plate at a time.",
+      'You made it to the end of the trail. And if you ate everything on this list — the kaya toast, the prata, the laksa, the gelato — you now have a very good understanding of why people who grow up in the East never want to leave.\n\nThank you for walking this with us. Every stall on this trail is run by someone who has spent years — sometimes decades — perfecting one thing. When you eat there, you are keeping that alive. That matters more than you know.\n\nCome back hungry. Katong will be ready.\n\nEnjoy this trail? Share it with someone who deserves a good meal. And if you find a stall we missed — write to us. We are always hungry for a good tip.\n\n— The ShiokFlavour Team\nSingapore\'s hawker heritage, one plate at a time.',
   },
 ];
