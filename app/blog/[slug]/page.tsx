@@ -204,7 +204,13 @@ export default async function BlogArticlePage({ params }: Props) {
                 <p className="mb-4 text-sm leading-relaxed text-white/60">
                   Read the full heritage story behind each dish.
                 </p>
-                <div className="flex flex-col gap-2">
+                <div
+                  className="flex max-h-80 flex-col gap-2 overflow-y-auto pr-1"
+                  style={{
+                    scrollbarWidth: "thin",
+                    scrollbarColor: "#f97316 #1a1a1a",
+                  }}
+                >
                   {[
                     {
                       name: "Hainanese Chicken Rice",
@@ -235,6 +241,26 @@ export default async function BlogArticlePage({ params }: Props) {
                       name: "Bak Kut Teh",
                       slug: "bak-kut-teh",
                       img: "/images/food/bak-kut-teh.jpg",
+                    },
+                    {
+                      name: "Chilli Crab",
+                      slug: "chilli-crab",
+                      img: "/images/food/chilli-crab.jpg",
+                    },
+                    {
+                      name: "Hokkien Mee",
+                      slug: "hokkien-mee",
+                      img: "/images/food/hokkien-mee.jpg",
+                    },
+                    {
+                      name: "Ice Kachang",
+                      slug: "ice-kachang",
+                      img: "/images/food/ice-kachang.jpg",
+                    },
+                    {
+                      name: "Kaya Toast",
+                      slug: "kaya-toast",
+                      img: "/images/food/kaya-toast.jpg",
                     },
                   ].map((dish) => (
                     <Link
