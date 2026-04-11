@@ -4,7 +4,7 @@ export default function ChopstickDivider() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '16px 0',
+      padding: '40px 0',
       opacity: 0.25
     }}>
       <img
