@@ -40,7 +40,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
     stops: 8,
     bestTime: "Saturday or Sunday, start by 8.30am",
     difficulty: "Easy",
-    heroImage: "/images/trails/katong/328-katong-laksa.jpg",
+    heroImage: "/images/trails/katong/koon-seng-road.jpg",
     intro:
       "Katong is not just a neighbourhood. It is a living argument about what Singapore actually is.\n\nAlong this one stretch of East Coast Road and Joo Chiat, you will eat the breakfast that Singaporeans have been eating for a hundred years, walk past shophouses that have not changed since the 1920s, and sit down to the laksa that made this postcode famous. You will finish full, slightly sweaty, and considerably more informed about why people who grow up in the East never want to leave.\n\nThis trail runs from East Coast Road into Joo Chiat and back. Start by 8.30am. Bring cash. Wear comfortable shoes.",
     pullQuote:
