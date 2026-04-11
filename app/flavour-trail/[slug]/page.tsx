@@ -124,18 +124,22 @@ export default async function TrailPage({ params }: Props) {
                             ? "bg-sf-primary/20 text-sf-primary"
                             : stop.type === "drink"
                               ? "bg-blue-500/20 text-blue-400"
-                              : stop.type === "walk"
-                                ? "bg-green-500/20 text-green-400"
-                                : "bg-purple-500/20 text-purple-400"
+                              : stop.type === "eat & drink"
+                                ? "bg-amber-500/20 text-amber-400"
+                                : stop.type === "walk"
+                                  ? "bg-green-500/20 text-green-400"
+                                  : "bg-purple-500/20 text-purple-400"
                         }`}
                       >
                         {stop.type === "eat"
                           ? "Eat"
                           : stop.type === "drink"
                             ? "Drink"
-                            : stop.type === "walk"
-                              ? "Walk"
-                              : "Experience"}
+                            : stop.type === "eat & drink"
+                              ? "Eat & Drink"
+                              : stop.type === "walk"
+                                ? "Walk"
+                                : "Experience"}
                       </span>
                       <span className="text-xs text-white/30">{stop.duration}</span>
                     </div>

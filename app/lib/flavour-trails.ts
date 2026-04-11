@@ -1,7 +1,7 @@
 export type TrailStop = {
   number: number;
   name: string;
-  type: 'eat' | 'drink' | 'walk' | 'experience';
+  type: "eat" | "drink" | "eat & drink" | "walk" | "experience";
   address: string;
   mapsUrl: string;
   whatToOrder: string[];
@@ -36,7 +36,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
     region: "East Singapore",
     duration: "Half day (4–5 hours)",
     distance: "2.5km walking",
-    stops: 6,
+    stops: 8,
     bestTime: "Saturday or Sunday, start by 8.30am",
     difficulty: "Easy",
     heroImage: "/images/food/laksa.jpg",
@@ -48,7 +48,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
       {
         number: 1,
         name: "Chin Mee Chin Confectionery",
-        type: "drink",
+        type: "eat & drink",
         address: "204 East Coast Road, Singapore 428903",
         mapsUrl:
           "https://maps.google.com/?q=Chin+Mee+Chin+Confectionery+Singapore",
@@ -90,6 +90,30 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
       },
       {
         number: 4,
+        name: "Katong Antique House",
+        type: "experience",
+        address: "208 East Coast Road, Singapore 428903",
+        mapsUrl:
+          "https://maps.google.com/?q=Katong+Antique+House+208+East+Coast+Road+Singapore",
+        whatToOrder: [],
+        tip: "A Peranakan home turned private museum, filled with family heirlooms, antique porcelain, hand-beaded slippers and colonial-era photographs collected by owner Peter Wee. Best experienced by appointment — call ahead. Free to walk past and admire the facade, S$20–30 for a guided visit. If you book nothing else on this trail, book this.",
+        duration: "30–45 mins (by appointment)",
+        image: "/images/food/kaya-toast.jpg",
+      },
+      {
+        number: 5,
+        name: "Sri Senpaga Vinayagar Temple",
+        type: "experience",
+        address: "19 Ceylon Road, Singapore 429006",
+        mapsUrl:
+          "https://maps.google.com/?q=Sri+Senpaga+Vinayagar+Temple+Ceylon+Road+Singapore",
+        whatToOrder: [],
+        tip: "One of Singapore's oldest and most ornate Hindu temples, built in 1855 and dedicated to Lord Ganesha. Free entry, walk-in welcome. Remove your shoes before entering. The gopuram — the intricately carved tower above the entrance — is worth studying closely. This is Singapore in one frame: a century-old Tamil temple, two minutes from a Peranakan kopitiam and a Muslim prata stall.",
+        duration: "10–15 mins",
+        image: "/images/food/kaya-toast.jpg",
+      },
+      {
+        number: 6,
         name: "Kim Choo Kueh Chang",
         type: "eat",
         address: "109 East Coast Road, Singapore 428800",
@@ -104,7 +128,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         image: "/images/food/kueh-pie-tee.jpg",
       },
       {
-        number: 5,
+        number: 7,
         name: "328 Katong Laksa",
         type: "eat",
         address: "51 East Coast Road, Singapore 428770",
@@ -119,7 +143,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         image: "/images/food/laksa.jpg",
       },
       {
-        number: 6,
+        number: 8,
         name: "Birds of Paradise Gelato",
         type: "eat",
         address: "63 East Coast Road, Singapore 428776",
