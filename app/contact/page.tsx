@@ -76,6 +76,81 @@ export default function ContactPage() {
             </ul>
           </div>
         </div>
+
+        <div className="mt-12 max-w-2xl">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary">
+            Send Us A Message
+          </p>
+          <form
+            action="https://formspree.io/f/xjgpngvb"
+            method="POST"
+            className="space-y-5"
+          >
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div>
+                <label className="mb-2 block text-sm text-sf-muted">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Ah Kow"
+                  className="w-full rounded-xl border border-white/10 bg-[#1a1a1a] px-4 py-3 text-sm text-white placeholder:text-white/20 transition-colors focus:border-sf-primary focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="mb-2 block text-sm text-sf-muted">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="you@email.com"
+                  className="w-full rounded-xl border border-white/10 bg-[#1a1a1a] px-4 py-3 text-sm text-white placeholder:text-white/20 transition-colors focus:border-sf-primary focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm text-sf-muted">Subject</label>
+              <select
+                name="subject"
+                required
+                defaultValue=""
+                className="w-full rounded-xl border border-white/10 bg-[#1a1a1a] px-4 py-3 text-sm text-white transition-colors focus:border-sf-primary focus:outline-none"
+              >
+                <option value="" disabled>
+                  What&apos;s this about?
+                </option>
+                <option value="Stall Tip">I have a stall tip</option>
+                <option value="Missing Dish">Missing heritage dish</option>
+                <option value="Correction">Correction needed</option>
+                <option value="Collaboration">Collaboration / Partnership</option>
+                <option value="General">Just saying hi</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm text-sf-muted">Message</label>
+              <textarea
+                name="message"
+                required
+                rows={5}
+                placeholder="Tell us everything. The more detail the better."
+                className="w-full resize-none rounded-xl border border-white/10 bg-[#1a1a1a] px-4 py-3 text-sm text-white placeholder:text-white/20 transition-colors focus:border-sf-primary focus:outline-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="rounded-xl bg-sf-primary px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-sf-primary/90"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </section>
 
       <SiteFooter />
