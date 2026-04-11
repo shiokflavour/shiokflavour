@@ -8,6 +8,7 @@ import { useState } from "react";
 export function SiteHeader() {
   const pathname = usePathname();
   const [discoverOpen, setDiscoverOpen] = useState(false);
+  const [hawkerGuideOpen, setHawkerGuideOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const isActive = (path: string) =>
@@ -139,16 +140,98 @@ export function SiteHeader() {
               >
                 Hawker Centres
               </Link>
-              <Link
-                href="/hawker-guide"
-                className={`text-sm transition-colors ${
-                  isActive("/hawker-guide")
-                    ? "font-semibold text-sf-primary"
-                    : "text-white/70 hover:text-white"
-                }`}
+              <div
+                className="relative"
+                onMouseEnter={() => setHawkerGuideOpen(true)}
+                onMouseLeave={() => setHawkerGuideOpen(false)}
               >
-                Hawker Guide
-              </Link>
+                <button
+                  type="button"
+                  className={`flex items-center gap-1 text-sm transition-colors ${
+                    isActive("/hawker-guide")
+                      ? "font-semibold text-sf-primary"
+                      : "text-white/70 hover:text-white"
+                  }`}
+                >
+                  Hawker Guide
+                  <svg
+                    className={`h-3 w-3 transition-transform duration-200 ${hawkerGuideOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                {hawkerGuideOpen && (
+                  <div className="absolute left-1/2 top-full w-[480px] -translate-x-1/2 pt-3">
+                    <div className="rounded-2xl border border-white/10 bg-[#1a1a1a] p-6 shadow-2xl">
+                      <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+                        Order Like A Local
+                      </p>
+                      <div className="grid grid-cols-2 gap-3">
+                        <Link
+                          href="/hawker-guide"
+                          className="group rounded-xl p-4 transition-all hover:bg-white/5"
+                        >
+                          <div className="mb-2 text-2xl">🥤</div>
+                          <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
+                            Kopi Decoder
+                          </p>
+                          <p className="text-xs leading-relaxed text-white/50">
+                            Build your perfect kopitiam order
+                          </p>
+                        </Link>
+
+                        <Link
+                          href="/hawker-guide"
+                          className="group rounded-xl p-4 transition-all hover:bg-white/5"
+                        >
+                          <div className="mb-2 text-2xl">📖</div>
+                          <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
+                            Old School Names
+                          </p>
+                          <p className="text-xs leading-relaxed text-white/50">
+                            Tak Kiu, Michael Jackson & more
+                          </p>
+                        </Link>
+
+                        <Link
+                          href="/hawker-guide"
+                          className="group rounded-xl p-4 transition-all hover:bg-white/5"
+                        >
+                          <div className="mb-2 text-2xl">🤝</div>
+                          <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
+                            Hawker Etiquette
+                          </p>
+                          <p className="text-xs leading-relaxed text-white/50">
+                            How to chope, queue and eat right
+                          </p>
+                        </Link>
+
+                        <Link
+                          href="/hawker-guide"
+                          className="group rounded-xl p-4 transition-all hover:bg-white/5"
+                        >
+                          <div className="mb-2 text-2xl">🗣️</div>
+                          <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
+                            Singlish Glossary
+                          </p>
+                          <p className="text-xs leading-relaxed text-white/50">
+                            The local food language decoded
+                          </p>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
               <Link
                 href="/about"
                 className={`text-sm transition-colors ${
@@ -247,6 +330,46 @@ export function SiteHeader() {
                       </p>
                       <p className="text-xs text-white/50">
                         38 dishes, one story at a time
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="mb-6 h-px bg-white/10" />
+
+              <div className="mb-6">
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+                  Hawker Guide
+                </p>
+                <div className="flex flex-col gap-1">
+                  <Link
+                    href="/hawker-guide"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
+                  >
+                    <span className="text-lg">🥤</span>
+                    <div>
+                      <p className="text-sm font-semibold text-white">
+                        Kopi Decoder
+                      </p>
+                      <p className="text-xs text-white/50">
+                        Build your perfect order
+                      </p>
+                    </div>
+                  </Link>
+                  <Link
+                    href="/hawker-guide"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
+                  >
+                    <span className="text-lg">🗣️</span>
+                    <div>
+                      <p className="text-sm font-semibold text-white">
+                        Singlish Glossary
+                      </p>
+                      <p className="text-xs text-white/50">
+                        The local food language
                       </p>
                     </div>
                   </Link>
