@@ -30,150 +30,264 @@ export default function DiscoverPage() {
       <ChopstickDivider />
 
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-32">
-        <div className="flex flex-col gap-6">
-          {/* Card 1 */}
-          <div className="relative rounded-2xl overflow-hidden h-[420px] bg-[#1a1a1a]">
-            <img
-              src="/images/food/nasi-lemak.jpg"
-              alt=""
-              className="kb-img-1a absolute inset-0 h-full w-full object-cover"
-            />
-            <img
-              src="/images/food/laksa.jpg"
-              alt=""
-              className="kb-img-1b absolute inset-0 h-full w-full object-cover"
-            />
-            <img
-              src="/images/food/hokkien-mee.jpg"
-              alt=""
-              className="kb-img-1c absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
-            <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
-            <a href="/blog" className="absolute inset-0 flex items-center px-16">
-              <div className="flex items-center gap-10">
-                <span className="hidden text-[6rem] font-bold leading-none text-sf-primary opacity-30 sm:block">
-                  01
-                </span>
-                <div>
-                  <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
-                    Articles & Guides
-                  </p>
-                  <h2 className="mb-4 text-6xl font-bold text-white">
-                    The Flavour Files
-                  </h2>
-                  <p className="mb-6 max-w-lg text-lg leading-relaxed text-white/65">
-                    Stories, guides and opinions from the hawker centre floor.
-                    For the curious traveller and the proud local.
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="h-px w-8 bg-sf-primary" />
-                    <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
-                      Read Now
-                    </span>
-                  </div>
+        <div className="flex flex-col gap-4">
+          <a
+            href="/blog"
+            className="group block cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:scale-[1.01]"
+            style={{
+              background:
+                "linear-gradient(135deg, #1a1a1a 0%, #2a1a0a 100%)",
+              border: "1px solid rgba(249,115,22,0.2)",
+              minHeight: "200px",
+              padding: "3rem",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+              <span
+                style={{
+                  fontSize: "5rem",
+                  fontWeight: 900,
+                  color: "#f97316",
+                  opacity: 0.15,
+                  lineHeight: 1,
+                  flexShrink: 0,
+                }}
+              >
+                01
+              </span>
+              <div>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    letterSpacing: "0.25em",
+                    color: "#f97316",
+                    textTransform: "uppercase",
+                    marginBottom: "12px",
+                  }}
+                >
+                  Articles & Guides
+                </p>
+                <h2
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: 800,
+                    color: "white",
+                    marginBottom: "12px",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  The Flavour Files
+                </h2>
+                <p
+                  style={{
+                    fontSize: "1.1rem",
+                    color: "rgba(255,255,255,0.6)",
+                    lineHeight: 1.6,
+                    marginBottom: "20px",
+                    maxWidth: "500px",
+                  }}
+                >
+                  Stories, guides and opinions from the hawker centre floor. For
+                  the curious traveller and the proud local.
+                </p>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "12px" }}
+                >
+                  <div
+                    style={{
+                      width: "32px",
+                      height: "1px",
+                      background: "#f97316",
+                    }}
+                  />
+                  <span
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      color: "#f97316",
+                      letterSpacing: "0.15em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Read Now
+                  </span>
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
 
-          {/* Card 2 */}
-          <div className="relative rounded-2xl overflow-hidden h-[420px] bg-[#1a1a1a]">
-            <img
-              src="/images/food/satay.jpg"
-              alt=""
-              className="kb-img-2a absolute inset-0 h-full w-full object-cover"
-            />
-            <img
-              src="/images/food/economy-rice.jpg"
-              alt=""
-              className="kb-img-2b absolute inset-0 h-full w-full object-cover"
-            />
-            <img
-              src="/images/food/bak-kut-teh.jpg"
-              alt=""
-              className="kb-img-2c absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
-            <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
-            <a
-              href="/flavour-trail"
-              className="absolute inset-0 flex items-center px-16"
-            >
-              <div className="flex items-center gap-10">
-                <span className="hidden text-[6rem] font-bold leading-none text-sf-primary opacity-30 sm:block">
-                  02
-                </span>
-                <div>
-                  <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
-                    Walking Food Routes
-                  </p>
-                  <h2 className="mb-4 text-6xl font-bold text-white">
-                    Flavour Trail
-                  </h2>
-                  <p className="mb-6 max-w-lg text-lg leading-relaxed text-white/65">
-                    Curated routes through Singapore&apos;s greatest eating
-                    streets. Walk, eat, repeat.
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="h-px w-8 bg-sf-primary" />
-                    <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
-                      Explore Trails
-                    </span>
-                  </div>
+          <a
+            href="/flavour-trail"
+            className="group block cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:scale-[1.01]"
+            style={{
+              background:
+                "linear-gradient(135deg, #1a1a1a 0%, #0a1a2a 100%)",
+              border: "1px solid rgba(249,115,22,0.2)",
+              minHeight: "200px",
+              padding: "3rem",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+              <span
+                style={{
+                  fontSize: "5rem",
+                  fontWeight: 900,
+                  color: "#f97316",
+                  opacity: 0.15,
+                  lineHeight: 1,
+                  flexShrink: 0,
+                }}
+              >
+                02
+              </span>
+              <div>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    letterSpacing: "0.25em",
+                    color: "#f97316",
+                    textTransform: "uppercase",
+                    marginBottom: "12px",
+                  }}
+                >
+                  Walking Food Routes
+                </p>
+                <h2
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: 800,
+                    color: "white",
+                    marginBottom: "12px",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  Flavour Trail
+                </h2>
+                <p
+                  style={{
+                    fontSize: "1.1rem",
+                    color: "rgba(255,255,255,0.6)",
+                    lineHeight: 1.6,
+                    marginBottom: "20px",
+                    maxWidth: "500px",
+                  }}
+                >
+                  Curated routes through Singapore&apos;s greatest eating
+                  streets. Walk, eat, repeat.
+                </p>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "12px" }}
+                >
+                  <div
+                    style={{
+                      width: "32px",
+                      height: "1px",
+                      background: "#f97316",
+                    }}
+                  />
+                  <span
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      color: "#f97316",
+                      letterSpacing: "0.15em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Explore Trails
+                  </span>
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
 
-          {/* Card 3 */}
-          <div className="relative rounded-2xl overflow-hidden h-[420px] bg-[#1a1a1a]">
-            <img
-              src="/images/food/ondeh-ondeh.jpg"
-              alt=""
-              className="kb-img-3a absolute inset-0 h-full w-full object-cover"
-            />
-            <img
-              src="/images/food/roti-prata.jpg"
-              alt=""
-              className="kb-img-3b absolute inset-0 h-full w-full object-cover"
-            />
-            <img
-              src="/images/food/biryani.jpg"
-              alt=""
-              className="kb-img-3c absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
-            <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
-            <a
-              href="/food-heritage"
-              className="absolute inset-0 flex items-center px-16"
-            >
-              <div className="flex items-center gap-10">
-                <span className="hidden text-[6rem] font-bold leading-none text-sf-primary opacity-30 sm:block">
-                  03
-                </span>
-                <div>
-                  <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
-                    Heritage & Culture
-                  </p>
-                  <h2 className="mb-4 text-6xl font-bold text-white">
-                    Food Heritage
-                  </h2>
-                  <p className="mb-6 max-w-lg text-lg leading-relaxed text-white/65">
-                    The dishes that built Singapore. UNESCO recognised. Deeply
-                    human. One story at a time.
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="h-px w-8 bg-sf-primary" />
-                    <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
-                      Discover Dishes
-                    </span>
-                  </div>
+          <a
+            href="/food-heritage"
+            className="group block cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:scale-[1.01]"
+            style={{
+              background:
+                "linear-gradient(135deg, #1a1a1a 0%, #1a0a0a 100%)",
+              border: "1px solid rgba(249,115,22,0.2)",
+              minHeight: "200px",
+              padding: "3rem",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+              <span
+                style={{
+                  fontSize: "5rem",
+                  fontWeight: 900,
+                  color: "#f97316",
+                  opacity: 0.15,
+                  lineHeight: 1,
+                  flexShrink: 0,
+                }}
+              >
+                03
+              </span>
+              <div>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    letterSpacing: "0.25em",
+                    color: "#f97316",
+                    textTransform: "uppercase",
+                    marginBottom: "12px",
+                  }}
+                >
+                  Heritage & Culture
+                </p>
+                <h2
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: 800,
+                    color: "white",
+                    marginBottom: "12px",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  Food Heritage
+                </h2>
+                <p
+                  style={{
+                    fontSize: "1.1rem",
+                    color: "rgba(255,255,255,0.6)",
+                    lineHeight: 1.6,
+                    marginBottom: "20px",
+                    maxWidth: "500px",
+                  }}
+                >
+                  The dishes that built Singapore. UNESCO recognised. Deeply
+                  human. One story at a time.
+                </p>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "12px" }}
+                >
+                  <div
+                    style={{
+                      width: "32px",
+                      height: "1px",
+                      background: "#f97316",
+                    }}
+                  />
+                  <span
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      color: "#f97316",
+                      letterSpacing: "0.15em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Discover Dishes
+                  </span>
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </section>
 
