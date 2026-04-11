@@ -1,60 +1,84 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { ContactForm } from "../components/contact-form";
-import { SiteFooter } from "../components/site-footer";
-import { SiteHeader } from "../components/site-header";
-
-export const metadata: Metadata = {
-  title: "Contact | ShiokFlavour",
-  description:
-    "Get in touch with ShiokFlavour — questions, partnerships, or hawker stall features.",
-};
+import { SiteHeader } from "@/app/components/site-header";
+import { SiteFooter } from "@/app/components/site-footer";
+import ChopstickDivider from "@/app/components/chopstick-divider";
 
 export default function ContactPage() {
   return (
-    <div className="flex min-h-full flex-1 flex-col">
+    <>
       <SiteHeader />
-      <main className="flex-1 px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-sf-primary">
-            ShiokFlavour
-          </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-sf-cream sm:text-5xl">
-            Get In Touch
-          </h1>
-          <p className="mt-6 max-w-2xl leading-relaxed text-sf-muted">
-            Have a question, idea, or collaboration in mind? Send us a message
-            below.{" "}
-            <strong className="font-medium text-sf-cream">
-              Hawker stall owners
-            </strong>{" "}
-            are welcome to reach out if you&apos;d like to be featured on
-            ShiokFlavour—we&apos;d love to hear from you.
-          </p>
-          <p className="mt-4 text-sf-muted">
-            You can also email us directly at{" "}
+
+      <section className="mx-auto max-w-7xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
+        <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
+          Get In Touch
+        </p>
+        <h1 className="mb-6 max-w-2xl text-5xl font-bold leading-[1.0] text-white sm:text-6xl">
+          Let&apos;s Talk
+          <br />
+          Hawker Food.
+        </h1>
+        <p className="mb-4 max-w-xl text-base leading-relaxed text-sf-muted sm:text-lg">
+          Got a hawker stall tip? A heritage dish we&apos;ve missed? A story
+          worth telling? We want to hear it.
+        </p>
+        <p className="max-w-xl text-base leading-relaxed text-sf-muted sm:text-lg">
+          ShiokFlavour is built on the knowledge of people who eat seriously. If
+          that&apos;s you — get in touch.
+        </p>
+        <div className="mt-10 h-px w-12 bg-sf-primary" />
+      </section>
+
+      <ChopstickDivider />
+
+      <section className="mx-auto max-w-7xl px-4 pb-32 sm:px-6 lg:px-8">
+        <div className="grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2">
+          {/* Email card */}
+          <div className="rounded-2xl bg-[#1a1a1a] p-8 transition-all hover:ring-1 hover:ring-sf-primary/30">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary">
+              Email Us
+            </p>
             <a
-              href="mailto:hello@shiokflavour.com"
-              className="font-semibold text-sf-primary hover:underline"
+              href="mailto:shiokflavour@gmail.com"
+              className="break-all text-lg font-semibold text-white transition-colors hover:text-sf-primary"
             >
-              hello@shiokflavour.com
+              shiokflavour@gmail.com
             </a>
-            .
-          </p>
+            <p className="mt-3 text-sm leading-relaxed text-sf-muted">
+              We read every email. Response time is usually within 24–48 hours.
+            </p>
+          </div>
 
-          <ContactForm />
-
-          <p className="mt-14">
-            <Link
-              href="/"
-              className="text-sm font-semibold text-sf-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sf-primary"
-            >
-              ← Back to home
-            </Link>
-          </p>
+          {/* What we'd love to hear card */}
+          <div className="rounded-2xl bg-[#1a1a1a] p-8">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary">
+              What We&apos;d Love
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2 text-sm text-sf-muted">
+                <span className="mt-0.5 text-sf-primary">—</span>
+                <span>Hidden stalls worth queuing for</span>
+              </li>
+              <li className="flex items-start gap-2 text-sm text-sf-muted">
+                <span className="mt-0.5 text-sf-primary">—</span>
+                <span>Heritage dishes we haven&apos;t covered</span>
+              </li>
+              <li className="flex items-start gap-2 text-sm text-sf-muted">
+                <span className="mt-0.5 text-sf-primary">—</span>
+                <span>Corrections — we want to get it right</span>
+              </li>
+              <li className="flex items-start gap-2 text-sm text-sf-muted">
+                <span className="mt-0.5 text-sf-primary">—</span>
+                <span>Collaborations and partnerships</span>
+              </li>
+              <li className="flex items-start gap-2 text-sm text-sf-muted">
+                <span className="mt-0.5 text-sf-primary">—</span>
+                <span>Just saying hi — that&apos;s fine too</span>
+              </li>
+            </ul>
+          </div>
         </div>
-      </main>
+      </section>
+
       <SiteFooter />
-    </div>
+    </>
   );
 }
