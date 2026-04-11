@@ -35,10 +35,10 @@ export default function DiscoverPage() {
           {/* Pillar 1 — The Flavour Files */}
           <Link
             href="/blog"
-            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl sm:h-96"
+            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-sf-primary/50 sm:h-96"
           >
             <Image
-              src="/images/food/char-kway-teow.jpg"
+              src="/images/food/nasi-lemak.jpg"
               alt=""
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -68,7 +68,7 @@ export default function DiscoverPage() {
           {/* Pillar 2 — Flavour Trail */}
           <Link
             href="/flavour-trail"
-            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl sm:h-96"
+            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-sf-primary/50 sm:h-96"
           >
             <Image
               src="/images/food/satay.jpg"
@@ -101,7 +101,7 @@ export default function DiscoverPage() {
           {/* Pillar 3 — Food Heritage */}
           <Link
             href="/food-heritage"
-            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl sm:h-96"
+            className="group relative h-80 cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-sf-primary/50 sm:h-96"
           >
             <Image
               src="/images/food/laksa.jpg"
