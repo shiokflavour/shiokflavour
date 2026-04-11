@@ -1,3 +1,5 @@
+"use client";
+
 import { SiteHeader } from "@/app/components/site-header";
 import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
@@ -27,57 +29,37 @@ export default function DiscoverPage() {
 
       <ChopstickDivider />
 
-      <section className="mx-auto max-w-7xl px-4 pb-32 sm:px-6 lg:px-8">
+      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-32">
         <div className="flex flex-col gap-6">
-          {/* PILLAR 1 — THE FLAVOUR FILES */}
-          <a
-            href="/blog"
-            className="group relative block cursor-pointer overflow-hidden rounded-2xl"
-            style={{ height: "420px" }}
-          >
-            <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <img
-                src="/images/food/nasi-lemak.jpg"
-                alt=""
-                className="kb-img-1a absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-              <img
-                src="/images/food/laksa.jpg"
-                alt=""
-                className="kb-img-1b absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-              <img
-                src="/images/food/hokkien-mee.jpg"
-                alt=""
-                className="kb-img-1c absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-            </div>
-
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/30" />
-
+          {/* Card 1 */}
+          <div className="relative h-[420px] overflow-hidden rounded-2xl">
+            <img
+              src="/images/food/nasi-lemak.jpg"
+              alt=""
+              className="kb-img-1a absolute inset-0 h-full w-full object-cover"
+            />
+            <img
+              src="/images/food/laksa.jpg"
+              alt=""
+              className="kb-img-1b absolute inset-0 h-full w-full object-cover"
+            />
+            <img
+              src="/images/food/hokkien-mee.jpg"
+              alt=""
+              className="kb-img-1c absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/20" />
             <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
-
-            <div className="absolute inset-0 flex items-center px-12 sm:px-16">
-              <div className="flex w-full items-center gap-10">
-                <div className="hidden flex-shrink-0 sm:block">
-                  <span
-                    className="font-bold text-sf-primary"
-                    style={{ fontSize: "6rem", lineHeight: 1, opacity: 0.3 }}
-                  >
-                    01
-                  </span>
-                </div>
-                <div className="flex-1">
+            <a href="/blog" className="absolute inset-0 flex items-center px-16">
+              <div className="flex items-center gap-10">
+                <span className="hidden text-[6rem] font-bold leading-none text-sf-primary opacity-30 sm:block">
+                  01
+                </span>
+                <div>
                   <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
                     Articles & Guides
                   </p>
-                  <h2
-                    className="mb-4 font-bold text-white transition-colors duration-300 group-hover:text-sf-primary"
-                    style={{ fontSize: "3.5rem", lineHeight: 1.05 }}
-                  >
+                  <h2 className="mb-4 text-6xl font-bold text-white">
                     The Flavour Files
                   </h2>
                   <p className="mb-6 max-w-lg text-lg leading-relaxed text-white/65">
@@ -92,58 +74,41 @@ export default function DiscoverPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
 
-          {/* PILLAR 2 — FLAVOUR TRAIL */}
-          <a
-            href="/flavour-trail"
-            className="group relative block cursor-pointer overflow-hidden rounded-2xl"
-            style={{ height: "420px" }}
-          >
-            <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <img
-                src="/images/food/satay.jpg"
-                alt=""
-                className="kb-img-2a absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-              <img
-                src="/images/food/economy-rice.jpg"
-                alt=""
-                className="kb-img-2b absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-              <img
-                src="/images/food/bak-kut-teh.jpg"
-                alt=""
-                className="kb-img-2c absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-            </div>
-
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/30" />
-
+          {/* Card 2 */}
+          <div className="relative h-[420px] overflow-hidden rounded-2xl">
+            <img
+              src="/images/food/satay.jpg"
+              alt=""
+              className="kb-img-2a absolute inset-0 h-full w-full object-cover"
+            />
+            <img
+              src="/images/food/economy-rice.jpg"
+              alt=""
+              className="kb-img-2b absolute inset-0 h-full w-full object-cover"
+            />
+            <img
+              src="/images/food/bak-kut-teh.jpg"
+              alt=""
+              className="kb-img-2c absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/20" />
             <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
-
-            <div className="absolute inset-0 flex items-center px-12 sm:px-16">
-              <div className="flex w-full items-center gap-10">
-                <div className="hidden flex-shrink-0 sm:block">
-                  <span
-                    className="font-bold text-sf-primary"
-                    style={{ fontSize: "6rem", lineHeight: 1, opacity: 0.3 }}
-                  >
-                    02
-                  </span>
-                </div>
-                <div className="flex-1">
+            <a
+              href="/flavour-trail"
+              className="absolute inset-0 flex items-center px-16"
+            >
+              <div className="flex items-center gap-10">
+                <span className="hidden text-[6rem] font-bold leading-none text-sf-primary opacity-30 sm:block">
+                  02
+                </span>
+                <div>
                   <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
                     Walking Food Routes
                   </p>
-                  <h2
-                    className="mb-4 font-bold text-white transition-colors duration-300 group-hover:text-sf-primary"
-                    style={{ fontSize: "3.5rem", lineHeight: 1.05 }}
-                  >
+                  <h2 className="mb-4 text-6xl font-bold text-white">
                     Flavour Trail
                   </h2>
                   <p className="mb-6 max-w-lg text-lg leading-relaxed text-white/65">
@@ -158,58 +123,41 @@ export default function DiscoverPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
 
-          {/* PILLAR 3 — FOOD HERITAGE */}
-          <a
-            href="/food-heritage"
-            className="group relative block cursor-pointer overflow-hidden rounded-2xl"
-            style={{ height: "420px" }}
-          >
-            <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <img
-                src="/images/food/ondeh-ondeh.jpg"
-                alt=""
-                className="kb-img-3a absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-              <img
-                src="/images/food/roti-prata.jpg"
-                alt=""
-                className="kb-img-3b absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-              <img
-                src="/images/food/biryani.jpg"
-                alt=""
-                className="kb-img-3c absolute inset-0 h-full w-full object-cover"
-                style={{ transformOrigin: "center center" }}
-              />
-            </div>
-
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/30" />
-
+          {/* Card 3 */}
+          <div className="relative h-[420px] overflow-hidden rounded-2xl">
+            <img
+              src="/images/food/ondeh-ondeh.jpg"
+              alt=""
+              className="kb-img-3a absolute inset-0 h-full w-full object-cover"
+            />
+            <img
+              src="/images/food/roti-prata.jpg"
+              alt=""
+              className="kb-img-3b absolute inset-0 h-full w-full object-cover"
+            />
+            <img
+              src="/images/food/biryani.jpg"
+              alt=""
+              className="kb-img-3c absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/20" />
             <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
-
-            <div className="absolute inset-0 flex items-center px-12 sm:px-16">
-              <div className="flex w-full items-center gap-10">
-                <div className="hidden flex-shrink-0 sm:block">
-                  <span
-                    className="font-bold text-sf-primary"
-                    style={{ fontSize: "6rem", lineHeight: 1, opacity: 0.3 }}
-                  >
-                    03
-                  </span>
-                </div>
-                <div className="flex-1">
+            <a
+              href="/food-heritage"
+              className="absolute inset-0 flex items-center px-16"
+            >
+              <div className="flex items-center gap-10">
+                <span className="hidden text-[6rem] font-bold leading-none text-sf-primary opacity-30 sm:block">
+                  03
+                </span>
+                <div>
                   <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
                     Heritage & Culture
                   </p>
-                  <h2
-                    className="mb-4 font-bold text-white transition-colors duration-300 group-hover:text-sf-primary"
-                    style={{ fontSize: "3.5rem", lineHeight: 1.05 }}
-                  >
+                  <h2 className="mb-4 text-6xl font-bold text-white">
                     Food Heritage
                   </h2>
                   <p className="mb-6 max-w-lg text-lg leading-relaxed text-white/65">
@@ -224,8 +172,8 @@ export default function DiscoverPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </section>
 
