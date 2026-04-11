@@ -244,7 +244,7 @@ export default async function TrailPage({ params }: Props) {
           if (para.startsWith('Enjoy this trail?')) {
             return (
               <div key={i} className="mt-6 bg-[#1a1a1a] rounded-2xl p-6 border border-white/5">
-                <p className="text-white/70 text-sm leading-relaxed">{para}</p>
+                <p className="text-white/80 text-base leading-relaxed">{para}</p>
               </div>
             );
           }
