@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteHeader } from "@/app/components/site-header";
 import { SiteFooter } from "@/app/components/site-footer";
+import ChopstickDivider from "@/app/components/chopstick-divider";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -135,55 +136,278 @@ export default async function BlogArticlePage({ params }: Props) {
   const post = getPost(slug);
   if (!post) notFound();
 
+  const related = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const paragraphs = renderArticleBody(post.content);
+
   return (
     <>
       <SiteHeader />
 
-      <article className="mx-auto max-w-3xl px-4 pb-24 pt-24 sm:px-6 lg:px-8">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-sf-primary">
-          {post.category}
-        </p>
-        <h1 className="mb-4 text-4xl font-bold leading-tight text-white sm:text-5xl">
-          {post.title}
-        </h1>
-        <p className="mb-8 text-lg text-white/80 sm:text-xl">{post.subtitle}</p>
-
-        <div className="mb-8 flex flex-wrap items-center gap-3 text-sm text-sf-muted">
-          <span>{post.readTime}</span>
-          <span>·</span>
-          <time dateTime={post.publishedAt}>
-            {new Date(post.publishedAt).toLocaleDateString("en-SG", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })}
-          </time>
+      <section className="pb-0 pt-16">
+        <div className="mx-auto mb-10 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 flex items-center gap-3">
+            <Link
+              href="/blog"
+              className="text-sm text-sf-muted transition-colors hover:text-white"
+            >
+              ← The Flavour Files
+            </Link>
+            <span className="text-white/20">·</span>
+            <span className="text-sm font-semibold text-sf-primary">
+              {post.category}
+            </span>
+          </div>
+          <h1 className="mb-6 text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            {post.title}
+          </h1>
+          <p className="mb-8 text-lg leading-relaxed text-sf-muted sm:text-xl">
+            {post.subtitle}
+          </p>
+          <div className="mb-10 flex items-center gap-4 text-sm text-sf-muted">
+            <span>{post.readTime}</span>
+            <span>·</span>
+            <span>
+              {new Date(post.publishedAt).toLocaleDateString("en-SG", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
+            </span>
+          </div>
         </div>
 
-        <div className="relative mb-12 aspect-[16/9] w-full overflow-hidden rounded-2xl">
+        <div className="relative mb-16 h-64 w-full sm:h-96 lg:h-[500px]">
           <Image
             src={post.heroImage}
-            alt=""
+            alt={post.title}
             fill
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
+            sizes="100vw"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
         </div>
+      </section>
 
-        <div className="prose-article text-base sm:text-lg">
-          {renderArticleBody(post.content)}
-        </div>
+      <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-12 lg:flex-row">
+          <article className="prose-article min-w-0 max-w-3xl flex-1 text-base sm:text-lg">
+            {paragraphs}
+          </article>
 
-        <div className="mt-14 border-t border-white/10 pt-10">
-          <Link
-            href="/blog"
-            className="text-sm font-semibold text-sf-primary transition-colors hover:text-sf-primary/90"
-          >
-            ← Back to The Flavour Files
-          </Link>
+          <aside className="w-full flex-shrink-0 lg:w-80">
+            <div className="flex flex-col gap-6 lg:sticky lg:top-8">
+              <div className="rounded-2xl bg-[#1a1a1a] p-6">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+                  Go Deeper
+                </p>
+                <p className="mb-4 text-sm leading-relaxed text-white/60">
+                  Read the full heritage story behind each dish.
+                </p>
+                <div className="flex flex-col gap-2">
+                  {[
+                    {
+                      name: "Hainanese Chicken Rice",
+                      slug: "hainanese-chicken-rice",
+                      img: "/images/food/chicken-rice.jpg",
+                    },
+                    {
+                      name: "Char Kway Teow",
+                      slug: "char-kway-teow",
+                      img: "/images/food/char-kway-teow.jpg",
+                    },
+                    {
+                      name: "Laksa",
+                      slug: "laksa",
+                      img: "/images/food/laksa.jpg",
+                    },
+                    {
+                      name: "Roti Prata",
+                      slug: "roti-prata",
+                      img: "/images/food/roti-prata.jpg",
+                    },
+                    {
+                      name: "Satay",
+                      slug: "satay",
+                      img: "/images/food/satay.jpg",
+                    },
+                    {
+                      name: "Bak Kut Teh",
+                      slug: "bak-kut-teh",
+                      img: "/images/food/bak-kut-teh.jpg",
+                    },
+                  ].map((dish) => (
+                    <Link
+                      key={dish.slug}
+                      href={`/food-heritage/${dish.slug}`}
+                      className="group flex items-center gap-3 rounded-xl p-2 transition-all hover:bg-white/5"
+                    >
+                      <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg">
+                        <Image
+                          src={dish.img}
+                          alt={dish.name}
+                          fill
+                          className="object-cover"
+                          sizes="48px"
+                        />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-sm font-semibold text-white transition-colors group-hover:text-sf-primary">
+                          {dish.name}
+                        </p>
+                        <p className="text-xs text-white/40">Heritage story →</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl bg-[#1a1a1a] p-6">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+                  Find These Dishes
+                </p>
+                <div className="flex flex-col gap-3">
+                  {[
+                    {
+                      name: "Maxwell Food Centre",
+                      region: "Chinatown",
+                      slug: "maxwell-food-centre",
+                      img: "/images/hawkers/maxwell.jpg",
+                    },
+                    {
+                      name: "Old Airport Road",
+                      region: "East",
+                      slug: "old-airport-road-food-centre",
+                      img: "/images/hawkers/old-airport-road.jpg",
+                    },
+                    {
+                      name: "Lau Pa Sat",
+                      region: "CBD",
+                      slug: "lau-pa-sat",
+                      img: "/images/hawkers/lau-pa-sat.jpg",
+                    },
+                  ].map((hc) => (
+                    <Link
+                      key={hc.slug}
+                      href={`/hawker/${hc.slug}`}
+                      className="group flex items-center gap-3 rounded-xl p-2 transition-all hover:bg-white/5"
+                    >
+                      <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl">
+                        <Image
+                          src={hc.img}
+                          alt={hc.name}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="56px"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-white transition-colors group-hover:text-sf-primary">
+                          {hc.name}
+                        </p>
+                        <p className="text-xs text-white/40">{hc.region}</p>
+                      </div>
+                    </Link>
+                  ))}
+                  <Link
+                    href="/hawker-centres"
+                    className="mt-1 text-xs font-semibold text-sf-primary hover:underline"
+                  >
+                    View all hawker centres →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="rounded-2xl bg-[#1a1a1a] p-6">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+                  Latest From The Files
+                </p>
+                <div className="flex flex-col gap-4">
+                  {related.map((p) => (
+                    <Link
+                      key={p.slug}
+                      href={`/blog/${p.slug}`}
+                      className="group flex items-start gap-3 rounded-xl p-2 transition-all hover:bg-white/5"
+                    >
+                      <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl">
+                        <Image
+                          src={p.heroImage}
+                          alt={p.title}
+                          fill
+                          className="object-cover transition-transform group-hover:scale-105"
+                          sizes="56px"
+                        />
+                      </div>
+                      <div>
+                        <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-sf-primary">
+                          {p.category}
+                        </p>
+                        <p className="line-clamp-2 text-sm font-semibold leading-snug text-white transition-colors group-hover:text-sf-primary">
+                          {p.title}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl bg-[#1a1a1a] p-6">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+                  Search Heritage Dishes
+                </p>
+                <p className="mb-3 text-sm leading-relaxed text-white/60">
+                  Find the story behind any Singapore dish.
+                </p>
+                <Link
+                  href="/food-heritage"
+                  className="block w-full rounded-xl bg-sf-primary py-3 text-center text-sm font-semibold text-white transition-all hover:bg-sf-primary/90"
+                >
+                  Explore Food Heritage →
+                </Link>
+              </div>
+            </div>
+          </aside>
         </div>
-      </article>
+      </div>
+
+      <ChopstickDivider />
+
+      <section className="mx-auto max-w-7xl px-4 pb-32 sm:px-6 lg:px-8">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
+          Keep Reading
+        </p>
+        <h2 className="mb-8 text-2xl font-bold text-white">
+          More From The Flavour Files
+        </h2>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {related.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/blog/${p.slug}`}
+              className="group overflow-hidden rounded-2xl bg-[#1a1a1a] transition-all hover:ring-1 hover:ring-sf-primary/30"
+            >
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src={p.heroImage}
+                  alt={p.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
+              <div className="p-5">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-sf-primary">
+                  {p.category}
+                </p>
+                <h3 className="text-base font-bold leading-snug text-white transition-colors group-hover:text-sf-primary">
+                  {p.title}
+                </h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <SiteFooter />
     </>
