@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SiteHeader } from "@/app/components/site-header";
 import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
@@ -28,287 +27,76 @@ export default function DiscoverPage() {
 
       <ChopstickDivider />
 
-      {/* Three Pillar Cards */}
       <section className="mx-auto max-w-7xl px-4 pb-32 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-6">
-          {/* Pillar 1 — The Flavour Files */}
-          <Link
+        <div className="flex flex-col gap-4">
+          <a
             href="/blog"
-            className="group relative rounded-2xl overflow-hidden cursor-pointer block"
-            style={{
-              position: "relative",
-              height: "380px",
-              background: "#1a1a1a",
-              border: "1px solid rgba(255,255,255,0.1)",
-            }}
+            className="group block rounded-2xl p-10 transition-all duration-300 hover:ring-2 hover:ring-sf-primary"
+            style={{ background: "#1e1e1e" }}
           >
-            <img
-              src="/images/food/nasi-lemak.jpg"
-              alt="The Flavour Files"
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                opacity: 0.5,
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 100%)",
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                padding: "3rem",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  letterSpacing: "0.2em",
-                  color: "#f97316",
-                  textTransform: "uppercase",
-                  marginBottom: "12px",
-                }}
-              >
-                Pillar 01 — Articles & Guides
-              </p>
-              <h2
-                style={{
-                  fontSize: "3rem",
-                  fontWeight: 800,
-                  color: "white",
-                  marginBottom: "16px",
-                  lineHeight: 1.1,
-                }}
-              >
-                The Flavour Files
-              </h2>
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  color: "rgba(255,255,255,0.7)",
-                  maxWidth: "500px",
-                  lineHeight: 1.6,
-                  marginBottom: "24px",
-                }}
-              >
-                Stories, guides and opinions from the hawker centre floor. For
-                the curious traveller and the proud local.
-              </p>
-              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <div style={{ width: "32px", height: "1px", background: "#f97316" }} />
-                <span
-                  style={{
-                    fontSize: "13px",
-                    fontWeight: 700,
-                    color: "#f97316",
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Read Now
-                </span>
-              </div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
+              Pillar 01 — Articles & Guides
+            </p>
+            <h2 className="mb-4 text-5xl font-bold text-white transition-colors group-hover:text-sf-primary">
+              The Flavour Files
+            </h2>
+            <p className="mb-6 max-w-2xl text-lg leading-relaxed text-white/60">
+              Stories, guides and opinions from the hawker centre floor. For the
+              curious traveller and the proud local.
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="h-px w-8 bg-sf-primary" />
+              <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
+                Read Now
+              </span>
             </div>
-          </Link>
+          </a>
 
-          {/* Pillar 2 — Flavour Trail */}
-          <Link
+          <a
             href="/flavour-trail"
-            className="group relative rounded-2xl overflow-hidden cursor-pointer block"
-            style={{
-              position: "relative",
-              height: "380px",
-              background: "#1a1a1a",
-              border: "1px solid rgba(255,255,255,0.1)",
-            }}
+            className="group block rounded-2xl p-10 transition-all duration-300 hover:ring-2 hover:ring-sf-primary"
+            style={{ background: "#1e1e1e" }}
           >
-            <img
-              src="/images/food/satay.jpg"
-              alt="Flavour Trail"
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                opacity: 0.5,
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 100%)",
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                padding: "3rem",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  letterSpacing: "0.2em",
-                  color: "#f97316",
-                  textTransform: "uppercase",
-                  marginBottom: "12px",
-                }}
-              >
-                Pillar 02 — Walking Food Routes
-              </p>
-              <h2
-                style={{
-                  fontSize: "3rem",
-                  fontWeight: 800,
-                  color: "white",
-                  marginBottom: "16px",
-                  lineHeight: 1.1,
-                }}
-              >
-                Flavour Trail
-              </h2>
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  color: "rgba(255,255,255,0.7)",
-                  maxWidth: "500px",
-                  lineHeight: 1.6,
-                  marginBottom: "24px",
-                }}
-              >
-                Curated routes through Singapore&apos;s greatest eating streets.
-                Walk, eat, repeat.
-              </p>
-              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <div style={{ width: "32px", height: "1px", background: "#f97316" }} />
-                <span
-                  style={{
-                    fontSize: "13px",
-                    fontWeight: 700,
-                    color: "#f97316",
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Explore Trails
-                </span>
-              </div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
+              Pillar 02 — Walking Food Routes
+            </p>
+            <h2 className="mb-4 text-5xl font-bold text-white transition-colors group-hover:text-sf-primary">
+              Flavour Trail
+            </h2>
+            <p className="mb-6 max-w-2xl text-lg leading-relaxed text-white/60">
+              Curated routes through Singapore&apos;s greatest eating streets.
+              Walk, eat, repeat.
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="h-px w-8 bg-sf-primary" />
+              <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
+                Explore Trails
+              </span>
             </div>
-          </Link>
+          </a>
 
-          {/* Pillar 3 — Food Heritage */}
-          <Link
+          <a
             href="/food-heritage"
-            className="group relative rounded-2xl overflow-hidden cursor-pointer block"
-            style={{
-              position: "relative",
-              height: "380px",
-              background: "#1a1a1a",
-              border: "1px solid rgba(255,255,255,0.1)",
-            }}
+            className="group block rounded-2xl p-10 transition-all duration-300 hover:ring-2 hover:ring-sf-primary"
+            style={{ background: "#1e1e1e" }}
           >
-            <img
-              src="/images/food/ondeh-ondeh.jpg"
-              alt="Food Heritage"
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                opacity: 0.5,
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.3) 100%)",
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                padding: "3rem",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  letterSpacing: "0.2em",
-                  color: "#f97316",
-                  textTransform: "uppercase",
-                  marginBottom: "12px",
-                }}
-              >
-                Pillar 03 — Heritage & Culture
-              </p>
-              <h2
-                style={{
-                  fontSize: "3rem",
-                  fontWeight: 800,
-                  color: "white",
-                  marginBottom: "16px",
-                  lineHeight: 1.1,
-                }}
-              >
-                Food Heritage
-              </h2>
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  color: "rgba(255,255,255,0.7)",
-                  maxWidth: "500px",
-                  lineHeight: 1.6,
-                  marginBottom: "24px",
-                }}
-              >
-                The dishes that built Singapore. UNESCO recognised. Deeply human.
-                One story at a time.
-              </p>
-              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <div style={{ width: "32px", height: "1px", background: "#f97316" }} />
-                <span
-                  style={{
-                    fontSize: "13px",
-                    fontWeight: 700,
-                    color: "#f97316",
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Discover Dishes
-                </span>
-              </div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
+              Pillar 03 — Heritage & Culture
+            </p>
+            <h2 className="mb-4 text-5xl font-bold text-white transition-colors group-hover:text-sf-primary">
+              Food Heritage
+            </h2>
+            <p className="mb-6 max-w-2xl text-lg leading-relaxed text-white/60">
+              The dishes that built Singapore. UNESCO recognised. Deeply human.
+              One story at a time.
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="h-px w-8 bg-sf-primary" />
+              <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
+                Discover Dishes
+              </span>
             </div>
-          </Link>
+          </a>
         </div>
       </section>
 
