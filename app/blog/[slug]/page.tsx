@@ -51,13 +51,51 @@ function renderArticleBody(markdown: string) {
     if (t.startsWith("![")) {
       const match = t.match(/!\[.*?\]\((.*?)\)/);
       if (match) {
+        const imgSrc = match[1];
+        const imageToSlug: Record<string, string> = {
+          "/images/food/chicken-rice.jpg": "hainanese-chicken-rice",
+          "/images/food/char-kway-teow.jpg": "char-kway-teow",
+          "/images/food/laksa.jpg": "laksa",
+          "/images/food/roti-prata.jpg": "roti-prata",
+          "/images/food/bak-kut-teh.jpg": "bak-kut-teh",
+          "/images/food/satay.jpg": "satay",
+          "/images/food/chilli-crab.jpg": "chilli-crab",
+          "/images/food/hokkien-mee.jpg": "hokkien-mee",
+          "/images/food/ice-kachang.jpg": "ice-kachang",
+          "/images/food/kaya-toast.jpg": "kaya-toast",
+        };
+        const heritageSlug = imageToSlug[imgSrc];
         return (
-          <div key={i} className="my-8 overflow-hidden rounded-2xl">
-            <img
-              src={match[1]}
-              alt=""
-              className="h-64 w-full object-cover sm:h-80"
-            />
+          <div
+            key={i}
+            className="my-8 rounded-2xl overflow-hidden relative group cursor-pointer"
+          >
+            {heritageSlug ? (
+              <Link href={`/food-heritage/${heritageSlug}`}>
+                <img
+                  src={imgSrc}
+                  alt=""
+                  className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Hover overlay */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/50">
+                  <div className="flex flex-col items-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                    <div className="rounded-full bg-sf-primary px-5 py-2.5 text-sm font-bold text-white">
+                      Explore this dish →
+                    </div>
+                    <p className="text-xs text-white/80">
+                      Read the full heritage story
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <img
+                src={imgSrc}
+                alt=""
+                className="w-full h-64 sm:h-80 object-cover"
+              />
+            )}
           </div>
         );
       }
