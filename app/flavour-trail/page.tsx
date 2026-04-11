@@ -1,130 +1,147 @@
+"use client";
+
 import Link from "next/link";
-import { SiteHeader } from "../components/site-header";
-import { SiteFooter } from "../components/site-footer";
+import Image from "next/image";
+import { SiteHeader } from "@/app/components/site-header";
+import { SiteFooter } from "@/app/components/site-footer";
+import ChopstickDivider from "@/app/components/chopstick-divider";
+import { FLAVOUR_TRAILS } from "@/app/lib/flavour-trails";
 
-export const metadata = {
-  title: "Flavour Trail | ShiokFlavour",
-  description: "Curated hawker food trails across Singapore — coming soon.",
-};
-
-const UPCOMING_TRAILS = [
+const COMING_SOON = [
   {
-    name: "The Katong Trail",
-    emoji: "🌊",
-    description: "Laksa, popiah, kueh pie tee, and Peranakan desserts across Joo Chiat and East Coast Road",
-    stops: 6,
-    duration: "Half day",
-  },
-  {
-    name: "CBD Lunch Run",
-    emoji: "🏙️",
-    description: "Maxwell, Amoy Street, and Lau Pa Sat — the best hawker lunch in the heart of the city",
+    title: "CBD Lunch Run",
+    subtitle: "Maxwell, Amoy Street, Lau Pa Sat",
     stops: 4,
     duration: "90 mins",
+    region: "Central",
   },
   {
-    name: "Old Airport Road Deep Dive",
-    emoji: "✈️",
-    description: "One of Singapore's most legendary food centres — a full guide to the must-order stalls",
+    title: "Old Airport Road Deep Dive",
+    subtitle: "One of Singapore's most legendary food centres",
     stops: 8,
     duration: "Full morning",
+    region: "East",
   },
   {
-    name: "The Heartland Route",
-    emoji: "🏠",
-    description: "Toa Payoh, Bedok, and Tampines — eating like a local, far from the tourist trail",
+    title: "The Heartland Route",
+    subtitle: "Toa Payoh, Bedok, Tampines — eating like a local",
     stops: 5,
     duration: "Full day",
+    region: "Various",
   },
 ];
 
 export default function FlavourTrailPage() {
   return (
-    <div className="flex min-h-full flex-1 flex-col">
+    <>
       <SiteHeader />
-      <main className="flex-1">
+      <section className="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
+        <p className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
+          Flavour Trail
+        </p>
+        <h1 className="mb-8 max-w-4xl text-5xl font-bold leading-[1.0] text-white sm:text-6xl lg:text-7xl">
+          Walk. Eat.
+          <br />
+          Repeat.
+        </h1>
+        <p className="max-w-2xl text-base leading-relaxed text-sf-muted sm:text-lg">
+          Curated eating routes through Singapore&apos;s greatest food streets. Each
+          trail is mapped, timed, and written by people who have eaten every stop.
+          More than once.
+        </p>
+        <div className="mt-10 h-px w-12 bg-sf-primary" />
+      </section>
 
-        {/* Hero */}
-        <section className="mx-auto max-w-4xl px-4 pt-20 pb-12 text-center sm:px-6 lg:px-8">
-          <p className="text-[15px] font-semibold uppercase tracking-[0.2em] text-sf-primary">
-            Coming Soon
-          </p>
-          <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight text-sf-cream sm:text-6xl">
-            Flavour Trail
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-sf-muted">
-            Something delicious is coming your way. We&apos;re putting together curated eating trails across Singapore — each one mapped, timed, and tested by locals.
-          </p>
+      <ChopstickDivider />
 
-          <div className="mt-10 flex justify-center">
-            <div className="relative">
-              <div className="text-8xl">🗺️</div>
-              <div className="absolute -top-2 -right-4 text-3xl">🍜</div>
-              <div className="absolute -bottom-2 -left-4 text-3xl">🌶️</div>
-            </div>
-          </div>
+      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <p className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+          Live Now
+        </p>
 
-          <p className="mt-10 text-lg font-medium text-sf-cream">
-            Stay tuned — the trails are being mapped. 👀
-          </p>
-        </section>
-
-        {/* Upcoming trails preview */}
-        <section className="mx-auto max-w-4xl px-4 pb-20 sm:px-6 lg:px-8">
-          <div className="mb-8 text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-sf-primary">
-              A sneak peek at what&apos;s coming
-            </p>
-          </div>
-
-          <ul className="grid gap-4 sm:grid-cols-2">
-            {UPCOMING_TRAILS.map((trail) => (
-              <li
-                key={trail.name}
-                className="relative overflow-hidden rounded-2xl border border-white/10 bg-sf-surface p-6"
-              >
-                <div className="absolute inset-0 flex items-center justify-center rounded-2xl backdrop-blur-[2px] bg-black/30 z-10">
-                  <span className="rounded-full border border-sf-primary/50 bg-sf-primary/10 px-4 py-1.5 text-[15px] font-semibold uppercase tracking-wider text-sf-primary">
-                    Coming Soon
-                  </span>
+        {/* Live trails */}
+        <div className="mb-16 grid grid-cols-1 gap-6">
+          {FLAVOUR_TRAILS.map((trail) => (
+            <Link
+              key={trail.slug}
+              href={`/flavour-trail/${trail.slug}`}
+              className="group relative block overflow-hidden rounded-2xl bg-[#1a1a1a] transition-all hover:ring-1 hover:ring-sf-primary/40"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2">
+                <div className="relative h-64 overflow-hidden sm:h-80">
+                  <Image
+                    src={trail.heroImage}
+                    alt={trail.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1a1a1a]/40" />
+                  <div className="absolute left-4 top-4">
+                    <span className="rounded-full bg-sf-primary px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">
+                      New Trail
+                    </span>
+                  </div>
                 </div>
-
-                <div className="text-3xl mb-3">{trail.emoji}</div>
-                <h3 className="text-lg font-bold text-sf-cream">{trail.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-sf-muted">
-                  {trail.description}
-                </p>
-                <div className="mt-4 flex gap-4 text-[15px] text-sf-muted">
-                  <span>📍 {trail.stops} stops</span>
-                  <span>⏱ {trail.duration}</span>
+                <div className="flex flex-col justify-center p-8 sm:p-10">
+                  <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+                    {trail.region}
+                  </p>
+                  <h2 className="mb-3 text-3xl font-bold text-white transition-colors group-hover:text-sf-primary sm:text-4xl">
+                    {trail.title}
+                  </h2>
+                  <p className="mb-6 text-base leading-relaxed text-sf-muted">
+                    {trail.subtitle}
+                  </p>
+                  <div className="mb-6 flex flex-wrap gap-4 text-sm">
+                    <span className="text-white/60">📍 {trail.stops} stops</span>
+                    <span className="text-white/60">⏱ {trail.duration}</span>
+                    <span className="text-white/60">🚶 {trail.distance}</span>
+                    <span className="text-white/60">⭐ {trail.difficulty}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-px w-8 bg-sf-primary" />
+                    <span className="text-sm font-bold uppercase tracking-widest text-sf-primary">
+                      Start the Trail
+                    </span>
+                  </div>
                 </div>
-              </li>
-            ))}
-          </ul>
+              </div>
+            </Link>
+          ))}
+        </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-sf-muted mb-6">
-              While you wait, explore Singapore&apos;s food heritage dishes or find a hawker centre near you.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/food-heritage"
-                className="inline-flex items-center gap-2 rounded-xl bg-sf-primary px-6 py-3 text-base font-semibold text-white transition hover:opacity-90"
-              >
-                🍜 Explore Food Heritage
-              </Link>
-              <Link
-                href="/hawker-centres"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-sf-cream transition hover:border-sf-primary/50"
-              >
-                🏪 Find Hawker Centres
-              </Link>
+        {/* Coming soon trails */}
+        <p className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
+          Coming Soon
+        </p>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {COMING_SOON.map((trail) => (
+            <div
+              key={trail.title}
+              className="rounded-2xl border border-white/5 bg-[#1a1a1a] p-6 opacity-60"
+            >
+              <p className="mb-2 text-xs font-bold uppercase tracking-widest text-sf-primary">
+                {trail.region}
+              </p>
+              <h3 className="mb-2 text-xl font-bold text-white">{trail.title}</h3>
+              <p className="mb-4 text-sm leading-relaxed text-white/40">
+                {trail.subtitle}
+              </p>
+              <div className="flex gap-4 text-xs text-white/30">
+                <span>{trail.stops} stops</span>
+                <span>{trail.duration}</span>
+              </div>
+              <div className="mt-4 inline-block rounded-full bg-white/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white/40">
+                Coming Soon
+              </div>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
-      </main>
       <SiteFooter />
-    </div>
+    </>
   );
 }
