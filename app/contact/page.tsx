@@ -1,8 +1,34 @@
+"use client";
+
+import { useState } from "react";
+import type { FormEvent } from "react";
 import { SiteHeader } from "@/app/components/site-header";
 import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
 export default function ContactPage() {
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    try {
+      await fetch("https://formspree.io/f/xjgpngvb", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      window.location.href = "/thank-you";
+    } catch {
+      setSubmitting(false);
+      alert(
+        "Something went wrong. Please email us directly at shiokflavour@gmail.com",
+      );
+    }
+  }
+
   return (
     <>
       <SiteHeader />
@@ -84,11 +110,7 @@ export default function ContactPage() {
           <p className="text-white/70 text-lg italic mb-6">
             Got something shiok to share?
           </p>
-          <form
-            action="https://formspree.io/f/xjgpngvb"
-            method="POST"
-            className="space-y-5"
-          >
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm text-sf-muted">
@@ -148,9 +170,10 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="rounded-xl bg-sf-primary px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-sf-primary/90"
+              disabled={submitting}
+              className="bg-sf-primary hover:bg-sf-primary/90 disabled:opacity-50 text-white font-semibold text-sm px-8 py-3 rounded-xl transition-all duration-200"
             >
-              Send Message
+              {submitting ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
