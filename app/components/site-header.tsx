@@ -79,7 +79,24 @@ export function SiteHeader() {
                           href="/blog"
                           className="group rounded-xl p-4 transition-all hover:bg-white/5"
                         >
-                          <div className="mb-2 text-2xl">📰</div>
+                          <div
+                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
+                            style={{ background: "#f97316" }}
+                          >
+                            <svg
+                              className="h-4 w-4 text-white"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="white"
+                              strokeWidth={2}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                              />
+                            </svg>
+                          </div>
                           <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
                             The Flavour Files
                           </p>
@@ -96,7 +113,24 @@ export function SiteHeader() {
                           href="/flavour-trail"
                           className="group rounded-xl p-4 transition-all hover:bg-white/5"
                         >
-                          <div className="mb-2 text-2xl">🗺️</div>
+                          <div
+                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
+                            style={{ background: "#f97316" }}
+                          >
+                            <svg
+                              className="h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="white"
+                              strokeWidth={2}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
+                              />
+                            </svg>
+                          </div>
                           <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
                             Flavour Trail
                           </p>
@@ -113,7 +147,24 @@ export function SiteHeader() {
                           href="/food-heritage"
                           className="group rounded-xl p-4 transition-all hover:bg-white/5"
                         >
-                          <div className="mb-2 text-2xl">🍜</div>
+                          <div
+                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
+                            style={{ background: "#f97316" }}
+                          >
+                            <svg
+                              className="h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="white"
+                              strokeWidth={2}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 4.5v6.75m0-6.75H6m6 0h6m-3 6.75a3 3 0 01-3-3m3 3a3 3 0 003-3"
+                              />
+                            </svg>
+                          </div>
                           <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
                             Food Heritage
                           </p>
@@ -180,7 +231,24 @@ export function SiteHeader() {
                           href="/hawker-guide"
                           className="group rounded-xl p-4 transition-all hover:bg-white/5"
                         >
-                          <div className="mb-2 text-2xl">🥤</div>
+                          <div
+                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
+                            style={{ background: "#f97316" }}
+                          >
+                            <svg
+                              className="h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="white"
+                              strokeWidth={2}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"
+                              />
+                            </svg>
+                          </div>
                           <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
                             Kopi Decoder
                           </p>
@@ -193,7 +261,24 @@ export function SiteHeader() {
                           href="/hawker-guide"
                           className="group rounded-xl p-4 transition-all hover:bg-white/5"
                         >
-                          <div className="mb-2 text-2xl">📖</div>
+                          <div
+                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
+                            style={{ background: "#f97316" }}
+                          >
+                            <svg
+                              className="h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="white"
+                              strokeWidth={2}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+                              />
+                            </svg>
+                          </div>
                           <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
                             Old School Names
                           </p>
@@ -206,7 +291,24 @@ export function SiteHeader() {
                           href="/hawker-guide"
                           className="group rounded-xl p-4 transition-all hover:bg-white/5"
                         >
-                          <div className="mb-2 text-2xl">🤝</div>
+                          <div
+                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
+                            style={{ background: "#f97316" }}
+                          >
+                            <svg
+                              className="h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="white"
+                              strokeWidth={2}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
+                              />
+                            </svg>
+                          </div>
                           <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
                             Hawker Etiquette
                           </p>
@@ -219,7 +321,24 @@ export function SiteHeader() {
                           href="/hawker-guide"
                           className="group rounded-xl p-4 transition-all hover:bg-white/5"
                         >
-                          <div className="mb-2 text-2xl">🗣️</div>
+                          <div
+                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
+                            style={{ background: "#f97316" }}
+                          >
+                            <svg
+                              className="h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="white"
+                              strokeWidth={2}
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+                              />
+                            </svg>
+                          </div>
                           <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
                             Singlish Glossary
                           </p>
@@ -295,7 +414,24 @@ export function SiteHeader() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
                   >
-                    <span className="text-lg">📰</span>
+                    <div
+                      className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md"
+                      style={{ background: "#f97316" }}
+                    >
+                      <svg
+                        className="h-3 w-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="white"
+                        strokeWidth={2.5}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                        />
+                      </svg>
+                    </div>
                     <div>
                       <p className="text-sm font-semibold text-white">
                         The Flavour Files
@@ -310,7 +446,24 @@ export function SiteHeader() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
                   >
-                    <span className="text-lg">🗺️</span>
+                    <div
+                      className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md"
+                      style={{ background: "#f97316" }}
+                    >
+                      <svg
+                        className="h-3 w-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="white"
+                        strokeWidth={2.5}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
+                        />
+                      </svg>
+                    </div>
                     <div>
                       <p className="text-sm font-semibold text-white">
                         Flavour Trail
@@ -323,7 +476,24 @@ export function SiteHeader() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
                   >
-                    <span className="text-lg">🍜</span>
+                    <div
+                      className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md"
+                      style={{ background: "#f97316" }}
+                    >
+                      <svg
+                        className="h-3 w-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="white"
+                        strokeWidth={2.5}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 4.5v6.75m0-6.75H6m6 0h6m-3 6.75a3 3 0 01-3-3m3 3a3 3 0 003-3"
+                        />
+                      </svg>
+                    </div>
                     <div>
                       <p className="text-sm font-semibold text-white">
                         Food Heritage
@@ -348,7 +518,24 @@ export function SiteHeader() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
                   >
-                    <span className="text-lg">🥤</span>
+                    <div
+                      className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md"
+                      style={{ background: "#f97316" }}
+                    >
+                      <svg
+                        className="h-3 w-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="white"
+                        strokeWidth={2.5}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"
+                        />
+                      </svg>
+                    </div>
                     <div>
                       <p className="text-sm font-semibold text-white">
                         Kopi Decoder
@@ -363,7 +550,24 @@ export function SiteHeader() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
                   >
-                    <span className="text-lg">🗣️</span>
+                    <div
+                      className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md"
+                      style={{ background: "#f97316" }}
+                    >
+                      <svg
+                        className="h-3 w-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="white"
+                        strokeWidth={2.5}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+                        />
+                      </svg>
+                    </div>
                     <div>
                       <p className="text-sm font-semibold text-white">
                         Singlish Glossary
