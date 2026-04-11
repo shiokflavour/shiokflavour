@@ -32,7 +32,7 @@ export default function DiscoverPage() {
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-32">
         <div className="flex flex-col gap-6">
           {/* Card 1 */}
-          <div className="relative h-[420px] overflow-hidden rounded-2xl">
+          <div className="relative rounded-2xl overflow-hidden h-[420px] bg-[#1a1a1a]">
             <img
               src="/images/food/nasi-lemak.jpg"
               alt=""
@@ -48,7 +48,7 @@ export default function DiscoverPage() {
               alt=""
               className="kb-img-1c absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
             <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
             <a href="/blog" className="absolute inset-0 flex items-center px-16">
               <div className="flex items-center gap-10">
@@ -78,7 +78,7 @@ export default function DiscoverPage() {
           </div>
 
           {/* Card 2 */}
-          <div className="relative h-[420px] overflow-hidden rounded-2xl">
+          <div className="relative rounded-2xl overflow-hidden h-[420px] bg-[#1a1a1a]">
             <img
               src="/images/food/satay.jpg"
               alt=""
@@ -94,7 +94,7 @@ export default function DiscoverPage() {
               alt=""
               className="kb-img-2c absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
             <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
             <a
               href="/flavour-trail"
@@ -127,7 +127,7 @@ export default function DiscoverPage() {
           </div>
 
           {/* Card 3 */}
-          <div className="relative h-[420px] overflow-hidden rounded-2xl">
+          <div className="relative rounded-2xl overflow-hidden h-[420px] bg-[#1a1a1a]">
             <img
               src="/images/food/ondeh-ondeh.jpg"
               alt=""
@@ -143,7 +143,7 @@ export default function DiscoverPage() {
               alt=""
               className="kb-img-3c absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
             <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-sf-primary" />
             <a
               href="/food-heritage"
