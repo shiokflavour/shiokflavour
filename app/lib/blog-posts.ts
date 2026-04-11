@@ -185,93 +185,187 @@ You are ready.`,
       "Every food guide has a list. This one has opinions. Here are the ten dishes that define Singapore's hawker culture — ranked, argued, and defended.",
     content: `Every food guide has a list. This one has opinions. Here are the ten dishes that define Singapore's hawker culture — ranked, argued, and defended.
 
----
-
-## 1. Hainanese Chicken Rice
+## #01 — Hainanese Chicken Rice
 
 ![Chicken Rice](/images/food/chicken-rice.jpg)
 
-The national dish. Not because it is the most dramatic or the most complex, but because it is everywhere and it is almost always good. Silky poached chicken, rice cooked in chicken fat and pandan, and three sauces — chilli, ginger, and dark soy. The chicken is judged by its skin. The rice is judged by its fragrance. The chilli is judged by everything.
+> 🌶️ None · 🧍 Long Queue · 💰 S$3–6 · ⏰ Lunch
 
-Every Singaporean has a preferred stall. Nobody agrees. This is not a problem.
+**"The most argued-about dish in Singapore. Order it. Pick a side."**
 
-> If the rice does not smell like chicken before you taste it, walk away.
+The national dish. Not because it is the most dramatic or the most complex — but because it is everywhere and it is almost always good. Silky poached chicken, rice cooked in chicken fat and pandan, three sauces: chilli, ginger, dark soy.
 
-**Where to find it:** Maxwell Food Centre (Chinatown) for Tian Tian — or literally any neighbourhood hawker centre; the argument over "best" is the point.
+The chicken is judged by its skin. The rice is judged by its fragrance. The chilli sauce is judged by everything. If the rice does not smell of chicken fat before you taste it, walk away.
 
-## 2. Char Kway Teow
+Every Singaporean has a preferred stall. Nobody agrees. This is the point.
 
-![Char kway teow](/images/food/char-kway-teow.jpg)
+🥤 **Pair with:** Barley water or teh o peng — something cold and clean to cut through the richness.
 
-Flat rice noodles stir-fried over fierce heat with dark soy, egg, bean sprouts, lap cheong, and cockles. The key is wok hei — the smoky breath of a screaming hot wok that you cannot fake and cannot replicate at home. The best char kway teow in Singapore is still cooked over charcoal by someone who has been doing it for forty years.
+📍 Where to find it: Tian Tian at Maxwell Food Centre is the most photographed. Ah Tai next door is what the locals quietly prefer.
 
-It is not beautiful. It is not photogenic. It is one of the finest things this city produces.
+---
 
-**Where to find it:** Old Airport Road Food Centre and East Coast stalls are local favourites — follow the charcoal smoke.
+## #02 — Char Kway Teow
 
-## 3. Laksa
+![Char Kway Teow](/images/food/char-kway-teow.jpg)
+
+> 🌶️ Medium · 🧍 Long Queue · 💰 S$4–6 · ⏰ Lunch
+
+**"Not beautiful. Not photogenic. One of the finest things this city produces."**
+
+Flat rice noodles stir-fried over screaming heat with dark soy, egg, bean sprouts, lap cheong, and cockles. The key is wok hei — the smoky char that only comes from a wok hot enough to sear everything in seconds. You cannot fake it. You cannot replicate it at home.
+
+The best is still cooked over charcoal. By someone who has been doing it for forty years. Arrive early or wait.
+
+🥤 **Pair with:** Sugarcane juice — cuts through the dark soy and smoke perfectly.
+
+📍 Where to find it: Hill Street Char Kway Teow at Bedok Interchange. Old Airport Road for a solid alternative.
+
+---
+
+## #03 — Laksa
 
 ![Laksa](/images/food/laksa.jpg)
 
-Coconut curry broth, rice noodles, fish cake, and cockles — specifically Katong-style laksa, where the noodles are cut short so you can eat the whole bowl with a spoon. The broth should be thick, rich, and slightly sweet. The sambal on the side should be fiery. The Vietnamese coriander on top is non-negotiable.
+> 🌶️ Medium-High · 🧍 Moderate · 💰 S$4–7 · ⏰ Lunch
 
-**Where to find it:** Katong / Joo Chiat for the namesake style; many hawker centres do a solid bowl.
+**"Rich, spicy, coconut-heavy. The dish that divides rooms and wins arguments."**
 
-## 4. Roti Prata
+Coconut curry broth, rice noodles, fish cake, cockles — specifically Katong-style, where the noodles are cut short so you eat the whole bowl with just a spoon. The broth should coat the spoon. The sambal should make you sweat. The Vietnamese coriander is non-negotiable.
 
-![Roti prata](/images/food/roti-prata.jpg)
+If you find yourself asking for a fork, you are already having a great time.
 
-At any Indian Muslim stall, usually from early morning. A flaky, griddled flatbread that should shatter slightly when you bite through it, revealing soft, layered interior. Served with fish or mutton curry for dipping. The plain version is the test of the stall's technique. If the plain is good, everything else will follow.
+🥤 **Pair with:** A cold lime juice or coconut water — the acidity cuts the richness.
 
-**Where to find it:** Tekka Centre, Little India, or your nearest prata shop open past midnight.
+📍 Where to find it: 328 Katong Laksa on East Coast Road. The ongoing debate about who invented this style will never be resolved.
 
-## 5. Bak Kut Teh
+---
 
-![Bak kut teh](/images/food/bak-kut-teh.jpg)
+## #04 — Roti Prata
 
-Pork ribs simmered in a broth of pepper and spices until the meat falls from the bone. The Singapore version — specifically Teochew style — is clear, intensely peppery, and almost medicinal. It was eaten by Hokkien labourers before long days at the docks. It is now eaten at midnight by people who have just finished a long night out. The function has changed. The recipe has not.
+![Roti Prata](/images/food/roti-prata.jpg)
 
-**Where to find it:** Balestier Road for the classic strip, or Founder and Song Fa outposts across the island.
+> 🌶️ Mild · 🧍 Short · 💰 S$1.20–3 · ⏰ Breakfast / Supper
 
-## 6. Satay
+**"Breakfast. Supper. 2am after a long night. Prata is always right."**
+
+A flaky, griddled flatbread that should shatter slightly when you bite through it — soft and layered inside, crisp at the edges. Served with fish or mutton curry for dipping. The plain prata is the test of technique. If the plain is good, everything else follows.
+
+Order one plain first. If it is excellent, order egg. If the egg is excellent, order cheese. This is the correct progression.
+
+🥤 **Pair with:** Teh tarik — the pulled milk tea is made for prata.
+
+📍 Where to find it: Springleaf Prata Place in Upper Thomson. Or any 24-hour mamak stall near you.
+
+---
+
+## #05 — Bak Kut Teh
+
+![Bak Kut Teh](/images/food/bak-kut-teh.jpg)
+
+> 🌶️ Peppery · 🧍 Moderate · 💰 S$8–14 · ⏰ Breakfast / Supper
+
+**"Eaten by labourers before long days at the docks. The recipe has not changed."**
+
+Pork ribs simmered in a broth of white pepper and herbs until the meat falls from the bone without effort. The Singapore version — Teochew style — is clear and intensely peppery. Almost medicinal. It warms you up and wakes you up simultaneously.
+
+It was working-class food. It still feeds working-class hunger. The price has gone up slightly. The broth has not changed.
+
+🥤 **Pair with:** Chinese tea — you li cha (oolong) is traditional. Pour it after every few bites.
+
+📍 Where to find it: Song Fa on New Bridge Road. Founder on Balestier. Both open early.
+
+---
+
+## #06 — Satay
 
 ![Satay](/images/food/satay.jpg)
 
-Marinated meat skewers grilled over real charcoal, served with a thick peanut sauce, ketupat, raw onion, and cucumber. The formula has not changed in sixty years because it does not need to. The charcoal smoke is part of the dish. Order beef, chicken, and mutton. Compare.
+> 🌶️ Mild-Medium · 🧍 Moderate · 💰 S$0.70–1 per stick · ⏰ Dinner / Supper
 
-**Where to find it:** Lau Pa Sat satay street after dark — or Chomp Chomp Food Centre in Serangoon.
+**"Sixty years. Same formula. Same charcoal. Still the best thing on a stick."**
 
-## 7. Chilli Crab
+Marinated meat skewers grilled over real charcoal, served with thick peanut sauce, ketupat, raw onion, and cucumber. The smoke from the charcoal is not atmosphere — it is an ingredient. Without it, it is just grilled meat.
 
-![Chilli crab](/images/food/chilli-crab.jpg)
+Order beef, chicken, and mutton. Eat the ketupat with peanut sauce between skewers. Do not leave until you have finished at least twenty sticks.
 
-Singapore's most theatrical seafood dish. Mud crab in a tomato-chilli-egg gravy that is sweet, spicy, and sticky enough to demand mantou — fried buns — for mopping. It is messy. It is worth it. Order it at a zi char stall, not a white-tablecloth restaurant.
+🥤 **Pair with:** Tiger beer or lime juice — both work, depending on the hour.
 
-**Where to find it:** East Coast seafood stretch, or a reputable zi char in your neighbourhood — skip the mall tourist traps.
+📍 Where to find it: Lau Pa Sat on a Friday night, after 7pm when the satay stalls take over the street.
 
-## 8. Hokkien Mee
+---
 
-![Hokkien mee](/images/food/hokkien-mee.jpg)
+## #07 — Chilli Crab
 
-Yellow egg noodles and white rice noodles stir-fried in a rich prawn-and-pork broth, finished with sambal and calamansi. The Singapore version — invented by Hokkien dockworkers in the 1940s — is fundamentally different from the Penang version. Do not compare them. Judge each on its own terms.
+![Chilli Crab](/images/food/chilli-crab.jpg)
 
-**Where to find it:** Kim Keat Palm for the famous plate — or any stall with a serious queue and a veteran uncle on the wok.
+> 🌶️ Medium · 🧍 Book Ahead · 💰 S$50–80 per crab · ⏰ Dinner
 
-## 9. Ice Kachang
+**"Messy, sticky, theatrical. Bring wet wipes and an appetite you cannot explain."**
 
-![Ice kachang](/images/food/ice-kachang.jpg)
+Mud crab in a tomato-chilli-egg gravy that is sweet, spicy, and thick enough to demand mantou — fried buns — for mopping. This is not hawker food in the traditional sense, but no list of Singapore dishes is complete without it.
 
-Shaved ice, coloured syrups, red beans, corn, grass jelly, and attap chee. It looks alarming. It is perfect on a humid afternoon, which is every afternoon. Order the version with evaporated milk poured over the top.
+Do not order it in a shopping mall restaurant. Find a zi char stall or a no-frills seafood place. The experience is better and the crab is cheaper.
 
-**Where to find it:** Any dessert stall in a hawker centre — Old Airport Road does it loud and proud.
+🥤 **Pair with:** Cold beer. There is no other answer.
 
-## 10. Kaya Toast
+📍 Where to find it: East Coast seafood stretch. No Signboard at Geylang for a serious meal.
 
-![Kaya toast](/images/food/kaya-toast.jpg)
+---
 
-This is breakfast. Charcoal-grilled thin bread, cold butter, and kaya — a slow-cooked jam of coconut milk, eggs, and pandan. Eaten alongside soft-boiled eggs seasoned with dark soy and white pepper, and a cup of kopi. This is the Singapore breakfast. It costs less than S$5. It is the best S$5 you will spend in this city.
+## #08 — Hokkien Mee
 
-**Where to find it:** Ya Kun and Toast Box are reliable chains; a neighbourhood kopitiam at 7am is better theatre.
+![Hokkien Mee](/images/food/hokkien-mee.jpg)
+
+> 🌶️ Mild (sambal on the side) · 🧍 Long · 💰 S$5–8 · ⏰ Lunch / Dinner
+
+**"Invented by dockworkers. Perfected by time. The calamansi is not garnish — use it."**
+
+Yellow egg noodles and white rice noodles stir-fried together in a rich prawn-and-pork broth, finished with sambal, bean sprouts, and calamansi. The Singapore version is different from Penang's — wetter, brothier, more umami. Do not compare them.
+
+Squeeze the entire calamansi over the noodles before your first bite. The acid lifts everything.
+
+🥤 **Pair with:** Cold barley or chrysanthemum tea — something light to balance the richness.
+
+📍 Where to find it: Nam Sing at Old Airport Road. The uncle has been frying since 1973.
+
+---
+
+## #09 — Ice Kachang
+
+![Ice Kachang](/images/food/ice-kachang.jpg)
+
+> 🌶️ None · 🧍 Short · 💰 S$2–3.50 · ⏰ Any time
+
+**"It looks alarming. It is perfect. It is the only logical response to a Singapore afternoon."**
+
+Shaved ice piled high, coloured syrups, red beans, corn, grass jelly, and attap chee. Topped with evaporated milk if you are doing it properly. It melts fast — eat with urgency.
+
+This is dessert. This is also technically lunch if you are having a difficult day. Singapore does not judge.
+
+🥤 **Pair with:** Nothing. Ice kachang is its own universe.
+
+📍 Where to find it: Any hawker centre dessert stall. Old Airport Road and Geylang are particularly good.
+
+---
+
+## #10 — Kaya Toast
+
+![Kaya Toast](/images/food/kaya-toast.jpg)
+
+> 🌶️ None · 🧍 Short-Moderate · 💰 S$3–5 · ⏰ Breakfast
+
+**"The same breakfast Singaporeans have eaten for a hundred years. Do not skip this."**
+
+Charcoal-grilled thin bread, cold butter, kaya — a slow-cooked coconut and pandan jam. Eaten with soft-boiled eggs seasoned with dark soy and white pepper, and a cup of kopi. This is the Singapore breakfast set.
+
+The kaya should be sweet but not cloying. The butter should be cold. The eggs should wobble. The kopi should be strong. Start every morning in Singapore here. Everything else can wait.
+
+🥤 **Pair with:** Kopi — specifically Kopi C if you take milk, Kopi O Kosong if you do not.
+
+📍 Where to find it: Ya Kun Kaya Toast is reliable. Heap Seng Leong at North Bridge Road for the full old-school kopitiam experience.
+
+---
 
 Eat in this order. Argue with this list. Come back hungry.`,
   },

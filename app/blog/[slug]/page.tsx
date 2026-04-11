@@ -32,13 +32,20 @@ function renderArticleBody(markdown: string) {
   return blocks.map((block, i) => {
     const t = block.trim();
     if (t.startsWith("## ")) {
+      const title = t.replace(/^## /, "");
+      const isNumbered = title.startsWith("#");
       return (
-        <h2
+        <div
           key={i}
-          className="mt-16 mb-6 scroll-mt-24 border-b border-white/10 pb-3 text-2xl font-bold text-white first:mt-0 sm:text-3xl"
+          className={`mt-16 mb-6 first:mt-0 ${isNumbered ? "scroll-mt-24" : ""}`}
         >
-          {t.replace(/^## /, "")}
-        </h2>
+          <div className="mb-1 flex items-center gap-3">
+            <div className="h-px flex-1 bg-sf-primary/30" />
+          </div>
+          <h2 className="border-b border-white/10 pb-3 text-3xl font-bold text-white sm:text-4xl">
+            {title}
+          </h2>
+        </div>
       );
     }
     if (t.startsWith("![")) {
@@ -78,6 +85,40 @@ function renderArticleBody(markdown: string) {
         >
           <p className="text-sm font-semibold text-sf-primary">
             📍 {t.replace("**Where to find it:**", "Where to find it:")}
+          </p>
+        </div>
+      );
+    }
+    if (t.startsWith('**"') && t.endsWith("**")) {
+      return (
+        <p
+          key={i}
+          className="my-6 text-xl font-bold italic leading-snug text-sf-primary sm:text-2xl"
+        >
+          {t.replace(/\*\*/g, "")}
+        </p>
+      );
+    }
+    if (t.startsWith("🥤")) {
+      return (
+        <div
+          key={i}
+          className="my-4 flex items-start gap-3 rounded-xl bg-white/5 px-5 py-4"
+        >
+          <span className="flex-shrink-0 text-xl">🥤</span>
+          <p className="text-sm leading-relaxed text-white/80">
+            {t
+              .replace(/^🥤\s*/, "")
+              .split("**")
+              .map((part, j) =>
+                j % 2 === 1 ? (
+                  <strong key={j} className="text-white">
+                    {part}
+                  </strong>
+                ) : (
+                  part
+                ),
+              )}
           </p>
         </div>
       );
