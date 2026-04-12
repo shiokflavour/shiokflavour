@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import ClosureBadge from "@/app/components/closure-badge";
 import { HawkerCentreCard } from "../../components/hawker-centre-card";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteHeader } from "../../components/site-header";
@@ -223,6 +224,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
               <h1 className="text-4xl font-bold tracking-tight text-sf-cream sm:text-5xl lg:text-6xl">
                 {h.name}
               </h1>
+              <ClosureBadge hawkerName={h.name} />
               <p className="text-base text-sf-muted">{h.address}</p>
 
               {/* Quick stats row */}
@@ -666,6 +668,7 @@ function ApiHawkerPage({ hawker }: { hawker: HawkerCentre }) {
             <h1 className="mt-2 text-3xl font-bold text-white sm:text-4xl md:text-5xl">
               {hawker.name}
             </h1>
+            <ClosureBadge hawkerName={hawker.name} />
           </div>
         </div>
       </div>
