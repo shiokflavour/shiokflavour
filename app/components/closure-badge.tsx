@@ -17,7 +17,10 @@ export default async function ClosureBadge({
           </p>
           <p className="text-sm text-white/70">
             Closed for{" "}
-            <span className="text-white/90">{closure.reason}</span> until{" "}
+            <span className="text-white/90">
+              {closure.reason ?? "Temporary Closure"}
+            </span>{" "}
+            until{" "}
             <span className="font-semibold text-white">{closure.endDate}</span>.
             Plan your visit accordingly.
           </p>
@@ -32,11 +35,14 @@ export default async function ClosureBadge({
         <span className="mt-0.5 text-lg text-amber-400">🕐</span>
         <div>
           <p className="mb-0.5 text-sm font-bold uppercase tracking-widest text-amber-400">
-            Closing Soon
+            Closing — {closure.reason || "Works"}
           </p>
           <p className="text-sm text-white/70">
             Closes for{" "}
-            <span className="text-white/90">{closure.reason}</span> on{" "}
+            <span className="text-white/90">
+              {closure.reason ?? "Temporary Closure"}
+            </span>{" "}
+            on{" "}
             <span className="font-semibold text-white">{closure.startDate}</span>{" "}
             — reopens{" "}
             <span className="font-semibold text-white">{closure.endDate}</span>.

@@ -85,8 +85,20 @@ function rowName(r: NeaClosureRow): string {
   return (r.name ?? r.NAME ?? "").toLowerCase();
 }
 
-export async function getClosureStatus(hawkerName: string): Promise<ClosureStatus> {
-  const records = await fetchClosures();
+function reasonFromRecord(record: NeaClosureRow): string {
+  const r = record as NeaClosureRow & Record<string, string | undefined>;
+  const reason =
+    r.type_of_closure ||
+    r.TYPE_OF_CLOSURE ||
+    r["type_of_closure"] ||
+    "Temporary Closure";
+  return reason;
+}
+
+function computeClosureStatus(
+  hawkerName: string,
+  records: NeaClosureRow[],
+): ClosureStatus {
   const neaName = NEA_NAME_MAP[hawkerName] ?? hawkerName;
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -107,8 +119,7 @@ export async function getClosureStatus(hawkerName: string): Promise<ClosureStatu
   for (const record of matches) {
     const startDate = new Date(record.start_date ?? record.START_DATE ?? "");
     const endDate = new Date(record.end_date ?? record.END_DATE ?? "");
-    const reason =
-      record.type_of_closure ?? record.TYPE_OF_CLOSURE ?? "Cleaning";
+    const reason = reasonFromRecord(record);
 
     if (Number.isNaN(startDate.getTime()) || Number.isNaN(endDate.getTime())) {
       continue;
@@ -150,4 +161,21 @@ export async function getClosureStatus(hawkerName: string): Promise<ClosureStatu
   }
 
   return { status: "open" };
+}
+
+export async function getClosureStatus(hawkerName: string): Promise<ClosureStatus> {
+  const records = await fetchClosures();
+  return computeClosureStatus(hawkerName, records);
+}
+
+/** One NEA fetch; closure status per hawker name (for listing pages). */
+export async function getClosureStatusesForNames(
+  hawkerNames: string[],
+): Promise<Record<string, ClosureStatus>> {
+  const records = await fetchClosures();
+  const out: Record<string, ClosureStatus> = {};
+  for (const name of hawkerNames) {
+    out[name] = computeClosureStatus(name, records);
+  }
+  return out;
 }
