@@ -1,10 +1,19 @@
-import { getClosureStatusesForNames } from "../lib/hawker-closures";
-import { FEATURED_HAWKERS } from "../lib/featured-hawkers";
-import HawkerCentresClient from "./hawker-centres-client";
+import HawkerCentresClient from "@/app/components/hawker-centres-client";
+import {
+  getClosureStatus,
+  type ClosureStatus,
+} from "@/app/lib/hawker-closures";
+import { FEATURED_HAWKERS as HAWKER_CENTRES } from "@/app/lib/featured-hawkers";
 
 export default async function HawkerCentresPage() {
-  const closureByName = await getClosureStatusesForNames(
-    FEATURED_HAWKERS.map((h) => h.name),
+  const closureMap: Record<string, ClosureStatus> = {};
+  await Promise.all(
+    HAWKER_CENTRES.map(async (hawker) => {
+      const closure = await getClosureStatus(hawker.name);
+      closureMap[hawker.name] = closure;
+    }),
   );
-  return <HawkerCentresClient closureByName={closureByName} />;
+  return (
+    <HawkerCentresClient hawkers={HAWKER_CENTRES} closureMap={closureMap} />
+  );
 }
