@@ -234,6 +234,11 @@ export default function HomePage() {
             <h2 className="text-3xl font-black md:text-4xl">
               Stories from the hawker line
             </h2>
+            <p className="mt-3 max-w-2xl leading-relaxed text-sf-muted">
+              Everything you need to know before you eat. Guides, deep dives and
+              insider knowledge on Singapore&apos;s hawker culture — written for
+              the curious and the hungry.
+            </p>
           </div>
           <Link
             href="/blog"
@@ -284,6 +289,12 @@ export default function HomePage() {
             <h2 className="text-3xl font-black md:text-4xl">
               Know before you order
             </h2>
+            <p className="mt-3 max-w-2xl leading-relaxed text-sf-muted">
+              First time at a hawker centre? Don&apos;t point at the menu.
+              Don&apos;t ask for a fork. We&apos;ll teach you how to order kopi
+              like a local, decode the old school names, and eat like
+              you&apos;ve been doing this your whole life.
+            </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             <Link
@@ -354,6 +365,12 @@ export default function HomePage() {
               <h2 className="text-3xl font-black md:text-4xl">
                 The dishes that built Singapore
               </h2>
+              <p className="mt-3 max-w-2xl leading-relaxed text-sf-muted">
+                Laksa. Char Kway Teow. Hainanese Chicken Rice. These aren&apos;t
+                just dishes — they&apos;re history on a plate. Every bowl tells
+                the story of the immigrants, hawkers and home cooks who built
+                this city one stall at a time.
+              </p>
             </div>
             <Link
               href="/food-heritage"
@@ -442,6 +459,12 @@ export default function HomePage() {
               <h2 className="text-3xl font-black md:text-4xl">
                 32 centres. Every region. All mapped.
               </h2>
+              <p className="mt-3 max-w-2xl leading-relaxed text-sf-muted">
+                From the legendary Maxwell to the underrated Ghim Moh, every
+                hawker centre has a personality. We&apos;ve mapped them all —
+                with what to eat, how to get there, and which stalls to queue
+                for.
+              </p>
             </div>
             <Link
               href="/hawker-centres"
