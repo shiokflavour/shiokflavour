@@ -98,3 +98,11 @@ body {
 .kb-img-3a { animation: kenBurns3 13s ease-in-out infinite; animation-delay: -2s; }
 .kb-img-3b { animation: kenBurns1 13s ease-in-out infinite; animation-delay: -6s; }
 .kb-img-3c { animation: kenBurns2 13s ease-in-out infinite; animation-delay: -10s; }
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

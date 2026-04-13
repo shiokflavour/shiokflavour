@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import type { HawkerRegion } from "../lib/featured-hawkers";
 
 export type HawkerCentreCardData = {
@@ -22,9 +23,15 @@ export type HawkerCentreCardData = {
 type HawkerCentreCardProps = {
   data: HawkerCentreCardData;
   index: number;
+  /** Optional NEA open/closed pill from parent (listing page). */
+  statusPill?: ReactNode;
 };
 
-export function HawkerCentreCard({ data, index }: HawkerCentreCardProps) {
+export function HawkerCentreCard({
+  data,
+  index,
+  statusPill,
+}: HawkerCentreCardProps) {
   const {
     slug,
     name,
@@ -93,6 +100,7 @@ export function HawkerCentreCard({ data, index }: HawkerCentreCardProps) {
           ) : null}
           <p className="mt-2 text-[15px] text-sf-muted/90">{region} region</p>
           <div className="mt-2 flex flex-wrap gap-1.5">
+            {statusPill}
             {showMichelin ? (
               <span className="rounded-full border border-amber-400/40 bg-amber-500/15 px-2.5 py-0.5 text-[15px] font-semibold text-amber-200">
                 ⭐ Michelin Recognised

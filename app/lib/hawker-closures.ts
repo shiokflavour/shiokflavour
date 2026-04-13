@@ -2,7 +2,7 @@
 const CLOSURES_RESOURCE_ID = "d_bda4baa634dd1cc7a6c7cad5f19e2d68";
 
 export type ClosureStatus = {
-  status: "closed" | "closing-soon" | "open";
+  status: "closed" | "open";
   reason?: string;
   startDate?: string;
   endDate?: string;
@@ -85,16 +85,6 @@ function rowName(r: NeaClosureRow): string {
   return (r.name ?? r.NAME ?? "").toLowerCase();
 }
 
-function reasonFromRecord(record: NeaClosureRow): string {
-  const r = record as NeaClosureRow & Record<string, string | undefined>;
-  const reason =
-    r.type_of_closure ||
-    r.TYPE_OF_CLOSURE ||
-    r["type_of_closure"] ||
-    "Temporary Closure";
-  return reason;
-}
-
 function computeClosureStatus(
   hawkerName: string,
   records: NeaClosureRow[],
@@ -102,8 +92,6 @@ function computeClosureStatus(
   const neaName = NEA_NAME_MAP[hawkerName] ?? hawkerName;
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const sevenDaysFromNow = new Date(today);
-  sevenDaysFromNow.setDate(today.getDate() + 7);
 
   const neaFirst = neaName.toLowerCase().split(" ")[0] ?? "";
 
@@ -117,34 +105,22 @@ function computeClosureStatus(
   });
 
   for (const record of matches) {
-    const startDate = new Date(record.start_date ?? record.START_DATE ?? "");
-    const endDate = new Date(record.end_date ?? record.END_DATE ?? "");
-    const reason = reasonFromRecord(record);
+    const startDate = new Date(
+      record.start_date || record.START_DATE || "",
+    );
+    const endDate = new Date(record.end_date || record.END_DATE || "");
+    const reason =
+      record.type_of_closure ||
+      record.TYPE_OF_CLOSURE ||
+      "Temporary Closure";
 
-    if (Number.isNaN(startDate.getTime()) || Number.isNaN(endDate.getTime())) {
+    if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
       continue;
     }
 
     if (today >= startDate && today <= endDate) {
       return {
         status: "closed",
-        reason,
-        startDate: startDate.toLocaleDateString("en-SG", {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        }),
-        endDate: endDate.toLocaleDateString("en-SG", {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        }),
-      };
-    }
-
-    if (startDate > today && startDate <= sevenDaysFromNow) {
-      return {
-        status: "closing-soon",
         reason,
         startDate: startDate.toLocaleDateString("en-SG", {
           day: "numeric",
@@ -178,4 +154,11 @@ export async function getClosureStatusesForNames(
     out[name] = computeClosureStatus(name, records);
   }
   return out;
+}
+
+/** Batch closure lookup (same behaviour as {@link getClosureStatusesForNames}). */
+export async function getAllClosureStatuses(
+  hawkerNames: string[],
+): Promise<Record<string, ClosureStatus>> {
+  return getClosureStatusesForNames(hawkerNames);
 }

@@ -4,6 +4,7 @@ import { BLOG_POSTS } from "@/app/lib/blog-posts";
 import { FLAVOUR_TRAILS } from "@/app/lib/flavour-trails";
 import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
 import { FEATURED_HAWKERS } from "@/app/lib/featured-hawkers";
+import { SiteHeader } from "./components/site-header";
 
 export default function HomePage() {
   const featuredPosts = BLOG_POSTS.slice(0, 3);
@@ -12,73 +13,83 @@ export default function HomePage() {
   const trail = FLAVOUR_TRAILS[0];
 
   return (
-    <main className="bg-sf-bg text-sf-cream">
-      {/* ── HERO ── */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-bg.jpg"
-            alt="Singapore hawker centre"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-sf-bg/60 via-sf-bg/40 to-sf-bg" />
-        </div>
-        <div className="relative z-10 max-w-4xl">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-sf-primary">
-            UNESCO Recognised · Since Forever
-          </p>
-          <h1 className="mb-6 text-5xl font-black leading-tight tracking-tight md:text-7xl">
-            Discover Singapore&apos;s
-            <br />
-            Most <span className="text-sf-primary">Shiok</span> Food
-          </h1>
-          <div className="mb-6 flex flex-wrap justify-center gap-2">
-            {["Breakfast", "Late Night", "Halal", "Near MRT", "Budget", "Michelin"].map(
-              (tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-sf-cream/70"
-                >
-                  {tag}
-                </span>
-              ),
-            )}
+    <>
+      <SiteHeader />
+      <main className="bg-sf-bg text-sf-cream">
+        {/* ── HERO ── */}
+        <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/hero-bg.jpg"
+              alt="Singapore hawker centre"
+              fill
+              className="object-cover opacity-30"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-sf-bg/60 via-sf-bg/40 to-sf-bg" />
           </div>
-          <p className="mb-10 text-lg text-sf-muted md:text-xl">
-            Not a restaurant guide. Not a listicle. A love letter to the uncles
-            and aunties who woke up at 4am so you could eat well.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/hawker-centres"
-              className="rounded-full bg-sf-primary px-8 py-3.5 font-bold text-white transition-colors hover:bg-sf-primary/90"
-            >
-              Explore Hawker Centres
-            </Link>
-            <Link
-              href="/flavour-trail"
-              className="rounded-full border border-white/20 px-8 py-3.5 font-bold text-sf-cream transition-colors hover:border-sf-primary hover:text-sf-primary"
-            >
-              Flavour Trail
-            </Link>
+          <div className="relative z-10 max-w-4xl">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-sf-primary">
+              UNESCO Recognised · Since Forever
+            </p>
+            <div className="relative mx-auto mb-6 h-48 w-48">
+              <Image
+                src="/images/SF_logomark_transparent.png"
+                alt="ShiokFlavour"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <h1 className="mb-6 text-5xl font-black leading-tight tracking-tight md:text-7xl">
+              Discover Singapore&apos;s
+              <br />
+              Most <span className="text-sf-primary">Shiok</span> Food
+            </h1>
+            <div className="mb-6 flex flex-wrap justify-center gap-2">
+              {["Breakfast", "Late Night", "Halal", "Near MRT", "Budget", "Michelin"].map(
+                (tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-sf-cream/70"
+                  >
+                    {tag}
+                  </span>
+                ),
+              )}
+            </div>
+            <p className="mb-10 text-lg text-sf-muted md:text-xl">
+              Not a restaurant guide. Not a listicle. A love letter to the uncles
+              and aunties who woke up at 4am so you could eat well.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/hawker-centres"
+                className="rounded-full bg-sf-primary px-8 py-3.5 font-bold text-white transition-colors hover:bg-sf-primary/90"
+              >
+                Explore Hawker Centres
+              </Link>
+              <Link
+                href="/flavour-trail"
+                className="rounded-full border border-white/20 px-8 py-3.5 font-bold text-sf-cream transition-colors hover:border-sf-primary hover:text-sf-primary"
+              >
+                Flavour Trail
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/30">
-          <svg
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            aria-hidden
-          >
-            <path d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </section>
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/30">
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              aria-hidden
+            >
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </section>
 
       {/* ── FLAVOUR TRAIL TEASER ── */}
       <section className="relative overflow-hidden">
@@ -367,6 +378,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
