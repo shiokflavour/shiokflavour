@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { HawkerCentreCard } from "./hawker-centre-card";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
-import type { ClosureStatus } from "../lib/hawker-closures";
 import {
   REGION_FILTERS,
   type FeaturedHawker,
@@ -62,53 +61,6 @@ function HawkerCentresInner({
   const qParam = searchParams.get("q") ?? "";
 
   const [activeRegion, setActiveRegion] = useState<RegionFilter>("All");
-  const [closureMap, setClosureMap] = useState<Record<string, any>>({});
-
-  useEffect(() => {
-    fetch("/api/hawker-closures")
-      .then((r) => r.json())
-      .then((records: any[]) => {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const map: Record<string, any> = {};
-
-        hawkers.forEach((hawker) => {
-          const matches = records.filter((r: any) => {
-            const rName = (r.name || r.NAME || "").toLowerCase();
-            const hName = hawker.name.toLowerCase();
-            return (
-              rName.includes(hName.split(" ")[0].toLowerCase()) ||
-              hName.includes(rName.split(" ")[0].toLowerCase())
-            );
-          });
-
-          map[hawker.name] = { status: "open" };
-          for (const record of matches) {
-            const start = new Date(record.start_date || record.START_DATE || "");
-            const end = new Date(record.end_date || record.END_DATE || "");
-            const reason =
-              record.type_of_closure ||
-              record.TYPE_OF_CLOSURE ||
-              "Temporary Closure";
-            if (isNaN(start.getTime()) || isNaN(end.getTime())) continue;
-            if (today >= start && today <= end) {
-              map[hawker.name] = {
-                status: "closed",
-                reason,
-                endDate: end.toLocaleDateString("en-SG", {
-                  day: "numeric",
-                  month: "short",
-                  year: "numeric",
-                }),
-              };
-              break;
-            }
-          }
-        });
-        setClosureMap(map);
-      })
-      .catch(() => {});
-  }, []);
 
   const filtered = useMemo(() => {
     let list = hawkers;
@@ -217,23 +169,6 @@ function HawkerCentresInner({
                 <HawkerCentreCard
                   key={h.slug}
                   index={index}
-                  statusPill={(() => {
-                    const closure = closureMap[h.name];
-                    if (!closure) return null;
-                    if (closure.status === "closed")
-                      return (
-                        <span className="inline-flex items-center gap-1.5 rounded-full border border-red-500/30 bg-red-500/15 px-2.5 py-1 text-xs font-bold uppercase tracking-widest text-red-400">
-                          <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
-                          {`Closed — ${closure.reason}`}
-                        </span>
-                      );
-                    return (
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-green-500/30 bg-green-500/15 px-2.5 py-1 text-xs font-bold uppercase tracking-widest text-green-400">
-                        <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
-                        Open
-                      </span>
-                    );
-                  })()}
                   data={{
                     slug: h.slug,
                     name: h.name,
@@ -275,11 +210,8 @@ function HawkerCentresFallback() {
 
 export default function HawkerCentresClient({
   hawkers,
-  // Backwards-compatible prop (no longer used).
-  closureMap: _closureMap,
 }: {
   hawkers: FeaturedHawker[];
-  closureMap?: Record<string, ClosureStatus>;
 }) {
   return (
     <Suspense fallback={<HawkerCentresFallback />}>
