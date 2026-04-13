@@ -17,17 +17,32 @@ const heroImages = [
   "/images/trails/katong/koon-seng-road.jpg",
 ];
 
+const dishImageMap: Record<string, string> = {
+  "hainanese-chicken-rice": "chicken-rice",
+  "bobo-cha-cha": "ice-kachang",
+  rojak: "popiah",
+  "satay-bee-hoon": "satay-bee-hoon",
+};
+
 export default function HomePage() {
   const featuredPosts = BLOG_POSTS.slice(0, 3);
-  const featuredDishes = FOOD_HERITAGE_DISHES.slice(0, 10);
   const featuredHawkers = FEATURED_HAWKERS.slice(0, 3);
   const trail = FLAVOUR_TRAILS[0];
   const [currentImg, setCurrentImg] = useState(0);
+  const [heritageIndex, setHeritageIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImg((prev) => (prev + 1) % heroImages.length);
     }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const total = Math.ceil(FOOD_HERITAGE_DISHES.length / 4);
+    const timer = setInterval(() => {
+      setHeritageIndex((prev) => (prev + 1) % total);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
@@ -294,7 +309,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FOOD HERITAGE STRIP ── */}
-      <section className="py-20">
+      <section className="py-20 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 flex items-end justify-between">
             <div>
@@ -309,33 +324,60 @@ export default function HomePage() {
               href="/food-heritage"
               className="hidden text-sm font-bold text-sf-primary hover:underline md:block"
             >
-              All dishes →
+              All {FOOD_HERITAGE_DISHES.length} dishes →
             </Link>
           </div>
-        </div>
-        <div className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide md:px-[calc((100vw-80rem)/2+1.5rem)]">
-          {featuredDishes.map((dish) => (
-            <Link
-              key={dish.slug}
-              href={`/food-heritage/${dish.slug}`}
-              className="group flex-none w-48 rounded-2xl border border-white/10 bg-sf-surface p-5 transition-colors hover:border-sf-primary/40"
-            >
-              <div className="mb-3 text-4xl">🍽️</div>
-              <h3 className="text-sm font-bold leading-snug transition-colors group-hover:text-sf-primary">
-                {dish.name}
-              </h3>
-              <p className="mt-1 text-xs text-sf-muted/60">{dish.category}</p>
-            </Link>
-          ))}
-          <Link
-            href="/food-heritage"
-            className="flex w-48 flex-none flex-col items-center justify-center rounded-2xl border border-sf-primary/30 bg-sf-primary/5 p-5 transition-colors hover:bg-sf-primary/10"
-          >
-            <span className="mb-2 text-3xl">→</span>
-            <span className="text-center text-sm font-bold text-sf-primary">
-              See all {FOOD_HERITAGE_DISHES.length} dishes
-            </span>
-          </Link>
+
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            {FOOD_HERITAGE_DISHES.slice(
+              heritageIndex * 4,
+              heritageIndex * 4 + 4,
+            ).map((dish) => (
+              <Link
+                key={dish.slug}
+                href={`/food-heritage/${dish.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-sf-surface transition-all duration-300 hover:border-sf-primary/40"
+              >
+                <div className="relative h-40 w-full">
+                  <Image
+                    src={`/images/food/${dishImageMap[dish.slug] || dish.slug}.jpg`}
+                    alt={dish.name}
+                    fill
+                    className="object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src =
+                        "/images/food/laksa.jpg";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-sf-bg via-sf-bg/20 to-transparent" />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-sm font-bold leading-snug transition-colors group-hover:text-sf-primary">
+                    {dish.name}
+                  </h3>
+                  <p className="mt-1 text-xs text-sf-muted/60">{dish.category}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 flex justify-center gap-2">
+            {Array.from({
+              length: Math.ceil(FOOD_HERITAGE_DISHES.length / 4),
+            }).map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setHeritageIndex(i)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === heritageIndex
+                    ? "w-6 bg-sf-primary"
+                    : "w-2 bg-white/20 hover:bg-white/40"
+                }`}
+                aria-label={`Food Heritage page ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
