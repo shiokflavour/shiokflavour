@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <main className="bg-sf-bg text-sf-cream">
       {/* ── HERO ── */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+      <section className="relative z-0 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-bg.jpg"
@@ -81,7 +81,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FLAVOUR TRAIL TEASER ── */}
-      <section className="relative overflow-hidden">
+      <section className="relative z-10 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/trails/katong/koon-seng-road.jpg"
@@ -125,7 +125,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FLAVOUR FILES (BLOG) ── */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="relative z-10 mx-auto max-w-7xl px-6 py-20">
         <div className="mb-12 flex items-end justify-between">
           <div>
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-sf-primary">
@@ -175,7 +175,7 @@ export default function HomePage() {
       </section>
 
       {/* ── HAWKER GUIDE TEASERS ── */}
-      <section className="bg-sf-surface/50 py-20">
+      <section className="relative z-10 bg-sf-surface/50 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12">
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-sf-primary">
@@ -244,7 +244,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FOOD HERITAGE STRIP ── */}
-      <section className="py-20">
+      <section className="relative z-10 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 flex items-end justify-between">
             <div>
@@ -290,7 +290,7 @@ export default function HomePage() {
       </section>
 
       {/* ── HAWKER CENTRES TEASER ── */}
-      <section className="bg-sf-surface/50 py-20">
+      <section className="relative z-10 bg-sf-surface/50 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 flex items-end justify-between">
             <div>
@@ -348,7 +348,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SIGN OFF ── */}
-      <section className="py-24 text-center">
+      <section className="relative z-10 py-24 text-center">
         <div className="mx-auto max-w-2xl px-6">
           <div className="mb-6 text-5xl">🍜</div>
           <h2 className="mb-4 text-2xl font-black md:text-3xl">
