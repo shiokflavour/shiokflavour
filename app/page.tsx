@@ -14,7 +14,17 @@ const heroImages = [
   "/images/hawkers/lau-pa-sat.jpg",
   "/images/hawkers/old-airport-road.jpg",
   "/images/hawkers/chinatown-complex.jpg",
+  "/images/hawkers/newton.jpg",
+  "/images/hawkers/tiong-bahru.jpg",
+  "/images/hawkers/east-coast-lagoon.jpg",
+  "/images/hawkers/tekka.jpg",
+  "/images/hawkers/geylang-serai.jpg",
+  "/images/hawkers/amoy-street.jpg",
   "/images/trails/katong/koon-seng-road.jpg",
+  "/images/trails/katong/328-katong-laksa.jpg",
+  "/images/trails/katong/chin-mee-chin.jpg",
+  "/images/trails/katong/sri-senpaga-temple.jpg",
+  "/images/trails/katong/kim-choo-kueh.jpg",
 ];
 
 const dishImageMap: Record<string, string> = {
