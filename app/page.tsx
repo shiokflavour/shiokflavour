@@ -18,9 +18,44 @@ const heroImages = [
 ];
 
 const dishImageMap: Record<string, string> = {
-  "hainanese-chicken-rice": "chicken-rice",
-  "bobo-cha-cha": "ice-kachang",
-  rojak: "popiah",
+  "hainanese-chicken-rice": "chicken-rice.jpg",
+  "bobo-cha-cha": "ice-kachang.jpg",
+  rojak: "satay.jpg",
+  appam: "appam.webp",
+  "bak-chang": "bak-chang.webp",
+  "ngoh-hiang": "ngoh-hiang.webp",
+  "char-kway-teow": "char-kway-teow.jpg",
+  laksa: "laksa.jpg",
+  "ice-kachang": "ice-kachang.jpg",
+  "kaya-toast": "kaya-toast.jpg",
+  "chilli-crab": "chilli-crab.jpg",
+  "bak-chor-mee": "bak-chor-mee.jpg",
+  "hokkien-mee": "hokkien-mee.jpg",
+  "wanton-mee": "wanton-mee.jpg",
+  "economy-rice": "economy-rice.jpg",
+  satay: "satay.jpg",
+  "roti-john": "roti-john.jpg",
+  popiah: "popiah.jpg",
+  "chwee-kueh": "chwee-kueh.jpg",
+  "nasi-lemak": "nasi-lemak.jpg",
+  "mee-rebus": "mee-rebus.jpg",
+  "mee-siam": "mee-siam.jpg",
+  lontong: "lontong.jpg",
+  murtabak: "murtabak.jpg",
+  "nasi-padang": "nasi-padang.jpg",
+  "satay-bee-hoon": "satay-bee-hoon.jpg",
+  "ayam-buah-keluak": "ayam-buah-keluak.jpg",
+  "kueh-pie-tee": "kueh-pie-tee.jpg",
+  "ondeh-ondeh": "ondeh-ondeh.jpg",
+  "bak-kut-teh": "bak-kut-teh.jpg",
+  "lor-mee": "lor-mee.jpg",
+  "hae-mee": "hae-mee.jpg",
+  "yong-tau-foo": "yong-tau-foo.jpg",
+  "roti-prata": "roti-prata.jpg",
+  "fish-head-curry": "fish-head-curry.jpg",
+  biryani: "biryani.jpg",
+  "teh-tarik": "teh-tarik.jpg",
+  vadai: "vadai.jpg",
 };
 
 export default function HomePage() {
@@ -329,7 +364,7 @@ export default function HomePage() {
               >
                 <div className="relative h-36">
                   <Image
-                    src={`/images/food/${dishImageMap[dish.slug] || dish.slug}.jpg`}
+                    src={`/images/food/${dishImageMap[dish.slug] || dish.slug + ".jpg"}`}
                     alt={dish.name}
                     fill
                     className="object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
@@ -359,7 +394,7 @@ export default function HomePage() {
               >
                 <div className="relative h-36">
                   <Image
-                    src={`/images/food/${dishImageMap[dish.slug] || dish.slug}.jpg`}
+                    src={`/images/food/${dishImageMap[dish.slug] || dish.slug + ".jpg"}`}
                     alt={dish.name}
                     fill
                     className="object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"

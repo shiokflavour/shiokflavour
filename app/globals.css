@@ -136,13 +136,13 @@ body {
 }
 
 .marquee-left {
-  animation: marquee-left 30s linear infinite;
+  animation: marquee-left 55s linear infinite;
   display: flex;
   width: max-content;
 }
 
 .marquee-right {
-  animation: marquee-right 30s linear infinite;
+  animation: marquee-right 55s linear infinite;
   display: flex;
   width: max-content;
 }
