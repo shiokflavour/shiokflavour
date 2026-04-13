@@ -20,7 +20,7 @@ export default function HomePage() {
         <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/hero-bg.jpg"
+              src="/images/hawkers/bedok-85.jpg"
               alt="Singapore hawker centre"
               fill
               className="object-cover opacity-30"
@@ -38,7 +38,7 @@ export default function HomePage() {
                 style={{ top: "10%", left: "10%", right: "10%", bottom: "10%" }}
               />
               <Image
-                src="/images/logo.png"
+                src="/images/SF_logomark_transparent.png"
                 alt="ShiokFlavour"
                 fill
                 className="relative z-10 object-contain drop-shadow-[0_0_30px_rgba(249,115,22,0.8)]"
