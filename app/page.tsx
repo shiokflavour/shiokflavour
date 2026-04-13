@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
@@ -6,27 +9,59 @@ import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
 import { FEATURED_HAWKERS } from "@/app/lib/featured-hawkers";
 import { SiteHeader } from "./components/site-header";
 
+const heroImages = [
+  "/images/hawkers/maxwell-food-centre.jpg",
+  "/images/hawkers/lau-pa-sat.jpg",
+  "/images/hawkers/old-airport-road.jpg",
+  "/images/hawkers/chinatown-complex.jpg",
+  "/images/trails/katong/koon-seng-road.jpg",
+];
+
 export default function HomePage() {
   const featuredPosts = BLOG_POSTS.slice(0, 3);
   const featuredDishes = FOOD_HERITAGE_DISHES.slice(0, 10);
   const featuredHawkers = FEATURED_HAWKERS.slice(0, 3);
   const trail = FLAVOUR_TRAILS[0];
+  const [currentImg, setCurrentImg] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImg((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <>
       <SiteHeader />
       <main className="bg-sf-bg text-sf-cream">
         {/* ── HERO ── */}
-        <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/hawkers/bedok-85.jpg"
-              alt="Singapore hawker centre"
-              fill
-              className="object-cover opacity-30"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-sf-bg/60 via-sf-bg/40 to-sf-bg" />
+        <section className="relative flex min-h-[82vh] flex-col items-center justify-center overflow-hidden px-6 text-center">
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            {heroImages.map((src, i) => (
+              <div
+                key={src}
+                className="absolute inset-0"
+                style={{
+                  opacity: i === currentImg ? 1 : 0,
+                  transition: "opacity 1500ms ease-in-out",
+                }}
+              >
+                <Image
+                  src={src}
+                  alt="Singapore hawker food"
+                  fill
+                  className="object-cover"
+                  style={{
+                    opacity: 0.18,
+                    transform: i === currentImg ? "scale(1.08)" : "scale(1)",
+                    transition: "transform 6000ms ease-in-out",
+                  }}
+                  priority={i === 0}
+                />
+              </div>
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-b from-sf-bg/70 via-sf-bg/50 to-sf-bg" />
           </div>
           <div className="relative z-10 max-w-4xl">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-sf-primary">
