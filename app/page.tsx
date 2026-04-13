@@ -67,7 +67,7 @@ export default function HomePage() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImg((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
@@ -93,9 +93,9 @@ export default function HomePage() {
                   fill
                   className="object-cover"
                   style={{
-                    opacity: 0.18,
+                    opacity: 0.28,
                     transform: i === currentImg ? "scale(1.08)" : "scale(1)",
-                    transition: "transform 6000ms ease-in-out",
+                    transition: "transform 3500ms ease-in-out",
                   }}
                   priority={i === 0}
                 />
