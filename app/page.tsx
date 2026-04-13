@@ -32,12 +32,16 @@ export default function HomePage() {
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-sf-primary">
               UNESCO Recognised · Since Forever
             </p>
-            <div className="relative mx-auto mb-6 h-48 w-48">
+            <div className="relative mx-auto mb-6 h-56 w-56">
+              <div
+                className="fire-glow absolute inset-0 rounded-full bg-sf-primary"
+                style={{ top: "10%", left: "10%", right: "10%", bottom: "10%" }}
+              />
               <Image
-                src="/images/SF_logomark_transparent.png"
+                src="/images/logo.png"
                 alt="ShiokFlavour"
                 fill
-                className="object-contain"
+                className="relative z-10 object-contain drop-shadow-[0_0_30px_rgba(249,115,22,0.8)]"
               />
             </div>
             <h1 className="mb-6 text-5xl font-black leading-tight tracking-tight md:text-7xl">

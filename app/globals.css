@@ -106,3 +106,21 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+@keyframes fire-breathe {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1.2);
+    filter: blur(40px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.6);
+    filter: blur(50px);
+  }
+}
+
+.fire-glow {
+  animation: fire-breathe 3s ease-in-out infinite;
+}
