@@ -9,6 +9,10 @@ export type TrailStop = {
   tip: string;
   duration: string;
   image: string;
+  alsoTry?: { item: string; note?: string }[];
+  highlights?: { item: string; note?: string }[];
+  isFree?: boolean;
+  hasPaidOption?: boolean;
 };
 
 export type FlavourTrail = {
@@ -183,7 +187,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
     title: "Singapore CBD Food Trail",
     subtitle:
       "From kaya toast at sunrise to satay under the city lights — the tastiest day you'll ever have in Singapore.",
-    region: "Singapore CBD",
+    region: "Singapore CBD · Chinatown MRT → Raffles Place MRT",
     duration: "Full day (8am – 9pm)",
     distance: "4km walking",
     stops: 9,
@@ -198,7 +202,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
       {
         number: 1,
         name: "The 1950s Coffee & Chinatown Morning Walk",
-        type: "experience",
+        type: "eat",
         intro:
           "A dollar. That's what a kopi costs here. Michelin-listed, decades-old, second floor of Chinatown Complex — and the uncle behind the counter pulls it the same way he always has. Cloth sock. Robusta beans. No shortcuts.\n\nOrder your kopi. Crack your soft boiled eggs into the saucer, add dark soy and white pepper. Eat slowly. You have nowhere to be yet.\n\nWhen you're done, step outside. Chinatown at 8am belongs to the people who live here — the light is softer, the streets quieter, the shophouses on Pagoda Street glowing in dusty reds and yellows. Sri Mariamman Temple has been standing at the end of South Bridge Road since 1827. Duck into Sago Street. Wander without a plan. That's the point.",
         address:
@@ -206,14 +210,21 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         mapsUrl:
           "https://maps.google.com/?q=1950s+Coffee+Chinatown+Complex+Singapore",
         whatToOrder: [
-          'Kopi O — say "siu dai" for less sweet',
+          "Kopi O — black, full-bodied — say 'siu dai' for less sweet",
           "Kaya toast — thin, crispy, cold butter through the middle",
-          "Soft boiled eggs — dark soy, white pepper",
-          "Also try: Kopi Gu You — kopi with butter dissolved in",
-          "Also try: Peanut thick toast",
-          "Also try: Teh C",
+          "Soft boiled eggs — crack into a saucer, dark soy, white pepper",
         ],
-        tip: "Closed Mondays. Order your kopi properly — the uncle will appreciate it, your taste buds will too. Can't decide between kaya and peanut? Order both and split them.",
+        alsoTry: [
+          {
+            item: "Kopi Gu You",
+            note: "Kopi with butter dissolved in — sounds wrong, tastes right",
+          },
+          {
+            item: "Peanut thick toast",
+            note: "Chunky, filling, honest — can't decide? Order both and split them",
+          },
+        ],
+        tip: "Closed Mondays. Order your kopi properly — the uncle will appreciate it, your taste buds will too.",
         duration: "2 hours",
         image: "/images/trails/cbd/chinatown-morning.jpg",
       },
@@ -227,10 +238,17 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         mapsUrl: "https://maps.google.com/?q=Maxwell+Food+Centre+Singapore",
         whatToOrder: [
           "Tian Tian Chicken Rice — half portion, mixed (white and roast)",
-          "Fresh sugarcane juice",
-          "Maxwell Fuzhou Oyster Cake (if open)",
-          "Also try: Zhen Zhen Porridge",
-          "Also try: Maxwell Popiah",
+          "Fresh sugarcane juice — cold, sweet, from the stall near the entrance",
+        ],
+        alsoTry: [
+          {
+            item: "Zhen Zhen Porridge",
+            note: "Silky smooth congee — the kind that makes you understand why people eat porridge",
+          },
+          {
+            item: "Maxwell Popiah",
+            note: "Fresh spring rolls made to order — light and packed with flavour",
+          },
         ],
         tip: "Queue at Tian Tian starts building from 10.30am. Order, find a seat, then go back to collect. Don't hover at the counter.",
         duration: "45 mins",
@@ -245,9 +263,29 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         address: "18 Marina Gardens Drive, Singapore 018953",
         mapsUrl: "https://maps.google.com/?q=Gardens+by+the+Bay+Singapore",
         whatToOrder: [],
-        tip: "If you skip the paid attractions now, come back at 7.45pm for the Garden Rhapsody light show — completely free and genuinely worth staying for.",
+        highlights: [
+          {
+            item: "Supertree Grove",
+            note: "Free — walk underneath them, look up, take your time",
+          },
+          {
+            item: "OCBC Skyway",
+            note: "SGD $14 — elevated walkway between the trees, book online",
+          },
+          {
+            item: "Cloud Forest",
+            note: "SGD $28 — misty mountain waterfall inside a glass dome",
+          },
+          {
+            item: "Flower Dome",
+            note: "SGD $28 — world's largest glass greenhouse, cooler and quieter",
+          },
+        ],
+        tip: "Skip the paid attractions and come back at 7.45pm for the Garden Rhapsody light show — Supertrees glow and pulse to music. Completely free.",
         duration: "2 hours",
         image: "/images/trails/cbd/gardens-bay.jpg",
+        isFree: true,
+        hasPaidOption: true,
       },
       {
         number: 4,
@@ -259,10 +297,18 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         mapsUrl: "https://maps.google.com/?q=Lau+Pa+Sat+Singapore",
         whatToOrder: [
           "Satay — chicken and mutton, minimum 10 sticks, with peanut sauce and ketupat",
-          "Otah — grilled fish cake in banana leaf",
-          "Fresh lime juice",
-          "Also try: Char kway teow (extra cockles)",
-          "Also try: Fried Hokkien mee (lime + sambal)",
+          "Otah — grilled fish cake in banana leaf, smoky and spicy",
+          "Fresh lime juice — cold, sharp, non-negotiable in this heat",
+        ],
+        alsoTry: [
+          {
+            item: "Char kway teow",
+            note: "Wok-fried flat noodles with prawns, cockles, egg and dark soy",
+          },
+          {
+            item: "Hokkien mee",
+            note: "Thick yellow noodles braised in prawn stock — squeeze the lime",
+          },
         ],
         tip: "Boon Tat Street outside transforms into open-air satay street from 7pm. You're coming back tonight — save room.",
         duration: "1 hour",
@@ -273,13 +319,32 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Marina Bay Waterfront Walk",
         type: "walk",
         intro:
-          "Walk off lunch along one of the most spectacular urban waterfronts in the world. The promenade from Lau Pa Sat to the Helix Bridge takes about 15 minutes on foot. This stretch is completely free — the Esplanade durians, the double helix bridge, Marina Bay Sands rising behind it like something from a science fiction film. Just walk. Let it wash over you.",
+          "Walk off lunch along one of the most spectacular urban waterfronts in the world. The promenade from Lau Pa Sat to the Helix Bridge takes about 15 minutes on foot. Completely free — the Esplanade durians, the double helix bridge, Marina Bay Sands rising behind it like something from a science fiction film. Just walk. Let it wash over you.",
         address: "Helix Bridge, Marina Bay, Singapore",
         mapsUrl: "https://maps.google.com/?q=Helix+Bridge+Singapore",
         whatToOrder: [],
-        tip: "Best photo — stand on the Helix Bridge facing the city at around 4pm. The light turns golden.",
+        highlights: [
+          {
+            item: "Helix Bridge",
+            note: "Walk across it, stop in the middle, look both ways",
+          },
+          {
+            item: "ArtScience Museum",
+            note: "The lotus-shaped building is stunning from the waterfront",
+          },
+          {
+            item: "Marina Bay Sands observation deck",
+            note: "Optional — SGD $32, views are extraordinary",
+          },
+          {
+            item: "Merlion Park",
+            note: "Touristy but you'd regret not going",
+          },
+        ],
+        tip: "Best photo in Singapore — stand on the Helix Bridge facing the city at around 4pm. The light turns golden. You'll thank us later.",
         duration: "1.5 hours",
         image: "/images/trails/cbd/helix-bridge.jpg",
+        isFree: true,
       },
       {
         number: 6,
@@ -290,12 +355,20 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         address: "7 Maxwell Road, Singapore 069111",
         mapsUrl: "https://maps.google.com/?q=Amoy+Street+Food+Centre+Singapore",
         whatToOrder: [
-          "Ice kachang",
-          "Bak chor mee dry",
-          "Also try: Teh tarik",
-          "Also try: Soon kueh",
+          "Ice kachang — shaved ice, red beans, attap seeds, rainbow syrup — eat fast before it melts",
+          "Bak chor mee dry — minced pork noodles with vinegar, chilli, crispy lard — always order dry",
         ],
-        tip: "Always order the dry version of noodles here — more intensely flavoured than the soup. Add the soup on the side if you want it.",
+        alsoTry: [
+          {
+            item: "Teh tarik",
+            note: "Pulled milk tea — frothy and warm, perfect 4pm pick-me-up",
+          },
+          {
+            item: "Soon kueh",
+            note: "Steamed dumpling with bamboo shoots and turnip — delicate and underrated",
+          },
+        ],
+        tip: "Always order the dry version of noodles — more intensely flavoured than soup. Add soup on the side if you want it.",
         duration: "45 mins",
         image: "/images/trails/cbd/amoy-street.jpg",
       },
@@ -308,9 +381,28 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         address: "Ann Siang Hill, Club Street, Singapore",
         mapsUrl: "https://maps.google.com/?q=Ann+Siang+Hill+Singapore",
         whatToOrder: [],
-        tip: "If you want a drink before dinner — craft beer, fresh coconut, a glass of wine — this is the spot. You've earned it.",
+        highlights: [
+          {
+            item: "Ann Siang Hill Park",
+            note: "Tiny hilltop park with rooftop views — often empty",
+          },
+          {
+            item: "Club Street",
+            note: "Walk slowly, look up at the shophouse facades",
+          },
+          {
+            item: "Duxton Hill",
+            note: "One street over, equally beautiful, slightly more local",
+          },
+          {
+            item: "Pre-dinner drink",
+            note: "Optional — craft beer, coconut, or wine at a bar on Club Street",
+          },
+        ],
+        tip: "The bars on Club Street and Duxton Hill start filling up around 6pm. Perfect spot for a drink before dinner — you've earned it.",
         duration: "1 hour",
         image: "/images/trails/cbd/ann-siang-hill.jpg",
+        isFree: true,
       },
       {
         number: 8,
@@ -322,13 +414,18 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         mapsUrl:
           "https://maps.google.com/?q=Hong+Lim+Market+Food+Centre+Singapore",
         whatToOrder: [
-          "Carrot cake black",
-          "Oyster omelette",
-          "Hokkien mee",
-          "Also try: Barley water",
-          "Also try: Char siew rice",
+          "Carrot cake black — fried with dark caramel sauce, crispy and smoky — do not order white by mistake",
+          "Oyster omelette — fresh oysters, egg, potato starch, chilli sauce on the side",
+          "Hokkien mee — thick yellow noodles with prawn, squid, sambal, lime — squeeze hard",
         ],
-        tip: '"Carrot cake" has no carrot. It\'s white radish and rice flour, fried in a wok. Black is better than white. This is not a debate.',
+        alsoTry: [
+          { item: "Barley water", note: "Cold, sweet — the perfect dinner drink" },
+          {
+            item: "Char siew rice",
+            note: "BBQ pork over rice — simple and satisfying",
+          },
+        ],
+        tip: "'Carrot cake' has no carrot. It's white radish and rice flour, fried in a wok. Black is better than white. This is not a debate.",
         duration: "1 hour",
         image: "/images/trails/cbd/hong-lim.jpg",
       },
@@ -341,13 +438,21 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         address: "Boon Tat Street, Singapore 048582",
         mapsUrl: "https://maps.google.com/?q=Boon+Tat+Street+Satay+Singapore",
         whatToOrder: [
-          "Satay — at least 10 sticks, chicken + mutton mixed",
-          "Ketupat — tear and dip",
-          "Cold Tiger beer or fresh lime juice",
-          "Also try: Otah (charcoal grilled)",
-          "Also try: BBQ stingray",
+          "Satay — at least 10 sticks, chicken and mutton mixed, with peanut sauce",
+          "Ketupat — compressed rice cakes that come with the satay — tear and dip",
+          "Cold Tiger beer or fresh lime juice — your call, both are right",
         ],
-        tip: "Tell the uncle how many sticks upfront — they cook to order and take about 10 minutes. Use the time to find a table and order drinks.",
+        alsoTry: [
+          {
+            item: "Otah",
+            note: "Grilled over charcoal — smokier and more intense than lunchtime",
+          },
+          {
+            item: "BBQ stingray",
+            note: "Grilled on banana leaf with sambal — bold and unmistakably Singapore",
+          },
+        ],
+        tip: "Tell the uncle how many sticks upfront — they cook to order, takes about 10 minutes. Use the time to find a table. Stalls open until midnight.",
         duration: "Stay as long as you want",
         image: "/images/trails/cbd/satay-street.jpg",
       },
