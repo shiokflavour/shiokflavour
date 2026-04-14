@@ -178,4 +178,181 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
     endNote:
       'You made it to the end of the trail. And if you ate everything on this list — the kaya toast, the prata, the laksa, the gelato — you now have a very good understanding of why people who grow up in the East never want to leave.\n\nThank you for walking this with us. Every stall on this trail is run by someone who has spent years — sometimes decades — perfecting one thing. When you eat there, you are keeping that alive. That matters more than you know.\n\nCome back hungry. Katong will be ready.\n\nEnjoy this trail? Share it with someone who deserves a good meal. And if you find a stall we missed — write to us. We are always hungry for a good tip.\n\n— The ShiokFlavour Team\nSingapore\'s hawker heritage, one plate at a time.',
   },
+  {
+    slug: "cbd-day-trail",
+    title: "Singapore CBD Food Trail",
+    subtitle:
+      "From kaya toast at sunrise to satay under the city lights — the tastiest day you'll ever have in Singapore.",
+    region: "Singapore CBD",
+    duration: "Full day (8am – 9pm)",
+    distance: "4km walking",
+    stops: 9,
+    bestTime: "Start by 8am",
+    difficulty: "Easy",
+    heroImage: "/images/trails/cbd/lau-pa-sat-hero.jpg",
+    intro:
+      "A full day eating and exploring trail through Singapore's CBD — weaving between legendary hawker centres, colonial heritage, and the city's most iconic landmarks. Start with kopi as the city wakes up. End with satay as the skyline glows.",
+    pullQuote:
+      "Satay in hand, city lights above — Singapore doing what Singapore does best: feeding people well and making it look effortless.",
+    trailStops: [
+      {
+        number: 1,
+        name: "The 1950s Coffee & Chinatown Morning Walk",
+        type: "experience",
+        intro:
+          "A dollar. That's what a kopi costs here. Michelin-listed, decades-old, second floor of Chinatown Complex — and the uncle behind the counter pulls it the same way he always has. Cloth sock. Robusta beans. No shortcuts.\n\nOrder your kopi. Crack your soft boiled eggs into the saucer, add dark soy and white pepper. Eat slowly. You have nowhere to be yet.\n\nWhen you're done, step outside. Chinatown at 8am belongs to the people who live here — the light is softer, the streets quieter, the shophouses on Pagoda Street glowing in dusty reds and yellows. Sri Mariamman Temple has been standing at the end of South Bridge Road since 1827. Duck into Sago Street. Wander without a plan. That's the point.",
+        address:
+          "Chinatown Complex Food Centre, #02-048, 335 Smith Street, Singapore 050335",
+        mapsUrl:
+          "https://maps.google.com/?q=1950s+Coffee+Chinatown+Complex+Singapore",
+        whatToOrder: [
+          'Kopi O — say "siu dai" for less sweet',
+          "Kaya toast — thin, crispy, cold butter through the middle",
+          "Soft boiled eggs — dark soy, white pepper",
+          "Also try: Kopi Gu You — kopi with butter dissolved in",
+          "Also try: Peanut thick toast",
+          "Also try: Teh C",
+        ],
+        tip: "Closed Mondays. Order your kopi properly — the uncle will appreciate it, your taste buds will too. Can't decide between kaya and peanut? Order both and split them.",
+        duration: "2 hours",
+        image: "/images/trails/cbd/chinatown-morning.jpg",
+      },
+      {
+        number: 2,
+        name: "Maxwell Food Centre",
+        type: "eat",
+        intro:
+          "You're not hungry yet. Order half a plate anyway. Tian Tian's chicken rice is not something you skip because of timing. This stall has been here since 1987 and Anthony Bourdain queued for it on No Reservations. The chicken is poached until just cooked, the rice fragrant with chicken fat and pandan, the chilli sauce the best in Singapore. A half portion is SGD $5. There is no excuse.",
+        address: "1 Kadayanallur Street, Tanjong Pagar, Singapore 069184",
+        mapsUrl: "https://maps.google.com/?q=Maxwell+Food+Centre+Singapore",
+        whatToOrder: [
+          "Tian Tian Chicken Rice — half portion, mixed (white and roast)",
+          "Fresh sugarcane juice",
+          "Maxwell Fuzhou Oyster Cake (if open)",
+          "Also try: Zhen Zhen Porridge",
+          "Also try: Maxwell Popiah",
+        ],
+        tip: "Queue at Tian Tian starts building from 10.30am. Order, find a seat, then go back to collect. Don't hover at the counter.",
+        duration: "45 mins",
+        image: "/images/trails/cbd/maxwell.jpg",
+      },
+      {
+        number: 3,
+        name: "Gardens by the Bay",
+        type: "walk",
+        intro:
+          "Take the MRT one stop from Tanjong Pagar to Bayfront, or walk 20 minutes along the waterfront — the walk is worth it on a clear morning. Gardens by the Bay is jaw-dropping regardless of how many times you've seen it in photos. The Supertrees alone are worth the trip. Everything else is a bonus.",
+        address: "18 Marina Gardens Drive, Singapore 018953",
+        mapsUrl: "https://maps.google.com/?q=Gardens+by+the+Bay+Singapore",
+        whatToOrder: [],
+        tip: "If you skip the paid attractions now, come back at 7.45pm for the Garden Rhapsody light show — completely free and genuinely worth staying for.",
+        duration: "2 hours",
+        image: "/images/trails/cbd/gardens-bay.jpg",
+      },
+      {
+        number: 4,
+        name: "Lau Pa Sat",
+        type: "eat",
+        intro:
+          "Built in 1894, Lau Pa Sat is Singapore's most beautiful hawker centre — a Victorian cast iron structure in the middle of the CBD that somehow survived modernisation, war, and fifty years of urban development. At lunchtime it fills with office workers eating $5 plates next to tourists who can't believe what they're looking at. Order satay. Order a lot of satay.",
+        address: "18 Raffles Quay, Singapore 048582",
+        mapsUrl: "https://maps.google.com/?q=Lau+Pa+Sat+Singapore",
+        whatToOrder: [
+          "Satay — chicken and mutton, minimum 10 sticks, with peanut sauce and ketupat",
+          "Otah — grilled fish cake in banana leaf",
+          "Fresh lime juice",
+          "Also try: Char kway teow (extra cockles)",
+          "Also try: Fried Hokkien mee (lime + sambal)",
+        ],
+        tip: "Boon Tat Street outside transforms into open-air satay street from 7pm. You're coming back tonight — save room.",
+        duration: "1 hour",
+        image: "/images/trails/cbd/lau-pa-sat.jpg",
+      },
+      {
+        number: 5,
+        name: "Marina Bay Waterfront Walk",
+        type: "walk",
+        intro:
+          "Walk off lunch along one of the most spectacular urban waterfronts in the world. The promenade from Lau Pa Sat to the Helix Bridge takes about 15 minutes on foot. This stretch is completely free — the Esplanade durians, the double helix bridge, Marina Bay Sands rising behind it like something from a science fiction film. Just walk. Let it wash over you.",
+        address: "Helix Bridge, Marina Bay, Singapore",
+        mapsUrl: "https://maps.google.com/?q=Helix+Bridge+Singapore",
+        whatToOrder: [],
+        tip: "Best photo — stand on the Helix Bridge facing the city at around 4pm. The light turns golden.",
+        duration: "1.5 hours",
+        image: "/images/trails/cbd/helix-bridge.jpg",
+      },
+      {
+        number: 6,
+        name: "Amoy Street Food Centre",
+        type: "eat",
+        intro:
+          "Tucked behind the CBD's glass towers, Amoy Street Food Centre is the kind of place that rewards people who know where to look. By 4.30pm the lunch crowd has cleared, the best stalls have rested and restocked, and you can actually get a seat. Order something cold. Order something light. You've got dinner ahead of you.",
+        address: "7 Maxwell Road, Singapore 069111",
+        mapsUrl: "https://maps.google.com/?q=Amoy+Street+Food+Centre+Singapore",
+        whatToOrder: [
+          "Ice kachang",
+          "Bak chor mee dry",
+          "Also try: Teh tarik",
+          "Also try: Soon kueh",
+        ],
+        tip: "Always order the dry version of noodles here — more intensely flavoured than the soup. Add the soup on the side if you want it.",
+        duration: "45 mins",
+        image: "/images/trails/cbd/amoy-street.jpg",
+      },
+      {
+        number: 7,
+        name: "Ann Siang Hill",
+        type: "walk",
+        intro:
+          "Singapore's most beautiful heritage streets and almost nobody talks about them. Ann Siang Hill is a gentle slope of perfectly preserved shophouses that feels completely removed from the city around it. Club Street runs parallel — bars and restaurants that haven't tried too hard. The light at 5.30pm turns everything golden. This is where you take the photos that make everyone back home ask where you went.",
+        address: "Ann Siang Hill, Club Street, Singapore",
+        mapsUrl: "https://maps.google.com/?q=Ann+Siang+Hill+Singapore",
+        whatToOrder: [],
+        tip: "If you want a drink before dinner — craft beer, fresh coconut, a glass of wine — this is the spot. You've earned it.",
+        duration: "1 hour",
+        image: "/images/trails/cbd/ann-siang-hill.jpg",
+      },
+      {
+        number: 8,
+        name: "Hong Lim Market & Food Centre",
+        type: "eat",
+        intro:
+          "One of Singapore's oldest hawker centres and still one of its best. By 7pm Hong Lim is in full dinner swing — the carrot cake wok is perfectly seasoned after a full day of frying, the oyster omelette is crispy at the edges and eggy in the middle. Order both. Share between two. Add hokkien mee. Best $20 dinner in the city.",
+        address: "531A Upper Cross Street, Singapore 051531",
+        mapsUrl:
+          "https://maps.google.com/?q=Hong+Lim+Market+Food+Centre+Singapore",
+        whatToOrder: [
+          "Carrot cake black",
+          "Oyster omelette",
+          "Hokkien mee",
+          "Also try: Barley water",
+          "Also try: Char siew rice",
+        ],
+        tip: '"Carrot cake" has no carrot. It\'s white radish and rice flour, fried in a wok. Black is better than white. This is not a debate.',
+        duration: "1 hour",
+        image: "/images/trails/cbd/hong-lim.jpg",
+      },
+      {
+        number: 9,
+        name: "Lau Pa Sat Satay Street",
+        type: "eat & drink",
+        intro:
+          "End where Singapore ends every good night. From 7pm Boon Tat Street closes to traffic and the satay stalls wheel out their grills. The smoke drifts through the CBD, the city towers glow above you, and the uncles fan charcoal with the calm of someone who has been doing this perfectly for thirty years. Order satay. Find a table. Sit down. You've earned this.",
+        address: "Boon Tat Street, Singapore 048582",
+        mapsUrl: "https://maps.google.com/?q=Boon+Tat+Street+Satay+Singapore",
+        whatToOrder: [
+          "Satay — at least 10 sticks, chicken + mutton mixed",
+          "Ketupat — tear and dip",
+          "Cold Tiger beer or fresh lime juice",
+          "Also try: Otah (charcoal grilled)",
+          "Also try: BBQ stingray",
+        ],
+        tip: "Tell the uncle how many sticks upfront — they cook to order and take about 10 minutes. Use the time to find a table and order drinks.",
+        duration: "Stay as long as you want",
+        image: "/images/trails/cbd/satay-street.jpg",
+      },
+    ],
+    endNote:
+      "You made it to the end of the trail. Satay in hand, city lights above, Singapore doing what Singapore does best — feeding people well and making it look effortless.\n\nThis city runs on hawker food. Always has. The uncles and aunties you met today have been showing up before sunrise for decades, not for the money but because this is what they do. Remember that the next time someone tells you hawker food is cheap. It is. It's also irreplaceable.\n\nStay hungry,\nJay\nShiokFlavour\nServing Singapore's hawker heritage, one plate at a time.",
+  },
 ];
