@@ -195,6 +195,68 @@ export default async function TrailPage({ params }: Props) {
                       </div>
                     )}
 
+                    {stop.alsoTry && stop.alsoTry.length > 0 && (
+                      <div className="mb-4 rounded-xl border border-white/5 bg-[#1a1a1a] p-5">
+                        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-amber-400/90">
+                          Also Try
+                        </p>
+                        <ul className="flex flex-col gap-2">
+                          {stop.alsoTry.map((row, i) => (
+                            <li
+                              key={i}
+                              className="flex items-start gap-2 text-sm text-white/70"
+                            >
+                              <span className="mt-0.5 flex-shrink-0 text-amber-400/80">
+                                —
+                              </span>
+                              <span>
+                                <span className="font-semibold text-white/85">
+                                  {row.item}
+                                </span>
+                                {row.note ? (
+                                  <span className="text-white/60">
+                                    {" "}
+                                    — {row.note}
+                                  </span>
+                                ) : null}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {stop.highlights && stop.highlights.length > 0 && (
+                      <div className="mb-4 rounded-xl border border-white/5 bg-[#1a1a1a] p-5">
+                        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-green-400/90">
+                          Highlights
+                        </p>
+                        <ul className="flex flex-col gap-2">
+                          {stop.highlights.map((row, i) => (
+                            <li
+                              key={i}
+                              className="flex items-start gap-2 text-sm text-white/70"
+                            >
+                              <span className="mt-0.5 flex-shrink-0 text-green-400/80">
+                                —
+                              </span>
+                              <span>
+                                <span className="font-semibold text-white/85">
+                                  {row.item}
+                                </span>
+                                {row.note ? (
+                                  <span className="text-white/60">
+                                    {" "}
+                                    — {row.note}
+                                  </span>
+                                ) : null}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
                     {/* Local tip */}
                     <div className="rounded-xl border border-white/5 bg-white/[0.03] p-4">
                       <p className="mb-2 text-xs font-bold uppercase tracking-widest text-white/40">
