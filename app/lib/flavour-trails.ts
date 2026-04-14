@@ -376,33 +376,19 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 7,
         name: "Ann Siang Hill",
         type: "walk",
-        intro:
-          "Singapore's most beautiful heritage streets and almost nobody talks about them. Ann Siang Hill is a gentle slope of perfectly preserved shophouses that feels completely removed from the city around it. Club Street runs parallel — bars and restaurants that haven't tried too hard. The light at 5.30pm turns everything golden. This is where you take the photos that make everyone back home ask where you went.",
+        intro: "Singapore's most beautiful heritage streets and almost nobody talks about them. Ann Siang Hill is a gentle slope of perfectly preserved shophouses that feels completely removed from the city around it. Club Street runs parallel — bars and restaurants that haven't tried too hard. The light at 5.30pm turns everything golden. This is where you take the photos that make everyone back home ask where you went.\n\nBut before you climb the hill — stop at 285 South Bridge Road. Tong Heng Confectionery has been making diamond-shaped egg tarts since 1939. The pastry is flaky, the filling is silky smooth egg custard, and they cost less than a dollar each. Buy two. Eat them while you walk up the hill. This is exactly the kind of thing ShiokFlavour exists to tell you about.",
         address: "Ann Siang Hill, Club Street, Singapore",
         mapsUrl: "https://maps.google.com/?q=Ann+Siang+Hill+Singapore",
-        whatToOrder: [],
-        highlights: [
-          {
-            item: "Ann Siang Hill Park",
-            note: "Tiny hilltop park with rooftop views — often empty",
-          },
-          {
-            item: "Club Street",
-            note: "Walk slowly, look up at the shophouse facades",
-          },
-          {
-            item: "Duxton Hill",
-            note: "One street over, equally beautiful, slightly more local",
-          },
-          {
-            item: "Pre-dinner drink",
-            note: "Optional — craft beer, coconut, or wine at a bar on Club Street",
-          },
+        whatToOrder: [
+          "Tong Heng egg tarts — diamond-shaped, flaky pastry, silky egg custard. Buy two, eat warm on the hill — 285 South Bridge Road",
+          "Ann Siang Hill Park — tiny hilltop park with rooftop views, often empty and peaceful",
+          "Club Street — walk slowly, look up at the shophouse facades, the details are extraordinary",
+          "Duxton Hill — one street over, equally beautiful, slightly more local crowd",
+          "Optional: a drink at one of the bars on Club Street before dinner",
         ],
-        tip: "The bars on Club Street and Duxton Hill start filling up around 6pm. Perfect spot for a drink before dinner — you've earned it.",
+        tip: "Tong Heng is closed on Sundays — plan accordingly. The egg tarts sell out by late afternoon so don't leave it too late. And the bars on Club Street and Duxton Hill start filling up around 6pm — perfect spot for a drink before dinner. You've well and truly earned it by now.",
         duration: "1 hour",
         image: "/images/trails/cbd/ann-siang-hill.jpg",
-        isFree: true,
       },
       {
         number: 8,
