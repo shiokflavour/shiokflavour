@@ -40,6 +40,11 @@ export default function RootLayout({
           content="hOrmAuFgbn4LT9H61eIJYNJi2sDlszQbEp-RaeBX6U0"
         />
         <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+          src="https://www.clarity.ms/tag/wbl5txhxms"
+        />
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZHCGRS70VN"
           strategy="afterInteractive"
         />
