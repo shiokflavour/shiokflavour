@@ -444,6 +444,6 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
       },
     ],
     endNote:
-      "You made it to the end of the trail. Satay in hand, city lights above, Singapore doing what Singapore does best — feeding people well and making it look effortless.\n\nThis city runs on hawker food. Always has. The uncles and aunties you met today have been showing up before sunrise for decades, not for the money but because this is what they do. Remember that the next time someone tells you hawker food is cheap. It is. It's also irreplaceable.\n\nStay hungry,\nJay\nShiokFlavour\nServing Singapore's hawker heritage, one plate at a time.",
+      "You made it to the end of the trail. Satay in hand, city lights above, Singapore doing what Singapore does best — feeding people well and making it look effortless.\n\nThis city runs on hawker food. Always has. The uncles and aunties you met today have been showing up before sunrise for decades, not for the money but because this is what they do. Remember that the next time someone tells you hawker food is cheap. It is. It's also irreplaceable.\n\nStay hungry,\nShiokFlavour\nServing Singapore's hawker heritage, one plate at a time.",
   },
 ];
