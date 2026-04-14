@@ -259,7 +259,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Gardens by the Bay",
         type: "walk",
         intro:
-          "Take the MRT one stop from Tanjong Pagar to Bayfront, or walk 20 minutes along the waterfront — the walk is worth it on a clear morning. Gardens by the Bay is jaw-dropping regardless of how many times you've seen it in photos. The Supertrees alone are worth the trip. Everything else is a bonus.",
+          "From Maxwell, it's a 20-minute walk along the waterfront to Gardens by the Bay — and honestly, walk it. The route takes you past Clifford Pier and along Marina Bay before the Supertrees appear on the horizon. Or take the MRT — Tanjong Pagar to Raffles Place, transfer to the Downtown Line, two stops to Bayfront. Either way, you're there in under 25 minutes.",
         address: "18 Marina Gardens Drive, Singapore 018953",
         mapsUrl: "https://maps.google.com/?q=Gardens+by+the+Bay+Singapore",
         whatToOrder: [],
