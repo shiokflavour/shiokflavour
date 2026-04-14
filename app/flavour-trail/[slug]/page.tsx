@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { FLAVOUR_TRAILS } from "@/app/lib/flavour-trails";
 
@@ -335,8 +334,6 @@ export default async function TrailPage({ params }: Props) {
           </Link>
         </div>
       </section>
-
-      <SiteFooter />
     </>
   );
 }
