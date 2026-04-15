@@ -2541,6 +2541,2134 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     shiokOMeter: { spiceHit: 0, messFactor: 2, flavourDepth: 6, queueGame: 3, shiokValue: 8 },
   },
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NEW DISHES — paste these objects before the closing ]; in FOOD_HERITAGE_DISHES
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ─── SINGAPOREAN CLASSICS (additions) ────────────────────────────────────────
+
+  {
+    name: "Carrot Cake (Chai Tow Kway)",
+    slug: "chai-tow-kway",
+    category: "Singaporean Classics",
+    description:
+      "Carrot cake has nothing to do with carrots. The name comes from the Teochew word for radish — chai tow — which is steamed with rice flour into white blocks, then broken into chunks and wok-fried. Order white and you get egg, preserved radish, and bean sprouts in a clean, slightly smoky plate. Order black and the hawker tosses everything in sweet dark soy sauce until the caramel chars and clings to every chunk. Both versions are correct. The debate about which is superior is one of Singapore's oldest unresolved arguments, conducted between friends over shared plates for decades. Hokkien and Teochew hawkers developed the dish from southern Chinese preserved radish traditions; it became a breakfast staple so embedded in hawker culture that UNESCO's recognition of Singapore's food scene implicitly includes the morning uncle frying kway at 6am.",
+    origin:
+      "Teochew and Hokkien immigrant tradition — steamed turnip-rice cakes adapted from southern Chinese preserved vegetable cooking into a wok-fried hawker staple.",
+    whereToFind:
+      "Old Airport Road Food Centre, Tiong Bahru Market, and Toa Payoh hawker centres for respected versions. Look for a wok that is well-seasoned and dark from years of frying — pale woks produce pale results.",
+    priceRange: "S$3–6 per plate",
+    imageUrl: "/images/food/chai-tow-kway.jpg",
+    funFact:
+      "The 'carrot' in the name is a mistranslation of the Teochew dialect word for white radish (菜头糕, chai tow kueh) — the vegetable used is entirely different from the orange root vegetable Westerners associate with the name.",
+    bestPairedWith:
+      "A cup of kopi-o or teh, and a side of you tiao — the contrast between the dense kway and the airy fried dough is one of the great hawker breakfast combinations.",
+    halal: false,
+    spiceLevel: "Mild",
+    difficulty: "Easy to eat",
+    localSay:
+      "Black or white? That's the only question that matters. Pick your side and defend it.",
+    hawkersThatServeIt: [
+      "old-airport-road-food-centre",
+      "tiong-bahru-market",
+      "toa-payoh-lorong-8-market",
+    ],
+    howToEat: [
+      "Decide between black and white before you order — asking for both is acceptable but marks you as indecisive",
+      "Eat immediately — the caramelised edges on the black version cool quickly and lose their texture within minutes",
+      "Mix the egg and preserved radish from the bottom of the plate before your first bite",
+      "Add chilli if the stall offers it, but sparingly — the egg and radish flavour is delicate and heat overwhelms it quickly",
+      "The white version shows the stall's technique more clearly — if the plain version is good, the black will be great",
+    ],
+    keyIngredients: [
+      {
+        name: "Radish Rice Cake",
+        emoji: "⬜",
+        role: "Steamed blocks of shredded white radish and rice flour — the base. Should be soft inside and hold its edges when fried.",
+      },
+      {
+        name: "Egg",
+        emoji: "🥚",
+        role: "Cracked directly into the hot wok and scrambled around the kway — the binder that holds everything together.",
+      },
+      {
+        name: "Chai Poh",
+        emoji: "🟤",
+        role: "Preserved salted radish — scattered throughout for a salty, slightly caramelised crunch that the dish cannot do without.",
+      },
+      {
+        name: "Dark Soy Sauce",
+        emoji: "🫙",
+        role: "Added only for the black version — caramelises in the hot wok and coats every piece with a deep, sweet-savoury char.",
+      },
+      {
+        name: "Bean Sprouts",
+        emoji: "🌱",
+        role: "Added at the end for crunch — a good hawker never lets them go limp. Their freshness signals the stall's standards.",
+      },
+      {
+        name: "Lard",
+        emoji: "🫓",
+        role: "The fat the kway is fried in at traditional stalls — adds a fragrance and richness that vegetable oil cannot replicate.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Outram Park Chai Tow Kway",
+        address: "Hong Lim Market & Food Centre, #02-18, 531A Upper Cross St",
+        area: "Chinatown",
+        note: "One of Singapore's most celebrated versions — the black version here has an especially deep caramel char from a seasoned wok that has been frying for decades",
+        mapsUrl: "https://maps.google.com/?q=Outram+Park+Chai+Tow+Kway+Hong+Lim+Singapore",
+      },
+      {
+        name: "Heng Carrot Cake",
+        address: "Old Airport Road Food Centre, #01-57, 51 Old Airport Rd",
+        area: "Kallang",
+        note: "Beloved by regulars for its consistent white version — the egg is always perfectly set and the chai poh ratio is exactly right",
+        mapsUrl: "https://maps.google.com/?q=Heng+Carrot+Cake+Old+Airport+Road+Singapore",
+      },
+      {
+        name: "Tiong Bahru Chai Tow Kway",
+        address: "Tiong Bahru Market, #02-09, 30 Seng Poh Road",
+        area: "Tiong Bahru",
+        note: "Neighbourhood institution — the black version here is slightly sweeter than most and has a devoted weekend morning following",
+        mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Market+Chai+Tow+Kway+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 2,
+      messFactor: 3,
+      flavourDepth: 7,
+      queueGame: 7,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Oyster Omelette (Orh Luak)",
+    slug: "orh-luak",
+    category: "Singaporean Classics",
+    description:
+      "Orh luak — oyster omelette — is one of the most demanding dishes in the hawker repertoire: fresh oysters, a starchy egg batter made from sweet potato flour, and an incredibly hot wok that must achieve crispy edges and a soft, almost custardy centre simultaneously. The sweet potato starch is the ingredient that makes orh luak what it is — it creates a texture that is not quite omelette, not quite pancake, but something entirely its own: gooey and yielding in the middle, crispy where the batter meets the wok's edge. Teochew and Hokkien hawkers developed the dish from the southern Chinese coastal tradition of cooking shellfish in batter, and Singapore's version became one of the most beloved plates in the hawker world. A great orh luak is a technical achievement. A mediocre one is just greasy eggs.",
+    origin:
+      "Teochew and Hokkien coastal cooking — oyster omelette reflects the Southern Chinese tradition of using sweet potato starch as a thickener, adapted by Singapore hawkers into a wok-fired staple.",
+    whereToFind:
+      "Old Airport Road Food Centre and Newton Food Centre for the most respected versions; most hawker centres island-wide have a stall. The key indicator is a properly seasoned black wok and very fresh oysters.",
+    priceRange: "S$5–10 per plate",
+    imageUrl: "/images/food/orh-luak.jpg",
+    funFact:
+      "The quality of orh luak depends almost entirely on the freshness of the oysters — veteran hawkers receive their oyster deliveries daily and sell out before the evening. Day-old oysters are the primary reason mediocre orh luak exists.",
+    bestPairedWith:
+      "A sharp chilli sauce with vinegar on the side, calamansi squeezed over the plate, and absolutely no substitutions.",
+    halal: false,
+    spiceLevel: "Mild",
+    difficulty: "Easy to eat",
+    localSay:
+      "The middle must be soft — if the whole thing is crispy the uncle cooked it too long. The gooey centre is the point.",
+    hawkersThatServeIt: [
+      "newton-food-centre",
+      "old-airport-road-food-centre",
+      "chinatown-complex-food-centre",
+    ],
+    howToEat: [
+      "Eat from the centre outward — the soft, gooey middle is the best part and should be eaten while it is still yielding",
+      "Apply chilli sauce from the side rather than pouring it over — the starchy batter absorbs liquid quickly and goes flat",
+      "Eat immediately — orh luak deteriorates faster than almost any other hawker dish. Cold orh luak is genuinely unpleasant",
+      "Find a bite with oyster, egg, and crispy edge all together — that combination is the entire dish in one mouthful",
+      "Squeeze calamansi over the oysters specifically — the citrus lifts their brininess without covering it",
+    ],
+    keyIngredients: [
+      {
+        name: "Fresh Oysters",
+        emoji: "🦪",
+        role: "The centrepiece — small, briny, and sweet. Must be fresh. The quality of everything else in the dish cannot compensate for old oysters.",
+      },
+      {
+        name: "Sweet Potato Starch",
+        emoji: "⚪",
+        role: "Mixed with water into a thin batter — creates the distinctive gooey, translucent texture that is unique to orh luak. No substitute exists.",
+      },
+      {
+        name: "Egg",
+        emoji: "🥚",
+        role: "Beaten and poured over the partially cooked starch — scrambles around the oysters and creates the omelette structure.",
+      },
+      {
+        name: "Lard",
+        emoji: "🫓",
+        role: "The cooking fat — essential for the crispy edges and the wok's fragrance. Vegetable oil produces a paler, less complex result.",
+      },
+      {
+        name: "Bean Sprouts",
+        emoji: "🌱",
+        role: "Added for freshness and crunch — placed under or alongside, never cooked into the omelette itself.",
+      },
+      {
+        name: "Chilli Sauce",
+        emoji: "🌶️",
+        role: "Served on the side — bright, vinegary, and essential. The acidity cuts through the richness of the starchy egg batter.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Ah Chuan Oyster Omelette",
+        address: "Old Airport Road Food Centre, #01-32, 51 Old Airport Rd",
+        area: "Kallang",
+        note: "The benchmark version at Old Airport Road — the wok here runs extremely hot and the edges are consistently crispy without the centre ever overcooking",
+        mapsUrl: "https://maps.google.com/?q=Ah+Chuan+Oyster+Omelette+Old+Airport+Road+Singapore",
+      },
+      {
+        name: "Hup Kee Fried Oyster",
+        address: "Maxwell Food Centre, #01-97, 1 Kadayanallur St",
+        area: "Tanjong Pagar",
+        note: "Maxwell's most popular orh luak stall — the sweet potato starch ratio here produces a particularly yielding, custardy centre",
+        mapsUrl: "https://maps.google.com/?q=Hup+Kee+Fried+Oyster+Maxwell+Food+Centre+Singapore",
+      },
+      {
+        name: "Newton Orh Luak",
+        address: "Newton Food Centre, #01-26, 500 Clemenceau Ave North",
+        area: "Newton",
+        note: "Tourist-accessible without sacrificing quality — the oysters here are large and the portions generous",
+        mapsUrl: "https://maps.google.com/?q=Newton+Food+Centre+Oyster+Omelette+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 3,
+      messFactor: 5,
+      flavourDepth: 8,
+      queueGame: 7,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "BBQ Stingray",
+    slug: "bbq-stingray",
+    category: "Singaporean Classics",
+    description:
+      "BBQ stingray is one of Singapore's most specific pleasures: a stingray wing marinated in sambal, wrapped in banana leaf, and grilled over real charcoal until the flesh flakes and the sambal chars at the edges. The banana leaf both protects and flavours the fish — the grassy fragrance infuses the flesh during cooking and imparts a smokiness that banana leaf achieves and nothing else replicates. Served with a sharp calamansi squeeze and extra sambal, it is a night market and seaside food centre dish that became permanently associated with the atmosphere of the East Coast Lagoon and Satay by the Bay. The stingray is caught in regional waters, the sambal is made fresh, and the entire experience is best eaten at a table where you can smell the charcoal and hear the sea.",
+    origin:
+      "Malay hawker tradition — grilling stingray in sambal over charcoal developed in Singapore's coastal hawker centres and is a uniquely Singaporean dish with no single ethnic origin.",
+    whereToFind:
+      "East Coast Lagoon Food Village for the definitive outdoor experience; Newton Food Centre for the city version; any hawker centre with a live charcoal BBQ station after dark.",
+    priceRange: "S$12–25 per piece depending on size",
+    imageUrl: "/images/food/bbq-stingray.jpg",
+    funFact:
+      "The stingray's cartilaginous skeleton means it has no bones — every piece of flesh is clean and accessible, making it one of the most rewarding fish to eat at a hawker centre despite its intimidating appearance.",
+    bestPairedWith:
+      "Cold beer, kangkong in sambal on the side, and a plate of cockles cooked in the same charcoal sambal.",
+    halal: true,
+    spiceLevel: "Hot",
+    difficulty: "Easy to eat",
+    localSay:
+      "Eat the parts where the sambal has charred — that's where the flavour is. The pale parts in the middle are for people who are scared.",
+    hawkersThatServeIt: [
+      "east-coast-lagoon-food-village",
+      "newton-food-centre",
+      "lau-pa-sat",
+    ],
+    howToEat: [
+      "Squeeze calamansi over the entire piece before eating — the acid cuts through the sambal's richness and lifts the fish",
+      "Use a spoon and fork to scrape the flesh off the cartilage — the flesh comes off cleanly in large, flaking pieces",
+      "Eat the charred sambal at the edges first — the caramelised paste has a depth that the softer centre sambal doesn't",
+      "Mix a little of the remaining sambal with each forkful of fish — the ratio of fish to sambal is personal and should be calibrated over the meal",
+      "Order the kangkong in sambal alongside — dip the kangkong into the remaining stingray sambal as you finish",
+    ],
+    keyIngredients: [
+      {
+        name: "Stingray Wing",
+        emoji: "🐟",
+        role: "The fish — white, sweet flesh on a flat cartilaginous skeleton. No bones, clean eating, and a mild flavour that absorbs the sambal completely.",
+      },
+      {
+        name: "Sambal Belacan",
+        emoji: "🌶️",
+        role: "The marinade and the topping — chilli, shrimp paste, shallots, and lime. The sambal chars on the outside during grilling and this char is the best part.",
+      },
+      {
+        name: "Banana Leaf",
+        emoji: "🌿",
+        role: "The cooking vessel — wraps the stingray during grilling, protecting the flesh and imparting a distinctive grassy fragrance that is inseparable from the dish.",
+      },
+      {
+        name: "Charcoal",
+        emoji: "🔥",
+        role: "The heat source — live charcoal grilling imparts a smokiness that gas cannot replicate. Stingray cooked on charcoal tastes categorically different from stingray cooked on gas.",
+      },
+      {
+        name: "Calamansi",
+        emoji: "🍋",
+        role: "Squeezed tableside — the acid brightens everything and is the final step before eating. Non-negotiable.",
+      },
+      {
+        name: "Cincalok",
+        emoji: "🫙",
+        role: "Fermented tiny shrimp — sometimes served alongside as a dipping condiment. Funky, salty, and a flavour that amplifies the sambal's shrimp paste base.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Jumbo Stingray",
+        address: "East Coast Lagoon Food Village, 1220 East Coast Pkwy",
+        area: "East Coast",
+        note: "The most iconic setting for BBQ stingray in Singapore — open air, sea breeze, and live charcoal. The sambal here is made fresh daily",
+        mapsUrl: "https://maps.google.com/?q=East+Coast+Lagoon+Food+Village+BBQ+Stingray+Singapore",
+      },
+      {
+        name: "Newton BBQ Stingray",
+        address: "Newton Food Centre, #01-08, 500 Clemenceau Ave North",
+        area: "Newton",
+        note: "City-centre version without the sea breeze but with consistent quality — the portions here are large and the charcoal is always properly hot",
+        mapsUrl: "https://maps.google.com/?q=Newton+Food+Centre+BBQ+Stingray+Singapore",
+      },
+      {
+        name: "Chomp Chomp BBQ Seafood",
+        address: "Chomp Chomp Food Centre, 20 Kensington Park Road",
+        area: "Serangoon Gardens",
+        note: "The Serangoon Gardens version — neighbourhood-loved, late-night, and the sambal here is spicier than most versions found elsewhere",
+        mapsUrl: "https://maps.google.com/?q=Chomp+Chomp+Food+Centre+BBQ+Stingray+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 7,
+      messFactor: 5,
+      flavourDepth: 8,
+      queueGame: 5,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Fishball Noodles",
+    slug: "fishball-noodles",
+    category: "Singaporean Classics",
+    description:
+      "Fishball noodles is Singapore's most reliable bowl: thin yellow noodles or bee hoon in a clear pork-and-anchovy broth, topped with bouncy fishballs, fishcake slices, and minced pork, with a small side of chilli sauce. The dish is Teochew in origin — fishballs made from fresh fish pounded until springy were a signature of Teochew coastal cooking, and the hawkers who sold them in Singapore's streets built a simple, inexpensive bowl around them. Eaten for breakfast or lunch, it is the dish that most Singaporeans ate at school canteens and at void-deck stalls every week for the entirety of their childhood. The broth should be clean and savoury. The fishballs must bounce when pressed. These are the only two requirements.",
+    origin:
+      "Teochew immigrant hawker tradition — handmade fishballs from pounded fresh fish were a Teochew coastal specialty, adapted into a noodle soup by Singapore's hawkers in the post-war decades.",
+    whereToFind:
+      "Every hawker centre in Singapore has a fishball noodles stall. The best ones are often unmarked and identifiable only by the length of the queue and the freshness of the fishballs.",
+    priceRange: "S$3–6 per bowl",
+    imageUrl: "/images/food/fishball-noodles.jpg",
+    funFact:
+      "Handmade fishballs are formed by squeezing fish paste through the fingers — the resulting texture is irregular and springy, completely different from the machine-made fishballs sold in supermarkets that most people have stopped noticing are inferior.",
+    bestPairedWith:
+      "A cup of kopi-o, the chilli sauce from the stall, and nothing else. Fishball noodles is a complete and self-contained meal.",
+    halal: false,
+    spiceLevel: "Mild",
+    difficulty: "Easy to eat",
+    localSay:
+      "Press the fishball with your chopstick. If it bounces back, it's handmade. If it doesn't, order something else.",
+    hawkersThatServeIt: [
+      "maxwell-food-centre",
+      "chinatown-complex-food-centre",
+      "amoy-street-food-centre",
+    ],
+    howToEat: [
+      "Order dry if you want to taste the noodle sauce quality, soup if you want to judge the broth — both are valid entry points",
+      "Press a fishball with your chopstick before eating — the bounce confirms whether they are handmade",
+      "Add chilli sauce to the dry version first, then vinegar — the order matters for balance",
+      "Eat the fishballs while they are hot and still firm — they become spongy as they cool in the soup",
+      "The dry version's sauce pools at the bottom of the bowl — mix from the bottom before your first bite",
+    ],
+    keyIngredients: [
+      {
+        name: "Fishballs",
+        emoji: "⚪",
+        role: "The entire point — handmade from fresh yellowtail or ikan parang, pounded until springy. Should bounce when pressed. The quality of everything else depends on these.",
+      },
+      {
+        name: "Clear Broth",
+        emoji: "🍵",
+        role: "Pork bone and anchovy — clean, slightly sweet, and savoury. The broth should be clear enough to see the bottom of the bowl.",
+      },
+      {
+        name: "Yellow Noodles or Bee Hoon",
+        emoji: "🍜",
+        role: "The noodle choice — thin yellow egg noodles for dry, bee hoon for soup. Both are right. Neither is wrong.",
+      },
+      {
+        name: "Fish Cake",
+        emoji: "🐟",
+        role: "Sliced thin and added to the bowl — springy, mild, and the secondary protein alongside the fishballs.",
+      },
+      {
+        name: "Minced Pork",
+        emoji: "🥩",
+        role: "In the dry version — seasoned and cooked to order, adding a savoury meatiness to the noodle sauce.",
+      },
+      {
+        name: "Chilli Sauce",
+        emoji: "🌶️",
+        role: "The stall's signature — every fishball noodle uncle has their own chilli recipe and it is the most personal element on the table.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Nam Seng Fishball Noodles",
+        address: "Maxwell Food Centre, #01-79, 1 Kadayanallur St",
+        area: "Tanjong Pagar",
+        note: "Three-generation stall that still makes fishballs by hand — the texture is noticeably different from machine-made and the regulars know it",
+        mapsUrl: "https://maps.google.com/?q=Nam+Seng+Fishball+Noodles+Maxwell+Food+Centre+Singapore",
+      },
+      {
+        name: "Seng Huat Fishball Noodle",
+        address: "Amoy Street Food Centre, #01-56, 7 Maxwell Road",
+        area: "Tanjong Pagar",
+        note: "The CBD institution — packed with office workers at lunch. The dry version with their house chilli is the order",
+        mapsUrl: "https://maps.google.com/?q=Seng+Huat+Fishball+Noodle+Amoy+Street+Singapore",
+      },
+      {
+        name: "Chinatown Fishball Story",
+        address: "Chinatown Complex Food Centre, #02-197, 335 Smith Street",
+        area: "Chinatown",
+        note: "Famous for a young hawker who revived traditional hand-pounding techniques — the fishballs here have a texture that converts sceptics",
+        mapsUrl: "https://maps.google.com/?q=Fishball+Story+Chinatown+Complex+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 2,
+      messFactor: 2,
+      flavourDepth: 6,
+      queueGame: 5,
+      shiokValue: 8,
+    },
+  },
+
+  {
+    name: "Tau Huay (Soya Bean Curd)",
+    slug: "tau-huay",
+    category: "Singaporean Classics",
+    description:
+      "Tau huay is Singapore's most meditative dessert: silken soya bean curd so delicate it shatters with a spoon, served warm in a thin clear syrup or cold with syrup poured over shaved ice. The texture is the entire achievement — barely set, trembling, and dissolving the moment it reaches the tongue. Street vendors sold it from wooden buckets balanced on shoulder poles through Singapore's prewar streets. Today, dedicated tau huay shops and hawker stalls serve it to queues that form outside before opening. The cold version with grass jelly has become a modern variation. The warm, plain version served in a porcelain bowl with a wooden spoon is the original and, by a significant margin, the most honest version of what tau huay is.",
+    origin:
+      "Chinese soya bean curd tradition from the Hakka and Hokkien communities — tau huay (豆花) was sold by street vendors across southern China and brought to Singapore by early Cantonese and Hokkien immigrants.",
+    whereToFind:
+      "Rochor Original Beancurd on Selegie Road for the definitive warm version; Lim Kee Beancurd in Toa Payoh for the heartland classic; dessert stalls in Chinatown Complex for variety.",
+    priceRange: "S$1.50–4 per bowl",
+    imageUrl: "/images/food/tau-huay.jpg",
+    funFact:
+      "Traditional tau huay sets using gypsum (calcium sulfate) rather than the coagulants used in firmer tofu — the gypsum produces a silkiness that other coagulants cannot match, which is why the best tau huay stalls guard their setting process carefully.",
+    bestPairedWith:
+      "Nothing — tau huay is complete as it is. Adding anything beyond the clear syrup is the beginning of a debate that no one wins.",
+    halal: true,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "Warm, not cold. Plain syrup, not jelly. That's the original. Everything else is negotiable.",
+    hawkersThatServeIt: [
+      "chinatown-complex-food-centre",
+      "maxwell-food-centre",
+      "tiong-bahru-market",
+    ],
+    howToEat: [
+      "Scoop gently from the surface — tau huay breaks easily and rough handling ruins the texture before it reaches your mouth",
+      "Let it sit in the warm syrup for a minute before eating — the syrup infuses the curd slightly and the temperature equalises",
+      "Each spoonful should tremble slightly on the spoon — if it's firm enough to hold its shape, it's been over-set",
+      "Eat the warm version in the morning if possible — the cold version with ice is satisfying but the warm version is the tradition",
+      "Do not stir — the tau huay and syrup are not meant to be mixed. The curd should meet the syrup at your lips, not in the bowl",
+    ],
+    keyIngredients: [
+      {
+        name: "Soya Beans",
+        emoji: "🫘",
+        role: "Soaked, blended, and strained — the fresh soya milk is the base. The quality of the beans and the freshness of the milk determines everything.",
+      },
+      {
+        name: "Gypsum (Calcium Sulfate)",
+        emoji: "⚪",
+        role: "The setting agent — added to hot soya milk to produce silky, delicate curd. The ratio is the science that separates good tau huay from great tau huay.",
+      },
+      {
+        name: "Clear Syrup",
+        emoji: "🍯",
+        role: "Thin sugar syrup poured over the finished curd — barely sweet, and designed to complement rather than mask the soya bean's own subtle flavour.",
+      },
+      {
+        name: "Ginger Syrup",
+        emoji: "🫙",
+        role: "An alternative syrup at some stalls — adds warmth and a gentle heat that is particularly good with the warm version on cool mornings.",
+      },
+      {
+        name: "Grass Jelly",
+        emoji: "⬛",
+        role: "Added in the cold version — slightly bitter, cooling, and the textural contrast to the silken curd.",
+      },
+      {
+        name: "Soya Bean Milk",
+        emoji: "🥛",
+        role: "The drink served alongside at traditional stalls — freshly made from the same batch of beans as the curd. Often better than anything sold in cartons.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Rochor Original Beancurd",
+        address: "745 North Bridge Road",
+        area: "Rochor",
+        note: "The most famous tau huay in Singapore — the curd here has been described as the silkiest version in the city and the queue on weekends confirms it",
+        mapsUrl: "https://maps.google.com/?q=Rochor+Original+Beancurd+Singapore",
+      },
+      {
+        name: "Lim Kee Fresh Bean Curd",
+        address: "Toa Payoh Lorong 8 Market, #01-06",
+        area: "Toa Payoh",
+        note: "The heartland version that Toa Payoh residents treat as their own — the warm curd here is made fresh each morning and the ginger syrup is particularly fragrant",
+        mapsUrl: "https://maps.google.com/?q=Lim+Kee+Bean+Curd+Toa+Payoh+Singapore",
+      },
+      {
+        name: "Chinatown Tau Huay",
+        address: "Chinatown Complex Food Centre, 335 Smith Street",
+        area: "Chinatown",
+        note: "Multiple dessert stalls side by side — walk the row and find the one with the freshest curd (it should be barely trembling in the tray)",
+        mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Tau+Huay+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 1,
+      flavourDepth: 5,
+      queueGame: 6,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Curry Puff",
+    slug: "curry-puff",
+    category: "Singaporean Classics",
+    description:
+      "The curry puff is Singapore's most portable heritage food: a golden, crimped pastry shell filled with curried potato, onion, and chicken or egg, fried until the crust shatters and the filling is fragrant with spice. The format came from British and Portuguese colonial pasties filtered through Indian-Muslim and Nyonya kitchen traditions — the result is something that belongs to every community in Singapore and was sold by every kind of hawker from Malay stalls to Chinese bakeries. Old Chang Kee built an empire from it. Bengawan Solo refined the Nyonya version. The best versions are still the ones where the pastry is made fresh, the curry filling is properly spiced and not too wet, and the whole thing is eaten hot from the fryer, burning your fingers slightly, which is part of the experience.",
+    origin:
+      "British colonial pastry tradition blended with Indian and Nyonya curry — the curry puff developed in Singapore and Malaya as a fusion snack that every community adapted into their own version.",
+    whereToFind:
+      "Old Chang Kee outlets island-wide for the classic version; Bengawan Solo for the Nyonya version; traditional bakeries in Chinatown and Katong for handmade pastry versions.",
+    priceRange: "S$1.50–4 per puff",
+    imageUrl: "/images/food/curry-puff.jpg",
+    funFact:
+      "The spiral-twisted edge of a traditional curry puff is not decorative — it is a crimping technique that seals the pastry under pressure without glue or egg wash, an inherited skill from the Indian-Muslim bakers who perfected it.",
+    bestPairedWith:
+      "Kopi or teh, eaten standing up at a stall or walking. Curry puffs do not require a seat or a plate.",
+    halal: true,
+    spiceLevel: "Mild",
+    difficulty: "Easy to eat",
+    localSay:
+      "Eat it hot. Cold curry puff is a different and inferior product. Do not refrigerate and reheat — just buy a fresh one.",
+    hawkersThatServeIt: [
+      "maxwell-food-centre",
+      "amoy-street-food-centre",
+      "bedok-interchange-hawker-centre",
+    ],
+    howToEat: [
+      "Eat immediately after purchase — the pastry is at its best within 10 minutes of frying and deteriorates rapidly",
+      "Bite from one end to assess the pastry-to-filling ratio before committing to the full puff",
+      "The filling should be moist but not wet — if curry seeps out immediately the filling is too liquid",
+      "Blow gently on the filling before the second bite — the inside stays hot long after the pastry cools",
+      "Judge the stall by the pastry, not the filling — good pastry that shatters when bitten is the harder achievement",
+    ],
+    keyIngredients: [
+      {
+        name: "Shortcrust Pastry",
+        emoji: "🥐",
+        role: "The shell — should be golden, slightly flaky, and shatter when bitten. The texture is the stall's primary calling card.",
+      },
+      {
+        name: "Curried Potato",
+        emoji: "🥔",
+        role: "The classic filling — diced potato in a spiced curry with onion, cooked until the potato absorbs the spice and the filling holds its shape when bitten.",
+      },
+      {
+        name: "Chicken or Egg",
+        emoji: "🍗",
+        role: "Added to the filling alongside the potato — chicken for the savoury version, hard-boiled egg for the traditional version that most longtime regulars prefer.",
+      },
+      {
+        name: "Curry Powder",
+        emoji: "🟡",
+        role: "The spice blend — each stall uses a proprietary mix. The warmth and complexity of the curry is what separates a great curry puff from a bland pastry with hot potato inside.",
+      },
+      {
+        name: "Onion",
+        emoji: "🧅",
+        role: "Cooked into the filling until soft and sweet — the aromatic base that carries the curry powder's flavour through the entire filling.",
+      },
+      {
+        name: "Frying Oil",
+        emoji: "🫙",
+        role: "The medium — curry puffs must be deep-fried, not baked. The oil temperature determines whether the pastry is golden and flaky or greasy and pale.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "J2 Famous Crispy Curry Puff",
+        address: "Golden Mile Food Centre, #B1-43, 505 Beach Road",
+        area: "Beach Road",
+        note: "Michelin Bib Gourmand. The sardine curry puff here is an unusual variation that has developed its own following — the pastry is exceptional",
+        mapsUrl: "https://maps.google.com/?q=J2+Famous+Crispy+Curry+Puff+Golden+Mile+Singapore",
+      },
+      {
+        name: "Old Chang Kee",
+        address: "Multiple outlets island-wide",
+        area: "Island-wide",
+        note: "The original — founded in 1956 and now at over 100 locations. The curry puff here is Singapore's most recognisable and the standard by which all others are measured",
+        mapsUrl: "https://maps.google.com/?q=Old+Chang+Kee+Singapore",
+      },
+      {
+        name: "Bengawan Solo Nyonya Curry Puff",
+        address: "Multiple outlets island-wide",
+        area: "Island-wide",
+        note: "The Peranakan version — the pastry uses a different ratio and the filling incorporates Nyonya spicing. A completely different and equally excellent interpretation",
+        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Curry+Puff+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 3,
+      messFactor: 2,
+      flavourDepth: 6,
+      queueGame: 5,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Sugarcane Juice",
+    slug: "sugarcane-juice",
+    category: "Singaporean Classics",
+    description:
+      "Sugarcane juice is Singapore's oldest thirst-quencher: fresh cane stalks fed through a cold-pressed machine, producing a pale green liquid that is sweet, slightly grassy, and cut with calamansi or lemon. Street vendors pressed it on wooden carts from the 1900s — Chinese immigrants brought the sugarcane pressing tradition from Fujian and Guangdong, where fresh cane juice was already a market staple. Today, sugarcane stalls are present in almost every hawker centre and wet market, the machine grinding and pressing continuously from morning until the last queue disperses. After a plate of laksa or a messy chilli crab, a glass of cold sugarcane juice is not a dessert — it is a necessity. The sweetness is the natural sugar of the cane, undiluted and unmistakable.",
+    origin:
+      "Chinese immigrant tradition from Fujian and Guangdong provinces — fresh sugarcane pressing arrived in Singapore with the first waves of Hokkien and Cantonese settlers and became a permanent fixture of the hawker landscape.",
+    whereToFind:
+      "Every hawker centre and wet market in Singapore has a sugarcane juice stall or cart. Tekka Centre and Geylang Serai for the freshest daytime versions; any hawker centre after a spicy meal for the most satisfying version.",
+    priceRange: "S$1.50–3 per cup",
+    imageUrl: "/images/food/sugarcane-juice.jpg",
+    funFact:
+      "The palest, most watery sugarcane juice is actually the freshest — the green colour and slight cloudiness indicates very recently pressed cane. Bright yellow juice has been sitting.",
+    bestPairedWith:
+      "Laksa, chilli crab, rojak, or any dish that leaves a lingering heat or richness. Sugarcane juice resets the palate with a completeness that water cannot match.",
+    halal: true,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "After spicy food, must drink sugarcane. It's not optional — it's medicine.",
+    hawkersThatServeIt: [
+      "tekka-centre",
+      "geylang-serai-market",
+      "maxwell-food-centre",
+    ],
+    howToEat: [
+      "Drink immediately after pressing — sugarcane juice oxidises quickly and loses its freshness within 30 minutes",
+      "Ask for extra calamansi if you prefer more acidity — the citrus brightens the natural sweetness and is a personal preference",
+      "Drink alongside spicy food rather than after — the contrast is more effective and satisfying mid-meal",
+      "Order with less ice if you want the full cane flavour — ice dilutes the juice as it melts",
+      "The last sip from the bottom of the cup is always the sweetest — the unmelted ice has not yet diluted it",
+    ],
+    keyIngredients: [
+      {
+        name: "Fresh Sugarcane",
+        emoji: "🌿",
+        role: "The whole stalk, fed through the pressing machine — the variety of cane determines sweetness and flavour. The best stalls source from specific farms.",
+      },
+      {
+        name: "Calamansi",
+        emoji: "🍋",
+        role: "Squeezed into the cup before or after pressing — adds a citrus brightness that prevents the sweetness from being cloying.",
+      },
+      {
+        name: "Ice",
+        emoji: "🧊",
+        role: "Keeps the juice cold through the heat of a Singapore afternoon — but too much dilutes the flavour. Get the balance right.",
+      },
+      {
+        name: "Cold Press Machine",
+        emoji: "⚙️",
+        role: "The equipment — older, slower machines extract more flavour from the cane fibre. Higher-speed machines are faster but produce a thinner, less complex juice.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Lim Kee Sugarcane",
+        address: "Tekka Centre, #01-290, 665 Buffalo Road",
+        area: "Little India",
+        note: "High-volume stall that presses cane continuously — the freshness is guaranteed because the juice never sits long enough to oxidise",
+        mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Sugarcane+Juice+Singapore",
+      },
+      {
+        name: "Geylang Serai Sugarcane",
+        address: "Geylang Serai Market, 1 Geylang Serai",
+        area: "Geylang Serai",
+        note: "The daytime market version — pressed fresh throughout the morning and the best accompaniment to the nasi lemak and mee siam stalls nearby",
+        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Sugarcane+Juice+Singapore",
+      },
+      {
+        name: "Maxwell Sugarcane",
+        address: "Maxwell Food Centre, 1 Kadayanallur St",
+        area: "Tanjong Pagar",
+        note: "The CBD version — the lunchtime queue for sugarcane at Maxwell reflects how essential it is after the hawker centre's spicier dishes",
+        mapsUrl: "https://maps.google.com/?q=Maxwell+Food+Centre+Sugarcane+Juice+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 1,
+      flavourDepth: 4,
+      queueGame: 3,
+      shiokValue: 10,
+    },
+  },
+
+// ─── MALAY & MUSLIM HERITAGE (additions) ─────────────────────────────────────
+
+  {
+    name: "Bubur Lambuk",
+    slug: "bubur-lambuk",
+    category: "Malay & Muslim Heritage",
+    description:
+      "Bubur lambuk is Singapore's most communal food: a spiced rice porridge cooked in enormous woks with coconut milk, lemongrass, and dried shrimp, distributed free from mosques across Singapore every evening during Ramadan. The dish is Malay in origin and its entire meaning is inseparable from the month of fasting — made by mosque volunteers who stir the enormous pots from the afternoon, then ladled into containers and handed to whoever arrives at the gates. Kampong Glam's Sultan Mosque has distributed bubur lambuk at Ramadan for over a century. The recipe is spiced gently — ginger, lemongrass, galangal — so it is soft and restorative for breaking fast. Outside of Ramadan, it appears at Malay food stalls and weddings, but it is never quite the same without the context of communal giving.",
+    origin:
+      "Malay-Muslim tradition deeply tied to Ramadan — bubur lambuk was historically cooked by mosque communities in Singapore and distributed as an act of charity during the fasting month.",
+    whereToFind:
+      "Sultan Mosque in Kampong Glam distributes it free during Ramadan evenings; Malay food stalls year-round; Geylang Serai food stalls during Ramadan bazaar season.",
+    priceRange: "S$2–4 per portion (or free from mosques during Ramadan)",
+    imageUrl: "/images/food/bubur-lambuk.jpg",
+    funFact:
+      "Sultan Mosque's bubur lambuk is cooked in woks large enough to require two people to stir — the scale of the cooking is visible from outside the mosque and draws visitors who come specifically to watch the preparation.",
+    bestPairedWith:
+      "Dates and water for the traditional Ramadan iftar; teh tarik or air bandung outside of Ramadan.",
+    halal: true,
+    spiceLevel: "Mild",
+    difficulty: "Easy to eat",
+    localSay:
+      "You don't pay for mosque bubur lambuk — you queue, you take your portion, and you say thank you. That's the whole ritual.",
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "tekka-centre",
+      "adam-road-food-centre",
+    ],
+    howToEat: [
+      "Eat warm — bubur lambuk is designed to be comforting and the coconut fragrance diminishes as it cools",
+      "Stir from the bottom before eating — the coconut milk and spices settle during distribution",
+      "Eat with a spoon only — it is a soft porridge meant to be sipped as much as eaten",
+      "Add a small pinch of fried shallots if the stall provides them — the crispy shallot is the textural contrast the smooth porridge needs",
+      "Eat it during Ramadan if you can — the context is part of the flavour in a way that cannot be replicated at other times",
+    ],
+    keyIngredients: [
+      {
+        name: "Rice",
+        emoji: "🍚",
+        role: "Cooked until fully broken down into a thick, flowing porridge — the base that absorbs all the aromatics and coconut milk.",
+      },
+      {
+        name: "Coconut Milk",
+        emoji: "🥥",
+        role: "Adds richness and a subtle sweetness — the ingredient that makes bubur lambuk softer and more restorative than plain congee.",
+      },
+      {
+        name: "Lemongrass & Galangal",
+        emoji: "🌿",
+        role: "The aromatic base — simmered in the porridge until their fragrance is fully infused. Removed before serving.",
+      },
+      {
+        name: "Dried Shrimp",
+        emoji: "🦐",
+        role: "Adds a gentle savoury depth to the mild porridge — present in small enough quantities to flavour without dominating.",
+      },
+      {
+        name: "Fried Shallots",
+        emoji: "🧅",
+        role: "Scattered on top before serving — the crispy contrast to the soft porridge and the finishing fragrance of every bowl.",
+      },
+      {
+        name: "Ginger",
+        emoji: "🫚",
+        role: "Sliced and simmered into the porridge — adds warmth without heat, making the dish restorative for someone who has been fasting since dawn.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Sultan Mosque Bubur Lambuk",
+        address: "3 Muscat Street, Kampong Glam (Ramadan only)",
+        area: "Kampong Glam",
+        note: "The most historically significant bubur lambuk in Singapore — distributed free every Ramadan evening by mosque volunteers from a recipe that has been made here for generations",
+        mapsUrl: "https://maps.google.com/?q=Sultan+Mosque+Kampong+Glam+Singapore",
+      },
+      {
+        name: "Geylang Serai Bubur Lambuk",
+        address: "Geylang Serai Market, 1 Geylang Serai",
+        area: "Geylang Serai",
+        note: "The hawker version during Ramadan — more accessible than queuing at a mosque and consistently good quality",
+        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Bubur+Lambuk+Singapore",
+      },
+      {
+        name: "Hjh Maimunah Bubur Lambuk",
+        address: "11 Jalan Pisang",
+        area: "Jalan Besar",
+        note: "Available year-round at Singapore's most celebrated Malay restaurant — the version here uses the full traditional recipe with coconut milk and fresh lemongrass",
+        mapsUrl: "https://maps.google.com/?q=Hjh+Maimunah+Jalan+Pisang+Bubur+Lambuk+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 1,
+      messFactor: 2,
+      flavourDepth: 6,
+      queueGame: 4,
+      shiokValue: 8,
+    },
+  },
+
+  {
+    name: "Otak-Otak",
+    slug: "otak-otak",
+    category: "Malay & Muslim Heritage",
+    description:
+      "Otak-otak is spiced fish paste grilled inside banana or coconut leaf — the name means 'brains' in Malay, a reference to the soft, yielding texture of the finished paste rather than any actual ingredient. The Malay and Peranakan communities of the Straits developed two distinct versions: the Malay version, strongly associated with the East Coast and Muar in Malaysia, is a flat, charcoal-grilled packet with a smoky, spiced fish paste that is almost custard-like inside. The Peranakan version is thicker, made with coconut milk and a more complex rempah, and cooked in coconut leaf. Both are served warm, both are eaten in one or two bites, and both are better than they have any right to be given their simplicity. In Singapore, otak-otak is the companion dish — the thing you add to a laksa order, the side you bring to a BBQ, the snack you eat standing at a hawker stall at midnight.",
+    origin:
+      "Malay and Peranakan tradition from the Straits of Malacca — otak-otak developed in coastal communities from Muar to Singapore, with the banana leaf grilled version most associated with Singapore's East Coast.",
+    whereToFind:
+      "East Coast Road's otak-otak shops for the Malay version; Bengawan Solo for the Peranakan version; most hawker centres with a Malay stall for the daily version.",
+    priceRange: "S$0.80–2 per piece",
+    imageUrl: "/images/food/otak-otak.jpg",
+    funFact:
+      "The banana leaf charcoal version must be flipped exactly once during grilling — over-flipping dries out the paste, and under-flipping leaves one side pale and uncharred, missing the smoky depth that the leaf and charcoal create together.",
+    bestPairedWith:
+      "Alongside laksa or bee hoon soup; as a side to nasi lemak; or on its own with a cold drink at night.",
+    halal: true,
+    spiceLevel: "Medium",
+    difficulty: "Easy to eat",
+    localSay:
+      "The leaf should be slightly charred — if it's still bright green, it wasn't on the fire long enough.",
+    hawkersThatServeIt: [
+      "east-coast-lagoon-food-village",
+      "geylang-serai-market",
+      "bedok-85-fengshan-market",
+    ],
+    howToEat: [
+      "Eat immediately off the leaf while the paste is still warm — the texture changes completely as it cools",
+      "Peel the leaf back halfway and eat directly from it rather than transferring to a plate",
+      "The charred bits of paste at the leaf edges are the best part — scrape them carefully before discarding the leaf",
+      "Pair with laksa by tearing a piece and eating it between spoonfuls of broth",
+      "Order several pieces — one otak-otak is a tease, not a portion",
+    ],
+    keyIngredients: [
+      {
+        name: "Fish Paste",
+        emoji: "🐟",
+        role: "Ground from fresh fish — mackerel or ikan parang — until smooth. The protein base that everything else is built into.",
+      },
+      {
+        name: "Rempah",
+        emoji: "🌶️",
+        role: "Lemongrass, galangal, shallots, dried shrimp, candlenut — pounded and mixed into the fish paste. The spice blend is the stall's identity.",
+      },
+      {
+        name: "Coconut Milk",
+        emoji: "🥥",
+        role: "Mixed into the paste for richness and to create the custardy texture that gives otak-otak its distinctive soft, yielding interior.",
+      },
+      {
+        name: "Banana Leaf",
+        emoji: "🌿",
+        role: "The cooking vessel — the leaf imparts a grassy smokiness during grilling that is unique to this dish and cannot be replicated with other wrappers.",
+      },
+      {
+        name: "Daun Kesum",
+        emoji: "🌿",
+        role: "Vietnamese coriander — mixed into the paste for a sharp, peppery fragrance that cuts through the coconut richness.",
+      },
+      {
+        name: "Charcoal",
+        emoji: "🔥",
+        role: "The heat source — charcoal grilling creates the char on the banana leaf and the smoky depth in the paste that gas cooking cannot produce.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Dunman Road Otak-Otak",
+        address: "Dunman Food Centre, 271 Onan Road",
+        area: "East Coast",
+        note: "The East Coast institution — grilled over live charcoal and eaten standing at the stall. The smoky paste here is close to the Muar original",
+        mapsUrl: "https://maps.google.com/?q=Dunman+Food+Centre+Otak+Otak+Singapore",
+      },
+      {
+        name: "Bengawan Solo Otak-Otak",
+        address: "Multiple outlets island-wide",
+        area: "Island-wide",
+        note: "The Peranakan version — baked in coconut leaf with a thicker, more complex rempah. A different but equally legitimate interpretation",
+        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Otak+Otak+Singapore",
+      },
+      {
+        name: "Changi Village Otak-Otak",
+        address: "Changi Village Hawker Centre, 2 Changi Village Road",
+        area: "Changi",
+        note: "Far east version with a loyal neighbourhood following — the charcoal smoke lingers on the leaf longer here than at most stalls",
+        mapsUrl: "https://maps.google.com/?q=Changi+Village+Hawker+Centre+Otak+Otak+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 5,
+      messFactor: 2,
+      flavourDepth: 8,
+      queueGame: 4,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Sup Tulang",
+    slug: "sup-tulang",
+    category: "Malay & Muslim Heritage",
+    description:
+      "Sup tulang — mutton bone soup — is Singapore's most unapologetically primal dish: enormous mutton leg bones sawn open to expose the marrow, simmered in a dark, spiced broth of tomato, ginger, and bone-deep richness, served with a straw to extract the marrow directly from the cavity. The Indian-Muslim community developed sup tulang in Singapore's hawker centres, and it found its most devoted following in the late-night scene around Albert Centre and Geylang, where the bones arrive in deep red broth at tables occupied by people who have made a deliberate decision to eat something extraordinary at midnight. The marrow is the point — soft, rich, and available only by sucking it through the bone with a straw, which is the single most satisfying action in Singapore's entire food landscape.",
+    origin:
+      "Indian-Muslim (Mamak) hawker tradition — sup tulang developed in Singapore's hawker centres as an economical use of mutton bones, and became a cult dish through the late-night supper culture of the 1980s and 90s.",
+    whereToFind:
+      "Albert Centre Market & Food Centre, Geylang's late-night stalls, and Tekka Centre for the most dedicated versions. Best eaten after 10pm.",
+    priceRange: "S$8–15 per portion",
+    imageUrl: "/images/food/sup-tulang.jpg",
+    funFact:
+      "The distinctive deep red colour of sup tulang's broth comes from tomato and a particular blend of Indian spices — it is one of the most visually striking broths in Singapore and completely unlike the clear broths of Chinese bone soups.",
+    bestPairedWith:
+      "French baguette for soaking the broth; white rice if you prefer; a cold limau ice to cut through the richness.",
+    halal: true,
+    spiceLevel: "Medium",
+    difficulty: "Adventure eat",
+    localSay:
+      "The straw is not optional. If you don't suck the marrow, you did not eat sup tulang — you just had expensive bone soup.",
+    hawkersThatServeIt: [
+      "albert-centre-market",
+      "geylang-serai-market",
+      "tekka-centre",
+    ],
+    howToEat: [
+      "Use the straw to extract the marrow from inside the bone — press the straw firmly into the cavity and apply sustained suction",
+      "Soak bread or rice in the broth first to experience the base flavour before the marrow richness takes over",
+      "Tear the meat from the bone with your hands — fork and knife are insufficient for the tenderness and the extraction required",
+      "Drink the broth between bites — it cools the meal's intensity and is deeply satisfying on its own",
+      "Order at midnight — sup tulang eaten late, with the full supper crowd around you, is a different experience from the same dish at lunch",
+    ],
+    keyIngredients: [
+      {
+        name: "Mutton Leg Bones",
+        emoji: "🦴",
+        role: "Sawn open to expose the marrow cavity — the entire architecture of the dish is designed around getting to the marrow inside.",
+      },
+      {
+        name: "Bone Marrow",
+        emoji: "⚪",
+        role: "The prize — soft, rich, and extracted by straw. The cooking renders it from solid to a texture that yields to suction.",
+      },
+      {
+        name: "Tomato Broth",
+        emoji: "🍅",
+        role: "The distinctive deep red base — tomato cooked down with Indian spices into a rich, tangy broth that is unlike any other bone soup in Singapore.",
+      },
+      {
+        name: "Ginger & Spices",
+        emoji: "🫚",
+        role: "Whole spices and ginger simmered in the broth — star anise, cardamom, cinnamon add warmth and complexity to the tomato base.",
+      },
+      {
+        name: "French Baguette",
+        emoji: "🥖",
+        role: "Served alongside for soaking — the porous crumb absorbs the dark broth completely and is the preferred accompaniment of those who know.",
+      },
+      {
+        name: "Fried Shallots",
+        emoji: "🧅",
+        role: "Scattered over the finished bowl — the crispy contrast to the soft, rich marrow and the heavy broth.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Albert Centre Sup Tulang",
+        address: "Albert Centre Market & Food Centre, 270 Queen Street",
+        area: "Bugis",
+        note: "The most famous sup tulang in Singapore — the late-night crowd at this stall includes a cross-section of the city united by marrow extraction",
+        mapsUrl: "https://maps.google.com/?q=Albert+Centre+Market+Sup+Tulang+Singapore",
+      },
+      {
+        name: "Zam Zam Sup Tulang",
+        address: "697 North Bridge Road",
+        area: "Kampong Glam",
+        note: "The Kampong Glam version — slightly spicier broth and a longer simmer time that makes the marrow more yielding",
+        mapsUrl: "https://maps.google.com/?q=Zam+Zam+Restaurant+Sup+Tulang+Singapore",
+      },
+      {
+        name: "Geylang Sup Tulang",
+        address: "Geylang Road, late-night stalls",
+        area: "Geylang",
+        note: "The supper district version — open until 3am, eaten by people who drove across the island specifically for this bowl",
+        mapsUrl: "https://maps.google.com/?q=Geylang+Road+Sup+Tulang+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 5,
+      messFactor: 8,
+      flavourDepth: 9,
+      queueGame: 5,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Nasi Goreng",
+    slug: "nasi-goreng",
+    category: "Malay & Muslim Heritage",
+    description:
+      "Nasi goreng — fried rice — is the Malay archipelago's most universal dish and Singapore's most eaten midnight meal. Rice fried in a hot wok with shrimp paste, dark soy, egg, and aromatics, served with a fried egg on top, cucumber slices, and a prawn cracker alongside. The dish arrived with the Malay and Indonesian communities that have lived in Singapore since before the colonial era, and their influence on the recipe is fundamental: the shrimp paste (belacan) and the sweet, dark kecap manis are the two ingredients that make Malay nasi goreng categorically different from Chinese fried rice. Singapore's version is darker, funkier, and more deeply flavoured than most — and at mamak stalls that run through the night, a plate of nasi goreng at 2am is one of the most satisfying meals the city offers.",
+    origin:
+      "Malay and Indonesian culinary tradition — nasi goreng has been a staple of the Malay archipelago for centuries, brought to Singapore by Malay, Javanese, and Bugis communities.",
+    whereToFind:
+      "Every mamak stall and Malay hawker stall in Singapore — nasi goreng is available everywhere, twenty-four hours a day, in one form or another.",
+    priceRange: "S$4–8 per plate",
+    imageUrl: "/images/food/nasi-goreng.jpg",
+    funFact:
+      "The best nasi goreng uses day-old rice rather than freshly cooked — the drier, slightly firmer grains fry separately in the wok instead of clumping together into a sticky mass.",
+    bestPairedWith:
+      "A fried egg with a runny yolk on top (standard), prawn crackers, and a cold teh tarik or limau ais.",
+    halal: true,
+    spiceLevel: "Medium",
+    difficulty: "Easy to eat",
+    localSay:
+      "Must have the fried egg on top. Yolk must be runny. Break it into the rice first before eating anything else.",
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "tekka-centre",
+      "adam-road-food-centre",
+    ],
+    howToEat: [
+      "Break the fried egg yolk immediately and mix it through the top layer of rice before anything else",
+      "Mix from the top down — the egg yolk enriches the rice as it coats the grains",
+      "Eat the cucumber between bites — its freshness resets the palate and prevents the belacan from becoming overwhelming",
+      "Add sambal if the stall offers it, a little at a time — nasi goreng already has significant belacan flavour",
+      "Crumble the prawn cracker over the rice for crunch rather than eating it separately",
+    ],
+    keyIngredients: [
+      {
+        name: "Day-Old Rice",
+        emoji: "🍚",
+        role: "Cooked the day before and refrigerated — drier grains that separate in the wok rather than clumping. Fresh rice produces a different, inferior texture.",
+      },
+      {
+        name: "Belacan (Shrimp Paste)",
+        emoji: "🦐",
+        role: "The defining Malay ingredient — funky, deeply savoury, and irreplaceable. The difference between Malay nasi goreng and plain Chinese fried rice.",
+      },
+      {
+        name: "Kecap Manis",
+        emoji: "🫙",
+        role: "Sweet dark soy sauce — gives the fried rice its characteristic dark colour and a caramel sweetness that balances the belacan.",
+      },
+      {
+        name: "Egg",
+        emoji: "🥚",
+        role: "Fried on top with a runny yolk — mixed through the rice by the diner. Also mixed into the rice during wok frying for richness.",
+      },
+      {
+        name: "Prawns or Chicken",
+        emoji: "🍤",
+        role: "The protein addition — prawns for the coastal version, chicken for the everyday version. Wok-fried at high heat until lightly charred.",
+      },
+      {
+        name: "Prawn Crackers",
+        emoji: "🍘",
+        role: "Served alongside — airy, crispy, and the textural contrast to the dense fried rice. Break them over the plate rather than eating separately.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Geylang Serai Nasi Goreng",
+        address: "Geylang Serai Market, #01-15, 1 Geylang Serai",
+        area: "Geylang Serai",
+        note: "The most authentic belacan version in the market — the wok here runs very hot and the rice gets a char that most stalls never achieve",
+        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Nasi+Goreng+Singapore",
+      },
+      {
+        name: "Adam Road Nasi Goreng",
+        address: "Adam Road Food Centre, #01-04, 2 Adam Road",
+        area: "Bukit Timah",
+        note: "Late-night institution — the nasi goreng here is best ordered after 10pm when the supper crowd fills the centre",
+        mapsUrl: "https://maps.google.com/?q=Adam+Road+Food+Centre+Nasi+Goreng+Singapore",
+      },
+      {
+        name: "Changi Village Nasi Goreng Pattaya",
+        address: "Changi Village Hawker Centre, 2 Changi Village Road",
+        area: "Changi",
+        note: "The Pattaya variation — fried rice wrapped in a thin omelette. The east-side version of nasi goreng that has its own distinct character",
+        mapsUrl: "https://maps.google.com/?q=Changi+Village+Nasi+Goreng+Pattaya+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 4,
+      messFactor: 2,
+      flavourDepth: 7,
+      queueGame: 3,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Bandung",
+    slug: "bandung",
+    category: "Malay & Muslim Heritage",
+    description:
+      "Bandung is Singapore's most cheerfully pink drink: rose syrup stirred into cold evaporated milk until it turns a vivid coral-pink, served over ice. The drink takes its name from the city in Indonesia but the connection is linguistic more than culinary — the Malay word bandung simply means 'pair' or 'blend', reflecting the two-ingredient simplicity of the drink. Indian-Muslim hawkers popularised bandung across Singapore and it became a fixture of Malay weddings, Ramadan bazar stalls, and mamak drink counters. It is sweet in a way that is entirely deliberate — the sweetness is the point, the colour is the invitation, and the rose fragrance is the reason people who have been drinking it since childhood still order it every time without thinking. On a hot afternoon, a glass of cold bandung is not a sophisticated choice. It is the correct one.",
+    origin:
+      "Indian-Muslim and Malay hawker tradition — bandung became a Singapore staple through mamak stalls and Malay community celebrations, drawing on the Indian-Muslim love of rose syrup in beverages.",
+    whereToFind:
+      "Every mamak stall and Malay food stall in Singapore — bandung is inseparable from the community events and hawker stalls where Malay and Indian-Muslim food is served.",
+    priceRange: "S$1.50–3 per glass",
+    imageUrl: "/images/food/bandung.jpg",
+    funFact:
+      "The intensity of bandung's pink colour varies wildly between stalls depending on the rose syrup brand used — locals have strong preferences about their preferred shade, and some stalls are known specifically for their particularly vivid or particularly pale version.",
+    bestPairedWith:
+      "Murtabak, roti prata, nasi goreng, or any Malay or Indian-Muslim food — bandung is the default drink for this entire category of hawker eating.",
+    halal: true,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "Malay wedding: confirm got bandung. No bandung means the host is cutting corners.",
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "tekka-centre",
+      "adam-road-food-centre",
+    ],
+    howToEat: [
+      "Drink before the ice melts — bandung's sweetness is calibrated for a specific concentration and excess water dilutes it",
+      "Stir before drinking — the rose syrup settles at the bottom and the evaporated milk rises",
+      "Order during Ramadan bazaar season — the bandung at Geylang Serai's Ramadan stalls is made in enormous quantities and somehow tastes better for it",
+      "Pair with murtabak specifically — the rose sweetness and the savoury egg-meat filling is one of the great unconscious pairings of Malay food culture",
+      "Ask for less sugar if the standard version is too sweet — some stalls can adjust the rose syrup ratio",
+    ],
+    keyIngredients: [
+      {
+        name: "Rose Syrup",
+        emoji: "🌹",
+        role: "The flavouring and colouring — intensely sweet, floral, and responsible for the pink that makes bandung instantly recognisable across any hawker centre.",
+      },
+      {
+        name: "Evaporated Milk",
+        emoji: "🥛",
+        role: "The creamy base — not sweet by itself, which is why it balances the very sweet rose syrup into something drinkable rather than cloying.",
+      },
+      {
+        name: "Ice",
+        emoji: "🧊",
+        role: "Essential in Singapore's heat — without ice, bandung is too sweet and too warm. The dilution from melting ice is part of the calibration.",
+      },
+      {
+        name: "Water",
+        emoji: "💧",
+        role: "Sometimes added to extend the drink — the ratio of water to milk determines whether the drink is creamy or thin.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Geylang Serai Bandung",
+        address: "Geylang Serai Market, 1 Geylang Serai",
+        area: "Geylang Serai",
+        note: "The Malay heartland version — the rose syrup here is particularly fragrant and the evaporated milk ratio creates a properly creamy drink",
+        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Bandung+Singapore",
+      },
+      {
+        name: "Tekka Bandung Stall",
+        address: "Tekka Centre, 665 Buffalo Road",
+        area: "Little India",
+        note: "The Indian-Muslim version — slightly less sweet than the Malay interpretation, with a cleaner rose flavour",
+        mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Bandung+Singapore",
+      },
+      {
+        name: "Ramadan Bazaar Bandung",
+        address: "Geylang Serai Ramadan Bazaar (Ramadan only)",
+        area: "Geylang Serai",
+        note: "The best context for bandung — ordered alongside murtabak and otak-otak at the bazaar. The volume of orders ensures it is always freshly made",
+        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Ramadan+Bazaar+Bandung+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 1,
+      flavourDepth: 4,
+      queueGame: 2,
+      shiokValue: 8,
+    },
+  },
+
+// ─── PERANAKAN (NYONYA) (additions) ──────────────────────────────────────────
+
+  {
+    name: "Chendol",
+    slug: "chendol",
+    category: "Peranakan (Nyonya)",
+    description:
+      "Chendol is Southeast Asia's most beloved cold dessert and Singapore's definitive answer to the heat: shaved ice mounded over pandan-green rice flour noodles, doused with coconut milk and dark gula melaka (palm sugar) syrup, sometimes with red beans or corn added. The Peranakan and Malay communities shared ownership of chendol across the Straits, and Penang and Singapore have maintained a polite but deeply serious rivalry about which city makes the better version for as long as both have existed. Singapore's version is typically served cold, layered in a bowl or tall glass, with the gula melaka poured over at the last moment by the vendor — the streaks of dark syrup cutting through the white coconut milk and green jelly is one of the most visually satisfying things in the hawker world. The flavour is the meeting of pandan's floral sweetness, coconut's richness, and gula melaka's smoky caramel.",
+    origin:
+      "Malay and Peranakan tradition across the Straits of Malacca — chendol has been eaten in Singapore, Penang, and Malaysia for centuries, with regional variations that reflect local ingredient availability.",
+    whereToFind:
+      "Penang-style chendol at Katong and East Coast stalls; traditional versions at Peranakan dessert shops in Joo Chiat; Ghim Moh and Old Airport Road for hawker versions.",
+    priceRange: "S$2.50–5 per bowl",
+    imageUrl: "/images/food/chendol.jpg",
+    funFact:
+      "Authentic gula melaka for chendol should be solid, dark, and smell faintly of smoke — it is palm sugar reduced from palm sap over a wood fire, and its smokiness is what separates real chendol from the version made with ordinary sugar syrup.",
+    bestPairedWith:
+      "Nothing — chendol is complete. Eating it after a Peranakan meal or alongside an ondeh ondeh creates a full Nyonya dessert experience.",
+    halal: true,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "The gula melaka must be real — if the syrup is light brown and pours like water, the stall is using the wrong sugar.",
+    hawkersThatServeIt: [
+      "old-airport-road-food-centre",
+      "chinatown-complex-food-centre",
+      "geylang-serai-market",
+    ],
+    howToEat: [
+      "Eat quickly — shaved ice melts fast in Singapore's heat and the diluted coconut milk is a shadow of the original",
+      "Dig from the top and bottom simultaneously — the pandan jelly sits beneath the ice and the gula melaka sits on top, and eating both in one spoon is the full experience",
+      "Pour extra gula melaka if offered — the syrup-to-ice ratio determines how satisfying the dessert is",
+      "Find the red beans buried under the ice — they add earthiness that contrasts with the sweetness above",
+      "Eat the remaining syrup and coconut milk at the bottom of the bowl — the best sip of a chendol is the last one",
+    ],
+    keyIngredients: [
+      {
+        name: "Pandan Jelly Noodles",
+        emoji: "🟢",
+        role: "Rice flour pressed through a sieve into boiling water — the green noodle-like strands that define chendol and give it its texture.",
+      },
+      {
+        name: "Gula Melaka",
+        emoji: "🍯",
+        role: "Palm sugar syrup — smoky, dark, and caramel-complex. The quality of the gula melaka is the quality of the chendol.",
+      },
+      {
+        name: "Coconut Milk",
+        emoji: "🥥",
+        role: "Poured over the ice — rich, slightly salty when made properly, and the creamy counterpoint to the sweet gula melaka.",
+      },
+      {
+        name: "Shaved Ice",
+        emoji: "🧊",
+        role: "The architecture of the dessert — must be fine and soft, not crushed. The ice melts into the coconut milk and gula melaka as you eat.",
+      },
+      {
+        name: "Red Beans",
+        emoji: "🫘",
+        role: "Slow-cooked adzuki beans added to some versions — earthy, slightly sweet, and the textural element that the ice and jelly lack.",
+      },
+      {
+        name: "Pandan",
+        emoji: "🌿",
+        role: "Both in the jelly noodles (for colour and flavour) and sometimes in the coconut milk — the fragrance that makes chendol unmistakably Southeast Asian.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Penang Chendol",
+        address: "Old Airport Road Food Centre, #01-120, 51 Old Airport Rd",
+        area: "Kallang",
+        note: "The Penang-style version at Old Airport Road — the gula melaka here is particularly dark and smoky, and the coconut milk is unsweetened",
+        mapsUrl: "https://maps.google.com/?q=Penang+Chendol+Old+Airport+Road+Singapore",
+      },
+      {
+        name: "Famous Sungei Road Chendol",
+        address: "Jalan Berseh Food Centre, 166 Jalan Besar",
+        area: "Jalan Besar",
+        note: "The most respected chendol stall in Singapore — the pandan jelly noodles are pressed fresh and the gula melaka is made in-house",
+        mapsUrl: "https://maps.google.com/?q=Sungei+Road+Chendol+Jalan+Berseh+Singapore",
+      },
+      {
+        name: "Kim Choo Chendol",
+        address: "109 East Coast Road",
+        area: "Katong",
+        note: "The Peranakan Katong version — slightly more coconut milk, slightly less ice, and served in a Nyonya-style bowl",
+        mapsUrl: "https://maps.google.com/?q=Kim+Choo+Chendol+East+Coast+Road+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 4,
+      flavourDepth: 7,
+      queueGame: 5,
+      shiokValue: 10,
+    },
+  },
+
+  {
+    name: "Nasi Ulam",
+    slug: "nasi-ulam",
+    category: "Peranakan (Nyonya)",
+    description:
+      "Nasi ulam is Peranakan cuisine's most underrepresented masterpiece: cold cooked rice mixed with a generous quantity of fresh herbs — torch ginger flower, kaffir lime leaf, Vietnamese coriander, lemongrass, turmeric leaf — sliced thin and tossed through the rice with toasted coconut, dried shrimp, and sometimes salted fish. The result is a herb salad that also happens to be a rice dish, intensely fragrant and completely different from anything else in Singapore's hawker repertoire. Nyonya grandmothers made nasi ulam with whatever grew in the kitchen garden — the recipe was an exercise in abundance, using herbs as a primary ingredient rather than a garnish. Today it is increasingly rare in hawker centres, preserved mainly by Peranakan restaurants and heritage cooks who understand what is being lost.",
+    origin:
+      "Peranakan Nyonya tradition from the Straits Chinese community — nasi ulam reflects the Nyonya practice of using fresh herbs as a primary ingredient, drawing on Malay kampung garden culture.",
+    whereToFind:
+      "Peranakan restaurants in Katong and Joo Chiat; Hjh Maimunah for the Malay version; specific Nyonya-heritage stalls during cultural festivals.",
+    priceRange: "S$6–14 per plate at restaurants",
+    imageUrl: "/images/food/nasi-ulam.jpg",
+    funFact:
+      "The number of herbs in a proper nasi ulam ranges from eight to fourteen different varieties — each herb is sliced paper-thin to release maximum fragrance, and the variety of a cook's herb selection reflects their knowledge of Nyonya heritage.",
+    bestPairedWith:
+      "Sambal belacan on the side, a piece of ikan bilis (crispy anchovies), and a cold lime juice to complement the herb intensity.",
+    halal: true,
+    spiceLevel: "Mild",
+    difficulty: "Easy to eat",
+    localSay:
+      "You can taste how many herbs went in. The more fragrant, the more respect for the recipe.",
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "maxwell-food-centre",
+      "amoy-street-food-centre",
+    ],
+    howToEat: [
+      "Smell the plate before eating — a good nasi ulam is fragrant from a metre away",
+      "Mix the rice and herbs together thoroughly from the bottom — the toasted coconut and dried shrimp settle",
+      "Take a forkful with visible slices of at least three different herbs — the combination is the entire point",
+      "Add sambal belacan sparingly — nasi ulam is already complex and too much sambal covers the herb profile",
+      "Eat at room temperature, not cold — the fragrance of the herbs diminishes when chilled",
+    ],
+    keyIngredients: [
+      {
+        name: "Torch Ginger Flower",
+        emoji: "🌸",
+        role: "The hero herb — sliced thin, slightly tart, and intensely fragrant. The ingredient that defines authentic nasi ulam and cannot be substituted.",
+      },
+      {
+        name: "Cooked Rice",
+        emoji: "🍚",
+        role: "The base — should be slightly dry so the herbs can be mixed through without creating a sticky mass. Long-grain works best.",
+      },
+      {
+        name: "Toasted Coconut",
+        emoji: "🥥",
+        role: "Kerisik — dry-fried until golden and slightly caramelised. Adds a nutty richness and the texture that holds the herb mixture together.",
+      },
+      {
+        name: "Dried Shrimp",
+        emoji: "🦐",
+        role: "Pounded and mixed through — the savoury, umami base that prevents the herb-heavy dish from tasting purely of salad.",
+      },
+      {
+        name: "Kaffir Lime Leaf",
+        emoji: "🌿",
+        role: "Sliced paper-thin — adds a citrus fragrance that lifts the heavier herbal notes of lemongrass and turmeric leaf.",
+      },
+      {
+        name: "Lemongrass",
+        emoji: "🌾",
+        role: "The inner tender part only, sliced very fine — adds a bright, floral citrus note that carries through the entire dish.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Candlenut Restaurant",
+        address: "Block 17A Dempsey Road",
+        area: "Dempsey",
+        note: "The definitive modern nasi ulam — the herb selection here includes varieties that most stalls have stopped sourcing",
+        mapsUrl: "https://maps.google.com/?q=Candlenut+Restaurant+Dempsey+Singapore",
+      },
+      {
+        name: "Hjh Maimunah",
+        address: "11 Jalan Pisang",
+        area: "Jalan Besar",
+        note: "The Malay version — slightly less herb variety than the Nyonya interpretation but the torch ginger flower here is always present and always fresh",
+        mapsUrl: "https://maps.google.com/?q=Hjh+Maimunah+Nasi+Ulam+Singapore",
+      },
+      {
+        name: "Peranakan Inn",
+        address: "210 East Coast Road",
+        area: "Katong",
+        note: "Heritage Peranakan restaurant in Katong — the nasi ulam is made from a family recipe and changes slightly based on which herbs are available that morning",
+        mapsUrl: "https://maps.google.com/?q=Peranakan+Inn+Nasi+Ulam+East+Coast+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 2,
+      messFactor: 1,
+      flavourDepth: 8,
+      queueGame: 2,
+      shiokValue: 8,
+    },
+  },
+
+  {
+    name: "Kueh Lapis",
+    slug: "kueh-lapis",
+    category: "Peranakan (Nyonya)",
+    description:
+      "Kueh lapis is the most patient dessert in Singapore: a steamed layered cake built one thin stratum at a time, alternating pink and white layers of rice flour, coconut milk, and pandan or rose colouring, until the completed cake stands five centimetres tall in perfect horizontal bands. The technique requires steaming each layer individually before adding the next — rushing produces fused, indistinct layers; patience produces the clean, jewel-like cross-section that makes kueh lapis the most photographed kueh in any display. The flavour is mild and deliberately restrained — coconut milk sweetness, a faint pandan fragrance, and the slight chewiness of well-set rice flour. The experience is partly visual and partly textural: peeling each layer individually is the traditional way to eat it, and the peel of each thin, slightly elastic stratum is one of the small, specific pleasures of Peranakan kueh culture.",
+    origin:
+      "Peranakan Nyonya kueh tradition — kueh lapis reflects the Straits Chinese mastery of steamed rice flour desserts, drawing on Dutch-Indonesian spekkoek (layer cake) and Malay kueh techniques.",
+    whereToFind:
+      "Bengawan Solo island-wide for the most consistent version; Peranakan kueh shops in Joo Chiat and Katong; traditional kueh stalls at Geylang Serai during festive periods.",
+    priceRange: "S$1.50–3 per piece; S$8–15 per whole cake",
+    imageUrl: "/images/food/kueh-lapis.jpg",
+    funFact:
+      "Each layer of kueh lapis must be steamed for exactly three to five minutes before the next layer is added — experienced kueh makers judge readiness by the surface appearance rather than a timer, looking for a specific sheen that indicates the layer has set.",
+    bestPairedWith:
+      "A cup of Chinese tea or kopi, and patience — kueh lapis should be eaten slowly, layer by layer.",
+    halal: true,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "Peel the layers one by one. Eating it all at once misses the whole point of making it properly.",
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "chinatown-complex-food-centre",
+      "tekka-centre",
+    ],
+    howToEat: [
+      "Peel each layer individually from the bottom up — the layers should come apart cleanly if the kueh was properly made",
+      "Let it come to room temperature if it has been refrigerated — cold kueh lapis loses its elasticity and the layers tear instead of peeling",
+      "Eat one layer at a time and taste each separately — the flavour is consistent but the texture of each thin layer is the experience",
+      "The bottom layer is often the most fragrant — it absorbs the most coconut milk during steaming",
+      "Do not cut it like a cake — cutting compresses the layers and the cross-section disappears",
+    ],
+    keyIngredients: [
+      {
+        name: "Rice Flour",
+        emoji: "⚪",
+        role: "The base of each layer — must be the right grade for the correct elasticity. Too coarse and the layers break; too fine and they fuse.",
+      },
+      {
+        name: "Coconut Milk",
+        emoji: "🥥",
+        role: "Mixed with the rice flour batter — provides the richness and the slight chew that defines a well-made kueh lapis.",
+      },
+      {
+        name: "Pandan",
+        emoji: "🌿",
+        role: "The flavouring for the green layers — pressed fresh for the most fragrant result. Artificial pandan extract produces a flatter, synthetic version of the real fragrance.",
+      },
+      {
+        name: "Rose Essence",
+        emoji: "🌹",
+        role: "Used in the pink layers — a floral, slightly sweet flavouring that creates the colour and aroma alternating with the pandan.",
+      },
+      {
+        name: "Sugar",
+        emoji: "🍬",
+        role: "Mixed into the batter — lightly sweet, not dominant. The sweetness in kueh lapis is restrained so the coconut and pandan flavours remain the focus.",
+      },
+      {
+        name: "Tapioca Starch",
+        emoji: "⚪",
+        role: "Sometimes added alongside rice flour — increases elasticity and gives the layers a slightly glossy surface.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Bengawan Solo",
+        address: "Multiple outlets island-wide",
+        area: "Island-wide",
+        note: "Singapore's benchmark for kueh lapis — the layers are consistently distinct, the pandan fragrance is always from real pandan leaf, and the texture is reliably elastic",
+        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Kueh+Lapis+Singapore",
+      },
+      {
+        name: "Kim Choo Kueh Chang",
+        address: "109 East Coast Road",
+        area: "Katong",
+        note: "Heritage kueh shop in Katong — the kueh lapis here uses a three-generation family recipe and is made fresh each morning",
+        mapsUrl: "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+Kueh+Lapis+Singapore",
+      },
+      {
+        name: "Geylang Serai Kueh",
+        address: "Geylang Serai Market, 1 Geylang Serai",
+        area: "Geylang Serai",
+        note: "The market kueh stalls make kueh lapis throughout the week — the Ramadan period brings the widest selection and the freshest batches",
+        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Kueh+Lapis+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 1,
+      flavourDepth: 5,
+      queueGame: 3,
+      shiokValue: 8,
+    },
+  },
+
+// ─── CHINESE DIALECT HERITAGE (additions) ────────────────────────────────────
+
+  {
+    name: "Teochew Porridge (Muay)",
+    slug: "teochew-porridge",
+    category: "Chinese Dialect Heritage",
+    description:
+      "Teochew porridge — muay in the Teochew dialect — is not congee. The distinction matters. Congee is cooked until the rice disintegrates into a thick, creamy mass. Muay is cooked until the grains are just tender but still distinct, swimming in a clear, thin broth that is essentially rice-flavoured water. The porridge is mild by design — a neutral base around which an array of small side dishes is arranged: preserved vegetables, braised tofu, century egg, salted egg, fried fish, dark soy braised meats, and whatever else the stall has prepared that morning. The entire ritual of Teochew porridge is the selection and combination of these sides, eaten in small bites alongside the soothing, understated porridge. It is the opposite of bold food. It is the kind of meal that makes you feel genuinely well after eating it.",
+    origin:
+      "Teochew immigrant tradition from the Shantou (Swatow) region of Guangdong — muay and its accompanying side dishes were the everyday meal of the Teochew fishing and merchant communities who settled in Singapore.",
+    whereToFind:
+      "Beach Road's late-night porridge stalls; Hong Lim Food Centre; Geylang's midnight porridge restaurants that have been feeding Singapore after midnight for decades.",
+    priceRange: "S$4–10 depending on sides chosen",
+    imageUrl: "/images/food/teochew-porridge.jpg",
+    funFact:
+      "The traditional Teochew porridge meal involves at least six to eight small side dishes — the porridge itself is almost free at many stalls, and the price reflects entirely the number and type of accompanying dishes selected.",
+    bestPairedWith:
+      "Century egg, salted egg, braised pork, preserved vegetables, and a cup of Chinese tea to complete the Teochew meal ritual.",
+    halal: false,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "You don't eat Teochew porridge for the porridge. You eat it for the sides. The porridge is just the reason to sit down.",
+    hawkersThatServeIt: [
+      "old-airport-road-food-centre",
+      "chinatown-complex-food-centre",
+      "geylang-serai-market",
+    ],
+    howToEat: [
+      "Choose your sides first and arrange them around the porridge bowl — the visual spread is part of the experience",
+      "Take small spoonfuls of porridge between each bite of a side dish — the mild grain water cleanses the palate",
+      "The century egg should be quartered and eaten one quarter at a time alongside the salted egg",
+      "Mix nothing into the porridge bowl — each side dish is eaten separately and the porridge stays plain throughout",
+      "Order more sides than you think you need — the meal is designed for generous variety in small quantities",
+    ],
+    keyIngredients: [
+      {
+        name: "Plain Porridge",
+        emoji: "🍚",
+        role: "Cooked until the grains are just tender but still intact — thin, clear broth, deliberately mild. The neutral canvas around which the meal is built.",
+      },
+      {
+        name: "Century Egg",
+        emoji: "🥚",
+        role: "Preserved duck egg with a dark, translucent white and a creamy, greenish yolk — intensely savoury and the most distinctive side dish on the Teochew table.",
+      },
+      {
+        name: "Salted Egg",
+        emoji: "🥚",
+        role: "Salted duck egg with a grainy, orange yolk — rich, salty, and the complement to the century egg. Eaten together, they define the flavour of Teochew porridge.",
+      },
+      {
+        name: "Preserved Vegetables",
+        emoji: "🥬",
+        role: "Chye poh or preserved mustard greens — sharp, salty, and the side dish that is present at every Teochew porridge table without exception.",
+      },
+      {
+        name: "Braised Tofu",
+        emoji: "🟤",
+        role: "Dark soy braised tofu — soft, deeply flavoured, and the protein side that costs the least and delivers the most consistent satisfaction.",
+      },
+      {
+        name: "Fried Fish",
+        emoji: "🐟",
+        role: "Whole small fish or fish slices, fried until crispy — the indulgent side dish that elevates the meal from frugal to satisfying.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Lim's Teochew Porridge",
+        address: "Beach Road Scissors Cut Curry Rice, 229 Outram Road",
+        area: "Tiong Bahru",
+        note: "The late-night institution — the side dish selection here is the widest in Singapore and the porridge is always thin and properly made",
+        mapsUrl: "https://maps.google.com/?q=Teochew+Porridge+Beach+Road+Singapore",
+      },
+      {
+        name: "Hong Lim Teochew Porridge",
+        address: "Hong Lim Market & Food Centre, 531A Upper Cross St",
+        area: "Chinatown",
+        note: "Morning and lunch version — the braised meats here are slow-cooked overnight and the variety of preserved vegetables is exceptional",
+        mapsUrl: "https://maps.google.com/?q=Hong+Lim+Market+Teochew+Porridge+Singapore",
+      },
+      {
+        name: "Geylang Teochew Porridge",
+        address: "Geylang Road, late-night stalls",
+        area: "Geylang",
+        note: "The midnight version — open until 4am and frequented by a cross-section of Singapore that includes taxi drivers, nurses, and anyone who eats late and seriously",
+        mapsUrl: "https://maps.google.com/?q=Geylang+Teochew+Porridge+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 1,
+      flavourDepth: 7,
+      queueGame: 3,
+      shiokValue: 8,
+    },
+  },
+
+  {
+    name: "Thunder Tea Rice (Lei Cha Fan)",
+    slug: "lei-cha-fan",
+    category: "Chinese Dialect Heritage",
+    description:
+      "Thunder tea rice is the Hakka community's most distinctive contribution to Singapore's hawker landscape: a bowl of plain rice surrounded by small portions of stir-fried vegetables, preserved radish, peanuts, tofu, and anchovies, served with a separate bowl of a thick, intensely green tea broth made from ground green tea, herbs, and sesame to be poured over everything. The name — lei cha, meaning pounded tea — refers to the ancient Hakka method of grinding tea leaves and herbs into a paste before mixing with water. The dish is vegetarian, deeply nutritious, and unlike anything else in the hawker world. To first-time eaters the tea broth is challenging — grassy, slightly bitter, and very green. To those who return to it regularly, that bitterness is precisely the reason they come back.",
+    origin:
+      "Hakka Chinese tradition from the mountainous regions of Guangdong — lei cha was a daily meal of Hakka communities who incorporated whatever mountain herbs were available into a nutritious pounded tea.",
+    whereToFind:
+      "Hakka lei cha stalls at Alexandra Village Food Centre, Chinatown Complex, and dedicated lei cha shops in the heartland particularly in areas with Hakka-community history.",
+    priceRange: "S$5–10 per bowl",
+    imageUrl: "/images/food/lei-cha-fan.jpg",
+    funFact:
+      "The green colour of the thunder tea broth comes from a blend that can include over a dozen different herbs and leaves — basil, mint, peppermint, green tea, and medicinal herbs like the Hakka have used for centuries.",
+    bestPairedWith:
+      "Nothing extra is needed — lei cha fan is a complete, balanced meal. Drink extra broth from the bowl if you enjoy it.",
+    halal: true,
+    spiceLevel: "None",
+    difficulty: "Adventure eat",
+    localSay:
+      "The green broth tastes weird the first time. The second time, you understand it. The third time, you crave it.",
+    hawkersThatServeIt: [
+      "alexandra-village-food-centre",
+      "chinatown-complex-food-centre",
+      "amoy-street-food-centre",
+    ],
+    howToEat: [
+      "Pour the tea broth over the rice and vegetable sides all at once — do not hold back, the broth is the whole point",
+      "Mix everything together immediately before eating — each forkful should contain rice, vegetables, peanuts, and broth-soaked grains",
+      "Taste the broth alone before pouring — the clean bitterness of the herbs is easier to appreciate in isolation first",
+      "Eat the preserved radish early — it adds salt and contrast to the mild broth-soaked rice",
+      "Order a second bowl of broth to pour if the first is not enough — most stalls provide top-ups at no charge",
+    ],
+    keyIngredients: [
+      {
+        name: "Thunder Tea Broth",
+        emoji: "🍵",
+        role: "Ground green tea, basil, mint, and medicinal herbs blended with water — the defining element. Thick, green, slightly bitter, and the reason the dish exists.",
+      },
+      {
+        name: "Plain Rice",
+        emoji: "🍚",
+        role: "The base — absorbs the tea broth completely when poured over. Short-grain white rice works best for absorption.",
+      },
+      {
+        name: "Stir-Fried Long Beans",
+        emoji: "🥬",
+        role: "One of multiple vegetable sides — cooked with preserved radish and mildly seasoned. The crunch contrasts the soft, broth-soaked rice.",
+      },
+      {
+        name: "Roasted Peanuts",
+        emoji: "🥜",
+        role: "Scattered over the top — the crunch and richness that balances the herbal bitterness of the broth.",
+      },
+      {
+        name: "Tofu",
+        emoji: "⬜",
+        role: "Firm tofu, sometimes fried — adds protein and absorbs the tea broth when mixed, softening into the texture of the overall bowl.",
+      },
+      {
+        name: "Chai Poh (Preserved Radish)",
+        emoji: "🟤",
+        role: "The salty accent — provides contrast to the mild broth and the neutral rice, and grounds the herbal flavour of the tea.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Yong He Lei Cha",
+        address: "Alexandra Village Food Centre, #01-75, 120 Bukit Merah Ln 1",
+        area: "Alexandra",
+        note: "One of Singapore's most respected lei cha stalls — the broth is made fresh each morning from a Hakka family recipe that has been unchanged for two generations",
+        mapsUrl: "https://maps.google.com/?q=Yong+He+Lei+Cha+Alexandra+Village+Food+Centre+Singapore",
+      },
+      {
+        name: "Real Food Thunder Tea Rice",
+        address: "Chinatown Complex Food Centre, 335 Smith Street",
+        area: "Chinatown",
+        note: "The Chinatown version — wider variety of vegetable sides and a tea broth that is slightly less bitter than the traditional version for accessibility",
+        mapsUrl: "https://maps.google.com/?q=Thunder+Tea+Rice+Chinatown+Complex+Singapore",
+      },
+      {
+        name: "Hakka Lei Cha",
+        address: "Amoy Street Food Centre, 7 Maxwell Road",
+        area: "Tanjong Pagar",
+        note: "CBD office crowd introduction to lei cha — the CBD location means this stall serves a large proportion of first-time eaters, and the serving staff are patient with questions",
+        mapsUrl: "https://maps.google.com/?q=Lei+Cha+Amoy+Street+Food+Centre+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 2,
+      flavourDepth: 7,
+      queueGame: 4,
+      shiokValue: 7,
+    },
+  },
+
+  {
+    name: "Braised Duck Rice (Lor Ark)",
+    slug: "lor-ark",
+    category: "Chinese Dialect Heritage",
+    description:
+      "Braised duck rice is Teochew cooking at its most patient and most rewarding: a whole duck simmered for hours in a master stock of dark soy, five spice, galangal, and aromatics until the meat yields completely and the skin turns a deep mahogany. Sliced over rice with braised tofu, braised egg, preserved vegetables, and the master stock poured over as a gravy, it is one of the most comforting and completely satisfying plates in Singapore's hawker world. Teochew hawkers built the dish from the tradition of lor bak — master-stock braising — and applied it to the duck that Teochew communities have prized since their fishing village origins in Guangdong. The best stalls maintain the same master stock pot for years, refreshing and seasoning it continuously until it has accumulated a complexity that no newly started pot can replicate.",
+    origin:
+      "Teochew immigrant tradition — braised duck rice reflects the Teochew mastery of lor bak (master-stock braising), applied to duck as a celebration and everyday meal ingredient.",
+    whereToFind:
+      "Bedok's 85 Fengshan Market for the most famous version; Old Airport Road and Chinatown Complex for respected alternatives. The best stalls often have a hanging duck visible from outside.",
+    priceRange: "S$4–8 per plate",
+    imageUrl: "/images/food/lor-ark.jpg",
+    funFact:
+      "The master stock used to braise the duck at the most celebrated stalls is decades old — continuously refreshed with new aromatics and replenished with liquid, it accumulates a depth of flavour over years that simply cannot be achieved quickly.",
+    bestPairedWith:
+      "Braised egg and tofu from the same pot, a bowl of clear duck broth, and a cup of Chinese tea throughout.",
+    halal: false,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "Must eat from a stall with a whole duck hanging. If the duck is pre-cut in a tray, the stock is not old enough.",
+    hawkersThatServeIt: [
+      "bedok-85-fengshan-market",
+      "old-airport-road-food-centre",
+      "chinatown-complex-food-centre",
+    ],
+    howToEat: [
+      "Ask for extra braising stock poured over the rice — it is the sauce that makes the plate, and most stalls are generous with it",
+      "Eat the skin first — it is the most perishable element and loses its texture as it absorbs the stock",
+      "Break the braised egg yolk into the stock on the rice — the yolk enriches the gravy and binds everything together",
+      "Eat the preserved vegetables as a palate cleanser between bites of the rich duck meat",
+      "Sip the clear duck broth between bites — the broth is lighter than the braising stock and resets the palate",
+    ],
+    keyIngredients: [
+      {
+        name: "Braised Duck",
+        emoji: "🦆",
+        role: "Slow-simmered in master stock until the meat yields and the skin is a deep mahogany — the centrepiece. Slice quality indicates the stall's braising time.",
+      },
+      {
+        name: "Master Stock",
+        emoji: "🫙",
+        role: "Dark soy, five spice, galangal, cinnamon, star anise — continuously maintained and decades old at the best stalls. The single most important ingredient.",
+      },
+      {
+        name: "Braised Egg",
+        emoji: "🥚",
+        role: "Slow-cooked in the master stock until the white is deep brown and the yolk is jammy — absorbs the entire flavour profile of the braise.",
+      },
+      {
+        name: "Braised Tofu",
+        emoji: "🟤",
+        role: "Firm tofu braised in the same stock — absorbs deeply from the outside and stays mild at the centre, providing contrast to the intense duck.",
+      },
+      {
+        name: "Preserved Vegetables",
+        emoji: "🥬",
+        role: "Served alongside — the sharpness of the preserved vegetable cuts through the richness of the braised meat and resets the palate.",
+      },
+      {
+        name: "Galangal",
+        emoji: "🫚",
+        role: "The aromatic that distinguishes Teochew braised duck from other braised meats — its piney, slightly medicinal fragrance is unmistakable in the master stock.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Ah Seng Braised Duck Rice",
+        address: "Bedok 85 Fengshan Market, #01-07, 85 Bedok North St 4",
+        area: "Bedok",
+        note: "The most celebrated braised duck rice in Singapore — the queue here on weekends is evidence of how seriously the east side takes its duck",
+        mapsUrl: "https://maps.google.com/?q=Ah+Seng+Braised+Duck+Bedok+85+Singapore",
+      },
+      {
+        name: "Lim Kee Braised Duck Rice",
+        address: "Old Airport Road Food Centre, #01-90, 51 Old Airport Rd",
+        area: "Kallang",
+        note: "The Old Airport Road version — the master stock here has a particularly strong galangal presence that is the Teochew signature",
+        mapsUrl: "https://maps.google.com/?q=Braised+Duck+Rice+Old+Airport+Road+Singapore",
+      },
+      {
+        name: "Ah Xiao Teochew Braised Duck",
+        address: "Old Airport Road Food Centre, #01-07",
+        area: "Kallang",
+        note: "Michelin Bib Gourmand. The duck slices here are consistently the most tender at Old Airport Road and the braised egg is exceptional",
+        mapsUrl: "https://maps.google.com/?q=Ah+Xiao+Teochew+Braised+Duck+Old+Airport+Road+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 1,
+      messFactor: 2,
+      flavourDepth: 9,
+      queueGame: 7,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Soon Kueh",
+    slug: "soon-kueh",
+    category: "Chinese Dialect Heritage",
+    description:
+      "Soon kueh is a Teochew steamed dumpling that deserves far more attention than it receives: a translucent, slightly chewy wheat starch skin wrapped around a filling of bamboo shoots, dried shrimp, turnip, and mushroom, served with dark soy and a chilli dipping sauce. The wrapper is the achievement — made from wheat starch and tapioca flour, it becomes almost glass-like when steamed, allowing the filling to be visible through the skin, and yielding to a gentle bite with a slight resistance that the best dim sum wrappers aspire to. Teochew hawkers sold soon kueh from push-carts through Singapore's prewar streets alongside chwee kueh and other steamed rice snacks. Today it appears at Teochew kueh stalls, dim sum trolleys, and heritage hawker centres, and is consistently underordered by people who don't know what they're missing.",
+    origin:
+      "Teochew immigrant tradition from the Swatow region — soon kueh (笋粿) reflects the Teochew mastery of steamed wheat starch dumplings, using the bamboo shoots and dried shrimp that characterised Teochew coastal cooking.",
+    whereToFind:
+      "Tiong Bahru Market and Bedok's traditional kueh stalls; Chinatown Complex; any dim sum establishment that serves Teochew-style dumplings.",
+    priceRange: "S$1–1.50 per piece",
+    imageUrl: "/images/food/soon-kueh.jpg",
+    funFact:
+      "The translucency of a well-made soon kueh skin is a quality indicator — if you can see the filling's colour through the wrapper before steaming, the dough ratio is correct. An opaque wrapper is too thick.",
+    bestPairedWith:
+      "Dark soy and chilli dipping sauce, and a pot of strong Chinese tea to cleanse between pieces.",
+    halal: false,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "The skin must be thin enough to see through. If you can't see the filling, the uncle used too much dough.",
+    hawkersThatServeIt: [
+      "tiong-bahru-market",
+      "chinatown-complex-food-centre",
+      "bedok-interchange-hawker-centre",
+    ],
+    howToEat: [
+      "Eat in one bite if possible — the wrapper is designed to be consumed whole and cutting releases the filling prematurely",
+      "Dip in dark soy first, then drag through the chilli — both sauces are needed and the order matters",
+      "Eat while hot from the steamer — the wrapper becomes slightly tough as it cools",
+      "Press gently on the side of the dumpling to feel the filling-to-wrapper ratio — good soon kueh has more filling than wrapper",
+      "Order alongside chwee kueh from the same stall — they are the two pillars of Teochew kueh culture and complement each other",
+    ],
+    keyIngredients: [
+      {
+        name: "Wheat Starch Skin",
+        emoji: "⬜",
+        role: "Wheat starch and tapioca flour, steamed — becomes translucent and slightly glassy. The technique that makes soon kueh visually distinctive.",
+      },
+      {
+        name: "Bamboo Shoots",
+        emoji: "🎍",
+        role: "The primary filling ingredient — slightly crunchy, earthy, and the ingredient the name references (soon means bamboo shoot in Teochew).",
+      },
+      {
+        name: "Dried Shrimp",
+        emoji: "🦐",
+        role: "Fried and mixed into the filling — adds a savoury, slightly smoky depth that bamboo shoots alone cannot provide.",
+      },
+      {
+        name: "Dried Mushroom",
+        emoji: "🍄",
+        role: "Rehydrated and diced — earthy and slightly silky, adding flavour and textural contrast to the crunch of the bamboo.",
+      },
+      {
+        name: "Dark Soy",
+        emoji: "🫙",
+        role: "The primary dipping sauce — thick, slightly sweet, and the flavour that completes the mild filling.",
+      },
+      {
+        name: "Chilli Sauce",
+        emoji: "🌶️",
+        role: "The secondary sauce — provides the heat that the mild, savoury filling needs to be fully balanced.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Tiong Bahru Kueh Stall",
+        address: "Tiong Bahru Market, #02-30, 30 Seng Poh Road",
+        area: "Tiong Bahru",
+        note: "The most consistent soon kueh in Singapore — the wrapper here is reliably thin and the bamboo filling is always fragrant with dried shrimp",
+        mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Market+Soon+Kueh+Singapore",
+      },
+      {
+        name: "Chinatown Soon Kueh",
+        address: "Chinatown Complex Food Centre, 335 Smith Street",
+        area: "Chinatown",
+        note: "Multiple Teochew kueh stalls side by side — find the one with the translucent wrappers visible in the steamer",
+        mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Soon+Kueh+Singapore",
+      },
+      {
+        name: "Bedok Kueh Stall",
+        address: "Bedok Interchange Hawker Centre, 208 New Upper Changi Rd",
+        area: "Bedok",
+        note: "East-side version popular with morning regulars — the soon kueh here is made fresh each morning and sells out by 10am",
+        mapsUrl: "https://maps.google.com/?q=Bedok+Interchange+Soon+Kueh+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 1,
+      messFactor: 1,
+      flavourDepth: 6,
+      queueGame: 4,
+      shiokValue: 8,
+    },
+  },
+
+  {
+    name: "Ang Ku Kueh",
+    slug: "ang-ku-kueh",
+    category: "Chinese Dialect Heritage",
+    description:
+      "Ang ku kueh — red tortoise cake — is one of Singapore's oldest and most meaningful confections: a bright red glutinous rice flour shell moulded into the shape of a tortoise, filled with sweet mung bean or peanut paste, and placed on a pandan leaf base. The name and form carry Hokkien and Teochew tradition: the tortoise is a symbol of longevity, the red colour signals prosperity, and the entire object is designed to be given rather than kept. Ang ku kueh appears at birthdays (particularly first-month celebrations), temple offerings, and special occasions where the giving of food carries as much meaning as the eating of it. At hawker stalls and traditional kueh shops, it is sold daily in both classic red and modern variations — but the original red mung bean version, made properly with fresh-ground paste and steamed until the skin is slightly shiny and yielding, is the one that carries the heritage.",
+    origin:
+      "Hokkien and Teochew immigrant tradition — ang ku kueh (紅龜粿) was brought to Singapore from Fujian and Guangdong as a ceremonial food carrying the symbolism of longevity and prosperity.",
+    whereToFind:
+      "Ji Xiang Ang Ku Kueh in Joo Chiat for the heritage version; Bengawan Solo for consistent island-wide availability; traditional kueh shops in Geylang Serai and Chinatown.",
+    priceRange: "S$0.80–1.50 per piece",
+    imageUrl: "/images/food/ang-ku-kueh.jpg",
+    funFact:
+      "The tortoise mould used to shape ang ku kueh is traditionally made from wood and carved by hand — the pattern pressed into the kueh's surface varies between families and stalls, making each version visually distinct.",
+    bestPairedWith:
+      "Chinese tea, and the occasion it was made for — ang ku kueh is a celebratory food and tastes best in context.",
+    halal: false,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "If someone gives you ang ku kueh, they are wishing you long life. The correct response is to eat it, not to display it.",
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "chinatown-complex-food-centre",
+      "tiong-bahru-market",
+    ],
+    howToEat: [
+      "Eat at room temperature — fresh ang ku kueh should be soft and slightly yielding to the touch",
+      "Remove the pandan leaf base before eating — it is flavour-imparting packaging, not meant to be consumed",
+      "Eat in two bites — the filling-to-skin ratio is calibrated for a two-bite piece",
+      "The mung bean version is the original — taste it before the peanut version to understand the heritage",
+      "Fresh ang ku kueh should leave a faint pandan fragrance on your fingers from the leaf base",
+    ],
+    keyIngredients: [
+      {
+        name: "Glutinous Rice Flour Skin",
+        emoji: "🔴",
+        role: "Coloured red and moulded into the tortoise shape — soft, slightly chewy, and thin enough that the filling is always the dominant flavour.",
+      },
+      {
+        name: "Mung Bean Paste",
+        emoji: "🟡",
+        role: "The traditional filling — slow-cooked mung beans mashed with sugar and oil into a smooth, slightly sweet paste. The original and most heritage-significant filling.",
+      },
+      {
+        name: "Peanut Paste",
+        emoji: "🥜",
+        role: "The popular alternative filling — roasted peanuts ground with sugar into a coarse, slightly oily paste with more texture than the mung bean version.",
+      },
+      {
+        name: "Red Colouring",
+        emoji: "🔴",
+        role: "Traditionally from fermented red yeast rice — the colour carries the symbolism of prosperity and good fortune that makes ang ku kueh a gift-appropriate food.",
+      },
+      {
+        name: "Pandan Leaf",
+        emoji: "🌿",
+        role: "The base — prevents sticking and imparts a faint grassy fragrance to the bottom of the kueh during steaming.",
+      },
+      {
+        name: "Banana Oil (optional)",
+        emoji: "🍌",
+        role: "Sometimes added to the filling — a few drops give a subtle tropical note that distinguishes certain stalls' versions from others.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Ji Xiang Ang Ku Kueh",
+        address: "Ji Xiang Confectionery, 433 Joo Chiat Road",
+        area: "Joo Chiat",
+        note: "The most celebrated ang ku kueh in Singapore — made fresh every morning with hand-ground filling. The queue on weekend mornings is the proof",
+        mapsUrl: "https://maps.google.com/?q=Ji+Xiang+Ang+Ku+Kueh+Joo+Chiat+Singapore",
+      },
+      {
+        name: "Bengawan Solo",
+        address: "Multiple outlets island-wide",
+        area: "Island-wide",
+        note: "Consistent and accessible — the mung bean version here is reliably made and the skin is always properly soft",
+        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Ang+Ku+Kueh+Singapore",
+      },
+      {
+        name: "Chinatown Ang Ku Kueh",
+        address: "Chinatown Complex Food Centre, 335 Smith Street",
+        area: "Chinatown",
+        note: "The traditional market version — made fresh throughout the morning and the pandan leaf base here is always from fresh leaves, not pre-cut frozen",
+        mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Ang+Ku+Kueh+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 0,
+      messFactor: 1,
+      flavourDepth: 5,
+      queueGame: 5,
+      shiokValue: 8,
+    },
+  },
+
+// ─── INDIAN & SOUTH ASIAN HERITAGE (additions) ───────────────────────────────
+
+  {
+    name: "Masala Thosai",
+    slug: "masala-thosai",
+    category: "Indian & South Asian Heritage",
+    description:
+      "Masala thosai is Singapore's most substantial South Indian breakfast: a large, thin, crispy dosa crepe made from fermented rice and urad dal batter, wrapped around a filling of spiced potato masala — turmeric-yellow mashed potato with mustard seeds, curry leaf, onion, and green chilli — served with coconut chutney and sambar. The dish is Tamil Nadu's most recognised export and in Singapore's Little India it has been served at the same restaurants and stalls for decades, the dosa pan heating from before dawn while the batter ferments overnight. The proper masala thosai is enormous — extending well beyond the edge of the plate — paper-thin at its widest, slightly thicker where the potato filling sits, and crispy enough to shatter when broken. It is simultaneously very simple food and the result of considerable technical precision.",
+    origin:
+      "Tamil Nadu, South India — masala thosai arrived in Singapore with Tamil immigrant workers and became a breakfast staple of Little India's restaurant culture and hawker centres.",
+    whereToFind:
+      "Little India's Serangoon Road restaurants for the full experience; Tekka Centre for the hawker version; banana leaf restaurants island-wide for the sit-down version with full accompaniments.",
+    priceRange: "S$4–8 per thosai",
+    imageUrl: "/images/food/masala-thosai.jpg",
+    funFact:
+      "The fermentation time for thosai batter ranges from eight to sixteen hours — longer fermentation produces a more sour, more complex batter, and the sourness is what gives a well-made thosai its slight tang that distinguishes it from plain pancake.",
+    bestPairedWith:
+      "Coconut chutney (always), sambar (always), tomato chutney at stalls that offer it, and a cup of filter coffee for the full South Indian breakfast experience.",
+    halal: true,
+    spiceLevel: "Mild",
+    difficulty: "Easy to eat",
+    localSay:
+      "Break from the edges inward — the crispy edge is the best part and should not be wasted on dipping before you've had it plain.",
+    hawkersThatServeIt: [
+      "tekka-centre",
+      "geylang-serai-market",
+      "tampines-round-market",
+    ],
+    howToEat: [
+      "Break from the edges rather than the centre — the crispy perimeter is the technical achievement and should be eaten while it's still crackling",
+      "Scoop potato filling with each piece of dosa — the filling-to-crepe ratio should be adjusted as you eat",
+      "Dip into coconut chutney first, sambar second — the chutney is the lighter accompaniment and the sambar is the finish",
+      "The soft section around the potato filling is intentionally less crispy — it holds the filling and has a different, equally valid texture",
+      "Order filter coffee alongside — the bitterness of South Indian filter coffee is the correct counterpoint to the coconut chutney's sweetness",
+    ],
+    keyIngredients: [
+      {
+        name: "Fermented Dosa Batter",
+        emoji: "⚪",
+        role: "Rice and urad dal soaked, ground, and fermented overnight — the sourness of proper fermentation is the signature of an authentic thosai.",
+      },
+      {
+        name: "Potato Masala",
+        emoji: "🥔",
+        role: "Mashed potato cooked with turmeric, mustard seeds, curry leaf, onion, and green chilli — the filling that makes a dosa a masala thosai.",
+      },
+      {
+        name: "Mustard Seeds",
+        emoji: "⚫",
+        role: "Tempered in hot oil until they pop — the first step in making the potato filling and the fragrance that defines South Indian cooking.",
+      },
+      {
+        name: "Curry Leaf",
+        emoji: "🌿",
+        role: "Added to both the potato filling and the chutneys — its fragrance is irreplaceable and the ingredient that most distinguishes South Indian food from other cuisines.",
+      },
+      {
+        name: "Coconut Chutney",
+        emoji: "🥥",
+        role: "Ground fresh coconut with ginger, green chilli, and tempered mustard seeds — the primary dipping sauce and the cooling element alongside the hot thosai.",
+      },
+      {
+        name: "Sambar",
+        emoji: "🍲",
+        role: "Tamarind-lentil-vegetable broth — thicker than the version served with idli, and designed for both dipping and pouring over the thosai.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Komala Vilas",
+        address: "76-78 Serangoon Road",
+        area: "Little India",
+        note: "Singapore's oldest South Indian vegetarian restaurant since 1947 — the masala thosai here is made from an overnight-fermented batter and the potato filling is made fresh each morning",
+        mapsUrl: "https://maps.google.com/?q=Komala+Vilas+Serangoon+Road+Masala+Thosai+Singapore",
+      },
+      {
+        name: "Ananda Bhavan",
+        address: "58 Serangoon Road",
+        area: "Little India",
+        note: "The second great Serangoon Road institution — the dosa pan here is well-seasoned and the ghee finish gives the thosai its golden edge",
+        mapsUrl: "https://maps.google.com/?q=Ananda+Bhavan+Masala+Thosai+Singapore",
+      },
+      {
+        name: "Tekka Thosai Stall",
+        address: "Tekka Centre, #01-215, 665 Buffalo Road",
+        area: "Little India",
+        note: "The hawker version — more accessible price point and a consistent fermented batter that produces a properly crispy result",
+        mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Masala+Thosai+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 3,
+      messFactor: 3,
+      flavourDepth: 7,
+      queueGame: 5,
+      shiokValue: 9,
+    },
+  },
+
+  {
+    name: "Naan",
+    slug: "naan",
+    category: "Indian & South Asian Heritage",
+    description:
+      "Naan is the leavened flatbread of North Indian and Pakistani cooking that found a permanent place in Singapore's Indian-Muslim restaurant heritage — stretched by hand, slapped against the interior wall of a tandoor oven, and pulled out charred in spots, blistered across its surface, and soft enough to fold completely around a piece of mutton. Singapore's naan is associated with the Indian-Muslim restaurants of Kampong Glam and Race Course Road that have served North Indian food alongside South Indian dishes since the early colonial period. It is not a hawker dish — it is a restaurant dish, requiring a tandoor to make properly — and the tandoor restaurants of Kampong Glam are its natural home. The best naan in Singapore is slathered with butter or garlic butter immediately after emerging from the oven, and eaten while it is too hot to hold comfortably, which is precisely the correct temperature.",
+    origin:
+      "North Indian and Pakistani bread tradition — naan arrived in Singapore with North Indian Muslim traders and was adopted into the Indian-Muslim restaurant culture of Kampong Glam and Little India.",
+    whereToFind:
+      "Kampong Glam's North Bridge Road Indian-Muslim restaurants; Race Course Road's banana leaf establishments that offer both South and North Indian options; tandoor restaurants island-wide.",
+    priceRange: "S$3–6 per naan",
+    imageUrl: "/images/food/naan.jpg",
+    funFact:
+      "A properly made tandoor operates at 450–500°C — bread placed against the inner wall of the oven cooks in ninety seconds or less. The high heat is what creates the blistered surface and the slightly charred spots that cannot be replicated in a conventional oven.",
+    bestPairedWith:
+      "Dal makhani, butter chicken, or mutton curry — naan is a bread designed for thick, reduced curries. It is wasted on thin, soupy gravies.",
+    halal: true,
+    spiceLevel: "None",
+    difficulty: "Easy to eat",
+    localSay:
+      "Must eat hot. If it has gone cold before you start eating, someone at the table was talking too much.",
+    hawkersThatServeIt: [
+      "tekka-centre",
+      "geylang-serai-market",
+      "newton-food-centre",
+    ],
+    howToEat: [
+      "Tear from the edges — naan is a tearing bread, not a cutting bread. Use your hands throughout",
+      "Wrap around the curry rather than dipping — the bread holds more curry when folded and delivers a more complete bite",
+      "Eat while hot — naan hardens rapidly as it cools and loses its softness within minutes of leaving the tandoor",
+      "Order garlic naan if the restaurant offers it — the garlic butter version is the most popular for good reason",
+      "Use naan to wipe the remaining curry from the bowl at the end — this is not bad manners, it is the intended final course",
+    ],
+    keyIngredients: [
+      {
+        name: "Leavened Dough",
+        emoji: "🫓",
+        role: "Wheat flour with yeast and yoghurt — the leavening gives naan its slightly airy, pillowy texture that separates it from the unleavened flatbreads.",
+      },
+      {
+        name: "Tandoor Oven",
+        emoji: "🔥",
+        role: "Clay oven reaching 500°C — the tool without which proper naan cannot be made. The char and blister on the surface are the oven's signature.",
+      },
+      {
+        name: "Yoghurt",
+        emoji: "🥛",
+        role: "Mixed into the dough — adds tanginess and contributes to the softness of the finished bread.",
+      },
+      {
+        name: "Butter",
+        emoji: "🧈",
+        role: "Slathered on immediately after removal from the tandoor — melts into the surface and is the reason naan smells the way it does.",
+      },
+      {
+        name: "Garlic",
+        emoji: "🧄",
+        role: "The most popular variation — minced garlic and butter pressed into the surface before serving. The garlic naan version that most Singapore diners default to.",
+      },
+      {
+        name: "Nigella Seeds",
+        emoji: "⚫",
+        role: "Sometimes scattered on the surface — slightly bitter, slightly onion-like, and the garnish that indicates an authentic North Indian preparation.",
+      },
+    ],
+    bestStalls: [
+      {
+        name: "Zam Zam Restaurant",
+        address: "697-699 North Bridge Road",
+        area: "Kampong Glam",
+        note: "Singapore's most famous Indian-Muslim restaurant — the naan here has been served with murtabak and curry since 1908",
+        mapsUrl: "https://maps.google.com/?q=Zam+Zam+Restaurant+Naan+Singapore",
+      },
+      {
+        name: "Rang Mahal",
+        address: "Pan Pacific Singapore, 7 Raffles Boulevard",
+        area: "Marina Bay",
+        note: "The fine dining version — a tandoor-fired naan in a restaurant context, for when the occasion requires more than a hawker stall",
+        mapsUrl: "https://maps.google.com/?q=Rang+Mahal+Naan+Singapore",
+      },
+      {
+        name: "Gandhi Restaurant",
+        address: "32 Race Course Road",
+        area: "Little India",
+        note: "Race Course Road institution — the naan here is made in a traditional tandoor and the garlic butter version is the most ordered item on the table",
+        mapsUrl: "https://maps.google.com/?q=Gandhi+Restaurant+Race+Course+Road+Naan+Singapore",
+      },
+    ],
+    shiokOMeter: {
+      spiceHit: 1,
+      messFactor: 2,
+      flavourDepth: 6,
+      queueGame: 3,
+      shiokValue: 8,
+    },
+  },
 ];
 
 /** Splits story around the strongest "Shiok Factor" line for pull-quote layout. */

@@ -220,7 +220,7 @@ function FoodHeritagePageContent() {
 
         <div className="flex flex-wrap gap-12">
           <div>
-            <p className="text-5xl font-bold text-white">38</p>
+            <p className="text-5xl font-bold text-white">61</p>
             <p className="mt-2 text-[15px] uppercase tracking-[0.15em] text-sf-muted">
               Heritage Dishes
             </p>

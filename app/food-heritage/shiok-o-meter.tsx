@@ -95,8 +95,8 @@ function pillSpiceHit(score: number): { text: string; className: string } {
 /** invertedMess = 10 - messFactor (higher inverted = cleaner / easier to eat). x/10 shows raw messFactor. */
 function napkinTier(messFactor: number): "clean" | "napkins" | "dangerous" {
   const invertedMess = 10 - messFactor;
-  if (invertedMess >= 8) return "clean";
-  if (invertedMess >= 4 && invertedMess <= 6) return "napkins";
+  if (invertedMess >= 7) return "clean";
+  if (invertedMess >= 4 && invertedMess < 7) return "napkins";
   return "dangerous";
 }
 
