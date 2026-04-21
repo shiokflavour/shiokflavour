@@ -61,7 +61,7 @@ function DualPathStopsSection({ trail }: { trail: FlavourTrail }) {
         return (
           <div
             key={stop.number}
-            className={idx < trail.dualPathStops.length - 1 ? "mb-16" : ""}
+            className={idx < trail.dualPathStops!.length - 1 ? "mb-16" : ""}
           >
             <div className="mb-6">
               <div className="text-7xl font-bold text-white/20">{stopNumber}</div>
@@ -306,7 +306,7 @@ export default async function TrailPage({ params }: Props) {
               {trail.trailStops.map((stop, idx) => (
               <div key={stop.number} className="relative flex gap-6 pb-12">
                 {/* Timeline line */}
-                {idx < trail.trailStops.length - 1 && (
+                {idx < trail.trailStops!.length - 1 && (
                   <div className="absolute bottom-0 left-5 top-12 w-px bg-white/10" />
                 )}
 
