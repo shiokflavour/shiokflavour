@@ -179,14 +179,14 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                 <section>
                   <h2 className="text-xl font-semibold text-sf-primary">Story</h2>
                   <div className="mt-5 space-y-5 text-lg leading-relaxed text-sf-muted">
-                    {shiok.before ? <p className="whitespace-pre-line">{shiok.before}</p> : null}
+                    {shiok.before ? shiok.before.split("\\n\\n").map((p, i) => <p key={i} className="text-lg leading-relaxed">{p}</p>) : null}
                     {shiok.quote ? (
                       <blockquote className="relative border-l-4 border-sf-primary py-2 pl-5">
                         <p className="text-[15px] font-semibold uppercase tracking-wider text-sf-muted">Shiok Factor</p>
                         <p className="mt-2 text-xl font-medium italic text-sf-primary sm:text-2xl">{shiok.quote}</p>
                       </blockquote>
                     ) : null}
-                    {shiok.after ? <p className="whitespace-pre-line">{shiok.after}</p> : null}
+                    {shiok.after ? shiok.after.split("\\n\\n").map((p, i) => <p key={i} className="text-lg leading-relaxed">{p}</p>) : null}
                   </div>
                 </section>
 

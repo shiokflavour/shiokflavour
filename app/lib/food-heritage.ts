@@ -2553,7 +2553,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "chai-tow-kway",
     category: "Singaporean Classics",
     description:
-      "Carrot cake has nothing to do with carrots. The name comes from the Teochew word for radish — chai tow — which is steamed with rice flour into white blocks, then broken into chunks and wok-fried. Order white and you get egg, preserved radish, and bean sprouts in a clean, slightly smoky plate. Order black and the hawker tosses everything in sweet dark soy sauce until the caramel chars and clings to every chunk. Both versions are correct. The debate about which is superior is one of Singapore's oldest unresolved arguments, conducted between friends over shared plates for decades. Hokkien and Teochew hawkers developed the dish from southern Chinese preserved radish traditions; it became a breakfast staple so embedded in hawker culture that UNESCO's recognition of Singapore's food scene implicitly includes the morning uncle frying kway at 6am.",
+      "Carrot cake has nothing to do with carrots. The name comes from the Teochew word for white radish — chai tow — which is steamed with rice flour into soft, dense white blocks, then broken into chunks and wok-fried. When you reach the stall, the hawker will ask you one thing: black or white?\n\nWhite is the purist's choice. The radish cake is fried with egg and chai poh (preserved salted radish) over fierce heat. The result is pale, savoury, and slightly smoky — you taste the wok, the egg, and the gentle saltiness of the radish. No sweetness. No distraction. The dish speaking for itself.\n\nBlack is for people who want more. The hawker adds thick dark soy sauce to the wok and tosses everything until the caramel coats every chunk and chars at the edges. It is sweeter, bolder, and more intense — the sauce clings, the edges catch, and every bite has a deep smoky sweetness that the white version deliberately avoids.\n\nHow to decide: If you have never tried it, order black — the flavour hits immediately and you will know within two bites whether this is your kind of dish. If you prefer clean, eggy, savoury food without any sweetness, go white. If you like bold, caramelised, slightly sweet dishes, go black. Both are correct. Singapore has been arguing about this for decades and shows no sign of stopping. Hokkien and Teochew hawkers developed the dish from southern Chinese preserved radish traditions and it became a breakfast staple so embedded in hawker culture that UNESCO's recognition of Singapore's food scene implicitly includes the morning uncle frying kway at 6am.",
     origin:
       "Teochew and Hokkien immigrant tradition — steamed turnip-rice cakes adapted from southern Chinese preserved vegetable cooking into a wok-fried hawker staple.",
     whereToFind:
@@ -2601,11 +2601,6 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         name: "Dark Soy Sauce",
         emoji: "🫙",
         role: "Added only for the black version — caramelises in the hot wok and coats every piece with a deep, sweet-savoury char.",
-      },
-      {
-        name: "Bean Sprouts",
-        emoji: "🌱",
-        role: "Added at the end for crunch — a good hawker never lets them go limp. Their freshness signals the stall's standards.",
       },
       {
         name: "Lard",
@@ -4677,7 +4672,7 @@ export function pickShiokFactorSentence(description: string): {
   quote: string;
   after: string;
 } {
-  const text = description.trim().replace(/\n\n+/g, " ");
+  const text = description.trim();
   const sentences = text
     .split(/(?<=[.!?])\s+/)
     .map((s) => s.trim())

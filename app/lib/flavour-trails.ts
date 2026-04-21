@@ -15,6 +15,38 @@ export type TrailStop = {
   hasPaidOption?: boolean;
 };
 
+export type OrderItem = {
+  item: string;
+  price: string;
+};
+
+export type PathOption = {
+  pathLabel: "The OG" | "The Returnee";
+  name: string;
+  address: string;
+  mapsUrl: string;
+  badges: string[];
+  description: string;
+  whatToOrder: OrderItem[];
+  voicedTip: string;
+  image: string;
+};
+
+export type DualPathStop = {
+  number: number;
+  category: string;
+  headline: string;
+  lede: string;
+  og: PathOption;
+  returnee: PathOption;
+  shiokMove?: string;
+};
+
+export type TrailGuides = {
+  og: { name: string; tagline: string };
+  returnee: { name: string; tagline: string };
+};
+
 export type FlavourTrail = {
   slug: string;
   title: string;
@@ -28,8 +60,10 @@ export type FlavourTrail = {
   heroImage: string;
   intro: string;
   pullQuote: string;
-  trailStops: TrailStop[];
+  trailStops?: TrailStop[];
   endNote: string;
+  guides?: TrailGuides;
+  dualPathStops?: DualPathStop[];
 };
 
 export const FLAVOUR_TRAILS: FlavourTrail[] = [
@@ -181,6 +215,194 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
     ],
     endNote:
       'You made it to the end of the trail. And if you ate everything on this list — the kaya toast, the prata, the laksa, the gelato — you now have a very good understanding of why people who grow up in the East never want to leave.\n\nThank you for walking this with us. Every stall on this trail is run by someone who has spent years — sometimes decades — perfecting one thing. When you eat there, you are keeping that alive. That matters more than you know.\n\nCome back hungry. Katong will be ready.\n\nEnjoy this trail? Share it with someone who deserves a good meal. And if you find a stall we missed — write to us. We are always hungry for a good tip.\n\n— The ShiokFlavour Team\nSingapore\'s hawker heritage, one plate at a time.',
+  },
+  {
+    slug: "tiong-bahru-trail",
+    title: "The Tiong Bahru Trail",
+    subtitle:
+      "Two neighbourhoods. One postcode. Four decisions.",
+    region: "Central Singapore",
+    duration: "Half day (3–4 hours)",
+    distance: "1.5km walking",
+    stops: 4,
+    bestTime: "Saturday or Sunday, start by 8am",
+    difficulty: "Easy",
+    heroImage: "/images/trails/tiong-bahru/hero.jpg",
+    intro:
+      "Tiong Bahru is two neighbourhoods occupying the same postcode. The 1930s Art Deco estate where pau uncles and chwee kueh aunties still run their stalls — and the 2020s neighbourhood of pastry chefs, flat whites and indie bookshops. Both are real. Both are delicious.\n\nSo we built this trail differently. At every stop you get two paths — the Uncle (The OG) or the Barista (The Returnee). Pick the one that matches your mood. Or, if you're hungry enough, do both. Prices are indicative and change — we check them often but bring a few extra dollars just in case.",
+    pullQuote:
+      "The only neighbourhood in Singapore where a $1.20 pau and a $4.80 kouign amann share the same postcode.",
+    guides: {
+      og: {
+        name: "The Uncle (The OG)",
+        tagline: "Been doing this since before you had opinions.",
+      },
+      returnee: {
+        name: "The Barista (The Returnee)",
+        tagline: "Trained in Melbourne. Came home. Sourced the beans themselves.",
+      },
+    },
+    dualPathStops: [
+      {
+        number: 1,
+        category: "Breakfast · Pick your path",
+        headline: "How do you want to start?",
+        lede: "Eighty years of difference. Two minutes apart on foot.",
+        og: {
+          pathLabel: "The OG",
+          name: "Tiong Bahru Pau",
+          address: "Block 57 Eng Hoon Street, Tiong Bahru Estate",
+          mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Pau+Singapore",
+          badges: ["CASH ONLY", "STANDING ROOM", "SINCE 1978"],
+          description:
+            "Two pau, eaten standing up at the void deck. The uncle doesn't do complicated. Point. Pay. Eat. This is how Singapore had breakfast for seventy years before anyone said flat white.",
+          whatToOrder: [
+            { item: "Big pau — char siew & egg", price: "$1.60" },
+            { item: "Liao sa pau — salted egg custard", price: "$1.80" },
+            { item: "Small pau — lotus paste", price: "$1.20" },
+          ],
+          voicedTip: "Two pau enough. Don't order three, later cannot eat lunch.",
+          image: "/images/trails/tiong-bahru/pau.jpg",
+        },
+        returnee: {
+          pathLabel: "The Returnee",
+          name: "Tiong Bahru Bakery",
+          address: "56 Eng Hoon Street, #01-70, Singapore 160056",
+          mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Bakery+Eng+Hoon+Street",
+          badges: ["CARD OKAY", "SIT & STAY", "SINCE 2012"],
+          description:
+            "A Parisian pastry shop that opened on the same street as the pau stall a decade ago — and quietly became the most photographed bakery in Singapore. The kouign amann is the signature. Caramelised, flaky, heavy. Worth the queue.",
+          whatToOrder: [
+            { item: "Kouign amann — caramelised & flaky", price: "$4.80" },
+            { item: "Butter croissant", price: "$4.20" },
+            { item: "Flat white", price: "$6.50" },
+          ],
+          voicedTip: "Come at 8am. Kouign amann straight from the oven, still warm, no queue.",
+          image: "/images/trails/tiong-bahru/bakery.jpg",
+        },
+        shiokMove: "Do both. Two minutes apart. Pau first, croissant for the road.",
+      },
+      {
+        number: 2,
+        category: "Walk it off · Pick your path",
+        headline: "Which Tiong Bahru do you want to see?",
+        lede: "The same streets. Eighty years of different stories.",
+        og: {
+          pathLabel: "The OG",
+          name: "Seng Poh Road Heritage Walk",
+          address: "Seng Poh Road & surrounding blocks, Tiong Bahru Estate",
+          mapsUrl: "https://maps.google.com/?q=Seng+Poh+Road+Tiong+Bahru",
+          badges: ["FREE", "20 MINS", "1930s"],
+          description:
+            "Singapore's first public housing estate, built in an Art Deco style that was sweeping the world at the time. Rounded corners. Porthole windows. Walk slowly and look up — these aren't museum buildings, people still live here.",
+          whatToOrder: [
+            { item: "Block 78 Moh Guan Terrace — the photographed facade", price: "Free" },
+            { item: "Monkey God Temple — 1930s, still in active use", price: "Free" },
+            { item: "Qi Tian Gong shrine & surrounding shophouses", price: "Free" },
+          ],
+          voicedTip: "People live here. Keep voice down, walk slow.",
+          image: "/images/trails/tiong-bahru/seng-poh.jpg",
+        },
+        returnee: {
+          pathLabel: "The Returnee",
+          name: "Yong Siak Street",
+          address: "Yong Siak Street, Tiong Bahru",
+          mapsUrl: "https://maps.google.com/?q=Yong+Siak+Street+Tiong+Bahru",
+          badges: ["FREE", "20 MINS", "2010s"],
+          description:
+            "One short street that became the quiet heart of the new Tiong Bahru. Indie bookshops. Small design boutiques. No crowds. This is the neighbourhood everyone writes about but nobody actually disturbs.",
+          whatToOrder: [
+            { item: "Woods in the Books — children's bookshop", price: "Free" },
+            { item: "Nana & Bird — Singapore designer boutique", price: "Free" },
+            { item: "Cat Socrates — quirky gift shop", price: "Free" },
+          ],
+          voicedTip: "Weekday mornings quiet. Weekends bring the brunch crowd. Come early.",
+          image: "/images/trails/tiong-bahru/yong-siak.jpg",
+        },
+        shiokMove: "These two streets are parallel — five minutes walk from one to the other. Do both. One for history, one for coffee-scented bookshelves.",
+      },
+      {
+        number: 3,
+        category: "Mid-morning snack · Pick your path",
+        headline: "Still hungry?",
+        lede: "A forty-year-old pineapple tart, or a cupcake that tastes like Brooklyn.",
+        og: {
+          pathLabel: "The OG",
+          name: "Tiong Bahru Galicier Pastry",
+          address: "55 Tiong Bahru Road, #01-39, Singapore 160055",
+          mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Galicier+Pastry",
+          badges: ["CASH ONLY", "HAND-MADE", "SINCE 1979"],
+          description:
+            "Galicier has been making kueh the traditional way since 1979. Everything is hand-made, sold over the counter, and gone by early afternoon. Buy a mixed box of six to share — it's how locals eat their way through an afternoon.",
+          whatToOrder: [
+            { item: "Ondeh ondeh — molten gula melaka", price: "$0.80" },
+            { item: "Kueh salat — pandan custard on rice", price: "$1.20" },
+            { item: "Pineapple tart (CNY season)", price: "$1.50" },
+          ],
+          voicedTip: "Buy six. One for you, five for the family you'll visit later.",
+          image: "/images/trails/tiong-bahru/galicier.jpg",
+        },
+        returnee: {
+          pathLabel: "The Returnee",
+          name: "Plain Vanilla Bakery",
+          address: "1D Yong Siak Street, Singapore 168641",
+          mapsUrl: "https://maps.google.com/?q=Plain+Vanilla+Bakery+Yong+Siak",
+          badges: ["CARD OKAY", "SIT & STAY", "SINCE 2011"],
+          description:
+            "Cupcakes done carefully. Coffee done properly. The neighbourhood's softest-landing afternoon stop, tucked into a Yong Siak shophouse with a small courtyard out back. The salted caramel cupcake is the benchmark.",
+          whatToOrder: [
+            { item: "Salted caramel cupcake", price: "$4.50" },
+            { item: "Red velvet cupcake", price: "$4.50" },
+            { item: "Flat white", price: "$6.00" },
+          ],
+          voicedTip: "Get a cupcake to go. Eat it in the courtyard. Slower that way.",
+          image: "/images/trails/tiong-bahru/plain-vanilla.jpg",
+        },
+        shiokMove: "Galicier's ondeh ondeh costs 80 cents. Plain Vanilla's cupcake costs $4.50. Both are exactly what they're meant to be.",
+      },
+      {
+        number: 4,
+        category: "Lunch · Pick your path",
+        headline: "How do you want to finish?",
+        lede: "Four Michelin Bib stalls under one roof, or sourdough in a sunlit room.",
+        og: {
+          pathLabel: "The OG",
+          name: "Tiong Bahru Market",
+          address: "30 Seng Poh Road, Singapore 168898",
+          mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Market+Singapore",
+          badges: ["CASH BEST", "SHARED TABLES", "4 MICHELIN BIBS"],
+          description:
+            "Singapore's most beautiful hawker building, in Singapore's most fashionable neighbourhood. Four Michelin Bib Gourmand stalls under one roof. Shared tables, tissue packets to claim seats, and chwee kueh that sells out by noon.",
+          whatToOrder: [
+            { item: "Jian Bo Shui Kueh — chwee kueh (6 pcs)", price: "$3.00" },
+            { item: "Hainanese Chicken Rice #02-82", price: "$3.80" },
+            { item: "Lor Mee 178 — extra vinegar", price: "$4.00" },
+            { item: "Hong Heng Prawn Mee", price: "$5.00" },
+          ],
+          voicedTip: "Order from two stalls. Share everything. That's how we do.",
+          image: "/images/trails/tiong-bahru/market.jpg",
+        },
+        returnee: {
+          pathLabel: "The Returnee",
+          name: "Micro Bakery Kitchen",
+          address: "78 Yong Siak Street, Singapore 163078",
+          mapsUrl: "https://maps.google.com/?q=Micro+Bakery+Kitchen+Yong+Siak",
+          badges: ["CARD ONLY", "BOOK AHEAD", "SINCE 2018"],
+          description:
+            "If you want to end the morning slowly with a seat, good coffee and sourdough — this is the finish. Five minutes from the market on foot. A completely different tempo, the same postcode.",
+          whatToOrder: [
+            { item: "Sourdough tartine (changing, seasonal)", price: "$18" },
+            { item: "The Baker's Breakfast", price: "$24" },
+            { item: "Filter coffee", price: "$7" },
+          ],
+          voicedTip: "Book ahead on weekends. Quietest just after 1pm.",
+          image: "/images/trails/tiong-bahru/micro-bakery.jpg",
+        },
+        shiokMove: "Tiong Bahru Market costs $15 for a feast. Micro Bakery costs $40 for lunch. Pick by mood, not wallet.",
+      },
+    ],
+    endNote:
+      "You've just done Tiong Bahru the way it's meant to be done — with a choice at every stop. The Uncle has been right for eighty years. The Returnee has been right for the last ten. Both are still right. That's the whole neighbourhood in one sentence.",
   },
   {
     slug: "cbd-day-trail",
