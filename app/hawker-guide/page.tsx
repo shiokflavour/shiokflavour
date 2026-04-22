@@ -100,6 +100,9 @@ export default function HawkerGuidePage() {
           Order Like
           <br />a Local
         </h1>
+        <p className="text-white/60 italic font-serif text-base md:text-lg mt-3 mb-6">
+          The unwritten rules of eating in Singapore.
+        </p>
         <div className="border-l-2 border-sf-primary pl-6 mb-10 max-w-2xl">
           <p className="text-white/80 text-xl italic leading-relaxed font-light">
             &quot;Saying &apos;coffee, no sugar&apos; in a kopitiam might get you
