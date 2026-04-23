@@ -8,6 +8,11 @@ export type BlogPost = {
   heroImage: string;
   excerpt: string;
   content: string;
+  series?: {
+    name: "How to Order";
+    number: number;
+  };
+  comingSoon?: boolean;
 };
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -172,6 +177,36 @@ Any kopitiam in Singapore will do. They are everywhere — the ground floor of a
 Your first order: **Kopi C Peng Siu Dai** — iced coffee with evaporated milk, less sweet. It is the most ordered variant among people who have just learned the system and want to show off slightly.
 
 You are ready.`,
+    series: { name: "How to Order", number: 1 },
+  },
+  {
+    slug: "how-to-order-roti-prata-singapore",
+    title: "How to Order Roti Prata",
+    subtitle: "The unwritten menu of Singapore's most-shared plate",
+    category: "Guide",
+    readTime: "Coming soon",
+    publishedAt: "2026-05-01",
+    heroImage: "/images/food/roti-prata.jpg",
+    excerpt:
+      "Kosong, tissue, egg, cheese, banana — and the one curry you should always ask for. The complete guide to ordering Singapore's most iconic breakfast.",
+    content: "",
+    series: { name: "How to Order", number: 2 },
+    comingSoon: true,
+  },
+  {
+    slug: "how-to-order-chicken-rice-singapore",
+    title: "How to Order Hainanese Chicken Rice",
+    subtitle:
+      "Poached or roasted. Thigh or breast. The real way to order Singapore's national dish",
+    category: "Guide",
+    readTime: "Coming soon",
+    publishedAt: "2026-05-15",
+    heroImage: "/images/food/chicken-rice.jpg",
+    excerpt:
+      "The chicken rice decision tree. Which chicken, which rice, which sauce, and what to say at the stall.",
+    content: "",
+    series: { name: "How to Order", number: 3 },
+    comingSoon: true,
   },
   {
     slug: "10-hawker-dishes-must-try-singapore",
