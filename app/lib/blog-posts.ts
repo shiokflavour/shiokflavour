@@ -186,14 +186,156 @@ Your first order: **Kopi C Peng Siu Dai** — iced coffee with evaporated milk, 
     title: "How to Order Roti Prata",
     subtitle: "The unwritten menu of Singapore's most-shared plate",
     category: "Guide",
-    readTime: "Coming soon",
-    publishedAt: "2026-05-01",
+    readTime: "7 min read",
+    publishedAt: "2026-04-26",
     heroImage: "/images/food/roti-prata.jpg",
     excerpt:
-      "Kosong, tissue, egg, cheese, banana — and the one curry you should always ask for. The complete guide to ordering Singapore's most iconic breakfast.",
-    content: "",
+      "Singapore's most-shared plate has an unwritten menu — kosong, plaster, the chicken curry locals don't tell tourists about, and a nine-tiered drinks board. Here's how to read all of it.",
+    content: `## A short confession
+
+Roti prata is the dish Singapore inherited from someone else and then quietly made better. You can argue with that statement if you'd like. I'll wait. While you do, I'll be ordering one plain, one egg, with chicken curry — the order I've been making since I was tall enough to see over a glass display case.
+
+Prata travelled here from southern India, by way of the Indian Muslim community who set up the first stalls in the early 1900s. The original dish — *paratha* — was a flatbread. Singapore took the flatbread, added theatre, ghee, dough-slapping, and the entire concept of *kosong*, and turned it into the country's most underrated comfort food.
+
+It is now eaten at every hour the body permits eating. Breakfast prata. Supper prata. The post-clubbing 3am prata that becomes 4am, 5am, and a tactical regret around 6am. There is no wrong time. Only wrong orders.
+
+And tourists keep getting it wrong.
+
+## What makes a good prata
+
+Forget what the menu says for a second. The real test of a prata stall is one thing: **the crust**.
+
+A great prata is crispy on the outside, soft and flaky on the inside. The exterior should crackle slightly when you tear it. The layers inside should feel like they were folded by someone who *cared*. If your prata arrives limp, pale, or feels like a wet pancake — you're at the wrong stall. Walk away. Or stay, but lower your expectations to "filling carbs."
+
+The good stuff comes from the technique. The best uncles slap, fold, and stretch the dough with rhythms that are half cooking, half percussion. They flick it through the air. They oil the griddle generously and don't apologise for it. The whole thing is a small piece of street theatre, and the crust is the receipt.
+
+![A prata torn open showing flaky layers](/images/food/prata-tearing.jpg)
+
+## The traditional modifiers (your new vocabulary)
+
+A Singapore prata stall has no menu in the way Western restaurants understand menus. There is a board with words. The words combine. You learn the words, you can order anything.
+
+These are the traditional, classic modifiers — the ones every prata stall in Singapore will offer. Start here.
+
+**Plain** — Just dough. The default. Most ordered prata in Singapore.
+
+**Kosong** — From Malay for "empty" or "zero". Plain prata with no oil or ghee in the dough. The healthier sibling. **This is what locals order to test a stall** — kosong is harder to make crispy without ghee, so a great kosong tells you the place is the real deal. (My recommendation: kosong. Be a true-blue Singaporean.)
+
+**Egg** — Egg cracked into the dough as it folds. Becomes part of the prata. Slightly heavier, slightly richer, very satisfying.
+
+**Plaster** — One of the great names in Singapore food. The egg is cracked open onto the dough, then the prata is folded so the egg peeks out from the corner — like a half-stuck plaster on a knee. Egg-on-the-outside instead of egg-mixed-in. Looks goofy, tastes fantastic, runs the risk of yolk down your chin. Worth it.
+
+**Cheese** — Self-explanatory. Trends towards the kid-friendly end of the spectrum.
+
+**Mushroom Cheese** — A modern entry. Mushroom and cheese folded in. Fancier, fillier, slightly extra.
+
+**Tissue** — A massive cone of paper-thin prata, brittle and shaped like a wizard's hat. Often dusted with sugar. Sharing-sized. Mostly ordered for the photo, eaten in two minutes flat.
+
+**Banana** — Banana folded into the dough. Sweet. Surprising. Better than it sounds.
+
+**Egg Onion** — Egg + chopped onion. Savoury, herbaceous, my second favourite.
+
+**Murtabak** — Not technically a prata, but lives at every prata stall. Stuffed thick prata with minced mutton, chicken, or sardine. The full meal version.
+
+The system stacks. *Egg Cheese* is a thing. *Egg Cheese Onion Mushroom* is also a thing, but you'll be eating four orders' worth of dough and the uncle will judge you slightly. Don't be that person.
+
+## The variations they don't tell you about
+
+Once you've nailed the traditional modifiers, you'll start noticing that some stalls have invented their own thing. Singapore prata uncles are a quietly experimental bunch — give them dough and a hot griddle and they'll show you what's possible.
+
+These won't be at every stall. Whether you find them depends on where you are.
+
+**Prata Bomb** — A rolled, ball-shaped prata stuffed with cheese, egg, sausage, or all of the above. Comes out the size of a small fist. Looks dramatic, eats like comfort food.
+
+**Coin Prata** — Mini-sized prata, served in stacks of 6 or 8 like a tower of small coins. Crispy on every edge because of the surface area. Excellent for sharing, or for ordering when you can't decide between flavours and want to try several without commitment.
+
+**Prata Pizza** — A flat, round prata topped with cheese, vegetables, sometimes pepperoni, baked or pan-fried until crisp. A stall's attempt at fusion. Some are great, some are not. The good ones are very, very good.
+
+**Prata Wrap** — Thin prata rolled around a filling, often cheese, egg, sometimes chicken floss or curry chicken. Eaten like a burrito. A teenagers-after-school favourite.
+
+**Prata Sundae** — At certain stalls, a sweet prata creation with ice cream, condensed milk, and Milo powder. Borderline obscene. Order it once.
+
+This list is not exhaustive — and that's the point. Every stall has its own creations, and the ambitious ones add to the list every year. **Read the board, ask the uncle, point at what someone else is having.** Half the fun is finding a variation no other stall does. The other half is eating it.
+
+![A spread of prata variations including coin prata and prata bomb](/images/food/prata-variations.jpg)
+
+## The curry decision
+
+This is where most newcomers freeze. You'll be asked: *fish curry, mutton curry, or dhal?* Sometimes a fourth option — chicken curry — appears, and that's your green light.
+
+**Fish curry** — Singapore's default. Tangy, slightly thinner, sour from the tamarind. Pairs with everything.
+
+**Mutton curry** — Thicker, gamier, deeper. The older crowd's pick. Best with kosong and tissue prata where the curry has somewhere to cling.
+
+**Dhal** — Lentil curry. Mildest of the three. Comfort food. The one to order if your stomach is fragile or it's your first time.
+
+**Chicken curry** — If a stall offers it, order it. Thicker than fish, lighter than mutton, almost obscenely good with crispy plain prata. This is my ultimate go-to. If you remember nothing else from this article, remember: chicken curry exists, and most tourists never find out.
+
+There is no correct answer. There is only *your* answer. The trick is — order more than one curry if you can. They cost almost nothing extra and the prata becomes a different dish each time you dip.
+
+## The drink decision
+
+Prata never travels alone. The right drink completes the meal — and Singapore has serious opinions on which one.
+
+These are the six most loved pairings:
+
+**Teh tarik** — The textbook choice. Pulled tea, frothy, sweet, slightly bitter. Cuts through the ghee and curry like a co-star who knows their job. If you're going to learn one drink to order with prata, learn this one.
+
+**Milo Dinosaur** — Iced Milo with a heap of undissolved Milo powder dumped on top like brown snow. A children's drink the rest of us never grew out of. The unofficial drink of late-night prata supper sessions across Singapore.
+
+**Bandung** — Rose syrup with evaporated milk. Bright pink, unmissable, oddly perfect with savoury prata. Tastes like Singapore in the 1980s.
+
+**Teh Ice Limau** — Iced tea with lime. Sharp, refreshing, slightly puckering. The drink to order when the curry's been intense and you need a reset.
+
+**Kopi C** — For the morning crowd. Kopi C with a crispy kosong is properly underrated as breakfast.
+
+**Lime juice** — The reset button. If you've eaten three prata and the curry has won, lime juice resets the system. Order at the end, not the start.
+
+Most prata places have a drinks board with twenty options — variations of teh, kopi, fruit juices, sodas, and the occasional surprise like sour plum or barley water. **Don't just stick to the obvious. Read the board, point at something you don't recognise, and ask whoever's pulling the drinks what's in it.** That's how you find your new favourite drink — and how you discover that prata pairs with way more things than you'd expect.
+
+The unwritten rule: hot prata + cold drink, or cold prata + hot drink. Never two hots, never two colds. The temperature contrast is part of the meal.
+
+(For the full kopi-and-teh decoder system, we covered it in [Serving #1.](/blog/how-to-order-kopi-teh-singapore) Worth a read if you're starting from scratch.)
+
+## What to actually say at the stall
+
+You walk up. The ah bang — the brother running the griddle — doesn't look up. Behind him, prata is being slapped and folded with metronomic precision. There's no host, no greeter, no "how can I help you today" — just you, the order, and the rhythm.
+
+Here is the line that works:
+
+> *"Uncle, one plain, one egg, fish curry — eat here."*
+
+That's it. Total order. Twelve seconds. He'll grunt or nod, and your prata will materialise within minutes.
+
+If you want a drink, add it to the same line: *"…and one teh tarik."* The drinks usually come from a separate auntie at a separate counter — many stalls send the order across automatically, but if not, walk over and order it yourself.
+
+If you want to take it home, swap *"eat here"* for *"ta-pau"* (Hokkien for *takeaway*) — and you'll get it in a brown paper bag with the curry in a small plastic packet, expertly tied at the corner.
+
+## Where to eat the good stuff
+
+The stalls that locals will defend in arguments:
+
+- **Mr & Mrs Mohgan's Super Crispy Roti Prata** *(Crane Road, Joo Chiat)* — The benchmark for crispy. The name is a promise. They keep it.
+- **Springleaf Prata Place** *(multiple outlets)* — Reliable everywhere, unusually wide menu, opens early and closes late. The *Murtaburger* is a sleeper hit.
+- **R.K. Eating House** *(Upper Thomson)* — A 24-hour institution. Late-night prata done properly. Where the post-supper crowd lives.
+- **Chindamani Indian Restaurant** *(Holland Drive)* — A neighbourhood favourite that flies under the radar. Worth the detour.
+
+These are benchmarks at the time of writing. Singapore's prata stalls open and close like a tide — if any of these have moved on, the next one will be just as good. Trust the queue.
+
+![Prata stall storefront](/images/food/prata-storefront.jpg)
+
+## A sweet ending
+
+Here's a memory I'll leave you with. Long before I had a sophisticated take on curries, my parents would buy me prata as a kid in the 90s. No fish curry. No mutton. Just a plain prata, a small mound of sugar dusted on top, and a glass of teh on the side.
+
+It was, and remains, one of the great breakfast inventions of my life. There is no menu category for it. No restaurant lists it. But every Singapore parent of a certain era has fed prata-with-sugar to a child, and every Singaporean child of that era still remembers it.
+
+Try one yourself, sometime. Order a plain prata. Ask for sugar instead of curry. Watch the uncle's face flicker with recognition. He'll know what era you came from.
+
+**Are you ready to make your first order?**
+
+[BUTTON: Try the Prata Decoder → /hawker-guide#prata-decoder]`,
     series: { name: "How to Order", number: 2 },
-    comingSoon: true,
   },
   {
     slug: "how-to-order-chicken-rice-singapore",
