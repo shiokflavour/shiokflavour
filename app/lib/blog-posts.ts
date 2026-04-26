@@ -176,7 +176,9 @@ Any kopitiam in Singapore will do. They are everywhere — the ground floor of a
 
 Your first order: **Kopi C Peng Siu Dai** — iced coffee with evaporated milk, less sweet. It is the most ordered variant among people who have just learned the system and want to show off slightly.
 
-You are ready.`,
+**Are you ready to make your first order?**
+
+[BUTTON: Try the Kopi Decoder → /hawker-guide#kopi-decoder]`,
     series: { name: "How to Order", number: 1 },
   },
   {

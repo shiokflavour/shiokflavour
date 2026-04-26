@@ -161,6 +161,32 @@ function renderArticleBody(markdown: string) {
         </div>
       );
     }
+    const buttonMatch = t.match(/^\[BUTTON:\s*(.+)\s*→\s*(.+?)\]$/);
+    if (buttonMatch) {
+      const label = buttonMatch[1].trim();
+      const url = buttonMatch[2].trim();
+      const isExternal = /^https?:\/\//i.test(url);
+      const buttonClass =
+        "inline-flex items-center justify-center rounded-xl bg-sf-primary px-6 py-3.5 text-sm font-semibold text-white transition-all hover:bg-sf-primary/90 sm:text-base";
+      return (
+        <div key={i} className="my-10 flex justify-center">
+          {isExternal ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonClass}
+            >
+              {label}
+            </a>
+          ) : (
+            <Link href={url} className={buttonClass}>
+              {label}
+            </Link>
+          )}
+        </div>
+      );
+    }
     const lines = t.split("\n").filter((l) => l.trim());
     if (
       lines.length > 0 &&
