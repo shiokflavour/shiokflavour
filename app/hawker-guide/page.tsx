@@ -10,6 +10,8 @@ import {
   DRINKS,
   ETIQUETTE_TIPS,
   SINGLISH_TERMS,
+  PRATA_BASES,
+  PRATA_CURRIES,
 } from "@/app/lib/hawker-guide";
 
 const TABS = [
@@ -17,10 +19,17 @@ const TABS = [
   { id: "oldschool", label: "Old School Names" },
   { id: "etiquette", label: "Hawker Etiquette" },
   { id: "singlish", label: "Singlish Glossary" },
+  { id: "prata-decoder", label: "Prata Decoder" },
 ];
 
 export default function HawkerGuidePage() {
   const [activeTab, setActiveTab] = useState("kopi-decoder");
+  const [prataBase, setPrataBase] = useState("plain");
+  const [prataCurry, setPrataCurry] = useState("fish");
+  const [prataLocal, setPrataLocal] = useState(false);
+  const [prataAddress, setPrataAddress] = useState<"bang" | "boss" | "uncle">(
+    "bang",
+  );
   const [kopiFlavour, setKopiFlavour] = useState<"kopi" | "teh">("kopi");
   const [kopiMilk, setKopiMilk] = useState<
     "condensed" | "evaporated" | "none"
@@ -83,6 +92,26 @@ export default function HawkerGuidePage() {
           ? "weak"
           : "";
     return `${strength ? strength + " " : ""}${base}, ${milk}, ${sugar}, ${temp}.`;
+  }
+
+  function buildPrataOrder() {
+    const base = PRATA_BASES.find((b) => b.id === prataBase);
+    const curry = PRATA_CURRIES.find((c) => c.id === prataCurry);
+    if (!base || !curry) return { standard: "", local: "" };
+    const baseName = base.name;
+    const curryName = curry.id === "none" ? "" : curry.name;
+    const standard = curryName
+      ? `One ${baseName.toLowerCase()} prata with ${curryName.toLowerCase()}, please.`
+      : `One ${baseName.toLowerCase()} prata, please.`;
+    const localBase = base.localName
+      ? base.localName.toLowerCase()
+      : base.name.toLowerCase();
+    const addressMap = { bang: "Bang", boss: "Boss", uncle: "Uncle" };
+    const addr = addressMap[prataAddress];
+    const local = curryName
+      ? `${addr}, one ${localBase} prata, ${curryName.toLowerCase()} can?`
+      : `${addr}, one ${localBase} prata can? Steady ah.`;
+    return { standard, local };
   }
 
   const oldSchoolDrinks = DRINKS.filter((d) => d.category === "oldschool");
@@ -482,6 +511,191 @@ export default function HawkerGuidePage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── PRATA DECODER ── */}
+        {activeTab === "prata-decoder" && (
+          <div>
+            <div className="mb-10">
+              <p className="text-[15px] font-semibold tracking-[0.2em] text-sf-primary uppercase mb-3">
+                Order Like A Local
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+                Prata Decoder
+              </h2>
+              <p className="text-sf-muted text-base max-w-xl">
+                Build your prata order. Then decide if you want to say it like
+                a local.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Left — selections */}
+              <div className="space-y-8">
+                {/* Base */}
+                <div>
+                  <h3 className="text-white font-bold text-lg mb-4">
+                    Choose your prata
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {PRATA_BASES.map((base) => (
+                      <button
+                        key={base.id}
+                        onClick={() => setPrataBase(base.id)}
+                        className={`text-left rounded-xl p-4 border transition-all ${
+                          prataBase === base.id
+                            ? "border-sf-primary bg-sf-primary/10"
+                            : "border-white/10 bg-[#1a1a1a] hover:border-white/30"
+                        }`}
+                      >
+                        <p className="text-white font-semibold text-sm">
+                          {base.name}
+                        </p>
+                        {base.localName && (
+                          <p className="text-sf-primary text-xs mt-0.5">
+                            aka {base.localName}
+                          </p>
+                        )}
+                        <p className="text-sf-muted text-xs mt-1 leading-relaxed">
+                          {base.description}
+                        </p>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div>
+                  <h3 className="text-white font-bold text-lg mb-4">
+                    How to address them
+                  </h3>
+                  <div className="flex gap-3">
+                    {(["bang", "boss", "uncle"] as const).map((addr) => (
+                      <button
+                        key={addr}
+                        onClick={() => setPrataAddress(addr)}
+                        className={`flex-1 rounded-xl py-3 px-4 text-sm font-semibold border transition-all capitalize ${
+                          prataAddress === addr
+                            ? "border-sf-primary bg-sf-primary/10 text-white"
+                            : "border-white/10 bg-[#1a1a1a] text-sf-muted hover:border-white/30"
+                        }`}
+                      >
+                        {addr === "bang"
+                          ? "Bang 🤝"
+                          : addr === "boss"
+                            ? "Boss 💪"
+                            : "Uncle 👴"}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-sf-muted text-xs mt-2">
+                    {prataAddress === "bang"
+                      ? '"Bang" (Abang) — most authentic for mamak prata stalls. Respectful, friendly.'
+                      : prataAddress === "boss"
+                        ? '"Boss" — universally safe at any hawker stall. Never wrong.'
+                        : '"Uncle" — use when they\'re clearly older. A mark of respect.'}
+                  </p>
+                </div>
+
+                {/* Curry */}
+                <div>
+                  <h3 className="text-white font-bold text-lg mb-4">
+                    Choose your dip
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {PRATA_CURRIES.map((curry) => (
+                      <button
+                        key={curry.id}
+                        onClick={() => setPrataCurry(curry.id)}
+                        className={`text-left rounded-xl p-4 border transition-all ${
+                          prataCurry === curry.id
+                            ? "border-sf-primary bg-sf-primary/10"
+                            : "border-white/10 bg-[#1a1a1a] hover:border-white/30"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between mb-1">
+                          <p className="text-white font-semibold text-sm">
+                            {curry.name}
+                          </p>
+                          {curry.boldness > 0 && (
+                            <div className="flex gap-0.5">
+                              {Array.from({ length: 5 }).map((_, i) => (
+                                <div
+                                  key={i}
+                                  className={`w-1.5 h-1.5 rounded-full ${
+                                    i < curry.boldness
+                                      ? "bg-sf-primary"
+                                      : "bg-white/10"
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        <p className="text-sf-muted text-xs leading-relaxed">
+                          {curry.description}
+                        </p>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Right — output */}
+              <div className="lg:sticky lg:top-24 h-fit">
+                <div className="bg-[#1a1a1a] rounded-2xl p-8 space-y-6">
+                  <div>
+                    <p className="text-sf-primary text-[15px] font-semibold uppercase tracking-wider mb-2">
+                      Your Order
+                    </p>
+                    <p className="text-white text-xl font-medium leading-relaxed">
+                      {prataLocal
+                        ? buildPrataOrder().local
+                        : buildPrataOrder().standard}
+                    </p>
+                  </div>
+
+                  <div className="border-t border-white/10 pt-6">
+                    <p className="text-sf-muted text-sm mb-1">You ordered</p>
+                    <p className="text-white font-semibold">
+                      {PRATA_BASES.find((b) => b.id === prataBase)?.name} Prata
+                    </p>
+                    <p className="text-sf-muted text-sm mt-1">
+                      with{" "}
+                      {PRATA_CURRIES.find((c) => c.id === prataCurry)?.name}
+                    </p>
+                  </div>
+
+                  <button
+                    onClick={() => setPrataLocal(!prataLocal)}
+                    className={`w-full rounded-xl py-3 px-5 font-semibold text-sm transition-all ${
+                      prataLocal
+                        ? "bg-sf-primary text-black"
+                        : "bg-white/10 text-white hover:bg-white/20"
+                    }`}
+                  >
+                    {prataLocal
+                      ? "✓ Singlish mode on lah!"
+                      : "Say it like a local"}
+                  </button>
+
+                  {prataLocal && (
+                    <div className="bg-black/30 rounded-xl px-5 py-4">
+                      <p className="text-white/50 text-xs uppercase tracking-wider mb-2">
+                        Why this works
+                      </p>
+                      <p className="text-sf-muted text-sm leading-relaxed">
+                        Adding &quot;ah&quot; softens the request — it&apos;s
+                        friendly, not demanding. &quot;Crispy ah&quot; tells
+                        the uncle exactly how you want it without being rude
+                        about it.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         )}

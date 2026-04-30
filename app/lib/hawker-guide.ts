@@ -372,3 +372,40 @@ export const SINGLISH_TERMS: SinglishTerm[] = [
   },
 ];
 
+// ─── PRATA DECODER ────────────────────────────────────────────────────────────
+
+export type PrataBase = {
+  id: string;
+  name: string;
+  localName?: string;
+  description: string;
+};
+
+export type PrataCurry = {
+  id: string;
+  name: string;
+  description: string;
+  boldness: number; // 1-5
+};
+
+export const PRATA_BASES: PrataBase[] = [
+  { id: "plain", name: "Plain", localName: "Kosong", description: "Just the dough — the purist's test of a stall's technique." },
+  { id: "egg", name: "Egg", description: "Egg cracked inside before folding — richer, more filling, most popular." },
+  { id: "cheese", name: "Cheese", description: "Melted cheese inside — gooey, slightly Western, surprisingly good." },
+  { id: "onion", name: "Onion", description: "Diced onion folded in — adds sweetness and a slight crunch." },
+  { id: "mushroom", name: "Mushroom", description: "Sliced mushrooms inside — earthy and soft." },
+  { id: "banana", name: "Banana", description: "Sliced banana inside — sweet, soft, and eaten with sugar or condensed milk. A dessert prata." },
+  { id: "tissue", name: "Tissue", description: "Stretched paper-thin, folded into a tall cone. Ordered for the drama as much as the taste." },
+  { id: "egg-cheese", name: "Egg + Cheese", description: "The crowd favourite combination — rich, gooey, satisfying." },
+  { id: "egg-onion", name: "Egg + Onion", description: "Classic combination — the onion sweetness cuts through the egg richness." },
+];
+
+export const PRATA_CURRIES: PrataCurry[] = [
+  { id: "fish", name: "Fish Curry", description: "Thin, coconut-forward, slightly tangy. The classic pairing. Most stalls do this best.", boldness: 3 },
+  { id: "mutton", name: "Mutton Curry", description: "Richer, darker, more intense. For the initiated. Pairs better with thicker pratas.", boldness: 4 },
+  { id: "dhal", name: "Dhal", description: "Lentil curry — mild, earthy, and comforting. Good for first-timers who want something gentler.", boldness: 2 },
+  { id: "sugar", name: "Sugar", description: "Just white sugar sprinkled on top. Sounds wrong. Tastes right. Very old school.", boldness: 1 },
+  { id: "condensed-milk", name: "Condensed Milk", description: "Drizzled over the prata. Sweet, rich, and pairs especially well with banana prata.", boldness: 1 },
+  { id: "none", name: "No curry / dip", description: "Eating it plain. Rare but valid if the prata is exceptional.", boldness: 0 },
+];
+
