@@ -8,7 +8,6 @@ import { useState } from "react";
 export function SiteHeader() {
   const pathname = usePathname();
   const [discoverOpen, setDiscoverOpen] = useState(false);
-  const [hawkerGuideOpen, setHawkerGuideOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const isActive = (path: string) =>
@@ -191,166 +190,16 @@ export function SiteHeader() {
               >
                 Hawker Centres
               </Link>
-              <div
-                className="relative"
-                onMouseEnter={() => setHawkerGuideOpen(true)}
-                onMouseLeave={() => setHawkerGuideOpen(false)}
+              <Link
+                href="/hawker-guide"
+                className={`text-sm transition-colors ${
+                  isActive("/hawker-guide")
+                    ? "font-semibold text-sf-primary"
+                    : "text-white/70 hover:text-white"
+                }`}
               >
-                <button
-                  type="button"
-                  className={`flex items-center gap-1 text-sm transition-colors ${
-                    isActive("/hawker-guide")
-                      ? "font-semibold text-sf-primary"
-                      : "text-white/70 hover:text-white"
-                  }`}
-                >
-                  Hawker Guide
-                  <svg
-                    className={`h-3 w-3 transition-transform duration-200 ${hawkerGuideOpen ? "rotate-180" : ""}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                {hawkerGuideOpen && (
-                  <div className="absolute left-1/2 top-full w-[480px] -translate-x-1/2 pt-3">
-                    <div className="rounded-2xl border border-white/10 bg-[#1a1a1a] p-6 shadow-2xl">
-                      <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
-                        Order Like A Local
-                      </p>
-                      <div className="grid grid-cols-2 gap-3">
-                        <Link
-                          href="/hawker-guide"
-                          className="group rounded-xl p-4 transition-all hover:bg-white/5"
-                        >
-                          <div
-                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
-                            style={{ background: "#f97316" }}
-                          >
-                            <svg
-                              className="h-4 w-4"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="white"
-                              strokeWidth={2}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"
-                              />
-                            </svg>
-                          </div>
-                          <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
-                            Kopi Decoder
-                          </p>
-                          <p className="text-xs leading-relaxed text-white/50">
-                            Build your perfect kopitiam order
-                          </p>
-                        </Link>
-
-                        <Link
-                          href="/hawker-guide"
-                          className="group rounded-xl p-4 transition-all hover:bg-white/5"
-                        >
-                          <div
-                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
-                            style={{ background: "#f97316" }}
-                          >
-                            <svg
-                              className="h-4 w-4"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="white"
-                              strokeWidth={2}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-                              />
-                            </svg>
-                          </div>
-                          <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
-                            Old School Names
-                          </p>
-                          <p className="text-xs leading-relaxed text-white/50">
-                            Tak Kiu, Michael Jackson & more
-                          </p>
-                        </Link>
-
-                        <Link
-                          href="/hawker-guide"
-                          className="group rounded-xl p-4 transition-all hover:bg-white/5"
-                        >
-                          <div
-                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
-                            style={{ background: "#f97316" }}
-                          >
-                            <svg
-                              className="h-4 w-4"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="white"
-                              strokeWidth={2}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
-                              />
-                            </svg>
-                          </div>
-                          <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
-                            Hawker Etiquette
-                          </p>
-                          <p className="text-xs leading-relaxed text-white/50">
-                            How to chope, queue and eat right
-                          </p>
-                        </Link>
-
-                        <Link
-                          href="/hawker-guide"
-                          className="group rounded-xl p-4 transition-all hover:bg-white/5"
-                        >
-                          <div
-                            className="mb-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
-                            style={{ background: "#f97316" }}
-                          >
-                            <svg
-                              className="h-4 w-4"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="white"
-                              strokeWidth={2}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
-                              />
-                            </svg>
-                          </div>
-                          <p className="mb-1 text-sm font-bold text-white transition-colors group-hover:text-sf-primary">
-                            Singlish Glossary
-                          </p>
-                          <p className="text-xs leading-relaxed text-white/50">
-                            The local food language decoded
-                          </p>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
+                Hawker Guide
+              </Link>
               <Link
                 href="/about"
                 className={`text-sm transition-colors ${
@@ -500,80 +349,6 @@ export function SiteHeader() {
                       </p>
                       <p className="text-xs text-white/50">
                         61 dishes, one story at a time
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="mb-6 h-px bg-white/10" />
-
-              <div className="mb-6">
-                <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">
-                  Hawker Guide
-                </p>
-                <div className="flex flex-col gap-1">
-                  <Link
-                    href="/hawker-guide"
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
-                  >
-                    <div
-                      className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md"
-                      style={{ background: "#f97316" }}
-                    >
-                      <svg
-                        className="h-3 w-3"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="white"
-                        strokeWidth={2.5}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-white">
-                        Kopi Decoder
-                      </p>
-                      <p className="text-xs text-white/50">
-                        Build your perfect order
-                      </p>
-                    </div>
-                  </Link>
-                  <Link
-                    href="/hawker-guide"
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-start gap-3 rounded-xl p-3 transition-all hover:bg-white/5"
-                  >
-                    <div
-                      className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md"
-                      style={{ background: "#f97316" }}
-                    >
-                      <svg
-                        className="h-3 w-3"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="white"
-                        strokeWidth={2.5}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-white">
-                        Singlish Glossary
-                      </p>
-                      <p className="text-xs text-white/50">
-                        The local food language
                       </p>
                     </div>
                   </Link>
