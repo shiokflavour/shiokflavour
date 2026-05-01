@@ -178,7 +178,7 @@ Your first order: **Kopi C Peng Siu Dai** — iced coffee with evaporated milk, 
 
 **Are you ready to make your first order?**
 
-[BUTTON: Try the Kopi Decoder → /hawker-guide#kopi-decoder]`,
+[BUTTON: Try the Kopi Decoder → /hawker-guide/kopi-decoder]`,
     series: { name: "How to Order", number: 1 },
   },
   {
@@ -334,7 +334,7 @@ Try one yourself, sometime. Order a plain prata. Ask for sugar instead of curry.
 
 **Are you ready to make your first order?**
 
-[BUTTON: Try the Prata Decoder → /hawker-guide#prata-decoder]`,
+[BUTTON: Try the Prata Decoder → /hawker-guide/prata-decoder]`,
     series: { name: "How to Order", number: 2 },
   },
   {
