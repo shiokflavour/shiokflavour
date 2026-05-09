@@ -143,7 +143,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Maxwell Food Centre, Chinatown Complex, and Serangoon Gardens hawker clusters are pilgrimage sites; many neighbourhoods have a 20-year stall locals won't trade away.",
     priceRange: "S$4–25 depending on stall and cut",
-    imageUrl: "/images/food/chicken-rice.jpg",
+    imageUrl: "/images/food/chicken-rice.png",
     funFact:
       "Singapore's hawker chicken rice stalls often judge quality by rice first—aromatic, separate grains, and gentle chicken flavour before you even touch the meat.",
     bestPairedWith:
@@ -341,7 +341,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Old Airport Road Food Centre, Chinatown Complex dessert stalls, and classic heartland hawker drink shops with long queues after school.",
     priceRange: "S$2–5",
-    imageUrl: "/images/food/ice-kachang.jpg",
+    imageUrl: "/images/food/ice-kachang.png",
     funFact:
       "The name bundles \"ice\" with kachang (Malay for beans)—red beans remain the soul ingredient under all that colour.",
     bestPairedWith:
@@ -638,7 +638,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Toa Payoh and Balestier heritage hawker clusters, Old Airport Road, and famous stalls where uncles still hand-cut fruit to order.",
     priceRange: "S$4–10",
-    imageUrl: "https://i.ibb.co/Dg84fk5X/rojak.jpg",
+    imageUrl: "/images/food/rojak.png",
     funFact:
       "Veteran rojak masters toast you tiao to different crispness levels so some bites stay crunchy after dressing soaks in.",
     bestPairedWith:
@@ -837,7 +837,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Chinatown Complex, Old Airport Road Food Centre, and Toa Payoh heartland stalls — the best ones often have a handwritten sign and a 45-minute queue by 11am.",
     priceRange: "S$4–8 per bowl",
-    imageUrl: "/images/food/bak-chor-mee.jpg",
+    imageUrl: "/images/food/bak-chor-mee.png",
     funFact:
       "The dry version (with vinegar-lard sauce) and the soup version are completely different eating experiences — locals are fiercely loyal to one or the other and rarely cross over.",
     bestPairedWith:
@@ -936,7 +936,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Newton Food Centre and East Coast Lagoon for atmosphere; Old Airport Road and Geylang for serious versions without the tourist markup. Look for charcoal-fired stalls.",
     priceRange: "S$5–10 per plate",
-    imageUrl: "/images/food/hokkien-mee.jpg",
+    imageUrl: "/images/food/hokkien-mee.png",
     funFact:
       "Traditional Hokkien mee is cooked over charcoal, not gas — the heat is more intense and uneven, which is precisely what creates the smokiness locals call wok hei.",
     bestPairedWith:
@@ -1035,7 +1035,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Every hawker centre in Singapore has a wanton mee stall. The best ones are never the most famous. Find your neighbourhood uncle and stay loyal.",
     priceRange: "S$3.50–7 per plate",
-    imageUrl: "/images/food/wanton-mee.jpg",
+    imageUrl: "/images/food/wanton-mee.png",
     funFact:
       "Singapore wanton mee uses a darker, sweeter char siew sauce than the Hong Kong or Malaysian versions — a local adaptation that happened quietly over decades and is now considered the standard.",
     bestPairedWith:
@@ -1134,7 +1134,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Every hawker centre in Singapore. Economy rice is not a destination dish — it is a daily constant. The best stall is the one nearest to where you are at noon.",
     priceRange: "S$2.50–5 depending on dishes chosen",
-    imageUrl: "/images/food/economy-rice.jpg",
+    imageUrl: "/images/food/economy-rice.png",
     funFact:
       "The pricing at economy rice stalls is entirely discretionary — the auntie calculates the total in her head based on what she sees on your plate, and she is never wrong.",
     bestPairedWith:
@@ -1227,7 +1227,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Lau Pa Sat's Boon Tat Street after 7pm for the most cinematic setting; Newton Food Centre for tourist-friendly portions; East Coast Lagoon for the sea-breeze version.",
     priceRange: "S$0.60–1 per skewer, minimum 10 skewers usually",
-    imageUrl: "/images/food/satay.jpg",
+    imageUrl: "/images/food/satay.png",
     funFact:
       "The peanut sauce at serious satay stalls is made fresh daily from roasted peanuts — you can tell by the texture, which should be thick and slightly grainy, never smooth.",
     bestPairedWith:
@@ -1317,7 +1317,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Geylang Serai Ramadan Bazaar for the definitive version; Adam Road Food Centre late at night; most Malay-run hawker stalls that operate into the evening.",
     priceRange: "S$3–6 per portion",
-    imageUrl: "/images/food/roti-john.jpg",
+    imageUrl: "/images/food/roti-john.png",
     funFact:
       "The name 'John' is a colonial-era Singaporean slang term for a Western person — the dish was literally named after the type of customer who first ordered it.",
     bestPairedWith:
@@ -1504,7 +1504,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Adam Road Food Centre for the Michelin-recognised version; Geylang Serai and Tekka Centre for authentically Malay settings; every mamak and Malay stall island-wide for daily sustenance.",
     priceRange: "S$1.50–6 depending on accompaniments",
-    imageUrl: "/images/food/nasi-lemak.jpg",
+    imageUrl: "/images/food/nasi-lemak.png",
     funFact:
       "The sambal is the stall's signature — every nasi lemak auntie guards her sambal recipe fiercely, and regulars can identify their preferred stall's sambal by smell alone.",
     bestPairedWith:
