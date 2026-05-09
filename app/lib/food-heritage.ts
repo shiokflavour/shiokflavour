@@ -44,7 +44,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Lau Pa Sat and Maxwell Food Centre host legendary stalls; East Coast and Old Airport Road hawker centres are known for queues at peak hours. Look for long waits and a soot-dark wok.",
     priceRange: "S$4–8 per plate",
-    imageUrl: "https://i.ibb.co/4gFx40Hp/Char-Kway-Teow-28-scaled.jpg",
+    imageUrl: "/images/food/char-kway-teow.png",
     funFact:
       "Some iconic stalls still fry one or two portions at a time—refusing to overload the wok—to preserve the elusive wok hei that locals swear they can smell from across the food centre.",
     bestPairedWith:
@@ -440,7 +440,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Ya Kun and Killiney-style chains, plus independent kopitiams in Tanjong Pagar, Tiong Bahru, and heartland void-deck coffee shops serving sets till mid-morning.",
     priceRange: "S$2–6 for toast set with eggs and drink",
-    imageUrl: "https://i.ibb.co/pvKLjXTJ/kaya-toast.jpg",
+    imageUrl: "/images/food/kaya-toast.png",
     funFact:
       "Purists argue over Hainanese crisp toast versus softer white; both camps dunk fingers of toast into wobbly eggs seasoned with dark soy and white pepper.",
     bestPairedWith:
@@ -539,7 +539,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "East Coast Seafood Centre for the breezy classic experience; Joo Chiat and Geylang zi char alleys; quality hawker zi char that still steams mantou to order.",
     priceRange: "S$40–90+ per crab depending on season and venue",
-    imageUrl: "https://i.ibb.co/5xTkxsK2/Chilli-Crab-Jelco.jpg",
+    imageUrl: "/images/food/chilli-crab.png",
     funFact:
       "The sauce's silkiness often comes from eggs ribboned in at the last moment—timing separates pool-worthy gravy from overcooked curds.",
     bestPairedWith:
