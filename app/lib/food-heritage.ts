@@ -737,7 +737,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Peranakan restaurants in Joo Chiat, dessert-focused hawker stalls in Chinatown Complex and Maxwell, and heartland zi char that still finish meals with traditional sweets.",
     priceRange: "S$3–8",
-    imageUrl: "https://i.ibb.co/FLVK9THC/Bubur-cha-cha-scaled.jpg",
+    imageUrl: "/images/food/bubur-cha-cha.png",
     funFact:
       "Some stalls differentiate themselves with firmer yam chips versus melt-away cubes—texture debates are as serious as syrup sweetness.",
     bestPairedWith:
