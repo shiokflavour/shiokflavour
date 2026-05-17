@@ -341,16 +341,153 @@ Try one yourself, sometime. Order a plain prata. Ask for sugar instead of curry.
     slug: "how-to-order-chicken-rice-singapore",
     title: "How to Order Hainanese Chicken Rice",
     subtitle:
-      "Poached or roasted. Thigh or breast. The real way to order Singapore's national dish",
+      "The chicken rice decision tree. Which chicken, which rice, which sauce, and what to say at the stall.",
     category: "Guide",
-    readTime: "Coming soon",
-    publishedAt: "2026-05-15",
+    readTime: "7 min read",
+    publishedAt: "2026-05-17",
     heroImage: "/images/food/chicken-rice.jpg",
     excerpt:
-      "The chicken rice decision tree. Which chicken, which rice, which sauce, and what to say at the stall.",
-    content: "",
+      "Singapore's national dish has a decision tree. Most people don't know it exists. Here's every branch.",
     series: { name: "How to Order", number: 3 },
-    comingSoon: true,
+    content: `## A confession about simplicity
+
+Hainanese chicken rice is the dish that fools you.
+
+It does not arrive in a clay pot. There is no theatre, no flame, no waiter explaining the chef's philosophy. It is, in its most honest form, a plate of rice, a portion of sliced chicken, three small saucers, and a bowl of soup. The whole thing costs four dollars and change. You eat it in twelve minutes.
+
+And yet.
+
+This is the dish that Singapore argues about more than any other. The one where a taxi uncle will swerve unprompted into a five-minute monologue about why Tian Tian's rice is overrated. The one where locals have an opinion — a specific, personal, non-negotiable opinion — on white versus roasted, on which stall's chilli is the true one, on whether you should drizzle dark soy sauce or use it as a dip.
+
+Chicken rice looks like nothing. It is everything.
+
+It is also the dish most tourists eat incorrectly. Not wrong — incorrectly. Because there is a system. A decision tree nobody hands you. And the decision you make at the stall counter changes the entire meal.
+
+This is that decision tree.
+
+## What you are actually ordering
+
+Before the decisions, a quick map of the meal. Hainanese chicken rice is four things working together:
+
+**The chicken** — poached, roasted, or soy-braised. Each is a different dish with the same name.
+
+**The rice** — cooked in chicken stock and fat, seasoned with garlic and ginger. Not white rice. Never white rice. This is the secret.
+
+**The sauces** — three of them. Chilli, ginger, dark soy. The holy trinity. You mix, you dip, you customise. Most people use only one. Locals use all three in combination.
+
+**The soup** — pale, clear, slightly sweet. It comes with the plate. Most tourists drink it at the end like an afterthought. Locals sip it through the meal as a palate reset. Do it like the locals.
+
+Every element is load-bearing. Remove one and the dish collapses. But the first and most important decision — the one you make before you even reach the counter — is the chicken.
+
+## Decision one: which chicken
+
+This is where the fork in the road appears, and where most tourists accidentally choose.
+
+**White chicken** — the original. Poached whole in a simmering master stock, then immediately plunged into ice water to stop the cooking. The result: skin that pulls taut and takes on a faint jade sheen. Meat that is silky, barely firm, cool to the touch. Flavour that is subtle — chicken stripped of bravado, nothing to hide behind except its own quality.
+
+White chicken is what the Hainanese immigrants made when they arrived in Singapore in the early twentieth century, adapting the *Wenchang chicken* of their home province. It is the version that built the dish's reputation. It is the version that exposes a bad stall instantly — you cannot mask thin, mediocre poultry with technique. The chicken has nowhere to hide.
+
+*Order white chicken when you want to taste the dish as it was meant to be eaten.*
+
+**Roasted chicken** — the confident sibling. Lacquered, bronzed, skin crisped by the rotisserie. Where white chicken is restraint, roasted is declaration. The fat renders and caramelises. The skin crackles. The flavour runs deeper, smokier, with a richness white chicken deliberately avoids.
+
+Locals who grew up eating roasted as kids will argue it with the fervour of a personal childhood memory. They are not wrong.
+
+*Order roasted chicken when you want texture and intensity. The chilli hits differently here.*
+
+**Soy sauce chicken** — the dark horse. Sometimes called *soy braised*, sometimes not on the menu at all — you have to know to ask. Braised in a soy master stock sweetened with rock sugar, five-spice, and aromatics until the meat takes on a mahogany gloss and a depth that is part savoury, part sweet, entirely its own category.
+
+Soy sauce chicken lives on its own axis. It does not compete with white or roasted — it sidesteps them entirely. You are eating a different dish that shares a name.
+
+*Order soy sauce chicken when you see it offered. Not every stall does it. The ones that do, do it seriously.*
+
+One final note: some stalls serve a mixed plate — white and roasted on the same plate. This is not compromise. This is strategy. Order it on your first visit if you cannot decide.
+
+## Decision two: the rice
+
+The rice is the dish's best-kept secret, and the benchmark by which locals judge a chicken rice stall.
+
+Good chicken rice is not cooked in water. It is cooked in the stock from the poaching pot — layered with the essence of every chicken that passed through it before yours. Before cooking, the raw grains are toasted in rendered chicken fat with garlic and ginger, then added to the stock and cooked until each grain is separate, glossy, and freighted with flavour.
+
+Here is the test locals use without thinking: press a fork into the rice. It should not clump or collapse into itself. It should push back slightly, each grain holding its own. Then taste a mouthful before you add anything. If the rice is a meal on its own — if it has character, body, something that makes you pause — you are at a serious stall.
+
+If the rice tastes like plain rice, you are not.
+
+You do not get to choose the rice. It comes. What you choose is how much — one portion, or extra rice on the side. Always order extra rice on the side. It costs almost nothing. You will need it.
+
+## Decision three: the sauces
+
+Three saucers arrive with every plate. Most tourists pick one and commit. Locals treat all three as simultaneous tools.
+
+**Chilli sauce** — not the generic red chilli sauce of other contexts. Chicken rice chilli is made specifically for the dish: bright red, slightly sweet, spiked with ginger and garlic, and sharp with lime. It should have texture — not smooth paste, not watery liquid, but something between the two. The heat sits at the back of the mouth. A good stall's chilli sauce is a recipe passed down across generations. A mediocre stall's is something that arrived in a bottle.
+
+*Use the chilli sauce directly on the chicken. Dip each slice.*
+
+**Ginger paste** — the overlooked one. Grated fresh ginger, usually mixed with a drop of sesame oil and a pinch of salt. It is sharp and bright and cuts through the richness of the fat in both chicken and rice. Many tourists ignore it. This is the single biggest ordering mistake I see at chicken rice stalls.
+
+*Use the ginger paste on white chicken specifically. It is the combination the dish was built around.*
+
+**Dark soy sauce** — thick, sweet, slightly syrupy. Drizzle it over the rice, not the chicken. It adds colour and a molasses-dark sweetness that anchors the whole plate.
+
+The correct technique: dip the chicken in chilli. Add a small smear of ginger. Drizzle dark soy over the rice before you mix it. Eat a spoonful of each together. Adjust to taste. Sip the soup between bites.
+
+No fixed ratio. No fixed proportion. Chicken rice is a personal document — everyone calibrates their plate slightly differently, and after a few visits you will find your version.
+
+## The soup
+
+It arrives in a small bowl. Clear. Light gold. A few slices of winter melon or silken tofu at the bottom, sometimes a scattering of spring onion.
+
+This is the poaching stock, thinned and seasoned. It is the same liquid that made your chicken what it is.
+
+Do not drink it at the end as an afterthought. Sip it throughout the meal. It is the thread that connects every element on the plate — a palate reset between bites of chilli-forward chicken and sweet-dark rice. It prevents the meal from becoming heavy. It is the part of chicken rice that most tourists overlook entirely.
+
+The soup is not a side. It is the quiet centre of the dish.
+
+## What to say at the stall
+
+The chicken rice stall counter is direct and efficient. You walk up. The auntie or uncle behind the counter looks at you — sometimes with a nod, sometimes without even that. The entire transaction should take under thirty seconds.
+
+Here is the line:
+
+> *"One plate, white chicken, extra rice — eat here."*
+
+Or if you want roasted: *"One plate, roasted — eat here."*
+
+If you want a mixed plate: *"Can do half-half?"* Most serious stalls will nod. A minority will not. Accept the verdict.
+
+For takeaway, say *"ta-pau"* instead of *"eat here."* Your rice will arrive packed separately from the chicken. The sauces come in small tied packets.
+
+One more thing: if you are eating at a hawker centre rather than a standalone chicken rice shop, the drink stall is usually separate. Flag down the drinks uncle, order separately, and someone will bring it to your table. Teh C iced pairs excellently with white chicken. A young coconut works with roasted.
+
+## Where to eat the good stuff
+
+**Tian Tian Hainanese Chicken Rice** *(Maxwell Food Centre)* — The most famous stall in Singapore, the one with the Michelin Bib Gourmand, the one with the queue. The rice is superlative. The white chicken is the reference version. The chilli is housemade and serious. Arrive before 11am or after 2pm.
+
+**Ah Tai Hainanese Chicken Rice** *(Maxwell Food Centre)* — The plot twist: Ah Tai's uncle is the original hawker who trained the Tian Tian aunties. He opened a stall two doors down. Some locals think Ah Tai is now better. The debate is ongoing and unresolvable. Eat both on the same visit. Draw your own conclusions.
+
+**Boon Tong Kee** *(multiple outlets)* — The established institution. Restaurant-format, air-conditioned, evening-friendly. The chicken is slightly more yielding, skin more delicate, almost translucent. The version locals take out-of-town visitors to when they want to be taken seriously.
+
+**Wee Nam Kee** *(Novena)* — The roasted chicken specialist. If you have decided roasted is your version, come here first. The skin lacquers properly. The fat renders. The chilli sauce has a pleasant citrus edge.
+
+**Five Star Hainanese Chicken Rice** *(Geylang)* — No hype, no designation, just consistent chicken rice made daily by people who care. The ginger paste here is exceptional — ask for extra.
+
+One honest note: Singapore's best chicken rice has never been concentrated in any single place. The island is full of serious stalls in kopitiams in Bedok and Tampines and Yishun, feeding the same regulars every week for thirty years. The surest route to the best bowl is to ask your taxi driver, your hotel cleaner, or the auntie at the provision shop where *they* eat their chicken rice. Their answer will almost always be better than any list.
+
+## One last thing
+
+A few years ago, I sat at a hawker centre with a plate of white chicken rice and a bowl of soup and nothing else — no phone, no book, no podcast. Just the food.
+
+I watched the chicken rice uncle work. He had been at this stall for over two decades. The way he sliced the chicken had its own rhythm — wrist, knife, angle, pressure. Not a motion wasted. Not a second of hesitation. The whole plate assembled in under a minute, three sauce saucers placed with the precision of someone who had done it ten thousand times.
+
+I ate slowly. I got the ginger ratio right for once.
+
+Singapore's national dish is four dollars. It is also, if you are paying attention, one of the most refined things on this island. The simplicity is not an absence of sophistication. It is sophistication concentrated until everything unnecessary has burned away.
+
+Order carefully. Eat slowly. Sip the soup.
+
+**Ready to find the stall?**
+
+[BUTTON: Explore Maxwell Food Centre → /hawker/maxwell-food-centre]`,
   },
   {
     slug: "10-hawker-dishes-must-try-singapore",
