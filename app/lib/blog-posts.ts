@@ -572,7 +572,7 @@ Five decisions. One plate. Make them like you mean it.
 
 **Ready to find the wok?**
 
-[Explore Old Airport Road Food Centre →](/hawker/old-airport-road-food-centre)
+[BUTTON: Explore Old Airport Road Food Centre → /hawker/old-airport-road-food-centre]
 `,
   },
   {
