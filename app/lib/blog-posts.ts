@@ -2,7 +2,7 @@ export type BlogPost = {
   slug: string;
   title: string;
   subtitle: string;
-  category: "Guide" | "Story" | "Ranking" | "Culture";
+  category: "Guide" | "Story" | "Ranking" | "Culture" | "Hawker Deep Dive";
   readTime: string;
   publishedAt: string;
   heroImage: string;
@@ -488,6 +488,92 @@ Order carefully. Eat slowly. Sip the soup.
 **Ready to find the stall?**
 
 [BUTTON: Explore Maxwell Food Centre → /hawker/maxwell-food-centre]`,
+  },
+  {
+    slug: "how-to-order-char-kway-teow-singapore",
+    title: "How to Order Char Kway Teow",
+    subtitle:
+      "Five decisions stand between you and the perfect plate. Here's every fork, and exactly what to say at the stall.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-05-30",
+    heroImage: "/images/food/char-kway-teow.jpg",
+    excerpt:
+      "It looks like one dish. It's actually five decisions. Most people make none of them — here's the whole tree.",
+    series: { name: "How to Order", number: 4 },
+    content: `## A confession about a dark plate
+
+Char kway teow is the dish that hides in plain sight.
+
+It arrives looking like a glistening tangle of noodles that has had a small accident — dark, slick, unbothered. No theatre, no garnish, no explanation. And because it looks like one thing, most people order it like one thing. They point, they nod, they get a plate.
+
+They have no idea they just skipped five decisions.
+
+A proper char kway teow order is a series of forks. Get them right and the uncle clocks you as someone who knows. Get them wrong — or skip them — and you get the default plate, which is fine, the way a photocopy is fine. This is the whole tree.
+
+## The five decisions
+
+**Decision 1 — Lard, or no lard**
+
+This is the big one, so it goes first. Traditional char kway teow is fried with pork lard, and the lard is most of why the dish tastes like memory — it carries the smoke, rounds the soy, and gives the noodles that low, savoury weight. Order it the old way and you get the real thing. Ask for no lard and you get a lighter, cleaner plate that is honest about being a compromise. There is no wrong answer here. There is only the answer you can live with.
+
+**Decision 2 — Cockles, or no cockles**
+
+The blood cockles — *see hum* — are small, bloody, and dropped in at the very last second so they stay barely cooked and bursting. To the uninitiated they are alarming. To everyone else they are the entire reason to order the dish. A char kway teow without cockles is a char kway teow that has quietly given up. If you're nervous, allowed — but order it with cockles once before you decide you're a no-cockle person. You did not come this far for the safe version.
+
+**Decision 3 — The noodle mix**
+
+Most people don't know this is a choice. The classic plate is flat rice noodles cut with thin yellow noodles — the yellow ones grab sauce and add a springy bite the flat ones can't. Some stalls do pure flat kway teow, softer and more slippery. If the stall offers both, "more kway teow" or "more yellow" is a real instruction, and using it tells the uncle you've thought about this before.
+
+**Decision 4 — Sweet, or savoury**
+
+Char kway teow lives on a sweetness dial. Some stalls — especially those leaning Penang-style — push dark, sweet soy until the plate is almost sticky. Others keep it savoury, letting the wok hei and the lard do the talking. Neither is wrong, but they are different dishes. If you don't want the sticky-sweet version, the phrase is **"less sweet."** It works.
+
+**Decision 5 — Chilli, or no chilli**
+
+Chilli paste doesn't just add heat — it changes the whole character of the plate, cutting the richness and waking up the soy. A char kway teow with chilli is a brighter, sharper animal than one without. Decide before you order, because it's fried in, not spooned on top. Default is usually a little. "More chilli" or "no chilli" both land.
+
+## How to spot a good plate
+
+Here's the test that separates a great char kway teow from a dead one: **wok hei.**
+
+Wok hei translates roughly to "breath of the wok" — the charred, smoky perfume that lifts off the noodles when they've hit metal hot enough to scare you. You can't buy it, you can't bottle it, and you can't fake it on a home stove. It comes from heat so violent that the soy caramelises and the edges of the noodles blister in the half-second before they're flipped. A good char kway teow uncle isn't cooking. He's conducting a controlled fire with a metal ladle, and the wok hei is the proof he won.
+
+You can read it before you taste it. A great plate smells faintly of smoke and has noodles with slightly charred, almost-crisp edges — not a uniform wet slick. If it arrives looking gentle and smelling of nothing, the fire was too low.
+
+This is also why the dish is quietly endangered. The technique lives in the wrists of men in their sixties and seventies. When they retire, the fire goes with them — so eat it while it still burns.
+
+## What to say at the stall
+
+You don't need to say all of it. Pick the forks that matter to you and string them together. A few that earn a nod instead of a sigh:
+
+- **"Cockle add more"** — the correct life decision.
+- **"Less sweet"** — if you want the soy to read savoury, not sticky.
+- **"No lard"** — only if you mean it.
+- **"More kway teow"** — if you want it softer and slippery over springy.
+
+One thing not to say: don't ask for it "healthy." The uncle has heard it before, and he is tired.
+
+## Where to find the real thing
+
+The rule is simple: a one-dish master beats a forty-item menu every time. Look for stalls that do only char kway teow, with a long queue and an old uncle at the wok.
+
+**Old Airport Road Food Centre** — the spiritual home. Several stalls here have been blistering noodles for decades, and the wok hei is the real, fierce kind.
+
+**Tiong Bahru Market** — hides a couple of quiet legends upstairs; less famous, no less serious.
+
+**Your neighbourhood, probably** — across the heartlands the rule holds. Long queue, old uncle, single dish, no English menu. Trust it.
+
+## The last bite
+
+When you finish a proper plate, there's a smear of dark sauce left behind and a faint smell of smoke on your fingers. That smell is the whole story — a migrant technique, a dying craft, and sixty years of someone's life, served to you on melamine for the price of loose change.
+
+Five decisions. One plate. Make them like you mean it.
+
+**Ready to find the wok?**
+
+[Explore Old Airport Road Food Centre →](/hawker/old-airport-road-food-centre)
+`,
   },
   {
     slug: "10-hawker-dishes-must-try-singapore",
