@@ -576,6 +576,129 @@ Five decisions. One plate. Make them like you mean it.
 `,
   },
   {
+    slug: "how-to-order-economy-rice-singapore",
+    title: "How to Order Economy Rice",
+    subtitle:
+      "Eat here or dabao, one meat or two, and the free thing everyone forgets. The whole system, and exactly what to say at the counter.",
+    category: "Guide",
+    readTime: "7 min read",
+    publishedAt: "2026-10-10",
+    heroImage: "/images/food/economy-rice.jpg",
+    excerpt:
+      "Singapore’s most ordinary lunch has a system. Locals get through it in forty seconds. Here is every step — and how the price really works.",
+    series: { name: "How to Order", number: 5 },
+    content: `## A confession about the cheapest plate in Singapore
+
+Economy rice is the meal nobody writes about.
+
+There is no famous uncle, no Michelin plaque, no forty-year recipe framed on the wall. There is a glass counter, twenty or thirty trays of things in sauce, an auntie with a pair of tongs, and a queue of office workers who know exactly what they want and would like you to hurry up.
+
+It is one of the most eaten meals in Singapore and the least explained. Tourists stand in front of the counter like it is an exam they did not study for. Locals point, pay and sit down in about forty seconds.
+
+The difference is not taste. It is knowing the system. This is the system.
+
+## What you are actually ordering
+
+Same dish, many names: **economy rice**, **economic rice**, **mixed vegetable rice**, **cai png** in Hokkien, **cai fan** (菜饭) in Mandarin. Some locals just call it "point point", because that is how you order it.
+
+The idea is simple. A plate of white rice, and on top of it whatever you choose from the counter. You are charged for what you chose. Everything else in this guide is about choosing well, and not being surprised at the till.
+
+## The five decisions
+
+**Decision 1 — Eat here, or dabao**
+
+This is the first thing the auntie needs to know, so say it first. "Eat here" gets you a plate. "Dabao" gets you a takeaway box or packet.
+
+It matters more than it sounds. A plate has room; a takeaway box does not. Dabao with four dishes and the last one gets squeezed into whatever corner is left. Eat in, and you usually get more of everything.
+
+**Decision 2 — The rice**
+
+White rice is the default. Two instructions change it: **"rice less"** if you want more space for the dishes, and **"rice more"** if you are properly hungry. A few stalls also keep a pot of porridge — if you see one, it is an option.
+
+In the mornings, many stalls swap the rice for fried bee hoon or noodles, with breakfast sides like fried egg and luncheon meat. Same system, different base.
+
+**Decision 3 — The meat**
+
+This is where your price is decided, so give it your full attention. Every meat dish costs more than every vegetable dish — and "meat" means anything with meat in it. Potato with a few slices of sausage? Charged as meat. Long beans with minced pork? Meat.
+
+The classics: curry chicken, sweet and sour pork, braised pork belly, fried fish fillet, steamed egg, luncheon meat. One meat is the standard. Two meats is a statement.
+
+**Decision 4 — The vegetables**
+
+Vegetables are the cheap, good part. Cabbage, kangkong, bean sprouts, braised tofu, long beans, brinjal. They are also where you can read the stall: if the greens are still green at 12.30pm, the kitchen is cooking in batches and topping up. If they are grey and collapsed, they were cooked at 9am and left there.
+
+The standard order is **one meat, two veg.** Learn that phrase and you can order economy rice anywhere on the island.
+
+**Decision 5 — The gravy**
+
+This is the decision most first-timers miss entirely, and it is free. Ask for curry or braising sauce poured over your rice, and a dry plate becomes a whole meal. Just say **"gravy"** or **"curry on top"** and the auntie will ladle it on. Chilli is usually there for you to help yourself.
+
+Not every stall does it by default. Every stall will do it if you ask.
+
+## How the price actually works
+
+Here is the part nobody explains. Most economy rice stalls do not show a price for each dish. The auntie looks at your plate and works out the total in her head — meat counts more than veg, special items count more than meat, and the rice is part of it.
+
+In 2026, roughly:
+
+- **One meat, two veg** — about S$4 to S$5 at most hawker centres
+- **Budget stalls** — still from around S$2.50 to S$3, if you know where to look
+- **Food courts and the CBD** — the top of the range, sometimes above it
+
+Fish, prawns and anything served whole are priced on their own, and they are where the bill jumps. A whole fried fish can cost more than the rest of your plate combined.
+
+This is how people end up online holding a receipt. In September 2026, a diner posted about paying S$6.70 for a small drumstick, some meat and rice. Most of the replies said that was simply the going rate — around S$3.50 for the drumstick, S$2.50 for the meat, S$0.70 for the rice. Nobody had cheated anybody. He had ordered an all-meat plate without realising what that costs.
+
+The fix is easy: **if it is fish, seafood or anything that looks special, ask "how much ah?" before the tongs go in.** No auntie minds the question. Paying first and asking after is the mistake.
+
+## What to say at the stall
+
+You need very few words. In order:
+
+- **"Eat here"** or **"dabao"** — always first.
+- **"One meat, two veg"** — sets the frame before you start pointing.
+- **"This one, this one, this one"** — pointing is the official language. If two trays sit close together, name the main ingredient: "the chicken, not the pork."
+- **"Rice less"** — if you want more room for the dishes.
+- **"Gravy"** or **"curry on top"** — free, and it changes everything.
+- **"How much ah?"** — before anything with fins or shells.
+
+And when she asks if that's all: **"Can, can."** Pay, take your plate, and get out of the queue.
+
+## How to spot a good stall
+
+Economy rice has no famous names, so you have to read the counter.
+
+- **Look at the queue, and who is in it.** Office workers and uncles in singlets at noon is a good sign. They eat here every day, and they would have stopped if it were bad.
+- **Look at the greens.** Bright vegetables after noon mean the kitchen is still cooking. Grey ones mean it stopped hours ago.
+- **Watch the trays.** A stall that keeps swapping in fresh trays through lunch is a stall that sells out — which means people come back.
+- **Go before 12.30pm.** The best dishes go first. What is left at 1.30pm is what nobody chose.
+
+## Where to start
+
+Three stalls that still keep the "economy" in economy rice:
+
+**Lai Heng Economical Mixed Veg Rice** — Kim Keat Palm Market & Food Centre, #01-07, 22 Toa Payoh Lorong 7. Two veg and one meat for about S$2.50. Weekdays only.
+
+**Goldhill Family Restaurant** — 6 Hougang Avenue 3, #01-78. Cai png from about S$2, and fried chicken wings that people cross the island for. Cash only.
+
+**Xian Jin Mixed Vegetable Rice** — Bedok Food Centre & Market, #01-02, 216 Bedok North Street 1. Nearly two decades at the same counter.
+
+Prices this low won't last forever, so check before you go. And honestly, the best economy rice stall is usually the one nearest to you at noon.
+
+## The last bite
+
+Economy rice will never get a Michelin plaque. It doesn't want one. It is the meal that feeds Singapore on an ordinary Tuesday — construction workers, office directors, students and retirees at the same glass counter, pointing at the same trays of curry chicken and cabbage.
+
+It asks almost nothing of you. Say where you're eating. Say one meat, two veg. Point. Ask for gravy. Ask the price of the fish.
+
+Five decisions. Forty seconds. Lunch.
+
+**Want the story behind the plate?**
+
+[BUTTON: Read the economy rice heritage story → /food-heritage/economy-rice]
+`,
+  },
+  {
     slug: "10-hawker-dishes-must-try-singapore",
     title: "10 Hawker Dishes You Must Try Before Leaving Singapore",
     subtitle: "Not a listicle. A ranked argument.",
