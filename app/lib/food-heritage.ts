@@ -43,7 +43,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Evolved from Chinese stir-fried noodles in Penang and Singapore, blending Hokkien and Teochew traditions with local belacan, cockles, and sweet dark soy.",
     whereToFind:
       "Lau Pa Sat and Maxwell Food Centre host legendary stalls; East Coast and Old Airport Road hawker centres are known for queues at peak hours. Look for long waits and a soot-dark wok.",
-    priceRange: "S$4–8 per plate",
+    priceRange: "S$5–8 per plate",
     imageUrl: "/images/food/char-kway-teow.png",
     funFact:
       "Some iconic stalls still fry one or two portions at a time—refusing to overload the wok—to preserve the elusive wok hei that locals swear they can smell from across the food centre.",
@@ -142,7 +142,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Hainanese immigrants refined a Hainan-style poached chicken for Southeast Asian palates; Singapore and Malaysia both claim singular 'best' versions.",
     whereToFind:
       "Maxwell Food Centre, Chinatown Complex, and Serangoon Gardens hawker clusters are pilgrimage sites; many neighbourhoods have a 20-year stall locals won't trade away.",
-    priceRange: "S$4–25 depending on stall and cut",
+    priceRange: "S$4–7 per plate (whole or half chicken costs more)",
     imageUrl: "/images/food/chicken-rice.png",
     funFact:
       "Singapore's hawker chicken rice stalls often judge quality by rice first—aromatic, separate grains, and gentle chicken flavour before you even touch the meat.",
@@ -241,7 +241,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Peranakan Nyonya laksa along the Straits, influenced by Malay, Indonesian, and Chinese coastal cooking.",
     whereToFind:
       "Katong and Joo Chiat for the coconut curry style; Sungei Road and Marine Parade hawker centres for neighbourhood favourites. Early hours mean fresher rempah in some spots.",
-    priceRange: "S$4–10 per bowl",
+    priceRange: "S$5–7 per bowl, up to about S$9 at tourist spots",
     imageUrl: "/images/food/laksa.jpg",
     funFact:
       "Traditional Katong laksa is eaten with only a spoon—the noodles are snipped short so you never fish awkwardly in public.",
@@ -309,7 +309,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         name: "Sungei Road Laksa",
         address: "Jalan Berseh Food Centre, #01-100, 166 Jalan Besar",
         area: "Jalan Besar",
-        note: "Charcoal-fired and under S$4 a bowl. One of the last truly old-school laksa stalls in Singapore",
+        note: "Charcoal-fired, and still one of the cheaper bowls in town. One of the last truly old-school laksa stalls in Singapore",
         mapsUrl:
           "https://maps.google.com/?q=Sungei+Road+Laksa+Jalan+Berseh+Food+Centre+Singapore",
       },
@@ -1128,17 +1128,17 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "economy-rice",
     category: "Singaporean Classics",
     description:
-      "Economy rice — cai fan in Hokkien, mixed rice in plain English — is the most democratic meal Singapore produces. White rice, a selection of cooked dishes from a display counter, a total that rarely exceeds five dollars. You point. The auntie scoops. You pay by how many dishes you chose. The format is Chinese in origin, the selection is entirely Singaporean: braised pork belly sits next to curry chicken sits next to sambal kangkong sits next to luncheon meat. Economy rice is where Singapore eats without thinking about it. It is the meal that construction workers, office directors, schoolchildren, and retirees all eat from the same counter without any ceremony whatsoever.",
+      "Economy rice — cai fan in Hokkien, mixed rice in plain English — is the most democratic meal Singapore produces. White rice, a selection of cooked dishes from a display counter, a total that still rarely tops six dollars. You point. The auntie scoops. You pay by how many dishes you chose. The format is Chinese in origin, the selection is entirely Singaporean: braised pork belly sits next to curry chicken sits next to sambal kangkong sits next to luncheon meat. Economy rice is where Singapore eats without thinking about it. It is the meal that construction workers, office directors, schoolchildren, and retirees all eat from the same counter without any ceremony whatsoever.",
     origin:
       "Chinese cai fan (菜饭) tradition adapted by Singaporean hawkers into a multi-dialect, multi-cuisine mixed rice format unique to the island.",
     whereToFind:
       "Every hawker centre in Singapore. Economy rice is not a destination dish — it is a daily constant. The best stall is the one nearest to where you are at noon.",
-    priceRange: "S$2.50–5 depending on dishes chosen",
+    priceRange: "S$4–7 (one meat, two veg usually S$4–5; budget stalls from about S$3)",
     imageUrl: "/images/food/economy-rice.png",
     funFact:
       "The pricing at economy rice stalls is entirely discretionary — the auntie calculates the total in her head based on what she sees on your plate, and she is never wrong.",
     bestPairedWith:
-      "A bowl of soup from the same stall (usually free or S$0.50), a cold packet drink, and absolutely no menu.",
+      "A bowl of soup from the same stall (usually free or under a dollar), a cold packet drink, and absolutely no menu.",
     halal: false,
     spiceLevel: "None",
     difficulty: "Easy to eat",
@@ -1180,7 +1180,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       {
         name: "Braised Egg",
         emoji: "🥚",
-        role: "Slow-cooked in dark soy until the white firms and the yolk turns jammy. S$0.50 and worth every cent.",
+        role: "Slow-cooked in dark soy until the white firms and the yolk turns jammy. Usually under a dollar, and worth every cent.",
       },
       {
         name: "Luncheon Meat",
@@ -1503,7 +1503,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Malay archipelago food tradition — nasi lemak (literally 'fatty rice' in Malay) spread from the Malay peninsula and was carried to Singapore by Malay and Javanese communities.",
     whereToFind:
       "Adam Road Food Centre for the Michelin-recognised version; Geylang Serai and Tekka Centre for authentically Malay settings; every mamak and Malay stall island-wide for daily sustenance.",
-    priceRange: "S$1.50–6 depending on accompaniments",
+    priceRange: "S$3–6 (simple packets from about S$2)",
     imageUrl: "/images/food/nasi-lemak.png",
     funFact:
       "The sambal is the stall's signature — every nasi lemak auntie guards her sambal recipe fiercely, and regulars can identify their preferred stall's sambal by smell alone.",
@@ -1782,7 +1782,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Uniquely Singaporean — created by Chinese and Malay hawkers who adapted the Malay satay peanut sauce into a noodle dish. Found nowhere else in the world.",
     whereToFind:
       "Bedok 85 Fengshan Market and Marine Parade Food Centre for the best surviving versions. The dish is increasingly rare — find the stalls that still make it and go.",
-    priceRange: "S$4–8 per plate",
+    priceRange: "S$5–8 per plate",
     imageUrl: "/images/food/satay-bee-hoon.jpg",
     funFact:
       "Satay bee hoon is one of Singapore's endangered dishes — fewer than a dozen stalls still make it properly, and the number decreases each year as veteran hawkers retire.",
@@ -2267,7 +2267,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Casuarina Curry Restaurant on Upper Thomson Road for the most debated version; Al-Ameen near Farrer Park; every residential estate with a mamak stall for the daily version.",
     priceRange:
-      "S$1–2 for plain prata; S$2–5 for egg, coin, or tissue variations",
+      "S$1.20–2 for plain prata; S$2–3 for egg; S$3–6 for tissue and fancier variations",
     imageUrl: "/images/food/roti-prata.jpg",
     funFact:
       "The tissue prata — stretched until it's almost transparent, then folded into a towering cone — requires the most technical skill of any prata variation and is ordered primarily to watch it being made.",
