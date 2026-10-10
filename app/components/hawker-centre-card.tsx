@@ -25,12 +25,14 @@ type HawkerCentreCardProps = {
   index: number;
   /** Optional NEA open/closed pill from parent (listing page). */
   statusPill?: ReactNode;
+  className?: string;
 };
 
 export function HawkerCentreCard({
   data,
   index,
   statusPill,
+  className,
 }: HawkerCentreCardProps) {
   const {
     slug,
@@ -53,7 +55,9 @@ export function HawkerCentreCard({
 
   return (
     <li
-      className="sf-hawker-card-in"
+      data-region={region}
+      data-slug={slug}
+      className={["sf-hawker-card-in", className].filter(Boolean).join(" ")}
       style={{ animationDelay: `${Math.min(index, 20) * 40}ms` }}
     >
       <article

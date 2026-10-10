@@ -1,9 +1,5 @@
-"use client";
-
-import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
@@ -64,10 +60,17 @@ function spiceLevelToDots(spiceLevel: string) {
   return 0;
 }
 
-function FoodHeritagePageContent() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const categorySlug = searchParams.get("category");
+function firstParam(value: string | string[] | undefined) {
+  if (Array.isArray(value)) return value[0];
+  return value;
+}
+
+export default async function FoodHeritagePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string | string[] }>;
+}) {
+  const categorySlug = firstParam((await searchParams).category);
 
   const categoriesWithDishes = categories.map((cat) => {
     const dishes = FOOD_HERITAGE_DISHES.filter((d) => d.category === cat.name);
@@ -93,16 +96,15 @@ function FoodHeritagePageContent() {
         <SiteHeader />
 
         <div className="mx-auto max-w-7xl px-4 pb-32 pt-8 sm:px-6 lg:px-8">
-          <button
-            onClick={() => router.push("/food-heritage")}
+          <Link
+            href="/food-heritage"
             className="group mb-10 flex items-center gap-2 text-sm text-sf-muted transition-colors hover:text-white"
-            type="button"
           >
             <span className="transition-transform duration-200 group-hover:-translate-x-1">
               ←
             </span>
             <span>All cuisines</span>
-          </button>
+          </Link>
 
           <div className="mb-12">
             <p className="mb-3 text-[15px] font-semibold uppercase tracking-[0.2em] text-sf-primary">
@@ -349,13 +351,5 @@ function FoodHeritagePageContent() {
 
       <SiteFooter />
     </div>
-  );
-}
-
-export default function FoodHeritagePage() {
-  return (
-    <Suspense fallback={null}>
-      <FoodHeritagePageContent />
-    </Suspense>
   );
 }
