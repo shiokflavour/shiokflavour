@@ -49,9 +49,11 @@ function renderArticleBody(markdown: string) {
       );
     }
     if (t.startsWith("![")) {
-      const match = t.match(/!\[.*?\]\((.*?)\)/);
+      const match = t.match(/!\[(.*?)\]\((\S+?)(?:\s+"(.*?)")?\)/);
       if (match) {
-        const imgSrc = match[1];
+        const imgAlt = match[1];
+        const imgSrc = match[2];
+        const caption = match[3];
         const imageToSlug: Record<string, string> = {
           "/images/food/chicken-rice.jpg": "hainanese-chicken-rice",
           "/images/food/char-kway-teow.jpg": "char-kway-teow",
@@ -66,15 +68,13 @@ function renderArticleBody(markdown: string) {
         };
         const heritageSlug = imageToSlug[imgSrc];
         return (
-          <div
-            key={i}
-            className="my-8 rounded-2xl overflow-hidden relative group cursor-pointer"
-          >
+          <figure key={i} className="my-8">
+          <div className="rounded-2xl overflow-hidden relative group cursor-pointer">
             {heritageSlug ? (
               <Link href={`/food-heritage/${heritageSlug}`}>
                 <img
                   src={imgSrc}
-                  alt=""
+                  alt={imgAlt}
                   className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Hover overlay */}
@@ -92,11 +92,17 @@ function renderArticleBody(markdown: string) {
             ) : (
               <img
                 src={imgSrc}
-                alt=""
+                alt={imgAlt}
                 className="w-full h-64 sm:h-80 object-cover"
               />
             )}
           </div>
+          {caption && (
+            <figcaption className="mt-2 text-center text-xs text-sf-muted">
+              {caption}
+            </figcaption>
+          )}
+          </figure>
         );
       }
     }

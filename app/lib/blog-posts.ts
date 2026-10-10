@@ -597,6 +597,8 @@ It is one of the most eaten meals in Singapore and the least explained. Tourists
 
 The difference is not taste. It is knowing the system. This is the system.
 
+![A busy Singapore economy rice counter with trays of dishes at lunchtime](/images/blog/economy-rice-counter.jpg "Illustration created with AI.")
+
 ## What you are actually ordering
 
 Same dish, many names: **economy rice**, **economic rice**, **mixed vegetable rice**, **cai png** in Hokkien, **cai fan** (菜饭) in Mandarin. Some locals just call it "point point", because that is how you order it.
@@ -629,11 +631,15 @@ Vegetables are the cheap, good part. Cabbage, kangkong, bean sprouts, braised to
 
 The standard order is **one meat, two veg.** Learn that phrase and you can order economy rice anywhere on the island.
 
+![A plate of economy rice with curry chicken, cabbage and tofu, seen from above](/images/blog/economy-rice-plate.jpg "Illustration created with AI.")
+
 **Decision 5 — The gravy**
 
 This is the decision most first-timers miss entirely, and it is free. Ask for curry or braising sauce poured over your rice, and a dry plate becomes a whole meal. Just say **"gravy"** or **"curry on top"** and the auntie will ladle it on. Chilli is usually there for you to help yourself.
 
 Not every stall does it by default. Every stall will do it if you ask.
+
+![Curry gravy being ladled over a plate of white rice](/images/blog/economy-rice-gravy.jpg "Illustration created with AI.")
 
 ## How the price actually works
 
