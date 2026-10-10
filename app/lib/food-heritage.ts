@@ -101,27 +101,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestStalls: [
       {
         name: "Outram Park Fried Kway Teow Mee",
-        address: "Old Airport Road Food Centre, #01-12, 51 Old Airport Rd",
-        area: "Kallang",
-        note: "Michelin Bib Gourmand. Queue starts before they open — arrive early or wait 45 min",
+        address: "Hong Lim Market & Food Centre, #02-17, 531A Upper Cross Street",
+        area: "Chinatown",
+        note: "Frying since 1953 and a Michelin Bib Gourmand pick. Closes mid-afternoon, so go early.",
         mapsUrl:
-          "https://maps.google.com/?q=Outram+Park+Fried+Kway+Teow+Mee+Old+Airport+Road+Food+Centre+Singapore",
+          "https://maps.google.com/?q=Outram+Park+Fried+Kway+Teow+Mee+Hong+Lim+Market+%26+Food+Centre%2C+%2302-17%2C+531A+Upper+Cross+Street+Singapore",
       },
       {
-        name: "Hill Street Char Kway Teow",
-        address: "Bedok South Road, #01-05, Bedok South Market & Food Centre",
+        name: "Hill Street Fried Kway Teow",
+        address: "Bedok South Market & Food Centre, #01-41, 16 Bedok South Road",
         area: "Bedok",
-        note: "One of the oldest surviving CKT stalls in Singapore. The uncle has been frying for decades",
+        note: "Started as a pushcart in 1961. Michelin notes queues of up to an hour.",
         mapsUrl:
-          "https://maps.google.com/?q=Hill+Street+Char+Kway+Teow+Bedok+South+Market+Singapore",
+          "https://maps.google.com/?q=Hill+Street+Fried+Kway+Teow+Bedok+South+Market+%26+Food+Centre%2C+%2301-41%2C+16+Bedok+South+Road+Singapore",
       },
       {
-        name: "Hai Kee Char Kway Teow",
-        address: "Toa Payoh Lorong 8 Market, #02-10",
-        area: "Toa Payoh",
-        note: "Beloved by heartlanders. Small portions cooked to order with serious wok hei",
+        name: "Lao Fu Zi Fried Kway Teow",
+        address: "Old Airport Road Food Centre, #01-12, 51 Old Airport Road",
+        area: "Kallang",
+        note: "Michelin Bib Gourmand, and one of the few stalls frying both black and white versions.",
         mapsUrl:
-          "https://maps.google.com/?q=Toa+Payoh+Lorong+8+Market+Char+Kway+Teow+Singapore",
+          "https://maps.google.com/?q=Lao+Fu+Zi+Fried+Kway+Teow+Old+Airport+Road+Food+Centre%2C+%2301-12%2C+51+Old+Airport+Road+Singapore",
       },
     ],
     shiokOMeter: {
@@ -200,27 +200,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestStalls: [
       {
         name: "Tian Tian Hainanese Chicken Rice",
-        address: "Maxwell Food Centre, #01-10/11, 1 Kadayanallur St",
-        area: "Tanjong Pagar",
-        note: "Michelin Bib Gourmand. The most photographed chicken rice in Singapore — queue by 11am",
+        address: "Maxwell Food Centre, #01-10/11, 1 Kadayanallur Street",
+        area: "Chinatown",
+        note: "Michelin Bib Gourmand. The most photographed chicken rice in Singapore. Closed Mondays.",
         mapsUrl:
-          "https://maps.google.com/?q=Tian+Tian+Hainanese+Chicken+Rice+Maxwell+Food+Centre+Singapore",
+          "https://maps.google.com/?q=Tian+Tian+Hainanese+Chicken+Rice+Maxwell+Food+Centre%2C+%2301-10%2F11%2C+1+Kadayanallur+Street+Singapore",
       },
       {
         name: "Ah Tai Hainanese Chicken Rice",
-        address: "Maxwell Food Centre, #01-07, 1 Kadayanallur St",
-        area: "Tanjong Pagar",
-        note: "Former Tian Tian chef — many locals actually prefer this one. Shorter queue too",
+        address: "Maxwell Food Centre, #01-07, 1 Kadayanallur Street",
+        area: "Chinatown",
+        note: "Run by Tian Tian's former head cook of more than 20 years. Many locals prefer it, and the queue is shorter.",
         mapsUrl:
-          "https://maps.google.com/?q=Ah+Tai+Hainanese+Chicken+Rice+Maxwell+Food+Centre+Singapore",
+          "https://maps.google.com/?q=Ah+Tai+Hainanese+Chicken+Rice+Maxwell+Food+Centre%2C+%2301-07%2C+1+Kadayanallur+Street+Singapore",
       },
       {
         name: "Boon Tong Kee",
-        address: "399/401 Balestier Road",
+        address: "399/401/403 Balestier Road",
         area: "Balestier",
-        note: "Restaurant-style with bigger portions and consistent quality. Great for groups",
+        note: "Restaurant-style chicken rice since 1983, and a Michelin Bib Gourmand pick. Good for groups.",
         mapsUrl:
-          "https://maps.google.com/?q=Boon+Tong+Kee+Chicken+Rice+Balestier+Singapore",
+          "https://maps.google.com/?q=Boon+Tong+Kee+399%2F401%2F403+Balestier+Road+Singapore",
       },
     ],
     shiokOMeter: {
@@ -299,27 +299,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestStalls: [
       {
         name: "328 Katong Laksa",
-        address: "216 East Coast Road",
+        address: "51 East Coast Road",
         area: "Katong",
-        note: "The most famous laksa in Singapore. Gordon Ramsay once arm-wrestled the owner over the recipe",
+        note: "The Katong laksa that beat Gordon Ramsay in the 2013 Hawker Heroes cook-off. This is the original outlet; a second is at 216 East Coast Road.",
         mapsUrl:
-          "https://maps.google.com/?q=328+Katong+Laksa+East+Coast+Road+Singapore",
+          "https://maps.google.com/?q=328+Katong+Laksa+51+East+Coast+Road+Singapore",
+      },
+      {
+        name: "928 Yishun Laksa",
+        address: "928 Yishun Central 1, #01-155",
+        area: "Yishun",
+        note: "Family-run heartland laksa with a following to match — worth the trip north.",
+        mapsUrl:
+          "https://maps.google.com/?q=928+Yishun+Laksa+928+Yishun+Central+1%2C+%2301-155+Singapore",
       },
       {
         name: "Sungei Road Laksa",
-        address: "Jalan Berseh Food Centre, #01-100, 166 Jalan Besar",
+        address: "27 Jalan Berseh, #01-100",
         area: "Jalan Besar",
-        note: "Charcoal-fired, and still one of the cheaper bowls in town. One of the last truly old-school laksa stalls in Singapore",
+        note: "Still cooked over charcoal — one of the last laksa stalls doing it the old way.",
         mapsUrl:
-          "https://maps.google.com/?q=Sungei+Road+Laksa+Jalan+Berseh+Food+Centre+Singapore",
-      },
-      {
-        name: "Marine Parade Laksa",
-        address: "Marine Parade Food Centre, #01-19, 76 Marine Parade Central",
-        area: "Marine Parade",
-        note: "Neighbourhood favourite with a loyal local following — no tourist queues, all flavour",
-        mapsUrl:
-          "https://maps.google.com/?q=Marine+Parade+Laksa+Food+Centre+Singapore",
+          "https://maps.google.com/?q=Sungei+Road+Laksa+27+Jalan+Berseh%2C+%2301-100+Singapore",
       },
     ],
     shiokOMeter: {
@@ -694,28 +694,28 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Lim's Rojak",
-        address: "Newton Food Centre, #01-52, 500 Clemenceau Ave North",
-        area: "Newton",
-        note: "Generous portions and a perfectly balanced hae ko dressing — one of the most consistent rojak stalls in Singapore",
-        mapsUrl:
-          "https://maps.google.com/?q=Lim's+Rojak+Newton+Food+Centre+Singapore",
-      },
-      {
         name: "Toa Payoh Rojak",
-        address: "Toa Payoh Lorong 8 Market, #02-05",
-        area: "Toa Payoh",
-        note: "Heartland favourite — the uncle hand-cuts every piece of fruit fresh. No shortcuts here",
+        address: "Old Airport Road Food Centre, #01-108, 51 Old Airport Road",
+        area: "Kallang",
+        note: "Over half a century of rojak. The name is where it started; the queue is at Old Airport Road.",
         mapsUrl:
-          "https://maps.google.com/?q=Toa+Payoh+Lorong+8+Market+Rojak+Singapore",
+          "https://maps.google.com/?q=Toa+Payoh+Rojak+Old+Airport+Road+Food+Centre%2C+%2301-108%2C+51+Old+Airport+Road+Singapore",
       },
       {
-        name: "Katong Rojak",
-        address: "Red House Seafood / Marine Parade Food Centre, 76 Marine Parade Central",
-        area: "Marine Parade",
-        note: "East side institution beloved by Katong locals — slightly sweeter dressing than the typical version",
+        name: "Lau Hong Ser Rojak",
+        address: "Dunman Food Centre, #02-14, 271 Onan Road",
+        area: "Joo Chiat",
+        note: "Around since 1974, and one of the few rojak stalls open into the small hours. Closed Wednesdays and Sundays.",
         mapsUrl:
-          "https://maps.google.com/?q=Marine+Parade+Food+Centre+Rojak+Singapore",
+          "https://maps.google.com/?q=Lau+Hong+Ser+Rojak+Dunman+Food+Centre%2C+%2302-14%2C+271+Onan+Road+Singapore",
+      },
+      {
+        name: "Soon Heng Rojak",
+        address: "Gourmet Paradise, #B1-23, Toa Payoh HDB Hub, 480 Lorong 6 Toa Payoh",
+        area: "Toa Payoh",
+        note: "Queues long enough to need a digital queue system. Cash only.",
+        mapsUrl:
+          "https://maps.google.com/?q=Soon+Heng+Rojak+Gourmet+Paradise%2C+%23B1-23%2C+Toa+Payoh+HDB+Hub%2C+480+Lorong+6+Toa+Payoh+Singapore",
       },
     ],
     shiokOMeter: {
@@ -1190,28 +1190,28 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Zi Char Economy Rice",
-        address: "Chinatown Complex Food Centre, 335 Smith Street",
-        area: "Chinatown",
-        note: "One of the largest selections in Singapore — over 40 dishes daily. The braised pork belly here has been the same recipe since 1985",
+        name: "Lai Heng Economical Mixed Veg Rice",
+        address: "Kim Keat Palm Market & Food Centre, #01-07, 22 Toa Payoh Lorong 7",
+        area: "Toa Payoh",
+        note: "Two veg and one meat for about S$2.50 — proof that economy rice can still be economical. Weekdays only.",
         mapsUrl:
-          "https://maps.google.com/?q=Chinatown+Complex+Food+Centre+Economy+Rice+Singapore",
+          "https://maps.google.com/?q=Lai+Heng+Economical+Mixed+Veg+Rice+Kim+Keat+Palm+Market+%26+Food+Centre%2C+%2301-07%2C+22+Toa+Payoh+Lorong+7+Singapore",
       },
       {
-        name: "Ah Xiao Teochew Braised Duck",
-        address: "Old Airport Road Food Centre, #01-07",
-        area: "Kallang",
-        note: "Technically braised duck rice but essentially economy rice done at its absolute peak. The braised eggs alone are worth the trip",
+        name: "Goldhill Family Restaurant",
+        address: "6 Hougang Avenue 3, #01-78",
+        area: "Hougang",
+        note: "Cai png from about S$2, and fried chicken wings that regulars cross the island for. Cash only.",
         mapsUrl:
-          "https://maps.google.com/?q=Ah+Xiao+Teochew+Braised+Duck+Old+Airport+Road+Singapore",
+          "https://maps.google.com/?q=Goldhill+Family+Restaurant+6+Hougang+Avenue+3%2C+%2301-78+Singapore",
       },
       {
-        name: "ABC Market Economy Rice",
-        address: "ABC Brickworks Market, 6 Jalan Bukit Merah",
-        area: "Bukit Merah",
-        note: "Neighbourhood standard — the selection changes daily and the regulars know which days have the best pork belly",
+        name: "Xian Jin Mixed Vegetable Rice",
+        address: "Bedok Food Centre & Market, #01-02, 216 Bedok North Street 1",
+        area: "Bedok",
+        note: "Nearly two decades at the same counter, with simple sets from about S$2.",
         mapsUrl:
-          "https://maps.google.com/?q=ABC+Brickworks+Market+Economy+Rice+Singapore",
+          "https://maps.google.com/?q=Xian+Jin+Mixed+Vegetable+Rice+Bedok+Food+Centre+%26+Market%2C+%2301-02%2C+216+Bedok+North+Street+1+Singapore",
       },
     ],
     shiokOMeter: { spiceHit: 2, messFactor: 1, flavourDepth: 6, queueGame: 5, shiokValue: 10 },
@@ -1535,9 +1535,30 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Cucumber", emoji: "🥒", role: "Sliced fresh — the cooling element that makes nasi lemak balanced rather than heavy. Never optional despite looking optional." },
     ],
     bestStalls: [
-      { name: "Adam Road Nasi Lemak", address: "Adam Road Food Centre, #01-02, 2 Adam Road", area: "Bukit Timah", note: "Michelin Bib Gourmand. The queue starts forming before 7am — this is the nasi lemak that food writers reference when they talk about the dish", mapsUrl: "https://maps.google.com/?q=Adam+Road+Nasi+Lemak+Food+Centre+Singapore" },
-      { name: "Selera Rasa Nasi Lemak", address: "Adam Road Food Centre, #01-01, 2 Adam Road", area: "Bukit Timah", note: "The stall next to Adam Road Nasi Lemak — equally excellent and often shorter queue. Many locals actually prefer it", mapsUrl: "https://maps.google.com/?q=Selera+Rasa+Nasi+Lemak+Adam+Road+Singapore" },
-      { name: "Boon Lay Power Nasi Lemak", address: "Boon Lay Place Food Village, #01-09, 221 Boon Lay Place", area: "Jurong West", note: "West Singapore's most beloved nasi lemak — the sambal here is darker, more intense, and has its own devoted following", mapsUrl: "https://maps.google.com/?q=Boon+Lay+Power+Nasi+Lemak+Singapore" },
+      {
+        name: "Kitchenman Nasi Lemak",
+        address: "CT Hub, #01-08/13, 2 Kallang Avenue",
+        area: "Kallang",
+        note: "The only nasi lemak on Michelin's 2026 Bib Gourmand list.",
+        mapsUrl:
+          "https://maps.google.com/?q=Kitchenman+Nasi+Lemak+CT+Hub%2C+%2301-08%2F13%2C+2+Kallang+Avenue+Singapore",
+      },
+      {
+        name: "Selera Rasa Nasi Lemak",
+        address: "Adam Road Food Centre, #01-02, 2 Adam Road",
+        area: "Bukit Timah",
+        note: "The stall most people mean when they say 'Adam Road nasi lemak'. Closed Fridays.",
+        mapsUrl:
+          "https://maps.google.com/?q=Selera+Rasa+Nasi+Lemak+Adam+Road+Food+Centre%2C+%2301-02%2C+2+Adam+Road+Singapore",
+      },
+      {
+        name: "Boon Lay Power Nasi Lemak",
+        address: "Boon Lay Place Food Village, #01-106, 221B Boon Lay Place",
+        area: "Boon Lay",
+        note: "The west side's late-night nasi lemak — open into the small hours.",
+        mapsUrl:
+          "https://maps.google.com/?q=Boon+Lay+Power+Nasi+Lemak+Boon+Lay+Place+Food+Village%2C+%2301-106%2C+221B+Boon+Lay+Place+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 5, messFactor: 2, flavourDepth: 9, queueGame: 8, shiokValue: 10 },
   },
@@ -1814,9 +1835,30 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Calamansi", emoji: "🍋", role: "The acid finish — squeezed over the completed plate, it brightens everything and makes the peanut sauce taste less heavy." },
     ],
     bestStalls: [
-      { name: "Bedok 85 Satay Bee Hoon", address: "Bedok 85 Fengshan Market, #01-14, 85 Bedok North St 4", area: "Bedok", note: "One of the few remaining stalls with a proper peanut sauce made in-house — the late-night version here is especially good", mapsUrl: "https://maps.google.com/?q=Bedok+85+Fengshan+Market+Satay+Bee+Hoon+Singapore" },
-      { name: "Marine Parade Satay Bee Hoon", address: "Marine Parade Food Centre, #01-25, 76 Marine Parade Central", area: "Marine Parade", note: "The east-side institution — the peanut sauce here is slightly thicker than most versions and the cuttlefish is always fresh", mapsUrl: "https://maps.google.com/?q=Marine+Parade+Food+Centre+Satay+Bee+Hoon+Singapore" },
-      { name: "Old Airport Road Satay Bee Hoon", address: "Old Airport Road Food Centre, #01-109, 51 Old Airport Rd", area: "Kallang", note: "The most accessible version for first-timers — generous portion, consistent sauce, and a hawker who will explain the dish if you ask", mapsUrl: "https://maps.google.com/?q=Old+Airport+Road+Food+Centre+Satay+Bee+Hoon+Singapore" },
+      {
+        name: "Shi Wei Da Satay Bee Hoon",
+        address: "Bedok 85 Fengshan Food Centre, #01-69, 85 Bedok North Street 4",
+        area: "Bedok",
+        note: "The owner roasts, skins and grinds his own peanuts for the sauce. Back since January 2025 after a short closure.",
+        mapsUrl:
+          "https://maps.google.com/?q=Shi+Wei+Da+Satay+Bee+Hoon+Bedok+85+Fengshan+Food+Centre%2C+%2301-69%2C+85+Bedok+North+Street+4+Singapore",
+      },
+      {
+        name: "Sin Chew Satay Bee Hoon",
+        address: "Bukit Timah Food Centre, #01-037, 2A Jalan Seh Chuan",
+        area: "Bukit Timah",
+        note: "A long-standing name, now at Bukit Timah Food Centre. Open only a few days a week, so check before you go.",
+        mapsUrl:
+          "https://maps.google.com/?q=Sin+Chew+Satay+Bee+Hoon+Bukit+Timah+Food+Centre%2C+%2301-037%2C+2A+Jalan+Seh+Chuan+Singapore",
+      },
+      {
+        name: "Old Teochew (Lao Chao Zhou)",
+        address: "Ghim Moh Market & Food Centre, #01-18, 20 Ghim Moh Road",
+        area: "Ghim Moh",
+        note: "A morning-only stall — and no satay bee hoon on Thursdays.",
+        mapsUrl:
+          "https://maps.google.com/?q=Old+Teochew+%28Lao+Chao+Zhou%29+Ghim+Moh+Market+%26+Food+Centre%2C+%2301-18%2C+20+Ghim+Moh+Road+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 4, messFactor: 3, flavourDepth: 8, queueGame: 5, shiokValue: 8 },
   },
@@ -2299,9 +2341,30 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Egg (optional)", emoji: "🥚", role: "Cracked inside the dough before folding — creates a richer, more filling prata. The egg prata is the most popular variation." },
     ],
     bestStalls: [
-      { name: "Casuarina Curry", address: "136 Casuarina Road", area: "Upper Thomson", note: "Singapore's most debated prata — the Upper Thomson institution that has been frying since 1973 and has never changed the recipe", mapsUrl: "https://maps.google.com/?q=Casuarina+Curry+Upper+Thomson+Road+Singapore" },
-      { name: "The Prata Shop", address: "11 Upper Thomson Road", area: "Upper Thomson", note: "Legendary coin prata — the smallest, crispiest prata variation, ordered by the dozen. The curry here is made fresh each morning", mapsUrl: "https://maps.google.com/?q=The+Prata+Shop+Upper+Thomson+Road+Singapore" },
-      { name: "Al-Ameen Eating House", address: "1 Farrer Park Station Road", area: "Farrer Park", note: "24-hour mamak institution — the prata here is consistent at 3am as it is at 7am, which is exactly the point", mapsUrl: "https://maps.google.com/?q=Al-Ameen+Eating+House+Farrer+Park+Singapore" },
+      {
+        name: "Sin Ming Roti Prata",
+        address: "Gim Huat Coffeeshop, #01-51, 24 Sin Ming Road",
+        area: "Sin Ming",
+        note: "The crispy coin prata people come for, with a proper mutton curry on the side.",
+        mapsUrl:
+          "https://maps.google.com/?q=Sin+Ming+Roti+Prata+Gim+Huat+Coffeeshop%2C+%2301-51%2C+24+Sin+Ming+Road+Singapore",
+      },
+      {
+        name: "Casuarina Curry",
+        address: "136/138 Casuarina Road",
+        area: "Upper Thomson",
+        note: "The Upper Thomson prata institution, family-run since 1993.",
+        mapsUrl:
+          "https://maps.google.com/?q=Casuarina+Curry+136%2F138+Casuarina+Road+Singapore",
+      },
+      {
+        name: "Mr and Mrs Mohgan's Super Crispy Roti Prata",
+        address: "300 Joo Chiat Road",
+        area: "Joo Chiat",
+        note: "More than 30 years of prata-making in a Joo Chiat coffeeshop. The name tells you exactly what to expect.",
+        mapsUrl:
+          "https://maps.google.com/?q=Mr+and+Mrs+Mohgan%27s+Super+Crispy+Roti+Prata+300+Joo+Chiat+Road+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 3, messFactor: 2, flavourDepth: 7, queueGame: 6, shiokValue: 10 },
   },
