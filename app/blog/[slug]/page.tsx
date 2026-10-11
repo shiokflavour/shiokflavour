@@ -124,7 +124,12 @@ function renderArticleBody(markdown: string) {
               <img
                 src={imgSrc}
                 alt={imgAlt}
-                className="w-full h-64 sm:h-80 object-cover"
+                loading="lazy"
+                className={
+                  caption
+                    ? "w-full h-auto"
+                    : "w-full h-64 sm:h-80 object-cover"
+                }
               />
             )}
           </div>

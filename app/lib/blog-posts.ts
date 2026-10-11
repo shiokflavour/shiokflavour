@@ -396,6 +396,8 @@ Before the decisions, a quick map of the meal. Hainanese chicken rice is four th
 
 Every element is load-bearing. Remove one and the dish collapses. But the first and most important decision — the one you make before you even reach the counter — is the chicken.
 
+![A plate of Hainanese chicken rice with soup and three sauces on a hawker centre table](/images/blog/chicken-rice-set.jpg "Illustration created with AI.")
+
 ## Decision one: which chicken
 
 This is where the fork in the road appears, and where most tourists accidentally choose.
@@ -450,6 +452,8 @@ The correct technique: dip the chicken in chilli. Add a small smear of ginger. D
 
 No fixed ratio. No fixed proportion. Chicken rice is a personal document — everyone calibrates their plate slightly differently, and after a few visits you will find your version.
 
+![Three saucers of chilli, ginger and dark soy beside a plate of chicken rice](/images/blog/chicken-rice-sauces.jpg "Illustration created with AI.")
+
 ## The soup
 
 It arrives in a small bowl. Clear. Light gold. A few slices of winter melon or silken tofu at the bottom, sometimes a scattering of spring onion.
@@ -463,6 +467,8 @@ The soup is not a side. It is the quiet centre of the dish.
 ## What to say at the stall
 
 The chicken rice stall counter is direct and efficient. You walk up. The auntie or uncle behind the counter looks at you — sometimes with a nod, sometimes without even that. The entire transaction should take under thirty seconds.
+
+![A hawker chopping poached chicken at a chicken rice stall, whole chickens hanging in the display](/images/blog/chicken-rice-stall.jpg "Illustration created with AI.")
 
 Here is the line:
 
