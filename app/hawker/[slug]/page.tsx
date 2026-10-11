@@ -11,6 +11,8 @@ import {
   type HawkerCentre,
 } from "../../lib/hawker-api";
 import { findDishSlugForName } from "../../lib/food-heritage";
+import { buildHawkerFaqs } from "../../lib/faqs";
+import { FaqSection } from "../../components/faq-section";
 import {
   FEATURED_HAWKERS,
   getFeaturedHawkerById,
@@ -593,6 +595,11 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                   </div>
                 </section>
               ) : null}
+
+              <FaqSection
+                faqs={buildHawkerFaqs(h)}
+                title={`${h.name}: questions people ask`}
+              />
             </div>
 
             {/* Right column — sticky Visit Info */}

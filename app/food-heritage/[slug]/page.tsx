@@ -5,6 +5,8 @@ import { SiteFooter } from "../../components/site-footer";
 import { SiteHeader } from "../../components/site-header";
 import { getFeaturedHawkerBySlug } from "../../lib/featured-hawkers";
 import { BLOG_POSTS } from "../../lib/blog-posts";
+import { buildDishFaqs } from "../../lib/faqs";
+import { FaqSection } from "../../components/faq-section";
 
 /** Dish page → its "How to Order" guide, when one exists. */
 const HOW_TO_ORDER_BY_DISH: Record<string, string> = {
@@ -310,6 +312,11 @@ export default async function FoodHeritageDishPage({ params }: Props) {
             {/* Best Stalls — full width */}
             <div className="mt-16">
               <BestStalls dishName={dish.name} stalls={dish.bestStalls} />
+            </div>
+
+            {/* Q&A */}
+            <div className="mt-16">
+              <FaqSection faqs={buildDishFaqs(dish)} title={`${dish.name}: questions people ask`} />
             </div>
 
             {/* Hawker Centres */}

@@ -1,6 +1,8 @@
 export type FoodHeritageDish = {
   name: string;
   slug: string;
+  /** Optional hand-written Q&As, shown before the automatic ones. */
+  faqs?: { q: string; a: string; link?: { label: string; href: string } }[];
   /** Optional hand-written Google title / snippet. */
   seoTitle?: string;
   seoDescription?: string;
@@ -1187,6 +1189,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       },
     ],
     shiokOMeter: { spiceHit: 2, messFactor: 1, flavourDepth: 6, queueGame: 5, shiokValue: 10 },
+    faqs: [
+      {
+        q: "What is economy rice?",
+        a: "Economy rice is Singapore's everyday mixed rice: white rice topped with your pick of cooked dishes from a long display counter, from braised pork and curry chicken to stir-fried vegetables, eggs and tofu. You pay by what you choose, which is what keeps it cheap.",
+      },
+      {
+        q: "What is economy rice called in Chinese?",
+        a: "In Mandarin it's 菜饭 (cài fàn), and in Hokkien it's cai png, the name most locals use at the counter. You'll also see 经济饭 (jīngjì fàn), a literal translation of \"economy rice\".",
+      },
+      {
+        q: "Is it \"economy rice\" or \"economic rice\"?",
+        a: "Both, and they mean the same thing. \"Economic rice\" is a common local variant, and some people simply say \"mixed rice\". Malay stalls sell a similar pick-your-dishes format called nasi campur.",
+      },
+      {
+        q: "How do you order economy rice?",
+        a: "Point at the dishes you want (the standard order is one meat and two vegetables), say whether you're eating in or taking away (\"dabao\"), and ask for curry gravy over the rice if you like it saucy.",
+        link: {"label": "Read our full ordering guide →", "href": "/blog/how-to-order-economy-rice-singapore"},
+      },
+    ],
   },
   {
     name: "Satay",
@@ -3970,7 +3991,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     whereToFind:
       "Bandung is a standard menu item at Malay and Indian-Muslim drink stalls in hawker centres and coffeeshops, and is a fixture at Ramadan bazaars and Malay wedding receptions.",
     priceRange:
-      "S$1.50–3 per glass (typical hawker/coffeeshop drink-stall price; not verified against a 2025–26 source)",
+      "S$1.50–3 per glass at hawker and coffeeshop drink stalls",
     imageUrl: "/images/food/bandung.jpg",
     funFact:
       "The intensity of bandung's pink colour varies wildly between stalls depending on the rose syrup brand used — locals have strong preferences about their preferred shade, and some stalls are known specifically for their particularly vivid or particularly pale version.",

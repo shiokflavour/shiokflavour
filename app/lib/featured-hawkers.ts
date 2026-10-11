@@ -2,6 +2,8 @@ export type HawkerRegion = "Central" | "North" | "South" | "East" | "West";
 
 export type FeaturedHawker = {
   id: number;
+  /** Optional hand-written Q&As, shown before the automatic ones. */
+  faqs?: { q: string; a: string; link?: { label: string; href: string } }[];
   /** URL segment for `/hawker/{slug}` (SEO). */
   slug: string;
   name: string;
@@ -150,7 +152,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     nearestMRT:
       "Telok Ayer (DT Line) — 4 min walk",
     tipForVisitors:
-      "Come after 7pm when Boon Tat Street closes to traffic and the satay stalls set up. Order a cold beer and watch the city.",
+      "Come in the evening, when Boon Tat Street closes to traffic and the satay stalls set up. Order a cold beer and watch the city.",
     halal: false,
     openLate: true,
     budgetPerPax:
@@ -641,12 +643,13 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Bedok Interchange Hawker Centre: Best Stalls & What to Eat | ShiokFlavour",
     seoDescription:
       "Next to Bedok MRT: Michelin Bib Gourmand chwee kueh, budget nasi lemak, Thai food, lor mee and mee rebus. The best stalls at Bedok Interchange Hawker Centre.",
-    address: "208 New Upper Changi Road, Bedok",
+    address:
+      "Blk 208B New Upper Changi Road, Bedok",
     lat: 1.324629,
     lng: 103.930477,
     region: "East",
     tag: "Local Favourite",
-    hours: "6am–11pm daily",
+    hours: "Hours vary by stall",
     imageUrl: "/images/food/chwee-kueh.jpg",
     description:
       "An everyday East-side hawker centre right beside Bedok MRT, home to the original Bedok Chwee Kueh stall and plenty of cheap, honest breakfasts and lunches.",
@@ -670,8 +673,6 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     story:
       "Bedok Interchange Hawker Centre sits beside Bedok MRT station and the bus interchange, which makes it the default meal stop for a huge slice of the East. It is not a destination centre with a legend on every row. It is an everyday one, and that is its strength. The stall everyone mentions is Bedok Chwee Kueh, the original outlet of a chwee kueh brand listed in the Michelin Bib Gourmand: soft steamed rice cakes under a heap of salty-sweet preserved radish, eaten for breakfast for a couple of dollars. Around it are the stalls that keep regulars coming back: cheap nasi lemak, a properly spicy Thai stall, lor mee, curry chicken noodles, and Malay breakfasts like mee rebus and soto ayam.",
     vibeCheck: "East Singapore's living room — everyone passes through eventually",
-    localQuote:
-      "Chwee kueh for breakfast every morning and you would never tire of it. That is how good it is.",
     timeline: [
       {
         year: "1989",
@@ -706,6 +707,16 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         name: "Inspirasi",
         dish: "Mee Rebus",
         story: "Malay breakfast classics: mee rebus in thick, sweet potato gravy, soto ayam and chicken porridge, with begedil on the side.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Bedok Interchange Hawker Centre next to Bedok MRT?",
+        a: "Yes. It sits beside Bedok MRT station and the bus interchange, at Blk 208B New Upper Changi Road.",
+      },
+      {
+        q: "What is Bedok Interchange Hawker Centre famous for?",
+        a: "Chwee kueh. The original Bedok Chwee Kueh stall is here, and the brand has been listed in the Michelin Bib Gourmand. Cheap nasi lemak, Thai food and Malay breakfasts like mee rebus are popular too.",
       },
     ],
   },
@@ -2039,7 +2050,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     lng: 103.842590,
     region: "Central",
     tag: "Local Favourite",
-    hours: "6am–10pm daily",
+    hours: "Hours vary by stall",
     imageUrl: "/images/hawkers/peoples-park.jpg",
     description:
       "One of Singapore's oldest market sites, now a busy Chinatown food centre where Sichuan mala and Shanghainese dumplings sit beside old-school Cantonese dim sum and braised meats.",
@@ -2057,15 +2068,13 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     vibes: ["Chinatown locals", "Families", "Heritage flavours", "Budget dining"],
     nearestMRT: "Chinatown (NE/DT Line) — 3 min walk",
     tipForVisitors:
-      "Pair with a wander through People's Park Complex — wet market upstairs, food hall below.",
+      "Pair it with a wander through Chinatown: People's Park Complex is a short walk away on Park Road.",
     halal: false,
     openLate: false,
     budgetPerPax: "$4–$8",
     story:
       "People's Park Food Centre stands on one of the oldest market sites in Singapore. The municipality set up a food shelter for street hawkers here in 1923, and by 1940 it had grown into the island's largest market, famous for durian stalls that traded until two in the morning. A fire in December 1966 destroyed 186 stalls and shops. The three-storey complex that replaced it opened in 1969, with food stalls on the ground floor and homes stacked above. Today the food tells the story of a changing Chinatown: Sichuan mala and Chongqing grilled fish from newer arrivals, Shanghainese dumpling stalls, and old Cantonese hands still steaming char siew bao and braising loh mei the way their customers' grandparents knew it.",
     vibeCheck: "A brutalist icon that feeds its community the way it always has — without apology",
-    localQuote:
-      "Tourists walk straight past. Locals walk right in. That is the entire story of this place.",
     timeline: [
       {
         year: "1923",
@@ -2108,6 +2117,20 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         name: "Jin Feng Mei Shi",
         dish: "Xiao Long Bao",
         story: "Soup-filled xiao long bao and dumplings, folded fresh. Let them cool for a moment before you bite, because the soup inside is scalding.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is People's Park Food Centre the same as People's Park Complex?",
+        a: "No. People's Park Food Centre is its own building at Blk 32 New Market Road, a short walk from People's Park Complex on Park Road. Both are in Chinatown, a few minutes from Chinatown MRT.",
+      },
+      {
+        q: "How old is People's Park Food Centre?",
+        a: "There has been a market on this site since 1923. A fire destroyed it in December 1966, and the current complex opened in 1969. It was upgraded in 2005.",
+      },
+      {
+        q: "What is People's Park Food Centre known for?",
+        a: "A strong Sichuan and northern Chinese streak, from mala xiang guo to xiao long bao, alongside old-school Cantonese favourites like loh mei and char siew bao.",
       },
     ],
   },
@@ -2462,7 +2485,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     lng: 103.804550,
     region: "Central",
     tag: "Local Favourite",
-    hours: "6am–11pm daily",
+    hours: "Hours vary by stall",
     imageUrl: "/images/hawkers/alexandra-village.jpg",
     description:
       "A Bukit Merah hawker centre since 1977, with more than 80 stalls and a Michelin Bib Gourmand claypot laksa at its heart.",
@@ -2486,8 +2509,6 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     story:
       "Alexandra Village Food Centre has fed this corner of Bukit Merah since 1977. It is a big, unpolished neighbourhood centre of more than 80 stalls, with none of the tourist traffic of Chinatown, which is exactly why regulars rate it. The headline act is Depot Road Zhen Shan Mei Claypot Laksa: a family stall that started on Depot Road, moved here, and was awarded a Michelin Bib Gourmand in 2016 for laksa served bubbling in a claypot so it stays hot to the last spoonful. Around it are the stalls that turn a visit into a weekly habit: Hokkien Street prawn mee, Shanghainese xiao long bao and la mian, Hong Kong-style soya sauce chicken and wanton noodles.",
     vibeCheck: "Alexandra's open secret — exceptional food that the neighbourhood guards quietly",
-    localQuote:
-      "Those who know about this place tend to keep it to themselves. The food quality here is exceptional and consistently so.",
     timeline: [
       {
         year: "1977",
@@ -2522,6 +2543,20 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         name: "Xiang Jiang Soya Sauce Chicken",
         dish: "Soya Sauce Chicken",
         story: "Hong Kong-style soya sauce chicken over noodles, or by the quarter, half or whole bird to share.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Alexandra Village Food Centre in Queenstown or Bukit Merah?",
+        a: "It's in Bukit Merah, at Blk 120 Bukit Merah Lane 1. Queenstown MRT is the nearest station, which is why it's often linked with Queenstown.",
+      },
+      {
+        q: "When did Alexandra Village Food Centre open?",
+        a: "In 1977. It closed from 1 April to 30 June 2025 for repairs and redecoration, and has since reopened.",
+      },
+      {
+        q: "Which stall at Alexandra Village has a Michelin Bib Gourmand?",
+        a: "Depot Road Zhen Shan Mei Claypot Laksa, which was awarded a Michelin Bib Gourmand in 2016 for laksa served bubbling in a claypot.",
       },
     ],
   },

@@ -64,6 +64,11 @@ const NEA_NAME_MAP: Record<string, string> = {
   "Pasir Panjang Food Centre": "Pasir Panjang Food Centre",
 };
 
+/** True if NEA publishes a cleaning/closure schedule for this centre. */
+export function hasNeaSchedule(hawkerName: string): boolean {
+  return hawkerName in NEA_NAME_MAP;
+}
+
 type NeaClosureRow = Record<string, string | number | undefined>;
 
 let cachedClosures: NeaClosureRow[] | null = null;
