@@ -443,8 +443,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Hainanese-run kopitiams in Malaya and Singapore, blending local coconut jam with Anglo-Chinese breakfast service.",
     whereToFind:
-      "Ya Kun and Killiney-style chains, plus independent kopitiams in Tanjong Pagar, Tiong Bahru, and heartland void-deck coffee shops serving sets till mid-morning.",
-    priceRange: "S$2–6 for toast set with eggs and drink",
+      "Hawker kopi stalls such as those at Amoy Street Food Centre, old-school kopitiams in Tanjong Pagar and Katong, and chains like Ya Kun, Killiney and Toast Box, which have dozens of outlets islandwide. Most traditional stalls are busiest at breakfast and some sell out by late morning.",
+    priceRange:
+      "S$5–7.50 for a kaya toast set with soft-boiled eggs and kopi (hawker stalls at the low end, chains S$6–7.50); toast alone about S$2–3",
     imageUrl: "/images/food/kaya-toast.png",
     funFact:
       "Purists argue over Hainanese crisp toast versus softer white; both camps dunk fingers of toast into wobbly eggs seasoned with dark soy and white pepper.",
@@ -501,28 +502,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
+        name: "Ah Seng (Hai Nam) Coffee",
+        address: "Amoy Street Food Centre, #02-95, 7 Maxwell Road",
+        area: "Tanjong Pagar",
+        note: "Decades-old hawker stall that still grills bread over charcoal. Get kaya butter toast with soft-boiled eggs; the kaya French toast is a favourite and sells out early. Closed Thursdays and Fridays.",
+        mapsUrl: "https://maps.google.com/?q=Ah+Seng+Hai+Nam+Coffee+Amoy+Street+Food+Centre+Singapore",
+      },
+      {
         name: "Tong Ah Eating House",
         address: "35 Keong Saik Road",
         area: "Tanjong Pagar",
-        note: "One of Singapore's oldest kopitiams — charcoal-toasted bread and kopitiam that feels unchanged since 1939",
-        mapsUrl:
-          "https://maps.google.com/?q=Tong+Ah+Eating+House+Keong+Saik+Road+Singapore",
+        note: "Kopitiam dating to 1939, now a few doors from its old triangular shophouse. Order the crispy thin kaya toast set; the kaya French toast is also popular.",
+        mapsUrl: "https://maps.google.com/?q=Tong+Ah+Eating+House+35+Keong+Saik+Road+Singapore",
       },
       {
-        name: "Killiney Kopitiam",
-        address: "67 Killiney Road",
-        area: "Somerset",
-        note: "The original 1919 outlet — queue down the street on weekends. The kaya here is still made in-house",
-        mapsUrl:
-          "https://maps.google.com/?q=Killiney+Kopitiam+Killiney+Road+Singapore",
-      },
-      {
-        name: "Ya Kun Kaya Toast",
-        address: "Far East Square, #01-01, 18 China Street",
-        area: "CBD",
-        note: "The most accessible option with consistent quality — good entry point if it's your first time",
-        mapsUrl:
-          "https://maps.google.com/?q=Ya+Kun+Kaya+Toast+Far+East+Square+Singapore",
+        name: "Chin Mee Chin Confectionery",
+        address: "204 East Coast Road",
+        area: "Katong",
+        note: "Katong bakery-kopitiam open since 1925, revived after closing in 2018. Charcoal-toasted kaya toast or kaya buns with house-made kaya, plus kopi.",
+        mapsUrl: "https://maps.google.com/?q=Chin+Mee+Chin+Confectionery+204+East+Coast+Road+Singapore",
       },
     ],
     shiokOMeter: {
@@ -542,8 +540,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Mid-20th-century Singapore, with Hokkien and Teochew zi char cooks refining sweet-spicy gravies for crab.",
     whereToFind:
-      "East Coast Seafood Centre for the breezy classic experience; Joo Chiat and Geylang zi char alleys; quality hawker zi char that still steams mantou to order.",
-    priceRange: "S$40–90+ per crab depending on season and venue",
+      "Mostly at zi char restaurants and seafood specialists, including heartland spots like Alexandra Village and Marine Parade, plus a few hawker zi char stalls such as at Newton Food Centre. East Coast Seafood Centre's restaurants closed there in September 2026 ahead of redevelopment, and Long Beach relocated within East Coast Park.",
+    priceRange:
+      "S$60–120+ per crab (market price by weight, roughly S$80–100/kg for Sri Lankan mud crab; varies by season and size)",
     imageUrl: "/images/food/chilli-crab.png",
     funFact:
       "The sauce's silkiness often comes from eggs ribboned in at the last moment—timing separates pool-worthy gravy from overcooked curds.",
@@ -556,8 +555,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Wear old clothes lah — this one confirm get sauce everywhere one.",
     hawkersThatServeIt: [
       "newton-food-centre",
-      "lau-pa-sat",
-      "east-coast-lagoon",
+      "east-coast-lagoon-food-village",
     ],
     howToEat: [
       "Wear something you don't mind staining — no amount of napkins will protect you entirely",
@@ -600,28 +598,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Jumbo Seafood",
-        address: "East Coast Seafood Centre, #01-07/08, 1206 East Coast Pkwy",
-        area: "East Coast",
-        note: "The definitive chilli crab experience — seaside setting, generous portions, and consistently excellent sauce",
-        mapsUrl:
-          "https://maps.google.com/?q=Jumbo+Seafood+East+Coast+Seafood+Centre+Singapore",
+        name: "Alliance Seafood",
+        address: "Newton Food Centre, #01-27, 500 Clemenceau Avenue North",
+        area: "Newton",
+        note: "The hawker-centre option: a long-running zi char stall with repeated Michelin Bib Gourmand awards. Order the chilli crab with fried mantou, or as a crab set.",
+        mapsUrl: "https://maps.google.com/?q=Alliance+Seafood+Newton+Food+Centre+Singapore",
       },
       {
-        name: "Long Beach Seafood",
-        address: "1018 East Coast Pkwy",
-        area: "East Coast",
-        note: "Claims to have invented the black pepper crab — their chilli crab is equally legendary among locals",
-        mapsUrl:
-          "https://maps.google.com/?q=Long+Beach+Seafood+East+Coast+Parkway+Singapore",
+        name: "Keng Eng Kee Seafood",
+        address: "Alexandra Village, Blk 124 Bukit Merah Lane 1, #01-136",
+        area: "Alexandra / Bukit Merah",
+        note: "Third-generation zi char. Its chilli crab gravy is thick, eggy and milder; add coffee pork ribs or moonlight hor fun. Pre-order the crab, as walk-ins often miss out.",
+        mapsUrl: "https://maps.google.com/?q=Keng+Eng+Kee+Seafood+Alexandra+Village+Singapore",
       },
       {
-        name: "No Signboard Seafood",
-        address: "414 Geylang Road",
-        area: "Geylang",
-        note: "Started as a zi char pushcart with no name. Now a local institution with a famous white pepper crab too",
-        mapsUrl:
-          "https://maps.google.com/?q=No+Signboard+Seafood+Geylang+Road+Singapore",
+        name: "Roland Restaurant",
+        address: "89 Marine Parade Central, #06-750",
+        area: "Marine Parade",
+        note: "Run by the family of Cher Yam Tian, widely credited with creating chilli crab. A heritage, eggless, tomato-forward gravy served on top of an HDB car park.",
+        mapsUrl: "https://maps.google.com/?q=Roland+Restaurant+89+Marine+Parade+Central+Singapore",
       },
     ],
     shiokOMeter: {
@@ -836,12 +831,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "bak-chor-mee",
     category: "Singaporean Classics",
     description:
-      "Bak chor mee — minced pork noodles — is Singapore's most personal bowl. Every regular has a preferred stall, a preferred noodle type, and a preferred ratio of vinegar to chilli. The dish is Hokkien in origin: thin egg noodles tossed dry in a dark vinegar-lard sauce with minced pork, liver, fish cake, and braised mushrooms. The sauce is the thing — sharp, slightly sweet, pungent with pork fat and punchy with black vinegar. It is not beautiful. It is not photogenic. It is, by the consensus of people who eat seriously, one of the finest bowls Singapore produces.",
+      "Bak chor mee — minced pork noodles — is Singapore's most personal bowl. Every regular has a preferred stall, a preferred noodle type, and a preferred ratio of vinegar to chilli. The best-known versions are Teochew in origin: thin egg noodles tossed dry in a dark vinegar-lard sauce with minced pork, liver, fish cake, and braised mushrooms. The sauce is the thing — sharp, slightly sweet, pungent with pork fat and punchy with black vinegar. It is not beautiful. It is not photogenic. It is, by the consensus of people who eat seriously, one of the finest bowls Singapore produces.",
     origin:
-      "Hokkien immigrant hawker cooking, evolved in Singapore's post-war street food scene — a dialect community's noodle dish that became a national obsession.",
+      "Teochew immigrant hawker cooking, evolved in Singapore's street food scene — a dialect community's noodle dish that became a national obsession.",
     whereToFind:
-      "Chinatown Complex, Old Airport Road Food Centre, and Toa Payoh heartland stalls — the best ones often have a handwritten sign and a 45-minute queue by 11am.",
-    priceRange: "S$4–8 per bowl",
+      "Bak chor mee is sold at hawker centres and coffee shops across Singapore, from Chinatown's Hong Lim Market & Food Centre to heartland estates such as Toa Payoh and Bedok. The most celebrated stalls draw long queues, so go early or off-peak.",
+    priceRange:
+      "S$5–8 (typical hawker bowl; Michelin-recognised stalls charge about S$7–15 depending on size)",
     imageUrl: "/images/food/bak-chor-mee.png",
     funFact:
       "The dry version (with vinegar-lard sauce) and the soup version are completely different eating experiences — locals are fiercely loyal to one or the other and rarely cross over.",
@@ -856,6 +852,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "chinatown-complex-food-centre",
       "old-airport-road-food-centre",
       "toa-payoh-lorong-8-market",
+      "hong-lim-market-food-centre",
     ],
     howToEat: [
       "Order dry — the soup version is good but the vinegar-lard dry version is the one that built the reputation",
@@ -898,28 +895,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
+        name: "Hill Street Tai Hwa Pork Noodle",
+        address: "Tai Hwa Eating House, #01-12, 466 Crawford Lane",
+        area: "Lavender",
+        note: "Singapore's only Michelin-starred hawker stall (2026). Order the dry bowl with its punchy black vinegar, lard and chilli sauce; expect a long queue.",
+        mapsUrl: "https://maps.google.com/?q=Hill+Street+Tai+Hwa+Pork+Noodle+466+Crawford+Lane+Singapore",
+      },
+      {
         name: "Tai Wah Pork Noodle",
-        address: "Hong Lim Market & Food Centre, #02-01, 531A Upper Cross St",
+        address: "Hong Lim Market & Food Centre, #02-16, 531A Upper Cross Street",
         area: "Chinatown",
-        note: "Michelin Bib Gourmand. The definitive bak chor mee stall — queue before 11am or prepare to wait an hour",
-        mapsUrl:
-          "https://maps.google.com/?q=Tai+Wah+Pork+Noodle+Hong+Lim+Market+Singapore",
+        note: "Bib Gourmand (2026) stall from the same family lineage as Tai Hwa. Dry bak chor mee with a vinegary chilli sauce, minced pork, liver and dumplings.",
+        mapsUrl: "https://maps.google.com/?q=Tai+Wah+Pork+Noodle+Hong+Lim+Market+Food+Centre+Singapore",
       },
       {
-        name: "Seng Kee Black Herbal Bak Kut Teh",
-        address: "Old Airport Road Food Centre, #01-32",
-        area: "Kallang",
-        note: "Neighbourhood institution. The vinegar ratio here is aggressive in the best possible way",
-        mapsUrl:
-          "https://maps.google.com/?q=Old+Airport+Road+Food+Centre+Bak+Chor+Mee+Singapore",
-      },
-      {
-        name: "Toa Payoh Bak Chor Mee",
-        address: "Toa Payoh Lorong 8 Market, #01-08",
-        area: "Toa Payoh",
-        note: "Heartland classic — the uncle has been making the same sauce for thirty years and sees no reason to change",
-        mapsUrl:
-          "https://maps.google.com/?q=Toa+Payoh+Lorong+8+Market+Bak+Chor+Mee+Singapore",
+        name: "Tian Nan Xing Minced Pork Noodle",
+        address: "Kaki Bukit 511 Market & Food Centre, #01-10, 511 Bedok North Street 3",
+        area: "Bedok North",
+        note: "New 2026 Bib Gourmand, linked to Tan Lian Hock's bak chor mee legacy. A supper spot known for the soup version with garlicky pork-bone broth and handmade dumplings.",
+        mapsUrl: "https://maps.google.com/?q=Tian+Nan+Xing+Minced+Pork+Noodle+511+Bedok+North+Street+3+Singapore",
       },
     ],
     shiokOMeter: {
@@ -939,8 +933,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Hokkien immigrant dock workers at Rochor Road in the 1940s — a wok dish born from practical hunger that became one of Singapore's defining plates.",
     whereToFind:
-      "Newton Food Centre and East Coast Lagoon for atmosphere; Old Airport Road and Geylang for serious versions without the tourist markup. Look for charcoal-fired stalls.",
-    priceRange: "S$5–10 per plate",
+      "Sold at hawker centres and coffee shops island-wide; well-known versions cluster at Old Airport Road, Tiong Bahru Market, Toa Payoh and Whampoa food centres, with charcoal-fired stalls in Geylang Lorong 29 and along East Coast Road.",
+    priceRange:
+      "S$5–10 (standard plates about S$5–8; larger portions with extra prawns and squid cost more)",
     imageUrl: "/images/food/hokkien-mee.png",
     funFact:
       "Traditional Hokkien mee is cooked over charcoal, not gas — the heat is more intense and uneven, which is precisely what creates the smokiness locals call wok hei.",
@@ -952,9 +947,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Charcoal one is different. You squeeze the lime, smell the smoke — confirm different lah.",
     hawkersThatServeIt: [
-      "newton-food-centre",
-      "east-coast-lagoon-food-village",
       "old-airport-road-food-centre",
+      "tiong-bahru-market",
     ],
     howToEat: [
       "Squeeze calamansi over the entire plate before doing anything else — the acid brightens every element",
@@ -998,27 +992,24 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestStalls: [
       {
         name: "Nam Sing Hokkien Fried Mee",
-        address: "Old Airport Road Food Centre, #01-32, 51 Old Airport Rd",
-        area: "Kallang",
-        note: "Michelin Bib Gourmand. Charcoal-fired with a prawn broth that has been running since the 1970s — the benchmark version",
-        mapsUrl:
-          "https://maps.google.com/?q=Nam+Sing+Hokkien+Mee+Old+Airport+Road+Food+Centre+Singapore",
+        address: "Old Airport Road Food Centre, #01-32, 51 Old Airport Road",
+        area: "Old Airport Road (Dakota)",
+        note: "Michelin Bib Gourmand (2026). A one-dish stall using thin bee hoon with egg noodles in a rich prawn-shell stock. Expect a long wait; check off-days before going.",
+        mapsUrl: "https://maps.google.com/?q=Nam+Sing+Hokkien+Fried+Mee+Old+Airport+Road+Food+Centre+Singapore",
       },
       {
-        name: "Geylang Lor 29 Hokkien Mee",
-        address: "396 East Coast Road",
-        area: "Geylang",
-        note: "Night market energy, charcoal heat, massive portions — the version that serious eaters make the trip for",
-        mapsUrl:
-          "https://maps.google.com/?q=Geylang+Lor+29+Hokkien+Mee+Singapore",
+        name: "Hong Heng Fried Sotong Prawn Mee",
+        address: "Tiong Bahru Market, #02-01, 30 Seng Poh Road",
+        area: "Tiong Bahru",
+        note: "Bib Gourmand every year since 2016. Fried to order in batches with prawns, squid and sliced fish, plus a homemade chilli. Lunch only, and often sells out.",
+        mapsUrl: "https://maps.google.com/?q=Hong+Heng+Fried+Sotong+Prawn+Mee+Tiong+Bahru+Market+Singapore",
       },
       {
-        name: "Tian Tian Lai Fried Hokkien Mee",
-        address: "Newton Food Centre, #01-05, 500 Clemenceau Ave North",
-        area: "Newton",
-        note: "Generous portions and a properly reduced broth — the accessible version that first-timers can find easily",
-        mapsUrl:
-          "https://maps.google.com/?q=Newton+Food+Centre+Hokkien+Mee+Singapore",
+        name: "Come Daily Fried Hokkien Prawn Mee",
+        address: "Toa Payoh West Market & Food Centre, #02-27, Blk 127 Lorong 1 Toa Payoh",
+        area: "Toa Payoh",
+        note: "Also called Tian Tian Lai, operating since 1968 and listed in the Michelin Guide. Wetter style with pork belly and crispy lard. Mornings only, Wednesday to Sunday.",
+        mapsUrl: "https://maps.google.com/?q=Come+Daily+Fried+Hokkien+Prawn+Mee+Toa+Payoh+Singapore",
       },
     ],
     shiokOMeter: {
@@ -1034,12 +1025,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "wanton-mee",
     category: "Singaporean Classics",
     description:
-      "Wanton mee is Singapore's most democratic noodle: available everywhere, priced for everyone, and done properly at thousands of stalls without any of them becoming famous for it. Thin egg noodles — springy and slightly smoky from the lard — are tossed in a char siew sauce and served with char siew slices, wanton dumplings either fried or in soup, and a scattering of vegetables. It is Cantonese in origin and Singaporean in execution. The char siew is the thing to judge each stall by: properly caramelised, lacquered at the edges, never dry. A great wanton mee stall is one you find close to home and protect quietly.",
+      "Wanton mee is Singapore's most democratic noodle: available everywhere, priced for everyone, and done properly at hundreds of stalls, a handful of which have earned Michelin Bib Gourmand recognition. Thin egg noodles — springy and slightly smoky from the lard — are tossed in a char siew sauce and served with char siew slices, wanton dumplings either fried or in soup, and a scattering of vegetables. It is Cantonese in origin and Singaporean in execution. The char siew is the thing to judge each stall by: properly caramelised, lacquered at the edges, never dry. A great wanton mee stall is one you find close to home and protect quietly.",
     origin:
       "Cantonese noodle tradition brought by Guangdong immigrants — wanton mee in Singapore evolved a distinctive local char siew sauce that separates it from Hong Kong versions.",
     whereToFind:
-      "Every hawker centre in Singapore has a wanton mee stall. The best ones are never the most famous. Find your neighbourhood uncle and stay loyal.",
-    priceRange: "S$3.50–7 per plate",
+      "Wanton mee is a staple at hawker centres and coffee shops across Singapore, usually served dry with char siew sauce or in soup. Several hawker stalls, including ones at Hong Lim, Bukit Merah View and Yuhua Village, hold Michelin Bib Gourmand awards.",
+    priceRange:
+      "S$3.50–7 per plate (hawker stalls; restaurant versions cost more)",
     imageUrl: "/images/food/wanton-mee.png",
     funFact:
       "Singapore wanton mee uses a darker, sweeter char siew sauce than the Hong Kong or Malaysian versions — a local adaptation that happened quietly over decades and is now considered the standard.",
@@ -1055,6 +1047,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "tiong-bahru-market",
       "tampines-round-market",
       "alexandra-village-food-centre",
+      "hong-lim-market-food-centre",
     ],
     howToEat: [
       "Order dry — the sauce-tossed version shows the char siew quality better than the soup version",
@@ -1097,28 +1090,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Hua Kee Wanton Noodle",
-        address: "Amoy Street Food Centre, #01-40, 7 Maxwell Rd",
-        area: "Tanjong Pagar",
-        note: "Michelin Bib Gourmand. The char siew here is consistently the best in the CBD — lacquered edges, tender centre, no exceptions",
-        mapsUrl:
-          "https://maps.google.com/?q=Hua+Kee+Wanton+Noodle+Amoy+Street+Food+Centre+Singapore",
+        name: "Yong Chun Wan Ton Noodle",
+        address: "Bukit Merah View Market & Hawker Centre, #01-56, 115 Bukit Merah View",
+        area: "Redhill / Bukit Merah",
+        note: "Michelin Bib Gourmand. Wok-fried char siew and springy noodles, plus wantons with water chestnut. Opens 5.30am and sells out before lunch; closed Thursdays.",
+        mapsUrl: "https://maps.google.com/?q=Yong+Chun+Wan+Ton+Noodle+115+Bukit+Merah+View+Singapore",
       },
       {
-        name: "Fei Fei Wanton Mee",
-        address: "Jurong West 505 Market & Food Centre, #01-29",
-        area: "Jurong West",
-        note: "West Singapore institution — char siew roasted in-house daily. Locals have been coming since the 1980s",
-        mapsUrl:
-          "https://maps.google.com/?q=Fei+Fei+Wanton+Mee+Jurong+West+Singapore",
+        name: "Fei Fei Roasted Noodle",
+        address: "Yuhua Village Market & Food Centre, #01-28, Blk 254 Jurong East Street 24",
+        area: "Jurong East",
+        note: "Michelin Bib Gourmand family stall of 40+ years, known for charcoal-roasted, well-charred char siew. Arrive early, cash only, closed Sundays.",
+        mapsUrl: "https://maps.google.com/?q=Fei+Fei+Roasted+Noodle+Yuhua+Village+Food+Centre+254+Jurong+East+Street+24+Singapore",
       },
       {
-        name: "Kok Kee Wonton Noodle",
-        address: "Lavender Food Square, 380 Jalan Besar",
-        area: "Jalan Besar",
-        note: "Old-school Cantonese style with a broth that is simmered for hours. The soup wanton version here is exceptional",
-        mapsUrl:
-          "https://maps.google.com/?q=Kok+Kee+Wonton+Noodle+Lavender+Food+Square+Singapore",
+        name: "Ji Ji Noodle House (Ji Ji Wanton Noodle Specialist)",
+        address: "Hong Lim Market & Food Centre, #02-48/49, Blk 531A Upper Cross Street",
+        area: "Chinatown",
+        note: "Michelin Bib Gourmand stall dating to 1965, with slightly thicker, chewier noodles. Get the char siew wanton noodles with fried wanton and the homemade chilli.",
+        mapsUrl: "https://maps.google.com/?q=Ji+Ji+Noodle+House+Hong+Lim+Market+Food+Centre+Singapore",
       },
     ],
     shiokOMeter: {
@@ -1235,8 +1225,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Malay and Javanese street food traditions carried to Singapore by immigrant communities in the early 20th century — satay's roots stretch from Java to the Malay peninsula.",
     whereToFind:
-      "Lau Pa Sat's Boon Tat Street after 7pm for the most cinematic setting; Newton Food Centre for tourist-friendly portions; East Coast Lagoon for the sea-breeze version.",
-    priceRange: "S$0.60–1 per skewer, minimum 10 skewers usually",
+      "Satay Street on Boon Tat Street beside Lau Pa Sat is the best-known evening spot, and East Coast Lagoon Food Village has several charcoal satay stalls by the sea. Chinese-style pork satay is found at places like Geylang's coffee shops and Old Airport Road Food Centre.",
+    priceRange:
+      "S$0.80–1.20 per stick (chicken, mutton, beef or pork; pork belly and prawn cost more; many stalls set a 10-stick minimum)",
     imageUrl: "/images/food/satay.png",
     funFact:
       "The peanut sauce at serious satay stalls is made fresh daily from roasted peanuts — you can tell by the texture, which should be thick and slightly grainy, never smooth.",
@@ -1294,24 +1285,24 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestStalls: [
       {
         name: "Best Satay 7 & 8 (Satay Street)",
-        address: "Boon Tat Street, beside Lau Pa Sat, 18 Raffles Quay",
+        address: "Satay Street, Boon Tat Street, beside Lau Pa Sat, 18 Raffles Quay",
         area: "CBD",
-        note: "Satay Street: the road beside Lau Pa Sat fills with satay carts from 7pm on weekdays and 3pm at weekends. Charcoal smoke, plastic stools and the CBD towers overhead",
-        mapsUrl: "https://maps.google.com/?q=Satay+Street+Lau+Pa+Sat+Singapore",
-      },
-      {
-        name: "Satay by the Bay",
-        address: "East Coast Lagoon Food Village, 1220 East Coast Pkwy",
-        area: "East Coast",
-        note: "Open-air, sea breeze, charcoal smoke — the version that makes satay feel like it was designed for exactly this setting",
-        mapsUrl: "https://maps.google.com/?q=East+Coast+Lagoon+Food+Village+Satay+Singapore",
+        note: "The classic Satay Street experience under the CBD towers. Mixed sets of chicken, mutton or beef and prawn skewers suit groups; comes with chilli-flecked peanut sauce.",
+        mapsUrl: "https://maps.google.com/?q=Best+Satay+7+%26+8+Lau+Pa+Sat+Satay+Street+Singapore",
       },
       {
         name: "Haron Satay",
-        address: "Newton Food Centre, #01-07, 500 Clemenceau Ave North",
-        area: "Newton",
-        note: "One of the longest-running satay stalls in Singapore — the mutton version here is the one locals consistently recommend",
-        mapsUrl: "https://maps.google.com/?q=Haron+Satay+Newton+Food+Centre+Singapore",
+        address: "East Coast Lagoon Food Village, #01-55, 1220 East Coast Parkway",
+        area: "East Coast",
+        note: "Long-running, often the longest queue at East Coast Lagoon. Smoky chicken, beef and mutton skewers with a Javanese-style peanut sauce, eaten by the sea.",
+        mapsUrl: "https://maps.google.com/?q=Haron+Satay+East+Coast+Lagoon+Food+Village+Singapore",
+      },
+      {
+        name: "Kwong Satay",
+        address: "27A Eating House, 549 Geylang Road (corner of Lorong 27A)",
+        area: "Geylang",
+        note: "Chinese-style pork satay (not halal) with heavy char and caramelisation. Order the pork belly skewers and regular pork, plus ketupat. Evenings only.",
+        mapsUrl: "https://maps.google.com/?q=Kwong+Satay+549+Geylang+Road+Singapore",
       },
     ],
     shiokOMeter: { spiceHit: 3, messFactor: 4, flavourDepth: 8, queueGame: 5, shiokValue: 10 },
@@ -1415,8 +1406,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Hokkien Fujianese immigrant tradition adapted in Singapore's Peranakan and Chinese hawker kitchens — both communities claim ownership and both are partially right.",
     whereToFind:
-      "Tiong Bahru Market and Old Airport Road for the best hawker versions; Katong and Joo Chiat for Peranakan-style. Look for stalls with a visible spreading station.",
-    priceRange: "S$1.50–4 per roll",
+      "Popiah is sold at dedicated stalls in hawker centres across the island, such as Maxwell Food Centre and Sembawang Hills Food Centre, as well as at long-running Joo Chiat shophouse specialists and chains like Ann Chin and Qi Ji. Many of the traditional stalls also sell DIY popiah sets for home parties.",
+    priceRange:
+      "S$2–4 per roll (hawker stalls; chains like Qi Ji and Ann Chin sit in the same band, DIY party sets cost more)",
     imageUrl: "/images/food/popiah.jpg",
     funFact:
       "The turnip filling (bang kuang) must be braised for hours until it collapses into strands — the cooking time is the clearest indicator of how seriously a stall takes their popiah.",
@@ -1428,9 +1420,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Don't squeeze — the skin tears and everything falls out. Let the uncle roll it properly lah.",
     hawkersThatServeIt: [
-      "tiong-bahru-market",
-      "old-airport-road-food-centre",
-      "amoy-street-food-centre",
+      "maxwell-food-centre",
+      "sembawang-hills-food-centre",
     ],
     howToEat: [
       "Don't cut it — eat the popiah whole from one end. Cutting releases the filling and defeats the structural engineering of the roll",
@@ -1448,9 +1439,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Chilli", emoji: "🌶️", role: "Added to taste before rolling — not heat for its own sake but a brightness that lifts the entire filling." },
     ],
     bestStalls: [
-      { name: "Kway Guan Huat Joo Chiat Popiah", address: "95 Joo Chiat Road", area: "Joo Chiat", note: "Singapore's most famous popiah stall — three generations, the same recipe, and a queue that proves tradition wins every time", mapsUrl: "https://maps.google.com/?q=Kway+Guan+Huat+Popiah+Joo+Chiat+Singapore" },
-      { name: "Tiong Bahru Popiah", address: "Tiong Bahru Market, #02-13, 30 Seng Poh Road", area: "Tiong Bahru", note: "The neighbourhood version that locals eat every weekend — no fuss, proper braised filling, rolled to order", mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Market+Popiah+Singapore" },
-      { name: "Soon Huat Popiah", address: "Old Airport Road Food Centre, #01-100, 51 Old Airport Rd", area: "Kallang", note: "A stall that has been rolling popiah at Old Airport Road since the centre opened — the peanut quantity here is generous", mapsUrl: "https://maps.google.com/?q=Old+Airport+Road+Food+Centre+Popiah+Singapore" },
+      {
+        name: "Kway Guan Huat Joo Chiat Popiah",
+        address: "95 Joo Chiat Road, Singapore 427389",
+        area: "Joo Chiat",
+        note: "Family business since 1938 that still makes its own popiah skins by hand. Takeaway only. Get a roll or a DIY set for home popiah parties.",
+        mapsUrl: "https://maps.google.com/?q=Kway+Guan+Huat+Joo+Chiat+Popiah+95+Joo+Chiat+Road+Singapore",
+      },
+      {
+        name: "Rojak · Popiah & Cockle",
+        address: "Maxwell Food Centre, #01-56, 1 Kadayanallur Street, Singapore 069184",
+        area: "Chinatown",
+        note: "Listed in the 2026 Michelin Guide. Popiah is rolled to order, and it's worth adding a plate of the rojak too. Closed Wednesdays.",
+        mapsUrl: "https://maps.google.com/?q=Rojak+Popiah+%26+Cockle+Maxwell+Food+Centre+Singapore",
+      },
+      {
+        name: "Ping Kee Popiah",
+        address: "Sembawang Hills Food Centre, #01-32, 590 Upper Thomson Road, Singapore 574419",
+        area: "Upper Thomson",
+        note: "Elderly couple's 30-plus-year-old stall selling only popiah and kueh pie tee. Rolls are made on the spot with just enough sweet sauce. Closed Mondays.",
+        mapsUrl: "https://maps.google.com/?q=Ping+Kee+Popiah+Sembawang+Hills+Food+Centre+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 2, messFactor: 3, flavourDepth: 7, queueGame: 4, shiokValue: 8 },
   },
@@ -1463,8 +1472,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Teochew immigrants from the Swatow region of Guangdong brought the steamed rice cake tradition — Singapore's chai poh topping and sambal pairing are local adaptations.",
     whereToFind:
-      "Tiong Bahru Market, Bedok Interchange, and Ghim Moh for the three most respected versions. Arrive before 9am — good chwee kueh sells out before lunch.",
-    priceRange: "S$1.20–3 for 4–6 pieces",
+      "Chwee kueh is a breakfast staple at hawker centres across Singapore, with well-known stalls at Tiong Bahru Market, Ghim Moh Market & Food Centre and Bedok Interchange Hawker Centre. Go in the morning for the freshest batches.",
+    priceRange:
+      "S$2–3.50 for 4–5 pieces (most hawker stalls; heritage brands at the top end)",
     imageUrl: "/images/food/chwee-kueh.jpg",
     funFact:
       "The chai poh (preserved radish) topping must be fried before serving — raw chai poh is too salty and sharp. The frying caramelises it slightly and makes it the perfect complement to the plain rice cake.",
@@ -1496,9 +1506,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Water", emoji: "💧", role: "The most important ingredient — the ratio of water to rice flour is the entire science of a perfect chwee kueh. Too much and it falls apart." },
     ],
     bestStalls: [
-      { name: "Jian Bo Shui Kueh", address: "Tiong Bahru Market, #02-05, 30 Seng Poh Road", area: "Tiong Bahru", note: "Michelin Bib Gourmand. The benchmark stall — silky texture, generous chai poh, and a queue that forms before they open", mapsUrl: "https://maps.google.com/?q=Jian+Bo+Shui+Kueh+Tiong+Bahru+Market+Singapore" },
-      { name: "Bedok Chwee Kueh", address: "Bedok Interchange Hawker Centre, 208 New Upper Changi Rd", area: "Bedok", note: "Michelin Bib Gourmand. The east side's answer — slightly firmer texture, heavier chai poh topping, equally addictive", mapsUrl: "https://maps.google.com/?q=Bedok+Chwee+Kueh+Interchange+Hawker+Centre+Singapore" },
-      { name: "Ghim Moh Chwee Kueh", address: "Ghim Moh Market & Food Centre, #01-04, 20 Ghim Moh Road", area: "Ghim Moh", note: "Michelin Bib Gourmand. The west side institution — three Michelin-recognised chwee kueh stalls in Singapore, and this is the one westies defend most fiercely", mapsUrl: "https://maps.google.com/?q=Ghim+Moh+Market+Chwee+Kueh+Singapore" },
+      {
+        name: "Jian Bo Shui Kueh",
+        address: "Tiong Bahru Market, #02-05, 30 Seng Poh Road, Singapore 168898",
+        area: "Tiong Bahru",
+        note: "Michelin-listed heritage name dating to 1958. Soft rice cakes come with salty chai poh and a house sambal heavy on dried shrimp.",
+        mapsUrl: "https://maps.google.com/?q=Jian+Bo+Shui+Kueh+Tiong+Bahru+Market+Singapore",
+      },
+      {
+        name: "Ghim Moh Chwee Kueh",
+        address: "Ghim Moh Market & Food Centre, #01-54, 20 Ghim Moh Road, Singapore 270020",
+        area: "Ghim Moh",
+        note: "Sells only chwee kueh and has been going since 1959. Its delicate rice cakes come with savoury, less-sweet chai poh cooked in pork lard. Michelin-listed in 2026.",
+        mapsUrl: "https://maps.google.com/?q=Ghim+Moh+Chwee+Kueh+Ghim+Moh+Market+Food+Centre+Singapore",
+      },
+      {
+        name: "Bedok Chwee Kueh",
+        address: "Bedok Interchange Hawker Centre, #01-19, 208 New Upper Changi Road, Singapore 460208",
+        area: "Bedok",
+        note: "Original outlet of a brand that now has branches islandwide. Its large, very tender rice cakes come with aromatic, mildly spicy sambal. Michelin-listed in 2026.",
+        mapsUrl: "https://maps.google.com/?q=Bedok+Chwee+Kueh+Bedok+Interchange+Hawker+Centre+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 2, messFactor: 1, flavourDepth: 6, queueGame: 7, shiokValue: 9 },
   },
@@ -1738,7 +1766,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     difficulty: "Easy to eat",
     localSay:
       "Mutton murtabak. Not chicken. Mutton is the original and the correct choice. Full stop.",
-    hawkersThatServeIt: ["geylang-serai-market", "tekka-centre", "newton-food-centre"],
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "tekka-centre",
+      "newton-food-centre",
+    ],
     howToEat: [
       "Cut with the scissors or knife provided — murtabak is too thick and dense to tear cleanly by hand",
       "Dip into the curry rather than pouring it on top — you control the richness of each bite",
@@ -1782,7 +1814,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     difficulty: "Easy to eat",
     localSay:
       "Rendang must be dry, not wet. If there is gravy in the rendang, it has not been cooked long enough.",
-    hawkersThatServeIt: ["geylang-serai-market", "tekka-centre", "adam-road-food-centre"],
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "tekka-centre",
+      "adam-road-food-centre",
+    ],
     howToEat: [
       "Take the rice first, then choose dishes — the rice anchors everything and you need to see how much space you have on the plate",
       "Always take the rendang — it is the Nasi Padang stall's most important dish and the one that reveals the cook's skill",
@@ -2079,8 +2115,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Hokkien and Teochew dock workers in colonial Singapore — a fortifying morning meal that combined cheap pork bones with medicinal herbs into something that became one of the island's most beloved dishes.",
     whereToFind:
-      "Geylang and Upper Thomson Road for the Teochew peppery version; Jurong West and the heartland for the Hokkien herbal version. Klang-style (Malaysian) dark herbal is also available in Singapore.",
-    priceRange: "S$10–20 per claypot",
+      "Bak kut teh is sold at dedicated shops and coffee-shop stalls across Singapore, with the clear, peppery Teochew style most common. Claypot specialists such as Sin Heng in Joo Chiat also serve a darker, herbal Hokkien-style broth, often until late at night.",
+    priceRange:
+      "S$7–15 per person (ribs soup with rice; larger shared claypots S$15–40)",
     imageUrl: "/images/food/bak-kut-teh.jpg",
     funFact:
       "The 'tea' in bak kut teh refers to the Chinese tea drunk alongside the soup — traditionally believed to help digest the fatty pork and cut through the richness of the broth.",
@@ -2112,9 +2149,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "You Tiao", emoji: "🥖", role: "Fried dough sticks served alongside — torn and dipped into the broth until saturated. The most satisfying use of you tiao in any dish." },
     ],
     bestStalls: [
-      { name: "Song Fa Bak Kut Teh", address: "11 New Bridge Road", area: "Clarke Quay", note: "Singapore's most famous bak kut teh — the Teochew version, clear and peppery, served since 1969. The queue starts before opening.", mapsUrl: "https://maps.google.com/?q=Song+Fa+Bak+Kut+Teh+New+Bridge+Road+Singapore" },
-      { name: "Ng Ah Sio Bak Kut Teh", address: "208 Rangoon Road", area: "Farrer Park", note: "Michelin Bib Gourmand. Claypot version with an intensely peppery broth — the pork ribs are fall-off-the-bone tender", mapsUrl: "https://maps.google.com/?q=Ng+Ah+Sio+Bak+Kut+Teh+Rangoon+Road+Singapore" },
-      { name: "Founder Bak Kut Teh", address: "347 Balestier Road", area: "Balestier", note: "The dark, herbal Hokkien version done properly — the broth is slow-simmered for hours and the medicinal herbs are balanced without being overwhelming", mapsUrl: "https://maps.google.com/?q=Founder+Bak+Kut+Teh+Balestier+Road+Singapore" },
+      {
+        name: "Joo Siah Bak Koot Teh",
+        address: "Kai Xiang Food Centre, #01-1215, Blk 349 Jurong East Avenue 1",
+        area: "Jurong East",
+        note: "Michelin Bib Gourmand coffee-shop stall with a cloudy, peppery broth. Get the Premium Loin Ribs Soup, which is served only before lunch.",
+        mapsUrl: "https://maps.google.com/?q=Joo+Siah+Bak+Koot+Teh+349+Jurong+East+Avenue+1+Singapore",
+      },
+      {
+        name: "Song Fa Bak Kut Teh (New Bridge Road)",
+        address: "#01-01, 11 New Bridge Road",
+        area: "Clarke Quay",
+        note: "Flagship of the brand that began as a Johor Road pushcart in 1969. Michelin Bib Gourmand; clear Teochew peppery broth with free top-ups. Add you tiao.",
+        mapsUrl: "https://maps.google.com/?q=Song+Fa+Bak+Kut+Teh+11+New+Bridge+Road+Singapore",
+      },
+      {
+        name: "Sin Heng Claypot Bak Koot Teh",
+        address: "#01-01, 439 Joo Chiat Road",
+        area: "Joo Chiat",
+        note: "Long-running claypot shop and 2026 Michelin Bib Gourmand pick serving both the peppery Teochew style and the herbal 'Special' Hokkien style. Open late; try the claypot noodles.",
+        mapsUrl: "https://maps.google.com/?q=Sin+Heng+Claypot+Bak+Koot+Teh+439+Joo+Chiat+Road+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 3, messFactor: 2, flavourDepth: 9, queueGame: 7, shiokValue: 9 },
   },
@@ -2175,8 +2230,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Hokkien hawker innovation — prawn noodles were created by using prawn shells and heads (considered waste by restaurants) to make a broth of remarkable depth and intensity.",
     whereToFind:
-      "Beach Road Prawn Noodle House, Blanco Court Prawn Mee, and hawker versions at Old Airport Road and Tekka Centre. The best stalls are identified by a dark, deeply orange broth.",
-    priceRange: "S$5–12 per bowl depending on prawn size",
+      "Prawn noodles are found at hawker centres and coffee shops across Singapore, with several well-known specialists around Beach Road, Geylang, Adam Road and Zion Road. Most offer soup or dry versions with a choice of yellow noodles, bee hoon or kway teow.",
+    priceRange:
+      "S$5–8 for a regular bowl; S$10–20+ for big or jumbo prawn versions",
     imageUrl: "/images/food/hae-mee.jpg",
     funFact:
       "The richest hae mee broths are made by first dry-frying prawn shells and heads until charred, then adding them to the stock pot — the charred shells add a smoky depth that un-roasted shells cannot produce.",
@@ -2192,6 +2248,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "old-airport-road-food-centre",
       "bedok-interchange-hawker-centre",
       "alexandra-village-food-centre",
+      "adam-road-food-centre",
     ],
     howToEat: [
       "Taste the broth first before adding anything — it should be intensely savoury and slightly sweet from the prawn",
@@ -2209,9 +2266,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Sambal Belacan", emoji: "🌶️", role: "Chilli with shrimp paste — the funky, pungent contrast to the clean sweetness of the prawn broth. Applied carefully." },
     ],
     bestStalls: [
-      { name: "Beach Road Prawn Mee", address: "370 East Coast Road", area: "Katong", note: "The most cited prawn noodle stall in Singapore — the broth here is reduced to a depth that is genuinely difficult to achieve", mapsUrl: "https://maps.google.com/?q=Beach+Road+Prawn+Mee+East+Coast+Road+Singapore" },
-      { name: "Blanco Court Prawn Mee", address: "243 Beach Road, Golden Mile Food Centre", area: "Beach Road", note: "Michelin Bib Gourmand. The Beach Road institution — the dry version with a thick prawn paste sauce is the one locals order", mapsUrl: "https://maps.google.com/?q=Blanco+Court+Prawn+Mee+Golden+Mile+Food+Centre+Singapore" },
-      { name: "Tekka Prawn Noodles", address: "Tekka Centre, #01-320, 665 Buffalo Road", area: "Little India", note: "The neighbourhood version for first-timers — accessible, consistent, and properly orange", mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Prawn+Noodles+Singapore" },
+      {
+        name: "Zhi Wei Xian Zion Road Big Prawn Noodle",
+        address: "Zion Riverside Food Centre, #01-04, 70 Zion Road, Singapore 247792",
+        area: "River Valley",
+        note: "Bib Gourmand stall known for its rich prawn broth; get the big prawn or pork rib prawn mee with chilli and pork lard.",
+        mapsUrl: "https://maps.google.com/?q=Zion+Road+Big+Prawn+Noodle+Zion+Riverside+Food+Centre+Singapore",
+      },
+      {
+        name: "Adam Rd Noo Cheng Big Prawn Noodle",
+        address: "Adam Road Food Centre, #01-27, 2 Adam Road, Singapore 289876",
+        area: "Bukit Timah",
+        note: "Bib Gourmand; the signature is the dry big prawn noodle in sweet-spicy sauce with a bowl of fresh prawn soup on the side. Closed Mondays.",
+        mapsUrl: "https://maps.google.com/?q=Noo+Cheng+Big+Prawn+Noodle+Adam+Road+Food+Centre+Singapore",
+      },
+      {
+        name: "Jalan Sultan Prawn Mee",
+        address: "2 Jalan Ayer, off Lorong 1 Geylang, Singapore 389141",
+        area: "Geylang",
+        note: "Bib Gourmand stall running for decades; order the dry version tossed in sambal with fried shallots, or the soup with its naturally sweet prawn broth.",
+        mapsUrl: "https://maps.google.com/?q=Jalan+Sultan+Prawn+Mee+2+Jalan+Ayer+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 3, messFactor: 4, flavourDepth: 9, queueGame: 7, shiokValue: 9 },
   },
@@ -2224,8 +2299,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Hakka Chinese immigrant tradition — yong tau foo (酿豆腐) means 'stuffed tofu' in Hakka and reflects the Hakka habit of making protein go further by incorporating it into vegetables.",
     whereToFind:
-      "Ampang Yong Tau Foo in the CBD; Hakka restaurants in the heartland; most hawker centres have at least one display-style stall where you point and choose.",
-    priceRange: "S$4–10 depending on number of pieces chosen",
+      "Almost every hawker centre has a display-style yong tau foo stall where you pick your pieces; Chinatown's Chinatown Complex and People's Park food centres are well-known clusters, alongside neighbourhood favourites in heartland estates like Ang Mo Kio and Toa Payoh.",
+    priceRange:
+      "S$3.50–8 (most stalls charge about S$0.70–1 per piece with a 5–6 piece minimum; noodles or rice extra)",
     imageUrl: "/images/food/yong-tau-foo.jpg",
     funFact:
       "The fish paste used to stuff the vegetables must be bouncy and springy — if it's dense and crumbly, the fish content is too low and it has been padded with flour.",
@@ -2241,6 +2317,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "amoy-street-food-centre",
       "tampines-round-market",
       "peoples-park-food-centre",
+      "chinatown-complex-food-centre",
     ],
     howToEat: [
       "Choose a mix of vegetables and tofu rather than all tofu — the variety of textures is what makes yong tau foo interesting",
@@ -2258,9 +2335,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Clear Broth", emoji: "🫙", role: "The soup version's base — anchovy and pork, light and clean. Designed to let the stuffed vegetables' individual flavours come through." },
     ],
     bestStalls: [
-      { name: "Ampang Yong Tau Foo", address: "1 Tras Link, #01-14, 100AM Shopping Mall", area: "Tanjong Pagar", note: "The most celebrated yong tau foo in Singapore's CBD — the fish paste here is made fresh daily and the soup is properly clear", mapsUrl: "https://maps.google.com/?q=Ampang+Yong+Tau+Foo+Tanjong+Pagar+Singapore" },
-      { name: "Fu Lin Yong Tau Foo", address: "Alexandra Village Food Centre, #01-58, 120 Bukit Merah Ln 1", area: "Alexandra", note: "The neighbourhood version that locals in Queenstown have been eating for decades — generous portions and a consistent fish paste quality", mapsUrl: "https://maps.google.com/?q=Fu+Lin+Yong+Tau+Foo+Alexandra+Village+Food+Centre+Singapore" },
-      { name: "Hakka Yong Tau Foo", address: "Chinatown Complex Food Centre, 335 Smith Street", area: "Chinatown", note: "The traditional Hakka version — less variety, more technique. The fish paste is denser and more intensely flavoured than the typical hawker version", mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Yong+Tau+Foo+Singapore" },
+      {
+        name: "Xiu Ji Ikan Bilis Yong Tau Fu",
+        address: "Chinatown Complex Market & Food Centre, #02-87/88, 335 Smith Street",
+        area: "Chinatown",
+        note: "Michelin Bib Gourmand 2026. Hakka-style handmade fish-paste pieces in a clear broth with fried ikan bilis; get the stuffed bitter gourd, brinjal and fish cake.",
+        mapsUrl: "https://maps.google.com/?q=Xiu+Ji+Ikan+Bilis+Yong+Tau+Fu+Chinatown+Complex+Singapore",
+      },
+      {
+        name: "Yong Xiang Xing Dou Fu",
+        address: "People's Park Complex Food Centre, #01-1084, 32 New Market Road",
+        area: "Chinatown",
+        note: "Long-queue Chinatown stall serving a fixed bowl of house-made tofu and fish-paste pieces in clear soup; simple, light and focused on paste quality.",
+        mapsUrl: "https://maps.google.com/?q=Yong+Xiang+Xing+Dou+Fu+People%27s+Park+Food+Centre+Singapore",
+      },
+      {
+        name: "Xi Xiang Feng Yong Tau Foo",
+        address: "Blk 724 Ang Mo Kio Ave 6 Market & Food Centre, #01-23, 724 Ang Mo Kio Ave 6",
+        area: "Ang Mo Kio",
+        note: "Heartland favourite with around 40 items to pick from; go dry with QQ bee hoon and its much-praised sweet sauce, or try chee cheong fun.",
+        mapsUrl: "https://maps.google.com/?q=Xi+Xiang+Feng+Yong+Tau+Foo+724+Ang+Mo+Kio+Ave+6+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 1, messFactor: 2, flavourDepth: 6, queueGame: 4, shiokValue: 8 },
   },
@@ -2389,12 +2484,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "fish-head-curry",
     category: "Indian & South Asian Heritage",
     description:
-      "Fish head curry is Singapore's most theatrical dish: the head of a red snapper or grouper, halved and submerged in a rich, tangy curry of tamarind, coconut milk, and ground spices, served on a banana leaf with rice. The dish is entirely Singaporean — created in the 1950s by S. M. Gomez, a South Indian chef who combined Indian curry technique with the Chinese community's appreciation for fish head, producing something that neither tradition had cooked before. Today fish head curry is eaten by every community in Singapore and belongs completely to none of them. The cheek meat is the best part. The eye is for the brave.",
+      "Fish head curry is Singapore's most theatrical dish: the head of a red snapper or grouper, halved and submerged in a rich, tangy curry of tamarind, coconut milk, and ground spices, served on a banana leaf with rice. The dish is entirely Singaporean — said to have been created in 1949 by Marian Jacob Gomez, a Malayalee immigrant from Kerala who combined Indian curry technique with the Chinese community's appreciation for fish head, producing something that neither tradition had cooked before. Today fish head curry is eaten by every community in Singapore and belongs completely to none of them. The cheek meat is the best part. The eye is for the brave.",
     origin:
-      "Invented in Singapore in the 1950s by S. M. Gomez at his restaurant on Race Course Road — a deliberate fusion of South Indian curry and Chinese fish-head eating culture.",
+      "Said to have been invented in Singapore in 1949 by Marian Jacob Gomez at his restaurant on Sophia Road — a deliberate fusion of South Indian curry and Chinese fish-head eating culture.",
     whereToFind:
-      "Race Course Road's Indian restaurants for the original; Tekka Centre for the hawker version; banana-leaf restaurants in Little India for the full ceremonial experience.",
-    priceRange: "S$20–45 per head depending on fish size and venue",
+      "Fish head curry is mostly served at Indian restaurants around Race Course Road in Little India and at Chinese- and Nyonya-style zi char and curry stalls in heartland hawker centres and coffee shops. It is a sharing dish, so go with a group.",
+    priceRange:
+      "S$25–45 (per fish head to share; half heads from about S$25, whole heads S$30–40+, restaurants higher)",
     imageUrl: "/images/food/fish-head-curry.jpg",
     funFact:
       "The tamarind in the curry serves as a natural preservative as well as a flavour element — fish head curry actually improves over 24 hours as the tamarind continues to work into the fish.",
@@ -2405,7 +2501,10 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     difficulty: "Adventure eat",
     localSay:
       "The cheek meat is the best part of the fish. If you are afraid of the head, you are eating the wrong part.",
-    hawkersThatServeIt: ["tekka-centre", "geylang-serai-market", "newton-food-centre"],
+    hawkersThatServeIt: [
+      "geylang-serai-market",
+      "newton-food-centre",
+    ],
     howToEat: [
       "Start with the cheek meat — it's the most prized portion and the easiest to access without technical knowledge",
       "Spoon the curry over your rice and eat them together — the rice absorbs the tamarind curry and becomes the best rice you will eat this week",
@@ -2422,9 +2521,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Banana Leaf", emoji: "🌿", role: "The serving vessel at traditional restaurants — it imparts a faint grassy fragrance and makes the eating experience ceremonial rather than merely functional." },
     ],
     bestStalls: [
-      { name: "Banana Leaf Apolo", address: "54 Race Course Road", area: "Little India", note: "The most famous fish head curry in Singapore — served on banana leaf since 1974 and credited with popularising the dish among all communities", mapsUrl: "https://maps.google.com/?q=Banana+Leaf+Apolo+Race+Course+Road+Singapore" },
-      { name: "Muthu's Curry", address: "138 Race Course Road", area: "Little India", note: "The second great Race Course Road institution — the curry here is slightly more tamarind-forward and the head portions are famously large", mapsUrl: "https://maps.google.com/?q=Muthu+Curry+Race+Course+Road+Singapore" },
-      { name: "Tekka Fish Head Curry", address: "Tekka Centre, #01-248, 665 Buffalo Road", area: "Little India", note: "The hawker version — smaller portion, lower price, same fundamental recipe. The accessible entry point to Singapore fish head curry", mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Fish+Head+Curry+Singapore" },
+      {
+        name: "Muthu's Curry",
+        address: "138 Race Course Road, #01-01, Singapore 218591",
+        area: "Little India",
+        note: "Bib Gourmand Race Course Road institution open since the late 1960s; order the signature South Indian-style fish head curry with rice and a side of masala vegetables.",
+        mapsUrl: "https://maps.google.com/?q=Muthu%27s+Curry+138+Race+Course+Road+Singapore",
+      },
+      {
+        name: "Zai Shun Curry Fish Head",
+        address: "253 Jurong East Street 24, #01-205, Singapore 600253",
+        area: "Jurong East",
+        note: "Bib Gourmand Chinese-style stall with a bright, assam-forward curry over very fresh fish; open mornings to mid-afternoon, closed Wednesdays, cash only.",
+        mapsUrl: "https://maps.google.com/?q=Zai+Shun+Curry+Fish+Head+Jurong+East+Street+24+Singapore",
+      },
+      {
+        name: "Na Na Curry",
+        address: "Bukit Merah View Market & Hawker Centre, #01-47, Blk 115 Bukit Merah View, Singapore 151115",
+        area: "Bukit Merah",
+        note: "Family-run hawker stall since 1989 and a long-running Bib Gourmand; the spicy, assam-tinged Chinese-style curry fish head is the signature.",
+        mapsUrl: "https://maps.google.com/?q=Na+Na+Curry+Bukit+Merah+View+Hawker+Centre+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 8, messFactor: 7, flavourDepth: 9, queueGame: 5, shiokValue: 8 },
   },
@@ -2636,11 +2753,12 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Teochew and Hokkien immigrant tradition — steamed turnip-rice cakes adapted from southern Chinese preserved vegetable cooking into a wok-fried hawker staple.",
     whereToFind:
-      "Old Airport Road Food Centre, Tiong Bahru Market, and Toa Payoh hawker centres for respected versions. Look for a wok that is well-seasoned and dark from years of frying — pale woks produce pale results.",
-    priceRange: "S$3–6 per plate",
+      "Fried carrot cake is a breakfast staple at neighbourhood hawker centres across Singapore, such as Toa Payoh, Ghim Moh and Redhill. Many stalls open early and sell out by late morning or early afternoon.",
+    priceRange:
+      "S$3–6 per plate (small to large; mixed black-and-white or prawn add-ons cost more)",
     imageUrl: "/images/food/chai-tow-kway.jpg",
     funFact:
-      "The 'carrot' in the name is a mistranslation of the Teochew dialect word for white radish (菜头糕, chai tow kueh) — the vegetable used is entirely different from the orange root vegetable Westerners associate with the name.",
+      "The 'carrot' in the name is a mistranslation of the Teochew dialect word for white radish (菜头粿, chai tow kway) — the vegetable used is entirely different from the orange root vegetable Westerners associate with the name.",
     bestPairedWith:
       "A cup of kopi-o or teh, and a side of you tiao — the contrast between the dense kway and the airy fried dough is one of the great hawker breakfast combinations.",
     halal: false,
@@ -2652,6 +2770,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "old-airport-road-food-centre",
       "tiong-bahru-market",
       "toa-payoh-lorong-8-market",
+      "ghim-moh-market-food-centre",
     ],
     howToEat: [
       "Decide between black and white before you order — asking for both is acceptable but marks you as indecisive",
@@ -2689,25 +2808,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Outram Park Chai Tow Kway",
-        address: "Hong Lim Market & Food Centre, #02-18, 531A Upper Cross St",
-        area: "Chinatown",
-        note: "One of Singapore's most celebrated versions — the black version here has an especially deep caramel char from a seasoned wok that has been frying for decades",
-        mapsUrl: "https://maps.google.com/?q=Outram+Park+Chai+Tow+Kway+Hong+Lim+Singapore",
+        name: "Chey Sua Carrot Cake",
+        address: "Toa Payoh West Market & Food Centre, #02-30, Blk 127 Lorong 1 Toa Payoh",
+        area: "Toa Payoh",
+        note: "Long-running Bib Gourmand stall (2026) serving white only. Pan-fried until crisp and caramelised on one side and soft inside; mornings only, expect a wait.",
+        mapsUrl: "https://maps.google.com/?q=Chey+Sua+Carrot+Cake+127+Lorong+1+Toa+Payoh+Singapore",
       },
       {
-        name: "Heng Carrot Cake",
-        address: "Old Airport Road Food Centre, #01-57, 51 Old Airport Rd",
-        area: "Kallang",
-        note: "Beloved by regulars for its consistent white version — the egg is always perfectly set and the chai poh ratio is exactly right",
-        mapsUrl: "https://maps.google.com/?q=Heng+Carrot+Cake+Old+Airport+Road+Singapore",
+        name: "Fu Ming Cooked Food",
+        address: "Redhill Food Centre, #01-49, 85 Redhill Lane",
+        area: "Redhill",
+        note: "Bib Gourmand (2026). Carrot cake made from scratch daily in both black and white; the black is richer with dark soy. Closed Mondays and Tuesdays.",
+        mapsUrl: "https://maps.google.com/?q=Fu+Ming+Cooked+Food+Redhill+Food+Centre+85+Redhill+Lane+Singapore",
       },
       {
-        name: "Tiong Bahru Chai Tow Kway",
-        address: "Tiong Bahru Market, #02-09, 30 Seng Poh Road",
-        area: "Tiong Bahru",
-        note: "Neighbourhood institution — the black version here is slightly sweeter than most and has a devoted weekend morning following",
-        mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Market+Chai+Tow+Kway+Singapore",
+        name: "Ghim Moh Carrot Cake",
+        address: "Ghim Moh Road Market & Food Centre, #01-16, 20 Ghim Moh Road",
+        area: "Ghim Moh",
+        note: "Husband-and-wife stall: neat, crisp-edged white and a messier, charred, salty-sweet black. Order both to compare; mornings only.",
+        mapsUrl: "https://maps.google.com/?q=Ghim+Moh+Carrot+Cake+20+Ghim+Moh+Road+Singapore",
       },
     ],
     shiokOMeter: {
@@ -2728,8 +2847,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Teochew and Hokkien coastal cooking — oyster omelette reflects the Southern Chinese tradition of using sweet potato starch as a thickener, adapted by Singapore hawkers into a wok-fired staple.",
     whereToFind:
-      "Old Airport Road Food Centre and Newton Food Centre for the most respected versions; most hawker centres island-wide have a stall. The key indicator is a properly seasoned black wok and very fresh oysters.",
-    priceRange: "S$5–10 per plate",
+      "Most hawker centres have a stall frying orh luak, often alongside carrot cake or fried kway teow; Newton Food Centre and Old Airport Road Food Centre each have several well-known stalls, and evening supper centres like Chomp Chomp are popular spots.",
+    priceRange:
+      "S$5–12 (small plates from about S$5–8, larger sizes S$10–12)",
     imageUrl: "/images/food/orh-luak.jpg",
     funFact:
       "The quality of orh luak depends almost entirely on the freshness of the oysters — veteran hawkers receive their oyster deliveries daily and sell out before the evening. Day-old oysters are the primary reason mediocre orh luak exists.",
@@ -2786,25 +2906,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Ah Chuan Oyster Omelette",
-        address: "Old Airport Road Food Centre, #01-32, 51 Old Airport Rd",
-        area: "Kallang",
-        note: "The benchmark version at Old Airport Road — the wok here runs extremely hot and the edges are consistently crispy without the centre ever overcooking",
-        mapsUrl: "https://maps.google.com/?q=Ah+Chuan+Oyster+Omelette+Old+Airport+Road+Singapore",
-      },
-      {
-        name: "Hup Kee Fried Oyster",
-        address: "Maxwell Food Centre, #01-97, 1 Kadayanallur St",
-        area: "Tanjong Pagar",
-        note: "Maxwell's most popular orh luak stall — the sweet potato starch ratio here produces a particularly yielding, custardy centre",
-        mapsUrl: "https://maps.google.com/?q=Hup+Kee+Fried+Oyster+Maxwell+Food+Centre+Singapore",
-      },
-      {
-        name: "Newton Orh Luak",
-        address: "Newton Food Centre, #01-26, 500 Clemenceau Ave North",
+        name: "Hup Kee Fried Oyster Omelette",
+        address: "Newton Food Centre, #01-73, 500 Clemenceau Avenue North",
         area: "Newton",
-        note: "Tourist-accessible without sacrificing quality — the oysters here are large and the portions generous",
-        mapsUrl: "https://maps.google.com/?q=Newton+Food+Centre+Oyster+Omelette+Singapore",
+        note: "Michelin Bib Gourmand 2026, dating to the 1960s Glutton's Square era; starchy batter fried crisp with plump oysters and house-made chilli. Evenings only.",
+        mapsUrl: "https://maps.google.com/?q=Hup+Kee+Fried+Oyster+Omelette+Newton+Food+Centre+Singapore",
+      },
+      {
+        name: "Ah Chuan Fried Oyster Omelette",
+        address: "Toa Payoh Lorong 7 Market & Food Centre, #01-25, Blk 22 Toa Payoh Lorong 7",
+        area: "Toa Payoh",
+        note: "Decades-old couple-run stall famed for crispy-outside, soft-chewy-inside omelette with briny oysters and lime-spiked chilli; also does a prawn version. Short hours.",
+        mapsUrl: "https://maps.google.com/?q=Ah+Chuan+Fried+Oyster+Omelette+Toa+Payoh+Lorong+7+Singapore",
+      },
+      {
+        name: "Heng Carrot Cake & Oyster Omelette",
+        address: "Newton Food Centre, #01-28, 500 Clemenceau Avenue North",
+        area: "Newton",
+        note: "Michelin Bib Gourmand 2026 stall better known for carrot cake, but its lighter-on-starch oyster omelette and fried oysters are recommended too.",
+        mapsUrl: "https://maps.google.com/?q=Heng+Carrot+Cake+Oyster+Omelette+Newton+Food+Centre+Singapore",
       },
     ],
     shiokOMeter: {
@@ -2922,8 +3042,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Teochew immigrant hawker tradition — handmade fishballs from pounded fresh fish were a Teochew coastal specialty, adapted into a noodle soup by Singapore's hawkers in the post-war decades.",
     whereToFind:
-      "Every hawker centre in Singapore has a fishball noodles stall. The best ones are often unmarked and identifiable only by the length of the queue and the freshness of the fishballs.",
-    priceRange: "S$3–6 per bowl",
+      "Fishball noodle (mee pok) stalls are found in most hawker centres and kopitiams, usually serving mee pok, mee kia, kway teow or bee hoon, dry or soup. Stalls that shape their own fishballs in-house often draw early-morning queues and sell out by lunch.",
+    priceRange:
+      "S$4–6.50 (hawker bowl usually S$4–5; food-court and upsized bowls more)",
     imageUrl: "/images/food/fishball-noodles.jpg",
     funFact:
       "Handmade fishballs are formed by squeezing fish paste through the fingers — the resulting texture is irregular and springy, completely different from the machine-made fishballs sold in supermarkets that most people have stopped noticing are inferior.",
@@ -2935,9 +3056,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Press the fishball with your chopstick. If it bounces back, it's handmade. If it doesn't, order something else.",
     hawkersThatServeIt: [
-      "maxwell-food-centre",
-      "chinatown-complex-food-centre",
-      "amoy-street-food-centre",
+      "tiong-bahru-market",
     ],
     howToEat: [
       "Order dry if you want to taste the noodle sauce quality, soup if you want to judge the broth — both are valid entry points",
@@ -2980,25 +3099,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Nam Seng Fishball Noodles",
-        address: "Maxwell Food Centre, #01-79, 1 Kadayanallur St",
-        area: "Tanjong Pagar",
-        note: "Three-generation stall that still makes fishballs by hand — the texture is noticeably different from machine-made and the regulars know it",
-        mapsUrl: "https://maps.google.com/?q=Nam+Seng+Fishball+Noodles+Maxwell+Food+Centre+Singapore",
+        name: "LiXin Teochew Fishball Noodles",
+        address: "Kim Keat Palm Market & Food Centre, #01-20, 22 Toa Payoh Lorong 7",
+        area: "Toa Payoh",
+        note: "Michelin Bib Gourmand (2026) original stall, pushcart roots since 1968. Order dry mee pok with the spicy house chilli and lard; handmade yellowtail fishballs. Kim Keat Palm is closed for repairs until about mid-December 2026.",
+        mapsUrl: "https://maps.google.com/?q=LiXin+Teochew+Fishball+Noodles+Kim+Keat+Palm+Market+Toa+Payoh+Singapore",
       },
       {
-        name: "Seng Huat Fishball Noodle",
-        address: "Amoy Street Food Centre, #01-56, 7 Maxwell Road",
-        area: "Tanjong Pagar",
-        note: "The CBD institution — packed with office workers at lunch. The dry version with their house chilli is the order",
-        mapsUrl: "https://maps.google.com/?q=Seng+Huat+Fishball+Noodle+Amoy+Street+Singapore",
+        name: "Xin Lu Teochew Fishball Noodles",
+        address: "Mei Ling Market & Food Centre, #02-05, 159 Mei Chin Road",
+        area: "Queenstown",
+        note: "Ex-Margaret Drive stall with large, bouncy fishballs shaped in-house from yellowtail and wolf herring. Go dry and add extra fishballs.",
+        mapsUrl: "https://maps.google.com/?q=Xin+Lu+Fishball+Noodle+Mei+Ling+Market+Singapore",
       },
       {
-        name: "Chinatown Fishball Story",
-        address: "Chinatown Complex Food Centre, #02-197, 335 Smith Street",
-        area: "Chinatown",
-        note: "Famous for a young hawker who revived traditional hand-pounding techniques — the fishballs here have a texture that converts sceptics",
-        mapsUrl: "https://maps.google.com/?q=Fishball+Story+Chinatown+Complex+Singapore",
+        name: "Hui Ji Fishball Noodles",
+        address: "Tiong Bahru Market, #02-44, 30 Seng Poh Road",
+        area: "Tiong Bahru",
+        note: "Tiong Bahru favourite: firm fishballs, bouncy fishcake and fish dumplings, with a ketchup-tinged chilli and light sweet soup. Add crispy lard or yong tau foo.",
+        mapsUrl: "https://maps.google.com/?q=Hui+Ji+Fishball+Noodles+Tiong+Bahru+Market+Singapore",
       },
     ],
     shiokOMeter: {
@@ -3509,7 +3628,6 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "The straw is not optional. If you don't suck the marrow, you did not eat sup tulang — you just had expensive bone soup.",
     hawkersThatServeIt: [
-      "albert-centre-market",
       "geylang-serai-market",
       "tekka-centre",
     ],
@@ -4262,12 +4380,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "lor-ark",
     category: "Chinese Dialect Heritage",
     description:
-      "Braised duck rice is Teochew cooking at its most patient and most rewarding: a whole duck simmered for hours in a master stock of dark soy, five spice, galangal, and aromatics until the meat yields completely and the skin turns a deep mahogany. Sliced over rice with braised tofu, braised egg, preserved vegetables, and the master stock poured over as a gravy, it is one of the most comforting and completely satisfying plates in Singapore's hawker world. Teochew hawkers built the dish from the tradition of lor bak — master-stock braising — and applied it to the duck that Teochew communities have prized since their fishing village origins in Guangdong. The best stalls maintain the same master stock pot for years, refreshing and seasoning it continuously until it has accumulated a complexity that no newly started pot can replicate.",
+      "Braised duck rice is Teochew cooking at its most patient and most rewarding: a whole duck simmered for hours in a master stock of dark soy, five spice, galangal, and aromatics until the meat yields completely and the skin turns a deep mahogany. Sliced over rice with braised tofu, braised egg, preserved vegetables, and the master stock poured over as a gravy, it is one of the most comforting and completely satisfying plates in Singapore's hawker world. Teochew hawkers built the dish from the tradition of lor (卤) — master-stock braising — and applied it to the duck that Teochew communities have prized since their fishing village origins in Guangdong. The best stalls maintain the same master stock pot for years, refreshing and seasoning it continuously until it has accumulated a complexity that no newly started pot can replicate.",
     origin:
-      "Teochew immigrant tradition — braised duck rice reflects the Teochew mastery of lor bak (master-stock braising), applied to duck as a celebration and everyday meal ingredient.",
+      "Teochew immigrant tradition — braised duck rice reflects the Teochew mastery of lor (卤, master-stock braising), applied to duck as a celebration and everyday meal ingredient.",
     whereToFind:
-      "Bedok's 85 Fengshan Market for the most famous version; Old Airport Road and Chinatown Complex for respected alternatives. The best stalls often have a hanging duck visible from outside.",
-    priceRange: "S$4–8 per plate",
+      "Braised duck rice is a staple at hawker centres across Singapore, in both Teochew (lighter, herbal gravy) and Hokkien (darker, thicker gravy) styles. Tekka Centre, Ghim Moh Market and Chinatown Complex each have well-known stalls.",
+    priceRange:
+      "S$4–7 (basic plate about S$4–5.50; sets, drumstick or extra duck cost more)",
     imageUrl: "/images/food/lor-ark.jpg",
     funFact:
       "The master stock used to braise the duck at the most celebrated stalls is decades old — continuously refreshed with new aromatics and replenished with liquid, it accumulates a depth of flavour over years that simply cannot be achieved quickly.",
@@ -4282,6 +4401,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "bedok-85-fengshan-market",
       "old-airport-road-food-centre",
       "chinatown-complex-food-centre",
+      "ghim-moh-market-food-centre",
+      "tekka-centre",
     ],
     howToEat: [
       "Ask for extra braising stock poured over the rice — it is the sauce that makes the plate, and most stalls are generous with it",
@@ -4324,25 +4445,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Ah Seng Braised Duck Rice",
-        address: "Bedok 85 Fengshan Market, #01-07, 85 Bedok North St 4",
-        area: "Bedok",
-        note: "The most celebrated braised duck rice in Singapore — the queue here on weekends is evidence of how seriously the east side takes its duck",
-        mapsUrl: "https://maps.google.com/?q=Ah+Seng+Braised+Duck+Bedok+85+Singapore",
+        name: "Chuan Kee Boneless Braised Duck",
+        address: "Ghim Moh Market & Food Centre, #01-04, 20 Ghim Moh Road",
+        area: "Ghim Moh / Buona Vista",
+        note: "Michelin Bib Gourmand (2026). Get the boneless duck rice drenched in its rich soy-herbal gravy; the set adds a bowl of bak kut teh.",
+        mapsUrl: "https://maps.google.com/?q=Chuan+Kee+Boneless+Braised+Duck+Ghim+Moh+Market+Singapore",
       },
       {
-        name: "Lim Kee Braised Duck Rice",
-        address: "Old Airport Road Food Centre, #01-90, 51 Old Airport Rd",
-        area: "Kallang",
-        note: "The Old Airport Road version — the master stock here has a particularly strong galangal presence that is the Teochew signature",
-        mapsUrl: "https://maps.google.com/?q=Braised+Duck+Rice+Old+Airport+Road+Singapore",
+        name: "Heng Gi Goose and Duck Rice",
+        address: "Tekka Centre, #01-335, 665 Buffalo Road (second outlet: Senja Hawker Centre, #02-07, 2 Senja Close)",
+        area: "Little India",
+        note: "Teochew-style braised duck from a decades-old Tekka stall with Michelin Guide recognition. Order duck rice with egg and offal; tangy chilli and herbal soup on the side.",
+        mapsUrl: "https://maps.google.com/?q=Heng+Gi+Goose+and+Duck+Rice+Tekka+Centre+Singapore",
       },
       {
-        name: "Ah Xiao Teochew Braised Duck",
-        address: "Old Airport Road Food Centre, #01-07",
-        area: "Kallang",
-        note: "Michelin Bib Gourmand. The duck slices here are consistently the most tender at Old Airport Road and the braised egg is exceptional",
-        mapsUrl: "https://maps.google.com/?q=Ah+Xiao+Teochew+Braised+Duck+Old+Airport+Road+Singapore",
+        name: "Jin Ji Teochew Braised Duck & Kway Chap",
+        address: "Chinatown Complex Market & Food Centre, #02-156, 335 Smith Street",
+        area: "Chinatown",
+        note: "Tender bone-in Teochew braised duck over soy-rich rice with herbal soup; the bento-style combo set is the stall's signature for sharing.",
+        mapsUrl: "https://maps.google.com/?q=Jin+Ji+Teochew+Braised+Duck+Chinatown+Complex+Singapore",
       },
     ],
     shiokOMeter: {

@@ -132,7 +132,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "Central",
     tag: "Tourist Must-Visit",
     hours:
-      "24 hours (stall hours vary); Satay Street from 7pm weekdays, 3pm weekends",
+      "24 hours (stall hours vary); Satay Street from the evening",
     imageUrl: "/images/hawkers/lau-pa-sat.jpg",
     description:
       "A 24-hour food centre inside the 1894 cast-iron Telok Ayer Market, with Satay Street smoking on Boon Tat Street every night.",
@@ -647,7 +647,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     region: "East",
     tag: "Local Favourite",
     hours: "6am–11pm daily",
-    imageUrl: "/images/hawkers/bedok-interchange.jpg",
+    imageUrl: "/images/food/chwee-kueh.jpg",
     description:
       "An everyday East-side hawker centre right beside Bedok MRT, home to the original Bedok Chwee Kueh stall and plenty of cheap, honest breakfasts and lunches.",
     mustTry: [
@@ -725,7 +725,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     tag: "Supper Spot",
     hours:
       "Hours vary by stall",
-    imageUrl: "/images/hawkers/bedok-85.jpg",
+    imageUrl: "/images/food/bak-chor-mee.jpg",
     description:
       "East-side supper institution at Blk 85 Bedok North St 4, famed for soupy bak chor mee, satay bee hoon, pork porridge and BBQ seafood late into the night.",
     mustTry: [
@@ -1800,7 +1800,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     tag: "Local Favourite",
     hours:
       "Hours vary by stall",
-    imageUrl: "/images/hawkers/toa-payoh.jpg",
+    imageUrl: "/images/food/bak-kut-teh.jpg",
     description:
       "A busy Toa Payoh neighbourhood food centre with about 80 stalls, known for peppery bak kut teh, kway chap, handmade mee hoon kway and wanton noodles.",
     mustTry: [
