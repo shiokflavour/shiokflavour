@@ -344,8 +344,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Southeast Asian shaved ice desserts combining Chinese red bean traditions with Malay and Nonya toppings.",
     whereToFind:
-      "Old Airport Road Food Centre, Chinatown Complex dessert stalls, and classic heartland hawker drink shops with long queues after school.",
-    priceRange: "S$2–5",
+      "Ice kachang is sold at dessert and drinks stalls in most hawker centres. ABC Brickworks Market and Tiong Bahru Market have two of the better-known dessert stalls.",
+    priceRange:
+      "S$2.50–5 (basic bowls are cheapest; durian, mango or other premium toppings cost more)",
     imageUrl: "/images/food/ice-kachang.png",
     funFact:
       "The name bundles \"ice\" with kachang (Malay for beans)—red beans remain the soul ingredient under all that colour.",
@@ -357,9 +358,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Eat until shiok, then regret because finish already. Order another one lah!",
     hawkersThatServeIt: [
-      "newton-food-centre",
-      "maxwell-food-centre",
-      "bedok-interchange-hawker-centre",
+      "abc-brickworks-market",
+      "tiong-bahru-market",
     ],
     howToEat: [
       "Dig from the top down — don't mix everything at once or the ice goes flat and watery",
@@ -402,28 +402,18 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Jin Jin Dessert",
-        address: "Old Airport Road Food Centre, #01-38, 51 Old Airport Rd",
-        area: "Kallang",
-        note: "Legendary stall with towering portions and a loyal queue. The durian ice kachang is a must-try",
-        mapsUrl:
-          "https://maps.google.com/?q=Jin+Jin+Dessert+Old+Airport+Road+Food+Centre+Singapore",
+        name: "Jin Jin Hot/Cold Dessert",
+        address: "ABC Brickworks Market & Food Centre, #01-21, 6 Jalan Bukit Merah",
+        area: "Bukit Merah",
+        note: "Revived old-school dessert stall known for its durian-topped ice kachang and 'Gangster Ice' (durian and mango). Open into the night; closed Wednesdays.",
+        mapsUrl: "https://maps.google.com/?q=Jin+Jin+Hot+Cold+Dessert+ABC+Brickworks+Market+Singapore",
       },
       {
-        name: "Mei Heong Yuen Dessert",
-        address: "67-69 Temple Street, Chinatown",
-        area: "Chinatown",
-        note: "Traditional dessert shop in the heart of Chinatown — generous toppings and old-school charm",
-        mapsUrl:
-          "https://maps.google.com/?q=Mei+Heong+Yuen+Dessert+Temple+Street+Chinatown+Singapore",
-      },
-      {
-        name: "Selera Rasa Ice Kachang",
-        address: "Adam Road Food Centre, #01-02, 2 Adam Road",
-        area: "Bukit Timah",
-        note: "No-frills and neighbourhood-loved — the kind of stall regulars visit twice a week",
-        mapsUrl:
-          "https://maps.google.com/?q=Adam+Road+Food+Centre+Ice+Kachang+Singapore",
+        name: "Liang Liang Garden",
+        address: "Tiong Bahru Market, #02-75, 30 Seng Poh Rd",
+        area: "Tiong Bahru",
+        note: "Known for its Milo Dinosaur ice kachang, heaped with Milo powder, gula melaka and chocolate sauce. Very sweet, so share it.",
+        mapsUrl: "https://maps.google.com/?q=Liang+Liang+Garden+Tiong+Bahru+Market+Singapore",
       },
     ],
     shiokOMeter: {
@@ -1312,12 +1302,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "roti-john",
     category: "Singaporean Classics",
     description:
-      "Roti John is Singapore's original fusion — a French baguette (the 'roti') fried egg-and-minced-meat side down on a griddle, sliced open, and loaded with sambal, mayonnaise, and sometimes cheese. The dish was created by Malay hawkers in the 1970s who called it 'John' after the British and European customers who asked for a local sandwich. The resulting creation belongs to no single cuisine and is entirely Singaporean. Late-night hawker markets, Ramadan bazaars, and Malay food stalls serve it as supper: messy, filling, and satisfying in a way that nothing healthy ever quite manages.",
+      "Roti John is Singapore's original fusion — a French baguette (the 'roti') fried egg-and-minced-meat side down on a griddle, sliced open, and loaded with sambal, mayonnaise, and sometimes cheese. Popular legend credits a 1960s Malay hawker in Sembawang who made a minced-meat omelette sandwich for an Englishman who wanted a burger. 'John' was then a common way to address Westerners. The resulting creation belongs to no single cuisine and is entirely Singaporean. Late-night hawker markets, Ramadan bazaars, and Malay food stalls serve it as supper: messy, filling, and satisfying in a way that nothing healthy ever quite manages.",
     origin:
-      "Invented by Malay hawkers in Singapore in the 1960s–70s — a deliberate fusion of Western baguette and local Malay egg-and-meat cooking, named for its European customers.",
+      "Credited to Malay and Indian-Muslim hawkers in Singapore in the 1960s–70s (accounts differ) — a deliberate fusion of Western baguette and local Malay egg-and-meat cooking, named for its European customers.",
     whereToFind:
-      "Geylang Serai Ramadan Bazaar for the definitive version; Adam Road Food Centre late at night; most Malay-run hawker stalls that operate into the evening.",
-    priceRange: "S$3–6 per portion",
+      "Roti john is mostly sold at Malay and Indian-Muslim stalls in hawker centres and coffeeshops, and prata and supper spots often have it too. It is also a staple at the Geylang Serai Hari Raya bazaar during Ramadan.",
+    priceRange:
+      "S$4–9 (hawker versions from about S$4–5; cheese or loaded versions cost more)",
     imageUrl: "/images/food/roti-john.png",
     funFact:
       "The name 'John' is a colonial-era Singaporean slang term for a Western person — the dish was literally named after the type of customer who first ordered it.",
@@ -1329,9 +1320,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Best eaten standing up at midnight. Anything less and you are not doing it right.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "adam-road-food-centre",
-      "bedok-85-fengshan-market",
+
     ],
     howToEat: [
       "Eat immediately — the bread goes from crispy to soggy within minutes as the egg and sambal soak in",
@@ -1374,25 +1363,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Ramadan Bazaar Roti John Stalls",
-        address: "Geylang Serai Market, 1 Geylang Serai (Ramadan only)",
-        area: "Geylang Serai",
-        note: "During Ramadan the bazaar outside Geylang Serai becomes Singapore's best roti john destination — queues form before iftar",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Ramadan+Bazaar+Singapore",
+        name: "Rosy & Nora",
+        address: "Haig Road Market & Food Centre, #01-15, 14 Haig Road",
+        area: "Geylang / Joo Chiat",
+        note: "A classic mutton-and-egg roti john, fried to order until crisp and charred. Sweet chilli sauce comes on the side instead of mayo. Also try the kentang ball.",
+        mapsUrl: "https://maps.google.com/?q=Rosy+%26+Nora+Haig+Road+Market+14+Haig+Road+Singapore",
       },
       {
-        name: "Adam Road Roti John",
-        address: "Adam Road Food Centre, #01-02, 2 Adam Road",
-        area: "Bukit Timah",
-        note: "Late-night institution — opens when the satay and nasi lemak crowd peaks. The mutton version is the one to order",
-        mapsUrl: "https://maps.google.com/?q=Adam+Road+Food+Centre+Roti+John+Singapore",
+        name: "Nur Jannatun Naim Roti John",
+        address: "Bedok North 511 Market, #01-12, 511 Bedok North Street 3",
+        area: "Bedok North",
+        note: "A cheesy roti john with egg, chicken or beef filling and chilli sauce made fresh daily. It also does a beef-stuffed sabsuka. Closed Wednesdays.",
+        mapsUrl: "https://maps.google.com/?q=Nur+Jannatun+Naim+Roti+John+511+Bedok+North+Street+3+Singapore",
       },
       {
-        name: "Selera Rasa Roti John",
-        address: "Bedok 85 Fengshan Market, 85 Bedok North St 4",
-        area: "Bedok",
-        note: "East-side late-night staple — griddled hard and loaded generously. Best after 10pm when the supper crowd arrives",
-        mapsUrl: "https://maps.google.com/?q=Bedok+85+Fengshan+Market+Roti+John+Singapore",
+        name: "The Bread Gang",
+        address: "Aiman Cafe (coffeeshop), Blk 235 Jurong East Street 21",
+        area: "Jurong East",
+        note: "A Muslim-owned stall known for loaded modern versions. Get the Roti John Cheeseburger with nacho cheese, or try the pizza and black pepper versions.",
+        mapsUrl: "https://maps.google.com/?q=The+Bread+Gang+Aiman+Cafe+235+Jurong+East+Street+21+Singapore",
       },
     ],
     shiokOMeter: { spiceHit: 3, messFactor: 5, flavourDepth: 6, queueGame: 4, shiokValue: 9 },
@@ -1608,10 +1597,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     description:
       "Mee rebus is a bowl of contradictions that resolves beautifully: yellow egg noodles in a thick, sweet-savoury gravy made from sweet potato, dried shrimp, and spices, topped with a hard-boiled egg, green chilli, fried tofu, and calamansi. The gravy is the key — it should be thick enough to coat the noodles completely, slightly sweet from the sweet potato starch, and deeply savoury from the dried shrimp and prawn paste base. A Malay and Indian-Malay heritage dish, it sits at the intersection of two culinary traditions and belongs comfortably to both.",
     origin:
-      "Malay and Indian-Muslim hawker tradition — mee rebus (boiled noodles) emerged in Singapore and Malaysia as a distinctively local noodle dish with no equivalent elsewhere.",
+      "Malay and Indian-Muslim hawker tradition — mee rebus (boiled noodles) emerged in Singapore and Malaysia as a local noodle dish, with Javanese roots (Indonesia has its own mie rebus).",
     whereToFind:
-      "Geylang Serai Market and Tekka Centre for the most authentic versions; heartland Malay stalls across the island for neighbourhood versions that are often just as good.",
-    priceRange: "S$3–6 per bowl",
+      "The best-known bowls come from long-running Malay family stalls in hawker centres, such as Adam Road, Bedok Interchange, Ang Mo Kio and Haig Road. Many open from morning to early evening and close one day a week, so check hours first.",
+    priceRange:
+      "S$3–5 for a basic bowl (loaded versions with ribs or chicken run about S$6–9)",
     imageUrl: "/images/food/mee-rebus.jpg",
     funFact:
       "The gravy's thickness comes from blended sweet potato — not starch or flour. The sweet potato also gives the gravy its natural sweetness, which is why the dish tastes complex without being complicated.",
@@ -1622,8 +1612,6 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "The gravy must be thick enough to hold the spoon upright. If it pours like water, something went wrong.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tekka-centre",
       "adam-road-food-centre",
       "bedok-interchange-hawker-centre",
     ],
@@ -1643,9 +1631,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Green Chilli", emoji: "🌶️", role: "Sliced fresh and placed on top — sharp, grassy heat that is distinctly different from sambal and essential to the mee rebus flavour profile." },
     ],
     bestStalls: [
-      { name: "Haji Kadir Mee Rebus", address: "Geylang Serai Market, #01-09, 1 Geylang Serai", area: "Geylang Serai", note: "The most respected mee rebus in the Geylang Serai area — the gravy is made fresh each morning and sells out before noon", mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Mee+Rebus+Singapore" },
-      { name: "Rosyth Mee Rebus", address: "Tekka Centre, #01-305, 665 Buffalo Road", area: "Little India", note: "Tekka's most popular mee rebus stall — extra-thick gravy and a generous topping of fried shallots that most stalls skip", mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Mee+Rebus+Singapore" },
-      { name: "Adam Road Mee Rebus", address: "Adam Road Food Centre, #01-08, 2 Adam Road", area: "Bukit Timah", note: "Late-night version for the supper crowd — slightly spicier than the daytime standard and served with extra chilli on the side", mapsUrl: "https://maps.google.com/?q=Adam+Road+Food+Centre+Mee+Rebus+Singapore" },
+      {
+        name: "Selamat Datang Warong Pak Sapari",
+        address: "Adam Road Food Centre, #01-09, 2 Adam Road",
+        area: "Bukit Timah",
+        note: "Michelin Bib Gourmand (2026 guide). Rich, heavy mee rebus gravy and equally famous mee soto; expect lunchtime queues.",
+        mapsUrl: "https://maps.google.com/?q=Selamat+Datang+Warong+Pak+Sapari+Adam+Road+Food+Centre+Singapore",
+      },
+      {
+        name: "Inspirasi",
+        address: "Bedok Interchange Hawker Centre, #01-11, 208B New Upper Changi Road",
+        area: "Bedok",
+        note: "Family stall said to date from 1970. Gravy built on chicken stock, ikan bilis, sweet potato and fermented bean paste; add a begedil.",
+        mapsUrl: "https://maps.google.com/?q=Inspirasi+Bedok+Interchange+Hawker+Centre+Singapore",
+      },
+      {
+        name: "Yunos N Family",
+        address: "Ang Mo Kio Central Market & Food Centre, #01-01, 724 Ang Mo Kio Avenue 6",
+        area: "Ang Mo Kio",
+        note: "Started as a pushcart in 1965 and still family-run. Known for its chilli and many variations, like mee rebus tarik and mee rebus ribs.",
+        mapsUrl: "https://maps.google.com/?q=Yunos+N+Family+724+Ang+Mo+Kio+Avenue+6+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 5, messFactor: 4, flavourDepth: 7, queueGame: 4, shiokValue: 8 },
   },
@@ -1658,22 +1664,23 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Malay-Peranakan origin in Singapore and Malaya — despite its name, mee siam as cooked in Singapore has no clear Thai predecessor and is a genuinely local dish.",
     whereToFind:
-      "Tekka Centre and Geylang Serai for authentic Malay versions; most hawker centres have at least one mee siam stall that the neighbourhood regulars know about.",
-    priceRange: "S$3–5 per bowl",
+      "Mee siam is sold at Chinese-run noodle stalls and Malay/Indian-Muslim stalls in hawker centres across Singapore, usually as a breakfast or lunch dish. The best-known stalls open early and often sell out by midday.",
+    priceRange:
+      "S$3.50–5 (hawker bowls; café versions cost more)",
     imageUrl: "/images/food/mee-siam.jpg",
     funFact:
       "The key to mee siam gravy is tamarind — not lime, not vinegar, but the slow sourness of tamarind that takes minutes to develop on the palate rather than hitting immediately.",
     bestPairedWith:
       "A glass of bandung (rose syrup milk) for contrast, or teh tarik for the classic Malay breakfast pairing.",
-    halal: true,
+    halal: false,
     spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "Must squeeze the calamansi yourself — adding it in the kitchen kills the freshness. The sourness should be yours to control.",
     hawkersThatServeIt: [
       "tekka-centre",
-      "geylang-serai-market",
-      "tampines-round-market",
+      "chinatown-complex-food-centre",
+      "ghim-moh-market-food-centre",
     ],
     howToEat: [
       "Squeeze calamansi over the bowl before doing anything else — the acid is the most important element and must be fresh",
@@ -1691,9 +1698,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Tau Pok & Egg", emoji: "🟨", role: "Fried tofu and hard-boiled egg — the protein elements that add substance and absorb the tangy gravy." },
     ],
     bestStalls: [
-      { name: "Haji M Abdul Rajak Mee Siam", address: "Tekka Centre, #01-249, 665 Buffalo Road", area: "Little India", note: "The most respected mee siam in Tekka — the tamarind gravy here is properly tart and the sambal is house-made", mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Mee+Siam+Singapore" },
-      { name: "Geylang Serai Mee Siam", address: "Geylang Serai Market, 1 Geylang Serai", area: "Geylang Serai", note: "The Malay heartland version — slightly sweeter than the Tekka version and served with extra cockles", mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Mee+Siam+Singapore" },
-      { name: "Tampines Mee Siam", address: "Tampines Round Market, 137 Tampines St 11", area: "Tampines", note: "East-side neighbourhood classic — no frills, consistent gravy, and the loyal regulars who have been ordering the same bowl since secondary school", mapsUrl: "https://maps.google.com/?q=Tampines+Round+Market+Mee+Siam+Singapore" },
+      {
+        name: "Jia Xiang Mee Siam",
+        address: "Redhill Food Centre, #01-35, 85 Redhill Lane",
+        area: "Redhill",
+        note: "New Michelin Bib Gourmand in 2026. Decades-old family recipe. Spicy, sweet, tangy gravy with egg and crispy pork lard, so it is not halal. Lontong is also sold here.",
+        mapsUrl: "https://maps.google.com/?q=Jia+Xiang+Mee+Siam+Redhill+Food+Centre+85+Redhill+Lane+Singapore",
+      },
+      {
+        name: "Shi Xian",
+        address: "409 AMK Market & Food Centre, #01-24, 409 Ang Mo Kio Ave 10",
+        area: "Ang Mo Kio",
+        note: "Has made only mee siam and mee rebus for about 50 years. The gravy is rich with assam and the chilli is made in-house. Sells out before noon.",
+        mapsUrl: "https://maps.google.com/?q=Shi+Xian+Mee+Siam+409+Ang+Mo+Kio+Ave+10+Singapore",
+      },
+      {
+        name: "Hup Hup Mee Siam・Laksa・Lor Mee",
+        address: "Circuit Road Market & Food Centre, #02-14, 80 Circuit Road",
+        area: "MacPherson",
+        note: "A second-generation stall using the owner's mother's recipe. The gravy is mild and tangy, and you can add cockles, fishballs or ngoh hiang from the laksa side.",
+        mapsUrl: "https://maps.google.com/?q=Hup+Hup+Mee+Siam+80+Circuit+Road+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 5, messFactor: 3, flavourDepth: 7, queueGame: 3, shiokValue: 8 },
   },
@@ -1754,8 +1779,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Indian-Muslim (Arab-Indian) hawker tradition — murtabak arrived with South Asian and Arab merchants who settled in Singapore's Kampong Glam area in the 19th century.",
     whereToFind:
-      "Kampong Glam's Arab Street area for the most traditional Indian-Muslim version; Geylang Serai Ramadan Bazaar for the most festive; Singapore Zam Zam on North Bridge Road year-round.",
-    priceRange: "S$6–12 per portion",
+      "The classic murtabak restaurants are on North Bridge Road opposite Sultan Mosque in Kampong Glam, and most open from early morning until late night. Prata shops across the island also make murtabak.",
+    priceRange:
+      "S$7–20 (single chicken or mutton portions at the low end; large, deer or sharing sizes at the top)",
     imageUrl: "/images/food/murtabak.jpg",
     funFact:
       "A skilled murtabak maker stretches the dough by spinning it in the air — the technique is the same as pizza tossing and creates the paper-thin layers that give murtabak its distinctive flaky texture.",
@@ -1767,9 +1793,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Mutton murtabak. Not chicken. Mutton is the original and the correct choice. Full stop.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tekka-centre",
-      "newton-food-centre",
+
     ],
     howToEat: [
       "Cut with the scissors or knife provided — murtabak is too thick and dense to tear cleanly by hand",
@@ -1787,9 +1811,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Thin Curry", emoji: "🫙", role: "Served alongside for dipping — usually a thin mutton or dhal curry that cuts through the richness of the egg-and-meat filling." },
     ],
     bestStalls: [
-      { name: "Zam Zam Restaurant", address: "697-699 North Bridge Road", area: "Kampong Glam", note: "The most famous murtabak in Singapore since 1908 — the mutton version here has been ordered by generations of Singaporeans and every visitor who is paying attention", mapsUrl: "https://maps.google.com/?q=Zam+Zam+Restaurant+North+Bridge+Road+Singapore" },
-      { name: "Victory Restaurant", address: "701 North Bridge Road", area: "Kampong Glam", note: "Next door to Zam Zam and equally respected — the rivalry between these two stalls is Singapore's most civilised culinary dispute", mapsUrl: "https://maps.google.com/?q=Victory+Restaurant+North+Bridge+Road+Singapore" },
-      { name: "Ramadan Murtabak Stalls", address: "Geylang Serai Bazaar, 1 Geylang Serai (Ramadan only)", area: "Geylang Serai", note: "During Ramadan the murtabak stalls at Geylang Serai draw the longest queues in Singapore — the wait can exceed an hour and is completely worth it", mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Ramadan+Bazaar+Murtabak+Singapore" },
+      {
+        name: "Singapore Zam Zam",
+        address: "697-699 North Bridge Road",
+        area: "Kampong Glam",
+        note: "Serving murtabak since 1908, opposite Sultan Mosque. Get the mutton murtabak, or try the deer version if you want something unusual.",
+        mapsUrl: "https://maps.google.com/?q=Singapore+Zam+Zam+697+North+Bridge+Road+Singapore",
+      },
+      {
+        name: "Victory Restaurant",
+        address: "701 North Bridge Road",
+        area: "Kampong Glam",
+        note: "Zam Zam's next-door rival since 1910. Order the mutton or chicken murtabak, with plenty of filling and a dipping curry.",
+        mapsUrl: "https://maps.google.com/?q=Victory+Restaurant+701+North+Bridge+Road+Singapore",
+      },
+      {
+        name: "Al-Tasneem",
+        address: "709 North Bridge Road",
+        area: "Kampong Glam",
+        note: "A few doors down the same strip, and often recommended as a less crowded alternative. Mutton murtabak is the order.",
+        mapsUrl: "https://maps.google.com/?q=Al-Tasneem+709+North+Bridge+Road+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 3, messFactor: 4, flavourDepth: 8, queueGame: 6, shiokValue: 9 },
   },
@@ -1802,8 +1844,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Minangkabau people of West Sumatra (Padang region) — Nasi Padang arrived in Singapore with Malay and Indonesian immigrants and is now a fixture of the island's Malay food landscape.",
     whereToFind:
-      "Geylang Serai Market, Hjh Maimunah in Jalan Besar, and Tekka Centre for the most authentic spreads. Look for stalls with the widest selection of dishes displayed in covered pots.",
-    priceRange: "S$5–15 depending on dishes selected",
+      "Long-running Minangkabau-style shops cluster around Kampong Glam (Jalan Pisang and Kandahar Street), and Geylang Serai Market has a decades-old hawker stall. Go before lunch for the fullest spread, since popular dishes sell out.",
+    priceRange:
+      "S$5–15 per plate (vegetable sides from about S$1–1.50 each; meat and fish dishes push the total up)",
     imageUrl: "/images/food/nasi-padang.jpg",
     funFact:
       "Traditional Nasi Padang restaurants bring all available dishes to the table at once and you only pay for what you eat — a system that requires absolute trust between hawker and customer that has worked for generations.",
@@ -1816,8 +1859,6 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Rendang must be dry, not wet. If there is gravy in the rendang, it has not been cooked long enough.",
     hawkersThatServeIt: [
       "geylang-serai-market",
-      "tekka-centre",
-      "adam-road-food-centre",
     ],
     howToEat: [
       "Take the rice first, then choose dishes — the rice anchors everything and you need to see how much space you have on the plate",
@@ -1835,9 +1876,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "White Rice", emoji: "🍚", role: "Plain steamed rice — the neutral base that absorbs every curry, sambal, and gravy on the plate without competing with any of them." },
     ],
     bestStalls: [
-      { name: "Hjh Maimunah Restaurant", address: "11 & 15 Jalan Pisang", area: "Jalan Besar", note: "Singapore's most celebrated Nasi Padang — the rendang here has been cited by food writers as the benchmark version on the island", mapsUrl: "https://maps.google.com/?q=Hjh+Maimunah+Restaurant+Jalan+Pisang+Singapore" },
-      { name: "Geylang Serai Nasi Padang", address: "Geylang Serai Market, 1 Geylang Serai", area: "Geylang Serai", note: "The market spread — widest selection of dishes, freshest on weekend mornings, and the most competitive prices", mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Nasi+Padang+Singapore" },
-      { name: "Warong Nasi Pariaman", address: "738 North Bridge Road", area: "Kampong Glam", note: "One of Singapore's oldest Nasi Padang restaurants — the beef rendang recipe has been unchanged since the 1960s", mapsUrl: "https://maps.google.com/?q=Warong+Nasi+Pariaman+North+Bridge+Road+Singapore" },
+      {
+        name: "Hjh Maimunah Restaurant",
+        address: "11 Jalan Pisang, Singapore 199078",
+        area: "Kampong Glam",
+        note: "Long-time Malay-Indonesian favourite and former multi-year Bib Gourmand; get the sambal telur, begedil and beef rendang from the counter spread.",
+        mapsUrl: "https://maps.google.com/?q=Hjh+Maimunah+Restaurant+11+Jalan+Pisang+Singapore",
+      },
+      {
+        name: "Sinar Pagi Nasi Padang",
+        address: "Geylang Serai Market, #02-137, 1 Geylang Serai",
+        area: "Geylang Serai",
+        note: "Kapau-style family stall dating to the 1960s, with 40-plus dishes; try the sambal goreng, ayam sambal, sayur lodeh and assam pedas fish. Often sells out by lunch.",
+        mapsUrl: "https://maps.google.com/?q=Sinar+Pagi+Nasi+Padang+Geylang+Serai+Market+Singapore",
+      },
+      {
+        name: "Rumah Makan Minang",
+        address: "18 & 18A Kandahar Street (also Our Tampines Hub, #B1-47A, 1 Tampines Walk)",
+        area: "Kampong Glam",
+        note: "Minangkabau shop near Arab Street with 20-plus dishes; order the beef rendang, sotong masak hitam, tahu telur or ayam panggang.",
+        mapsUrl: "https://maps.google.com/?q=Rumah+Makan+Minang+18+Kandahar+Street+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 7, messFactor: 3, flavourDepth: 9, queueGame: 5, shiokValue: 9 },
   },
@@ -2182,8 +2241,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Hokkien immigrant hawker cooking — lor mee (卤面, braised noodles) reflects the Hokkien tradition of slow-braising proteins in dark, spiced soy and incorporating the braising liquid into the dish.",
     whereToFind:
-      "Old Airport Road Food Centre, Toa Payoh, and Bedok for the most respected versions — lor mee is a heartland staple that most hawker centres have at least one version of.",
-    priceRange: "S$4–7 per bowl",
+      "Most heartland hawker centres have a lor mee stall, usually open from breakfast to early afternoon. Old Airport Road Food Centre, Tiong Bahru Market and Amoy Street Food Centre are home to some of the best-known bowls.",
+    priceRange:
+      "S$4–8 (most hawker bowls S$4–6; bigger bowls or extra fish/shark toppings cost more)",
     imageUrl: "/images/food/lor-mee.jpg",
     funFact:
       "The gravy's viscosity is achieved with cornstarch — the ratio must be precise or the gravy is either watery (too little) or gluey (too much). The ideal consistency should coat a spoon without dripping.",
@@ -2195,9 +2255,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay: "Add vinegar until you're scared, then add a little more. That's the right amount.",
     hawkersThatServeIt: [
       "old-airport-road-food-centre",
-      "toa-payoh-lorong-8-market",
-      "bedok-interchange-hawker-centre",
-      "peoples-park-food-centre",
+      "tiong-bahru-market",
+      "amoy-street-food-centre",
     ],
     howToEat: [
       "Add black vinegar immediately and generously — the dish is designed for it and tastes incomplete without the acid",
@@ -2215,9 +2274,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Hard-Boiled Egg", emoji: "🥚", role: "Halved and placed in the gravy — absorbs the braising liquid and adds richness. The yolk broken into the gravy thickens it further." },
     ],
     bestStalls: [
-      { name: "Xin Mei Xiang Zheng Zong Lor Mee", address: "Old Airport Road Food Centre, #01-116, 51 Old Airport Rd", area: "Kallang", note: "Serving lor mee at Old Airport Road since the centre opened in the 1970s. Thick, starchy gravy with braised pork and fish; add garlic and black vinegar to taste", mapsUrl: "https://maps.google.com/?q=Xin+Mei+Xiang+Zheng+Zong+Lor+Mee+Old+Airport+Road+Singapore" },
-      { name: "Mei Xiang Lor Mee", address: "Bedok Interchange Hawker Centre, #01-10, 208B New Upper Changi Rd", area: "Bedok", note: "An everyday east-side bowl right by Bedok MRT, with prawn noodles from the same stall if you can't decide", mapsUrl: "https://maps.google.com/?q=Mei+Xiang+Lor+Mee+Bedok+Interchange+Singapore" },
-      { name: "Lor Mee 178", address: "Tiong Bahru Market, 30 Seng Poh Rd (food centre, level 2)", area: "Tiong Bahru", note: "A popular Tiong Bahru Market pick, known for its fried fish toppings. Go before the lunch rush", mapsUrl: "https://maps.google.com/?q=Lor+Mee+178+Tiong+Bahru+Market+Singapore" },
+      {
+        name: "Xin Mei Xiang Zheng Zong Lor Mee",
+        address: "Old Airport Road Food Centre, #01-116, 51 Old Airport Rd",
+        area: "Kallang",
+        note: "Family stall since 1973 and an original Old Airport Road tenant. Five-spice braised gravy with pork belly, braised egg and fried fish; add garlic and vinegar.",
+        mapsUrl: "https://maps.google.com/?q=Xin+Mei+Xiang+Zheng+Zong+Lor+Mee+Old+Airport+Road+Food+Centre+Singapore",
+      },
+      {
+        name: "178 Lor Mee",
+        address: "Tiong Bahru Market, #02-23, 30 Seng Poh Rd",
+        area: "Tiong Bahru",
+        note: "Dark, garlicky gravy over flat yellow noodles; add the deep-fried shark nuggets. Morning-only stall that often sells out early.",
+        mapsUrl: "https://maps.google.com/?q=178+Lor+Mee+Tiong+Bahru+Market+Singapore",
+      },
+      {
+        name: "Yuan Chun Famous Lor Mee",
+        address: "Amoy Street Food Centre, #02-79/80, 7 Maxwell Rd",
+        area: "Tanjong Pagar",
+        note: "Michelin Guide-listed CBD favourite with thick, spiced gravy and egg strands; choose toppings like fried fish or braised pork belly. Closed Thursdays and Fridays.",
+        mapsUrl: "https://maps.google.com/?q=Yuan+Chun+Famous+Lor+Mee+Amoy+Street+Food+Centre+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 4, messFactor: 5, flavourDepth: 8, queueGame: 6, shiokValue: 9 },
   },
@@ -2554,8 +2631,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Indian Muslim (Malay-Tamil) community in Singapore — brought from Tamil Nadu and refined through generations of Singaporean mamak and Indian-Muslim hawker cooking.",
     whereToFind:
-      "Tekka Centre for Allauddin's Briyani (Michelin Bib Gourmand); Geylang Serai for the Malay-Muslim interpretation; Islamic Restaurant on North Bridge Road for the restaurant version.",
-    priceRange: "S$5–15 per plate",
+      "Little India is the biryani heartland, with long-running stalls at Tekka Centre and restaurants around Dunlop Street. Kampong Glam's North Bridge Road has older Indian-Muslim restaurants serving dum-style biryani.",
+    priceRange:
+      "S$6–15 (hawker plates at the low end; restaurant mutton or fish biryani at the top)",
     imageUrl: "/images/food/biryani.jpg",
     funFact:
       "Dum biryani is cooked sealed — the pot is covered with dough or a heavy lid and the rice cooks in the steam from the meat and broth below. The moment of opening the pot releases the accumulated fragrance in one aromatic burst.",
@@ -2569,7 +2647,6 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     hawkersThatServeIt: [
       "tekka-centre",
       "geylang-serai-market",
-      "golden-shoe-market-street",
     ],
     howToEat: [
       "Mix the rice from the base of the plate — the spiced broth and meat juices pool at the bottom and must be distributed",
@@ -2587,9 +2664,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Caramelised Onion", emoji: "🧅", role: "Fried until dark brown and crispy, scattered over the finished biryani — sweet, smoky, and the textural finishing touch." },
     ],
     bestStalls: [
-      { name: "Allauddin's Briyani", address: "Tekka Centre, #01-98, 665 Buffalo Road", area: "Little India", note: "Michelin Bib Gourmand. The most respected biryani stall in Singapore — the pots are filled fresh each morning and sell out by midday", mapsUrl: "https://maps.google.com/?q=Allauddin+Briyani+Tekka+Centre+Singapore" },
-      { name: "Bismillah Biryani", address: "50 Dunlop Street", area: "Little India", note: "The neighbourhood version in Little India's most characterful street — the mutton biryani here is slow-cooked overnight", mapsUrl: "https://maps.google.com/?q=Bismillah+Biryani+Dunlop+Street+Singapore" },
-      { name: "Islamic Restaurant", address: "745 North Bridge Road", area: "Kampong Glam", note: "One of Singapore's oldest Indian-Muslim restaurants since 1921 — the biryani here is made the way it was made before modernisation changed everything", mapsUrl: "https://maps.google.com/?q=Islamic+Restaurant+North+Bridge+Road+Singapore" },
+      {
+        name: "Allauddin's Briyani",
+        address: "Tekka Centre, #01-229/232, 665 Buffalo Road",
+        area: "Little India",
+        note: "Listed in the 2026 MICHELIN Guide; family-run since the 1950s. Order the mutton biryani set: yellow basmati, tender mutton, curry and papadums.",
+        mapsUrl: "https://maps.google.com/?q=Allauddin%27s+Briyani+Tekka+Centre+Singapore",
+      },
+      {
+        name: "Bismillah Biryani",
+        address: "50 Dunlop Street",
+        area: "Little India",
+        note: "A Bib Gourmand holder since the guide's first Singapore edition, retained in 2026. Go for the mutton biryani; the grilled fish version is also popular.",
+        mapsUrl: "https://maps.google.com/?q=Bismillah+Biryani+50+Dunlop+Street+Singapore",
+      },
+      {
+        name: "Islamic Restaurant",
+        address: "#01-01, 745 North Bridge Road",
+        area: "Kampong Glam",
+        note: "A decades-old Indian-Muslim restaurant whose past diners included presidents and sultans. The mutton biryani is its signature dish.",
+        mapsUrl: "https://maps.google.com/?q=Islamic+Restaurant+North+Bridge+Road+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 5, messFactor: 2, flavourDepth: 9, queueGame: 8, shiokValue: 9 },
   },
@@ -2602,8 +2697,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Indian Muslim (Mamak) tradition from South India and Penang — teh tarik arrived in Singapore with Tamil Muslim hawkers and became one of the most beloved drinks of every community.",
     whereToFind:
-      "Every mamak stall and Indian-Muslim food centre in Singapore — teh tarik is available everywhere but the best versions are from stalls that pour it properly rather than just stirring.",
-    priceRange: "S$1–2 per glass",
+      "Teh tarik is sold at most Indian-Muslim and Malay drink stalls in hawker centres, kopitiams and prata shops. Kampong Glam has the best-known specialists, led by Bhai Sarbat on Bussorah Street.",
+    priceRange:
+      "S$1.30–3 (about S$1.30–1.60 at hawker and kopitiam drink stalls; around S$3 at specialist cafes)",
     imageUrl: "/images/food/teh-tarik.jpg",
     funFact:
       "The pulling cools the tea to drinking temperature at the same time as it froths it — a skilled teh tarik maker can produce a glass at exactly the right temperature every time without checking.",
@@ -2615,9 +2711,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Must have froth on top. Flat teh tarik is just tea. The froth is the whole point of the pulling.",
     hawkersThatServeIt: [
-      "tekka-centre",
-      "geylang-serai-market",
-      "adam-road-food-centre",
+
     ],
     howToEat: [
       "Drink while the froth is still present — within 5 minutes of pulling the bubbles collapse and it becomes regular tea",
@@ -2635,9 +2729,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Froth", emoji: "🫧", role: "The result of the pulling — more than aesthetics, the froth changes the texture of the drink, making it lighter and silkier than stirred tea." },
     ],
     bestStalls: [
-      { name: "Teh Tarik Club", address: "Tekka Centre, #01-325, 665 Buffalo Road", area: "Little India", note: "The most visited teh tarik counter in Little India — the uncle here has been pulling tea for over twenty years with the same motion", mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Teh+Tarik+Singapore" },
-      { name: "Adam Road Teh Tarik", address: "Adam Road Food Centre, #01-01, 2 Adam Road", area: "Bukit Timah", note: "The late-night version — best ordered at 11pm alongside nasi lemak. The pull here is particularly high and the froth particularly dense", mapsUrl: "https://maps.google.com/?q=Adam+Road+Food+Centre+Teh+Tarik+Singapore" },
-      { name: "Geylang Serai Teh Tarik", address: "Geylang Serai Market, 1 Geylang Serai", area: "Geylang Serai", note: "During Ramadan the teh tarik stalls at Geylang Serai reach their peak — the volume of orders and the rhythm of pulling is worth watching", mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Teh+Tarik+Singapore" },
+      {
+        name: "Bhai Sarbat",
+        address: "21 Bussorah Street, Singapore 199439",
+        area: "Kampong Glam",
+        note: "Long-running street-side stall that has been pulling tea in Kampong Glam since the 1970s. Get the teh tarik or the ginger-spiced teh halia, and go early in the morning.",
+        mapsUrl: "https://maps.google.com/?q=Bhai+Sarbat+21+Bussorah+Street+Singapore",
+      },
+      {
+        name: "Tarik",
+        address: "16 Bali Lane, Singapore 189852 (original takeaway kiosk on Arab Street)",
+        area: "Kampong Glam",
+        note: "Modern teh tarik specialist from Kampong Glam. Its classic pulled teh tarik is the order, served for show in a syphon at the Bali Lane cafe.",
+        mapsUrl: "https://maps.google.com/?q=Tarik+16+Bali+Lane+Singapore",
+      },
+      {
+        name: "Bismillah Yunos Teh Tarik",
+        address: "Tanglin Halt Market, #01-26, 48A Tanglin Halt Road",
+        area: "Queenstown",
+        note: "Old-school hawker drink stall ranked in Eatbook's 2026 list of the best teh. Order a properly pulled, frothy teh tarik at neighbourhood-hawker prices.",
+        mapsUrl: "https://maps.google.com/?q=Bismillah+Yunos+Teh+Tarik+Tanglin+Halt+Market+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 0, messFactor: 2, flavourDepth: 6, queueGame: 3, shiokValue: 10 },
   },
@@ -2941,26 +3053,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "bbq-stingray",
     category: "Singaporean Classics",
     description:
-      "BBQ stingray is one of Singapore's most specific pleasures: a stingray wing marinated in sambal, wrapped in banana leaf, and grilled over real charcoal until the flesh flakes and the sambal chars at the edges. The banana leaf both protects and flavours the fish — the grassy fragrance infuses the flesh during cooking and imparts a smokiness that banana leaf achieves and nothing else replicates. Served with a sharp calamansi squeeze and extra sambal, it is a night market and seaside food centre dish that became permanently associated with the atmosphere of the East Coast Lagoon and Satay by the Bay. The stingray is caught in regional waters, the sambal is made fresh, and the entire experience is best eaten at a table where you can smell the charcoal and hear the sea.",
+      "BBQ stingray is one of Singapore's most specific pleasures: a stingray wing slathered in sambal, laid on banana leaf and grilled or cooked on a hotplate until the flesh flakes and the sambal chars at the edges. The banana leaf both protects and flavours the fish — the grassy fragrance infuses the flesh during cooking and imparts a smokiness that banana leaf achieves and nothing else replicates. Served with a sharp calamansi squeeze and extra sambal, it is a night market and seaside food centre dish that became permanently associated with the atmosphere of the East Coast Lagoon and Satay by the Bay. The stingray is caught in regional waters, the sambal is made fresh, and the entire experience is best eaten at a table where you can smell the charcoal and hear the sea.",
     origin:
-      "Malay hawker tradition — grilling stingray in sambal over charcoal developed in Singapore's coastal hawker centres and is a uniquely Singaporean dish with no single ethnic origin.",
+      "Malay hawker tradition — grilling stingray in sambal over charcoal is shared with Malaysia's ikan bakar, and in Singapore it is now a staple of Chinese-run hawker BBQ seafood stalls.",
     whereToFind:
-      "East Coast Lagoon Food Village for the definitive outdoor experience; Newton Food Centre for the city version; any hawker centre with a live charcoal BBQ station after dark.",
-    priceRange: "S$12–25 per piece depending on size",
+      "BBQ sambal stingray is sold at the hawker centre BBQ seafood stalls that open from late afternoon into the night, such as Bedok 85 Fengshan, Alexandra Village, Chomp Chomp and Newton. Most are Chinese-run and not halal, so look for a halal-certified stall if you need one.",
+    priceRange:
+      "S$12–20 (sold by size, typically small/medium/large; 2023–26 reviews give S$12–20 at most hawker BBQ seafood stalls)",
     imageUrl: "/images/food/bbq-stingray.jpg",
     funFact:
       "The stingray's cartilaginous skeleton means it has no bones — every piece of flesh is clean and accessible, making it one of the most rewarding fish to eat at a hawker centre despite its intimidating appearance.",
     bestPairedWith:
       "Cold beer, kangkong in sambal on the side, and a plate of cockles cooked in the same charcoal sambal.",
-    halal: true,
+    halal: false,
     spiceLevel: "Hot",
     difficulty: "Easy to eat",
     localSay:
       "Eat the parts where the sambal has charred — that's where the flavour is. The pale parts in the middle are for people who are scared.",
     hawkersThatServeIt: [
-      "east-coast-lagoon-food-village",
-      "newton-food-centre",
-      "lau-pa-sat",
+      "bedok-85-fengshan-market",
+      "alexandra-village-food-centre",
+      "yishun-park-hawker-centre",
     ],
     howToEat: [
       "Squeeze calamansi over the entire piece before eating — the acid cuts through the sambal's richness and lifts the fish",
@@ -3003,25 +3116,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Jumbo Stingray",
-        address: "East Coast Lagoon Food Village, 1220 East Coast Pkwy",
-        area: "East Coast",
-        note: "The most iconic setting for BBQ stingray in Singapore — open air, sea breeze, and live charcoal. The sambal here is made fresh daily",
-        mapsUrl: "https://maps.google.com/?q=East+Coast+Lagoon+Food+Village+BBQ+Stingray+Singapore",
+        name: "Chomp Chomp BBQ",
+        address: "85 Fengshan Centre, #01-44, 85 Bedok North Street 4",
+        area: "Bedok",
+        note: "Late-night supper stall at Bedok 85 (not at Chomp Chomp Food Centre). Get the thick, smoky, charred hotplate stingray with the cincalok dip.",
+        mapsUrl: "https://maps.google.com/?q=Chomp+Chomp+BBQ+85+Bedok+North+Street+4+Singapore",
       },
       {
-        name: "Newton BBQ Stingray",
-        address: "Newton Food Centre, #01-08, 500 Clemenceau Ave North",
-        area: "Newton",
-        note: "City-centre version without the sea breeze but with consistent quality — the portions here are large and the charcoal is always properly hot",
-        mapsUrl: "https://maps.google.com/?q=Newton+Food+Centre+BBQ+Stingray+Singapore",
+        name: "Star Yong Kwang BBQ Seafood",
+        address: "Alexandra Village Food Centre, #01-04, 120 Bukit Merah Lane 1",
+        area: "Bukit Merah",
+        note: "Long-running evening stall famous for a big, juicy stingray under a heavy layer of house sambal made with shrimp. The salted egg prawns are also popular.",
+        mapsUrl: "https://maps.google.com/?q=Star+Yong+Kwang+BBQ+Seafood+Alexandra+Village+Food+Centre+Singapore",
       },
       {
-        name: "Chomp Chomp BBQ Seafood",
-        address: "Chomp Chomp Food Centre, 20 Kensington Park Road",
-        area: "Serangoon Gardens",
-        note: "The Serangoon Gardens version — neighbourhood-loved, late-night, and the sambal here is spicier than most versions found elsewhere",
-        mapsUrl: "https://maps.google.com/?q=Chomp+Chomp+Food+Centre+BBQ+Stingray+Singapore",
+        name: "Jiao Cai Seafood",
+        address: "Yishun Park Hawker Centre, #01-39, 51 Yishun Avenue 11",
+        area: "Yishun",
+        note: "Listed in the 2026 Michelin Guide Singapore (no star or Bib Gourmand). Its signature sambal stingray arrives sizzling on a hotplate, spicy and smoky. A solo rice set is available.",
+        mapsUrl: "https://maps.google.com/?q=Jiao+Cai+Seafood+Yishun+Park+Hawker+Centre+Singapore",
       },
     ],
     shiokOMeter: {
@@ -3138,8 +3251,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Chinese soya bean curd tradition from the Hakka and Hokkien communities — tau huay (豆花) was sold by street vendors across southern China and brought to Singapore by early Cantonese and Hokkien immigrants.",
     whereToFind:
-      "Rochor Original Beancurd on Selegie Road for the definitive warm version; Lim Kee Beancurd in Toa Payoh for the heartland classic; dessert stalls in Chinatown Complex for variety.",
-    priceRange: "S$1.50–4 per bowl",
+      "Traditional tau huay is sold at dedicated soya bean stalls in many hawker centres, often best early in the day before they sell out, as well as at long-running beancurd shops such as Rochor Original Beancurd on Short Street.",
+    priceRange:
+      "S$1–3 per bowl (toppings like grass jelly or red bean add a little)",
     imageUrl: "/images/food/tau-huay.jpg",
     funFact:
       "Traditional tau huay sets using gypsum (calcium sulfate) rather than the coagulants used in firmer tofu — the gypsum produces a silkiness that other coagulants cannot match, which is why the best tau huay stalls guard their setting process carefully.",
@@ -3151,8 +3265,6 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Warm, not cold. Plain syrup, not jelly. That's the original. Everything else is negotiable.",
     hawkersThatServeIt: [
-      "chinatown-complex-food-centre",
-      "maxwell-food-centre",
       "tiong-bahru-market",
     ],
     howToEat: [
@@ -3196,25 +3308,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
+        name: "Whampoa Soya Bean & Grass Jelly Drinks",
+        address: "Whampoa Makan Place, #01-52, 90/91 Whampoa Drive",
+        area: "Whampoa",
+        note: "MICHELIN Guide-listed stall making tau huay fresh on site; get the hot plain bowl, or add grass jelly, red bean or lotus seeds.",
+        mapsUrl: "https://maps.google.com/?q=Whampoa+Soya+Bean+Grass+Jelly+Whampoa+Makan+Place+91+Whampoa+Drive+Singapore",
+      },
+      {
         name: "Rochor Original Beancurd",
-        address: "745 North Bridge Road",
-        area: "Rochor",
-        note: "The most famous tau huay in Singapore — the curd here has been described as the silkiest version in the city and the queue on weekends confirms it",
-        mapsUrl: "https://maps.google.com/?q=Rochor+Original+Beancurd+Singapore",
+        address: "2 Short Street",
+        area: "Dhoby Ghaut / Rochor",
+        note: "Pushcart-born in the 1960s and on Short Street since 1993; order the smooth hot or cold beancurd with a Portuguese egg tart or you tiao. Open late.",
+        mapsUrl: "https://maps.google.com/?q=Rochor+Original+Beancurd+2+Short+Street+Singapore",
       },
       {
-        name: "Lim Kee Fresh Bean Curd",
-        address: "Toa Payoh Lorong 8 Market, #01-06",
-        area: "Toa Payoh",
-        note: "The heartland version that Toa Payoh residents treat as their own — the warm curd here is made fresh each morning and the ginger syrup is particularly fragrant",
-        mapsUrl: "https://maps.google.com/?q=Lim+Kee+Bean+Curd+Toa+Payoh+Singapore",
-      },
-      {
-        name: "Chinatown Tau Huay",
-        address: "Chinatown Complex Food Centre, 335 Smith Street",
-        area: "Chinatown",
-        note: "Multiple dessert stalls side by side — walk the row and find the one with the freshest curd (it should be barely trembling in the tray)",
-        mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Tau+Huay+Singapore",
+        name: "Teck Seng Soya Bean Milk",
+        address: "Tiong Bahru Market, #02-69, 30 Seng Poh Road",
+        area: "Tiong Bahru",
+        note: "Run by Mr Low Teck Seng since 1985, made from scratch daily; the silky tau huay often sells out by mid-morning, so come early.",
+        mapsUrl: "https://maps.google.com/?q=Teck+Seng+Soya+Bean+Milk+Tiong+Bahru+Market+30+Seng+Poh+Road+Singapore",
       },
     ],
     shiokOMeter: {
@@ -3231,26 +3343,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "curry-puff",
     category: "Singaporean Classics",
     description:
-      "The curry puff is Singapore's most portable heritage food: a golden, crimped pastry shell filled with curried potato, onion, and chicken or egg, fried until the crust shatters and the filling is fragrant with spice. The format came from British and Portuguese colonial pasties filtered through Indian-Muslim and Nyonya kitchen traditions — the result is something that belongs to every community in Singapore and was sold by every kind of hawker from Malay stalls to Chinese bakeries. Old Chang Kee built an empire from it. Bengawan Solo refined the Nyonya version. The best versions are still the ones where the pastry is made fresh, the curry filling is properly spiced and not too wet, and the whole thing is eaten hot from the fryer, burning your fingers slightly, which is part of the experience.",
+      "The curry puff is Singapore's most portable heritage food: a golden, crimped pastry shell filled with curried potato, onion, and chicken or egg, fried until the crust shatters and the filling is fragrant with spice. The format came from British and Portuguese colonial pasties filtered through Indian-Muslim and Nyonya kitchen traditions — the result is something that belongs to every community in Singapore and was sold by every kind of hawker from Malay stalls to Chinese bakeries. Old Chang Kee built an empire from it. The best versions are still the ones where the pastry is made fresh, the curry filling is properly spiced and not too wet, and the whole thing is eaten hot from the fryer, burning your fingers slightly, which is part of the experience.",
     origin:
       "British colonial pastry tradition blended with Indian and Nyonya curry — the curry puff developed in Singapore and Malaya as a fusion snack that every community adapted into their own version.",
     whereToFind:
-      "Old Chang Kee outlets island-wide for the classic version; Bengawan Solo for the Nyonya version; traditional bakeries in Chinatown and Katong for handmade pastry versions.",
-    priceRange: "S$1.50–4 per puff",
+      "Handmade curry puffs are sold at dedicated hawker stalls and heritage shops across Singapore, often fried in batches through the morning, while chains such as Old Chang Kee have outlets island-wide.",
+    priceRange:
+      "S$1.80–2.50 per puff (specialty fillings such as otah cost a little more)",
     imageUrl: "/images/food/curry-puff.jpg",
     funFact:
       "The spiral-twisted edge of a traditional curry puff is not decorative — it is a crimping technique that seals the pastry under pressure without glue or egg wash, an inherited skill from the Indian-Muslim bakers who perfected it.",
     bestPairedWith:
       "Kopi or teh, eaten standing up at a stall or walking. Curry puffs do not require a seat or a plate.",
-    halal: true,
+    halal: false,
     spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Eat it hot. Cold curry puff is a different and inferior product. Do not refrigerate and reheat — just buy a fresh one.",
     hawkersThatServeIt: [
-      "maxwell-food-centre",
       "amoy-street-food-centre",
-      "bedok-interchange-hawker-centre",
     ],
     howToEat: [
       "Eat immediately after purchase — the pastry is at its best within 10 minutes of frying and deteriorates rapidly",
@@ -3294,24 +3405,24 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestStalls: [
       {
         name: "J2 Famous Crispy Curry Puff",
-        address: "Golden Mile Food Centre, #B1-43, 505 Beach Road",
-        area: "Beach Road",
-        note: "Michelin Bib Gourmand. The sardine curry puff here is an unusual variation that has developed its own following — the pastry is exceptional",
-        mapsUrl: "https://maps.google.com/?q=J2+Famous+Crispy+Curry+Puff+Golden+Mile+Singapore",
+        address: "Amoy Street Food Centre, #01-21, 7 Maxwell Road",
+        area: "Tanjong Pagar",
+        note: "Michelin Bib Gourmand (2026). Flaky, crisp puffs in curry chicken, black pepper chicken, sardine and sweet taro; the taro is a customer favourite. Weekdays only.",
+        mapsUrl: "https://maps.google.com/?q=J2+Famous+Crispy+Curry+Puff+Amoy+Street+Food+Centre+7+Maxwell+Road+Singapore",
       },
       {
-        name: "Old Chang Kee",
-        address: "Multiple outlets island-wide",
-        area: "Island-wide",
-        note: "The original — founded in 1956 and now at over 100 locations. The curry puff here is Singapore's most recognisable and the standard by which all others are measured",
-        mapsUrl: "https://maps.google.com/?q=Old+Chang+Kee+Singapore",
+        name: "Rolina Traditional Hainanese Curry Puff",
+        address: "Tanjong Pagar Plaza Market & Food Centre, #02-15, 6 Tanjong Pagar Plaza",
+        area: "Tanjong Pagar",
+        note: "Hainanese recipe dating to 1958, now run by a new generation; order the curry chicken and egg or the sardine puff, and the glutinous rice if early.",
+        mapsUrl: "https://maps.google.com/?q=Rolina+Traditional+Hainanese+Curry+Puff+6+Tanjong+Pagar+Plaza+Singapore",
       },
       {
-        name: "Bengawan Solo Nyonya Curry Puff",
-        address: "Multiple outlets island-wide",
-        area: "Island-wide",
-        note: "The Peranakan version — the pastry uses a different ratio and the filling incorporates Nyonya spicing. A completely different and equally excellent interpretation",
-        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Curry+Puff+Singapore",
+        name: "Soon Soon Huat Crispy Curry Puff",
+        address: "220 East Coast Road",
+        area: "Katong / Joo Chiat",
+        note: "Ultra-flaky, spiral-layered shells; the curry chicken puff is the must-try, with sardine and otah as alternatives.",
+        mapsUrl: "https://maps.google.com/?q=Soon+Soon+Huat+Crispy+Curry+Puff+220+East+Coast+Road+Singapore",
       },
     ],
     shiokOMeter: {
@@ -3516,10 +3627,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     description:
       "Otak-otak is spiced fish paste grilled inside banana or coconut leaf — the name means 'brains' in Malay, a reference to the soft, yielding texture of the finished paste rather than any actual ingredient. The Malay and Peranakan communities of the Straits developed two distinct versions: the Malay version, strongly associated with the East Coast and Muar in Malaysia, is a flat, charcoal-grilled packet with a smoky, spiced fish paste that is almost custard-like inside. The Peranakan version is thicker, made with coconut milk and a more complex rempah, and cooked in coconut leaf. Both are served warm, both are eaten in one or two bites, and both are better than they have any right to be given their simplicity. In Singapore, otak-otak is the companion dish — the thing you add to a laksa order, the side you bring to a BBQ, the snack you eat standing at a hawker stall at midnight.",
     origin:
-      "Malay and Peranakan tradition from the Straits of Malacca — otak-otak developed in coastal communities from Muar to Singapore, with the banana leaf grilled version most associated with Singapore's East Coast.",
+      "Malay and Peranakan tradition from the Straits of Malacca — otak-otak developed in coastal communities from Muar to Singapore.",
     whereToFind:
-      "East Coast Road's otak-otak shops for the Malay version; Bengawan Solo for the Peranakan version; most hawker centres with a Malay stall for the daily version.",
-    priceRange: "S$0.80–2 per piece",
+      "Otah is sold by specialist otah-and-nasi-lemak stalls and kiosks, such as at Old Airport Road Food Centre, and by long-running makers such as the Jalan Kayu shop. It is also a common side at nasi lemak and laksa stalls.",
+    priceRange:
+      "S$0.70–2 per piece (plain fish otah is under S$1; banana-leaf, fish-head and seafood versions cost more)",
     imageUrl: "/images/food/otak-otak.jpg",
     funFact:
       "The banana leaf charcoal version must be flipped exactly once during grilling — over-flipping dries out the paste, and under-flipping leaves one side pale and uncharred, missing the smoky depth that the leaf and charcoal create together.",
@@ -3531,9 +3643,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "The leaf should be slightly charred — if it's still bright green, it wasn't on the fire long enough.",
     hawkersThatServeIt: [
-      "east-coast-lagoon-food-village",
-      "geylang-serai-market",
-      "bedok-85-fengshan-market",
+      "old-airport-road-food-centre",
     ],
     howToEat: [
       "Eat immediately off the leaf while the paste is still warm — the texture changes completely as it cools",
@@ -3576,25 +3686,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Dunman Road Otak-Otak",
-        address: "Dunman Food Centre, 271 Onan Road",
-        area: "East Coast",
-        note: "The East Coast institution — grilled over live charcoal and eaten standing at the stall. The smoky paste here is close to the Muar original",
-        mapsUrl: "https://maps.google.com/?q=Dunman+Food+Centre+Otak+Otak+Singapore",
+        name: "Hiang Soon Otar (Jalan Kayu Otar)",
+        address: "261 Jalan Kayu",
+        area: "Seletar / Jalan Kayu",
+        note: "Family-run for over 30 years, making otah from scratch daily. Its charcoal-grilled fish otah is a long-time favourite. Also try the fish-head or banana-leaf otah.",
+        mapsUrl: "https://maps.google.com/?q=Hiang+Soon+Otar+261+Jalan+Kayu+Singapore",
       },
       {
-        name: "Bengawan Solo Otak-Otak",
-        address: "Multiple outlets island-wide",
-        area: "Island-wide",
-        note: "The Peranakan version — baked in coconut leaf with a thicker, more complex rempah. A different but equally legitimate interpretation",
-        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Otak+Otak+Singapore",
+        name: "Hougang Otah",
+        address: "Old Airport Road Food Centre, #01-166, 51 Old Airport Road",
+        area: "Dakota / Old Airport Road",
+        note: "A brand around since the 1990s, with several otah types: chilli and non-chilli fish, banana-leaf, plus fish-head, sotong, prawn and crabmeat. It also sells cheap nasi lemak.",
+        mapsUrl: "https://maps.google.com/?q=Hougang+Otah+Old+Airport+Road+Food+Centre+Singapore",
       },
       {
-        name: "Changi Village Otak-Otak",
-        address: "Changi Village Hawker Centre, 2 Changi Village Road",
-        area: "Changi",
-        note: "Far east version with a loyal neighbourhood following — the charcoal smoke lingers on the leaf longer here than at most stalls",
-        mapsUrl: "https://maps.google.com/?q=Changi+Village+Hawker+Centre+Otak+Otak+Singapore",
+        name: "Lee Wee & Brothers",
+        address: "Tampines Mall, #B1-K6, 4 Tampines Central 5 (plus other outlets)",
+        area: "Tampines",
+        note: "Began as an Old Airport Road hawker stall in 2000. Its halal Nyonya-style otah, steamed in pandan leaf, comes with nasi lemak.",
+        mapsUrl: "https://maps.google.com/?q=Lee+Wee+%26+Brothers+Tampines+Mall+Singapore",
       },
     ],
     shiokOMeter: {
@@ -3611,15 +3721,16 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "sup-tulang",
     category: "Malay & Muslim Heritage",
     description:
-      "Sup tulang — mutton bone soup — is Singapore's most unapologetically primal dish: enormous mutton leg bones sawn open to expose the marrow, simmered in a dark, spiced broth of tomato, ginger, and bone-deep richness, served with a straw to extract the marrow directly from the cavity. The Indian-Muslim community developed sup tulang in Singapore's hawker centres, and it found its most devoted following in the late-night scene around Albert Centre and Geylang, where the bones arrive in deep red broth at tables occupied by people who have made a deliberate decision to eat something extraordinary at midnight. The marrow is the point — soft, rich, and available only by sucking it through the bone with a straw, which is the single most satisfying action in Singapore's entire food landscape.",
+      "Sup tulang — mutton bone soup — is Singapore's most unapologetically primal dish: enormous mutton leg bones sawn open to expose the marrow, simmered in a dark, spiced broth of tomato, ginger, and bone-deep richness, served with a straw to extract the marrow directly from the cavity. Indian-Muslim hawkers on Jalan Sultan created sup tulang, and it found its most devoted following at Golden Mile Food Centre on Beach Road, where the bones arrive in deep red broth at tables occupied by people who have made a deliberate decision to eat something extraordinary at midnight. The marrow is the point — soft, rich, and available only by sucking it through the bone with a straw, which is the single most satisfying action in Singapore's entire food landscape.",
     origin:
-      "Indian-Muslim (Mamak) hawker tradition — sup tulang developed in Singapore's hawker centres as an economical use of mutton bones, and became a cult dish through the late-night supper culture of the 1980s and 90s.",
+      "Indian-Muslim (Mamak) hawker tradition — sup tulang was created by Indian-Muslim hawkers on Jalan Sultan, who cooked mutton bones left over from sup kambing in a red chilli-tomato sauce. Both Haji Kadir (who ran a pushcart from the 1950s) and M. Baharudeen claim to have invented it, and the stalls later moved to Golden Mile Food Centre.",
     whereToFind:
-      "Albert Centre Market & Food Centre, Geylang's late-night stalls, and Tekka Centre for the most dedicated versions. Best eaten after 10pm.",
-    priceRange: "S$8–15 per portion",
+      "Sup tulang (tulang merah) began among Indian-Muslim hawkers on Jalan Sultan, and its best-known stalls now cluster in the basement of Golden Mile Food Centre on Beach Road, with a few more around Kampong Glam. Several Golden Mile stalls stay open late into the night.",
+    priceRange:
+      "S$10–15 (single plate of tulang merah around S$10 in recent reviews, bread extra; 2025–26 prices not confirmed)",
     imageUrl: "/images/food/sup-tulang.jpg",
     funFact:
-      "The distinctive deep red colour of sup tulang's broth comes from tomato and a particular blend of Indian spices — it is one of the most visually striking broths in Singapore and completely unlike the clear broths of Chinese bone soups.",
+      "The distinctive deep red colour of sup tulang's broth comes from tomato, chilli and spices (many stalls also add red colouring) — it is one of the most visually striking broths in Singapore and completely unlike the clear broths of Chinese bone soups.",
     bestPairedWith:
       "French baguette for soaking the broth; white rice if you prefer; a cold limau ice to cut through the richness.",
     halal: true,
@@ -3628,8 +3739,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "The straw is not optional. If you don't suck the marrow, you did not eat sup tulang — you just had expensive bone soup.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tekka-centre",
+
     ],
     howToEat: [
       "Use the straw to extract the marrow from inside the bone — press the straw firmly into the cavity and apply sustained suction",
@@ -3672,25 +3782,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Albert Centre Sup Tulang",
-        address: "Albert Centre Market & Food Centre, 270 Queen Street",
-        area: "Bugis",
-        note: "The most famous sup tulang in Singapore — the late-night crowd at this stall includes a cross-section of the city united by marrow extraction",
-        mapsUrl: "https://maps.google.com/?q=Albert+Centre+Market+Sup+Tulang+Singapore",
+        name: "Haji Kadir & M Baharudeen Sup Tulang",
+        address: "Golden Mile Food Centre, #B1-13/15, 505 Beach Road",
+        area: "Beach Road",
+        note: "Run by the family that claims to have invented the dish. Order the tulang merah with French loaf to mop up the sweet, sticky red sauce.",
+        mapsUrl: "https://maps.google.com/?q=Haji+Kadir+M+Baharudeen+Sup+Tulang+Golden+Mile+Food+Centre+505+Beach+Road+Singapore",
       },
       {
-        name: "Zam Zam Sup Tulang",
-        address: "697 North Bridge Road",
+        name: "Deen Tulang Specialist",
+        address: "Golden Mile Food Centre, #B1-17, 505 Beach Road",
+        area: "Beach Road",
+        note: "A family stall that traces its roots to the 1950s and has been at Golden Mile since 1975. Get the tulang merah and suck out the marrow; the mutton chop is a good side.",
+        mapsUrl: "https://maps.google.com/?q=Deen+Tulang+Specialist+Golden+Mile+Food+Centre+505+Beach+Road+Singapore",
+      },
+      {
+        name: "M.A. Deen Biasa",
+        address: "95/97 Jalan Sultan",
         area: "Kampong Glam",
-        note: "The Kampong Glam version — slightly spicier broth and a longer simmer time that makes the marrow more yielding",
-        mapsUrl: "https://maps.google.com/?q=Zam+Zam+Restaurant+Sup+Tulang+Singapore",
-      },
-      {
-        name: "Geylang Sup Tulang",
-        address: "Geylang Road, late-night stalls",
-        area: "Geylang",
-        note: "The supper district version — open until 3am, eaten by people who drove across the island specifically for this bowl",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Road+Sup+Tulang+Singapore",
+        note: "A mamak eatery on Jalan Sultan, the street where sup tulang was born. Its tulang merah comes with an optional extra plate of mutton bones.",
+        mapsUrl: "https://maps.google.com/?q=M.A.+Deen+Biasa+95+Jalan+Sultan+Singapore",
       },
     ],
     shiokOMeter: {
@@ -3897,8 +4007,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Malay and Peranakan tradition across the Straits of Malacca — chendol has been eaten in Singapore, Penang, and Malaysia for centuries, with regional variations that reflect local ingredient availability.",
     whereToFind:
-      "Penang-style chendol at Katong and East Coast stalls; traditional versions at Peranakan dessert shops in Joo Chiat; Ghim Moh and Old Airport Road for hawker versions.",
-    priceRange: "S$2.50–5 per bowl",
+      "Dessert stalls at most hawker centres sell chendol, and long-running specialists are found at Geylang Serai Market, Chinatown Complex and ABC Brickworks. Restaurant versions cost noticeably more than hawker bowls.",
+    priceRange:
+      "S$2–3.50 (typical hawker bowl in 2025–26; durian or extra toppings cost more)",
     imageUrl: "/images/food/chendol.jpg",
     funFact:
       "Authentic gula melaka for chendol should be solid, dark, and smell faintly of smoke — it is palm sugar reduced from palm sap over a wood fire, and its smokiness is what separates real chendol from the version made with ordinary sugar syrup.",
@@ -3910,9 +4021,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "The gula melaka must be real — if the syrup is light brown and pours like water, the stall is using the wrong sugar.",
     hawkersThatServeIt: [
-      "old-airport-road-food-centre",
-      "chinatown-complex-food-centre",
       "geylang-serai-market",
+      "chinatown-complex-food-centre",
+      "abc-brickworks-market",
     ],
     howToEat: [
       "Eat quickly — shaved ice melts fast in Singapore's heat and the diluted coconut milk is a shadow of the original",
@@ -3955,25 +4066,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Penang Chendol",
-        address: "Old Airport Road Food Centre, #01-120, 51 Old Airport Rd",
-        area: "Kallang",
-        note: "The Penang-style version at Old Airport Road — the gula melaka here is particularly dark and smoky, and the coconut milk is unsweetened",
-        mapsUrl: "https://maps.google.com/?q=Penang+Chendol+Old+Airport+Road+Singapore",
+        name: "Cendol Geylang Serai",
+        address: "Geylang Serai Market & Food Centre, #02-107, 1 Geylang Serai",
+        area: "Geylang Serai",
+        note: "Decades-old stall doing the traditional bowl: housemade green rice-flour jelly, coconut milk and gula melaka over ice, with no red beans. Also try the dadih.",
+        mapsUrl: "https://maps.google.com/?q=Cendol+Geylang+Serai+Geylang+Serai+Market+Singapore",
       },
       {
-        name: "Famous Sungei Road Chendol",
-        address: "Jalan Berseh Food Centre, 166 Jalan Besar",
-        area: "Jalan Besar",
-        note: "The most respected chendol stall in Singapore — the pandan jelly noodles are pressed fresh and the gula melaka is made in-house",
-        mapsUrl: "https://maps.google.com/?q=Sungei+Road+Chendol+Jalan+Berseh+Singapore",
+        name: "Old Amoy Chendol",
+        address: "Chinatown Complex Food Centre, #02-008, 335 Smith Street",
+        area: "Chinatown",
+        note: "Popular Chinatown Complex dessert stall known for its homemade chendol with azuki red beans. Add toppings such as durian if you want it richer.",
+        mapsUrl: "https://maps.google.com/?q=Old+Amoy+Chendol+Chinatown+Complex+Singapore",
       },
       {
-        name: "Kim Choo Chendol",
-        address: "109 East Coast Road",
-        area: "Katong",
-        note: "The Peranakan Katong version — slightly more coconut milk, slightly less ice, and served in a Nyonya-style bowl",
-        mapsUrl: "https://maps.google.com/?q=Kim+Choo+Chendol+East+Coast+Road+Singapore",
+        name: "Jin Jin Hot/Cold Dessert",
+        address: "ABC Brickworks Market & Food Centre, #01-21, 6 Jalan Bukit Merah",
+        area: "Bukit Merah",
+        note: "Long-queue dessert stall. Order the loaded Power Chendol, or the durian version; its ice kacang is also famous.",
+        mapsUrl: "https://maps.google.com/?q=Jin+Jin+Hot+Cold+Dessert+ABC+Brickworks+Singapore",
       },
     ],
     shiokOMeter: {
@@ -4190,8 +4301,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Teochew immigrant tradition from the Shantou (Swatow) region of Guangdong — muay and its accompanying side dishes were the everyday meal of the Teochew fishing and merchant communities who settled in Singapore.",
     whereToFind:
-      "Beach Road's late-night porridge stalls; Hong Lim Food Centre; Geylang's midnight porridge restaurants that have been feeding Singapore after midnight for decades.",
-    priceRange: "S$4–10 depending on sides chosen",
+      "Teochew porridge is mostly found at neighbourhood coffeeshop stalls and family-run eateries rather than big hawker centres, and several, such as Ye Lai Xiang in Bukit Merah, stay open into the early hours for supper.",
+    priceRange:
+      "S$5–12 per person (depends on sides; steamed fish costs more)",
     imageUrl: "/images/food/teochew-porridge.jpg",
     funFact:
       "The traditional Teochew porridge meal involves at least six to eight small side dishes — the porridge itself is almost free at many stalls, and the price reflects entirely the number and type of accompanying dishes selected.",
@@ -4203,9 +4315,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "You don't eat Teochew porridge for the porridge. You eat it for the sides. The porridge is just the reason to sit down.",
     hawkersThatServeIt: [
-      "old-airport-road-food-centre",
-      "chinatown-complex-food-centre",
-      "geylang-serai-market",
+
     ],
     howToEat: [
       "Choose your sides first and arrange them around the porridge bowl — the visual spread is part of the experience",
@@ -4248,25 +4358,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Lim's Teochew Porridge",
-        address: "Beach Road Scissors Cut Curry Rice, 229 Outram Road",
-        area: "Tiong Bahru",
-        note: "The late-night institution — the side dish selection here is the widest in Singapore and the porridge is always thin and properly made",
-        mapsUrl: "https://maps.google.com/?q=Teochew+Porridge+Beach+Road+Singapore",
+        name: "Ann Hoo Teochew Porridge",
+        address: "Cheng San Market & Cooked Food Centre, #01-126/127, 527 Ang Mo Kio Avenue 10",
+        area: "Ang Mo Kio",
+        note: "Hawker-centre favourite with highly rated porridge. Get the braised pork belly, steamed rabbitfish (pek tor he), fried meatballs and chai buey. Open Wednesday to Sunday.",
+        mapsUrl: "https://maps.google.com/?q=Ann+Hoo+Teochew+Porridge+Cheng+San+Market+Ang+Mo+Kio+Singapore",
       },
       {
-        name: "Hong Lim Teochew Porridge",
-        address: "Hong Lim Market & Food Centre, 531A Upper Cross St",
-        area: "Chinatown",
-        note: "Morning and lunch version — the braised meats here are slow-cooked overnight and the variety of preserved vegetables is exceptional",
-        mapsUrl: "https://maps.google.com/?q=Hong+Lim+Market+Teochew+Porridge+Singapore",
+        name: "Ye Lai Xiang Teochew Porridge",
+        address: "Kim San Leng coffeeshop, #01-217, 116 Bukit Merah View",
+        area: "Bukit Merah",
+        note: "Supper go-to open until 4am daily. The braised duck is the standout. Add nan ru pork belly and chai poh omelette.",
+        mapsUrl: "https://maps.google.com/?q=Ye+Lai+Xiang+Teochew+Porridge+116+Bukit+Merah+View+Singapore",
       },
       {
-        name: "Geylang Teochew Porridge",
-        address: "Geylang Road, late-night stalls",
-        area: "Geylang",
-        note: "The midnight version — open until 4am and frequented by a cross-section of Singapore that includes taxi drivers, nurses, and anyone who eats late and seriously",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Teochew+Porridge+Singapore",
+        name: "Choon Seng Teochew Porridge",
+        address: "#01-09, Blk 43 Cambridge Road",
+        area: "Farrer Park",
+        note: "Long-running lunch-only stall known for Teochew-style steamed fish such as grouper, plus minced pork with black beans. Arrive early because it sells out. Pricier than most.",
+        mapsUrl: "https://maps.google.com/?q=Choon+Seng+Teochew+Porridge+43+Cambridge+Road+Singapore",
       },
     ],
     shiokOMeter: {
@@ -4283,25 +4393,24 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "lei-cha-fan",
     category: "Chinese Dialect Heritage",
     description:
-      "Thunder tea rice is the Hakka community's most distinctive contribution to Singapore's hawker landscape: a bowl of plain rice surrounded by small portions of stir-fried vegetables, preserved radish, peanuts, tofu, and anchovies, served with a separate bowl of a thick, intensely green tea broth made from ground green tea, herbs, and sesame to be poured over everything. The name — lei cha, meaning pounded tea — refers to the ancient Hakka method of grinding tea leaves and herbs into a paste before mixing with water. The dish is vegetarian, deeply nutritious, and unlike anything else in the hawker world. To first-time eaters the tea broth is challenging — grassy, slightly bitter, and very green. To those who return to it regularly, that bitterness is precisely the reason they come back.",
+      "Thunder tea rice is the Hakka community's most distinctive contribution to Singapore's hawker landscape: a bowl of plain rice surrounded by small portions of stir-fried vegetables, preserved radish, peanuts, tofu, and anchovies, served with a separate bowl of a thick, intensely green tea broth made from ground green tea, herbs, and sesame to be poured over everything. The name — lei cha, meaning pounded tea — refers to the ancient Hakka method of grinding tea leaves and herbs into a paste before mixing with water. The dish is often vegetarian (though many versions add ikan bilis or dried shrimp), deeply nutritious, and unlike anything else in the hawker world. To first-time eaters the tea broth is challenging — grassy, slightly bitter, and very green. To those who return to it regularly, that bitterness is precisely the reason they come back.",
     origin:
       "Hakka Chinese tradition from the mountainous regions of Guangdong — lei cha was a daily meal of Hakka communities who incorporated whatever mountain herbs were available into a nutritious pounded tea.",
     whereToFind:
-      "Hakka lei cha stalls at Alexandra Village Food Centre, Chinatown Complex, and dedicated lei cha shops in the heartland particularly in areas with Hakka-community history.",
-    priceRange: "S$5–10 per bowl",
+      "Lei cha stalls are found in CBD hawker centres such as Amoy Street and Tanjong Pagar Plaza, and in heartland centres such as Margaret Drive. Many open for breakfast and lunch only.",
+    priceRange:
+      "S$4–8 per bowl (brown rice and yong tau foo add-ons extra)",
     imageUrl: "/images/food/lei-cha-fan.jpg",
     funFact:
       "The green colour of the thunder tea broth comes from a blend that can include over a dozen different herbs and leaves — basil, mint, peppermint, green tea, and medicinal herbs like the Hakka have used for centuries.",
     bestPairedWith:
       "Nothing extra is needed — lei cha fan is a complete, balanced meal. Drink extra broth from the bowl if you enjoy it.",
-    halal: true,
+    halal: false,
     spiceLevel: "None",
     difficulty: "Adventure eat",
     localSay:
       "The green broth tastes weird the first time. The second time, you understand it. The third time, you crave it.",
     hawkersThatServeIt: [
-      "alexandra-village-food-centre",
-      "chinatown-complex-food-centre",
       "amoy-street-food-centre",
     ],
     howToEat: [
@@ -4345,25 +4454,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Yong He Lei Cha",
-        address: "Alexandra Village Food Centre, #01-75, 120 Bukit Merah Ln 1",
-        area: "Alexandra",
-        note: "One of Singapore's most respected lei cha stalls — the broth is made fresh each morning from a Hakka family recipe that has been unchanged for two generations",
-        mapsUrl: "https://maps.google.com/?q=Yong+He+Lei+Cha+Alexandra+Village+Food+Centre+Singapore",
-      },
-      {
-        name: "Real Food Thunder Tea Rice",
-        address: "Chinatown Complex Food Centre, 335 Smith Street",
-        area: "Chinatown",
-        note: "The Chinatown version — wider variety of vegetable sides and a tea broth that is slightly less bitter than the traditional version for accessibility",
-        mapsUrl: "https://maps.google.com/?q=Thunder+Tea+Rice+Chinatown+Complex+Singapore",
-      },
-      {
-        name: "Hakka Lei Cha",
-        address: "Amoy Street Food Centre, 7 Maxwell Road",
+        name: "Lin Da Ma Lei Cha",
+        address: "Amoy Street Food Centre, #02-127, 7 Maxwell Road",
         area: "Tanjong Pagar",
-        note: "CBD office crowd introduction to lei cha — the CBD location means this stall serves a large proportion of first-time eaters, and the serving staff are patient with questions",
-        mapsUrl: "https://maps.google.com/?q=Lei+Cha+Amoy+Street+Food+Centre+Singapore",
+        note: "CBD favourite with a creamier, peanut-rich soup. Order the brown rice lei cha or the unique lei cha hand-pulled noodles with jammy egg. Weekdays only.",
+        mapsUrl: "https://maps.google.com/?q=Lin+Da+Ma+Lei+Cha+Amoy+Street+Food+Centre+Singapore",
+      },
+      {
+        name: "Hakka Thunder Tea Rice",
+        address: "Margaret Drive Hawker Centre, #02-34, 38A Margaret Drive",
+        area: "Queenstown",
+        note: "Formerly at Tanglin Halt and served at the 2018 National Day Rally. Pair the lei cha with the generous handmade Hakka yong tau foo.",
+        mapsUrl: "https://maps.google.com/?q=Hakka+Thunder+Tea+Rice+Margaret+Drive+Hawker+Centre+Singapore",
+      },
+      {
+        name: "Traditional Hakka Rice",
+        address: "Tanjong Pagar Plaza Market & Food Centre, #02-21, 6 Tanjong Pagar Plaza",
+        area: "Tanjong Pagar",
+        note: "Hakka family stall with lei cha paste made fresh each morning. Try the steamed tofu and Hakka meatballs on the side. Closed Sundays.",
+        mapsUrl: "https://maps.google.com/?q=Traditional+Hakka+Rice+Tanjong+Pagar+Plaza+Market+Food+Centre+Singapore",
       },
     ],
     shiokOMeter: {
@@ -4680,8 +4789,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Tamil Nadu, South India — masala thosai arrived in Singapore with Tamil immigrant workers and became a breakfast staple of Little India's restaurant culture and hawker centres.",
     whereToFind:
-      "Little India's Serangoon Road restaurants for the full experience; Tekka Centre for the hawker version; banana leaf restaurants island-wide for the sit-down version with full accompaniments.",
-    priceRange: "S$4–8 per thosai",
+      "Hawker stalls specialising in thosai and appam, such as those at Tampines Round Market and Ghim Moh Market, serve masala thosai at breakfast and usually close by early afternoon. South Indian vegetarian restaurants in Little India serve it all day with sambar and chutneys.",
+    priceRange:
+      "S$4–8 (hawker masala thosai about S$4–5.50; Little India restaurants more)",
     imageUrl: "/images/food/masala-thosai.jpg",
     funFact:
       "The fermentation time for thosai batter ranges from eight to sixteen hours — longer fermentation produces a more sour, more complex batter, and the sourness is what gives a well-made thosai its slight tang that distinguishes it from plain pancake.",
@@ -4693,9 +4803,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Break from the edges inward — the crispy edge is the best part and should not be wasted on dipping before you've had it plain.",
     hawkersThatServeIt: [
-      "tekka-centre",
-      "geylang-serai-market",
       "tampines-round-market",
+      "ghim-moh-market-food-centre",
     ],
     howToEat: [
       "Break from the edges rather than the centre — the crispy perimeter is the technical achievement and should be eaten while it's still crackling",
@@ -4738,25 +4847,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
+        name: "Rajarani Thosai",
+        address: "Tampines Round Market & Food Centre, #01-33, 137 Tampines Street 11",
+        area: "Tampines",
+        note: "A 2026 Michelin Bib Gourmand stall with batter made from scratch and crisp edges. Get the masala egg onion thosai with the house chilli-onion chutney. Breakfast to early afternoon, closed Wednesdays.",
+        mapsUrl: "https://maps.google.com/?q=Rajarani+Thosai+Tampines+Round+Market+137+Tampines+Street+11+Singapore",
+      },
+      {
+        name: "Heavens",
+        address: "Ghim Moh Market & Food Centre, #01-26, 20 Ghim Moh Road",
+        area: "Ghim Moh",
+        note: "Best known for appam, but the masala thosai is a favourite too. The Royal Thosai is stuffed with potato masala, onion, cheese and egg. Mornings only, closed Mondays.",
+        mapsUrl: "https://maps.google.com/?q=Heavens+Indian+Curry+Ghim+Moh+Market+20+Ghim+Moh+Road+Singapore",
+      },
+      {
         name: "Komala Vilas",
         address: "76-78 Serangoon Road",
         area: "Little India",
-        note: "Singapore's oldest South Indian vegetarian restaurant since 1947 — the masala thosai here is made from an overnight-fermented batter and the potato filling is made fresh each morning",
-        mapsUrl: "https://maps.google.com/?q=Komala+Vilas+Serangoon+Road+Masala+Thosai+Singapore",
-      },
-      {
-        name: "Ananda Bhavan",
-        address: "58 Serangoon Road",
-        area: "Little India",
-        note: "The second great Serangoon Road institution — the dosa pan here is well-seasoned and the ghee finish gives the thosai its golden edge",
-        mapsUrl: "https://maps.google.com/?q=Ananda+Bhavan+Masala+Thosai+Singapore",
-      },
-      {
-        name: "Tekka Thosai Stall",
-        address: "Tekka Centre, #01-215, 665 Buffalo Road",
-        area: "Little India",
-        note: "The hawker version — more accessible price point and a consistent fermented batter that produces a properly crispy result",
-        mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Masala+Thosai+Singapore",
+        note: "A Little India vegetarian institution since 1947. Order the Mysore masala dosai with its fiery red chutney lining, and note the sambar, which reviewers praise.",
+        mapsUrl: "https://maps.google.com/?q=Komala+Vilas+76-78+Serangoon+Road+Singapore",
       },
     ],
     shiokOMeter: {

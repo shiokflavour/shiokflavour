@@ -313,6 +313,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
             </div>
 
             {/* Hawker Centres */}
+            {dish.hawkersThatServeIt.length > 0 && (
             <section className="mt-16 border-t border-white/10 pt-14">
               <h2 className="text-2xl font-bold tracking-tight text-sf-cream">
                 Find It At These Hawker Centres
@@ -333,6 +334,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
                 ))}
               </ul>
             </section>
+            )}
 
             {/* Rotating carousel */}
             <DishCarousel dishes={otherDishes} />
