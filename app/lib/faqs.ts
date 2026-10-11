@@ -66,7 +66,8 @@ export function buildDishFaqs(dish: FoodHeritageDish): FaqItem[] {
     out.push({ q: `Is ${name} spicy?`, a: spice[dish.spiceLevel] });
   }
 
-  if (dish.howToEat?.length) {
+  const hasOwnHowTo = (dish.faqs ?? []).some((f) => /how (do|to) (you )?eat/i.test(f.q));
+  if (dish.howToEat?.length && !hasOwnHowTo) {
     out.push({
       q: `How do you eat ${name} like a local?`,
       a: dish.howToEat.slice(0, 2).map(sentence).join(" "),

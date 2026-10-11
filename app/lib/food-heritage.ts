@@ -41,17 +41,21 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Char Kway Teow",
     slug: "char-kway-teow",
+    seoTitle:
+      "Char Kway Teow Singapore: Origin, Style & Best Stalls",
+    seoDescription:
+      "What Singapore char kway teow is, its Teochew origin, how it differs from Penang's, halal options, the best stalls (incl. Bedok), prices and tips.",
     category: "Singaporean Classics",
     description:
-      "Char kway teow (\"stir-fried rice cake strips\") is one of Singapore's most beloved wok dishes: flat rice noodles tossed over fierce heat with dark soy, egg, bean sprouts, and seafood or lap cheong. The dish reflects the Strait Settlements era—Teochew and Hokkien traders, Southern Chinese technique, and Malaysian ingredients meeting in port cities. The hallmark is wok hei, the smoky breath of the wok that hawkers chase at dawn and supper. UNESCO's inscription of Singapore's hawker culture celebrates exactly this: affordable, skilled street cooking passed between generations. A plate of CKT is not just calories; it is living heritage on a styrofoam tray.",
+      "Char kway teow (炒粿条, \"stir-fried flat rice noodles\") is one of Singapore's most beloved wok dishes: flat rice noodles and yellow noodles tossed over fierce heat with sweet dark soy, garlic, egg, bean sprouts, cockles and lap cheong, traditionally in lard. It came with Teochew migrants from the Chaoshan region of southern China and started out as a cheap, filling meal for labourers. The hallmark is wok hei, the smoky breath of the wok that hawkers chase plate after plate. UNESCO's inscription of Singapore's hawker culture celebrates exactly this: affordable, skilled street cooking passed between generations.",
     origin:
-      "Evolved from Chinese stir-fried noodles in Penang and Singapore, blending Hokkien and Teochew traditions with local belacan, cockles, and sweet dark soy.",
+      "Linked to Teochew migrants from Chaoshan in Guangdong, China, despite its Hokkien name. Some say it first appeared at Singapore's Ellenborough Market (the Teochew market) as a simple labourers' meal of rice noodles fried with lard and dark soy.",
     whereToFind:
-      "Lau Pa Sat and Maxwell Food Centre host legendary stalls; East Coast and Old Airport Road hawker centres are known for queues at peak hours. Look for long waits and a soot-dark wok.",
+      "Hong Lim Market & Food Centre (Outram Park Fried Kway Teow Mee), Old Airport Road Food Centre (Lao Fu Zi) and Bedok South Market & Food Centre (Hill Street Fried Kway Teow) are the big three, all with queues at peak hours. Look for long waits and a soot-dark wok.",
     priceRange: "S$5–8 per plate",
     imageUrl: "/images/food/char-kway-teow.png",
     funFact:
-      "Some iconic stalls still fry one or two portions at a time—refusing to overload the wok—to preserve the elusive wok hei that locals swear they can smell from across the food centre.",
+      "In the 1950s, when bean sprout growers went on strike, hawkers swapped the sprouts for cai xin, and duck eggs were the norm before chicken eggs took over.",
     bestPairedWith:
       "Calamansi lime squeeze, sambal on the side, and a cold sugar-cane juice to cut the richness.",
     halal: false,
@@ -65,11 +69,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "tiong-bahru-market",
     ],
     howToEat: [
-      "Squeeze the calamansi lime over the entire plate first — this is non-negotiable",
-      "Add sambal from the side little by little; don't dump it all in at once",
-      "Eat immediately — wok hei is a live thing and dies within 2 minutes",
-      "Mix cockles in last if you want them; skip them if you don't — no judgement",
-      "Chase every few bites with cold sugar cane juice to cut through the richness",
+      "Eat it the moment it lands; wok hei fades fast",
+      "If your plate comes with a lime wedge, squeeze it over to cut the richness",
+      "Ask for more or less chilli when you order; most Singapore stalls fry it in",
+      "Say 'no hum' if you want to skip the cockles; no judgement",
+      "Chase every few bites with cold sugar cane juice",
     ],
     keyIngredients: [
       {
@@ -136,24 +140,58 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       queueGame: 9,
       shiokValue: 9,
     },
+    faqs: [
+      {
+        q: "What is char kway teow?",
+        a: "Char kway teow (炒粿条, chǎo guǒ tiáo in Mandarin) means stir-fried flat rice noodles in Hokkien. In Singapore it is flat rice noodles fried with yellow noodles over high heat with sweet dark soy sauce, garlic, egg, bean sprouts, cockles, Chinese sausage and fish cake, traditionally in lard.",
+      },
+      {
+        q: "Where did char kway teow originate?",
+        a: "Despite its Hokkien name, char kway teow is linked to the Teochew community and is believed to trace back to the Chaoshan (Chaozhou) region of Guangdong, China. Teochew migrants spread it across Southeast Asia, and some say it first appeared in Singapore at Ellenborough Market, the old Teochew market by the Singapore River, as a cheap meal for labourers.",
+      },
+      {
+        q: "How is Singapore char kway teow different from Penang char kway teow?",
+        a: "Singapore char kway teow is darker and sweeter, thanks to sweet dark soy sauce, and usually mixes flat rice noodles with yellow noodles. Penang char kway teow skips the sweet sauce, so it is lighter, drier and more savoury, often with prawns and sometimes duck egg.",
+      },
+      {
+        q: "Does Singapore have the best char kway teow?",
+        a: "It depends on which style you love. Fans of a sticky, sweet, smoky plate with cockles and lard tend to prefer Singapore's version, while those who like a lighter, savoury fry usually side with Penang. Singapore's CKT is good enough that several stalls, such as Lao Fu Zi at Old Airport Road and Outram Park Fried Kway Teow Mee at Hong Lim, hold Michelin Bib Gourmand recognition.",
+      },
+      {
+        q: "Is 'Singapore fried kway teow' a real Singapore dish?",
+        a: "Not really. On Chinese takeaway menus abroad, 'Singapore' usually means a curry-powder stir-fry, like Singapore noodles, which were created by Cantonese cooks in Hong Kong rather than in Singapore. In Singapore itself, fried kway teow means char kway teow, which has no curry powder.",
+      },
+      {
+        q: "Where can I find good char kway teow in Bedok?",
+        a: "Hill Street Fried Kway Teow at Bedok South Market & Food Centre (#01-41, 16 Bedok South Road) is the big name. It began as a pushcart in 1961 at the old Hill Street Food Centre and is now run by the founder's son, with Michelin noting waits of up to an hour; it opens Tuesday to Saturday. A separate stall, also called Hill Street Fried Kway Teow, operates at Chinatown Complex.",
+      },
+      {
+        q: "Is char kway teow halal?",
+        a: "Traditional char kway teow is not halal, because it is fried in lard and often includes Chinese pork sausage. Halal-style versions exist: 786 Char Kway Teow at Bukit Merah View Food Centre is run by a Muslim convert and uses no pork or lard, though it is not halal-certified.",
+      },
+    ],
   },
   {
     name: "Hainanese Chicken Rice",
     slug: "hainanese-chicken-rice",
+    seoTitle:
+      "Hainanese Chicken Rice: Origin, History & Best Stalls",
+    seoDescription:
+      "How Hainanese chicken rice grew from Wenchang chicken into Singapore's national dish, its pioneers, halal options, best stalls and how to eat it.",
     category: "Singaporean Classics",
     description:
       "Hainanese chicken rice began with Hainanese cooks who adapted Wenchang chicken for colonial Singapore and Malaya: poached chicken, fragrant rice cooked in chicken fat and pandan, and a triumvirate of sauces—chilli, ginger, dark soy. It became the city-state's unofficial national dish because it is comforting, precise, and everywhere—from coffee shops to Michelin-listed stalls. Hawker centres guard family recipes for broth, timing of the ice bath that gives silky skin, and the exact aroma of the rice. That devotion is why chicken rice sits at the heart of Singapore's UNESCO-recognised hawker culture: technical skill, modest prices, and deep community memory.",
     origin:
-      "Hainanese immigrants refined a Hainan-style poached chicken for Southeast Asian palates; Singapore and Malaysia both claim singular 'best' versions.",
+      "Evolved from Wenchang chicken (文昌鸡) of Hainan Island. Hainanese migrants brought it to Singapore, where hawker Wong Yi Guan and his apprentice Moh Lee Twee (Swee Kee, 1949) turned it into the chicken rice of Middle Road and Purvis Street; Singapore and Malaysia both claim it.",
     whereToFind:
-      "Maxwell Food Centre, Chinatown Complex, and Serangoon Gardens hawker clusters are pilgrimage sites; many neighbourhoods have a 20-year stall locals won't trade away.",
+      "Maxwell Food Centre is the pilgrimage stop, with Tian Tian and Ah Tai a few stalls apart. Balestier Road has Boon Tong Kee, and nearly every neighbourhood hawker centre has a long-running chicken rice stall locals swear by. The dish took root in the old Hainanese quarter around Middle Road and Purvis Street near Bugis.",
     priceRange: "S$4–7 per plate (whole or half chicken costs more)",
     imageUrl: "/images/food/chicken-rice.png",
     funFact:
-      "Singapore's hawker chicken rice stalls often judge quality by rice first—aromatic, separate grains, and gentle chicken flavour before you even touch the meat.",
+      "Wong Yi Guan, the Hainanese hawker credited with Singapore's earliest known chicken rice, started out selling it from two baskets carried through the streets, before renting a coffee shop stall on Purvis Street.",
     bestPairedWith:
       "A clear chicken broth bowl, blanched greens with oyster sauce, and extra lime-chilli dip.",
-    halal: true,
+    halal: false,
     spiceLevel: "None",
     difficulty: "Easy to eat",
     localSay:
@@ -165,11 +203,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "alexandra-village-food-centre",
     ],
     howToEat: [
-      "Smell the rice first — good chicken rice is fragrant with pandan and chicken fat even before you eat",
-      "Mix all three sauces (chilli, ginger, dark soy) separately on the plate, not together",
-      "Taste the rice on its own before adding anything — a great stall's rice needs no sauce",
+      "Smell the rice first; good chicken rice is fragrant with pandan and chicken fat before you even eat",
+      "Put a little chilli, ginger and dark soy in separate spots on your plate so you can mix and match each bite",
+      "Taste the rice on its own before adding anything; a great stall's rice needs no sauce",
       "Dip each piece of chicken into your preferred sauce rather than pouring it over",
-      "Sip the clear broth between bites to cleanse the palate",
+      "Sip the clear soup between bites to cleanse the palate",
     ],
     keyIngredients: [
       {
@@ -236,24 +274,63 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       queueGame: 9,
       shiokValue: 10,
     },
+    faqs: [
+      {
+        q: "What is the origin of Hainanese chicken rice?",
+        a: "Hainanese chicken rice is believed to have evolved from Wenchang chicken (文昌鸡), a poached chicken dish from Wenchang on Hainan Island, China. Hainanese migrants brought it to Southeast Asia in the late 19th and early 20th centuries, and the rice-and-chilli version we know today was shaped in Singapore and Malaya rather than in Hainan itself.",
+      },
+      {
+        q: "Who created Singapore's Hainanese chicken rice?",
+        a: "Hainanese hawker Wong Yi Guan is credited with the earliest known Singapore version. He arrived from Hainan in the 1930s, sold chicken rice from two baskets around the streets, then cooked at coffee shops on Purvis Street and Middle Road. His apprentice Moh Lee Twee opened Swee Kee Chicken Rice on Middle Road in 1949 and made the dish famous; Swee Kee closed in 1997.",
+      },
+      {
+        q: "How did Hainanese chicken rice become a Singapore dish?",
+        a: "For decades it stayed a special-occasion dish in Hainanese homes, until after World War II many Hainanese cooks turned to hawking to make a living. The Middle Road, Purvis Street and Seah Street area, Singapore's old Hainanese quarter, became its home, with early names like Yet Con (opened 1940, closed 2021) and Swee Kee. Along the way it picked up Cantonese techniques like soaking the chicken in cold water, plus a tangy chilli sauce and pandan in the rice.",
+      },
+      {
+        q: "What is chicken rice called in Chinese?",
+        a: "Hainanese chicken rice is 海南鸡饭, pronounced Hǎinán jīfàn in Mandarin. Many older Singaporeans still order it in Hainanese or Hokkien as 'chicken rice' at the stall.",
+      },
+      {
+        q: "How do you order chicken rice in Singapore?",
+        a: "Say whether you want steamed or roasted chicken, how many people it is for, and whether you want a drumstick or breast meat. The rice, sauces and a small bowl of soup usually come with it.",
+        link: {"label": "Read our chicken rice ordering guide →", "href": "/blog/how-to-order-chicken-rice-singapore"},
+      },
+      {
+        q: "Is Hainanese chicken rice actually from Hainan?",
+        a: "Not in its current form. Hainan has Wenchang chicken, but the dish of poached chicken with fragrant chicken-fat rice and chilli sauce took shape among Hainanese emigrants in Singapore and Malaysia, which is why both countries claim it.",
+      },
+      {
+        q: "What is the difference between Singapore and Malaysian chicken rice?",
+        a: "The basics are the same: poached or roasted chicken, rice cooked in chicken stock and fat, and chilli and ginger sauces. Singapore stalls usually add pandan to the rice, while Malaysia is known for regional twists like Melaka's chicken rice balls, where the rice is hand-rolled into small balls.",
+      },
+      {
+        q: "Is chicken rice halal in Singapore?",
+        a: "Most traditional Chinese chicken rice stalls are not halal-certified, even though the dish has no pork, so look for the MUIS halal certificate. Halal-certified options include the OK Chicken Rice chain and Sam Leong St Chicken Rice at 12 Verdun Road in Farrer Park, which is open 24 hours.",
+      },
+    ],
   },
   {
     name: "Laksa",
     slug: "laksa",
+    seoTitle:
+      "Laksa in Singapore: Katong Laksa, Origin & Best Stalls",
+    seoDescription:
+      "What Singapore laksa is, how Katong laksa began, how it differs from Penang assam laksa, plus the best stalls, prices and how to eat it.",
     category: "Peranakan (Nyonya)",
     description:
       "Singapore laksa usually refers to Katong-style laksa: coconut curry broth, rice vermicelli cut short for spoon-only eating, fish cake, cockles, and Vietnamese coriander (daun kesum). Peranakan kitchens merged Chinese noodles with Malay spices and rempah, producing a creamy, fiery bowl that encodes centuries of intermarriage and trade. Hawkers still pound paste by hand in some stalls; others guard slow-simmered broth that tastes of lemongrass, dried shrimp, and patience. UNESCO's hawker listing honours dishes like laksa where migrant histories are simmered into something unmistakably Singaporean.",
     origin:
-      "Peranakan Nyonya laksa along the Straits, influenced by Malay, Indonesian, and Chinese coastal cooking.",
+      "Laksa grew out of Chinese, Malay and Peranakan cooking in the Straits port towns. Singapore's Katong style traces to brothers Ng Juat Swee (Janggut) and Ng Chwee Seng, who hawked it in Katong from the 1940s.",
     whereToFind:
-      "Katong and Joo Chiat for the coconut curry style; Sungei Road and Marine Parade hawker centres for neighbourhood favourites. Early hours mean fresher rempah in some spots.",
+      "East Coast Road in Katong is the home of Katong laksa, with 328 Katong Laksa and Janggut Laksa a few doors apart. Beyond Katong, look for heartland favourites like Sungei Road Laksa at Jalan Berseh Food Centre, which still cooks over charcoal, and 928 Yishun Laksa in Yishun.",
     priceRange: "S$5–7 per bowl, up to about S$9 at tourist spots",
     imageUrl: "/images/food/laksa.jpg",
     funFact:
       "Traditional Katong laksa is eaten with only a spoon—the noodles are snipped short so you never fish awkwardly in public.",
     bestPairedWith:
       "Otak-otak on the side, sambal spooned in slowly, and a lime cordial or teh peng.",
-    halal: true,
+    halal: false,
     spiceLevel: "Hot",
     difficulty: "Easy to eat",
     localSay:
@@ -265,11 +342,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "alexandra-village-food-centre",
     ],
     howToEat: [
-      "Use only a spoon — Katong laksa noodles are pre-cut short for exactly this reason",
-      "Stir the broth from the bottom before eating — the thick coconut cream sinks",
+      "Use only a spoon; Katong laksa noodles are cut short for exactly this reason",
+      "Give the bowl a stir first so the rempah and dried shrimp are spread through the broth",
       "Add sambal gradually; the broth is already spicy and it sneaks up on you",
-      "Eat the cockles early before they get too soaked and lose their bite",
-      "Tear a piece of otak-otak in between spoonfuls for the ultimate Katong combo",
+      "Eat the cockles early before they overcook in the hot broth",
+      "Tear a piece of otak-otak in between spoonfuls for the classic Katong combo",
     ],
     keyIngredients: [
       {
@@ -336,6 +413,36 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       queueGame: 7,
       shiokValue: 9,
     },
+    faqs: [
+      {
+        q: "What is Singapore laksa?",
+        a: "Singapore laksa is a spicy noodle soup made with a coconut milk curry broth, thick rice vermicelli, fish cake, cockles or prawns, and a scattering of chopped laksa leaf (daun kesum). The best-known version is Katong laksa, where the noodles are cut short so the whole bowl can be eaten with just a spoon.",
+      },
+      {
+        q: "What is laksa in Chinese?",
+        a: "Laksa is written 叻沙 in Chinese, pronounced lì shā in Mandarin. It is a sound-borrowing of the Malay word, so the characters do not describe the dish itself.",
+      },
+      {
+        q: "Where does laksa come from?",
+        a: "Laksa grew out of the mix of Chinese, Malay and Peranakan (Straits Chinese) cooking in the old Straits port towns, and its exact birthplace is debated. Singapore's Katong style is traced to brothers Ng Juat Swee, nicknamed Janggut, and Ng Chwee Seng, who hawked laksa in Katong from the 1940s before setting up in a coffee shop on East Coast Road in 1950.",
+      },
+      {
+        q: "What is the difference between Katong laksa, curry laksa and Penang assam laksa?",
+        a: "Katong laksa and curry laksa are both lemak (coconut milk) laksas, with Katong laksa known for its short-cut noodles, cockles and thick, dried-shrimp-heavy broth. Penang assam laksa is a different dish altogether: a sour tamarind and fish broth, usually with flaked mackerel, and no coconut milk.",
+      },
+      {
+        q: "Why is Katong laksa eaten with only a spoon?",
+        a: "The rice noodles in Katong laksa are cut into short lengths before serving, so you can scoop up noodles, broth and toppings in one spoonful. Most Katong-style stalls simply hand you a soup spoon and no chopsticks.",
+      },
+      {
+        q: "What was the Katong laksa war?",
+        a: "In the late 1990s several shops along the same stretch of East Coast Road all claimed to sell the original Katong laksa, and by 1999 five were competing side by side. 328 Katong Laksa came out of that era and is still at 51 East Coast Road. In 2013 it beat celebrity chef Gordon Ramsay in a laksa cook-off at the Singtel Hawker Heroes Challenge.",
+      },
+      {
+        q: "Is laksa halal in Singapore?",
+        a: "Most of Singapore's well-known laksa stalls, including the famous Katong laksa shops, are not halal-certified, so check for the MUIS halal certificate at the stall. One halal-certified option is the OK Chicken Rice & Humfull Laksa chain, which has outlets across Singapore.",
+      },
+    ],
   },
   {
     name: "Ice Kachang",
@@ -622,20 +729,24 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Rojak",
     slug: "rojak",
+    seoTitle:
+      "Singapore Rojak: Best Stalls, Chinese vs Indian Rojak",
+    seoDescription:
+      "What Singapore rojak is, Chinese vs Indian vs Malay rojak, what goes into the prawn paste sauce, Hoover Rojak and the best rojak stalls with prices.",
     category: "Singaporean Classics",
     description:
-      "Rojak means \"mixture\"—here, a salad of cucumber, pineapple, you tiao, tau pok, and sometimes jambu, tossed in shrimp paste dressing, crushed peanuts, and a calculated sting of chilli. Indian rojak variants spotlight fried dough and potato with sweet turnip sauce; Chinese-style leans on hae ko and fruit acid. Singapore's hawker rojak stalls are flavour laboratories where sweet, funky, crunchy, and spicy refuse to stay separate. That pluralism mirrors the UNESCO inscription: hawker food as a living archive of coexistence and trade.",
+      "Rojak means \"mixture\" in Malay, and the Singapore version lives up to it: pineapple, cucumber, turnip, bean sprouts, you tiao and tau pok tossed in a dark prawn paste sauce sharpened with lime and tamarind, then finished with crushed peanuts, torch ginger flower and as much chilli as you ask for. Indian rojak shares the name but is a different dish entirely: deep-fried fritters, prawns, beancurd and potato with a thick chilli dip thickened with sweet potato. Singapore's rojak stalls are flavour laboratories where sweet, funky, crunchy and spicy refuse to stay separate, and the dish sits on Singapore's Intangible Cultural Heritage inventory.",
     origin:
-      "Malay-Indonesian fruit salads and Indian chaat crossed with Chinese you tiao; Singapore's stalls blend lineages on one plate.",
+      "Origins are unclear: the name is Malay for 'mixture', and the dish is linked to Indonesian rujak, with Malay, Chinese and Peranakan influences. In 1960s Singapore it was sold from pushcarts, and until the 1980s bicycle peddlers mixed it to order and served it in daun upeh leaves.",
     whereToFind:
-      "Toa Payoh and Balestier heritage hawker clusters, Old Airport Road, and famous stalls where uncles still hand-cut fruit to order.",
+      "Old Airport Road Food Centre for Toa Payoh Rojak, Toa Payoh HDB Hub for Soon Heng, Whampoa Makan Place off Balestier for Hoover Rojak, and Dunman Food Centre for charcoal-grilled fritters at Lau Hong Ser.",
     priceRange: "S$4–10",
     imageUrl: "/images/food/rojak.png",
     funFact:
-      "Veteran rojak masters toast you tiao to different crispness levels so some bites stay crunchy after dressing soaks in.",
+      "Until the 1980s, bicycle peddlers mixed rojak to order on the spot and served it in folded daun upeh leaves, with toothpicks instead of forks.",
     bestPairedWith:
       "Ice jelly, sugar-cane juice, or a small plate of satay to follow the bold paste.",
-    halal: true,
+    halal: false,
     spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
@@ -717,6 +828,36 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       queueGame: 4,
       shiokValue: 9,
     },
+    faqs: [
+      {
+        q: "What is Singapore rojak?",
+        a: "Rojak is a salad whose Malay name means mixture. The Singapore version, usually sold by Chinese hawkers, tosses pineapple, cucumber, turnip, bean sprouts and kangkong with you tiao and tau pok in a thick, dark sauce. It is finished with ground peanuts and finely sliced torch ginger flower, and the result is sweet, sour, salty and funky at once.",
+      },
+      {
+        q: "What is in rojak sauce?",
+        a: "The base is hae ko, a thick black prawn paste, mixed with a little water, sugar, lime juice and tamarind, with chilli paste added to taste. The sauce is mixed first in a large bowl, then the fruit and fritters are tossed through it. Ground peanuts go on top for texture.",
+      },
+      {
+        q: "What is the difference between Indian rojak and Chinese rojak?",
+        a: "They share a name but are different dishes. Indian rojak is a spread of deep-fried items such as dough fritters, battered prawns, beancurd, potato and squid that you pick yourself, which are cut up and served with a thick chilli dip thickened with sweet potato. Chinese rojak is a fruit and vegetable salad tossed in prawn paste sauce. Indian rojak is typically sold by Indian Muslim hawkers.",
+      },
+      {
+        q: "Is there a Malay rojak?",
+        a: "Yes. Malay rojak includes deep-fried tempeh and tahu goreng (fried beancurd), and uses belacan shrimp paste rather than hae ko. The sauce is pounded rather than simply mixed.",
+      },
+      {
+        q: "Where is Hoover Rojak?",
+        a: "Balestier Road Hoover Rojak is at Whampoa Makan Place, 90 Whampoa Drive #01-06, despite the Balestier Road name. The recipe dates back to 1961, when the late founder sold rojak from a pushcart, and the stall received a Michelin Bib Gourmand in 2016. It is known for adding extras like jellyfish and century egg to the usual fruit and fritters. It keeps limited hours, so check it is open before making a special trip.",
+      },
+      {
+        q: "Is rojak halal?",
+        a: "Chinese-style rojak is usually sold by Chinese stalls that are not halal-certified, and Hoover Rojak, for example, is not certified. Indian rojak is typically sold by Indian Muslim hawkers. If it matters to you, check for a MUIS halal certificate at the stall.",
+      },
+      {
+        q: "How did rojak start in Singapore?",
+        a: "Its exact origins are unclear, though it is linked to Indonesian rujak and mixes Malay, Chinese and Peranakan influences. In the 1960s it was sold from pushcarts, and until the 1980s bicycle peddlers mixed it to order in neighbourhoods, serving it in folded daun upeh leaves with toothpicks. Rojak was added to Singapore's Intangible Cultural Heritage inventory in 2019.",
+      },
+    ],
   },
   {
     name: "Bobo Cha Cha",
@@ -997,18 +1138,22 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Wanton Mee",
     slug: "wanton-mee",
+    seoTitle:
+      "Wanton Mee Singapore: Dry vs Soup, Styles & Bib Gourmand",
+    seoDescription:
+      "Singapore wanton mee (云吞面) explained: dry with char siew and chilli vs Hong Kong soup style, fried vs soup wantons, and the Michelin Bib Gourmand stalls.",
     category: "Singaporean Classics",
     description:
-      "Wanton mee is Singapore's most democratic noodle: available everywhere, priced for everyone, and done properly at hundreds of stalls, a handful of which have earned Michelin Bib Gourmand recognition. Thin egg noodles — springy and slightly smoky from the lard — are tossed in a char siew sauce and served with char siew slices, wanton dumplings either fried or in soup, and a scattering of vegetables. It is Cantonese in origin and Singaporean in execution. The char siew is the thing to judge each stall by: properly caramelised, lacquered at the edges, never dry. A great wanton mee stall is one you find close to home and protect quietly.",
+      "Wanton mee (云吞面) is one of Singapore's everyday noodle staples: thin, springy egg noodles usually served dry and tossed in a savoury sauce, with sliced char siew, leafy greens and wantons either fried or in a small bowl of soup. Many stalls dress it with chilli or chilli ketchup, a local touch you won't find in Hong Kong. It is Cantonese in origin and Singaporean in execution, and a handful of hawker stalls hold Michelin Bib Gourmand awards for it. Judge each stall by its noodles and its char siew, which should be caramelised at the edges and never dry.",
     origin:
-      "Cantonese noodle tradition brought by Guangdong immigrants — wanton mee in Singapore evolved a distinctive local char siew sauce that separates it from Hong Kong versions.",
+      "Cantonese wonton noodles brought by immigrants from Guangdong. In Singapore the dish shifted toward a dry, sauce-tossed bowl topped with char siew and chilli, unlike the Hong Kong original, which is usually served in a light broth.",
     whereToFind:
       "Wanton mee is a staple at hawker centres and coffee shops across Singapore, usually served dry with char siew sauce or in soup. Several hawker stalls, including ones at Hong Lim, Bukit Merah View and Yuhua Village, hold Michelin Bib Gourmand awards.",
     priceRange:
       "S$3.50–7 per plate (hawker stalls; restaurant versions cost more)",
     imageUrl: "/images/food/wanton-mee.png",
     funFact:
-      "Singapore wanton mee uses a darker, sweeter char siew sauce than the Hong Kong or Malaysian versions — a local adaptation that happened quietly over decades and is now considered the standard.",
+      "In Hong Kong, wonton noodles usually come in a light broth flavoured with dried flounder and usually without char siew. Singapore's version is mostly eaten dry, topped with char siew and often dressed with chilli ketchup.",
     bestPairedWith:
       "A bowl of wanton soup on the side, a cup of kopi-o, and a folded newspaper. This is a breakfast ritual, not just a meal.",
     halal: false,
@@ -1044,7 +1189,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       {
         name: "Char Siew Sauce",
         emoji: "🫙",
-        role: "Dark, sweet, and slightly smoky — the sauce the noodles are tossed in. Singapore's version is darker and richer than the Cantonese original.",
+        role: "A savoury-sweet mix of soy, oil or lard that the noodles are tossed in, often with chilli or chilli ketchup in Singapore.",
       },
       {
         name: "Wanton Dumplings",
@@ -1067,21 +1212,21 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         name: "Yong Chun Wan Ton Noodle",
         address: "Bukit Merah View Market & Hawker Centre, #01-56, 115 Bukit Merah View",
         area: "Redhill / Bukit Merah",
-        note: "Michelin Bib Gourmand. Wok-fried char siew and springy noodles, plus wantons with water chestnut. Opens 5.30am and sells out before lunch; closed Thursdays.",
+        note: "Michelin Bib Gourmand (2026). Springy egg noodles made to order, best eaten dry, with fresh, firm minced pork wantons. Opens 5.30am and closes around 12.30pm (1pm on Mondays); closed Thursdays.",
         mapsUrl: "https://maps.google.com/?q=Yong+Chun+Wan+Ton+Noodle+115+Bukit+Merah+View+Singapore",
       },
       {
         name: "Fei Fei Roasted Noodle",
         address: "Yuhua Village Market & Food Centre, #01-28, Blk 254 Jurong East Street 24",
         area: "Jurong East",
-        note: "Michelin Bib Gourmand family stall of 40+ years, known for charcoal-roasted, well-charred char siew. Arrive early, cash only, closed Sundays.",
+        note: "Michelin Bib Gourmand (2026) family stall running for more than 40 years, with meats roasted over charcoal in the stall every day. Morning only and closed Sundays, so arrive early.",
         mapsUrl: "https://maps.google.com/?q=Fei+Fei+Roasted+Noodle+Yuhua+Village+Food+Centre+254+Jurong+East+Street+24+Singapore",
       },
       {
         name: "Ji Ji Noodle House (Ji Ji Wanton Noodle Specialist)",
         address: "Hong Lim Market & Food Centre, #02-48/49, Blk 531A Upper Cross Street",
         area: "Chinatown",
-        note: "Michelin Bib Gourmand stall dating to 1965, with slightly thicker, chewier noodles. Get the char siew wanton noodles with fried wanton and the homemade chilli.",
+        note: "Michelin Bib Gourmand (2026) stall dating to 1965. The Ji Ji noodle bowl comes dry or in soup, topped with char siew, fried wanton and vegetables, with wanton soup on the side. Get the homemade chilli. Cash only; closed Thursdays.",
         mapsUrl: "https://maps.google.com/?q=Ji+Ji+Noodle+House+Hong+Lim+Market+Food+Centre+Singapore",
       },
     ],
@@ -1092,6 +1237,32 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       queueGame: 5,
       shiokValue: 9,
     },
+    faqs: [
+      {
+        q: "What is wanton mee?",
+        a: "Wanton mee (云吞面) is a Cantonese noodle dish of thin, springy egg noodles served with wantons, which are small pork dumplings. In Singapore it usually comes with sliced char siew and leafy greens, with the wantons either fried or in a small bowl of soup on the side. It is not halal, since it uses pork and often lard.",
+      },
+      {
+        q: "How is Singapore wanton mee different from Hong Kong wanton noodles?",
+        a: "Hong Kong wonton noodles are usually served in a light broth flavoured with dried flounder, and they don't usually come with char siew. Singapore wanton mee is mostly eaten dry, with the noodles tossed in a savoury sauce and topped with char siew, and it is often served with chilli or chilli ketchup. The Malaysian version is close to Singapore's but tends to use more dark soy or oyster sauce.",
+      },
+      {
+        q: "Should I order wanton mee dry or soup?",
+        a: "Most people in Singapore order it dry. The noodles are blanched and tossed in sauce, and the wantons come in a small bowl of soup on the side. Soup versions are available at most stalls if you prefer something lighter.",
+      },
+      {
+        q: "Why is there ketchup in Singapore wanton mee?",
+        a: "Many Singapore stalls mix their chilli sauce with tomato ketchup, which gives the dry noodles a sweet, tangy red coating. It is a local twist rather than part of the Cantonese original, and some stalls stick to a soy-based sauce with just chilli on the side.",
+      },
+      {
+        q: "Are the wantons fried or in soup?",
+        a: "Both are common. Singapore stalls often serve fried wantons alongside or instead of boiled ones, and some bowls come with both. At Ji Ji Noodle House, for example, the signature bowl is topped with fried wanton and comes with a side of wanton soup.",
+      },
+      {
+        q: "Which wanton mee stalls have a Michelin Bib Gourmand?",
+        a: "In the 2026 Michelin Guide Singapore, Bib Gourmand stalls known for wanton noodles include Yong Chun Wan Ton Noodle at Bukit Merah View, Fei Fei Roasted Noodle at Yuhua Village and Ji Ji Noodle House at Hong Lim Market. All three are hawker stalls with morning or limited hours, so go early.",
+      },
+    ],
   },
   {
     name: "Economy Rice",
@@ -1526,24 +1697,28 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Nasi Lemak",
     slug: "nasi-lemak",
+    seoTitle:
+      "Nasi Lemak in Singapore: Best Stalls, Halal & Styles",
+    seoDescription:
+      "What nasi lemak is, Malay vs Chinese-style, which stalls are halal, Bali Nasi Lemak and Michelin Bib pick Kitchenman, plus prices and the best plates.",
     category: "Malay & Muslim Heritage",
     description:
-      "Nasi lemak is the most complete meal in Singapore: coconut-fragrant rice cooked in pandan leaf, sambal, fried ikan bilis, roasted peanuts, half a hard-boiled egg, and cucumber. Everything is present — fat, salt, heat, sweetness, crunch, freshness. The Malay community has eaten it for breakfast for centuries. The Indian community added curry. The Chinese community added luncheon meat and otah. The result is a dish that Singapore owns collectively and defends individually. Every regular has a preferred stall. The debate about which is best is not a debate that will ever be resolved. That is part of the point.",
+      "Nasi lemak is the most complete meal in Singapore: rice cooked in coconut milk with pandan leaves, sambal, fried ikan bilis, roasted peanuts, egg and cucumber. Everything is present: fat, salt, heat, sweetness, crunch and freshness. It has its roots in Malay cuisine, and in Singapore every community has made it its own, with Chinese-style stalls adding fried chicken wings, fish cakes, otah, luncheon meat and curried vegetables. The result is a dish Singapore owns collectively and defends individually. Every regular has a preferred stall, and the debate about which is best will never be resolved. That is part of the point.",
     origin:
-      "Malay archipelago food tradition — nasi lemak (literally 'fatty rice' in Malay) spread from the Malay peninsula and was carried to Singapore by Malay and Javanese communities.",
+      "Malay cuisine: 'lemak' means fatty or creamy in Malay, describing rice cooked in coconut milk and pandan. In 1970s Singapore it was sold door to door in small banana-leaf packets for about 30 cents; set-meal sides like fried chicken wings and fried eggs arrived from the 1980s.",
     whereToFind:
-      "Adam Road Food Centre for the Michelin-recognised version; Geylang Serai and Tekka Centre for authentically Malay settings; every mamak and Malay stall island-wide for daily sustenance.",
+      "Kitchenman Nasi Lemak in Kallang for the Michelin Bib Gourmand pick; Selera Rasa at Adam Road Food Centre; Geylang for late-night plates at Bali Nasi Lemak; and Malay and Chinese-style stalls in almost every hawker centre for the everyday version.",
     priceRange: "S$3–6 (simple packets from about S$2)",
     imageUrl: "/images/food/nasi-lemak.png",
     funFact:
-      "The sambal is the stall's signature — every nasi lemak auntie guards her sambal recipe fiercely, and regulars can identify their preferred stall's sambal by smell alone.",
+      "In the 1970s nasi lemak was sold door to door in small banana-leaf packets for about 30 cents. Set-meal extras like crispy chicken wings and fried eggs only became standard from the 1980s.",
     bestPairedWith:
       "Teh tarik, a side of otah, and a piece of fried chicken if the stall offers it. Eat before 9am for the full experience.",
-    halal: true,
+    halal: false,
     spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
-      "The sambal must have ikan bilis in it — not just on the side. That's the rule and there are no exceptions.",
+      "Rice first, sambal second. If the rice isn't properly lemak, no sambal can save it.",
     hawkersThatServeIt: [
       "adam-road-food-centre",
       "geylang-serai-market",
@@ -1592,6 +1767,36 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       },
     ],
     shiokOMeter: { spiceHit: 5, messFactor: 2, flavourDepth: 9, queueGame: 8, shiokValue: 10 },
+    faqs: [
+      {
+        q: "What is nasi lemak?",
+        a: "Nasi lemak is rice cooked in coconut milk with pandan leaves, served with sambal, fried ikan bilis (anchovies), roasted peanuts, egg and cucumber. Lemak means fatty or creamy in Malay, a nod to the rich coconut rice. The dish has its roots in Malay cuisine and was traditionally a breakfast food, but in Singapore it is now eaten at any time of day.",
+      },
+      {
+        q: "What is nasi lemak called in Chinese?",
+        a: "In Chinese it is 椰浆饭 (yē jiāng fàn), which means coconut milk rice. Most Chinese-speaking Singaporeans simply call it nasi lemak too.",
+      },
+      {
+        q: "Is nasi lemak halal?",
+        a: "It depends on the stall, not the dish. Malay-run stalls are usually Muslim-owned, but Muslim-owned is not the same as halal-certified, so look for the MUIS halal certificate if that matters to you. Chinese-style stalls often add luncheon meat, which is usually pork, and some well-known stalls such as Selera Rasa and Kitchenman are not halal-certified even though they use no pork or lard. Husk Nasi Lemak in Bugis is one halal-certified option.",
+      },
+      {
+        q: "What is the difference between Malay and Chinese nasi lemak?",
+        a: "Malay-style nasi lemak is usually served fairly dry with little gravy, topped with fried chicken or fish and an egg around the classic sambal, ikan bilis and peanuts. Chinese-style stalls work more like a buffet, letting you add chicken wings or drumsticks, fish cakes, otah, luncheon meat, chicken sausages and curried vegetables. Both start with the same coconut rice and sambal.",
+      },
+      {
+        q: "Where is Bali Nasi Lemak and is it halal?",
+        a: "Bali Nasi Lemak is at 142 Sims Avenue in Geylang and has been around since 1985, long known as a late-night spot. People go for the kecap manis (sweet soy) chicken wings and sides like sambal petai and sambal long beans, picked from trays at the counter. It is not a halal-certified eatery.",
+      },
+      {
+        q: "Which nasi lemak stall has a Michelin Bib Gourmand?",
+        a: "Kitchenman Nasi Lemak is the only nasi lemak stall on the 2026 Michelin Bib Gourmand list for Singapore. It is tucked away in an industrial building in the Kallang and Bendemeer area. It is not halal-certified but uses no pork or lard.",
+      },
+      {
+        q: "What is Husk Nasi Lemak?",
+        a: "Husk Nasi Lemak is a halal-certified shop at Bugis Cube, 470 North Bridge Road, that does modern takes on nasi lemak. Its toppings go beyond the classic plate, including a moo ping-inspired grilled chicken. Expect cafe-style prices rather than hawker prices.",
+      },
+    ],
   },
   {
     name: "Mee Rebus",
@@ -1923,19 +2128,24 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Satay Bee Hoon",
     slug: "satay-bee-hoon",
-    category: "Malay & Muslim Heritage",
+    seoTitle:
+      "Satay Bee Hoon Singapore: Best Stalls, Origin & Calories",
+    seoDescription:
+      "Satay bee hoon explained: Teochew origins, what's in the peanut gravy, calories, and where to eat it, from Bak Kee at Redhill to Shi Wei Da in Bedok.",
+    category:
+      "Chinese Dialect Heritage",
     description:
-      "Satay bee hoon is one of Singapore's most uniquely local dishes — thin rice vermicelli in a thick, peanut-based satay sauce, served with cockles, cuttlefish, pork slices, and long beans. The dish shares its sauce with satay skewers but is a completely different eating experience: the sauce coats the noodles, absorbs into the cockles, and transforms every ingredient it touches. It is a dish that exists only in Singapore, has no equivalent elsewhere, and is slowly becoming rarer as the hawkers who make it properly age without successors.",
+      "Satay bee hoon is one of Singapore's most distinctly local hawker dishes: soft rice vermicelli smothered in a thick, slightly sweet and spicy peanut satay gravy, usually with cuttlefish, cockles, pork slices, tau pok, kangkong and bean sprouts underneath. It borrows its sauce from satay skewers but eats completely differently, with the gravy coating every strand and soaking into the tau pok. Fewer hawkers make it than in decades past, so the good stalls tend to draw queues.",
     origin:
-      "Uniquely Singaporean — created by Chinese and Malay hawkers who adapted the Malay satay peanut sauce into a noodle dish. Found nowhere else in the world.",
+      "Said to have been created by Teochew immigrants in Singapore, who paired Chinese ingredients such as cuttlefish, pork liver and rice vermicelli with the peanut gravy used for Malay satay.",
     whereToFind:
-      "Bedok 85 Fengshan Market and Marine Parade Food Centre for the best surviving versions. The dish is increasingly rare — find the stalls that still make it and go.",
+      "Satay bee hoon is now a specialist dish found at a handful of hawker stalls, including Shi Wei Da at Bedok 85 Fengshan Food Centre, Sin Chew at the interim Bukit Timah Food Centre on Jalan Seh Chuan, Bak Kee Teochew Satay Bee Hoon at Redhill Food Centre and Lao Chao Zhou at Ghim Moh. Many stalls open only a few days a week, so check hours before you go.",
     priceRange: "S$5–8 per plate",
     imageUrl: "/images/food/satay-bee-hoon.jpg",
     funFact:
-      "Satay bee hoon is one of Singapore's endangered dishes — fewer than a dozen stalls still make it properly, and the number decreases each year as veteran hawkers retire.",
+      "Bak Kee Teochew Satay Bee Hoon began as a roadside stall in the 1960s. Its founder, the late Lee Sar Bak, made his peanut sauce from more than 20 spices and ingredients, and his family later set up a factory to make and sell it.",
     bestPairedWith:
-      "Calamansi squeezed over the top, a cold sugarcane juice, and the appreciation that you are eating something increasingly rare.",
+      "A cold sugarcane or lime juice to cut through the rich peanut gravy, and an extra side of tau pok if the stall sells it.",
     halal: false,
     spiceLevel: "Medium",
     difficulty: "Easy to eat",
@@ -1943,31 +2153,29 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "This one getting harder to find lah. When you see it, must order — cannot take for granted.",
     hawkersThatServeIt: [
       "bedok-85-fengshan-market",
-      "marine-parade-food-centre",
-      "old-airport-road-food-centre",
-      "bedok-interchange-hawker-centre",
+      "ghim-moh-market-food-centre",
     ],
     howToEat: [
-      "Mix the peanut sauce thoroughly from the bottom — it thickens as it cools and pools beneath the noodles",
-      "Eat the cockles early — they firm up in the thick sauce and lose their texture if left",
-      "Squeeze calamansi over the plate — the acid cuts through the richness of the peanut sauce beautifully",
-      "Ask for extra peanut sauce if offered — the noodles absorb it quickly and a little extra never goes wrong",
-      "Order this whenever you see it — the stalls that make it well are fewer every year",
+      "Mix the gravy through from the bottom as soon as the plate arrives, since it thickens as it cools",
+      "Eat the cockles early, before they firm up in the hot gravy",
+      "Dig for the tau pok, which soaks up more gravy than anything else on the plate",
+      "Ask for extra gravy if the stall offers it, because the bee hoon absorbs it quickly",
+      "Check opening days before you travel, as many satay bee hoon stalls keep short or irregular hours",
     ],
     keyIngredients: [
       { name: "Bee Hoon", emoji: "🍜", role: "Thin rice vermicelli — soft and delicate, designed to absorb the peanut sauce completely rather than hold its shape." },
       { name: "Peanut Satay Sauce", emoji: "🥜", role: "The defining element — thick, slightly sweet, complex peanut sauce that is related to but different from the version served with satay skewers." },
       { name: "Cockles", emoji: "🦪", role: "Half-cooked in the heat of the sauce — briny, tender, and the shellfish element that makes satay bee hoon distinctively Singaporean." },
       { name: "Cuttlefish", emoji: "🦑", role: "Sliced and added to the plate — chewy, slightly sweet, and the texture contrast that prevents the dish from being entirely soft." },
-      { name: "Long Beans", emoji: "🥬", role: "Blanched and mixed in — adds crunch and a fresh, slightly grassy note that cuts through the richness of the peanut sauce." },
-      { name: "Calamansi", emoji: "🍋", role: "The acid finish — squeezed over the completed plate, it brightens everything and makes the peanut sauce taste less heavy." },
+      { name: "Kangkong", emoji: "🥬", role: "Blanched water spinach under the bee hoon, soft but still with a little bite, and a green break from the rich gravy." },
+      { name: "Tau Pok", emoji: "🧈", role: "Fried beancurd puffs that soak up the peanut gravy like a sponge. Many regulars say they are the best bite on the plate." },
     ],
     bestStalls: [
       {
         name: "Shi Wei Da Satay Bee Hoon",
         address: "Bedok 85 Fengshan Food Centre, #01-69, 85 Bedok North Street 4",
         area: "Bedok",
-        note: "The owner roasts, skins and grinds his own peanuts for the sauce. Back since January 2025 after a short closure.",
+        note: "Mr Ng Kim Song roasts, skins and grinds his own peanuts for the gravy. The stall reopened on 5 January 2025 after closing in April 2024, and the current plate leaves out cockles and cuttlefish to keep prices low.",
         mapsUrl:
           "https://maps.google.com/?q=Shi+Wei+Da+Satay+Bee+Hoon+Bedok+85+Fengshan+Food+Centre%2C+%2301-69%2C+85+Bedok+North+Street+4+Singapore",
       },
@@ -1983,12 +2191,42 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         name: "Old Teochew (Lao Chao Zhou)",
         address: "Ghim Moh Market & Food Centre, #01-18, 20 Ghim Moh Road",
         area: "Ghim Moh",
-        note: "A morning-only stall — and no satay bee hoon on Thursdays.",
+        note: "A morning-only stall, closed Tuesdays and Wednesdays, with no satay bee hoon on Thursdays.",
         mapsUrl:
           "https://maps.google.com/?q=Old+Teochew+%28Lao+Chao+Zhou%29+Ghim+Moh+Market+%26+Food+Centre%2C+%2301-18%2C+20+Ghim+Moh+Road+Singapore",
       },
     ],
     shiokOMeter: { spiceHit: 4, messFactor: 3, flavourDepth: 8, queueGame: 5, shiokValue: 8 },
+    faqs: [
+      {
+        q: "What is satay bee hoon?",
+        a: "Satay bee hoon is rice vermicelli (bee hoon) smothered in a thick peanut satay gravy. Underneath you usually find cuttlefish, cockles, pork slices, tau pok, kangkong and bean sprouts, though toppings vary by stall. It is a Singapore hawker dish, and it is not halal because most versions use pork.",
+      },
+      {
+        q: "Is satay bee hoon a Teochew dish?",
+        a: "Yes. It is said to have been created by Teochew immigrants in Singapore, who combined Chinese ingredients such as cuttlefish, pork liver and rice vermicelli with the peanut gravy used for Malay satay. That is why many stalls still carry \"Teochew\" in their names, such as Bak Kee Teochew Satay Bee Hoon.",
+      },
+      {
+        q: "How is satay bee hoon made?",
+        a: "The bee hoon and toppings (cuttlefish, cockles, pork, kangkong, bean sprouts and tau pok) are blanched and piled onto a plate, then a ladle of hot peanut gravy goes over the top. The gravy is built from ground peanuts, chilli, garlic and spices, often with coconut milk. The best stalls make it from scratch: Shi Wei Da's owner roasts, skins and grinds his own peanuts, then simmers the paste with more than a dozen other ingredients.",
+      },
+      {
+        q: "How many calories are in satay bee hoon?",
+        a: "A typical 455g plate of satay bee hoon has roughly 760 kcal, with about 38g of fat and 77g of carbohydrate, according to the FatSecret food database. Treat it as an approximate figure, since portion size and the amount of peanut gravy vary a lot between stalls. Much of the fat comes from the gravy, so asking for less sauce lightens it.",
+      },
+      {
+        q: "Is satay mee hoon the same as satay bee hoon?",
+        a: "Yes, it is the same dish. \"Bee hoon\" and \"mee hoon\" are just different spellings of the same rice vermicelli (米粉), and you will also see it written as satay beehoon.",
+      },
+      {
+        q: "Where is Bak Kee Teochew Satay Bee Hoon?",
+        a: "Bak Kee is at Redhill Food Centre, 85 Redhill Lane, #01-40. The stall dates back to the 1960s, when the late Mr Lee Sar Bak started it as a roadside stall with a peanut sauce of more than 20 spices and ingredients. Published opening hours differ between listings, so check before you make the trip.",
+      },
+      {
+        q: "Where can I eat satay bee hoon in Bedok?",
+        a: "Shi Wei Da at Bedok 85 Fengshan Food Centre (85 Bedok North Street 4, #01-69) is the best-known Bedok stall and received a Michelin Bib Gourmand in 2018. It closed in April 2024 and reopened on 5 January 2025, trading in the afternoon and evening. To keep prices low, the current plate leaves out cockles and cuttlefish.",
+      },
+    ],
   },
   // ─── PERANAKAN (NYONYA) ───────────────────────────────────────────
   {
@@ -2256,11 +2494,15 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Bak Kut Teh",
     slug: "bak-kut-teh",
+    seoTitle:
+      "Bak Kut Teh Singapore: Teochew vs Hokkien, What to Order",
+    seoDescription:
+      "What bak kut teh (肉骨茶) means, peppery Teochew vs herbal Hokkien vs Klang style, what to order with it, free soup refills and the best stalls in Singapore.",
     category: "Chinese Dialect Heritage",
     description:
-      "Bak kut teh — pork bone tea — is Singapore's most debated dish. The Teochew version is clear, peppery, and almost medicinal. The Hokkien version is dark with herbs, heavier, and smells like a Chinese medicine hall. Both are correct. Both are vigorously defended. The dish arrived with Hokkien and Teochew labourers who needed a fortifying breakfast before long days at the docks — pork ribs simmered with spices and medicinal herbs, eaten with rice and dark soy, and washed down with strong Chinese tea. Today it is eaten at midnight as much as in the morning. The 'tea' in the name refers to the Chinese tea drunk alongside, not to the broth itself.",
+      "Bak kut teh (肉骨茶), Hokkien for \"meat bone tea\", is pork ribs simmered in broth and eaten with rice, dark soy and a pot of Chinese tea. The Teochew version most common in Singapore is clear, garlicky and peppery. The Hokkien version is darker and sweeter, cooked with Chinese herbs and plenty of dark soy. Both are vigorously defended. The dish is credited to Hokkien immigrants from Fujian and became a fortifying breakfast for Chinese labourers before long days of physical work. Today it is eaten at midnight as much as in the morning. The 'tea' in the name refers to the Chinese tea drunk alongside, not to the broth itself.",
     origin:
-      "Hokkien and Teochew dock workers in colonial Singapore — a fortifying morning meal that combined cheap pork bones with medicinal herbs into something that became one of the island's most beloved dishes.",
+      "Credited to Hokkien immigrants from Fujian who brought it to Singapore and Malaysia in the 19th century, where it became a cheap, fortifying breakfast for Chinese labourers. Klang in Malaysia also claims to be its birthplace, a claim that has never been settled.",
     whereToFind:
       "Bak kut teh is sold at dedicated shops and coffee-shop stalls across Singapore, with the clear, peppery Teochew style most common. Claypot specialists such as Sin Heng in Joo Chiat also serve a darker, herbal Hokkien-style broth, often until late at night.",
     priceRange:
@@ -2271,7 +2513,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestPairedWith:
       "Steamed white rice, you tiao for dipping in the broth, dark soy for the pork, and a pot of strong Chinese tea throughout.",
     halal: false,
-    spiceLevel: "None",
+    spiceLevel:
+      "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Teochew must be clear and peppery. Hokkien must be dark and herbal. They are not the same dish and arguing about which is better is the point.",
@@ -2300,7 +2543,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         name: "Joo Siah Bak Koot Teh",
         address: "Kai Xiang Food Centre, #01-1215, Blk 349 Jurong East Avenue 1",
         area: "Jurong East",
-        note: "Michelin Bib Gourmand coffee-shop stall with a cloudy, peppery broth. Get the Premium Loin Ribs Soup, which is served only before lunch.",
+        note: "Michelin Bib Gourmand (2026) coffee-shop stall known for peppery bak kut teh with soft pork ribs and a chilli soy dip. Cash only; closed Mondays and closes early on Sundays.",
         mapsUrl: "https://maps.google.com/?q=Joo+Siah+Bak+Koot+Teh+349+Jurong+East+Avenue+1+Singapore",
       },
       {
@@ -2314,11 +2557,41 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         name: "Sin Heng Claypot Bak Koot Teh",
         address: "#01-01, 439 Joo Chiat Road",
         area: "Joo Chiat",
-        note: "Long-running claypot shop and 2026 Michelin Bib Gourmand pick serving both the peppery Teochew style and the herbal 'Special' Hokkien style. Open late; try the claypot noodles.",
+        note: "Second-generation claypot shop of more than 40 years and a 2026 Michelin Bib Gourmand pick. Serves both the peppery Teochew-style broth and the darker, herbal 'Special' Hokkien style, and stays open late. The sesame oil chicken claypot is a good side.",
         mapsUrl: "https://maps.google.com/?q=Sin+Heng+Claypot+Bak+Koot+Teh+439+Joo+Chiat+Road+Singapore",
       },
     ],
     shiokOMeter: { spiceHit: 3, messFactor: 2, flavourDepth: 9, queueGame: 7, shiokValue: 9 },
+    faqs: [
+      {
+        q: "What does bak kut teh mean?",
+        a: "Bak kut teh (肉骨茶) is Hokkien for \"meat bone tea\", after the pork ribs at the heart of the dish. There is no tea in the soup itself. The name refers to the Chinese tea drunk alongside, which is believed to help wash down the oil and fat.",
+      },
+      {
+        q: "What is the difference between Teochew and Hokkien bak kut teh?",
+        a: "Teochew bak kut teh, the style most common in Singapore, is a clear, light broth seasoned mainly with garlic and white pepper. Hokkien bak kut teh is darker and cloudier, simmered with Chinese herbs and plenty of dark soy sauce, so it tastes sweeter, saltier and more herbal. Some shops, such as Sin Heng in Joo Chiat, serve both.",
+      },
+      {
+        q: "What is Klang bak kut teh?",
+        a: "Klang, a town in Malaysia, is famous for its Hokkien-style herbal bak kut teh and claims to be the dish's birthplace. It is also home to dry bak kut teh, where the broth is reduced to a thick, tangy gravy with ingredients like dried chillies and dried squid. In Singapore you mostly find the peppery Teochew soup instead.",
+      },
+      {
+        q: "Is bak kut teh from Singapore or Malaysia?",
+        a: "Both countries claim it. The dish is generally traced to Fujian, China, and credited to Hokkien immigrants who brought it to Singapore and Malaysia in the 19th century, where it became a hearty breakfast for labourers before a day of physical work. A 2009 Malaysian claim that it was invented by a physician in Klang in the 1930s has never been proven.",
+      },
+      {
+        q: "What do you eat with bak kut teh?",
+        a: "Steamed white rice and you tiao (fried dough sticks) for dipping in the soup are the classic pairing. Popular sides include braised pig trotters, preserved salted vegetables, braised beancurd skin and pig innards. Pork pieces are dipped in dark or light soy sauce with chopped chilli, and a pot of Chinese tea goes with the whole meal.",
+      },
+      {
+        q: "Can you get free soup refills at bak kut teh shops?",
+        a: "At many Teochew-style shops, yes. At Song Fa, for example, staff walk around with kettles and top up your bowl at no charge. It is worth asking at smaller stalls, since refill policies vary.",
+      },
+      {
+        q: "Is bak kut teh halal?",
+        a: "No. Traditional bak kut teh is made with pork ribs, so it is not halal. Non-pork versions using mutton or beef were developed for Muslim diners, but you need to look for a halal-certified outlet specifically.",
+      },
+    ],
   },
   {
     name: "Lor Mee",
@@ -2588,18 +2861,22 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Roti Prata",
     slug: "roti-prata",
+    seoTitle:
+      "Roti Prata in Singapore: Types, Curry & How to Eat",
+    seoDescription:
+      "How to eat roti prata, every type explained (kosong, egg, tissue, coin, plaster), which curry to pick, and the Singapore prata stalls worth the trip.",
     category: "Indian & South Asian Heritage",
     description:
       "Roti prata is Singapore's most democratic breakfast — thin, flaky flatbread fried on a cast-iron griddle, served with fish or mutton curry for dipping. The dough is pulled and flipped until it becomes paper-thin, then folded back on itself and fried in ghee until the exterior is crispy and the interior is soft and layered. Indian Muslim hawkers from South India brought the tradition and Singapore made it a national institution. The plain prata is the test of any stall's technique. If the plain version is good — properly layered, golden, crispy without being dry — the rest of the menu will follow.",
     origin:
-      "South Indian Muslim (Mamak) hawker tradition — roti prata is the Singapore version of the Indian parotta, simplified and adapted into a hawker staple eaten by all communities.",
+      "Indian flatbread tradition: roti prata takes its name from the paratha, and the stretched, flipped style is closely related to the South Indian and Sri Lankan veechu parotta. Brought to Singapore by Indian immigrants and sold mainly by Indian Muslim hawkers, it became a hawker staple eaten by all communities.",
     whereToFind:
-      "Casuarina Curry Restaurant on Upper Thomson Road for the most debated version; Al-Ameen near Farrer Park; every residential estate with a mamak stall for the daily version.",
+      "Casuarina Curry on Casuarina Road off Upper Thomson for one of the most talked-about versions; Tekka Centre in Little India; and the Indian Muslim prata stall found in almost every neighbourhood coffeeshop for the everyday plate.",
     priceRange:
       "S$1.20–2 for plain prata; S$2–3 for egg; S$3–6 for tissue and fancier variations",
     imageUrl: "/images/food/roti-prata.jpg",
     funFact:
-      "The tissue prata — stretched until it's almost transparent, then folded into a towering cone — requires the most technical skill of any prata variation and is ordered primarily to watch it being made.",
+      "Tissue prata, also called paper prata, is stretched so thin it is almost see-through, then fried crisp and usually served as a tall cone finished with sugar, so many people order it as dessert rather than with curry.",
     bestPairedWith:
       "Fish curry for the purists, mutton curry for the initiated, and a glass of teh tarik to complete the ritual.",
     halal: true,
@@ -2654,6 +2931,37 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       },
     ],
     shiokOMeter: { spiceHit: 3, messFactor: 2, flavourDepth: 7, queueGame: 6, shiokValue: 10 },
+    faqs: [
+      {
+        q: "How do you eat roti prata?",
+        a: "Tear the prata into bite-sized pieces and dip them into the curry served on the side. Traditionally it is eaten with your fingers, though most stalls in Singapore will hand you a fork and spoon, or a fork and knife. Eat it hot off the griddle while the outside is still crisp. Plain prata is also commonly eaten with a sprinkle of sugar instead of curry.",
+        link: {"label": "Decode every prata order →", "href": "/hawker-guide/prata-decoder"},
+      },
+      {
+        q: "What is roti prata?",
+        a: "Roti prata is a layered, pan-fried flatbread made from flour, ghee or margarine, salt and water. The rested dough is stretched by whirling it until paper thin, folded, then fried on a hot greased griddle until crisp outside and soft inside. The name joins the Malay word roti (bread) with prata, from the Indian paratha. In Singapore it is sold mainly by Indian Muslim stallholders and eaten at any time of day, though breakfast and supper are the classic slots.",
+      },
+      {
+        q: "What are the different types of prata?",
+        a: "Kosong is plain prata with no filling, and egg prata has an egg folded inside. Roti plaster has the egg on top, sunny side up, while coin prata is a small prata rolled or twisted before frying, so it comes out crispier. Tissue prata is stretched very thin and served as a crisp cone, usually sweetened, and prata bomb is a thicker coiled prata hiding margarine and sugar. Beyond that you can add cheese, onion, mushroom, banana and more, and murtabak is the heavier cousin stuffed with minced mutton or chicken, egg and onion.",
+      },
+      {
+        q: "What is the difference between tissue prata and paper prata?",
+        a: "In Singapore the two names are generally used for the same thing. It is prata stretched so thin it is almost see-through, fried until crisp and usually shaped into a tall cone. It tends to be finished with sugar, sometimes with evaporated or condensed milk, so most people eat it as a sweet snack rather than with curry.",
+      },
+      {
+        q: "Which curry goes with roti prata?",
+        a: "In Singapore the usual choices are fish curry, mutton curry, chicken curry and dhal, a lentil curry. Prata stalls typically serve a small bowl of curry on the side for dipping, so ask which ones they have that day. Thinner fish curry and dhal suit plain and egg prata, while richer mutton curry is a good match for thicker pratas.",
+      },
+      {
+        q: "Is roti prata the same as roti canai?",
+        a: "Essentially yes. Roti canai is the Malaysian name and roti prata the Singaporean one for the same Indian-derived flatbread. Canai most likely comes from the Malay word for rolling dough thinly, while prata comes from paratha. Singapore's prata is often described as thinner, crispier and slightly sweeter.",
+      },
+      {
+        q: "Is roti prata Indian or Singaporean?",
+        a: "Its roots are Indian, belonging to the family of layered breads like the North Indian paratha and South Indian parotta, and it was brought to Singapore by Indian immigrants. The flipped, stretched style common in Singapore and Malaysia is closely linked to the veechu parotta of Jaffna in Sri Lanka and Tamil Nadu. Over the decades it became a Singapore hawker staple eaten by every community.",
+      },
+    ],
   },
   {
     name: "Fish Head Curry",
