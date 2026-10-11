@@ -59,11 +59,16 @@ Where this file and CLAUDE.md disagree, this file is newer.
 - Halal badge removed where most famous stalls aren't certified (chicken rice, laksa,
   nasi lemak, rojak, plus others). Halal questions name certified options instead.
 - NEA cleaning-closure badge fixed (shows real next closure date).
+- Tourist posts live (11 Oct): /blog/singapore-food-itinerary-3-days,
+  /blog/hawker-food-near-marina-bay-sands, /blog/halal-hawker-food-singapore. Linked from
+  the hawker-guide hub, first-timers post and the dish halal Q&As. Blog renderer now supports
+  ### subheadings, numbered lists, and multi-line "**Label:** text" blocks.
+- Satay by the Bay closed 30 Sep 2026 (Wetlands by the Bay redevelopment). Don't recommend it.
 - AI illustrations on economy rice and chicken rice posts; About Our Photos section.
 
 ## To do (priority order)
-1. Tourist-intent pages: "best hawker food near Marina Bay Sands", "halal hawker food
-   Singapore", "3-day Singapore food itinerary". Link to them from relevant pages.
+1. More tourist-intent pages (e.g. hawker food near Orchard / Sentosa / Changi, late-night
+   supper spots, best hawker centres for first-timers). Request indexing for each.
 2. Around 25 Oct: export Search Console again and compare clicks, CTR and position
    against the baseline above. Request indexing for any newly changed pages.
 3. Hand-written Q&A for the next pages that start getting impressions.

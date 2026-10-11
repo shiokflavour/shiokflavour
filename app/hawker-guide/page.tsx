@@ -60,6 +60,21 @@ export default function HawkerGuideHubPage() {
           </Link>
           , the cheapest full meal on the island.
         </p>
+        <p className="text-sf-muted text-base sm:text-lg leading-relaxed max-w-2xl mt-5">
+          Visiting Singapore? Follow our{" "}
+          <Link href="/blog/singapore-food-itinerary-3-days" className="font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary">
+            3-day food itinerary
+          </Link>
+          , find{" "}
+          <Link href="/blog/hawker-food-near-marina-bay-sands" className="font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary">
+            hawker food near Marina Bay Sands
+          </Link>
+          , or eat with our{" "}
+          <Link href="/blog/halal-hawker-food-singapore" className="font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary">
+            halal hawker food guide
+          </Link>
+          .
+        </p>
         <div className="w-12 h-px bg-sf-primary mt-10" />
       </section>
 

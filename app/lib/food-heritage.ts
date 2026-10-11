@@ -168,6 +168,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       {
         q: "Is char kway teow halal?",
         a: "Traditional char kway teow is not halal, because it is fried in lard and often includes Chinese pork sausage. Halal-style versions exist: 786 Char Kway Teow at Bukit Merah View Food Centre is run by a Muslim convert and uses no pork or lard, though it is not halal-certified.",
+        link: {"label": "Read our halal hawker food guide →", "href": "/blog/halal-hawker-food-singapore"},
       },
     ],
   },
@@ -307,6 +308,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       {
         q: "Is chicken rice halal in Singapore?",
         a: "Most traditional Chinese chicken rice stalls are not halal-certified, even though the dish has no pork, so look for the MUIS halal certificate. Halal-certified options include the OK Chicken Rice chain and Sam Leong St Chicken Rice at 12 Verdun Road in Farrer Park, which is open 24 hours.",
+        link: {"label": "Read our halal hawker food guide →", "href": "/blog/halal-hawker-food-singapore"},
       },
     ],
   },
@@ -441,6 +443,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       {
         q: "Is laksa halal in Singapore?",
         a: "Most of Singapore's well-known laksa stalls, including the famous Katong laksa shops, are not halal-certified, so check for the MUIS halal certificate at the stall. One halal-certified option is the OK Chicken Rice & Humfull Laksa chain, which has outlets across Singapore.",
+        link: {"label": "Read our halal hawker food guide →", "href": "/blog/halal-hawker-food-singapore"},
       },
     ],
   },
@@ -852,6 +855,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       {
         q: "Is rojak halal?",
         a: "Chinese-style rojak is usually sold by Chinese stalls that are not halal-certified, and Hoover Rojak, for example, is not certified. Indian rojak is typically sold by Indian Muslim hawkers. If it matters to you, check for a MUIS halal certificate at the stall.",
+        link: {"label": "Read our halal hawker food guide →", "href": "/blog/halal-hawker-food-singapore"},
       },
       {
         q: "How did rojak start in Singapore?",
@@ -1779,6 +1783,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       {
         q: "Is nasi lemak halal?",
         a: "It depends on the stall, not the dish. Malay-run stalls are usually Muslim-owned, but Muslim-owned is not the same as halal-certified, so look for the MUIS halal certificate if that matters to you. Chinese-style stalls often add luncheon meat, which is usually pork, and some well-known stalls such as Selera Rasa and Kitchenman are not halal-certified even though they use no pork or lard. Husk Nasi Lemak in Bugis is one halal-certified option.",
+        link: {"label": "Read our halal hawker food guide →", "href": "/blog/halal-hawker-food-singapore"},
       },
       {
         q: "What is the difference between Malay and Chinese nasi lemak?",
@@ -3482,7 +3487,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "bbq-stingray",
     category: "Singaporean Classics",
     description:
-      "BBQ stingray is one of Singapore's most specific pleasures: a stingray wing slathered in sambal, laid on banana leaf and grilled or cooked on a hotplate until the flesh flakes and the sambal chars at the edges. The banana leaf both protects and flavours the fish — the grassy fragrance infuses the flesh during cooking and imparts a smokiness that banana leaf achieves and nothing else replicates. Served with a sharp calamansi squeeze and extra sambal, it is a night market and seaside food centre dish that became permanently associated with the atmosphere of the East Coast Lagoon and Satay by the Bay. The stingray is caught in regional waters, the sambal is made fresh, and the entire experience is best eaten at a table where you can smell the charcoal and hear the sea.",
+      "BBQ stingray is one of Singapore's most specific pleasures: a stingray wing slathered in sambal, laid on banana leaf and grilled or cooked on a hotplate until the flesh flakes and the sambal chars at the edges. The banana leaf both protects and flavours the fish — the grassy fragrance infuses the flesh during cooking and imparts a smokiness that banana leaf achieves and nothing else replicates. Served with a sharp calamansi squeeze and extra sambal, it is a night market and seaside food centre dish that became permanently associated with the atmosphere of East Coast Lagoon Food Village. The stingray is caught in regional waters, the sambal is made fresh, and the entire experience is best eaten at a table where you can smell the charcoal and hear the sea.",
     origin:
       "Malay hawker tradition — grilling stingray in sambal over charcoal is shared with Malaysia's ikan bakar, and in Singapore it is now a staple of Chinese-run hawker BBQ seafood stalls.",
     whereToFind:

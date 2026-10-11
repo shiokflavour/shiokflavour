@@ -62,6 +62,13 @@ function renderArticleBody(markdown: string) {
   const blocks = markdown.split(/\n\n+/).filter((b) => b.trim());
   return blocks.map((block, i) => {
     const t = block.trim();
+    if (t.startsWith("### ")) {
+      return (
+        <h3 key={i} className="mt-10 mb-4 text-xl font-bold text-white sm:text-2xl">
+          {t.replace(/^### /, "")}
+        </h3>
+      );
+    }
     if (t.startsWith("## ")) {
       const title = t.replace(/^## /, "");
       const isNumbered = title.startsWith("#");
@@ -245,6 +252,27 @@ function renderArticleBody(markdown: string) {
             </li>
           ))}
         </ul>
+      );
+    }
+    if (lines.length > 0 && lines.every((l) => /^\d+\.\s/.test(l.trim()))) {
+      return (
+        <ol
+          key={i}
+          className="my-4 list-decimal space-y-2 pl-6 text-sf-muted marker:text-sf-primary"
+        >
+          {lines.map((l, j) => (
+            <li key={j}>{renderInline(l.trim().replace(/^\d+\.\s+/, ""))}</li>
+          ))}
+        </ol>
+      );
+    }
+    if (lines.length > 1 && lines.every((l) => l.trim().startsWith("**"))) {
+      return (
+        <div key={i} className="mb-6 space-y-1 text-base leading-relaxed text-sf-muted sm:text-lg">
+          {lines.map((l, j) => (
+            <p key={j}>{renderInline(l.trim())}</p>
+          ))}
+        </div>
       );
     }
     return (
