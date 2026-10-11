@@ -725,8 +725,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Nyonya / Straits Chinese dessert spreading via Malacca, Penang, and Singapore kitchens and dessert stalls.",
     whereToFind:
-      "Peranakan restaurants in Joo Chiat, dessert-focused hawker stalls in Chinatown Complex and Maxwell, and heartland zi char that still finish meals with traditional sweets.",
-    priceRange: "S$3–8",
+      "Bobo cha cha is mostly found at old-school hot-and-cold dessert stalls in hawker centres and at a few Nonya kueh and Peranakan eateries, often in both hot and cold versions. It is less common than chendol or ice kachang, so check the stall's menu board.",
+    priceRange:
+      "S$2–4 (hawker dessert stalls; Peranakan/Indonesian restaurants charge more)",
     imageUrl: "/images/food/bubur-cha-cha.png",
     funFact:
       "Some stalls differentiate themselves with firmer yam chips versus melt-away cubes—texture debates are as serious as syrup sweetness.",
@@ -738,9 +739,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Ah ma used to make this every weekend — now only can find at old school hawker centres.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tiong-bahru-market",
-      "tekka-centre",
+      "ghim-moh-market-food-centre",
     ],
     howToEat: [
       "Stir gently from the bottom — the coconut milk and pandan syrup separate and the thickest part sinks",
@@ -783,28 +782,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Bengawan Solo",
-        address: "Galleria at Raffles City, 252 North Bridge Road",
-        area: "City Hall",
-        note: "Singapore's most beloved Peranakan cake and dessert shop — their bobo cha cha uses proper coconut milk, not the canned kind",
-        mapsUrl:
-          "https://maps.google.com/?q=Bengawan+Solo+Raffles+City+Singapore",
-      },
-      {
-        name: "Chinatown Complex Dessert Stalls",
-        address: "Chinatown Complex Food Centre, 335 Smith Street",
-        area: "Chinatown",
-        note: "Multiple traditional dessert stalls side by side — walk the row and pick the one with the busiest queue",
-        mapsUrl:
-          "https://maps.google.com/?q=Chinatown+Complex+Food+Centre+Dessert+Singapore",
-      },
-      {
-        name: "Joo Chiat Kim Choo",
-        address: "109 East Coast Road",
-        area: "Katong",
-        note: "Peranakan heritage shop in Katong — the bobo cha cha here is made from a family recipe and tastes unmistakably homemade",
-        mapsUrl:
-          "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+East+Coast+Road+Singapore",
+        name: "Golden Swallow Dessert",
+        address: "Ghim Moh Market & Food Centre, #01-53, 20 Ghim Moh Road",
+        area: "Ghim Moh / Holland",
+        note: "Long-running dessert stall known for bo bo cha cha made with coconut milk pressed on-site; reviewers prefer the cold version, which is less sweet than the hot one.",
+        mapsUrl: "https://maps.google.com/?q=Golden+Swallow+Dessert+Ghim+Moh+Market+Food+Centre+Singapore",
       },
     ],
     shiokOMeter: {
@@ -1731,22 +1713,21 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Indonesian-Malay tradition brought to Singapore by Javanese and Malay communities — lontong is eaten across Indonesia and Malaysia but Singapore's version has its own distinct lodeh character.",
     whereToFind:
-      "Geylang Serai Market and Tekka Centre for the most traditional versions; Malay food stalls across the island serve it for breakfast and on weekends.",
-    priceRange: "S$3–6 per bowl",
+      "Lontong is mainly a breakfast and early-lunch dish at Malay and Indonesian hawker stalls and coffeeshop warungs, often sold beside mee rebus, mee siam and mee soto. Many popular stalls sell out by late morning or close by early afternoon.",
+    priceRange:
+      "S$3–5 (hawker bowl in 2024–26; extra sides like begedil or opor ayam cost more)",
     imageUrl: "/images/food/lontong.jpg",
     funFact:
       "The rice cakes (lontong) are made by cooking rice inside tightly packed banana leaves until it compresses into a dense cylinder — the banana leaf imparts a faint grassy fragrance that store-bought lontong never achieves.",
     bestPairedWith:
-      "Teh tarik, a piece of serunding (dry-fried meat floss) on the side, and time — lontong is a weekend breakfast that should not be rushed.",
+      "Teh tarik, a piece of serunding (spiced toasted grated coconut) on the side, and time — lontong is a weekend breakfast that should not be rushed.",
     halal: true,
     spiceLevel: "Medium",
     difficulty: "Easy to eat",
     localSay:
       "The lodeh must be thick, not watery. If the curry is thin, the auntie didn't cook it long enough.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tekka-centre",
-      "tampines-round-market",
+
     ],
     howToEat: [
       "Break the lontong into pieces with your spoon rather than cutting — the compressed rice crumbles better and absorbs more lodeh",
@@ -1764,9 +1745,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Hard-Boiled Egg", emoji: "🥚", role: "Halved and placed in the curry — absorbs the lodeh's flavour on the cut surface. The yolk, broken and mixed into the sauce, enriches it further." },
     ],
     bestStalls: [
-      { name: "Hjh Maimunah Lontong", address: "11 & 15 Jalan Pisang", area: "Jalan Besar", note: "Singapore's most celebrated Malay restaurant — the lontong here is the festive version that locals serve to guests on Hari Raya", mapsUrl: "https://maps.google.com/?q=Hjh+Maimunah+Restaurant+Jalan+Pisang+Singapore" },
-      { name: "Geylang Serai Lontong", address: "Geylang Serai Market, #01-20, 1 Geylang Serai", area: "Geylang Serai", note: "The everyday version that the Malay community eats every weekend morning — thick lodeh, generous tempeh, and a price that hasn't changed in years", mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Lontong+Singapore" },
-      { name: "Tekka Lontong Stall", address: "Tekka Centre, #01-201, 665 Buffalo Road", area: "Little India", note: "The Little India version — slightly more Malay-Indian in spicing, with a richer coconut base and a sambal that builds slowly", mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Lontong+Singapore" },
+      {
+        name: "Queenstown Lontong",
+        address: "Margaret Drive Hawker Centre, #01-27, 38A Margaret Drive",
+        area: "Queenstown",
+        note: "Lontong sold since the 1960s and now run by the third generation. The slightly sweet lodeh comes with taupok, sambal and fried grated coconut. It often sells out, and the stall is closed on weekends.",
+        mapsUrl: "https://maps.google.com/?q=Queenstown+Lontong+Margaret+Drive+Hawker+Centre+Singapore",
+      },
+      {
+        name: "Hassan Stall",
+        address: "Changi Village Hawker Centre, #01-29, 2 Changi Village Road",
+        area: "Changi Village",
+        note: "Family stall dating to 1959 with kampung-style Malay breakfast fare. Get the popular lontong, and add the handmade epok-epok and Perlis-style laksa if they haven't sold out.",
+        mapsUrl: "https://maps.google.com/?q=Hassan+Stall+Changi+Village+Hawker+Centre+Singapore",
+      },
+      {
+        name: "Kampong Glam Cafe",
+        address: "17 Bussorah Street",
+        area: "Kampong Glam",
+        note: "Busy Malay-Indonesian café near Sultan Mosque, opened in 2004. The lontong is a breakfast best-seller with sayur lodeh, egg, tau kwa and serunding. Regulars add opor ayam or begedil.",
+        mapsUrl: "https://maps.google.com/?q=Kampong+Glam+Cafe+17+Bussorah+Street+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 5, messFactor: 3, flavourDepth: 8, queueGame: 4, shiokValue: 8 },
   },
@@ -1980,8 +1979,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Peranakan Nyonya cuisine — buah keluak (Pangium edule) nuts are native to Southeast Asia and were incorporated into Singapore's Straits Chinese cooking from Javanese and Malay traditions.",
     whereToFind:
-      "Peranakan restaurants in Katong, Joo Chiat, and Dempsey Hill — this dish is rarely found at hawker centres. True Nyonya ayam buah keluak requires days of preparation.",
-    priceRange: "S$18–40 at restaurants",
+      "Mostly at Peranakan restaurants, with a cluster in Katong and Joo Chiat plus a few in the city centre; a handful of hawker Peranakan stalls also cook it.",
+    priceRange:
+      "S$13–30 (about S$13 at a hawker Peranakan stall; S$18–30++ at Peranakan restaurants)",
     imageUrl: "/images/food/ayam-buah-keluak.jpg",
     funFact:
       "Buah keluak nuts contain hydrogen cyanide in their raw state — the multi-day soaking and boiling process removes the toxin completely. It is one of the most laborious ingredient preparations in Southeast Asian cooking.",
@@ -1993,9 +1993,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Scoop the paste from inside the nut — that black stuff is the whole point. Don't waste it.",
     hawkersThatServeIt: [
-      "maxwell-food-centre",
-      "tiong-bahru-market",
-      "chinatown-complex-food-centre",
+
     ],
     howToEat: [
       "Use the small spoon provided to scoop the black paste from inside each nut — that paste is the most valuable part of the dish",
@@ -2013,9 +2011,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Dark Soy", emoji: "🫙", role: "Adds colour and a caramel note to the braising liquid — the ingredient that gives ayam buah keluak its characteristic deep brown appearance." },
     ],
     bestStalls: [
-      { name: "Candlenut Restaurant", address: "Block 17A Dempsey Road", area: "Dempsey", note: "Singapore's only Michelin-starred Peranakan restaurant — the ayam buah keluak here is the definitive modern interpretation", mapsUrl: "https://maps.google.com/?q=Candlenut+Dempsey+Singapore" },
-      { name: "Kim Choo Kueh Chang", address: "109 East Coast Road", area: "Katong", note: "Heritage Peranakan in Katong — the ayam buah keluak is made from a family recipe and reflects the true Nyonya home-cooking tradition", mapsUrl: "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+East+Coast+Road+Singapore" },
-      { name: "True Blue Cuisine", address: "47-49 Armenian Street", area: "City Hall", note: "Peranakan heritage restaurant in a heritage building — the buah keluak here is properly prepared over multiple days in the traditional method", mapsUrl: "https://maps.google.com/?q=True+Blue+Cuisine+Armenian+Street+Singapore" },
+      {
+        name: "Guan Hoe Soon Restaurant",
+        address: "200 Joo Chiat Road, #01-01",
+        area: "Joo Chiat",
+        note: "Founded 1953 and one of Singapore's oldest Peranakan restaurants; its ayam buah keluak is the dish it is best known for.",
+        mapsUrl: "https://maps.google.com/?q=Guan+Hoe+Soon+Restaurant+200+Joo+Chiat+Road+Singapore",
+      },
+      {
+        name: "True Blue Cuisine",
+        address: "47/49 Armenian Street",
+        area: "City Hall",
+        note: "Shophouse restaurant next to the Peranakan Museum; the ayam buah keluak uses chicken thigh stewed in a rich black-nut gravy.",
+        mapsUrl: "https://maps.google.com/?q=True+Blue+Cuisine+47+Armenian+Street+Singapore",
+      },
+      {
+        name: "Chilli Padi Nonya Restaurant",
+        address: "11 Joo Chiat Place, #01-03",
+        area: "Joo Chiat",
+        note: "Long-running Joo Chiat Nonya restaurant; order the ayam buah keluak with rice and a side of chap chye.",
+        mapsUrl: "https://maps.google.com/?q=Chilli+Padi+Nonya+Restaurant+11+Joo+Chiat+Place+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 5, messFactor: 5, flavourDepth: 10, queueGame: 3, shiokValue: 8 },
   },
@@ -2026,10 +2042,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     description:
       "Kueh pie tee is Peranakan elegance in miniature: a thin, crispy pastry cup filled with braised jicama (bangkuang) and prawn, topped with fresh coriander, chilli sauce, and sometimes a small prawn perched on top. The cups are fried in a special mould, each one a perfect crispy vessel for the sweet, savoury filling inside. It is a Nyonya party dish — assembled by hand, eaten in one bite, and completely impossible to eat without immediately wanting another. The contrast between the shattering pastry cup and the soft, braised filling is the entire engineering achievement of the dish.",
     origin:
-      "Peranakan Nyonya party food — kueh pie tee (literally 'top hat' kueh for the shape of the mould) is a distinctively Straits Chinese creation with no single immigrant ancestor.",
+      "Peranakan Nyonya party food — kueh pie tee (nicknamed 'top hats' for the shape of the cups) is a distinctively Straits Chinese creation with no single immigrant ancestor.",
     whereToFind:
-      "Peranakan restaurants in Katong and Joo Chiat; some hawker stalls in Tiong Bahru and Maxwell occasionally serve them. Most reliably found at Peranakan restaurants.",
-    priceRange: "S$8–18 for a plate at restaurants",
+      "Mainly at Peranakan restaurants, as a starter; it is rarely sold at hawker centres, though some Nonya kueh and popiah shops sell it for parties.",
+    priceRange:
+      "S$10–20 per plate (a few pieces) at Peranakan restaurants; prices vary by outlet",
     imageUrl: "/images/food/kueh-pie-tee.jpg",
     funFact:
       "The mould for frying kueh pie tee cups is a specialised tool passed between generations — the shape produces a perfectly even cup that can hold filling without softening for several minutes.",
@@ -2041,16 +2058,14 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "One bite only — if you try to eat half, the cup shatters and the filling goes everywhere. Trust the engineering.",
     hawkersThatServeIt: [
-      "tiong-bahru-market",
-      "maxwell-food-centre",
-      "amoy-street-food-centre",
+
     ],
     howToEat: [
       "Eat in one complete bite — the cup is designed to be consumed whole. Hesitating shatters it and loses the filling",
       "Apply chilli sauce sparingly before eating — the cup holds a fixed volume and over-saucing overwhelms the delicate filling",
       "Hold the cup from the base, not the sides — the pastry is thin and pressure from the sides cracks it before you're ready",
       "Eat immediately after assembly — the pastry begins to soften from the filling's moisture within minutes",
-      "Order the whole plate — kueh pie tee is always served in groups of six or more. Attempting to share fewer than three per person creates diplomatic incidents",
+      "Order the whole plate — kueh pie tee is usually served several pieces to a plate. Attempting to share fewer than three per person creates diplomatic incidents",
     ],
     keyIngredients: [
       { name: "Pastry Cup", emoji: "🫙", role: "Fried in a special mould — thin, crispy, and designed to hold filling for several minutes without softening. The most technically demanding element." },
@@ -2061,9 +2076,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Sweet Black Sauce", emoji: "🫙", role: "A thick, sweet dark sauce applied before the chilli — balances the savoury filling with a caramel sweetness." },
     ],
     bestStalls: [
-      { name: "Candlenut Restaurant", address: "Block 17A Dempsey Road", area: "Dempsey", note: "Michelin-starred Peranakan — the kueh pie tee here is assembled to order and the cups are fried fresh, not pre-made", mapsUrl: "https://maps.google.com/?q=Candlenut+Restaurant+Dempsey+Singapore" },
-      { name: "Peranakan Inn", address: "210 East Coast Road", area: "Katong", note: "Katong institution — the kueh pie tee filling here uses the old Nyonya recipe with hand-pounded dried shrimp in the braised jicama", mapsUrl: "https://maps.google.com/?q=Peranakan+Inn+East+Coast+Road+Singapore" },
-      { name: "Guan Hoe Soon Restaurant", address: "214 Joo Chiat Road", area: "Joo Chiat", note: "Singapore's oldest Peranakan restaurant since 1953 — the kueh pie tee here is made the way it has always been made", mapsUrl: "https://maps.google.com/?q=Guan+Hoe+Soon+Restaurant+Joo+Chiat+Singapore" },
+      {
+        name: "Candlenut",
+        address: "17A Dempsey Road (COMO Dempsey)",
+        area: "Dempsey",
+        note: "Michelin-starred (2026) Peranakan restaurant; kueh pie tee features among its starters and on its tasting menus.",
+        mapsUrl: "https://maps.google.com/?q=Candlenut+17A+Dempsey+Road+Singapore",
+      },
+      {
+        name: "Violet Oon Singapore",
+        address: "7 Dempsey Road, #01-05",
+        area: "Dempsey",
+        note: "Its kuay pie tee is a signature, with the turnip filling braised in prawn stock; also served at the ION Orchard outlet.",
+        mapsUrl: "https://maps.google.com/?q=Violet+Oon+Singapore+7+Dempsey+Road+Singapore",
+      },
+      {
+        name: "The Blue Ginger",
+        address: "97 Tanjong Pagar Road",
+        area: "Tanjong Pagar",
+        note: "Long-running Bib Gourmand-listed Peranakan shophouse restaurant; the kueh pie tee is a staple starter here.",
+        mapsUrl: "https://maps.google.com/?q=The+Blue+Ginger+97+Tanjong+Pagar+Road+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 2, messFactor: 3, flavourDepth: 7, queueGame: 3, shiokValue: 8 },
   },
@@ -2072,31 +2105,30 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "ngoh-hiang",
     category: "Peranakan (Nyonya)",
     description:
-      "Ngoh hiang is Singapore's most satisfying fried platter: a spread of minced pork and prawn rolls wrapped in tofu skin and deep-fried, served alongside fried fish cake, prawn fritters, and other morsels, dipped in a sweet plum sauce or chilli. The Hokkien and Teochew communities brought the concept; the Peranakan community adapted it into a feast format; hawker stalls reduced it to a daily snack. At its best, the minced pork roll — the classic piece — is aromatic with five spice, crispy on the outside, and juicy within. It is the kind of food that is difficult to stop eating once started.",
+      "Ngoh hiang is Singapore's most satisfying fried platter: a spread of minced pork and prawn rolls wrapped in tofu skin and deep-fried, served alongside fried fish cake, prawn fritters, and other morsels, dipped in a sweet sauce or chilli. The Hokkien and Teochew communities brought the concept; the Peranakan community adapted it into a feast format; hawker stalls reduced it to a daily snack. At its best, the minced pork roll — the classic piece — is aromatic with five spice, crispy on the outside, and juicy within. It is the kind of food that is difficult to stop eating once started.",
     origin:
       "Hokkien and Teochew immigrant tradition adapted by Peranakan kitchens — ngoh hiang (五香, five spice) takes its name from the five-spice seasoning in the signature pork roll.",
     whereToFind:
-      "Old Airport Road Food Centre, Geylang Serai, and various hawker centres island-wide — most hawker centres have at least one ngoh hiang stall with a glass case display.",
-    priceRange: "S$4–10 per selection",
+      "Look for 'wu xiang' (five-spice) or prawn-cracker stalls with a display of fried rolls, prawn fritters, tau kwa and sausage, usually served with fried bee hoon and chilli. Traditional Hokkien-style ngoh hiang is now rare, with only a few heritage stalls such as those at Maxwell Food Centre and Telok Blangah Heights.",
+    priceRange:
+      "S$4–12 (sets or shared platters with fried bee hoon; single pieces about S$0.50–1.50, sausage and cuttlefish more)",
     imageUrl: "/images/food/ngoh-hiang.webp",
     funFact:
       "The tofu skin (tau kee) wrapper must be soaked in water before use to become pliable — if it's too dry it tears during rolling, and if it's too wet it doesn't crisp during frying.",
     bestPairedWith:
-      "Sweet plum sauce for the pork rolls, chilli sauce for the prawn fritters, and a bowl of congee for the complete ngoh hiang experience.",
+      "A plate of fried bee hoon, which most ngoh hiang stalls sell alongside, with the stall's sweet sauce and chilli for dipping.",
     halal: false,
     spiceLevel: "Mild",
     difficulty: "Easy to eat",
     localSay:
       "Always order the pork roll — that's the ngoh hiang. Everything else is supporting cast.",
     hawkersThatServeIt: [
-      "old-airport-road-food-centre",
-      "chinatown-complex-food-centre",
-      "tiong-bahru-market",
+      "maxwell-food-centre",
     ],
     howToEat: [
       "Order the classic five-spice pork roll as your anchor, then build the rest of the selection around it",
       "Eat while hot — the tofu skin wrapper loses its crispness within minutes of leaving the oil",
-      "Dip into the sweet plum sauce rather than the chilli — the plum sauce was designed specifically for ngoh hiang",
+      "Dip into the stall's sweet sauce or chilli — many stalls make their own",
       "Cut the pork roll at an angle to expose the filling — you eat more confidently when you can see what's inside",
       "Mix pieces — a bite of pork roll, a bite of fish cake, a bite of prawn — the variety is the eating experience",
     ],
@@ -2109,9 +2141,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Sweet Plum Sauce", emoji: "🍯", role: "The traditional dipping sauce — sweet, slightly tart, and the flavour that completes the five-spice pork roll." },
     ],
     bestStalls: [
-      { name: "Lim's Ngoh Hiang", address: "Old Airport Road Food Centre, #01-100, 51 Old Airport Rd", area: "Kallang", note: "The most comprehensive ngoh hiang selection in Singapore — over 15 items daily, fried to order", mapsUrl: "https://maps.google.com/?q=Old+Airport+Road+Food+Centre+Ngoh+Hiang+Singapore" },
-      { name: "Chinatown Complex Ngoh Hiang", address: "Chinatown Complex Food Centre, 335 Smith Street", area: "Chinatown", note: "The Teochew-style version — slightly less five spice than the Hokkien interpretation, with a larger prawn component", mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Ngoh+Hiang+Singapore" },
-      { name: "Tiong Bahru Ngoh Hiang", address: "Tiong Bahru Market, #02-20, 30 Seng Poh Road", area: "Tiong Bahru", note: "Neighbourhood favourite — the glass display case is always full in the morning and empty by 1pm", mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Market+Ngoh+Hiang+Singapore" },
+      {
+        name: "Hup Kee Wu Xiang Guan Chang",
+        address: "Maxwell Food Centre, #01-97, 1 Kadayanallur Street",
+        area: "Chinatown",
+        note: "Third-generation Hokkien-style stall dating to the 1930s. Get the handmade ngoh hiang, pink guan chang sausage and liver roll with fried bee hoon.",
+        mapsUrl: "https://maps.google.com/?q=Hup+Kee+Wu+Xiang+Guan+Chang+Maxwell+Food+Centre+Singapore",
+      },
+      {
+        name: "China Street Fritters",
+        address: "Blk 61 Telok Blangah Heights, #01-121",
+        area: "Telok Blangah",
+        note: "Former Maxwell heritage stall, now in a Telok Blangah coffeeshop. Crispy meat roll, liver roll and Hokkien sausage with bee hoon; the sets suit two.",
+        mapsUrl: "https://maps.google.com/?q=China+Street+Fritters+61+Telok+Blangah+Heights+Singapore",
+      },
+      {
+        name: "Lao Zhong Zhong Five Spice",
+        address: "29 Tai Thong Crescent",
+        area: "Potong Pasir",
+        note: "Teochew-style stall running since the 1950s. Order prawn fritters, water chestnut cake, tau kwa and yam-filled ngoh hiang with its chilli dip. No noodles.",
+        mapsUrl: "https://maps.google.com/?q=Lao+Zhong+Zhong+Five+Spice+29+Tai+Thong+Crescent+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 2, messFactor: 2, flavourDepth: 8, queueGame: 5, shiokValue: 9 },
   },
@@ -2124,8 +2174,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Nyonya / Peranakan kueh tradition — ondeh ondeh combines Malay glutinous rice technique with the Chinese Peranakan love of pandan and coconut into something uniquely Straits.",
     whereToFind:
-      "Bengawan Solo island-wide for the most consistent version; Katong and Joo Chiat Peranakan kueh shops for the traditional version; some hawker dessert stalls on weekends.",
-    priceRange: "S$1–2 per piece, S$6–12 per box",
+      "Sold at Nonya kueh shops and confectioneries, especially in HDB estates and Katong/Joo Chiat, and at chains such as Bengawan Solo. Go early because handmade kueh often sell out by afternoon.",
+    priceRange:
+      "S$2–5 per box of 5–6 (about S$0.40–0.90 a piece)",
     imageUrl: "/images/food/ondeh-ondeh.jpg",
     funFact:
       "The green colour comes from pandan juice pressed fresh from pandan leaves — stalls that use artificial colouring produce a flatter green; the natural version is slightly uneven and more fragrant.",
@@ -2137,9 +2188,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Put the whole thing in your mouth at once. If you bite halfway, the gula melaka goes everywhere and on everyone.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tiong-bahru-market",
-      "chinatown-complex-food-centre",
+
     ],
     howToEat: [
       "Eat the entire piece in one bite — the gula melaka centre is liquid and will escape if you bite halfway",
@@ -2157,9 +2206,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Pandan Leaf", emoji: "🌿", role: "The boiling water is infused with pandan — even the water that cooks the ondeh ondeh carries the fragrance through." },
     ],
     bestStalls: [
-      { name: "Bengawan Solo", address: "Multiple outlets island-wide", area: "Island-wide", note: "Singapore's most beloved Peranakan kueh brand — the ondeh ondeh here uses fresh pandan juice and freshly grated coconut every morning", mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Singapore" },
-      { name: "Kim Choo Kueh Chang", address: "109 East Coast Road", area: "Katong", note: "Katong heritage kueh shop — the ondeh ondeh is made from a three-generation family recipe and has a pandan fragrance you can smell from outside", mapsUrl: "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+East+Coast+Singapore" },
-      { name: "Hjh Maimunah Kueh", address: "11 Jalan Pisang", area: "Jalan Besar", note: "The Malay restaurant's kueh counter — ondeh ondeh made fresh daily with the kind of gula melaka filling that reminds Singaporeans of their grandmothers", mapsUrl: "https://maps.google.com/?q=Hjh+Maimunah+Jalan+Pisang+Singapore" },
+      {
+        name: "Lina Confectionery",
+        address: "Blk 124 Bukit Merah Lane 1, #01-138",
+        area: "Bukit Merah",
+        note: "Handmade kueh shop open since 1989. Its 'Bursting Onde-Onde' topped Eatbook's 2025 ranking for soft, chewy skin and a generous gula melaka filling.",
+        mapsUrl: "https://maps.google.com/?q=Lina+Confectionery+124+Bukit+Merah+Lane+1+Singapore",
+      },
+      {
+        name: "Kim Choo Kueh Chang",
+        address: "60 Joo Chiat Place",
+        area: "Joo Chiat",
+        note: "Long-running Peranakan kueh and dumpling shop. The thin-skinned ondeh ondeh have a good balance of skin and filling and are among the cheapest per box.",
+        mapsUrl: "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+60+Joo+Chiat+Place+Singapore",
+      },
+      {
+        name: "Bengawan Solo",
+        address: "Multiple outlets island-wide",
+        area: "Island-wide",
+        note: "The easy, consistent choice at malls and Changi. Boxes of six have a well-balanced pandan skin and gula melaka centre, though they cost more than kueh shops.",
+        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 0, messFactor: 4, flavourDepth: 7, queueGame: 3, shiokValue: 9 },
   },
@@ -2443,10 +2510,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     description:
       "Bak chang — glutinous rice dumpling — is Singapore's most labour-intensive hawker food: glutinous rice packed around a filling of braised pork belly, salted egg yolk, mushrooms, and chestnuts, wrapped tightly in bamboo leaves and boiled for hours. The result is dense, fragrant, and deeply satisfying — the bamboo leaf imparts a faint grassy note, the salted egg yolk adds richness, and the braised pork makes every bite substantial. Traditionally eaten during the Dragon Boat Festival, bak chang is now available year-round at hawker stalls that have been making the same recipe for three generations.",
     origin:
-      "Chinese tradition honouring the poet Qu Yuan — bak chang (粽子) was thrown into rivers to feed the fish and prevent them from eating his body. Singapore's hawker version is Hokkien and Teochew in style.",
+      "Chinese tradition honouring the poet Qu Yuan — bak chang (粽子) was thrown into rivers to feed the fish and prevent them from eating his body. Singapore's versions span Hokkien, Teochew, Cantonese and Nyonya styles.",
     whereToFind:
-      "Amoy Street Food Centre for the most respected hawker version; Chinatown Complex and Old Airport Road for variety; everywhere during Dumpling Festival in May or June.",
-    priceRange: "S$3–8 per dumpling",
+      "Specialist dumpling stalls in hawker centres such as Amoy Street and Hong Lim sell bak chang year-round. Around the Dragon Boat Festival (fifth day of the fifth lunar month, usually late May or June) restaurants, hotels and Nyonya kueh shops add seasonal ranges.",
+    priceRange:
+      "S$2.50–7 at hawker stalls (restaurant and hotel festival dumplings S$10–30+)",
     imageUrl: "/images/food/bak-chang.webp",
     funFact:
       "The tying technique for bak chang determines how evenly it cooks — a perfectly tied dumpling has uniform density throughout; a loosely tied one has pockets of undercooked rice or overcompressed filling.",
@@ -2459,8 +2527,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Unwrap slowly — the leaves tear if you rush and the rice sticks to them. This cannot be hurried.",
     hawkersThatServeIt: [
       "amoy-street-food-centre",
-      "chinatown-complex-food-centre",
-      "old-airport-road-food-centre",
+      "hong-lim-market-food-centre",
     ],
     howToEat: [
       "Unwrap the bamboo leaves slowly and completely — the rice sticks to hasty unwrapping",
@@ -2478,9 +2545,20 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Bamboo Leaves", emoji: "🌿", role: "Not just packaging — the leaves impart a distinctive grassy fragrance during the hours of boiling that becomes part of the dish's flavour." },
     ],
     bestStalls: [
-      { name: "Hoo Kee Bak Chang", address: "Amoy Street Food Centre, #01-27, 7 Maxwell Road", area: "Tanjong Pagar", note: "The most celebrated bak chang stall in Singapore — the Hokkien-style filling here has been made from the same recipe since the stall opened", mapsUrl: "https://maps.google.com/?q=Hoo+Kee+Bak+Chang+Amoy+Street+Food+Centre+Singapore" },
-      { name: "Chang Cheng Mee Wah", address: "Chinatown Complex Food Centre, #02-114, 335 Smith Street", area: "Chinatown", note: "The Teochew version with a sweeter filling and more chestnut — a different interpretation that has its own devoted following", mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Bak+Chang+Singapore" },
-      { name: "Roland Restaurant Bak Chang", address: "89 Marine Parade Central", area: "Marine Parade", note: "Restaurant-quality bak chang that locals buy by the box during Dumpling Festival — the salted egg yolk ratio here is particularly generous", mapsUrl: "https://maps.google.com/?q=Roland+Restaurant+Marine+Parade+Bak+Chang+Singapore" },
+      {
+        name: "Hoo Kee Bak Chang",
+        address: "Amoy Street Food Centre, #01-18, 7 Maxwell Road",
+        area: "Tanjong Pagar",
+        note: "Bib Gourmand every year since 2016. Hokkien-style dumplings with marinated pork and roasted chestnut; get the deluxe with mushroom and salted egg. Weekday lunch only.",
+        mapsUrl: "https://maps.google.com/?q=Hoo+Kee+Bak+Chang+Amoy+Street+Food+Centre+Singapore",
+      },
+      {
+        name: "Hiong Kee Dumplings",
+        address: "Hong Lim Market & Food Centre, #02-37, 531A Upper Cross Street",
+        area: "Chinatown",
+        note: "Long-running Chinatown dumpling stall; order the salted-egg pork dumpling with chunky lean pork, or the sweeter Nonya dumpling. Kee chang sells out early; closed Sundays.",
+        mapsUrl: "https://maps.google.com/?q=Hiong+Kee+Dumplings+Hong+Lim+Market+Food+Centre+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 0, messFactor: 2, flavourDepth: 7, queueGame: 3, shiokValue: 8 },
   },
@@ -2762,8 +2840,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "South Indian Tamil tradition — vadai (வடை) is a staple of Tamil Nadu and Sri Lankan Tamil cuisine, brought to Singapore by Tamil immigrant communities.",
     whereToFind:
-      "Tekka Centre for the most consistent daily supply; banana leaf restaurants in Little India; Indian bakeries and snack stalls in the Serangoon Road area.",
-    priceRange: "S$0.80–1.50 per piece",
+      "At hawker centres vadai usually means the prawn-topped dhal fritter sold by specialist stalls such as Gina's Vadai at Dunman Food Centre and Indian Muslim stalls in Tekka Centre. Ring-shaped medu vadai is easier to find at South Indian vegetarian restaurants in Little India.",
+    priceRange:
+      "S$1–2 per piece (cheese or specialty flavours cost more)",
     imageUrl: "/images/food/vadai.jpg",
     funFact:
       "The batter for medu vadai must be ground to a specific consistency — too coarse and the vadai is dense; too fine and it doesn't fry properly. Traditional grinding is done on a wet stone grinder overnight.",
@@ -2775,9 +2854,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Must eat hot — cold vadai is a completely different and inferior experience. Order only what you can eat immediately.",
     hawkersThatServeIt: [
-      "tekka-centre",
-      "geylang-serai-market",
-      "tampines-round-market",
+
     ],
     howToEat: [
       "Eat immediately — vadai loses its crispness within minutes of leaving the oil",
@@ -2795,9 +2872,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Sambar", emoji: "🍲", role: "Tamarind-based lentil and vegetable broth — served alongside for dipping. More soup-like than the chutney and better suited to the softer centre of the vadai." },
     ],
     bestStalls: [
-      { name: "Murugan Idli Shop", address: "Tekka Centre, #01-218, 665 Buffalo Road", area: "Little India", note: "The most consistent vadai stall in Tekka — fried fresh throughout the day and the coconut chutney is ground in-house each morning", mapsUrl: "https://maps.google.com/?q=Murugan+Idli+Shop+Tekka+Centre+Singapore" },
-      { name: "Sri Murugan Sweets & Snacks", address: "108 Serangoon Road", area: "Little India", note: "Traditional South Indian snack shop — the vadai here is made from an overnight-ground batter that produces a different, more complex texture", mapsUrl: "https://maps.google.com/?q=Sri+Murugan+Sweets+Serangoon+Road+Singapore" },
-      { name: "Komala Vilas", address: "76-78 Serangoon Road", area: "Little India", note: "Singapore's oldest South Indian vegetarian restaurant since 1947 — the vadai here is eaten as part of a thali and is made from the same recipe the restaurant opened with", mapsUrl: "https://maps.google.com/?q=Komala+Vilas+Serangoon+Road+Singapore" },
+      {
+        name: "Gina's Vadai",
+        address: "Dunman Food Centre, #01-06, 271 Onan Road",
+        area: "Joo Chiat / Marine Parade",
+        note: "Prawn vadai institution dating to 1985; go for the classic prawn vadai, plus ikan bilis or dhal. Fried in batches, so eat it hot. Closed Mondays and Tuesdays.",
+        mapsUrl: "https://maps.google.com/?q=Gina%27s+Vadai+Dunman+Food+Centre+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 2, messFactor: 2, flavourDepth: 6, queueGame: 3, shiokValue: 8 },
   },
@@ -2810,8 +2891,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Tamil Nadu and Sri Lanka — appam (அப்பம்) is a staple of Tamil and Jaffna Tamil cooking, brought to Singapore by South Indian and Sri Lankan Tamil communities.",
     whereToFind:
-      "Little India's early morning restaurants and hawker stalls; Tekka Centre on weekend mornings; Sri Lankan restaurants in the Serangoon Road area.",
-    priceRange: "S$1.50–3 per appam",
+      "Look for South Indian thosai/appam stalls in neighbourhood hawker centres, usually open from breakfast to early afternoon; appam is cooked to order and typically served with grated coconut and sugar.",
+    priceRange:
+      "S$1–4 per appam (plain cheapest; cheese, banana or chocolate versions cost more)",
     imageUrl: "/images/food/appam.webp",
     funFact:
       "Appam batter must ferment for a minimum of 8 hours — the fermentation creates the slight sourness that balances the coconut's sweetness and produces the gas bubbles that give the lacy edges their characteristic holes.",
@@ -2823,8 +2905,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "The centre must be soft — if it is cooked through completely, the auntie left it on the heat too long.",
     hawkersThatServeIt: [
-      "tekka-centre",
-      "geylang-serai-market",
+      "ghim-moh-market-food-centre",
+      "maxwell-food-centre",
       "tampines-round-market",
     ],
     howToEat: [
@@ -2843,9 +2925,27 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Jaggery", emoji: "🟤", role: "Unrefined palm sugar used in some sweet accompaniments — gives a more complex, slightly smoky sweetness than refined sugar." },
     ],
     bestStalls: [
-      { name: "Ananda Bhavan", address: "58 Serangoon Road", area: "Little India", note: "South Indian vegetarian restaurant serving appam fresh on weekend mornings — the lacy edges here are the finest example in Singapore", mapsUrl: "https://maps.google.com/?q=Ananda+Bhavan+Serangoon+Road+Singapore" },
-      { name: "Tekka Appam Stall", address: "Tekka Centre, #01-145, 665 Buffalo Road", area: "Little India", note: "The accessible hawker version — made fresh throughout the morning and served with both sweet coconut milk and vegetable stew", mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Appam+Singapore" },
-      { name: "Janatha Vegetarian Restaurant", address: "Serangoon Road, Little India", area: "Little India", note: "Sri Lankan Tamil-style appam — slightly different fermentation produces a tangier batter and the edges are particularly thin and lacey", mapsUrl: "https://maps.google.com/?q=Janatha+Restaurant+Serangoon+Road+Singapore" },
+      {
+        name: "Heavens",
+        address: "Ghim Moh Market & Food Centre, #01-26, 20 Ghim Moh Road",
+        area: "Ghim Moh",
+        note: "Long-running breakfast stall (Tue–Sun, closes ~1pm); order the plain appam with coconut and sugar for crisp edges and a pillowy centre, or the cheese 'Princess' version.",
+        mapsUrl: "https://maps.google.com/?q=Heavens+20+Ghim+Moh+Road+Market+Singapore",
+      },
+      {
+        name: "Mr Appam",
+        address: "Maxwell Food Centre, #01-99, 1 Kadayanallur Street",
+        area: "Tanjong Pagar",
+        note: "One-woman stall known for creative appam: try the original, then the banana, chocolate or pandan brown-sugar coconut versions. Closed Tuesdays; not halal-certified.",
+        mapsUrl: "https://maps.google.com/?q=Mr+Appam+Maxwell+Food+Centre+Singapore",
+      },
+      {
+        name: "Rajarani Thosai",
+        address: "Tampines Round Market & Food Centre, #01-33, 137 Tampines Street 11",
+        area: "Tampines",
+        note: "Popular morning thosai stall with budget-friendly appam; go early for the plain, egg, butter or cheese appam. Not halal-certified.",
+        mapsUrl: "https://maps.google.com/?q=Rajarani+Thosai+Tampines+Round+Market+Singapore",
+      },
     ],
     shiokOMeter: { spiceHit: 0, messFactor: 2, flavourDepth: 6, queueGame: 3, shiokValue: 8 },
   },
@@ -3443,8 +3543,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Chinese immigrant tradition from Fujian and Guangdong provinces — fresh sugarcane pressing arrived in Singapore with the first waves of Hokkien and Cantonese settlers and became a permanent fixture of the hawker landscape.",
     whereToFind:
-      "Every hawker centre and wet market in Singapore has a sugarcane juice stall or cart. Tekka Centre and Geylang Serai for the freshest daytime versions; any hawker centre after a spicy meal for the most satisfying version.",
-    priceRange: "S$1.50–3 per cup",
+      "Many hawker centres have a drinks or fruit-juice stall that presses sugarcane to order, often with lemon or sour plum as an add-on. Some stalls charge more for less or no ice.",
+    priceRange:
+      "S$2–3.50 per cup (2024–25; large cups, lemon/sour plum, less or no ice cost extra)",
     imageUrl: "/images/food/sugarcane-juice.jpg",
     funFact:
       "The palest, most watery sugarcane juice is actually the freshest — the green colour and slight cloudiness indicates very recently pressed cane. Bright yellow juice has been sitting.",
@@ -3456,9 +3557,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "After spicy food, must drink sugarcane. It's not optional — it's medicine.",
     hawkersThatServeIt: [
-      "tekka-centre",
-      "geylang-serai-market",
-      "maxwell-food-centre",
+
     ],
     howToEat: [
       "Drink immediately after pressing — sugarcane juice oxidises quickly and loses its freshness within 30 minutes",
@@ -3490,27 +3589,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       },
     ],
     bestStalls: [
-      {
-        name: "Lim Kee Sugarcane",
-        address: "Tekka Centre, #01-290, 665 Buffalo Road",
-        area: "Little India",
-        note: "High-volume stall that presses cane continuously — the freshness is guaranteed because the juice never sits long enough to oxidise",
-        mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Sugarcane+Juice+Singapore",
-      },
-      {
-        name: "Geylang Serai Sugarcane",
-        address: "Geylang Serai Market, 1 Geylang Serai",
-        area: "Geylang Serai",
-        note: "The daytime market version — pressed fresh throughout the morning and the best accompaniment to the nasi lemak and mee siam stalls nearby",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Sugarcane+Juice+Singapore",
-      },
-      {
-        name: "Maxwell Sugarcane",
-        address: "Maxwell Food Centre, 1 Kadayanallur St",
-        area: "Tanjong Pagar",
-        note: "The CBD version — the lunchtime queue for sugarcane at Maxwell reflects how essential it is after the hawker centre's spicier dishes",
-        mapsUrl: "https://maps.google.com/?q=Maxwell+Food+Centre+Sugarcane+Juice+Singapore",
-      },
+
     ],
     shiokOMeter: {
       spiceHit: 0,
@@ -3528,15 +3607,16 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "bubur-lambuk",
     category: "Malay & Muslim Heritage",
     description:
-      "Bubur lambuk is Singapore's most communal food: a spiced rice porridge cooked in enormous woks with coconut milk, lemongrass, and dried shrimp, distributed free from mosques across Singapore every evening during Ramadan. The dish is Malay in origin and its entire meaning is inseparable from the month of fasting — made by mosque volunteers who stir the enormous pots from the afternoon, then ladled into containers and handed to whoever arrives at the gates. Kampong Glam's Sultan Mosque has distributed bubur lambuk at Ramadan for over a century. The recipe is spiced gently — ginger, lemongrass, galangal — so it is soft and restorative for breaking fast. Outside of Ramadan, it appears at Malay food stalls and weddings, but it is never quite the same without the context of communal giving.",
+      "Bubur lambuk is Singapore's most communal food: a spiced rice porridge cooked in enormous woks with coconut milk, lemongrass, and dried shrimp, distributed free from mosques across Singapore daily during Ramadan, usually in the late afternoon before iftar. The dish is Malay in origin and its entire meaning is inseparable from the month of fasting — made by mosque volunteers who stir the enormous pots from the afternoon, then ladled into containers and handed to whoever arrives at the gates. Kampong Glam's Sultan Mosque is among the mosques that prepare it. The recipe is spiced gently — ginger, lemongrass, galangal — so it is soft and restorative for breaking fast. Outside of Ramadan it is hard to find, and it is never quite the same without the context of communal giving.",
     origin:
       "Malay-Muslim tradition deeply tied to Ramadan — bubur lambuk was historically cooked by mosque communities in Singapore and distributed as an act of charity during the fasting month.",
     whereToFind:
-      "Sultan Mosque in Kampong Glam distributes it free during Ramadan evenings; Malay food stalls year-round; Geylang Serai food stalls during Ramadan bazaar season.",
-    priceRange: "S$2–4 per portion (or free from mosques during Ramadan)",
+      "During Ramadan many mosques across Singapore give out free bubur in the late afternoon for people to take home for iftar; MUIS publishes bubur distribution schedules on its Ramadan mosque services map. Outside Ramadan it is hard to find.",
+    priceRange:
+      "Free (given out by mosques during Ramadan; rarely sold outside the fasting month)",
     imageUrl: "/images/food/bubur-lambuk.jpg",
     funFact:
-      "Sultan Mosque's bubur lambuk is cooked in woks large enough to require two people to stir — the scale of the cooking is visible from outside the mosque and draws visitors who come specifically to watch the preparation.",
+      "The scale is huge: in Ramadan 2021, Masjid Darul Ghufran in Tampines alone handed out about 500 packets of porridge each weekday and 600 on weekends, with queues forming before 5pm.",
     bestPairedWith:
       "Dates and water for the traditional Ramadan iftar; teh tarik or air bandung outside of Ramadan.",
     halal: true,
@@ -3545,9 +3625,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "You don't pay for mosque bubur lambuk — you queue, you take your portion, and you say thank you. That's the whole ritual.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tekka-centre",
-      "adam-road-food-centre",
+
     ],
     howToEat: [
       "Eat warm — bubur lambuk is designed to be comforting and the coconut fragrance diminishes as it cools",
@@ -3589,27 +3667,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       },
     ],
     bestStalls: [
-      {
-        name: "Sultan Mosque Bubur Lambuk",
-        address: "3 Muscat Street, Kampong Glam (Ramadan only)",
-        area: "Kampong Glam",
-        note: "The most historically significant bubur lambuk in Singapore — distributed free every Ramadan evening by mosque volunteers from a recipe that has been made here for generations",
-        mapsUrl: "https://maps.google.com/?q=Sultan+Mosque+Kampong+Glam+Singapore",
-      },
-      {
-        name: "Geylang Serai Bubur Lambuk",
-        address: "Geylang Serai Market, 1 Geylang Serai",
-        area: "Geylang Serai",
-        note: "The hawker version during Ramadan — more accessible than queuing at a mosque and consistently good quality",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Bubur+Lambuk+Singapore",
-      },
-      {
-        name: "Hjh Maimunah Bubur Lambuk",
-        address: "11 Jalan Pisang",
-        area: "Jalan Besar",
-        note: "Available year-round at Singapore's most celebrated Malay restaurant — the version here uses the full traditional recipe with coconut milk and fresh lemongrass",
-        mapsUrl: "https://maps.google.com/?q=Hjh+Maimunah+Jalan+Pisang+Bubur+Lambuk+Singapore",
-      },
+
     ],
     shiokOMeter: {
       spiceHit: 1,
@@ -3817,12 +3875,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "nasi-goreng",
     category: "Malay & Muslim Heritage",
     description:
-      "Nasi goreng — fried rice — is the Malay archipelago's most universal dish and Singapore's most eaten midnight meal. Rice fried in a hot wok with shrimp paste, dark soy, egg, and aromatics, served with a fried egg on top, cucumber slices, and a prawn cracker alongside. The dish arrived with the Malay and Indonesian communities that have lived in Singapore since before the colonial era, and their influence on the recipe is fundamental: the shrimp paste (belacan) and the sweet, dark kecap manis are the two ingredients that make Malay nasi goreng categorically different from Chinese fried rice. Singapore's version is darker, funkier, and more deeply flavoured than most — and at mamak stalls that run through the night, a plate of nasi goreng at 2am is one of the most satisfying meals the city offers.",
+      "Nasi goreng — fried rice — is the Malay archipelago's most universal dish and a favourite Singapore supper. Rice fried in a hot wok with shrimp paste, dark soy, egg, and aromatics, served with a fried egg on top, cucumber slices, and a prawn cracker alongside. The dish arrived with the Malay and Indonesian communities that have lived in Singapore since before the colonial era, and their influence on the recipe is fundamental: the shrimp paste (belacan) and the sweet, dark kecap manis are the two ingredients that make Malay nasi goreng categorically different from Chinese fried rice. Singapore's version is darker, funkier, and more deeply flavoured than most — and at mamak stalls that run through the night, a plate of nasi goreng at 2am is one of the most satisfying meals the city offers.",
     origin:
       "Malay and Indonesian culinary tradition — nasi goreng has been a staple of the Malay archipelago for centuries, brought to Singapore by Malay, Javanese, and Bugis communities.",
     whereToFind:
-      "Every mamak stall and Malay hawker stall in Singapore — nasi goreng is available everywhere, twenty-four hours a day, in one form or another.",
-    priceRange: "S$4–8 per plate",
+      "Most Malay and Muslim (mamak) food stalls in hawker centres and kopitiams cook nasi goreng, and some Muslim eateries stay open late or around the clock.",
+    priceRange:
+      "S$5–8 (hawker and kopitiam plates; more with fried chicken or seafood)",
     imageUrl: "/images/food/nasi-goreng.jpg",
     funFact:
       "The best nasi goreng uses day-old rice rather than freshly cooked — the drier, slightly firmer grains fry separately in the wok instead of clumping together into a sticky mass.",
@@ -3834,9 +3893,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Must have the fried egg on top. Yolk must be runny. Break it into the rice first before eating anything else.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tekka-centre",
-      "adam-road-food-centre",
+
     ],
     howToEat: [
       "Break the fried egg yolk immediately and mix it through the top layer of rice before anything else",
@@ -3879,25 +3936,18 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Geylang Serai Nasi Goreng",
-        address: "Geylang Serai Market, #01-15, 1 Geylang Serai",
-        area: "Geylang Serai",
-        note: "The most authentic belacan version in the market — the wok here runs very hot and the rice gets a char that most stalls never achieve",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Nasi+Goreng+Singapore",
+        name: "Farasha by Intan (formerly Farasha Muslim Food)",
+        address: "Seah Im Food Centre, #01-31, 2 Seah Im Road, Singapore 099114",
+        area: "HarbourFront",
+        note: "Long-running favourite with a range of nasi goreng; get nasi goreng ayam with crispy fried chicken and house sambal, or the tom yum version.",
+        mapsUrl: "https://maps.google.com/?q=Farasha+Seah+Im+Food+Centre+2+Seah+Im+Road+Singapore",
       },
       {
-        name: "Adam Road Nasi Goreng",
-        address: "Adam Road Food Centre, #01-04, 2 Adam Road",
-        area: "Bukit Timah",
-        note: "Late-night institution — the nasi goreng here is best ordered after 10pm when the supper crowd fills the centre",
-        mapsUrl: "https://maps.google.com/?q=Adam+Road+Food+Centre+Nasi+Goreng+Singapore",
-      },
-      {
-        name: "Changi Village Nasi Goreng Pattaya",
-        address: "Changi Village Hawker Centre, 2 Changi Village Road",
-        area: "Changi",
-        note: "The Pattaya variation — fried rice wrapped in a thin omelette. The east-side version of nasi goreng that has its own distinct character",
-        mapsUrl: "https://maps.google.com/?q=Changi+Village+Nasi+Goreng+Pattaya+Singapore",
+        name: "Kampong Glam Cafe",
+        address: "17 Bussorah Street, Singapore 199438",
+        area: "Kampong Glam",
+        note: "Affordable, family-run Malay cafe near Sultan Mosque with a long list of nasi goreng (kampung, cina, ikan masin); pair with teh tarik.",
+        mapsUrl: "https://maps.google.com/?q=Kampong+Glam+Cafe+17+Bussorah+Street+Singapore",
       },
     ],
     shiokOMeter: {
@@ -3914,12 +3964,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "bandung",
     category: "Malay & Muslim Heritage",
     description:
-      "Bandung is Singapore's most cheerfully pink drink: rose syrup stirred into cold evaporated milk until it turns a vivid coral-pink, served over ice. The drink takes its name from the city in Indonesia but the connection is linguistic more than culinary — the Malay word bandung simply means 'pair' or 'blend', reflecting the two-ingredient simplicity of the drink. Indian-Muslim hawkers popularised bandung across Singapore and it became a fixture of Malay weddings, Ramadan bazar stalls, and mamak drink counters. It is sweet in a way that is entirely deliberate — the sweetness is the point, the colour is the invitation, and the rose fragrance is the reason people who have been drinking it since childhood still order it every time without thinking. On a hot afternoon, a glass of cold bandung is not a sophisticated choice. It is the correct one.",
+      "Bandung is Singapore's most cheerfully pink drink: rose syrup stirred into cold evaporated milk until it turns a vivid coral-pink, served over ice. Despite the name, the drink has nothing to do with the Indonesian city of Bandung — the Malay word bandung simply means 'pair' or 'blend', reflecting the two-ingredient simplicity of the drink. Indian-Muslim hawkers popularised bandung across Singapore and it became a fixture of Malay weddings, Ramadan bazar stalls, and mamak drink counters. It is sweet in a way that is entirely deliberate — the sweetness is the point, the colour is the invitation, and the rose fragrance is the reason people who have been drinking it since childhood still order it every time without thinking. On a hot afternoon, a glass of cold bandung is not a sophisticated choice. It is the correct one.",
     origin:
       "Indian-Muslim and Malay hawker tradition — bandung became a Singapore staple through mamak stalls and Malay community celebrations, drawing on the Indian-Muslim love of rose syrup in beverages.",
     whereToFind:
-      "Every mamak stall and Malay food stall in Singapore — bandung is inseparable from the community events and hawker stalls where Malay and Indian-Muslim food is served.",
-    priceRange: "S$1.50–3 per glass",
+      "Bandung is a standard menu item at Malay and Indian-Muslim drink stalls in hawker centres and coffeeshops, and is a fixture at Ramadan bazaars and Malay wedding receptions.",
+    priceRange:
+      "S$1.50–3 per glass (typical hawker/coffeeshop drink-stall price; not verified against a 2025–26 source)",
     imageUrl: "/images/food/bandung.jpg",
     funFact:
       "The intensity of bandung's pink colour varies wildly between stalls depending on the rose syrup brand used — locals have strong preferences about their preferred shade, and some stalls are known specifically for their particularly vivid or particularly pale version.",
@@ -3931,9 +3982,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Malay wedding: confirm got bandung. No bandung means the host is cutting corners.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "tekka-centre",
-      "adam-road-food-centre",
+
     ],
     howToEat: [
       "Drink before the ice melts — bandung's sweetness is calibrated for a specific concentration and excess water dilutes it",
@@ -3965,27 +4014,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       },
     ],
     bestStalls: [
-      {
-        name: "Geylang Serai Bandung",
-        address: "Geylang Serai Market, 1 Geylang Serai",
-        area: "Geylang Serai",
-        note: "The Malay heartland version — the rose syrup here is particularly fragrant and the evaporated milk ratio creates a properly creamy drink",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Bandung+Singapore",
-      },
-      {
-        name: "Tekka Bandung Stall",
-        address: "Tekka Centre, 665 Buffalo Road",
-        area: "Little India",
-        note: "The Indian-Muslim version — slightly less sweet than the Malay interpretation, with a cleaner rose flavour",
-        mapsUrl: "https://maps.google.com/?q=Tekka+Centre+Bandung+Singapore",
-      },
-      {
-        name: "Ramadan Bazaar Bandung",
-        address: "Geylang Serai Ramadan Bazaar (Ramadan only)",
-        area: "Geylang Serai",
-        note: "The best context for bandung — ordered alongside murtabak and otak-otak at the bazaar. The volume of orders ensures it is always freshly made",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Ramadan+Bazaar+Bandung+Singapore",
-      },
+
     ],
     shiokOMeter: {
       spiceHit: 0,
@@ -4105,11 +4134,12 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Peranakan Nyonya tradition from the Straits Chinese community — nasi ulam reflects the Nyonya practice of using fresh herbs as a primary ingredient, drawing on Malay kampung garden culture.",
     whereToFind:
-      "Peranakan restaurants in Katong and Joo Chiat; Hjh Maimunah for the Malay version; specific Nyonya-heritage stalls during cultural festivals.",
-    priceRange: "S$6–14 per plate at restaurants",
+      "Nasi ulam is rare at hawker centres: a couple of hawker stalls make it in limited daily batches, while elsewhere it turns up mainly at Peranakan restaurants, sometimes only as part of a set menu.",
+    priceRange:
+      "S$6–9 at hawker/coffeeshop stalls (2024–26); more at Peranakan restaurants, where it may only be part of a set or tasting menu",
     imageUrl: "/images/food/nasi-ulam.jpg",
     funFact:
-      "The number of herbs in a proper nasi ulam ranges from eight to fourteen different varieties — each herb is sliced paper-thin to release maximum fragrance, and the variety of a cook's herb selection reflects their knowledge of Nyonya heritage.",
+      "The number of herbs in a proper nasi ulam can run to fifteen or more herbs and aromatics — each herb is sliced paper-thin to release maximum fragrance, and the variety of a cook's herb selection reflects their knowledge of Nyonya heritage.",
     bestPairedWith:
       "Sambal belacan on the side, a piece of ikan bilis (crispy anchovies), and a cold lime juice to complement the herb intensity.",
     halal: true,
@@ -4118,8 +4148,6 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "You can taste how many herbs went in. The more fragrant, the more respect for the recipe.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "maxwell-food-centre",
       "amoy-street-food-centre",
     ],
     howToEat: [
@@ -4163,25 +4191,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Candlenut Restaurant",
-        address: "Block 17A Dempsey Road",
-        area: "Dempsey",
-        note: "The definitive modern nasi ulam — the herb selection here includes varieties that most stalls have stopped sourcing",
-        mapsUrl: "https://maps.google.com/?q=Candlenut+Restaurant+Dempsey+Singapore",
+        name: "The Little Red Hen",
+        address: "Amoy Street Food Centre, #01-66, 7 Maxwell Road",
+        area: "Tanjong Pagar",
+        note: "Malaysian-style nasi ulam with about 15 hand-sliced herbs and sambal, served as sets with ayam percik or beef rendang. Weekday lunch only.",
+        mapsUrl: "https://maps.google.com/?q=The+Little+Red+Hen+Amoy+Street+Food+Centre+Singapore",
       },
       {
-        name: "Hjh Maimunah",
-        address: "11 Jalan Pisang",
-        area: "Jalan Besar",
-        note: "The Malay version — slightly less herb variety than the Nyonya interpretation but the torch ginger flower here is always present and always fresh",
-        mapsUrl: "https://maps.google.com/?q=Hjh+Maimunah+Nasi+Ulam+Singapore",
+        name: "Chendol Melaka",
+        address: "Soy Eu Tua Coffeeshop, 15 Upper East Coast Road",
+        area: "Siglap",
+        note: "Coffeeshop stall known for Peranakan nasi ulam with about 17 herbs and spices plus house sambal belacan. Limited portions, so go early, and order a chendol too.",
+        mapsUrl: "https://maps.google.com/?q=Chendol+Melaka+15+Upper+East+Coast+Road+Singapore",
       },
       {
-        name: "Peranakan Inn",
-        address: "210 East Coast Road",
-        area: "Katong",
-        note: "Heritage Peranakan restaurant in Katong — the nasi ulam is made from a family recipe and changes slightly based on which herbs are available that morning",
-        mapsUrl: "https://maps.google.com/?q=Peranakan+Inn+Nasi+Ulam+East+Coast+Singapore",
+        name: "Pangium",
+        address: "Gallop Entrance, Singapore Botanic Gardens, 11 Gallop Road",
+        area: "Botanic Gardens",
+        note: "Malcolm Lee's Michelin-starred Straits restaurant, where a refined, many-herb nasi ulam anchors the tasting menus. Book ahead; it isn't sold à la carte.",
+        mapsUrl: "https://maps.google.com/?q=Pangium+11+Gallop+Road+Singapore+Botanic+Gardens",
       },
     ],
     shiokOMeter: {
@@ -4200,10 +4228,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     description:
       "Kueh lapis is the most patient dessert in Singapore: a steamed layered cake built one thin stratum at a time, alternating pink and white layers of rice flour, coconut milk, and pandan or rose colouring, until the completed cake stands five centimetres tall in perfect horizontal bands. The technique requires steaming each layer individually before adding the next — rushing produces fused, indistinct layers; patience produces the clean, jewel-like cross-section that makes kueh lapis the most photographed kueh in any display. The flavour is mild and deliberately restrained — coconut milk sweetness, a faint pandan fragrance, and the slight chewiness of well-set rice flour. The experience is partly visual and partly textural: peeling each layer individually is the traditional way to eat it, and the peel of each thin, slightly elastic stratum is one of the small, specific pleasures of Peranakan kueh culture.",
     origin:
-      "Peranakan Nyonya kueh tradition — kueh lapis reflects the Straits Chinese mastery of steamed rice flour desserts, drawing on Dutch-Indonesian spekkoek (layer cake) and Malay kueh techniques.",
+      "Peranakan Nyonya kueh tradition — kueh lapis reflects the Straits Chinese mastery of steamed rice flour desserts, sharing its steamed-layer technique with Malay and Indonesian kue lapis. It is unrelated to the baked, Dutch-influenced lapis legit (spekkoek), which is also called kueh lapis in Singapore.",
     whereToFind:
-      "Bengawan Solo island-wide for the most consistent version; Peranakan kueh shops in Joo Chiat and Katong; traditional kueh stalls at Geylang Serai during festive periods.",
-    priceRange: "S$1.50–3 per piece; S$8–15 per whole cake",
+      "Steamed rainbow kueh lapis (also sold as lapis sagu or rainbow lapis) is a standard item at Nyonya kueh shops and kueh chains, especially in the Joo Chiat/Katong area. Note that many shops' \"kueh lapis\" is the different baked, spiced layer cake (lapis legit), so ask for the steamed rainbow version.",
+    priceRange:
+      "S$1–2 per piece (steamed rainbow lapis at Nyonya kueh shops)",
     imageUrl: "/images/food/kueh-lapis.jpg",
     funFact:
       "Each layer of kueh lapis must be steamed for exactly three to five minutes before the next layer is added — experienced kueh makers judge readiness by the surface appearance rather than a timer, looking for a specific sheen that indicates the layer has set.",
@@ -4215,9 +4244,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "Peel the layers one by one. Eating it all at once misses the whole point of making it properly.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "chinatown-complex-food-centre",
-      "tekka-centre",
+      "tiong-bahru-market",
     ],
     howToEat: [
       "Peel each layer individually from the bottom up — the layers should come apart cleanly if the kueh was properly made",
@@ -4260,25 +4287,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Bengawan Solo",
-        address: "Multiple outlets island-wide",
-        area: "Island-wide",
-        note: "Singapore's benchmark for kueh lapis — the layers are consistently distinct, the pandan fragrance is always from real pandan leaf, and the texture is reliably elastic",
-        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Kueh+Lapis+Singapore",
-      },
-      {
         name: "Kim Choo Kueh Chang",
-        address: "109 East Coast Road",
-        area: "Katong",
-        note: "Heritage kueh shop in Katong — the kueh lapis here uses a three-generation family recipe and is made fresh each morning",
-        mapsUrl: "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+Kueh+Lapis+Singapore",
+        address: "Kim Choo Kueh Chang, 60 Joo Chiat Place",
+        area: "Joo Chiat",
+        note: "Joo Chiat Nyonya kueh and dumpling shop dating to 1945; its traditional steamed kueh lapis comes in a mixed box with kueh salat.",
+        mapsUrl: "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+60+Joo+Chiat+Place+Singapore",
       },
       {
-        name: "Geylang Serai Kueh",
-        address: "Geylang Serai Market, 1 Geylang Serai",
-        area: "Geylang Serai",
-        note: "The market kueh stalls make kueh lapis throughout the week — the Ramadan period brings the widest selection and the freshest batches",
-        mapsUrl: "https://maps.google.com/?q=Geylang+Serai+Market+Kueh+Lapis+Singapore",
+        name: "HarriAnns Nonya Table",
+        address: "Tiong Bahru Market, #02-25, 30 Seng Poh Road",
+        area: "Tiong Bahru",
+        note: "The family's original Tiong Bahru Market kiosk; get the Rainbow Lapis alongside kueh salat and ondeh ondeh.",
+        mapsUrl: "https://maps.google.com/?q=HarriAnns+Nonya+Table+Tiong+Bahru+Market+Singapore",
+      },
+      {
+        name: "Bengawan Solo",
+        address: "Multiple outlets island-wide (see bengawansolo.sg)",
+        area: "Island-wide",
+        note: "Ask for Lapis Sagu, the steamed rainbow version; the item labelled kueh lapis here is the baked spiced cake.",
+        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Singapore",
       },
     ],
     shiokOMeter: {
@@ -4593,8 +4620,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     origin:
       "Teochew immigrant tradition from the Swatow region — soon kueh (笋粿) reflects the Teochew mastery of steamed wheat starch dumplings, using the bamboo shoots and dried shrimp that characterised Teochew coastal cooking.",
     whereToFind:
-      "Tiong Bahru Market and Bedok's traditional kueh stalls; Chinatown Complex; any dim sum establishment that serves Teochew-style dumplings.",
-    priceRange: "S$1–1.50 per piece",
+      "Soon kueh is sold at Teochew kueh stalls in hawker centres and markets, usually alongside png kueh, ku chye kueh and chwee kueh, and many of these stalls open in the morning and sell out early.",
+    priceRange:
+      "S$1.10–1.80 per piece (steamed; pan-fried slightly more)",
     imageUrl: "/images/food/soon-kueh.jpg",
     funFact:
       "The translucency of a well-made soon kueh skin is a quality indicator — if you can see the filling's colour through the wrapper before steaming, the dough ratio is correct. An opaque wrapper is too thick.",
@@ -4607,8 +4635,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "The skin must be thin enough to see through. If you can't see the filling, the uncle used too much dough.",
     hawkersThatServeIt: [
       "tiong-bahru-market",
-      "chinatown-complex-food-centre",
-      "bedok-interchange-hawker-centre",
+      "shunfu-market-food-centre",
     ],
     howToEat: [
       "Eat in one bite if possible — the wrapper is designed to be consumed whole and cutting releases the filling prematurely",
@@ -4651,25 +4678,25 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Tiong Bahru Kueh Stall",
-        address: "Tiong Bahru Market, #02-30, 30 Seng Poh Road",
+        name: "Lai Heng Handmade Teochew Kueh",
+        address: "Yuhua Market & Hawker Centre, #01-218, 347 Jurong East Avenue 1",
+        area: "Jurong East",
+        note: "Michelin Bib Gourmand (2026) handmade Teochew kueh stall; order the soon kueh steamed or pan-fried, plus its cabbage and ku chye kueh.",
+        mapsUrl: "https://maps.google.com/?q=Lai+Heng+Handmade+Teochew+Kueh+Yuhua+Market+Singapore",
+      },
+      {
+        name: "Mei Zhen Hakka Delicacies",
+        address: "Shunfu Mart Food Centre, #02-26, 320 Shunfu Road",
+        area: "Thomson",
+        note: "Hakka-style soon kueh with a taro skin, made by three sisters carrying on their mother's stall; add abacus seeds. Wed–Sun mornings only.",
+        mapsUrl: "https://maps.google.com/?q=Mei+Zhen+Hakka+Delicacies+Shunfu+Mart+Singapore",
+      },
+      {
+        name: "Tiong Bahru Teochew Kueh",
+        address: "Tiong Bahru Market, #02-02, 30 Seng Poh Road",
         area: "Tiong Bahru",
-        note: "The most consistent soon kueh in Singapore — the wrapper here is reliably thin and the bamboo filling is always fragrant with dried shrimp",
-        mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Market+Soon+Kueh+Singapore",
-      },
-      {
-        name: "Chinatown Soon Kueh",
-        address: "Chinatown Complex Food Centre, 335 Smith Street",
-        area: "Chinatown",
-        note: "Multiple Teochew kueh stalls side by side — find the one with the translucent wrappers visible in the steamer",
-        mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Soon+Kueh+Singapore",
-      },
-      {
-        name: "Bedok Kueh Stall",
-        address: "Bedok Interchange Hawker Centre, 208 New Upper Changi Rd",
-        area: "Bedok",
-        note: "East-side version popular with morning regulars — the soon kueh here is made fresh each morning and sells out by 10am",
-        mapsUrl: "https://maps.google.com/?q=Bedok+Interchange+Soon+Kueh+Singapore",
+        note: "Long-running Teochew kueh stall (since 1974, per Eatbook); soon kueh comes with turnip or chive filling, and the png kueh is worth adding.",
+        mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Teochew+Kueh+Tiong+Bahru+Market+Singapore",
       },
     ],
     shiokOMeter: {
@@ -4686,12 +4713,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "ang-ku-kueh",
     category: "Chinese Dialect Heritage",
     description:
-      "Ang ku kueh — red tortoise cake — is one of Singapore's oldest and most meaningful confections: a bright red glutinous rice flour shell moulded into the shape of a tortoise, filled with sweet mung bean or peanut paste, and placed on a pandan leaf base. The name and form carry Hokkien and Teochew tradition: the tortoise is a symbol of longevity, the red colour signals prosperity, and the entire object is designed to be given rather than kept. Ang ku kueh appears at birthdays (particularly first-month celebrations), temple offerings, and special occasions where the giving of food carries as much meaning as the eating of it. At hawker stalls and traditional kueh shops, it is sold daily in both classic red and modern variations — but the original red mung bean version, made properly with fresh-ground paste and steamed until the skin is slightly shiny and yielding, is the one that carries the heritage.",
+      "Ang ku kueh — red tortoise cake — is one of Singapore's oldest and most meaningful confections: a bright red glutinous rice flour shell moulded into the shape of a tortoise, filled with sweet mung bean or peanut paste, and placed on a square of banana leaf. The name and form carry Hokkien and Teochew tradition: the tortoise is a symbol of longevity, the red colour signals prosperity, and the entire object is designed to be given rather than kept. Ang ku kueh appears at birthdays (particularly first-month celebrations), temple offerings, and special occasions where the giving of food carries as much meaning as the eating of it. At hawker stalls and traditional kueh shops, it is sold daily in both classic red and modern variations — but the original red mung bean version, made properly with fresh-ground paste and steamed until the skin is slightly shiny and yielding, is the one that carries the heritage.",
     origin:
       "Hokkien and Teochew immigrant tradition — ang ku kueh (紅龜粿) was brought to Singapore from Fujian and Guangdong as a ceremonial food carrying the symbolism of longevity and prosperity.",
     whereToFind:
-      "Ji Xiang Ang Ku Kueh in Joo Chiat for the heritage version; Bengawan Solo for consistent island-wide availability; traditional kueh shops in Geylang Serai and Chinatown.",
-    priceRange: "S$0.80–1.50 per piece",
+      "Mostly sold by specialist kueh shops and neighbourhood confectioneries rather than hawker centres; Bukit Merah and Tanjong Pagar/Everton Park have some of the best-known handmade makers. Go in the morning, as popular flavours sell out.",
+    priceRange:
+      "S$1–2 per piece (classic peanut/mung bean around S$1.40; premium fillings like black sesame or durian cost more)",
     imageUrl: "/images/food/ang-ku-kueh.jpg",
     funFact:
       "The tortoise mould used to shape ang ku kueh is traditionally made from wood and carved by hand — the pattern pressed into the kueh's surface varies between families and stalls, making each version visually distinct.",
@@ -4703,16 +4731,14 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     localSay:
       "If someone gives you ang ku kueh, they are wishing you long life. The correct response is to eat it, not to display it.",
     hawkersThatServeIt: [
-      "geylang-serai-market",
-      "chinatown-complex-food-centre",
-      "tiong-bahru-market",
+
     ],
     howToEat: [
       "Eat at room temperature — fresh ang ku kueh should be soft and slightly yielding to the touch",
-      "Remove the pandan leaf base before eating — it is flavour-imparting packaging, not meant to be consumed",
+      "Remove the banana leaf base before eating — it stops the kueh sticking and is not meant to be eaten",
       "Eat in two bites — the filling-to-skin ratio is calibrated for a two-bite piece",
       "The mung bean version is the original — taste it before the peanut version to understand the heritage",
-      "Fresh ang ku kueh should leave a faint pandan fragrance on your fingers from the leaf base",
+      "Fresh ang ku kueh should feel soft and slightly tacky, not hard or dry",
     ],
     keyIngredients: [
       {
@@ -4736,9 +4762,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         role: "Traditionally from fermented red yeast rice — the colour carries the symbolism of prosperity and good fortune that makes ang ku kueh a gift-appropriate food.",
       },
       {
-        name: "Pandan Leaf",
+        name: "Banana Leaf",
         emoji: "🌿",
-        role: "The base — prevents sticking and imparts a faint grassy fragrance to the bottom of the kueh during steaming.",
+        role: "The base — prevents sticking and lends a light fragrance to the base of the kueh during steaming.",
       },
       {
         name: "Banana Oil (optional)",
@@ -4748,25 +4774,18 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Ji Xiang Ang Ku Kueh",
-        address: "Ji Xiang Confectionery, 433 Joo Chiat Road",
-        area: "Joo Chiat",
-        note: "The most celebrated ang ku kueh in Singapore — made fresh every morning with hand-ground filling. The queue on weekend mornings is the proof",
-        mapsUrl: "https://maps.google.com/?q=Ji+Xiang+Ang+Ku+Kueh+Joo+Chiat+Singapore",
+        name: "Ji Xiang Confectionery",
+        address: "Blk 1 Everton Park, #01-33, Singapore 081001",
+        area: "Everton Park / Tanjong Pagar",
+        note: "Handmade since the 1980s with thin, soft skins; peanut and sweet mung bean are the best sellers, with corn, yam and black sesame too. Closed Sundays.",
+        mapsUrl: "https://maps.google.com/?q=Ji+Xiang+Confectionery+1+Everton+Park+Singapore",
       },
       {
-        name: "Bengawan Solo",
-        address: "Multiple outlets island-wide",
-        area: "Island-wide",
-        note: "Consistent and accessible — the mung bean version here is reliably made and the skin is always properly soft",
-        mapsUrl: "https://maps.google.com/?q=Bengawan+Solo+Ang+Ku+Kueh+Singapore",
-      },
-      {
-        name: "Chinatown Ang Ku Kueh",
-        address: "Chinatown Complex Food Centre, 335 Smith Street",
-        area: "Chinatown",
-        note: "The traditional market version — made fresh throughout the morning and the pandan leaf base here is always from fresh leaves, not pre-cut frozen",
-        mapsUrl: "https://maps.google.com/?q=Chinatown+Complex+Ang+Ku+Kueh+Singapore",
+        name: "Poh Cheu Soon Kueh & Ang Ku Kueh",
+        address: "Blk 127 Bukit Merah Lane 1, #01-222, Singapore 150127",
+        area: "Bukit Merah",
+        note: "Third-generation family stall still making kueh by hand; around a dozen flavours, slightly thicker springy skin. Get the classic peanut or mung bean plus a soon kueh.",
+        mapsUrl: "https://maps.google.com/?q=Poh+Cheu+127+Bukit+Merah+Lane+1+Singapore",
       },
     ],
     shiokOMeter: {
@@ -4882,12 +4901,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     slug: "naan",
     category: "Indian & South Asian Heritage",
     description:
-      "Naan is the leavened flatbread of North Indian and Pakistani cooking that found a permanent place in Singapore's Indian-Muslim restaurant heritage — stretched by hand, slapped against the interior wall of a tandoor oven, and pulled out charred in spots, blistered across its surface, and soft enough to fold completely around a piece of mutton. Singapore's naan is associated with the Indian-Muslim restaurants of Kampong Glam and Race Course Road that have served North Indian food alongside South Indian dishes since the early colonial period. It is not a hawker dish — it is a restaurant dish, requiring a tandoor to make properly — and the tandoor restaurants of Kampong Glam are its natural home. The best naan in Singapore is slathered with butter or garlic butter immediately after emerging from the oven, and eaten while it is too hot to hold comfortably, which is precisely the correct temperature.",
+      "Naan is the leavened flatbread of North Indian and Pakistani cooking that found a permanent place in Singapore's Indian-Muslim restaurant heritage — stretched by hand, slapped against the interior wall of a tandoor oven, and pulled out charred in spots, blistered across its surface, and soft enough to fold completely around a piece of mutton. In Singapore, naan is most associated with the North Indian and Pakistani eateries of Little India. Because it needs a tandoor, it is mostly a restaurant dish, though a few hawker stalls run their own, including Michelin Bib Gourmand stall Delhi Lahori at Tekka Centre. The best naan in Singapore is slathered with butter or garlic butter immediately after emerging from the oven, and eaten while it is too hot to hold comfortably, which is precisely the correct temperature.",
     origin:
       "North Indian and Pakistani bread tradition — naan arrived in Singapore with North Indian Muslim traders and was adopted into the Indian-Muslim restaurant culture of Kampong Glam and Little India.",
     whereToFind:
-      "Kampong Glam's North Bridge Road Indian-Muslim restaurants; Race Course Road's banana leaf establishments that offer both South and North Indian options; tandoor restaurants island-wide.",
-    priceRange: "S$3–6 per naan",
+      "Mainly at North Indian and Pakistani eateries around Little India (Serangoon Road and Tekka Centre), where it comes fresh from the tandoor. A few hawker stalls with their own tandoor, such as Delhi Lahori at Tekka Centre, also sell it.",
+    priceRange:
+      "S$1.50–6 per naan (plain naan at casual Little India eateries and hawker stalls at the low end; cheese, garlic and restaurant naan cost more)",
     imageUrl: "/images/food/naan.jpg",
     funFact:
       "A properly made tandoor operates at 450–500°C — bread placed against the inner wall of the oven cooks in ninety seconds or less. The high heat is what creates the blistered surface and the slightly charred spots that cannot be replicated in a conventional oven.",
@@ -4900,8 +4920,6 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Must eat hot. If it has gone cold before you start eating, someone at the table was talking too much.",
     hawkersThatServeIt: [
       "tekka-centre",
-      "geylang-serai-market",
-      "newton-food-centre",
     ],
     howToEat: [
       "Tear from the edges — naan is a tearing bread, not a cutting bread. Use your hands throughout",
@@ -4944,25 +4962,18 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Zam Zam Restaurant",
-        address: "697-699 North Bridge Road",
-        area: "Kampong Glam",
-        note: "Singapore's most famous Indian-Muslim restaurant — the naan here has been served with murtabak and curry since 1908",
-        mapsUrl: "https://maps.google.com/?q=Zam+Zam+Restaurant+Naan+Singapore",
-      },
-      {
-        name: "Rang Mahal",
-        address: "Pan Pacific Singapore, 7 Raffles Boulevard",
-        area: "Marina Bay",
-        note: "The fine dining version — a tandoor-fired naan in a restaurant context, for when the occasion requires more than a hawker stall",
-        mapsUrl: "https://maps.google.com/?q=Rang+Mahal+Naan+Singapore",
-      },
-      {
-        name: "Gandhi Restaurant",
-        address: "32 Race Course Road",
+        name: "Delhi Lahori",
+        address: "Tekka Centre, #01-266, 665 Buffalo Road, Singapore 210665",
         area: "Little India",
-        note: "Race Course Road institution — the naan here is made in a traditional tandoor and the garlic butter version is the most ordered item on the table",
-        mapsUrl: "https://maps.google.com/?q=Gandhi+Restaurant+Race+Course+Road+Naan+Singapore",
+        note: "Michelin Bib Gourmand hawker stall with a charcoal tandoor; fluffy, crisp naan is its claim to fame. Get cheese garlic naan with butter chicken or seekh kebab.",
+        mapsUrl: "https://maps.google.com/?q=Delhi+Lahori+Tekka+Centre+Singapore",
+      },
+      {
+        name: "Usman Restaurant",
+        address: "238 Serangoon Road, Singapore 218085",
+        area: "Little India",
+        note: "Long-running Pakistani/North Indian eatery known for naan made in-house; try cheese, garlic or onion naan with keema or butter chicken. Open late.",
+        mapsUrl: "https://maps.google.com/?q=Usman+Restaurant+238+Serangoon+Road+Singapore",
       },
     ],
     shiokOMeter: {

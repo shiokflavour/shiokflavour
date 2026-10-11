@@ -1,13 +1,14 @@
 type Stall = { name: string; address: string; area: string; note: string; mapsUrl: string };
 type Props = { dishName: string; stalls: Stall[] };
 export function BestStalls({ dishName, stalls }: Props) {
+  if (stalls.length === 0) return null;
   return (
     <section className="rounded-2xl border-2 border-sf-primary/30 bg-sf-surface/60 p-6 sm:p-8">
       <div className="flex items-center gap-2">
         <span className="text-2xl">📍</span>
         <h2 className="text-xl font-semibold text-sf-cream">Best {dishName} in Singapore</h2>
       </div>
-      <p className="mt-1 text-sm text-sf-cream/50">Locally verified — not sponsored</p>
+      <p className="mt-1 text-sm text-sf-cream/50">Checked against recent food guides — not sponsored</p>
       <ul className="mt-6 space-y-4">
         {stalls.map((stall, i) => (
           <li key={stall.name} className="flex gap-4 rounded-xl border border-white/15 bg-white/[0.06] p-5">
