@@ -193,6 +193,51 @@ export default function AboutPage() {
         {/* Full width warm divider */}
         <div className="bg-gradient-to-r from-transparent via-sf-primary/20 to-transparent h-px" />
 
+        {/* Section — About our photos (AI illustration disclosure) */}
+        <section
+          id="our-photos"
+          className="mx-auto max-w-3xl scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8"
+        >
+          <div className="w-8 h-px bg-sf-primary mb-6" />
+          <h2 className="text-3xl font-bold text-sf-cream mb-6">
+            About Our Photos
+          </h2>
+          <p className="text-lg leading-relaxed text-sf-muted mb-5">
+            ShiokFlavour is a passion project, run by one person in their spare
+            time. Many of the photos in our articles are AI-generated
+            illustrations, and every one of them is labelled that way. We would
+            rather tell you upfront than let anyone assume otherwise.
+          </p>
+          <p className="text-lg leading-relaxed text-sf-muted mb-5">
+            The reason is simple: time. Photographing every dish, stall and
+            scene across Singapore is not something one person can do, and we
+            would rather spend that time eating, checking stalls and getting the
+            details right.
+          </p>
+          <p className="text-lg leading-relaxed text-sf-muted mb-5">
+            The illustrations are not random. Each one is curated: built from
+            detailed descriptions of how the dish is actually served in
+            Singapore, checked for accuracy (the right sauces, the right
+            cutlery, the right setting) and redone when something looks off.
+            They show what a dish or scene typically looks like, never a
+            specific stall.
+          </p>
+          <p className="text-lg leading-relaxed text-sf-primary font-medium">
+            The words, stall picks and prices are researched and checked by
+            hand. Spotted something wrong?{" "}
+            <Link
+              href="/contact"
+              className="underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary"
+            >
+              Tell us
+            </Link>
+            .
+          </p>
+        </section>
+
+        {/* Full width warm divider */}
+        <div className="bg-gradient-to-r from-transparent via-sf-primary/20 to-transparent h-px" />
+
         {/* Section 4 — UNESCO Heritage — most impactful, full dark treatment */}
         <section className="bg-gradient-to-br from-sf-surface via-black/60 to-sf-bg py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

@@ -338,6 +338,21 @@ export default async function BlogArticlePage({ params }: Props) {
         <div className="flex flex-col gap-12 lg:flex-row">
           <article className="prose-article min-w-0 max-w-3xl flex-1 text-base sm:text-lg">
             {paragraphs}
+            {post.content.includes("Illustration created with AI") ? (
+              <div className="mt-12 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm leading-relaxed text-sf-muted">
+                <span className="font-semibold text-sf-cream">About the photos: </span>
+                images in this article are AI-generated illustrations, curated
+                and checked for accuracy against how the dish is really served
+                in Singapore. Stall picks and prices are researched and checked
+                by hand.{" "}
+                <Link
+                  href="/about#our-photos"
+                  className="font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary"
+                >
+                  Why we use them
+                </Link>
+              </div>
+            ) : null}
           </article>
 
           <aside className="w-full flex-shrink-0 lg:w-80">
