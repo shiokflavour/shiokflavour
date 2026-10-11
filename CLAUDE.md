@@ -1,6 +1,8 @@
 # CLAUDE.md — ShiokFlavour Project Context
 
 > Drop this file into the root of `~/Desktop/shiokflavour` so any Claude session instantly knows the full project context.
+>
+> **Also read `PROJECT-NOTES.md`** for current status, ground rules and the to-do list. It is newer than this file.
 
 ---
 
@@ -185,7 +187,7 @@ A curated guide to Singapore's most storied local restaurants — not fine dinin
 npm run dev
 
 # 3. Deploy to production
-git add .
+git add <specific files>   # never git add .
 git commit -m "feat: description of what was done"
 git push origin main
 # → Vercel auto-deploys to shiokflavour.com in ~30-60 seconds
