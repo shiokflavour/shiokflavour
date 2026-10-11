@@ -1718,7 +1718,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     tag: "Budget Eats",
     hours:
       "Hours vary by stall",
-    imageUrl: "/images/hawkers/woodlands-centre.jpg",
+    imageUrl: "/images/food/laksa.jpg",
     description:
       "The old Woodlands Town Centre food centre is gone. Its hawkers moved to Marsiling Mall in 2017, bringing seafood soup, laksa and porridge.",
     mustTry: [
@@ -2527,78 +2527,82 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   },
   {
     id: 31,
-    slug: "bishan-street-13-food-centre",
-    name: "Bishan Street 13 Food Centre",
-    address: "Blk 510 Bishan Street 13, Bishan",
-    lat: 1.3509,
-    lng: 103.8490,
-    region: "Central",
-    tag: "Local Favourite",
-    hours: "6am–10pm daily",
-    imageUrl: "/images/hawkers/bishan-st13.jpg",
+    slug: "shunfu-market-food-centre",
+    seoTitle:
+      "Shunfu Mart Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Shunfu Mart near Marymount MRT: Hakka soon kueh, fried kway teow with otah and famous muffins. Best stalls, tips and history.",
+    name:
+      "Shunfu Mart Food Centre",
+    address:
+      "Blk 320 Shunfu Road, Marymount",
+    lat: 1.351820,
+    lng: 103.837029,
+    region:
+      "Central",
+    tag:
+      "Neighbourhood Gem",
+    hours:
+      "Hours vary by stall",
+    imageUrl: "/images/food/char-kway-teow.jpg",
     description:
-      "A popular heartland centre where families queue for prata, chicken rice, and bak chor mee before school and work.",
-    mustTry: ["Roti Prata", "Chicken Rice", "Bak Chor Mee"],
+      "A quiet estate food centre above a wet market off Marymount Road, loved for Hakka kueh, char kway teow with otah and a muffin stall with a cult following.",
+    mustTry: [
+      "Taro-skin soon kueh",
+      "Abacus yam balls",
+      "Fried kway teow with otah",
+      "Chocolat N' Spice muffins",
+    ],
     famousFor:
-      "Heartland breakfast and dinner — a true Bishan neighbourhood canteen.",
-    michelinNote: "",
-    vibes: ["Bishan", "Families", "Breakfast", "Heartland"],
-    nearestMRT: "Bishan (NS/CC Line) — 8 min walk",
+      "Breakfast Hakka delicacies, old-school fried kway teow and freshly baked muffins sold from a hawker stall since 2002.",
+    michelinNote:
+      "",
+    vibes: [
+      "Neighbourhood",
+      "Breakfast spot",
+      "Old-school",
+      "Renovated",
+    ],
+    nearestMRT:
+      "Marymount (CC Line) — 8 min walk",
     tipForVisitors:
-      "Weekend mornings see the longest prata lines — patience pays off.",
+      "Come early on a weekday or weekend morning: Mei Zhen Hakka Delicacies and Chocolat N' Spice close by early afternoon, and both are shut on Mondays.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$7",
+    budgetPerPax:
+      "$3–$8",
     story:
-      "Bishan Street 13 Food Centre sits in the middle of one of Singapore's most well-planned towns — a place of wide pavements, mature trees, and the kind of thoughtful HDB architecture that the government built in the 1980s when it was trying to prove that public housing could be beautiful. The food centre is the social engine of the neighbourhood: where children eat before school, where retirees linger over kopi, where families settle in on Sunday mornings with no particular urgency. The roti prata before a football match is a Bishan institution. So is everything else here.",
+      "Tucked into the Shunfu estate off Marymount Road, Shunfu Mart is the kind of food centre that residents keep to themselves. Some of its hawkers arrived from the old Lakeview Market and Food Centre, demolished in the late 1990s. Mei Zhen Hakka Delicacies is one of them: founded by a mother and now run by three sisters, it spent 15 years at Lakeview before settling here, where it still shapes taro-skin soon kueh and abacus yam balls each morning. In 2002, an ex-Mandarin Oriental pastry chef started Chocolat N' Spice here, turning muffins into a hawker queue. Lai Heng's fried kway teow, served with otah, has kept its own line going for years. In 2022 the Bishan-Toa Payoh Town Council closed the mart for three months of renovation, bringing new floors, ceilings, lights, larger fans and refreshed toilets. The stalls returned to a brighter, airier hall that still runs on early-morning regulars.",
     vibeCheck: "Bishan's heartbeat — the place where the neighbourhood actually lives",
-    localQuote:
-      "The roti prata before the football match is a Bishan tradition. Win or lose, the prata is always excellent.",
     timeline: [
       {
-        year: "1980s",
-        event:
-          "Bishan New Town developed — one of Singapore's most thoughtfully planned HDB estates",
+        year: "2002",
+        event: "Chocolat N' Spice opens its flagship muffin stall at Shunfu Mart.",
       },
       {
-        year: "1986",
-        event:
-          "Bishan Street 13 Food Centre opens — immediately becomes the neighbourhood's primary food hub",
+        year: "2022",
+        event: "Bishan-Toa Payoh Town Council completes a three-month renovation with new flooring, ceilings, lighting and fans.",
       },
       {
-        year: "1990s",
-        event:
-          "Core stalls establish themselves — prata, chicken rice, bak chor mee become Bishan staples",
-      },
-      {
-        year: "2000s",
-        event:
-          "Second generation of stall operators takes over — the centre's character is preserved without interruption",
-      },
-      {
-        year: "2020",
-        event:
-          "Remains the most-visited food centre in Bishan — a genuine community institution",
+        year: "2025",
+        event: "Mei Zhen Hakka Delicacies marks about 25 years at the centre, run by the founder's three daughters.",
       },
     ],
     legendaryStalls: [
       {
-        name: "Bishan Roti Prata",
-        dish: "Roti Prata",
-        story:
-          "Thin, flaky prata fried on a well-seasoned cast-iron plate. The edges are crispy, the centre is soft. The curry on the side has been simmering since before the first customers arrived. Weekend mornings here require patience and reward it.",
+        name: "Mei Zhen Hakka Delicacies",
+        dish: "Soon kueh & yam balls",
+        story: "A family business started by the sisters' mother. It spent 15 years at the old Lakeview Market before moving here about 25 years ago. Taro-skin soon kueh and abacus yam balls sell out by early afternoon; closed Mondays and Tuesdays.",
       },
       {
-        name: "Street 13 Chicken Rice",
-        dish: "Hainanese Chicken Rice",
-        story:
-          "Poached chicken, fragrant rice cooked in chicken broth, three dipping sauces, and a bowl of clear soup. The kind of chicken rice that makes you understand why Singapore considers this a national dish. Reliable, precise, and never rushed.",
+        name: "Chocolat N' Spice",
+        dish: "Muffins",
+        story: "Founded by an ex-Mandarin Oriental pastry chef, it opened its first stall here in 2002 and turned muffins into a hawker queue. Chocolate chip and banana walnut are the classics. Mornings only, Tuesday to Saturday.",
       },
       {
-        name: "Bishan Bak Chor Mee",
-        dish: "Bak Chor Mee",
-        story:
-          "Minced pork noodles with vinegar, mushrooms, and lard. The dry version coats every strand in the sauce. The soup is clear and properly seasoned. A bowl complex enough to sustain a Bishan resident through an entire working morning.",
+        name: "Lai Heng Fried Kuay Teow & Cooked Food",
+        dish: "Fried kway teow",
+        story: "A Shunfu Mart mainstay with a regular queue. Char kway teow with cockles, lap cheong and fish cake; add the house-made otah, which often sells out.",
       },
     ],
   },

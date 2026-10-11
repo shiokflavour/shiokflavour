@@ -60,7 +60,7 @@ const NEA_NAME_MAP: Record<string, string> = {
   "Ghim Moh Market & Food Centre": "Ghim Moh Road Blk 20",
   "Alexandra Village Food Centre":
     "Bukit Merah Lane 1 Blk 120 (Alexandra Village Food Centre)",
-  "Shunfu Market & Food Centre": "Shunfu Road Blk 320 (Shunfu Mart)",
+  "Shunfu Mart Food Centre": "Shunfu Road Blk 320 (Shunfu Mart)",
   "Pasir Panjang Food Centre": "Pasir Panjang Food Centre",
 };
 

@@ -10,6 +10,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/hawker/bishan-street-13-food-centre",
+        destination: "/hawker/shunfu-market-food-centre",
+        permanent: true,
+      },
+      {
         source: "/hawker/woodlands-centre-market",
         destination: "/hawker/marsiling-mall-hawker-centre",
         permanent: true,
