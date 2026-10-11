@@ -1,6 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      // Renamed hawker centre pages (old names were inaccurate).
+      {
+        source: "/hawker/buona-vista-market",
+        destination: "/hawker/holland-drive-market-food-centre",
+        permanent: true,
+      },
+      {
+        source: "/hawker/woodlands-centre-market",
+        destination: "/hawker/marsiling-mall-hawker-centre",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

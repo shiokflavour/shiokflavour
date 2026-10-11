@@ -42,8 +42,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Maxwell Food Centre guide: Tian Tian Hainanese chicken rice, Fuzhou oyster cake, Zhen Zhen Cantonese porridge and Ah Tai chicken rice in Chinatown.",
     address: "1 Kadayanallur Street, Tanjong Pagar",
-    lat: 1.2803,
-    lng: 103.8452,
+    lat: 1.280551,
+    lng: 103.844459,
     region: "Central",
     tag: "Tourist Must-Visit",
     hours:
@@ -213,8 +213,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Old Airport Road Food Centre guide: Nam Sing Hokkien mee, Lao Fu Zi char kway teow, Xin Mei Xiang lor mee, Toa Payoh Rojak and Michelin Bib stalls.",
     address: "51 Old Airport Road, Geylang",
-    lat: 1.3057,
-    lng: 103.8831,
+    lat: 1.308280,
+    lng: 103.885841,
     region: "East",
     tag: "Local Favourite",
     hours:
@@ -299,8 +299,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Chinatown Complex guide: Hawker Chan soya sauce chicken, Lian He Ben Ji claypot rice, Ann Chin popiah and Xiu Ji ikan bilis yong tau foo.",
     address: "335 Smith Street, Chinatown",
-    lat: 1.2822,
-    lng: 103.8432,
+    lat: 1.282300,
+    lng: 103.842880,
     region: "Central",
     tag: "Michelin Alert",
     hours:
@@ -385,8 +385,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Newton Food Centre guide: Hup Kee oyster omelette, Heng carrot cake, Alliance Seafood BBQ seafood, Kwang Kee fish soup and Kwee Heng duck rice.",
     address: "500 Clemenceau Avenue North, Newton",
-    lat: 1.3123,
-    lng: 103.8380,
+    lat: 1.312225,
+    lng: 103.839729,
     region: "Central",
     tag: "Tourist Must-Visit",
     hours:
@@ -470,8 +470,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Tekka Centre food guide: Delhi Lahori naan and kebabs, Allauddin's Briyani, 545 Whampoa prawn noodles, Heng Gi duck rice and Indian-Muslim classics.",
     address: "665 Buffalo Road, Little India",
-    lat: 1.3066,
-    lng: 103.8518,
+    lat: 1.306190,
+    lng: 103.850670,
     region: "Central",
     tag:
       "Little India Icon",
@@ -551,77 +551,85 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 7,
     slug: "adam-road-food-centre",
     name: "Adam Road Food Centre",
-    address: "2 Adam Road, Bukit Timah",
-    lat: 1.3264,
-    lng: 103.8081,
+    seoTitle:
+      "Adam Road Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Adam Road Food Centre guide: Selera Rasa nasi lemak, Noo Cheng big prawn noodle, Bahrakath mutton soup and Warong Pak Sapari mee soto.",
+    address:
+      "2 Adam Road, Bukit Timah",
+    lat: 1.324132,
+    lng: 103.814163,
     region: "Central",
     tag: "Supper Spot",
-    hours: "7am–late night",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/adam-road.webp",
     description:
-      "A beloved neighbourhood hawker centre known for its famous nasi lemak and late night crowd. A local institution.",
-    mustTry: ["Adam Road Nasi Lemak", "Roti John", "Mee Rebus", "Teh Tarik"],
+      "A compact Bukit Timah hawker centre by the Botanic Gardens, known for nasi lemak, Malay soups and three Bib Gourmand stalls.",
+    mustTry: [
+      "Selera Rasa nasi lemak",
+      "Noo Cheng dry prawn noodle",
+      "Bahrakath mutton soup",
+      "Pak Sapari mee soto",
+    ],
     famousFor:
-      "Adam Road Nasi Lemak — consistently voted one of Singapore's best nasi lemak for decades",
+      "Selera Rasa's nasi lemak queue and a trio of Michelin Bib Gourmand stalls serving prawn noodles, mutton soup and mee soto.",
     michelinNote:
-      "Adam Road Nasi Lemak stall has received Michelin Bib Gourmand recognition",
+      "Three stalls hold Bib Gourmand in the 2026 MICHELIN Guide Singapore: Adam Rd Noo Cheng Big Prawn Noodle (#01-27), Bahrakath Mutton Soup (#01-10) and Selamat Datang Warong Pak Sapari (#01-09). The same three were also on the 2023 list.",
     vibes: ["Late night supper", "Malay food lovers", "Halal options", "Expat neighbourhood"],
-    nearestMRT: "Botanic Gardens (CC/DT Line) — 10 min walk",
+    nearestMRT:
+      "Botanic Gardens (CC/DT Line) — short walk",
     tipForVisitors:
-      "The nasi lemak stall has long queues — come before 9am or after 8pm. Great spot for late night supper after exploring the Botanic Gardens.",
-    halal: true,
+      "Several stalls close one day a week (Selera Rasa and Warong Pak Sapari on Fridays, Noo Cheng on Mondays), so check before you go. Mutton soup and prawn noodles keep going into the late evening, which makes it a good supper stop.",
+    halal: false,
     openLate: true,
-    budgetPerPax: "$4–$8",
+    budgetPerPax:
+      "$5–$12",
     story:
-      "Adam Road Food Centre is the kind of place that doesn't try to be famous and is famous anyway. Tucked between the Botanic Gardens and the expatriate enclave of Bukit Timah, it serves one of Singapore's most mixed communities — Malay families, expats, students from the nearby universities, and late-night supper hunters from across the island. The nasi lemak stall that operates from the early hours has been a Michelin Bib Gourmand recipient and a weekend queue institution. The centre's late-night atmosphere — warm, buzzing, cross-cultural — captures something essential about Singapore's food culture.",
+      "Adam Road Food Centre opened in September 1974, built to rehouse hawkers whose old centre between Bukit Timah and Dunearn roads was cleared for the Adam Road flyover. With about 30 stalls it is small by Singapore standards, but its menu is unusually concentrated. Malay and Indian-Muslim cooking sets the tone. Selera Rasa's nasi lemak, with its sets named after poker hands, draws the morning queue. Warong Pak Sapari ladles out mee soto and mee rebus. Bahrakath has been making the same mutton soup recipe since 1973. Chinese stalls hold their own as well, led by Noo Cheng's big prawn noodles, best eaten dry with the soup on the side. The centre has been upgraded several times. Most recently it closed for three months of renovation and reopened on 1 January 2024. What hasn't changed is the mix of people it feeds, from neighbourhood regulars to visitors walking over from the Botanic Gardens.",
     vibeCheck: "The supper spot that belongs to everyone and is owned by no one",
-    localQuote:
-      "The nasi lemak queue starts forming before most people have woken up. It tells you everything you need to know.",
     timeline: [
       {
-        year: "1960s",
-        event:
-          "Hawker stalls begin operating along Adam Road serving the local community",
+        year: "1974",
+        event: "Opens on 28 September, replacing an older hawker centre cleared for the Adam Road flyover",
       },
       {
-        year: "1975",
-        event:
-          "Formal hawker centre established to organise the growing number of stalls",
-      },
-      {
-        year: "1980s",
-        event:
-          "Nasi lemak stall establishes itself as the centre's signature — queues begin",
+        year: "2001",
+        event: "Among the first centres picked for the national Hawker Centres Upgrading Programme",
       },
       {
         year: "2016",
-        event:
-          "Adam Road Nasi Lemak receives Michelin Bib Gourmand recognition",
+        event: "Completes a two-month renovation",
       },
       {
-        year: "2020",
-        event:
-          "Remains one of Singapore's best late-night supper destinations",
+        year: "2023",
+        event: "Three stalls named Bib Gourmand; centre closes 1 Oct–31 Dec for renovation",
+      },
+      {
+        year: "2024",
+        event: "Reopens on 1 January after the three-month renovation",
       },
     ],
     legendaryStalls: [
       {
-        name: "Adam Road Nasi Lemak",
-        dish: "Nasi Lemak",
-        story:
-          "Michelin Bib Gourmand. The coconut rice is cooked in pandan and served with sambal, ikan bilis, egg, and cucumber. Opens at 7am and the queue begins immediately.",
+        name: "Selera Rasa Nasi Lemak",
+        dish: "Nasi lemak",
+        story: "The National Heritage Board calls it arguably the centre's most famous stall. The sets are named after poker hands. Go for the Royal Flush if you want everything. Closed Fridays.",
       },
       {
-        name: "Nasi Padang Minang",
-        dish: "Nasi Padang",
-        story:
-          "Indonesian-Malay rice with a spread of curries and sides. The rendang is slow-cooked and the curries are freshly made each morning. A proper Padang spread rarely found this good.",
+        name: "Adam Rd Noo Cheng Big Prawn Noodle",
+        dish: "Big prawn noodle",
+        story: "Bib Gourmand. Michelin's inspectors recommend it dry, where a sweet-spicy sauce coats bouncy prawns, with the prawn broth on the side. You can pick egg noodles, bee hoon or kway teow. Closed Mondays.",
       },
       {
-        name: "Roti John Station",
-        dish: "Roti John",
-        story:
-          "A Malay-Singapore original — minced meat and egg fried into a French loaf. Best eaten fresh off the griddle with sambal and mayonnaise at midnight.",
+        name: "Bahrakath Mutton Soup",
+        dish: "Mutton soup",
+        story: "Bib Gourmand. It has used the same recipe since 1973 for a dense, herbal broth. Order the leg or another cut, and get bread to mop up the soup.",
+      },
+      {
+        name: "Selamat Datang Warong Pak Sapari",
+        dish: "Mee soto & mee rebus",
+        story: "Bib Gourmand. This Malay stall has been going for more than five decades and is known for mee soto and thick mee rebus gravy. Michelin also rates its tendon and tripe soups.",
       },
     ],
   },
@@ -634,8 +642,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Next to Bedok MRT: Michelin Bib Gourmand chwee kueh, budget nasi lemak, Thai food, lor mee and mee rebus. The best stalls at Bedok Interchange Hawker Centre.",
     address: "208 New Upper Changi Road, Bedok",
-    lat: 1.3243,
-    lng: 103.9301,
+    lat: 1.324629,
+    lng: 103.930477,
     region: "East",
     tag: "Local Favourite",
     hours: "6am–11pm daily",
@@ -705,82 +713,85 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 9,
     slug: "bedok-85-fengshan-market",
     name: "Bedok 85 Fengshan Market",
-    address: "85 Bedok North Street 4, Bedok",
-    lat: 1.3261,
-    lng: 103.9295,
+    seoTitle:
+      "Bedok 85 Fengshan Food Centre: Best Stalls & Supper Picks | ShiokFlavour",
+    seoDescription:
+      "Bedok 85 (Fengshan Food Centre) supper guide: Xing Ji and Seng Hiang bak chor mee, Shi Wei Da satay bee hoon, Chai Chee pork porridge and BBQ stingray.",
+    address:
+      "Blk 85 Bedok North Street 4, Bedok",
+    lat: 1.332060,
+    lng: 103.938812,
     region: "East",
     tag: "Supper Spot",
-    hours: "24 hours (most stalls till late)",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/bedok-85.jpg",
     description:
-      "The ultimate supper destination for East Singapore. Famously packed late at night with locals fuelling up after a night out.",
+      "East-side supper institution at Blk 85 Bedok North St 4, famed for soupy bak chor mee, satay bee hoon, pork porridge and BBQ seafood late into the night.",
     mustTry: [
-      "Barbeque Chicken Wings",
-      "Carrot Cake",
-      "Hokkien Mee",
-      "Satay Bee Hoon",
+      "Xing Ji bak chor mee soup",
+      "Shi Wei Da satay bee hoon",
+      "Chai Chee pork porridge",
+      "Hotplate BBQ stingray",
     ],
     famousFor:
-      "BBQ chicken wings — the queue stretches around the block every night. A rite of passage for Singapore supper culture.",
+      "Late-night soupy bak chor mee, with rival stalls Xing Ji and Seng Hiang side by side, plus BBQ seafood and porridge that draw supper crowds from across the island.",
     michelinNote:
-      "BBQ chicken wing stall has received Michelin Bib Gourmand recognition",
+      "Shi Wei Da's satay bee hoon was named in the MICHELIN Guide Singapore 2018 Bib Gourmand selection. It is not on the 2025 Bib Gourmand list, and no stall here is among the 2026 newcomers.",
     vibes: ["Supper crowd", "Night owls", "After clubbing", "Foodies"],
-    nearestMRT: "Bedok (EW Line) — 10 min walk or short taxi",
+    nearestMRT:
+      "Bedok Reservoir (DT Line) — about 10 min walk",
     tipForVisitors:
-      "Take a Grab after 10pm and join the locals. The chicken wings are best ordered the moment you arrive as queues get very long.",
+      "The wet market is busiest in the morning and the food centre comes alive at dusk, so time your visit to what you want to eat. Shi Wei Da opens mid-afternoon and sells out, so go early for satay bee hoon.",
     halal: false,
     openLate: true,
-    budgetPerPax: "$5–$10",
+    budgetPerPax:
+      "$5–$15",
     story:
-      "Bedok 85 — known to everyone in East Singapore simply as '85' — is the definitive Singapore supper centre. What started as a neighbourhood market has become a midnight pilgrimage site. The BBQ chicken wings stall has queues that stretch around the block every night from 10pm onwards. The centre operates on a different clock to the rest of Singapore: quiet in the afternoon, buzzing by 9pm, packed past midnight. It represents a side of Singapore food culture that tourists rarely see — the late-night, beer-in-hand, sharing-plates supper culture that locals consider the best part of any night out.",
+      "Everyone calls it Bedok 85, after the block number at 85 Bedok North Street 4. The estate took the name Fengshan in the early 1980s, when villagers from Chang Mao Hng were resettled here. Fengshan is the Hanyu Pinyin form of Hong San, their village temple. The two bak chor mee stalls that define the place, Xing Ji Rou Cuo Mian and Seng Hiang, both moved into the market in 1977 and still trade next door to each other, ladling soupy minced-pork noodles under bright lights. The wet market belongs to the morning. After dark the BBQ stingray, porridge and oyster omelette crowd takes over. In 2018 Shi Wei Da's hand-made satay bee hoon, with peanuts roasted and ground from scratch, earned a Bib Gourmand. When the stall closed in April 2024, regulars mourned, and it was back at the centre by January 2025.",
     vibeCheck: "Singapore's midnight kitchen — where the night always ends well",
-    localQuote:
-      "The chicken wings are worth a 45-minute queue. Every single person in that queue knows it too.",
     timeline: [
       {
-        year: "1970s",
-        event:
-          "Fengshan Market established serving the growing Bedok North community",
+        year: "1977",
+        event: "Xing Ji Rou Cuo Mian and Seng Hiang Bak Chor Mee move into the Blk 85 market",
       },
       {
-        year: "1985",
-        event:
-          "Centre earns its '85' nickname from its address — becomes a local institution",
+        year: "1980s",
+        event: "Resettled Chang Mao Hng villagers arrive and the Bedok North estate is renamed Fengshan, after the Hong San temple",
       },
       {
-        year: "1990s",
-        event:
-          "BBQ chicken wings stall establishes the midnight queue tradition",
-      },
-      {
-        year: "2016",
-        event:
-          "BBQ chicken wing stall receives Michelin Bib Gourmand recognition",
+        year: "2018",
+        event: "Shi Wei Da's satay bee hoon named in the MICHELIN Guide Singapore Bib Gourmand selection",
       },
       {
         year: "2020",
-        event:
-          "Remains Singapore's most famous supper destination among locals",
+        event: "Closed for renovation from 10 February; reopened 17 June after Covid-19 delays",
+      },
+      {
+        year: "2025",
+        event: "Shi Wei Da returns to Bedok 85 in January after closing in April 2024",
       },
     ],
     legendaryStalls: [
       {
-        name: "Bedok 85 BBQ Chicken Wings",
-        dish: "BBQ Chicken Wings",
-        story:
-          "Michelin Bib Gourmand. Marinated in a secret blend and grilled over charcoal until the skin is lacquered and slightly charred. Queue starts at 9pm. Don't come after 11pm and expect short lines.",
+        name: "Xing Ji Rou Cuo Mian",
+        dish: "Soup bak chor mee",
+        story: "At the market since 1977 (#01-07), selling only the soup version: a cloudy, meaty pork broth, springy mee kia and crisp lard. Seth Lui's 2026 head-to-head called it the narrow winner over its neighbour.",
       },
       {
-        name: "Carrot Cake Master",
-        dish: "Carrot Cake",
-        story:
-          "Both white and black versions done with serious wok technique. The black version is stickier and sweeter from the dark sauce. A dish that tastes completely different from what the name suggests.",
+        name: "Seng Hiang Bak Chor Mee",
+        dish: "Bak chor mee (dry or soup)",
+        story: "Next door at #01-08 and also here since 1977. It does both dry and soup versions, with a peppery broth lifted by Chinese celery. Order one from each stall and decide for yourself.",
       },
       {
-        name: "Satay Bee Hoon 85",
-        dish: "Satay Bee Hoon",
-        story:
-          "Thin rice noodles in a rich peanut-based gravy with satay, cockles, and vegetables. A dish unique to Singapore — comforting, peanutty, and unlike anything else.",
+        name: "Shi Wei Da",
+        dish: "Satay bee hoon",
+        story: "Mr Ng Kim Song's 2018 Bib Gourmand stall makes everything from scratch, including roasting and grinding the peanuts for its sweet-spicy gravy. Reopened at #01-69 in January 2025 after closing in April 2024. Opens mid-afternoon and sells out.",
+      },
+      {
+        name: "Chai Chee Pork Porridge",
+        dish: "Pork porridge",
+        story: "Silky Cantonese congee from two stalls here: morning service and an evening stall (#01-23) open till midnight, closed Mondays. Get the mixed porridge with century egg and cuttlefish, and dunk the you tiao.",
       },
     ],
   },
@@ -788,71 +799,81 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 10,
     slug: "tampines-round-market",
     name: "Tampines Round Market",
-    address: "137 Tampines Street 11, Tampines",
-    lat: 1.3530,
-    lng: 103.9446,
+    seoTitle:
+      "Tampines Round Market: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Tampines Round Market guide: Bib Gourmand Rajarani Thosai, Yi Pin Wei duck kway chap, 137 lor mee, Xing Ji wanton mee and Sarawak kolo mee.",
+    address:
+      "Blk 137 Tampines Street 11, Tampines",
+    lat: 1.345596,
+    lng: 103.944595,
     region: "East",
     tag: "Budget Eats",
-    hours: "6am–11pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/tampines-round.jpg",
     description:
-      "A well-loved neighbourhood market and food centre in Tampines — affordable, no-frills and packed with regulars every morning.",
-    mustTry: ["Laksa", "Wanton Mee", "Curry Puff", "Kopi"],
+      "Tampines' circular 1983 market and breakfast hub, home to two 2026 Bib Gourmand stalls plus lor mee, kolo mee and wanton mee that sell out early.",
+    mustTry: [
+      "Rajarani Thosai",
+      "Yi Pin Wei Duck Kway Chap",
+      "137 Lor Mee",
+      "Xing Ji Wanton Mee",
+    ],
     famousFor:
-      "Affordable and authentic neighbourhood hawker food away from tourist areas. Real local experience.",
-    michelinNote: "",
+      "A morning hawker breakfast run in a round 1983 market, now home to two 2026 MICHELIN Bib Gourmand stalls.",
+    michelinNote:
+      "MICHELIN Guide Singapore 2026: Rajarani Thosai (#01-33) and Yi Pin Wei Braised Duck Kway Chap (#01-40) both newly awarded the Bib Gourmand.",
     vibes: ["Budget dining", "Tampines locals", "Families", "Morning breakfast"],
-    nearestMRT: "Tampines (EW/DT Line) — 10 min walk",
+    nearestMRT:
+      "Tampines West (DT Line) — short walk",
     tipForVisitors:
-      "Great spot to experience a real neighbourhood hawker centre away from tourist spots. Very affordable.",
+      "Come early: most stalls open around 6–7am and many sell out or close by early afternoon. Check rest days first, as several stalls close on Mondays, Tuesdays or Wednesdays.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$6",
+    budgetPerPax:
+      "$4–$8",
     story:
-      "Tampines Round Market gets its name from its distinctive circular architecture — one of the few curved hawker centres in Singapore. Built to serve the rapidly growing Tampines New Town in the 1980s, it has been feeding generations of East-siders who grew up in the surrounding HDB blocks. The centre has no Michelin stars and no celebrity visitors. What it has is something rarer: a community of regulars who have been eating the same stalls for 30 years, and stalls that have been cooking for those same regulars just as long. It's what hawker culture actually is when nobody is watching.",
+      "Tampines Round Market & Food Centre opened in 1983, and the name locals use comes from its circular shape. It arrived early in the life of Tampines new town. According to Roots, 72 stallholders moved here together after the market and hawker centre at Block 176 Toa Payoh Lorong 2 was demolished for an MRT line, at a time when HDB expected it to be among the last traditional wet markets it would build. It is above all a breakfast place. Around the ring of 45 cooked-food stalls, with a 99-stall wet market alongside, regulars queue for lor mee, Sarawak-style kolo mee and wanton mee that often sell out before noon. In 2026 the MICHELIN Guide gave Bib Gourmands to two stalls here: Rajarani Thosai, which makes its thosai and appam from scratch, and Yi Pin Wei Braised Duck Kway Chap. Arrive early. By early afternoon much of the centre has wound down.",
     vibeCheck: "No stars, no tourists, all heart",
-    localQuote:
-      "My family has been eating here since I was a child. Some places should simply never change.",
     timeline: [
       {
-        year: "1980s",
-        event:
-          "Tampines New Town develops rapidly — Round Market built to serve new residents",
+        year: "1983",
+        event: "Tampines Round Market & Food Centre opens; 72 stallholders relocate here from Blk 176 Toa Payoh Lorong 2, demolished for the MRT",
       },
       {
-        year: "1990s",
-        event:
-          "Centre establishes its regular community — the same families eat here weekly",
+        year: "2008",
+        event: "Voted a favourite hawker centre by Shin Min Daily News readers (again in 2009)",
       },
       {
-        year: "2000s",
-        event:
-          "Distinctive circular architecture becomes a local landmark and informal meeting point",
+        year: "2019",
+        event: "Reopens on 7 July after a two-month revamp with better ventilation, tray-return racks and refurbished toilets",
       },
       {
-        year: "2020",
-        event:
-          "Remains one of Tampines' primary community food hubs despite newer competition",
+        year: "2026",
+        event: "Rajarani Thosai and Yi Pin Wei Braised Duck Kway Chap named new MICHELIN Bib Gourmand entries",
       },
     ],
     legendaryStalls: [
       {
-        name: "Tampines Laksa",
-        dish: "Laksa",
-        story:
-          "A neighbourhood laksa that locals will stack against any famous stall. The broth is rich and properly spiced. No tourists, no queue hype — just consistently excellent laksa.",
+        name: "Rajarani Thosai",
+        dish: "Thosai and appam",
+        story: "2026 Bib Gourmand. Thosai and appam made from scratch, with nearly 20 thosai fillings. Try the masala egg onion thosai and a coconut appam, with the dhal and chutneys. Cash only; closed Wednesdays.",
       },
       {
-        name: "Ah Hock Wanton Mee",
-        dish: "Wanton Mee",
-        story:
-          "Springy egg noodles with char siew, wanton dumplings, and a sauce that coats every strand. The kind of stall with a sign that hasn't changed since 1988.",
+        name: "Xing Ji Wanton Mee",
+        dish: "Wanton mee",
+        story: "A long-running family wanton mee stall (#01-35) that often sells out before its listed closing time. Order wanton noodles or the shredded chicken noodles, and come early. Closed Tuesdays and Wednesdays.",
       },
       {
-        name: "Tampines Kopi Corner",
-        dish: "Kopi and Kaya Toast",
-        story:
-          "Old-school kopitiam coffee made with a sock filter. The kaya is house-made and slightly eggy. The kind of breakfast that makes a neighbourhood feel like home.",
+        name: "Yummy Sarawak Kolo Mee",
+        dish: "Sarawak kolo mee",
+        story: "Run by Sunny Lee and his wife Veronica at #01-45. Get the Sarawak Kuching kolo mee set or the spare ribs noodle. One of the centre's busiest breakfast queues, especially on weekends.",
+      },
+      {
+        name: "137 Lor Mee Prawn Mee",
+        dish: "Lor mee",
+        story: "A queue magnet at #01-09 for thick, gravy-laden lor mee topped with fried fish. It sells out early, so arrive at breakfast time. Closed Mondays.",
       },
     ],
   },
@@ -860,77 +881,81 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 11,
     slug: "geylang-serai-market",
     name: "Geylang Serai Market",
-    address: "1 Geylang Serai, Geylang",
-    lat: 1.3143,
-    lng: 103.8990,
+    seoTitle:
+      "Geylang Serai Market Food Centre: Best Malay Stalls | ShiokFlavour",
+    seoDescription:
+      "Where to eat at Geylang Serai Market: Sinar Pagi nasi padang, Original Alhambra satay, Hajjah Mona nasi padang and Hamid's family briyani.",
+    address:
+      "1 Geylang Serai, Geylang",
+    lat: 1.316888,
+    lng: 103.897407,
     region: "East",
     tag: "Halal Haven",
-    hours: "6am–10pm (24hrs during Ramadan)",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/geylang-serai.jpg",
     description:
-      "The cultural heart of Malay Singapore. A vibrant wet market and food centre that comes alive especially during Ramadan.",
-    mustTry: ["Nasi Padang", "Murtabak", "Kueh Pie Tee", "Bandung", "Putu Piring"],
+      "Singapore's Malay food landmark since 1964, with nasi padang, charcoal satay and family briyani upstairs above a busy wet market.",
+    mustTry: [
+      "Sinar Pagi Nasi Padang",
+      "Alhambra Satay",
+      "Hajjah Mona Rawon",
+      "Geylang Briyani Kambing",
+    ],
     famousFor:
-      "Best Malay and Muslim food in Singapore. During Ramadan the bazaar outside is unmissable.",
+      "Malay and Indonesian-Malay hawker food, especially Kapau-style nasi padang, charcoal-grilled satay and briyani, in the cultural centre of Geylang Serai.",
     michelinNote:
-      "Featured in Michelin Guide as essential Singapore food culture experience",
+      "",
     vibes: ["Muslim-friendly", "Malay culture", "Ramadan bazaar", "Cultural immersion"],
-    nearestMRT: "Aljunied (EW Line) — 10 min walk",
+    nearestMRT:
+      "Paya Lebar (EW/CC Line) — short walk",
     tipForVisitors:
-      "Completely halal. Visit during Ramadan evenings for the incredible bazaar outside. Try the putu piring — traditional Malay steamed rice cakes.",
-    halal: true,
+      "Go for breakfast or lunch: several of the best-known stalls close mid-afternoon and popular nasi padang dishes can sell out by lunchtime. The food centre is on the second floor, above the wet market.",
+    halal: false,
     openLate: true,
-    budgetPerPax: "$4–$9",
+    budgetPerPax:
+      "$5–$10",
     story:
-      "Geylang Serai is the cultural heartland of Malay Singapore. The market has stood here since the 1950s when the area was the centre of the Malay kampung community. The food tells that story directly — nasi padang, murtabak, putu piring, kueh, bandung — a full catalogue of Malay and Indonesian culinary heritage kept alive by stalls that pass recipes between generations. During Ramadan, the bazaar outside becomes one of Singapore's most spectacular food events, drawing hundreds of thousands over the fasting month. Everything sold here is halal and the welcome is universal.",
+      "Geylang Serai Market has anchored the Malay heart of Singapore's east since 1964, when it was built to move hawkers off crowded roadsides and was opened by then-Prime Minister Lee Kuan Yew. The building standing today comes from a rebuild completed in 2009, its design drawn from traditional Malay architecture, with the wet market below and the food centre upstairs. Upstairs is where the neighbourhood's food memory lives. Sinar Pagi's founder, Haji Nasir Kiram, came from Bukittinggi in West Sumatra and sold nasi kapau from a makeshift stall in Geylang Serai before moving into the market; his Kapau-style spread still draws a lunchtime crowd. A few stalls along, Original Alhambra Satay grills its skewers over charcoal, the last surviving member of the old Satay Club that once filled the Esplanade with smoke. Family-run briyani and nasi padang stalls fill in the rest. Come hungry and come early: many of the most popular dishes are gone by early afternoon.",
     vibeCheck: "The heartland of Malay Singapore — food as cultural memory",
-    localQuote:
-      "The murtabak here is the real thing — generous, fragrant, and made by people who have been perfecting it for generations.",
     timeline: [
       {
-        year: "1950s",
-        event:
-          "Geylang Serai established as centre of Singapore's Malay kampung community",
-      },
-      {
         year: "1964",
-        event:
-          "Geylang Serai Market formalised — becomes the cultural anchor of the precinct",
+        event: "Geylang Serai Market built to give roadside hawkers a proper home; officially opened by Prime Minister Lee Kuan Yew",
       },
       {
-        year: "1990s",
-        event:
-          "Ramadan bazaar tradition grows into Singapore's largest annual food event",
+        year: "2009",
+        event: "Market rebuilt with an architectural design inspired by traditional Malay houses",
       },
       {
-        year: "2011",
-        event:
-          "Market conserved and upgraded while preserving its Malay cultural character",
+        year: "2014",
+        event: "Market's 50th anniversary marked with a speech by PM Lee Hsien Loong and a commemorative book",
       },
       {
-        year: "2020",
-        event:
-          "UNESCO hawker inscription specifically references Geylang Serai as exemplary",
+        year: "2024",
+        event: "Closed 29 July to 31 October for repairs, redecoration and the Hawker Centres Transformation Programme; reopened 1 November",
       },
     ],
     legendaryStalls: [
       {
-        name: "Hjh Maimunah",
-        dish: "Nasi Padang",
-        story:
-          "One of Singapore's most beloved Malay restaurants with roots at Geylang Serai. The beef rendang is slow-cooked for hours and the spread of curries changes daily.",
+        name: "Sinar Pagi Nasi Padang",
+        dish: "Kapau-style nasi padang",
+        story: "Founded by Bukittinggi-born Haji Nasir Kiram, who moved from a makeshift stall into the market. Order the ayam sambal with sambal goreng and sayur lodeh on the side, and arrive before it sells out at lunch.",
       },
       {
-        name: "Ramadan Murtabak Stalls",
-        dish: "Murtabak",
-        story:
-          "During Ramadan, the bazaar murtabak stalls draw queues stretching the length of the market. Thick pancakes stuffed with mutton or chicken, egg, and onion — a community ritual.",
+        name: "Original Alhambra Satay",
+        dish: "Charcoal-grilled satay",
+        story: "The last surviving stall from the old Satay Club, now run by the founder's son. Beef, chicken (thigh meat) and mutton skewers are handmade and grilled over charcoal, served with a peanut sauce made with dried shrimp.",
       },
       {
-        name: "Putu Piring",
-        dish: "Putu Piring",
-        story:
-          "Steamed rice cakes filled with palm sugar and dusted with coconut. Made fresh in small batches throughout the day. One of the most beautiful traditional Malay sweets still made by hand.",
+        name: "Hajjah Mona Nasi Padang",
+        dish: "Nasi padang, rawon",
+        story: "A family stall named after the founder, Razak Ismail's mother. Known for East Java-style rawon in buah keluak gravy, asam pedas, beef rendang and limpa rendang. Expect a queue.",
+      },
+      {
+        name: "Geylang (Hamid's) Briyani Stall",
+        dish: "Mutton briyani",
+        story: "A three-generation family stall selling nasi briyani since 1964. Get the briyani kambing for tender, non-gamey mutton, or the slow-cooked chicken. Closed Mondays.",
       },
     ],
   },
@@ -943,8 +968,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Amoy Street Food Centre guide: A Noodle Story ramen, Han Kee fish soup, J2 curry puffs, Hong Kee beef noodles and more Michelin Bib Gourmand stalls.",
     address: "7 Maxwell Road, Tanjong Pagar",
-    lat: 1.2799,
-    lng: 103.8463,
+    lat: 1.279129,
+    lng: 103.846985,
     region: "Central",
     tag: "Office Favourite",
     hours:
@@ -1025,8 +1050,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Tiong Bahru Market food guide: Jian Bo chwee kueh, Hong Heng Hokkien mee, boneless chicken rice, Koh Brother pig's organ soup and Lor Mee 178.",
     address: "30 Seng Poh Road, Tiong Bahru",
-    lat: 1.2865,
-    lng: 103.8268,
+    lat: 1.284683,
+    lng: 103.832428,
     region: "Central",
     tag: "Hipster Favourite",
     hours:
@@ -1106,153 +1131,168 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 14,
     slug: "abc-brickworks-market",
     name: "ABC Brickworks Market",
-    address: "6 Jalan Bukit Merah, Bukit Merah",
-    lat: 1.2896,
-    lng: 103.8200,
+    seoTitle:
+      "ABC Brickworks Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "ABC Brickworks Food Centre guide: Bib Gourmand Ah Er Soup and Jason Penang Cuisine assam laksa, Jin Jin Dessert's Power Chendol, Fatty Cheong char siew.",
+    address:
+      "Blk 6 Jalan Bukit Merah, Bukit Merah",
+    lat: 1.287010,
+    lng: 103.808189,
     region: "Central",
     tag: "Local Favourite",
-    hours: "6am–10pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/abc-brickworks.jpg",
     description:
-      "A hidden gem loved by locals — away from the tourist trail but packed with excellent food at very reasonable prices.",
-    mustTry: ["Satay", "BBQ Chicken Wings", "Carrot Cake", "Popiah"],
+      "Bukit Merah centre opened in 1974, with two 2026 Bib Gourmands (Ah Er Soup, Jason Penang Cuisine) and a famously over-the-top Jin Jin dessert stall.",
+    mustTry: [
+      "Jason Penang assam laksa",
+      "Ah Er Soup herbal soups",
+      "Jin Jin Power Chendol",
+      "Fatty Cheong char siew rice",
+    ],
     famousFor:
-      "One of the best satay stalls in Singapore — locals drive across the island just for this.",
-    michelinNote: "",
+      "Two 2026 Bib Gourmand stalls: Ah Er Soup's slow-boiled Cantonese soups and Jason Penang Cuisine's mint-scented assam laksa.",
+    michelinNote:
+      "Ah Er Soup (listed by Michelin as Ar Er Soup, #01-141) and Jason Penang Cuisine (#01-112) hold Bib Gourmands in the 2026 MICHELIN Guide Singapore. Ah Er Soup first got the award in 2017.",
     vibes: ["Off the beaten path", "Local families", "Authentic experience", "Budget dining"],
-    nearestMRT: "Redhill (EW Line) — 10 min walk",
+    nearestMRT:
+      "Redhill or Tiong Bahru (EW Line) — longer walk",
     tipForVisitors:
-      "Worth the trek away from the tourist areas. This is where locals actually eat. Very affordable and no tourists.",
+      "Many of the best stalls split into lunch and dinner sessions. Ah Er Soup and Jason Penang Cuisine both break between about 2pm and 5pm, so plan around their hours. Yuan Yuan Claypot Rice opens only for dinner.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$4–$8",
+    budgetPerPax:
+      "$4–$10",
     story:
-      "ABC Brickworks takes its name from the brick kilns that once operated along the Alexandra Canal — a reminder that this part of Singapore was industrial long before it was residential. The hawker centre grew organically from the surrounding Bukit Merah community, a neighbourhood of old HDB blocks and longtime residents who have strong opinions about where to eat and even stronger opinions about where not to. The satay stall here has built a following that crosses postal codes. No marketing. No Michelin. Just charcoal, skewers, and the kind of queue that forms because people genuinely cannot stay away.",
+      "ABC Brickworks has fed Bukit Merah since 1974. It is one of the older hawker centres in the city, with close to a hundred stalls under one roof. The name is usually traced to the Archipelago Brewery Company, whose brewery opened on Alexandra Road in 1933, though some accounts point to a brickworks instead. It has had more than one refresh. A 2020 renovation ran a month longer than planned because of the circuit breaker, and in 2026 the centre closed for two months for repairs and redecoration, returning with new flooring, brighter lighting and orange ceiling beams. The food draws more than the setting. Ah Er Soup ladles out MSG-free slow-boiled soups with pumpkin rice. Jason Penang Cuisine is run by Jason Khaw, who spent 14 years as resident chef to the British High Commissioner, and makes an assam laksa finished with fresh mint. Both are 2026 Bib Gourmands. Jin Jin's towering ices round off the meal.",
     vibeCheck: "Off the tourist map, deep on the locals' radar",
-    localQuote:
-      "Very few tourists know about this place. That is precisely what keeps the satay so good.",
     timeline: [
       {
-        year: "1960s",
-        event:
-          "Brick kilns operate along Alexandra Canal — the area's industrial identity established",
+        year: "1974",
+        event: "ABC Brickworks Food Centre opens on Jalan Bukit Merah.",
       },
       {
-        year: "1975",
-        event:
-          "Bukit Merah estate develops rapidly — hawker stalls emerge to feed the growing community",
-      },
-      {
-        year: "1985",
-        event:
-          "ABC Brickworks Market formalised — satay stall begins building its loyal following",
-      },
-      {
-        year: "2000s",
-        event:
-          "Word spreads across Singapore — regulars drive from across the island for the satay",
+        year: "2017",
+        event: "Ah Er Soup receives a Michelin Bib Gourmand.",
       },
       {
         year: "2020",
-        event:
-          "Remains one of the most respected off-the-beaten-path hawker centres in Central Singapore",
+        event: "The centre closes from mid-March for repair and renovation works and reopens on 16 June, a month late because of the circuit breaker.",
+      },
+      {
+        year: "2026",
+        event: "The centre closes from 9 April to 7 June for repairs and redecoration, and reopens with new flooring, lighting and paint.",
+      },
+      {
+        year: "2026",
+        event: "Ah Er Soup and Jason Penang Cuisine are named Bib Gourmands in the 2026 MICHELIN Guide Singapore.",
       },
     ],
     legendaryStalls: [
       {
-        name: "ABC Satay",
-        dish: "Charcoal Satay",
-        story:
-          "The stall that built the centre's reputation. Beef, chicken, and mutton skewers over real charcoal, peanut sauce made fresh daily. No Michelin star, no Instagram fame — just the queue that forms every evening without fail.",
+        name: "Ah Er Soup",
+        dish: "Slow-boiled soups",
+        story: "A 2026 Bib Gourmand serving MSG-free Cantonese soups. Try the ginseng black chicken soup or Buddha Jumps Over The Wall, with pumpkin rice. It gets crowded, so arrive early.",
       },
       {
-        name: "Brickworks BBQ Chicken Wings",
-        dish: "BBQ Chicken Wings",
-        story:
-          "Marinated in a dark soy and spice blend, grilled until the edges catch and caramelise. The kind of wings that make people order doubles before they've finished the first round.",
+        name: "Jason Penang Cuisine",
+        dish: "Penang assam laksa",
+        story: "A 2026 Bib Gourmand run by Jason Khaw, a former resident chef to the British High Commissioner. Order the tangy assam laksa with fresh mint, or the pork rib and prawn noodles.",
       },
       {
-        name: "ABC Carrot Cake",
-        dish: "Carrot Cake",
-        story:
-          "Both white and black versions, fried individually to order. The black version is stickier, richer, and the one regulars always choose. A neighbourhood benchmark that holds its own against any famous stall.",
+        name: "Jin Jin Hot/Cold Dessert",
+        dish: "Power Chendol",
+        story: "The dessert stop at ABC. Get the Power Chendol or the 'Gangster Ice' (Liu Mang Bing), a shaved-ice mountain topped with mango and durian. It opens from lunch into the evening.",
+      },
+      {
+        name: "Fatty Cheong",
+        dish: "Char siew rice",
+        story: "Known for charcoal-roasted char siew marinated overnight. Ask for the fattier 'bu jian tian' cut, or get a combination plate with roast pork.",
       },
     ],
   },
   {
     id: 15,
-    slug: "buona-vista-market",
-    name: "Buona Vista Market",
-    address: "43 Holland Drive, Holland Village",
-    lat: 1.3071,
-    lng: 103.7900,
+    slug: "holland-drive-market-food-centre",
+    seoTitle:
+      "Holland Drive Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Holland Drive Food Centre near Buona Vista: Bib Gourmand Ru Ji Kitchen fishball noodles, New Lucky charcoal claypot rice, kway chap and nasi padang.",
+    name:
+      "Holland Drive Market & Food Centre",
+    address:
+      "Blk 44 Holland Drive, Buona Vista",
+    lat: 1.308190,
+    lng: 103.792839,
     region: "West",
     tag: "Budget Eats",
-    hours: "6am–9pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/buona-vista.webp",
     description:
-      "A neighbourhood market near Holland Village loved by students, expats and families for affordable, quality hawker food.",
-    mustTry: ["Prawn Noodles", "Wanton Mee", "Nasi Lemak", "Kopi"],
+      "Two-storey Buona Vista market with two 2026 Bib Gourmand stalls upstairs: Ru Ji Kitchen's fishball noodles and New Lucky's charcoal claypot rice.",
+    mustTry: [
+      "Ru Ji Kitchen fishball noodles",
+      "New Lucky claypot rice",
+      "Blanco Court Kueh Chap",
+      "Shima's Kitchen nasi padang",
+    ],
     famousFor:
-      "Affordable food steps away from trendy Holland Village — locals eat here before hitting the cafes.",
-    michelinNote: "",
+      "Two 2026 Michelin Bib Gourmand stalls: Ru Ji Kitchen's handmade fishball noodles and New Lucky's charcoal-fired claypot rice.",
+    michelinNote:
+      "Ru Ji Kitchen (#02-28/29) and New Lucky Claypot Rice (#02-19) both hold Bib Gourmands in the 2026 MICHELIN Guide Singapore. New Lucky first got the award in 2017; Ru Ji Kitchen was promoted from Michelin Selected to Bib Gourmand in 2024.",
     vibes: ["Students", "Expats", "Families", "Pre-Holland Village stop"],
-    nearestMRT: "Buona Vista (EW/CC Line) — 10 min walk",
+    nearestMRT:
+      "Buona Vista (EW/CC Line) — short walk",
     tipForVisitors:
-      "Great budget option near Holland Village. Eat here first then explore the Holland Village cafes and bars.",
+      "The hawker stalls are upstairs, above the wet market. New Lucky's claypot rice is cooked to order over charcoal, and one pot feeds two, so Michelin recommends calling ahead to pre-order and avoid a long wait.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$6",
+    budgetPerPax:
+      "$4–$8",
     story:
-      "Buona Vista sits in one of Singapore's most unlikely food pockets — tucked between the polished cafes of Holland Village and the sprawling research campuses of one-north. The market serves a community that is part old-guard neighbourhood, part international academic, and entirely unpretentious. Students from INSEAD and NUS eat alongside the retirees who have lived in the surrounding flats since the 1970s. The prices reflect none of the Holland Village premium that exists just minutes away. That is the entire point.",
+      "Holland Drive Market & Food Centre stacks a wet market under a floor of cooked-food stalls, a short walk from Buona Vista MRT and next to Holland Village. Upstairs are two of the 2026 MICHELIN Guide's Bib Gourmands. New Lucky Claypot Rice goes back to 1979, when founder Choong Yee Hong opened it at the now-demolished Margaret Drive hawker centre after learning the trade in Chinatown. It moved several times before settling here, and it still cooks every pot to order over charcoal. Ru Ji Kitchen spreads across two side-by-side stalls, selling noodles in soup or dry with fish balls made on site from yellowtail. Its founder once helped his brother sell fishball noodles at nearby Ghim Moh. Around them is everyday food for the estate: kway chap from Blanco Court Kueh Chap, whose roots trace to the 1950s at the old Blanco Court, Hakka yong tau foo, and Malay nasi padang.",
     vibeCheck: "Holland Village's sensible, delicious secret",
-    localQuote:
-      "Close to Holland Village but without the Holland Village prices. The sensible choice, every time.",
     timeline: [
       {
-        year: "1970s",
-        event:
-          "Holland Drive estate established — Buona Vista market serves the new residential community",
+        year: "1979",
+        event: "Choong Yee Hong opens New Lucky Claypot Rice at the old Margaret Drive hawker centre. It later moves to Holland Drive.",
       },
       {
-        year: "1985",
-        event:
-          "INSEAD Singapore campus opens nearby — student population adds to the centre's daily crowd",
+        year: "2017",
+        event: "New Lucky Claypot Rice receives its first Michelin Bib Gourmand.",
       },
       {
-        year: "2000s",
-        event:
-          "one-north research district develops — a new generation of weekday lunch regulars arrives",
+        year: "2024",
+        event: "Ru Ji Kitchen is promoted from Michelin Selected to Bib Gourmand.",
       },
       {
-        year: "2010s",
-        event:
-          "Holland Village gentrification accelerates — Buona Vista remains resolutely affordable",
-      },
-      {
-        year: "2020",
-        event:
-          "Continues as the neighbourhood's primary food hub — untouched by the café culture next door",
+        year: "2026",
+        event: "Both Ru Ji Kitchen and New Lucky Claypot Rice are Bib Gourmands in the 2026 MICHELIN Guide Singapore.",
       },
     ],
     legendaryStalls: [
       {
-        name: "Buona Vista Prawn Noodles",
-        dish: "Prawn Noodles",
-        story:
-          "Rich, deeply reduced prawn broth that takes hours to build. The shells are cracked and simmered until the stock turns a deep amber. A bowl that professors and cleaners queue for with equal patience.",
+        name: "Ru Ji Kitchen",
+        dish: "Fishball noodles",
+        story: "A 2026 Bib Gourmand run across two adjacent stalls. Get the dry mee pok with springy fish balls made on site from yellowtail, or switch to bak chor mee. Go early, because it closes around lunchtime.",
       },
       {
-        name: "Holland Drive Wanton Mee",
-        dish: "Wanton Mee",
-        story:
-          "Springy egg noodles tossed in a char siew sauce with crispy lard. The wantons are hand-folded and thin-skinned. A breakfast that has been starting the neighbourhood's mornings for thirty years.",
+        name: "New Lucky Claypot Rice",
+        dish: "Charcoal claypot rice",
+        story: "Started in 1979 and a Bib Gourmand since 2017. Each pot of chicken, Chinese sausage and salted fish is cooked from scratch over charcoal and feeds two. Pre-order to skip the wait.",
       },
       {
-        name: "Buona Vista Kaya Toast & Kopi",
-        dish: "Kaya Toast Set",
-        story:
-          "Old-school kopitiam coffee from a sock filter, kaya toast with cold butter, soft-boiled eggs with white pepper and dark soy. The most Singaporean breakfast there is, done without theatrics.",
+        name: "Blanco Court Kueh Chap",
+        dish: "Kway chap",
+        story: "A family kway chap business with roots in the 1950s at the long-gone Blanco Court food centre. The braise is lighter and milder than most, a good contrast to Cheng Heng's darker gravy nearby.",
+      },
+      {
+        name: "Shima's Kitchen",
+        dish: "Nasi padang",
+        story: "A Muslim-owned Malay stall with breakfast first, then a wide nasi padang spread with dishes like curry chicken and mutton rendang. Popular dishes sell out early on weekdays.",
       },
     ],
   },
@@ -1265,8 +1305,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Clementi 448 food guide: Michelin Bib Gourmand Song Fish Soup, the queue-worthy Fried Carrot Cake, Boon Kee wanton mee and Kee Hock hor fun.",
     address: "448 Clementi Avenue 3, Clementi",
-    lat: 1.3138,
-    lng: 103.7641,
+    lat: 1.313350,
+    lng: 103.764587,
     region: "West",
     tag: "Local Favourite",
     hours:
@@ -1341,76 +1381,81 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 17,
     slug: "jurong-west-505-market",
     name: "Jurong West 505 Market",
-    address: "505 Jurong West Street 52, Jurong West",
-    lat: 1.3496,
-    lng: 103.7028,
+    seoTitle:
+      "Jurong West 505 Market & Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Jurong West 505 food guide: Bib Gourmand tutu kueh at Du Du, Soh Kee chicken porridge, Jian Bo chwee kueh and Hakka thunder tea rice.",
+    address:
+      "Blk 505 Jurong West Street 52, Jurong West",
+    lat: 1.349700,
+    lng: 103.718460,
     region: "West",
     tag: "Budget Eats",
-    hours: "6am–10pm daily",
+    hours:
+      "6am–9pm daily (stall hours vary)",
     imageUrl: "/images/hawkers/jurong-west-505.webp",
     description:
-      "A large neighbourhood hawker centre serving the Jurong West community with a wide variety of affordable food options.",
-    mustTry: ["Bak Chor Mee", "Chicken Rice", "Nasi Lemak", "Teh Tarik"],
+      "A Jurong West heartland food centre, refreshed in late 2024, home to Bib Gourmand tutu kueh and Cantonese porridge.",
+    mustTry: [
+      "Du Du tutu kueh",
+      "Soh Kee chicken porridge",
+      "Jian Bo chwee kueh",
+      "Hakka thunder tea rice",
+    ],
     famousFor:
-      "One of the largest and most complete hawker centres in West Singapore.",
-    michelinNote: "",
+      "Two Michelin Bib Gourmand stalls (Du Du's tutu kueh and Soh Kee's porridge) in an everyday neighbourhood food centre.",
+    michelinNote:
+      "In the MICHELIN Guide Singapore 2026, Dudu Cooked Food (#01-19, tutu kueh) and Soh Kee Cooked Food (#01-44, porridge) hold Bib Gourmand; Hoe Kee Kitchen (#01-39, chicken rice) is also listed in the guide.",
     vibes: ["West Singapore locals", "Budget dining", "Families", "Industrial workers"],
-    nearestMRT: "Jurong West (EW Line) — 15 min walk",
+    nearestMRT:
+      "Lakeside (EW Line) — short walk",
     tipForVisitors:
-      "Good stop if exploring Jurong area including Jurong Lake Gardens or the Science Centre.",
+      "Many of the best stalls keep breakfast-to-afternoon hours and some close one or two days a week, so come in the morning and check stall days before travelling.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$6",
+    budgetPerPax:
+      "$3–$8",
     story:
-      "Jurong West 505 serves the furthest reaches of Singapore's western edge — a town that was marshland and rubber plantations within living memory, transformed into one of the country's largest residential districts in the span of a generation. The people who moved here first built their communities around places like this market. The food reflects that diversity: Malay, Chinese, Indian, and everything in between, cooked by families who have run the same stalls since the 1980s. In Singapore's West, 505 is simply where you eat.",
+      "Jurong West 505 Market & Food Centre sits at Hong Kah Point, a neighbourhood food centre that sources date to 1985, when it opened to feed the surrounding housing estates. It was revamped in 2009, and in September 2024 it closed again for renovation, reopening on 8 December 2024. Its regulars came back, and so did its best-known names. Du Du's tutu kueh, steamed rice-flour cakes filled with ground peanut or coconut, are best eaten hot, and the stall holds a Bib Gourmand in the 2026 Michelin Guide. So does Soh Kee Cooked Food, whose smooth Cantonese porridge with chicken, fish or cuttlefish is the kind of bowl people eat with a pinch of ginger and white pepper. Around them are dozens of stalls doing heartland staples: Jian Bo's chwee kueh, Hakka thunder tea rice, handmade fishball mee pok. The food here is everyday food done well, and it is never overpriced.",
     vibeCheck: "The West's most reliable, most honest, most complete hawker centre",
-    localQuote:
-      "Jurong West people know their food. And they know that 505 has everything they need.",
     timeline: [
       {
-        year: "1970s",
-        event:
-          "Jurong West developed as a new industrial and residential town on reclaimed land",
+        year: "1985",
+        event: "Food centre founded to serve residents of the surrounding housing estates",
       },
       {
-        year: "1982",
-        event:
-          "505 Market established to serve the rapidly growing Jurong West population",
+        year: "2009",
+        event: "Centre revamped",
       },
       {
-        year: "1990s",
-        event:
-          "Industrial workers and families establish the centre's daily rhythms — breakfast at 6am, dinner at 7pm",
+        year: "2024",
+        event: "Closed for renovation from 9 September; reopened on 8 December 2024",
       },
       {
-        year: "2000s",
-        event:
-          "Second generation of stall operators takes over — recipes and regulars pass between generations",
-      },
-      {
-        year: "2020",
-        event:
-          "505 Market remains the primary food hub for one of Singapore's largest towns",
+        year: "2026",
+        event: "Dudu Cooked Food and Soh Kee Cooked Food listed as Bib Gourmand in the MICHELIN Guide Singapore 2026",
       },
     ],
     legendaryStalls: [
       {
-        name: "Jurong West Bak Chor Mee",
-        dish: "Bak Chor Mee",
-        story:
-          "Minced pork noodles with vinegar, lard, and braised mushrooms. The dry version is the one to order — every strand coated, every bite balanced between acid and richness. A bowl worth the drive from the East.",
+        name: "Du Du Cooked Food (Du Du Shou Shi)",
+        dish: "Tutu kueh",
+        story: "Steamed rice-flour cakes with peanut or coconut filling, chewy outside and sweet and nutty within. Michelin awarded it a Bib Gourmand in 2026 and advises eating them hot, so eat them at the stall. Closed Mondays.",
       },
       {
-        name: "505 Nasi Lemak",
-        dish: "Nasi Lemak",
-        story:
-          "Coconut rice wrapped in pandan leaf, served with ikan bilis, egg, sambal, and otah on the side. Opens at 6am and sells out before 9. The West's answer to Adam Road — quieter, just as good.",
+        name: "Soh Kee Cooked Food",
+        dish: "Cantonese porridge",
+        story: "Smooth, fragrant rice porridge with chicken, fish or cuttlefish. Chicken is the favourite. Add ginger, spring onion and white pepper. It holds a 2026 Bib Gourmand and opens only Thursday to Sunday, so check the days before going.",
       },
       {
-        name: "West Coast Teh Tarik Stall",
-        dish: "Teh Tarik & Roti",
-        story:
-          "Pulled tea with a proper froth, kaya toast done on a charcoal grill. The uncle has been opening at 5:30am for twenty years. The kind of stall that powers an entire community before the sun is fully up.",
+        name: "Jian Bo Shui Kueh",
+        dish: "Chwee kueh",
+        story: "Teochew steamed rice cakes topped with salty preserved radish, with chee cheong fun too. This branch of the well-known Tiong Bahru name opens from early morning, so it's a natural breakfast stop.",
+      },
+      {
+        name: "Traditional Hakka Lui Cha",
+        dish: "Hakka thunder tea rice",
+        story: "A bowl of rice with greens, nuts and tofu, served with a herbal green tea soup. Seth Lui reports it was named one of Singapore's Best Foods 2024. Morning-to-afternoon hours, closed Mondays.",
       },
     ],
   },
@@ -1418,76 +1463,81 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 18,
     slug: "yishun-park-hawker-centre",
     name: "Yishun Park Hawker Centre",
-    address: "51 Yishun Avenue 11, Yishun",
-    lat: 1.4291,
-    lng: 103.8354,
+    seoTitle:
+      "Yishun Park Hawker Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Yishun Park Hawker Centre guide: Michelin-listed Nasi Lemak Ayam Taliwang, Smokin' Joe charcoal grill, Ah Tan Wings har cheong gai, Munchi Pancakes.",
+    address:
+      "51 Yishun Avenue 11, Yishun",
+    lat: 1.424911,
+    lng: 103.844992,
     region: "North",
     tag: "Local Favourite",
-    hours: "7am–10pm daily",
+    hours:
+      "6am–10pm daily (stall hours vary)",
     imageUrl: "/images/hawkers/yishun-park.jpg",
     description:
-      "A modern hawker centre in Yishun with a good mix of traditional and contemporary hawker stalls.",
-    mustTry: ["Laksa", "Chicken Rice", "Roti Prata", "Kopi"],
+      "Yishun's purpose-built hawker centre opposite Yishun Park, opened in 2017 with a mix of hawker classics and younger stalls.",
+    mustTry: [
+      "Nasi Lemak Ayam Taliwang",
+      "Smokin' Joe BBQ chicken leg",
+      "Ah Tan Wings har cheong gai",
+      "Munchi min jiang kueh",
+    ],
     famousFor:
-      "One of the newer hawker centres in the North — clean, well-ventilated and popular with young families.",
-    michelinNote: "",
+      "A newer-generation hawker centre where Michelin-listed Indonesian-style nasi lemak sits beside charcoal-grilled Western food, prawn paste chicken and modern min jiang kueh.",
+    michelinNote:
+      "Nasi Lemak Ayam Taliwang (#01-33) is listed in the MICHELIN Guide Singapore 2026 (not Bib Gourmand); it was first recognised by the Guide in 2021.",
     vibes: ["North Singapore locals", "Young families", "Modern hawker experience"],
-    nearestMRT: "Yishun (NS Line) — 10 min walk",
+    nearestMRT:
+      "Yishun (NS Line) — then bus 806, 3 stops",
     tipForVisitors:
-      "Good stop if visiting Lower Seletar Reservoir or Yishun Dam area.",
+      "The centre isn't beside an MRT station, so take bus 806 from Yishun Bus Interchange (three stops) or drive — it has its own multi-storey carpark. NEA closes it for cleaning a few days each quarter, so check the schedule first.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$7",
+    budgetPerPax:
+      "$4–$12",
     story:
-      "Yishun Park Hawker Centre opened in 2016 as part of NEA's push to build a new generation of hawker centres — better ventilated, cleaner, designed with both hawkers and diners in mind. What it inherited was something no design brief can manufacture: a community. Yishun has always had a complicated reputation in Singapore's cultural imagination, but its residents know something outsiders don't — the food up here is excellent, unpretentious, and priced for real people. The hawker centre filled with regulars almost immediately. The North always knew how to eat.",
+      "Yishun Park Hawker Centre opened on 20 September 2017 at the junction of Yishun Avenue 11 and Yishun Ring Road, facing Yishun Park. For its first nine years it was run by Timbre Group, which treated it as a place to try new ideas: a tray-return deposit, a play area by the entrance, and a line-up that mixed hawker staples with younger concepts. Several of those early tenants have since grown well beyond Yishun. Munchi Pancakes moved its min jiang kueh here in 2017 and is now a chain. Ah Tan Wings opened its first permanent stall here after a run of pop-ups. Nasi Lemak Ayam Taliwang, a Muslim-owned Indonesian-style nasi lemak stall that began here in 2017, has been recognised by the MICHELIN Guide Singapore. In July 2026, after an NEA tender, management passed to Canopy Hawkers Group, with existing stallholders allowed to stay. The draw is unchanged: more than 40 cooked-food stalls under one high roof, priced for the neighbourhood.",
     vibeCheck: "New building, old soul — the North feeds its own well",
-    localQuote:
-      "The north of Singapore has its own excellent food culture. You do not need to travel to the city centre to eat well.",
     timeline: [
       {
-        year: "1980s",
-        event:
-          "Yishun New Town established — one of Singapore's largest northern residential estates",
-      },
-      {
-        year: "2000s",
-        event:
-          "Food scene in Yishun matures — residents develop strong local food preferences",
-      },
-      {
-        year: "2016",
-        event:
-          "Yishun Park Hawker Centre opens as part of NEA's new-generation hawker centre programme",
-      },
-      {
         year: "2017",
-        event:
-          "Centre fills quickly with regulars — proves the community's appetite for a proper local hawker",
+        event: "Yishun Park Hawker Centre opens on 20 September, managed by Timbre Group",
       },
       {
-        year: "2020",
-        event:
-          "Established as one of the North's most popular and well-regarded food centres",
+        year: "2021",
+        event: "Nasi Lemak Ayam Taliwang is recognised in the MICHELIN Guide Singapore",
+      },
+      {
+        year: "2024",
+        event: "NEA carries out repairs and redecoration works at the centre (July–October)",
+      },
+      {
+        year: "2026",
+        event: "NEA appoints Canopy Hawkers Group as operator; it takes over from Timbre+ on 20 July",
       },
     ],
     legendaryStalls: [
       {
-        name: "Yishun Laksa",
-        dish: "Laksa",
-        story:
-          "Rich coconut gravy with thick bee hoon, cockles, and tau pok. The broth is made fresh each morning — you can tell by the colour. North Singapore has always had good laksa. This stall proves it.",
+        name: "Nasi Lemak Ayam Taliwang",
+        dish: "Nasi lemak with ayam taliwang",
+        story: "The original outlet of a Muslim-owned stall that started here in 2017 and is listed in the MICHELIN Guide. Order the namesake plate: coconut rice with Indonesian-style spicy grilled chicken and sambal — mix the chilli through the rice.",
       },
       {
-        name: "Park Chicken Rice",
-        dish: "Hainanese Chicken Rice",
-        story:
-          "Poached chicken, fragrant rice, clear soup, three dipping sauces. The chicken is silky and properly rested. The regulars have been coming since the first week the centre opened and have never considered leaving.",
+        name: "Smokin' Joe",
+        dish: "Charcoal-grilled Western",
+        story: "A charcoal-grill Western stall that has been here since the centre opened in 2017. The BBQ boneless chicken leg is the everyday order; steaks and lamb rack are there when you want to splurge.",
       },
       {
-        name: "Yishun Roti Prata",
-        dish: "Roti Prata",
-        story:
-          "Crispy-edged, fluffy-centred prata cooked on a well-seasoned griddle. The curry on the side has been simmering since before dawn. Weekend mornings here feel like the right way to start a day.",
+        name: "Ah Tan Wings",
+        dish: "Har cheong gai",
+        story: "Prawn paste chicken from a young hawker who started out at pop-up food events before opening his first permanent stall here. Get the wings or the 'atas' cutlet, crisp outside and pungent with prawn paste.",
+      },
+      {
+        name: "Munchi Pancakes",
+        dish: "Min jiang kueh",
+        story: "Started in a Yishun coffee shop in 2016 and moved here in 2017; this is now the brand's original store. Classic peanut is the benchmark, while charcoal and matcha skins with modern fillings show why it took off.",
       },
     ],
   },
@@ -1495,76 +1545,73 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 19,
     slug: "sembawang-hills-food-centre",
     name: "Sembawang Hills Food Centre",
-    address: "590 Upper Thomson Road, Sembawang",
-    lat: 1.3666,
-    lng: 103.8280,
+    seoTitle:
+      "Sembawang Hills Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Sembawang Hills Food Centre on Upper Thomson Road: Jing Ji Teochew fishball noodles, Ping Kee Popiah, Jia Jia Xing pig's organ soup and chwee kueh.",
+    address:
+      "590 Upper Thomson Road, Upper Thomson",
+    lat: 1.372420,
+    lng: 103.829033,
     region: "North",
-    tag: "Supper Spot",
-    hours: "6am–late night",
+    tag:
+      "Local Favourite",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/sembawang-hills.jpg",
     description:
-      "A beloved neighbourhood food centre along Upper Thomson Road — famous for its late night supper crowd and excellent local food.",
-    mustTry: ["Bak Kut Teh", "Carrot Cake", "Prawn Noodles", "Durian (seasonal)"],
+      "A compact, 1970s-era food centre on Upper Thomson Road known for old-school breakfast and lunch: fishball noodles, popiah and pig's organ soup.",
+    mustTry: [
+      "Jing Ji fishball noodles",
+      "Ping Kee popiah",
+      "Jia Jia Xing pig's trotter",
+      "Chwee kueh",
+    ],
     famousFor:
-      "Late night supper destination for North Singapore — famous bak kut teh and durian stalls.",
-    michelinNote: "",
+      "Old-school morning and lunchtime hawker fare — Teochew fishball and meatball noodles, hand-rolled popiah, pig's organ soup and chwee kueh — in a small single-storey centre.",
+    michelinNote:
+      "",
     vibes: ["Late night supper", "North locals", "Durian lovers", "Families"],
-    nearestMRT: "Marymount (CC Line) — 15 min walk or bus",
+    nearestMRT:
+      "Mayflower (TE Line) — short walk",
     tipForVisitors:
-      "Upper Thomson Road is a great food street — combine with a visit to the surrounding nature areas.",
+      "Come for breakfast or lunch: Jing Ji Fishball Noodle closes around 1pm and isn't open every day, and many stalls wind down by mid-afternoon. NEA closes the centre for cleaning a few days each year, so check the schedule before a special trip.",
     halal: false,
     openLate: true,
-    budgetPerPax: "$5–$10",
+    budgetPerPax:
+      "$3–$8",
     story:
-      "Sembawang Hills Food Centre sits along Upper Thomson Road — one of Singapore's last great supper streets, a corridor of old trees and older food traditions that survived the city's relentless redevelopment. The food centre anchors the northern end of the strip, surrounded by bak kut teh restaurants, durian stalls, and the kind of old coffee shops that still use ceiling fans instead of air-conditioning. Late at night, it draws a cross-section of Singapore that you rarely see elsewhere: families, bikers, couples, insomniacs, and people who simply know that the best eating happens after 11pm.",
+      "Despite its name, Sembawang Hills Food Centre is nowhere near Sembawang. It sits on Upper Thomson Road beside the private Sembawang Hills estate it was built to serve, and some still know it as Jalan Leban Food Centre. NEA records it as built in 1974. An upgrading in the early 2000s replaced its roof, tiles and facade and trimmed it to 36 stalls, leaving a compact single-storey centre of two rows that trades mostly in old-school breakfast and lunch fare. That is the point of coming. Jing Ji Fishball Noodle has been making Teochew meatballs and fishballs for decades. Ping Kee Popiah, run by an elderly couple, sells only popiah and kueh pie tee. Jia Jia Xing ladles out clean-tasting pig's organ soup and trotters in braised sauce, and a shui kueh stall here was singled out by the MICHELIN Guide's writers in 2017 for its firm chwee kueh and dried-shrimp chye poh. Arrive in the morning; the best stalls sell out early.",
     vibeCheck: "Where Upper Thomson comes alive after midnight",
-    localQuote:
-      "Eating under the trees at midnight with a bowl of bak kut teh — this is what Singapore supper culture is all about.",
     timeline: [
       {
-        year: "1960s",
-        event:
-          "Upper Thomson Road establishes itself as a food corridor serving the northern kampung communities",
+        year: "1974",
+        event: "Sembawang Hills Food Centre is built on Upper Thomson Road to serve the surrounding estate",
       },
       {
-        year: "1975",
-        event:
-          "Sembawang Hills Food Centre formalised — anchors the Thomson Road supper strip",
+        year: "2003",
+        event: "Upgrading works (new roof, tiles and facade) are completed; stall count reduced to 36",
       },
       {
-        year: "1990s",
-        event:
-          "Bak kut teh and durian stalls multiply along Thomson Road — the area's identity crystallises",
-      },
-      {
-        year: "2000s",
-        event:
-          "Supper culture peaks — the centre becomes a midnight destination for all of Singapore",
-      },
-      {
-        year: "2020",
-        event:
-          "Upper Thomson Road gazetted for conservation — food centre protected as part of the strip's character",
+        year: "2017",
+        event: "MICHELIN Guide article features the centre's Sembawang Hills Shui Kueh in a chwee kueh round-up",
       },
     ],
     legendaryStalls: [
       {
-        name: "Sembawang Bak Kut Teh",
-        dish: "Bak Kut Teh",
-        story:
-          "Peppery, clear Teochew-style broth with tender pork ribs. Ordered with you tiao for dipping and a pot of strong Chinese tea. A bowl that has been closing nights on Upper Thomson for thirty years.",
+        name: "Jing Ji Fishball Noodle",
+        dish: "Teochew fishball noodles",
+        story: "A decades-old family stall known for big, juicy Teochew meatballs alongside bouncy fishballs. Order the meatball noodles dry with mee pok; go early, as meatballs sell out and the stall keeps short hours.",
       },
       {
-        name: "Thomson Carrot Cake",
-        dish: "Carrot Cake",
-        story:
-          "Both versions, properly executed — the white is eggy and soft, the black is sweet and slightly charred. Fried individually, never rushed. The kind of stall that defines a neighbourhood's food memory.",
+        name: "Ping Kee Popiah",
+        dish: "Popiah",
+        story: "An elderly couple selling just two things: popiah and kueh pie tee. Get a roll or two of popiah and a set of kueh pie tee; the stall is reportedly over 30 years old.",
       },
       {
-        name: "Hills Prawn Noodles",
-        dish: "Prawn Noodles",
-        story:
-          "A broth built from prawn shells roasted until deeply caramelised. Served with yellow noodles, bee hoon, prawns, and pork ribs. The late-night crowd orders this as the first bowl of the evening, not the last.",
+        name: "Jia Jia Xing Pig's Organ Soup",
+        dish: "Pig's organ soup",
+        story: "Clean-tasting pig's organ soup with lean pork and meatballs, but the pig's trotter in braised sauce is the order to pair with yam rice.",
       },
     ],
   },
@@ -1572,152 +1619,168 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 20,
     slug: "chong-pang-market",
     name: "Chong Pang Market",
-    address: "105 Yishun Ring Road, Yishun",
-    lat: 1.4290,
-    lng: 103.8337,
+    seoTitle:
+      "Chong Pang Market: Best Stalls & Michelin Picks | ShiokFlavour",
+    seoDescription:
+      "Chong Pang Market in Yishun: Bib Gourmand Hainan Zi char kway teow, Ji De Lai chicken rice, Xiang Xiang fishball noodles and Old Chong Pang ngoh hiang.",
+    address:
+      "Blk 104/105 Yishun Ring Road, Yishun",
+    lat: 1.431658,
+    lng: 103.828072,
     region: "North",
     tag: "Local Favourite",
-    hours: "6am–10pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/chong-pang.jpg",
     description:
-      "A large and popular market in Yishun serving the northern heartland community with a huge variety of food.",
-    mustTry: ["Carrot Cake", "Char Kway Teow", "Mee Goreng", "Fresh Juice"],
+      "Yishun's big 1984 market and food centre, home to two Bib Gourmand stalls and long-running family hawkers, before a planned move to Chong Pang City.",
+    mustTry: [
+      "Hainan Zi char kway teow",
+      "Ji De Lai chicken rice",
+      "Xiang Xiang fishball noodles",
+      "Old Chong Pang ngoh hiang",
+    ],
     famousFor:
-      "One of the most complete hawker centres in the North — everything you need under one roof.",
-    michelinNote: "",
+      "Two MICHELIN Bib Gourmand stalls — Hainan Zi's wok-fried char kway teow and Ji De Lai's Hainanese chicken rice — plus decades-old family stalls.",
+    michelinNote:
+      "Two Bib Gourmand stalls in the MICHELIN Guide Singapore 2026: Hainan Zi (#01-129), on the list since 2021, and Ji De Lai Hainanese Chicken Rice (#01-152), added in 2023.",
     vibes: ["North Singapore locals", "Yishun residents", "Families", "Weekend market"],
-    nearestMRT: "Yishun (NS Line) — 10 min walk",
+    nearestMRT:
+      "Yishun (NS Line) — short walk",
     tipForVisitors:
-      "Large wet market upstairs is great for fresh produce. Food centre downstairs has a huge variety.",
+      "Go in the morning: many stalls, such as Xiang Xiang Fishball Noodle, open early and close by mid-afternoon, and stall hours vary widely. The wet market shares the complex, so it's a good stop for groceries too.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$7",
+    budgetPerPax:
+      "$3–$8",
     story:
-      "Chong Pang Market is one of the last hawker centres in Singapore that still feels like it belongs to another era. Built in the early years of Yishun's development, it has the generous proportions and unhurried atmosphere of a time when hawker centres were the centre of community life, not an amenity alongside it. The wet market upstairs is as important as the food centre below — residents come for both, spending Saturday mornings the way their parents did. The food here is the kind that travels — people drive from the city centre for specific stalls and leave wondering why they don't come more often.",
+      "Chong Pang takes its name from Lim Chong Pang, son of the pioneer Lim Nee Soon; the village once called Westhill was renamed in his honour in 1956. The market and food centre at Blocks 104 and 105 Yishun Ring Road came later, built in 1984 as Yishun New Town grew, and was upgraded in 2003. It is one of the North's largest hawker complexes, with 56 cooked-food stalls alongside 123 market stalls, and it holds two MICHELIN Bib Gourmand stalls: Hainan Zi, cooking char kway teow and fried oyster to order, recognised since 2021, and Ji De Lai Hainanese Chicken Rice, added in 2023. Long-running family stalls give the place its continuity. Xiang Xiang Fishball Noodle has been here since the early years and is now run by the founder's son; Old Chong Pang Wu Xiang still fries ngoh hiang to order. That continuity is about to be tested. The stalls are expected to move into the new Chong Pang City development, slated for completion in 2027, and this site will become a community plaza.",
     vibeCheck: "Old Singapore energy, running on full",
-    localQuote:
-      "Chong Pang feels different from the newer estates. More old Singapore. More genuine.",
     timeline: [
       {
-        year: "1980s",
-        event:
-          "Yishun New Town built — Chong Pang Market established as the neighbourhood's primary food hub",
+        year: "1956",
+        event: "Westhill Village is renamed Chong Pang Village in honour of Lim Chong Pang",
       },
       {
-        year: "1990s",
-        event:
-          "Market becomes the social anchor for Yishun's community — wet market and hawker centre inseparable",
+        year: "1984",
+        event: "Chong Pang Market & Food Centre is built at Blk 104/105 Yishun Ring Road",
       },
       {
-        year: "2000s",
-        event:
-          "Reputation for quality spreads — food lovers begin making the trip from other parts of Singapore",
+        year: "2003",
+        event: "Centre is upgraded under the Hawker Centres Upgrading Programme",
       },
       {
-        year: "2010s",
-        event:
-          "Several stalls pass to second generation — recipes preserved, regulars retained",
+        year: "2021",
+        event: "Hainan Zi is named a MICHELIN Bib Gourmand",
       },
       {
-        year: "2020",
-        event:
-          "Remains one of the most complete and characterful hawker centres in the North",
+        year: "2023",
+        event: "Ground broken for Chong Pang City, the centre's future home; Ji De Lai Hainanese Chicken Rice joins the Bib Gourmand list",
       },
     ],
     legendaryStalls: [
       {
-        name: "Chong Pang Char Kway Teow",
-        dish: "Char Kway Teow",
-        story:
-          "The uncle fries in small batches over high heat — proper wok hei that you can smell from the entrance. Dark soy, lard, cockles, Chinese sausage. A plate that Northerners will put against any CBD version without hesitation.",
+        name: "Hainan Zi",
+        dish: "Char kway teow",
+        story: "Yishun's first Bib Gourmand stall, on the list since 2021. Char kway teow is fried to order with cockles and Chinese sausage and real wok hei; the fried oyster and carrot cake are worth adding.",
       },
       {
-        name: "Yishun Mee Goreng",
-        dish: "Mee Goreng",
-        story:
-          "Malay-style fried noodles with tomato, egg, and a sambal that has been building flavour since the stall opened decades ago. Bright orange, slightly sweet, properly spiced. The North's best-kept fried noodle.",
+        name: "Ji De Lai Hainanese Chicken Rice",
+        dish: "Hainanese chicken rice",
+        story: "Bib Gourmand since 2023. Choose steamed or roasted; MICHELIN praises the springy-skinned steamed chicken and lightly seasoned rice. Sets with soup and greens are good value.",
       },
       {
-        name: "Chong Pang Fresh Juice",
-        dish: "Fresh-Pressed Juice",
-        story:
-          "Sugarcane, watermelon, starfruit — pressed to order, no syrup, no ice from a bag. The kind of drink that makes Singapore's humidity feel manageable. Regulars order before they've even chosen their food.",
+        name: "Xiang Xiang Fishball Noodle",
+        dish: "Fishball noodles",
+        story: "A family stall at Chong Pang for about four decades, now run by the second generation. Order the dry mee pok or mee kia with fresh fishballs; it opens early and closes mid-afternoon.",
+      },
+      {
+        name: "Old Chong Pang Wu Xiang Xia Bing",
+        dish: "Ngoh hiang",
+        story: "A long-running ngoh hiang stall that fries to order. Build a plate of liver roll, egg-chestnut pancake, prawn cracker and pink pork sausage, with bee hoon on the side.",
       },
     ],
   },
   {
     id: 21,
-    slug: "woodlands-centre-market",
-    name: "Woodlands Centre Market",
-    address: "Blk 6A Woodlands Centre Road, Woodlands",
-    lat: 1.4368,
-    lng: 103.7862,
+    slug: "marsiling-mall-hawker-centre",
+    seoTitle:
+      "Marsiling Mall Hawker Centre (ex-Woodlands Centre): Best Stalls | ShiokFlavour",
+    seoDescription:
+      "Marsiling Mall Hawker Centre, new home of the old Woodlands Town Centre hawkers: Yan Ji Seafood Soup, Ye Lai Xiang Laksa, Sin Heng Kee porridge and more.",
+    name:
+      "Marsiling Mall Hawker Centre",
+    address:
+      "4 Woodlands Street 12, Marsiling",
+    lat: 1.433543,
+    lng: 103.779881,
     region: "North",
     tag: "Budget Eats",
-    hours: "6am–10pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/woodlands-centre.jpg",
     description:
-      "A neighbourhood hawker centre in Woodlands serving the northernmost community of Singapore close to the Causeway.",
-    mustTry: ["Economy Rice", "Nasi Lemak", "Roti Prata", "Laksa"],
-    famousFor: "Affordable heartland food in Singapore's northernmost district.",
-    michelinNote: "",
+      "The old Woodlands Town Centre food centre is gone. Its hawkers moved to Marsiling Mall in 2017, bringing seafood soup, laksa and porridge.",
+    mustTry: [
+      "Yan Ji seafood soup",
+      "Ye Lai Xiang laksa",
+      "Sin Heng Kee porridge",
+      "Lian Xiang fried hokkien mee",
+    ],
+    famousFor:
+      "Hawkers who moved over from the demolished Old Woodlands Town Centre, led by Yan Ji's seafood soup and Ye Lai Xiang's laksa.",
+    michelinNote:
+      "",
     vibes: ["Woodlands locals", "Budget dining", "Families", "Near Causeway"],
-    nearestMRT: "Woodlands (NS/TE Line) — 10 min walk",
+    nearestMRT:
+      "Marsiling (NS Line) — short walk",
     tipForVisitors:
-      "Good stop before or after crossing to Johor Bahru via the Causeway.",
+      "Several of the old-timers keep morning-to-afternoon hours and close one day a week (Ye Lai Xiang closes Thursdays, Yan Ji closes Mondays), so plan for lunch.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$6",
+    budgetPerPax:
+      "$4–$10",
     story:
-      "Woodlands is Singapore's northernmost town, separated from Malaysia by the Causeway and defined by the daily rhythm of that crossing. The food centre at Woodlands Centre reflects that geography — it serves a community that moves between two countries, that wakes before dawn to cross the border, and that returns hungry in the evening. The food is fuel as much as culture: nasi lemak at 5am for the workers crossing to Johor, economy rice at noon for the civil servants and shop owners, roti prata in the evening for families who have been here since Woodlands was jungle.",
+      "The food centre this page once described no longer exists. The Old Woodlands Town Centre, completed in 1980 beside the Causeway, gave street hawkers a permanent home in the early 1980s. It lost its bustle after the town's centre of gravity moved to Woodlands MRT in the 1990s, its low-rise blocks were chosen for en-bloc redevelopment in 2012, and it closed on 30 November 2017. The land went to the Woodlands Checkpoint extension. NEA had already begun building a replacement in 2016, at Woodlands Street 12 near Marsiling, and most of the stallholders made the short move to Marsiling Mall Hawker Centre. Familiar names came with them: Yan Ji Seafood Soup, Ye Lai Xiang Laksa and Hua Li Fried Carrot Cake were all at 4A Woodlands Centre Road in 2016 and are at Marsiling Mall today. For those who remember the old town centre, this is where its cooking continues.",
     vibeCheck: "Singapore's northern gate — where every meal fuels a crossing",
-    localQuote:
-      "Woodlands residents wake up at 5am, eat here, and cross to Johor for work. The food gives them the energy to do it.",
     timeline: [
       {
-        year: "1970s",
-        event:
-          "Woodlands developed as Singapore's northernmost residential town near the Causeway",
+        year: "1980",
+        event: "Woodlands New Town centre completed near the Causeway; street hawkers resettled into its new hawker centre in the early 1980s",
       },
       {
-        year: "1981",
-        event:
-          "Woodlands Centre Market established as the community's primary food hub",
+        year: "2012",
+        event: "Old Woodlands Town Centre's low-rise blocks selected for the Selective En bloc Redevelopment Scheme",
       },
       {
-        year: "1990s",
-        event:
-          "Causeway traffic increases — the market becomes a daily stop for cross-border commuters",
+        year: "2016",
+        event: "NEA began building the replacement hawker centre at Woodlands Street 12 and Woodlands Avenue 3 (January)",
       },
       {
-        year: "2000s",
-        event:
-          "Woodlands Regional Centre grows — new residents add to the market's diverse crowd",
-      },
-      {
-        year: "2019",
-        event:
-          "Thomson-East Coast Line opens Woodlands stations — fresh wave of commuters discovers the market",
+        year: "2017",
+        event: "Old Woodlands Town Centre closed on 30 November; most of its hawkers moved to the new Marsiling Mall Hawker Centre",
       },
     ],
     legendaryStalls: [
       {
-        name: "Woodlands Nasi Lemak",
-        dish: "Nasi Lemak",
-        story:
-          "Open from 5am for the pre-dawn Causeway crowd. Coconut rice, fried egg, sambal, ikan bilis, and a curry chicken wing. The kind of breakfast that carries people through a full morning of work across the border.",
+        name: "Yan Ji Seafood Soup",
+        dish: "Seafood soup",
+        story: "A seafood soup stall with over three decades of history that moved over from the old Woodlands Centre Road food centre. Order the crayfish seafood soup, plus braised pig trotters on the side. Closed Mondays.",
       },
       {
-        name: "Causeway Roti Prata",
-        dish: "Roti Prata",
-        story:
-          "Thin, flaky prata fried fresh on a cast-iron griddle. The curry is mutton-based and properly spiced. Popular with both the Malay and Indian communities who share the northern neighbourhoods.",
+        name: "Ye Lai Xiang Laksa",
+        dish: "Laksa",
+        story: "A Woodlands Centre Road veteran that is still drawing laksa fans at Marsiling Mall. It also does prawn noodles and pork rib soup. Closes mid-afternoon and on Thursdays.",
       },
       {
-        name: "Woodlands Economy Rice",
-        dish: "Economy Rice",
-        story:
-          "A full spread of cooked dishes — vegetables, tofu, meat, eggs — served over white rice. The selection changes daily. Regulars point without looking at prices. That is the economy rice way.",
+        name: "Sin Heng Kee Porridge",
+        dish: "Porridge",
+        story: "Opens at dawn with around 20 kinds of Cantonese-style porridge. Get the signature bowl. A good early breakfast option.",
+      },
+      {
+        name: "Lian Xiang Shu Shi",
+        dish: "Fried hokkien mee",
+        story: "Moved in from the Old Woodlands Town Centre when Marsiling Mall opened in 2017. Known for dry fried hokkien prawn mee and cockle-laden kway teow mee. Closed Sundays.",
       },
     ],
   },
@@ -1725,153 +1788,159 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 22,
     slug: "toa-payoh-lorong-8-market",
     name: "Toa Payoh Lorong 8 Market",
-    address: "Blk 210 Lorong 8 Toa Payoh, Toa Payoh",
-    lat: 1.3340,
-    lng: 103.8489,
+    seoTitle:
+      "Toa Payoh Lorong 8 Market & Food Centre: Best Stalls | ShiokFlavour",
+    seoDescription:
+      "Toa Payoh Lorong 8 hawker guide: Hock Kee peppery bak kut teh, Guan Kee kway chap, Hai Kee wanton noodles and handmade mee hoon kway.",
+    address:
+      "Blk 210 Lorong 8 Toa Payoh, Toa Payoh",
+    lat: 1.340330,
+    lng: 103.854462,
     region: "Central",
     tag: "Local Favourite",
-    hours: "6am–10pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/toa-payoh.jpg",
     description:
-      "A classic HDB heartland hawker centre in Toa Payoh — one of Singapore's oldest public housing estates with strong food heritage.",
-    mustTry: ["Toa Payoh Lor Mee", "Wanton Mee", "Chicken Rice", "Soon Kueh"],
+      "A busy Toa Payoh neighbourhood food centre with about 80 stalls, known for peppery bak kut teh, kway chap, handmade mee hoon kway and wanton noodles.",
+    mustTry: [
+      "Hock Kee Bak Kut Teh",
+      "Guan Kee Kway Chap",
+      "Hai Kee wanton noodles",
+      "Nine Stone mee hoon kway",
+    ],
     famousFor:
-      "Heritage hawker food in one of Singapore's most iconic housing estates.",
-    michelinNote: "",
+      "Long-running hawker stalls serving peppery bak kut teh, kway chap, handmade mee hoon kway and family-made wanton noodles.",
+    michelinNote:
+      "",
     vibes: ["Toa Payoh locals", "Heritage food", "Families", "No-frills"],
-    nearestMRT: "Toa Payoh (NS Line) — 10 min walk",
+    nearestMRT:
+      "Braddell (NS Line) — 15 min walk",
     tipForVisitors:
-      "Combine with a walk around Toa Payoh town — one of Singapore's oldest and most characterful HDB estates.",
+      "Many stalls take a weekly rest day and several close by mid-afternoon, so go for breakfast or lunch if you want the noodle stalls. Braddell MRT is closer than Toa Payoh MRT.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$7",
+    budgetPerPax:
+      "$4–$8",
     story:
-      "Toa Payoh was Singapore's first major Housing Development Board satellite town — a model of what public housing could be, built in the late 1960s to prove that Singapore could house its people with dignity. The residents who moved into the first Toa Payoh blocks have watched the town age around them. The hawker centre at Lorong 8 is part of that original fabric. It has not changed dramatically because it has not needed to. The same families eat here across three generations. The same stalls serve the same dishes. In a city that reinvents itself constantly, Toa Payoh Lorong 8 is quietly, stubbornly itself.",
+      "Lorong 8 is a quieter corner of Toa Payoh, where flatted factories and industrial buildings sit beside HDB blocks and a primary school. The food centre at Block 210 serves all of them, with around 80 cooked-food stalls under one roof. Many of its best-known stalls are family businesses. Hock Kee has been ladling peppery Singapore-style bak kut teh for more than four decades. Guan Kee's kway chap stall is decades old too, and its daughter now runs a second branch at Sembawang Hills. At Hai Kee, a mother still hand-wraps the wantons and dumplings while her son, the third generation, cooks the noodles. Nine Stone Avenue takes its name from the old Seletar Hills Food Centre where the family brand began, and the founder's sons now knead and tear its mee hoon kway. The centre reopened after a two-month repair and redecoration closure in late 2025. Younger hawkers have joined the old guard since then.",
     vibeCheck: "Singapore's original new town, still feeding its own the original way",
-    localQuote:
-      "Toa Payoh people are deeply loyal to their stalls. The same families have been eating here for thirty years without question.",
     timeline: [
       {
-        year: "1968",
-        event:
-          "Toa Payoh New Town built — Singapore's first major HDB satellite town, a national milestone",
+        year: "2023",
+        event: "Original Simon Road Hokkien Mee founder Mr Heng opens a second outlet at the market (reported January 2023)",
       },
       {
-        year: "1970s",
-        event:
-          "Lorong 8 Market established to serve the new town's rapidly growing population",
+        year: "2023",
+        event: "Guan Kee Kway Chap opens a second branch at Sembawang Hills Food Centre on 24 September and keeps its Lorong 8 stall",
       },
       {
-        year: "1980s",
-        event:
-          "First generation of stall operators establishes core dishes — lor mee, wanton mee, chicken rice",
+        year: "2025",
+        event: "Centre closes for repairs and redecoration from 22 September to 24 November",
       },
       {
-        year: "2000s",
-        event:
-          "Second generation takes over stalls — recipes passed down, regulars retained without interruption",
-      },
-      {
-        year: "2020",
-        event:
-          "Toa Payoh Lorong 8 remains one of Singapore's most community-anchored hawker centres",
+        year: "2026",
+        event: "New hokkien mee stall HERNG 好吃 opens at #01-52 in June",
       },
     ],
     legendaryStalls: [
       {
-        name: "Toa Payoh Lor Mee",
-        dish: "Lor Mee",
-        story:
-          "Thick starchy gravy ladled over flat noodles with braised pork, fish cake, and a hard-boiled egg. A splash of vinegar cuts through the richness. The original Toa Payoh lor mee — the one all the others are measured against.",
+        name: "Hock Kee (Lor. 8) Bak Kut Teh",
+        dish: "Peppery bak kut teh",
+        story: "An elderly aunty has run this stall for more than 40 years. Order the Singapore-style peppery pork-rib soup, or the pig trotters or liver and kidney soup if you like offal. (#01-64)",
       },
       {
-        name: "Lorong 8 Wanton Mee",
-        dish: "Wanton Mee",
-        story:
-          "Springy noodles in a char siew sauce with crispy lard and soup wantons on the side. The char siew is house-roasted and properly lacquered. A bowl that has started Toa Payoh mornings since before most of its customers were born.",
+        name: "Guan Kee Kway Chap",
+        dish: "Kway chap",
+        story: "A decades-old stall that many regulars rank among Singapore's best kway chap. Get the set with smooth rice sheets, tau kwa, braised egg, pig trotters and innards that are known to be cleaned carefully. (#01-24)",
       },
       {
-        name: "Toa Payoh Soon Kueh",
-        dish: "Soon Kueh",
-        story:
-          "Steamed dumplings filled with bamboo shoot, turnip, and dried shrimp. A Teochew specialty that is increasingly rare. The skin is translucent and delicate — the filling is earthy and satisfying. One of the last proper soon kueh stalls in the heartland.",
+        name: "Hai Kee Noodle",
+        dish: "Wanton & dumpling noodles",
+        story: "A third-generation stall run by a mother and son. She hand-makes the wantons and dumplings and he cooks. There are just three noodle dishes, and the chicken feet noodles are worth trying. Closes mid-afternoon. (#01-59)",
+      },
+      {
+        name: "Nine Stone Avenue (Seletar) Mee Hoon Kway & Sheng Mian",
+        dish: "Mee hoon kway",
+        story: "Formerly Seletar Sheng Mian, a family brand that began at the old Seletar Hills Food Centre. The founder's sons now make the handmade mee hoon kway, served dry or in pork-bone soup with a runny egg and ikan bilis. Expect queues. (#01-05)",
       },
     ],
   },
   {
     id: 23,
     slug: "golden-shoe-market-street",
-    name: "Golden Shoe (Market Street Hawker Centre)",
-    address: "161 Market Street, CBD",
-    lat: 1.2839,
-    lng: 103.8504,
+    seoTitle:
+      "Market Street Hawker Centre (Golden Shoe): Best Stalls | ShiokFlavour",
+    seoDescription:
+      "Market Street Hawker Centre (ex-Golden Shoe) at CapitaSpring: Golden Nur briyani, Ah Liang Ipoh hor fun, Yummy Nyonya rendang and wanton mee.",
+    name:
+      "Market Street Hawker Centre (Golden Shoe)",
+    address:
+      "CapitaSpring, 86 Market Street (levels 2–3), Raffles Place",
+    lat: 1.284076,
+    lng: 103.850105,
     region: "Central",
     tag: "Office Favourite",
-    hours: "Weekdays 7am–3pm",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/golden-shoe.jpg",
     description:
-      "A compact CBD hawker centre tucked under Market Street — a weekday lifesaver for office workers hunting chicken rice, wonton mee, and bak chor mee without leaving the district.",
-    mustTry: ["Chicken Rice", "Wonton Mee", "Bak Chor Mee"],
+      "The old Golden Shoe hawker centre, reborn in 2022 on two floors of CapitaSpring, feeding Raffles Place on weekday lunches.",
+    mustTry: [
+      "Golden Nur chicken briyani",
+      "Ah Liang Ipoh hor fun",
+      "Yummy Nyonya beef rendang",
+      "Wanton mee",
+    ],
     famousFor:
-      "The CBD lunch crowd — quick, affordable heritage plates between meetings in the heart of the financial district.",
-    michelinNote: "",
+      "Weekday CBD lunches, with long-running stalls that followed the centre from Golden Shoe Car Park to CapitaSpring.",
+    michelinNote:
+      "",
     vibes: ["Office workers", "Weekday lunch", "CBD", "Quick meals"],
-    nearestMRT: "Raffles Place (EW/NS Line) — 3 min walk",
+    nearestMRT:
+      "Raffles Place (EW/NS Line) — 2 min walk",
     tipForVisitors:
-      "Arrive before noon; many stalls wind down by mid-afternoon on weekdays. Closed or quiet on weekends.",
+      "Most stalls trade Monday to Friday only and many close by mid-afternoon, so plan a weekday lunch. Beat the 12–1pm office rush if you want Ah Liang's hor fun without a long queue.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$4–$8",
+    budgetPerPax:
+      "$5–$10",
     story:
-      "Golden Shoe — officially Market Street Hawker Centre — takes its name from the shape of the roads around it, which early Singaporeans said resembled a golden shoe on the map. It sits deep in the CBD, tucked under an office building, operating on the compressed schedule of the financial district: open before the bankers arrive, closed before the tourists start looking for dinner. For decades it has fed the suits and clerks who power the Raffles Place district. The chicken rice here has been eaten standing up, briefcase in hand, by people who have gone on to run companies. That is the kind of hawker centre this is.",
+      "Locals still call it Golden Shoe. The name comes from the shoe-shaped 80-acre slice of prime land that became Singapore's financial district, not from the hawker centre. The centre opened in 1984 on the upper floors of the new Golden Shoe Car Park, and some of its first stalls were street hawkers from Market Street. It fed Raffles Place for 33 years until the stalls closed on 31 July 2017 to make way for CapitaSpring. The hawkers spent the next few years in an interim centre on Cross Street beside Telok Ayer MRT. On 5 April 2022 they reopened with 56 stalls on the second and third floors of the 51-storey tower, on the same site. Many old faces made the journey. Golden Nur still serves the crispy chicken briyani it first sold at Golden Shoe, and Yummy Nyonya Peranakan moved its rendang over too. The rhythm hasn't changed. This is a weekday lunch room, busiest when the offices empty at noon.",
     vibeCheck: "The CBD's best lunch eaten fastest by the people who can least afford to stop",
-    localQuote:
-      "The best chicken rice in the CBD, eaten standing up by people in suits. Boardroom decisions have been made on a full stomach from here.",
     timeline: [
       {
-        year: "1970s",
-        event:
-          "Market Street area develops as Singapore's financial district — demand for affordable lunch grows",
+        year: "1984",
+        event: "Market Street Food Centre opens in the new Golden Shoe Car Park and becomes known as Golden Shoe Hawker Centre",
       },
       {
-        year: "1978",
-        event:
-          "Golden Shoe Market established under Market Street — becomes the CBD's primary hawker centre",
+        year: "2017",
+        event: "Stalls close on 31 July; hawkers move to an interim centre on Cross Street by Telok Ayer MRT",
       },
       {
-        year: "1990s",
-        event:
-          "Raffles Place financial district expands — the centre's lunch crowd grows exponentially",
+        year: "2018",
+        event: "Ground broken in February on the Golden Shoe Car Park redevelopment (CapitaSpring)",
       },
       {
-        year: "2000s",
-        event:
-          "Office towers multiply around the centre — Golden Shoe feeds a district of 50,000 daily workers",
-      },
-      {
-        year: "2020",
-        event:
-          "Remains the most beloved weekday hawker centre in Singapore's Central Business District",
+        year: "2022",
+        event: "Reopens on 5 April as Market Street Hawker Centre, with 56 stalls on levels 2–3 of CapitaSpring",
       },
     ],
     legendaryStalls: [
       {
-        name: "Golden Shoe Chicken Rice",
-        dish: "Hainanese Chicken Rice",
-        story:
-          "Poached chicken with oily rice, three dipping sauces, and clear soup. Ordered by pointing, eaten quickly, remembered for longer than you expect. The CBD's most dependable plate — consistent for three decades.",
+        name: "Golden Nur",
+        dish: "Crispy chicken briyani",
+        story: "A family business that started at the old Golden Shoe Hawker Centre and has followed the centre ever since. It is Muslim-owned. The crispy chicken briyani is the signature, and the curry chicken rice and mutton briyani are also good. Weekdays only.",
       },
       {
-        name: "Market Street Wonton Mee",
-        dish: "Wonton Mee",
-        story:
-          "Thin egg noodles with char siew, a pair of wonton dumplings, and soup on the side. The char siew is roasted daily. Bankers eat this at 11:45am to beat the queue. It is absolutely worth the strategy.",
+        name: "Ah Liang Ipoh Hor Fun",
+        dish: "Shredded chicken hor fun",
+        story: "Silky Ipoh-style kway teow in savoury gravy with shredded chicken. Add the fried fish dumplings. It often has the centre's longest lunch queue.",
       },
       {
-        name: "Golden Shoe Bak Chor Mee",
-        dish: "Bak Chor Mee",
-        story:
-          "Minced pork noodles with vinegar, mushrooms, and lard. The dry version coats every strand. A bowl complex enough to make you forget you're eating at your desk. The CBD's most satisfying working lunch.",
+        name: "Yummy Nyonya Peranakan",
+        dish: "Nyonya rice & rendang",
+        story: "A Peranakan family's mix-and-match Nyonya rice stall, first opened at Golden Shoe in 2013. The tender beef rendang is the pick. Ayam buah keluak and chap chye are also on offer. Weekdays only.",
       },
     ],
   },
@@ -1879,81 +1948,81 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 24,
     slug: "hong-lim-market-food-centre",
     name: "Hong Lim Market & Food Centre",
-    address: "531A Upper Cross Street, Chinatown",
-    lat: 1.2816,
-    lng: 103.8448,
+    seoTitle:
+      "Hong Lim Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Hong Lim Food Centre guide: Outram Park char kway teow, Ji Ji wanton noodle, Tai Wah bak chor mee and Heng Kee curry chicken bee hoon.",
+    address:
+      "Blk 531A Upper Cross Street, Chinatown",
+    lat: 1.284470,
+    lng: 103.845863,
     region: "Central",
     tag: "Michelin Alert",
-    hours: "6am–10pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/hong-lim.jpg",
     description:
-      "A Chinatown institution stacked with legendary stalls, including Michelin Bib Gourmand favourite Outram Park Fried Kway Teow Mee.",
+      "A two-storey Chinatown-edge hawker centre from 1978 with four Bib Gourmand stalls and serious lunch queues.",
     mustTry: [
-      "Outram Park Fried Kway Teow Mee",
-      "Carrot Cake",
-      "Hakka Thunder Tea Rice",
+      "Outram Park char kway teow",
+      "Ji Ji char siew wanton mee",
+      "Tai Wah bak chor mee",
+      "Heng Kee curry chicken mee",
     ],
     famousFor:
-      "Home of Outram Park Fried Kway Teow Mee — smoky plates that draw queues from across the island.",
+      "One of Singapore's densest clusters of Bib Gourmand stalls, led by Outram Park Fried Kway Teow Mee's smoky char kway teow.",
     michelinNote:
-      "Outram Park Fried Kway Teow Mee holds Michelin Bib Gourmand recognition",
+      "Four stalls hold Bib Gourmand in the 2026 MICHELIN Guide Singapore: Outram Park Fried Kway Teow Mee (#02-17), Ji Ji Noodle House (#02-48/49), Tai Wah Pork Noodle (#02-16) and Heng Kee (#01-58).",
     vibes: ["Foodies", "Chinatown", "Michelin hunters", "Lunch queues"],
-    nearestMRT: "Chinatown (NE/DT Line) — 5 min walk",
+    nearestMRT:
+      "Chinatown (NE/DT Line) — short walk",
     tipForVisitors:
-      "Come early for fried kway teow; stalls can sell out. Explore the upper floors for lesser-known gems.",
+      "This is a lunch-crowd centre. Many top stalls close by mid-afternoon and on Sundays, and Outram Park's char kway teow queue can run past an hour. Arrive before 11.30am or after 1.30pm.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$4–$8",
+    budgetPerPax:
+      "$5–$10",
     story:
-      "Hong Lim Market & Food Centre stands at the edge of Chinatown, on ground that has been a centre of Chinese community life since the 1880s. The original Hong Lim Green — the open space the centre looks out onto — was where early Hokkien and Cantonese immigrants gathered, traded, and argued. The food centre that rose here carries that history without announcing it. The char kway teow uncle who fries one portion at a time and refuses to rush is not being difficult — he is being precise. In this part of Singapore, that kind of precision has always been the point.",
+      "Hong Lim Market & Food Centre opened in 1978 as one of the city's earliest hawker centres. It took in most of the street hawkers from nearby Hokkien Street. Some of today's best-known stalls are older than the building. Ji Ji Noodle House began as a pushcart on Chulia Street in 1965, moved here in 1978 and is now run by the family's third generation. Heng Kee's curry chicken bee hoon goes back to a pushcart on Synagogue Street. Today the two storeys hold over a hundred stalls and are packed at lunchtime with CBD office workers. They queue at Outram Park Fried Kway Teow Mee for smoky plates of char kway teow with egg and cockles, at Tai Wah for bak chor mee, and at Heng Kee for a gentle curry broth with tofu puffs. Four of these stalls hold Bib Gourmand in the 2026 MICHELIN Guide Singapore. Even so, the centre feels more like a neighbourhood canteen than a tourist stop.",
     vibeCheck: "Chinatown's most serious hawker centre — no shortcuts, no shortcuts accepted",
-    localQuote:
-      "The char kway teow uncle fries one portion at a time and refuses to rush. The queue respects this completely.",
     timeline: [
       {
-        year: "1880s",
-        event:
-          "Hong Lim Green established as a gathering point for Hokkien and Cantonese immigrant communities",
-      },
-      {
-        year: "1960s",
-        event:
-          "Hawker stalls formalise around Hong Lim Green — Chinatown's street food moves indoors",
+        year: "1965",
+        event: "Ji Ji's family starts selling wanton noodles from a pushcart on Chulia Street",
       },
       {
         year: "1978",
-        event:
-          "Hong Lim Market & Food Centre opens in its current form — multiple floors of stalls",
+        event: "Hong Lim Market & Food Centre opens, taking in most of the street hawkers from Hokkien Street",
       },
       {
-        year: "2016",
-        event:
-          "Outram Park Fried Kway Teow Mee receives Michelin Bib Gourmand recognition",
+        year: "1978",
+        event: "Ji Ji moves its wanton mee into the new centre",
       },
       {
-        year: "2020",
-        event:
-          "Named by food writers as one of Singapore's most authentic Chinese hawker experiences",
+        year: "2026",
+        event: "Four stalls hold Bib Gourmand: Outram Park, Ji Ji, Tai Wah and Heng Kee",
       },
     ],
     legendaryStalls: [
       {
         name: "Outram Park Fried Kway Teow Mee",
-        dish: "Char Kway Teow",
-        story:
-          "Michelin Bib Gourmand. One or two portions at a time, over the highest possible heat. Dark soy, lard, cockles, Chinese sausage, beansprouts. The wok hei is the kind you feel in your chest. One of the great plates of Singapore.",
+        dish: "Char kway teow",
+        story: "Bib Gourmand and one of Singapore's best-known char kway teow stalls. The noodles are smoky and come with egg and cockles; add extra of either. Waits can stretch to an hour or more. Closed Sundays.",
       },
       {
-        name: "Hong Lim Carrot Cake",
-        dish: "Carrot Cake",
-        story:
-          "White and black, both versions done with patience. The white is eggy and delicate. The black is sticky and slightly sweet. Fried in a seasoned wok that has not been cleaned into blandness. A reliable benchmark.",
+        name: "Ji Ji Noodle House",
+        dish: "Char siew wanton mee",
+        story: "Bib Gourmand. This family business began on a Chulia Street pushcart in 1965 and is now run by third-generation sisters. Get the signature bowl with char siew, fried wanton, pork crackling and the homemade chilli.",
       },
       {
-        name: "Hakka Thunder Tea Rice",
-        dish: "Lei Cha Fan",
-        story:
-          "A Hakka specialty almost extinct in Singapore — green tea poured over rice with an array of blanched vegetables and toppings. Earthy, herbal, and unlike anything else in the hawker centre repertoire. One of the last proper versions in the city.",
+        name: "Tai Wah Pork Noodle",
+        dish: "Bak chor mee",
+        story: "Bib Gourmand. Its bak chor mee comes with meatballs, dried fish and pork liver, dry or in soup. It is often confused with Hill Street Tai Hwa Pork Noodle in Crawford Lane; this is the Hong Lim stall at #02-16. Closed Mondays.",
+      },
+      {
+        name: "Heng Kee Curry Chicken Bee Hoon Mee",
+        dish: "Curry chicken bee hoon",
+        story: "Bib Gourmand. It was founded in the 1970s and is now run by the second generation. The curry is mild and well balanced, with custom-made tofu puffs, fish cake and tender chicken. It is on level 1, not the similarly named Ah Heng upstairs.",
       },
     ],
   },
@@ -1966,8 +2035,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "What to eat at People's Park Food Centre in Chinatown: mala xiang guo, loh mei, old-school dim sum buns and xiao long bao, plus the market's 100-year story.",
     address: "32 New Market Road, Chinatown",
-    lat: 1.2837,
-    lng: 103.8430,
+    lat: 1.284871,
+    lng: 103.842590,
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–10pm daily",
@@ -2046,82 +2115,85 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 26,
     slug: "east-coast-lagoon-food-village",
     name: "East Coast Lagoon Food Village",
-    address: "1220 East Coast Pkwy, East Coast",
-    lat: 1.3006,
-    lng: 103.9116,
+    seoTitle:
+      "East Coast Lagoon Food Village: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Seaside hawker centre in East Coast Park: Haron Satay, Stingray Forever sambal stingray, Song Kee oyster omelette and Lagoon Famous Carrot Cake.",
+    address:
+      "1220 East Coast Parkway, East Coast Park",
+    lat: 1.307730,
+    lng: 103.934303,
     region: "East",
     tag: "Supper Spot",
-    hours: "12pm–late night daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/east-coast-lagoon.jpg",
     description:
-      "Open-air seaside hawker village — satay smoke, chilli crab, sambal stingray, and BBQ wings with the sea steps away.",
+      "Singapore's seaside hawker centre in East Coast Park, known for charcoal satay, sambal stingray, oyster omelette and black-and-white carrot cake.",
     mustTry: [
-      "Satay",
-      "Chilli Crab",
-      "Sambal Stingray",
-      "BBQ Chicken Wings",
+      "Haron Satay 55 satay",
+      "Sambal stingray",
+      "Song Kee oyster omelette",
+      "Black & white carrot cake",
     ],
     famousFor:
-      "Open-air seaside satay and seafood — a classic East Coast supper under the stars.",
+      "Satay and barbecued seafood eaten by the sea, at what has long been described as Singapore's only seaside hawker centre.",
     michelinNote:
-      "Featured in Michelin Guide as a recommended Singapore experience",
+      "",
     vibes: ["Sea breeze", "Supper crew", "Families", "Weekend nights"],
-    nearestMRT: "Bedok (EW Line) — then Grab",
+    nearestMRT:
+      "Siglap (TE Line) — via Siglap Link into East Coast Park",
     tipForVisitors:
-      "Train to Bedok and Grab in for convenience. Bring mosquito repellent after dark by the coast.",
+      "Many stalls only open from mid-afternoon and some close one or two days a week, so go in the evening for the fullest line-up. The centre shuts for NEA cleaning a few days each quarter (e.g. 12–14 Oct 2026), so check before you head over.",
     halal: false,
     openLate: true,
-    budgetPerPax: "$12–$25",
+    budgetPerPax:
+      "$8–$25",
     story:
-      "East Coast Lagoon Food Village is the most cinematic hawker centre in Singapore. Open to the sea breeze, framed by casuarina trees, with the sound of waves competing with the sizzle of satay — it operates on a frequency that no indoor hawker centre can replicate. It was established in the 1970s when East Coast Park was reclaimed from the sea and handed to the public as parkland. The food village grew alongside the park's culture of cycling, barbecues, and weekend escapes. Today it is the definitive Singapore Saturday evening: sambal stingray on a banana leaf, cold beer in a plastic cup, and the sea just close enough to remind you that this city is an island.",
+      "East Coast Lagoon Food Village began as a deliberate piece of seaside design. Construction started in 1977 on land beside the newly completed lagoon, and the centre opened in late 1978 as a single-storey timber building with butterfly-roofed cooking sheds, pyramid-roofed shelters and a raised floor for views of the water; many of its first hawkers came over from Alkaff Lane. Business was slow through the 1980s, but by the late 1990s its stalls had island-wide fame. A $4.5 million revamp gave it a resort-like look, and it reopened as East Coast Lagoon Food Village in January 2004. Today the order of business is satay from Haron Satay 55, stingray in banana leaf from Stingray Forever, orh luak from Song Kee and carrot cake from a family stall that has fried it for more than half a century. Come at dusk, when the grills are lit and the park cools down.",
     vibeCheck: "Singapore by the sea — the meal, the breeze, the whole improbable thing",
-    localQuote:
-      "Satay by the sea with a cold beer as the sun goes down. Singapore does not get more perfect than this.",
     timeline: [
       {
-        year: "1970s",
-        event:
-          "East Coast Park created on reclaimed land — food village established as part of the public park",
+        year: "1977",
+        event: "Construction begins in April beside the newly completed East Coast lagoon",
       },
       {
-        year: "1980s",
-        event:
-          "Satay stalls and seafood vendors anchor the village — the open-air format becomes iconic",
+        year: "1978",
+        event: "Opens in late 1978 as a single-storey timber hawker centre facing the lagoon",
       },
       {
-        year: "1990s",
-        event:
-          "East Coast Park becomes Singapore's most popular recreational green — food village follows",
+        year: "2004",
+        event: "Reopens in January as East Coast Lagoon Food Village after a $4.5 million revamp",
       },
       {
-        year: "2000s",
-        event:
-          "Sambal stingray becomes the village's signature dish — banana leaf service becomes its ritual",
+        year: "2013",
+        event: "A June fire damages four stalls; centre closes about three months for a $1.5 million upgrade",
       },
       {
-        year: "2020",
-        event:
-          "East Coast Lagoon named in Michelin Guide — confirms what East-siders already knew",
+        year: "2021",
+        event: "Reopens on 1 February after a roughly three-month closure for repairs and redecoration",
       },
     ],
     legendaryStalls: [
       {
-        name: "East Coast Satay",
-        dish: "Charcoal Satay",
-        story:
-          "Beef, chicken, and mutton skewers grilled over real charcoal with a peanut sauce that is thick and properly complex. Ordered by the dozen. Eaten outdoors with the sea in the background. The most Singapore thing you can do on a weekend evening.",
+        name: "Haron Satay 55",
+        dish: "Chicken, beef & mutton satay",
+        story: "A Malay satay stall of more than 40 years at #01-55, grilling skewers to order and serving them with peanut sauce and ketupat. Expect a queue at dinner; order a mix of chicken and mutton.",
       },
       {
-        name: "Lagoon Sambal Stingray",
-        dish: "Sambal Stingray",
-        story:
-          "Stingray grilled on a banana leaf, loaded with house-made sambal, covered and steamed until the flesh pulls easily from the cartilage. Eaten with kangkong and rice. The East Coast signature that other hawker centres have tried and failed to replicate.",
+        name: "Stingray Forever BBQ Seafood",
+        dish: "Sambal stingray",
+        story: "At #01-43, the 'Hottest Stingray' comes on banana leaf under a thick layer of sambal. Round out the table with sambal lala or gong gong. An evening stall, so plan for dinner.",
       },
       {
-        name: "BBQ Seafood Station",
-        dish: "BBQ Chilli Crab & Wings",
-        story:
-          "Chilli crab with mantou, BBQ chicken wings, and lala in broth. Best ordered as a table spread and eaten over two hours. The East Coast way of eating — slow, communal, unhurried by anything except the tide.",
+        name: "Song Kee Fried Oyster",
+        dish: "Oyster omelette",
+        story: "At #01-15, choose between the crisp, starchy fried oyster (orh luak) and the eggier oyster egg (orh neng). A long-time evening favourite for orh luak fans in the east.",
+      },
+      {
+        name: "Lagoon Famous Carrot Cake",
+        dish: "Black & white carrot cake",
+        story: "Formerly Lagoon Carrot Cake, this #01-40 stall has served customers for more than 50 years. Get a plate of crisp white and sweet black carrot cake, and add a roll of its popiah.",
       },
     ],
   },
@@ -2129,76 +2201,85 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 27,
     slug: "marine-parade-food-centre",
     name: "Marine Parade Food Centre",
-    address: "76 Marine Parade Central, Marine Parade",
-    lat: 1.3021,
-    lng: 103.9050,
+    seoTitle:
+      "Marine Parade Central Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Marine Parade Central Market & Food Centre (Promenade Market @ 84): Neptune dim sum, Kun Ji duck rice, New World Congee and D'Authentic nasi lemak.",
+    address:
+      "Blk 84 Marine Parade Central, Marine Parade",
+    lat: 1.302330,
+    lng: 103.906387,
     region: "East",
     tag: "Local Favourite",
-    hours: "6am–10pm daily",
+    hours:
+      "7am–10pm daily (stall hours vary)",
     imageUrl: "/images/hawkers/marine-parade.jpg",
     description:
-      "Neighbourhood Katong hawker centre — laksa, rojak, and satay bee hoon for east-side families.",
-    mustTry: ["Katong Laksa", "Rojak", "Satay Bee Hoon"],
+      "Revamped neighbourhood market and food centre at Blk 84 Marine Parade Central, known for hawker dim sum, braised duck, Cantonese congee and nasi lemak.",
+    mustTry: [
+      "Neptune HK dim sum",
+      "Kun Ji braised duck rice",
+      "New World Congee",
+      "D'Authentic nasi lemak",
+    ],
     famousFor:
-      "The neighbourhood Katong centre — heritage flavours a short walk from Marine Parade.",
-    michelinNote: "",
+      "Hawker-style Hong Kong dim sum and long-running family stalls serving the Marine Parade estate beside Parkway Parade.",
+    michelinNote:
+      "",
     vibes: ["East Coast locals", "Families", "Katong", "Breakfast"],
-    nearestMRT: "Marine Parade (TE Line) — 5 min walk",
+    nearestMRT:
+      "Marine Parade (TE Line) — short walk",
     tipForVisitors:
-      "Combine with a walk toward Katong shophouses — perfect east-side food crawl.",
+      "Come in the morning: many of the best stalls, including the nasi lemak and dim sum, close by early afternoon or early evening. Neptune Hong Kong Dim Sum is closed on Wednesdays.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$4–$8",
+    budgetPerPax:
+      "$4–$10",
     story:
-      "Marine Parade is Katong's neighbourhood market — the one that serves the community between the famous shophouses on East Coast Road and the sea. Built in the 1970s to serve the Marine Parade estate, it has been feeding the families of this predominantly Peranakan and Eurasian neighbourhood for fifty years. The laksa here is Katong-style — thick coconut broth, cockles, and cut noodles short enough to eat with a spoon alone. The neighbourhood has gentrified considerably around it. The food centre has not followed suit. That is not stubbornness. That is dignity.",
+      "Marine Parade was built on land reclaimed from the sea from 1966 onwards. HDB completed the estate's first phase, with about 6,000 flats, a market, shops and offices, in 1973, and the whole estate was finished in 1976. The market and food centre at Block 84 sits at the heart of that town centre, beside Parkway Parade. After a multi-year revamp it reopened in 2019, brighter and airier, and many original stallholders came back. Since Marine Parade station opened on the Thomson-East Coast Line in June 2024, the centre has been a short walk from the train. Its reputation rests on steady neighbourhood cooking rather than celebrity. Neptune Hong Kong Dim Sum has steamed har gow and siew mai here for decades. Kun Ji has braised duck for more than 40 years, New World Congee follows a recipe dating to 1958, and D'Authentic lays out a spread of nasi lemak toppings.",
     vibeCheck: "Katong's neighbourhood kitchen — the one the locals actually use",
-    localQuote:
-      "The best laksa is not always at the famous place. The Katong locals know exactly where to go.",
     timeline: [
       {
-        year: "1970s",
-        event:
-          "Marine Parade estate developed on reclaimed land — food centre built as the community anchor",
+        year: "1966",
+        event: "Land reclamation begins along the east coast, creating the land Marine Parade stands on",
       },
       {
-        year: "1980s",
-        event:
-          "Katong-style laksa establishes itself as the centre's signature — a neighbourhood ritual begins",
+        year: "1973",
+        event: "HDB completes the estate's first phase: about 6,000 flats plus a market, shops and offices",
       },
       {
-        year: "2000s",
-        event:
-          "East Coast Road gentrifies — Marine Parade Food Centre remains affordable and local",
+        year: "1976",
+        event: "Marine Parade estate completed: 57 blocks and 8,015 flats",
       },
       {
-        year: "2011",
-        event:
-          "Marine Parade MRT station planned — new accessibility brings the centre wider recognition",
+        year: "2019",
+        event: "Blk 84 market and food centre reopens after a multi-year revamp, with many original stallholders returning",
       },
       {
-        year: "2020",
-        event:
-          "Remains the definitive neighbourhood food centre for Marine Parade's long-term community",
+        year: "2024",
+        event: "Marine Parade MRT station opens on the Thomson-East Coast Line (23 June)",
       },
     ],
     legendaryStalls: [
       {
-        name: "Marine Parade Katong Laksa",
-        dish: "Katong Laksa",
-        story:
-          "Thick, coconut-rich broth with cut bee hoon, cockles, tau pok, and a sambal that is properly spiced. The noodles are pre-cut so you can eat with a spoon. The Katong way — unpretentious, deeply flavoured, impossible to stop at one bowl.",
+        name: "Neptune Hong Kong Dim Sum",
+        dish: "Har gow & siew mai",
+        story: "A fixture at #01-26 for decades, steaming hawker-priced dim sum. Seth Lui's 2025 showdown preferred its har gow and siew mai to its newer neighbour's. Also try the xiao long bao and crispy durian spring roll.",
       },
       {
-        name: "Katong Rojak",
-        dish: "Rojak",
-        story:
-          "Pineapple, cucumber, turnip, you tiao, and tau pok dressed in a thick shrimp paste sauce and crushed peanuts. The sauce is the thing — dark, sweet, and funky in exactly the right way. A dish that tourists overlook and locals prioritise.",
+        name: "Kun Ji Duck Rice",
+        dish: "Braised duck rice",
+        story: "More than 40 years at the centre (#01-25), braising duck since the 1980s. Order braised duck rice or porridge and add braised tau kwa. Closed Tuesdays.",
       },
       {
-        name: "Marine Parade Satay Bee Hoon",
-        dish: "Satay Bee Hoon",
-        story:
-          "Thin rice noodles in a peanut-based gravy with satay, cockles, and vegetables. A dish unique to Singapore's east coast hawker centres — rich, peanutty, and unlike anything else. The kind of plate that makes you wonder why it isn't everywhere.",
+        name: "New World Congee",
+        dish: "Cantonese congee",
+        story: "Smooth Cantonese porridge at #01-45 from a recipe dating to 1958 and handed down through four generations. The minced meat congee with scallion or peanuts is the classic order. Closed Fridays.",
+      },
+      {
+        name: "D'Authentic Nasi Lemak",
+        dish: "Nasi lemak",
+        story: "A long-running morning stall at #01-36 where you build your own plate from more than a dozen toppings: fried chicken wing, egg, ikan bilis, tempeh, begedil and sambal. It closes by early afternoon and on Fridays.",
       },
     ],
   },
@@ -2212,8 +2293,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     name:
       "Berseh Food Centre",
     address: "166 Jalan Besar, Jalan Besar",
-    lat: 1.3065,
-    lng: 103.8573,
+    lat: 1.307335,
+    lng: 103.856850,
     region: "Central",
     tag: "Local Favourite",
     hours:
@@ -2292,29 +2373,81 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 29,
     slug: "ghim-moh-market-food-centre",
     name: "Ghim Moh Market & Food Centre",
-    address: "20 Ghim Moh Road, Ghim Moh",
-    lat: 1.3101,
-    lng: 103.7888,
+    seoTitle:
+      "Ghim Moh Market & Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Ghim Moh Food Centre guide: Ghim Moh Chwee Kueh, Bib Gourmand Chuan Kee braised duck rice, Ghim Moh Carrot Cake and Hin Fried Hor Fun.",
+    address:
+      "Blk 20 Ghim Moh Road, Ghim Moh",
+    lat: 1.311060,
+    lng: 103.788292,
     region: "West",
     tag: "Local Favourite",
-    hours: "6am–10pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/ghim-moh.jpg",
     description:
-      "West-side institution home to Michelin Bib Gourmand chwee kueh, plus laksa and wonton noodles.",
-    mustTry: ["Ghim Moh Chwee Kueh", "Laksa", "Wonton Noodles"],
+      "Buona Vista's breakfast hub, home to 1959-founded Ghim Moh Chwee Kueh, Bib Gourmand braised duck and an early-morning carrot cake queue.",
+    mustTry: [
+      "Ghim Moh Chwee Kueh",
+      "Chuan Kee braised duck rice",
+      "Ghim Moh Carrot Cake",
+      "Hin Fried Hor Fun",
+    ],
     famousFor:
-      "Ghim Moh Chwee Kueh — silky rice cakes with generous chai poh topping.",
+      "Ghim Moh Chwee Kueh's handmade rice cakes with chye poh, made by a stall founded in 1959.",
     michelinNote:
-      "Ghim Moh Chwee Kueh holds Michelin Bib Gourmand recognition",
+      "Chuan Kee Boneless Braised Duck (#01-04) holds a Bib Gourmand in the 2026 MICHELIN Guide Singapore. Ghim Moh Chwee Kueh (#01-54) is listed in the 2026 guide but is not on the 2026 Bib Gourmand list.",
     vibes: ["Westies", "Breakfast", "Families", "Hawker heritage"],
-    nearestMRT: "Buona Vista (EW/CC Line) — 10 min walk",
+    nearestMRT:
+      "Buona Vista (EW/CC Line) — short walk",
     tipForVisitors:
-      "Morning is busiest for chwee kueh and market shopping — come before 9am on weekends.",
+      "Come early: Ghim Moh Carrot Cake's queue can start around 6.30am and portions are limited, and many stalls close by early afternoon. The centre shuts for a few days for cleaning several times a year, so check NEA's closure list before you go.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$3–$7",
-    localQuote:
-      "The chwee kueh here has been made the same way for five decades. Generations of Holland Road families will confirm it is the best.",
+    budgetPerPax:
+      "$3–$8",
+    story:
+      "Ghim Moh is a neighbourhood centre in the truest sense: a wet market downstairs from the hawker stalls at Blk 20, a short walk from Buona Vista MRT, its tables filled from dawn by residents of the surrounding flats. Its most famous stall, Ghim Moh Chwee Kueh, was founded in 1959, and it still turns out soft steamed rice cakes heaped with savoury chye poh and a mildly spicy sambal, sold in sets of four or more. A few stalls away, Chuan Kee Boneless Braised Duck holds a 2026 Michelin Bib Gourmand for its Teochew-style duck over rice, porridge or noodles. The centre has lost legends too: Guan Kee Fried Kway Teow, which moved here in 1978 and earned a Bib Gourmand in 2019, closed in 2023 when its owners retired after 54 years. In 2024 the centre shut for about ten weeks of repairs, gaining a new roof, brighter lighting and free toilets, then reopened with its old-school character intact.",
+    timeline: [
+      {
+        year: "1959",
+        event: "Ghim Moh Chwee Kueh is founded; it is now the centre's best-known stall.",
+      },
+      {
+        year: "1978",
+        event: "Guan Kee Fried Kway Teow moves to Ghim Moh from Thye Hong Centre in Redhill.",
+      },
+      {
+        year: "2023",
+        event: "Guan Kee Fried Kway Teow, a 2019 Bib Gourmand stall, closes as its owners retire after 54 years.",
+      },
+      {
+        year: "2024",
+        event: "The centre closes from early March for about 2.5 months of repairs (new roof, lighting, fans, upgraded free toilets) and reopens on 11 May.",
+      },
+      {
+        year: "2026",
+        event: "Chuan Kee Boneless Braised Duck is named a Bib Gourmand in the 2026 MICHELIN Guide Singapore.",
+      },
+    ],
+    legendaryStalls: [
+      {
+        name: "Ghim Moh Chwee Kueh",
+        dish: "Chwee kueh",
+        story: "Founded in 1959 and listed in the 2026 Michelin Guide. Order at least four of the soft, handmade rice cakes, topped with savoury chye poh and a mildly spicy sambal.",
+      },
+      {
+        name: "Chuan Kee Boneless Braised Duck",
+        dish: "Braised duck rice",
+        story: "A 2026 Bib Gourmand stall serving juicy Teochew-style boneless braised duck with rice, porridge, kway teow or noodles. Add braised egg, gizzard or liver.",
+      },
+      {
+        name: "Ghim Moh Carrot Cake",
+        dish: "Fried carrot cake",
+        story: "Family-run stall that makes its carrot cake and chye poh from scratch daily. Choose black or white, or ask for half-and-half. Go early, because portions are limited and the queue forms from around 6.30am.",
+      },
+    ],
   },
   {
     id: 30,
@@ -2325,8 +2458,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     seoDescription:
       "Alexandra Village Food Centre in Bukit Merah: Michelin Bib Gourmand claypot laksa, Hokkien Street prawn mee, xiao long bao and soya sauce chicken. The best stalls.",
     address: "120 Bukit Merah Lane 1, Alexandra",
-    lat: 1.2891,
-    lng: 103.8128,
+    lat: 1.286360,
+    lng: 103.804550,
     region: "Central",
     tag: "Local Favourite",
     hours: "6am–11pm daily",
@@ -2473,76 +2606,85 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     id: 32,
     slug: "pasir-panjang-food-centre",
     name: "Pasir Panjang Food Centre",
-    address: "121 Pasir Panjang Road, Pasir Panjang",
-    lat: 1.2763,
-    lng: 103.7921,
+    seoTitle:
+      "Pasir Panjang Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+    seoDescription:
+      "Pasir Panjang Food Centre guide: Ivy's Hainanese herbal mutton soup, Alan Banana Leaves BBQ seafood, Yusoff Haji Jalal satay and KS fruit rojak.",
+    address:
+      "121 Pasir Panjang Road, Pasir Panjang",
+    lat: 1.275659,
+    lng: 103.791557,
     region: "West",
     tag: "Hidden Gem",
-    hours: "6am–10pm daily",
+    hours:
+      "Hours vary by stall",
     imageUrl: "/images/hawkers/pasir-panjang.webp",
     description:
-      "A quiet underrated hawker centre near the Southern Ridges — zi char and stir-fry favourites without the city buzz.",
-    mustTry: ["Zi Char", "Sambal Sotong", "Prawn Paste Chicken"],
+      "A 1978 food centre beside Pasir Panjang MRT, known for BBQ seafood, zi char, evening satay and Ivy's Michelin-listed herbal mutton soup.",
+    mustTry: [
+      "Ivy's Herbal Mutton Soup",
+      "BBQ Stingray",
+      "Yusoff Haji Jalal Satay",
+      "KS Fruit Rojak",
+    ],
     famousFor:
-      "Quiet centre near the Southern Ridges — underrated zi char and wok favourites.",
-    michelinNote: "",
+      "BBQ seafood and zi char at dinnertime, plus a Michelin-listed Hainanese herbal mutton soup.",
+    michelinNote:
+      "Ivy's Hainanese Herbal Mutton Soup (#01-14) is listed in the 2026 MICHELIN Guide Singapore (no Bib Gourmand or star).",
     vibes: ["West Coast", "Zi char", "Quiet eats", "Hikers"],
-    nearestMRT: "Pasir Panjang (CC Line) — 8 min walk",
+    nearestMRT:
+      "Pasir Panjang (CC Line) — next door",
     tipForVisitors:
-      "Pair with Kent Ridge or Southern Ridges — reward yourself with a communal zi char feast.",
+      "Ivy's mutton soup is a daytime stall (closed Sundays), while the BBQ seafood and satay stalls open only in the evening and are closed Mondays and Tuesdays. For the full spread, go Wednesday to Sunday.",
     halal: false,
     openLate: false,
-    budgetPerPax: "$5–$12",
+    budgetPerPax:
+      "$5–$10",
     story:
-      "Pasir Panjang — 'long sand' in Malay — was the beach that edged Singapore's southwestern shore before land reclamation pushed the coast outward. The food centre that bears the name sits near the Southern Ridges, surrounded by the last traces of the old kampung life that once defined this part of the island. The zi char stalls here cook for serious eaters — people who have hiked the ridges and arrived with genuine appetites. The sambal sotong is made fresh. The prawn paste chicken is fried to order. In a city that often favours novelty, Pasir Panjang Food Centre is quietly, confidently old.",
+      "Pasir Panjang Food Centre was built in 1978 and sits right beside Pasir Panjang MRT station on the Circle Line. It is a compact centre of 45 cooked-food stalls with no wet market attached. NEA sums up its reputation as BBQ seafood and zi char, and the evening trade bears that out. Alan Banana Leaves BBQ Seafood, a family business started by Alan Chong and now run by his son, fires up for dinner, and Yusoff Haji Jalal Satay opens only at night. At lunch, Ivy's Hainanese Herbal Mutton Soup ladles mutton and tendon soup, heavy with herbs, into claypots. The stall moved here from Kim Keat Palm and is listed in the 2026 MICHELIN Guide Singapore. The centre closed from December 2025 to February 2026 for repairs and redecoration, and reopened with a new frontage and a neon sign. Bring a group to share the seafood plates.",
     vibeCheck: "The Southern Ridges' reward — zi char for people who have earned it",
-    localQuote:
-      "Come after hiking the Southern Ridges. It is the best possible reward for the effort.",
     timeline: [
       {
-        year: "1950s",
-        event:
-          "Pasir Panjang establishes itself as a kampung community along Singapore's southwestern shore",
+        year: "1978",
+        event: "Pasir Panjang Food Centre built at 121 Pasir Panjang Road",
       },
       {
-        year: "1972",
-        event:
-          "Battle of Pasir Panjang memorial established nearby — the area's wartime history formalised",
+        year: "2011",
+        event: "Pasir Panjang MRT station on the Circle Line opens beside the food centre (8 October)",
       },
       {
-        year: "1980s",
-        event:
-          "Pasir Panjang Food Centre opens — serves the remaining kampung community and new HDB residents",
+        year: "2016",
+        event: "Ivy's Hainanese Herbal Mutton Soup reported as having moved here from Kim Keat Palm Market",
       },
       {
-        year: "2000s",
-        event:
-          "Southern Ridges park connector opens — hikers discover the food centre as a post-trail destination",
+        year: "2025",
+        event: "Closes on 1 December for repairs and redecoration (until 28 February 2026)",
       },
       {
-        year: "2020",
-        event:
-          "Quiet, consistent, and completely beloved by the community that has always known about it",
+        year: "2026",
+        event: "Reopens in March with a refreshed exterior and neon sign; Ivy's listed in the 2026 MICHELIN Guide",
       },
     ],
     legendaryStalls: [
       {
-        name: "Pasir Panjang Zi Char",
-        dish: "Zi Char Spread",
-        story:
-          "A full zi char menu cooked to order over high heat. The sambal kangkong is properly blistered, the tofu is silky inside and crispy out. Best ordered as a table of four after the Southern Ridges walk — portions are made for sharing and for hunger.",
+        name: "Ivy's Hainanese Herbal Mutton Soup",
+        dish: "Herbal mutton soup",
+        story: "Listed in the 2026 MICHELIN Guide. Mutton or tendon soup arrives bubbling in a claypot with tofu puffs, wood ear fungus and beancurd skin. Add mee sua or rice. Daytime only; closed Sundays.",
       },
       {
-        name: "Southern Ridges Sambal Sotong",
-        dish: "Sambal Sotong",
-        story:
-          "Squid wok-fried in a house-made sambal with onion and fresh chilli. The sambal is made each morning — you can taste the difference from the pre-made versions. Tender, spiced, and deeply satisfying in the way that only fresh sambal achieves.",
+        name: "Alan Banana Leaves BBQ Seafood",
+        dish: "BBQ stingray, zi char",
+        story: "A family business Alan Chong started with satay before adding zi char. His son Elvin now runs it. Order the BBQ stingray, salted egg or cereal prawns and sambal kangkong. Dinner only; closed Mondays and Tuesdays.",
       },
       {
-        name: "Prawn Paste Chicken",
-        dish: "Har Cheong Gai",
-        story:
-          "Chicken marinated in fermented prawn paste and fried until the crust shatters. The prawn paste is pungent and complex — it perfumes the meat all the way through. A dish that rewards the adventurous and converts the hesitant without fail.",
+        name: "Yusoff Haji Jalal Satay",
+        dish: "Satay",
+        story: "An evening-only satay stall (#01-21) selling beef, mutton, chicken and babat skewers with ketupat and peanut gravy. Long-time regulars remember it as an old-school satay institution. Open Wednesday to Sunday nights.",
+      },
+      {
+        name: "KS Fruit Rojak · BBQ Rojak",
+        dish: "Fruit rojak",
+        story: "Classic fruit rojak tossed in thick prawn-paste sauce at #01-45. Ask for the version with cuttlefish and century egg. Closed Sundays.",
       },
     ],
   },

@@ -1,59 +1,70 @@
-/** NEA hawker centre temporary closure notices (data.gov.sg). */
+/**
+ * NEA hawker centre closure schedule (data.gov.sg "Dates of Hawker Centres
+ * Closure"): quarterly cleaning dates plus longer "other works" closures.
+ */
 const CLOSURES_RESOURCE_ID = "d_bda4baa634dd1cc7a6c7cad5f19e2d68";
 
 export type ClosureStatus = {
-  status: "closed" | "open";
+  /** "unknown" = centre isn't in NEA's dataset (e.g. privately run). */
+  status: "closed" | "open" | "unknown";
   reason?: string;
   startDate?: string;
   endDate?: string;
+  /** Next scheduled closure, if any (only set when currently open). */
+  nextReason?: string;
+  nextStartDate?: string;
+  nextEndDate?: string;
 };
 
-/** Maps site hawker centre names to NEA dataset `name` values. */
+/** Site hawker centre name → exact NEA dataset `name`. */
 const NEA_NAME_MAP: Record<string, string> = {
-  "Maxwell Food Centre": "Maxwell Road Hawker Centre",
-  "Lau Pa Sat": "Lau Pa Sat (Telok Ayer Market)",
-  "Old Airport Road Food Centre": "Old Airport Road Food Centre",
-  "Chinatown Complex Food Centre": "Chinatown Complex Food Centre",
+  "Maxwell Food Centre": "Maxwell Food Centre (Kim Hua Market)",
+  "Old Airport Road Food Centre":
+    "Old Airport Road Blk 51 (51 Old Airport Road Food Centre and Shopping Mall)",
+  "Chinatown Complex Food Centre":
+    "Smith Street Blk 335 (Chinatown Complex Market)",
   "Newton Food Centre": "Newton Food Centre",
-  "Tekka Centre": "Tekka Market",
+  "Tekka Centre": "Buffalo Road Blk 665 (Tekka Centre/Zhu Jiao Market)",
   "Adam Road Food Centre": "Adam Road Food Centre",
-  "Bedok Interchange Hawker Centre": "Bedok Interchange Hawker Centre",
-  "Bedok 85 Fengshan Market": "Fengshan Food Centre",
-  "Tampines Round Market": "Tampines Round Market & Food Centre",
+  "Bedok Interchange Hawker Centre":
+    "New Upper Changi Road Blk 208B (Bedok Interchange Hawker Centre)",
+  "Bedok 85 Fengshan Market":
+    "Bedok North Street 4 Blk 85 (85 Fengshan Centre)",
+  "Tampines Round Market":
+    "Tampines Street 11 Blk 137 (Tampines Round Market and Food Centre)",
   "Geylang Serai Market": "Geylang Serai Market",
   "Amoy Street Food Centre": "Amoy Street Food Centre (Telok Ayer Food Centre)",
   "Tiong Bahru Market": "Tiong Bahru Market",
-  "ABC Brickworks Market": "ABC Brickworks Market & Food Centre",
-  "Buona Vista Market": "Buona Vista Market",
-  "Clementi 448 Market": "Clementi 448 Market & Food Centre",
-  "Jurong West 505 Market": "Jurong West 505 Market & Food Centre",
+  "ABC Brickworks Market":
+    "Jalan Bukit Merah Blk 6 (ABC Brickworks Market/Food Centre)",
+  "Holland Drive Market & Food Centre":
+    "Holland Drive Blk 44 (Holland Drive Market and Food Centre)",
+  "Clementi 448 Market": "Clementi Ave 3 Blk 448",
+  "Jurong West 505 Market": "Jurong West Street 52 Blk 505",
   "Yishun Park Hawker Centre": "Yishun Park Hawker Centre",
-  "Sembawang Hills Food Centre": "Sembawang Hills Food Centre",
-  "Chong Pang Market": "Chong Pang Market & Food Centre",
-  "Woodlands Centre Market": "Woodlands Centre Market & Food Centre",
-  "Toa Payoh Lorong 8 Market": "Toa Payoh Lorong 8 Market",
-  "Golden Shoe Market Street": "Golden Shoe Food Market",
-  "Hong Lim Market & Food Centre": "Hong Lim Market & Food Centre",
-  "People's Park Food Centre": "People's Park Food Centre",
+  "Sembawang Hills Food Centre":
+    "Sembawang Hills Food Centre (Jalan Leban Food Centre)",
+  "Chong Pang Market":
+    "Yishun Ring Road Blk 104/105 (Chong Pang Market and Food Centre)",
+  "Marsiling Mall Hawker Centre": "Marsiling Mall Hawker Centre",
+  "Toa Payoh Lorong 8 Market": "Toa Payoh Lorong 8 Blk 210",
+  "Market Street Hawker Centre (Golden Shoe)": "Market Street Hawker Centre",
+  "Hong Lim Market & Food Centre":
+    "Upper Cross Street Blk 531A (Hong Lim Food Centre and Market)",
+  "People's Park Food Centre":
+    "New Market Road Blk 32 (People's Park Food Centre)",
   "East Coast Lagoon Food Village": "East Coast Lagoon Food Village",
-  "Marine Parade Food Centre": "Marine Parade Food Centre",
-  "Jalan Berseh Food Centre": "Jalan Berseh Food Centre",
-  "Ghim Moh Market & Food Centre": "Ghim Moh Market & Food Centre",
-  "Alexandra Village Food Centre": "Alexandra Village Food Centre",
-  "Bishan Street 13 Food Centre": "Bishan Street 13 Market & Food Centre",
+  "Marine Parade Food Centre":
+    "Marine Parade Central Blk 84 (84 Marine Parade Central Market and Food Centre)",
+  "Berseh Food Centre": "Berseh Food Centre",
+  "Ghim Moh Market & Food Centre": "Ghim Moh Road Blk 20",
+  "Alexandra Village Food Centre":
+    "Bukit Merah Lane 1 Blk 120 (Alexandra Village Food Centre)",
+  "Shunfu Market & Food Centre": "Shunfu Road Blk 320 (Shunfu Mart)",
   "Pasir Panjang Food Centre": "Pasir Panjang Food Centre",
 };
 
-type NeaClosureRow = {
-  name?: string;
-  NAME?: string;
-  start_date?: string;
-  START_DATE?: string;
-  end_date?: string;
-  END_DATE?: string;
-  type_of_closure?: string;
-  TYPE_OF_CLOSURE?: string;
-};
+type NeaClosureRow = Record<string, string | number | undefined>;
 
 let cachedClosures: NeaClosureRow[] | null = null;
 let cacheTime = 0;
@@ -64,7 +75,6 @@ async function fetchClosures(): Promise<NeaClosureRow[]> {
   if (cachedClosures && now - cacheTime < CACHE_TTL) {
     return cachedClosures;
   }
-
   try {
     const res = await fetch(
       `https://data.gov.sg/api/action/datastore_search?resource_id=${CLOSURES_RESOURCE_ID}&limit=1000`,
@@ -81,62 +91,92 @@ async function fetchClosures(): Promise<NeaClosureRow[]> {
   }
 }
 
-function rowName(r: NeaClosureRow): string {
-  return (r.name ?? r.NAME ?? "").toLowerCase();
+/** Parses NEA's "d/m/yyyy" dates; returns a UTC-midnight timestamp or null for "NA"/"TBC". */
+function parseNeaDate(value: unknown): number | null {
+  const m = String(value ?? "").trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (!m) return null;
+  return Date.UTC(Number(m[3]), Number(m[2]) - 1, Number(m[1]));
+}
+
+/** Today's date in Singapore, as a UTC-midnight timestamp. */
+function todaySingapore(): number {
+  const sg = new Date(Date.now() + 8 * 60 * 60 * 1000);
+  return Date.UTC(sg.getUTCFullYear(), sg.getUTCMonth(), sg.getUTCDate());
+}
+
+function formatDate(ts: number): string {
+  return new Date(ts).toLocaleDateString("en-SG", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+function clean(remark: unknown): string | null {
+  const s = String(remark ?? "").trim();
+  return s && s.toLowerCase() !== "nil" && s.toLowerCase() !== "na" ? s : null;
+}
+
+type Window = { start: number; end: number; reason: string };
+
+function closureWindows(row: NeaClosureRow): Window[] {
+  const out: Window[] = [];
+  for (const q of ["q1", "q2", "q3", "q4"]) {
+    const start = parseNeaDate(row[`${q}_cleaningstartdate`]);
+    const end = parseNeaDate(row[`${q}_cleaningenddate`]);
+    if (start !== null && end !== null) {
+      out.push({
+        start,
+        end,
+        reason: clean(row[`remarks_${q}`]) ?? "quarterly cleaning",
+      });
+    }
+  }
+  const ws = parseNeaDate(row.other_works_startdate);
+  const we = parseNeaDate(row.other_works_enddate);
+  if (ws !== null && we !== null) {
+    out.push({
+      start: ws,
+      end: we,
+      reason: clean(row.remarks_other_works) ?? "repairs and other works",
+    });
+  }
+  return out.sort((a, b) => a.start - b.start);
 }
 
 function computeClosureStatus(
   hawkerName: string,
   records: NeaClosureRow[],
 ): ClosureStatus {
-  const neaName = NEA_NAME_MAP[hawkerName] ?? hawkerName;
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const neaName = (NEA_NAME_MAP[hawkerName] ?? hawkerName).toLowerCase();
+  const row = records.find(
+    (r) => String(r.name ?? "").trim().toLowerCase() === neaName,
+  );
+  if (!row) return { status: "unknown" };
 
-  const neaFirst = neaName.toLowerCase().split(" ")[0] ?? "";
+  const today = todaySingapore();
+  const windows = closureWindows(row);
 
-  const matches = records.filter((r) => {
-    const rName = rowName(r);
-    const rFirst = rName.split(" ")[0] ?? "";
-    return (
-      rName.includes(neaFirst) ||
-      neaName.toLowerCase().includes(rFirst)
-    );
-  });
-
-  for (const record of matches) {
-    const startDate = new Date(
-      record.start_date || record.START_DATE || "",
-    );
-    const endDate = new Date(record.end_date || record.END_DATE || "");
-    const reason =
-      record.type_of_closure ||
-      record.TYPE_OF_CLOSURE ||
-      "Temporary Closure";
-
-    if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
-      continue;
-    }
-
-    if (today >= startDate && today <= endDate) {
-      return {
-        status: "closed",
-        reason,
-        startDate: startDate.toLocaleDateString("en-SG", {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        }),
-        endDate: endDate.toLocaleDateString("en-SG", {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        }),
-      };
-    }
+  const current = windows.find((w) => today >= w.start && today <= w.end);
+  if (current) {
+    return {
+      status: "closed",
+      reason: current.reason,
+      startDate: formatDate(current.start),
+      endDate: formatDate(current.end),
+    };
   }
 
-  return { status: "open" };
+  const next = windows.find((w) => w.start > today);
+  return next
+    ? {
+        status: "open",
+        nextReason: next.reason,
+        nextStartDate: formatDate(next.start),
+        nextEndDate: formatDate(next.end),
+      }
+    : { status: "open" };
 }
 
 export async function getClosureStatus(hawkerName: string): Promise<ClosureStatus> {
