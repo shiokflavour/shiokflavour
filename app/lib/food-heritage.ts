@@ -1293,11 +1293,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     ],
     bestStalls: [
       {
-        name: "Boon Tat Street Satay",
-        address: "Lau Pa Sat, 18 Raffles Quay (street closure from 7pm)",
+        name: "Best Satay 7 & 8 (Satay Street)",
+        address: "Boon Tat Street, beside Lau Pa Sat, 18 Raffles Quay",
         area: "CBD",
-        note: "The most atmospheric satay experience in Singapore — over 20 stalls, charcoal smoke, and the whole city humming around you",
-        mapsUrl: "https://maps.google.com/?q=Boon+Tat+Street+Satay+Lau+Pa+Sat+Singapore",
+        note: "Satay Street: the road beside Lau Pa Sat fills with satay carts from 7pm on weekdays and 3pm at weekends. Charcoal smoke, plastic stools and the CBD towers overhead",
+        mapsUrl: "https://maps.google.com/?q=Satay+Street+Lau+Pa+Sat+Singapore",
       },
       {
         name: "Satay by the Bay",
@@ -2160,9 +2160,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       { name: "Hard-Boiled Egg", emoji: "🥚", role: "Halved and placed in the gravy — absorbs the braising liquid and adds richness. The yolk broken into the gravy thickens it further." },
     ],
     bestStalls: [
-      { name: "Toa Payoh Lor Mee", address: "Old Airport Road Food Centre, #01-25, 51 Old Airport Rd", area: "Kallang", note: "The most consistent lor mee in Singapore — the gravy ratio is perfect every single service and the braised pork is always tender", mapsUrl: "https://maps.google.com/?q=Toa+Payoh+Lor+Mee+Old+Airport+Road+Singapore" },
-      { name: "Bedok Lor Mee", address: "Bedok Interchange Hawker Centre, #01-22, 208 New Upper Changi Rd", area: "Bedok", note: "East-side version with a slightly darker, more intensely seasoned gravy — the vinegar here is served in a squeeze bottle for full tableside control", mapsUrl: "https://maps.google.com/?q=Bedok+Interchange+Hawker+Centre+Lor+Mee+Singapore" },
-      { name: "Lim Lor Mee", address: "Toa Payoh Lorong 8 Market, #01-12", area: "Toa Payoh", note: "Heartland classic — the gravy has been the same recipe for thirty years and the regular customers know not to request changes", mapsUrl: "https://maps.google.com/?q=Toa+Payoh+Lorong+8+Lor+Mee+Singapore" },
+      { name: "Xin Mei Xiang Zheng Zong Lor Mee", address: "Old Airport Road Food Centre, #01-116, 51 Old Airport Rd", area: "Kallang", note: "Serving lor mee at Old Airport Road since the centre opened in the 1970s. Thick, starchy gravy with braised pork and fish; add garlic and black vinegar to taste", mapsUrl: "https://maps.google.com/?q=Xin+Mei+Xiang+Zheng+Zong+Lor+Mee+Old+Airport+Road+Singapore" },
+      { name: "Mei Xiang Lor Mee", address: "Bedok Interchange Hawker Centre, #01-10, 208B New Upper Changi Rd", area: "Bedok", note: "An everyday east-side bowl right by Bedok MRT, with prawn noodles from the same stall if you can't decide", mapsUrl: "https://maps.google.com/?q=Mei+Xiang+Lor+Mee+Bedok+Interchange+Singapore" },
+      { name: "Lor Mee 178", address: "Tiong Bahru Market, 30 Seng Poh Rd (food centre, level 2)", area: "Tiong Bahru", note: "A popular Tiong Bahru Market pick, known for its fried fish toppings. Go before the lunch rush", mapsUrl: "https://maps.google.com/?q=Lor+Mee+178+Tiong+Bahru+Market+Singapore" },
     ],
     shiokOMeter: { spiceHit: 4, messFactor: 5, flavourDepth: 8, queueGame: 6, shiokValue: 9 },
   },
