@@ -5,9 +5,9 @@ import ChopstickDivider from "@/app/components/chopstick-divider";
 import { HAWKER_GUIDES } from "./guides-data";
 
 export const metadata = {
-  title: "Hawker Guide | Order Like a Local in Singapore",
+  title: "Hawker Centre Guide: How to Order Like a Local in Singapore | ShiokFlavour",
   description:
-    "The unwritten rules of eating in Singapore — kopi decoder, prata decoder, old school kopitiam names, hawker etiquette, and a Singlish glossary.",
+    "Decode kopi and prata orders, chope a seat with a tissue packet, learn old-school kopitiam names and the Singlish you'll hear at the stall. The unwritten rules, explained.",
 };
 
 export default function HawkerGuideHubPage() {
@@ -42,6 +42,23 @@ export default function HawkerGuideHubPage() {
         <p className="text-sf-muted text-base sm:text-lg leading-relaxed max-w-2xl">
           Pick a section below. Each one is short, practical, and written so the
           next time you walk up to a stall you know exactly what to say.
+        </p>
+        <p className="text-sf-muted text-base sm:text-lg leading-relaxed max-w-2xl mt-5">
+          Never been to a hawker centre?{" "}
+          <Link
+            href="/blog/singapore-hawker-food-guide-first-timers"
+            className="font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary"
+          >
+            Start with the first-timer&apos;s guide
+          </Link>
+          , or learn{" "}
+          <Link
+            href="/blog/how-to-order-economy-rice-singapore"
+            className="font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary"
+          >
+            how to order economy rice
+          </Link>
+          , the cheapest full meal on the island.
         </p>
         <div className="w-12 h-px bg-sf-primary mt-10" />
       </section>

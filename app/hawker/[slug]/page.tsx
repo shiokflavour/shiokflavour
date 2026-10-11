@@ -10,6 +10,7 @@ import {
   fetchHawkerByIdFromApi,
   type HawkerCentre,
 } from "../../lib/hawker-api";
+import { findDishSlugForName } from "../../lib/food-heritage";
 import {
   FEATURED_HAWKERS,
   getFeaturedHawkerById,
@@ -24,12 +25,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let featured = getFeaturedHawkerBySlug(slug);
   if (!featured) featured = getFeaturedHawkerById(slug) ?? null;
   if (featured) {
+    const station = featured.nearestMRT.split(" (")[0].trim();
+    const title =
+      featured.seoTitle ??
+      `${featured.name}: Best Stalls & What to Eat | ShiokFlavour`;
+    const description =
+      featured.seoDescription ??
+      `What to eat at ${featured.name}: ${featured.mustTry
+        .slice(0, 3)
+        .join(", ")}. Around ${featured.budgetPerPax} a person, near ${station} MRT, with local tips.`;
     return {
-      title: `${featured.name} | ShiokFlavour`,
-      description: featured.description,
+      title,
+      description,
       openGraph: {
-        title: `${featured.name} | ShiokFlavour`,
-        description: `${featured.description} ${featured.address}`.trim(),
+        title,
+        description,
         url: `https://www.shiokflavour.com/hawker/${encodeURIComponent(featured.slug)}`,
         images: [{ url: featured.imageUrl, alt: featured.name }],
       },
@@ -38,11 +48,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const hawker = await fetchHawkerByIdFromApi(slug);
   if (!hawker) return { title: "Not found | ShiokFlavour" };
   return {
-    title: `${hawker.name} | ShiokFlavour`,
-    description: hawker.address,
+    title: `${hawker.name}: Location & Food Guide | ShiokFlavour`,
+    description: `${hawker.name} at ${hawker.address}. Find it on the map and explore Singapore hawker food guides, dishes and stalls on ShiokFlavour.`,
     openGraph: {
-      title: `${hawker.name} | ShiokFlavour`,
-      description: hawker.address,
+      title: `${hawker.name}: Location & Food Guide | ShiokFlavour`,
+      description: `${hawker.name} at ${hawker.address}.`,
       url: `https://www.shiokflavour.com/hawker/${encodeURIComponent(slug)}`,
     },
   };
@@ -255,14 +265,24 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                   Must Try
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {h.mustTry.slice(0, 3).map((dish) => (
-                    <span
-                      key={dish}
-                      className="rounded-full border border-sf-primary/25 bg-sf-primary/10 px-3 py-1 text-sm text-sf-cream"
-                    >
-                      🍜 {dish}
-                    </span>
-                  ))}
+                  {h.mustTry.slice(0, 3).map((dish) => {
+                    const dishSlug = findDishSlugForName(dish);
+                    const cls =
+                      "rounded-full border border-sf-primary/25 bg-sf-primary/10 px-3 py-1 text-sm text-sf-cream";
+                    return dishSlug ? (
+                      <Link
+                        key={dish}
+                        href={`/food-heritage/${dishSlug}`}
+                        className={`${cls} transition hover:border-sf-primary/60`}
+                      >
+                        🍜 {dish}
+                      </Link>
+                    ) : (
+                      <span key={dish} className={cls}>
+                        🍜 {dish}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -434,9 +454,21 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                           <p className="font-semibold text-sf-cream">
                             {stall.name}
                           </p>
-                          <span className="shrink-0 rounded-full bg-sf-primary/15 px-2.5 py-1 text-[15px] font-semibold text-sf-primary ring-1 ring-sf-primary/30">
-                            {stall.dish}
-                          </span>
+                          {(() => {
+                            const dishSlug = findDishSlugForName(stall.dish);
+                            const cls =
+                              "shrink-0 rounded-full bg-sf-primary/15 px-2.5 py-1 text-[15px] font-semibold text-sf-primary ring-1 ring-sf-primary/30";
+                            return dishSlug ? (
+                              <Link
+                                href={`/food-heritage/${dishSlug}`}
+                                className={`${cls} transition hover:bg-sf-primary/30`}
+                              >
+                                {stall.dish}
+                              </Link>
+                            ) : (
+                              <span className={cls}>{stall.dish}</span>
+                            );
+                          })()}
                         </div>
                         <p className="mt-3 text-sm leading-relaxed text-sf-muted">
                           {stall.story}
@@ -455,13 +487,25 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                   Must Try Dishes
                 </h2>
                 <ul className="mt-5 flex flex-wrap gap-3">
-                  {h.mustTry.map((dish) => (
-                    <li key={dish}>
-                      <span className="inline-flex rounded-full border-2 border-sf-primary bg-black/30 px-4 py-2 text-sm font-semibold text-sf-primary">
-                        {dish}
-                      </span>
-                    </li>
-                  ))}
+                  {h.mustTry.map((dish) => {
+                    const dishSlug = findDishSlugForName(dish);
+                    const cls =
+                      "inline-flex rounded-full border-2 border-sf-primary bg-black/30 px-4 py-2 text-sm font-semibold text-sf-primary";
+                    return (
+                      <li key={dish}>
+                        {dishSlug ? (
+                          <Link
+                            href={`/food-heritage/${dishSlug}`}
+                            className={`${cls} transition hover:bg-sf-primary hover:text-white`}
+                          >
+                            {dish} →
+                          </Link>
+                        ) : (
+                          <span className={cls}>{dish}</span>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </section>
 
@@ -478,6 +522,36 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                 <p className="mt-3 text-base leading-relaxed text-white sm:text-lg">
                   {h.tipForVisitors}
                 </p>
+              </section>
+
+              <section
+                className="rounded-2xl border border-sf-primary/30 bg-sf-primary/5 p-6 sm:p-8"
+                aria-labelledby="first-time-heading"
+              >
+                <h2
+                  id="first-time-heading"
+                  className="text-lg font-semibold text-sf-cream"
+                >
+                  First time at a hawker centre?
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed text-sf-muted">
+                  How to chope a seat, order at the stall and pay, plus the
+                  unwritten rules locals expect you to know.
+                </p>
+                <div className="mt-4 flex flex-col gap-2 text-sm font-semibold sm:flex-row sm:gap-6">
+                  <Link
+                    href="/blog/singapore-hawker-food-guide-first-timers"
+                    className="text-sf-primary hover:underline"
+                  >
+                    Read the first-timer&apos;s guide →
+                  </Link>
+                  <Link
+                    href="/hawker-guide"
+                    className="text-sf-primary hover:underline"
+                  >
+                    Order like a local: the hawker guide →
+                  </Link>
+                </div>
               </section>
 
               <section aria-labelledby="vibes-heading">

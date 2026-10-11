@@ -1,6 +1,9 @@
 export type BlogPost = {
   slug: string;
   title: string;
+  /** Optional hand-written Google title / snippet. */
+  seoTitle?: string;
+  seoDescription?: string;
   subtitle: string;
   category: "Guide" | "Story" | "Ranking" | "Culture" | "Hawker Deep Dive";
   readTime: string;
@@ -19,6 +22,10 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "singapore-hawker-food-guide-first-timers",
     title: "The Complete Singapore Hawker Food Guide for First-Timers",
+    seoTitle:
+      "Singapore Hawker Centre Guide for First-Timers: How to Order & Pay | ShiokFlavour",
+    seoDescription:
+      "Never eaten at a hawker centre? How to chope a seat with a tissue packet, order at the stall, pay with cash or PayNow, what to eat first and what it costs.",
     subtitle: "Everything you need to know before you eat",
     category: "Guide",
     readTime: "8 min read",
@@ -57,7 +64,7 @@ Each stall is an independent business. You pay at each stall when you order. The
 
 If this is your first hawker centre experience, start here:
 
-**Hainanese Chicken Rice** — Singapore's unofficial national dish. Silky poached chicken, fragrant rice cooked in chicken fat, and three sauces. Order it at any hawker centre. The debate about which stall is best will never be resolved.
+**Hainanese Chicken Rice** — Singapore's unofficial national dish. Silky poached chicken, fragrant rice cooked in chicken fat, and three sauces. Order it at any hawker centre. The debate about which stall is best will never be resolved. Our [chicken rice ordering guide](/blog/how-to-order-chicken-rice-singapore) walks you through every choice.
 
 **Char Kway Teow** — Flat rice noodles stir-fried over fierce heat with dark soy, egg, bean sprouts, and cockles. The wok hei — the smoky breath of the wok — is the whole point. Order from a stall that uses charcoal if you can find one.
 
@@ -71,7 +78,7 @@ If this is your first hawker centre experience, start here:
 
 A full meal at a hawker centre — one main dish, a drink, and possibly dessert — should cost you between S$5 and S$12. If you are spending more than that, you are at a tourist-facing stall or ordering more food than one person needs.
 
-The cheapest full meal in Singapore is economy rice — also called cai fan or mixed rice. You point at the dishes you want from a display counter, the auntie scoops them over rice, and you pay based on how many dishes you chose. Three dishes and rice for under S$5 is common.
+The cheapest full meal in Singapore is economy rice — also called cai fan or mixed rice. You point at the dishes you want from a display counter, the auntie scoops them over rice, and you pay based on how many dishes you chose. Three dishes and rice for under S$5 is common. Here is [exactly how to order economy rice](/blog/how-to-order-economy-rice-singapore), and [the story of the dish](/food-heritage/economy-rice).
 
 ## The Etiquette You Need To Know
 
@@ -80,6 +87,8 @@ The cheapest full meal in Singapore is economy rice — also called cai fan or m
 - Do not expect service — you go to the stall, you order, you collect
 - Do not be on your phone when ordering — have your order ready
 - Cash is still the primary payment method at most stalls, though PayNow is increasingly accepted
+
+For the rest of the unwritten rules, plus how to decode kopi and prata orders, see our [hawker guide](/hawker-guide).
 
 ## The Best Hawker Centres For First-Timers
 
@@ -90,6 +99,10 @@ The cheapest full meal in Singapore is economy rice — also called cai fan or m
 **Old Airport Road Food Centre** — Beloved by locals, slightly further from the tourist belt, and the better for it. This is where serious eating happens.
 
 **Newton Food Centre** — Tourist-facing and priced accordingly, but convenient and a good introduction to the format.
+
+**People's Park Food Centre** — A short walk from Chinatown MRT and far less touristy than Maxwell, with Sichuan mala, dumplings and old-school dim sum buns. [See the best stalls](/hawker/peoples-park-food-centre).
+
+Ready for more? Browse [all our hawker centre guides](/hawker-centres).
 
 Go hungry. Bring tissue. Eat everything.`,
   },
@@ -340,6 +353,10 @@ Try one yourself, sometime. Order a plain prata. Ask for sugar instead of curry.
   {
     slug: "how-to-order-chicken-rice-singapore",
     title: "How to Order Hainanese Chicken Rice",
+    seoTitle:
+      "How to Order Chicken Rice in Singapore: Roasted or Steamed, Sauces & What to Say | ShiokFlavour",
+    seoDescription:
+      "Roasted or steamed? Which rice, which three sauces, and what about the soup? The chicken rice decision tree, the exact words to use at the stall, and where to eat it.",
     subtitle:
       "The chicken rice decision tree. Which chicken, which rice, which sauce, and what to say at the stall.",
     category: "Guide",
@@ -578,6 +595,10 @@ Five decisions. One plate. Make them like you mean it.
   {
     slug: "how-to-order-economy-rice-singapore",
     title: "How to Order Economy Rice",
+    seoTitle:
+      "How to Order Economy Rice in Singapore: What to Say & What It Costs | ShiokFlavour",
+    seoDescription:
+      "Eat here or dabao, one meat or two, and the free thing everyone forgets. How economy rice pricing works and exactly what to say at the counter.",
     subtitle:
       "Eat here or dabao, one meat or two, and the free thing everyone forgets. The whole system, and exactly what to say at the counter.",
     category: "Guide",

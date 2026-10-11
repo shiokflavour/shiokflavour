@@ -9,6 +9,37 @@ import { BLOG_POSTS } from "@/app/lib/blog-posts";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/** Inline markdown: **bold** and [text](/url). */
+function renderInline(text: string) {
+  return text
+    .split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)\s]+\))/g)
+    .filter((part) => part !== "")
+    .map((part, j) => {
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return (
+          <strong key={j} className="font-semibold text-white">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+      const link = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/);
+      if (link) {
+        const cls =
+          "font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary";
+        return /^https?:\/\//i.test(link[2]) ? (
+          <a key={j} href={link[2]} target="_blank" rel="noopener noreferrer" className={cls}>
+            {link[1]}
+          </a>
+        ) : (
+          <Link key={j} href={link[2]} className={cls}>
+            {link[1]}
+          </Link>
+        );
+      }
+      return part;
+    });
+}
+
 function getPost(slug: string) {
   return BLOG_POSTS.find((p) => p.slug === slug);
 }
@@ -22,8 +53,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return { title: "Article not found | ShiokFlavour" };
   return {
-    title: `${post.title} | The Flavour Files | ShiokFlavour`,
-    description: post.excerpt,
+    title: post.seoTitle ?? `${post.title} | ShiokFlavour`,
+    description: post.seoDescription ?? post.excerpt,
   };
 }
 
@@ -205,19 +236,7 @@ function renderArticleBody(markdown: string) {
         >
           {lines.map((l, j) => (
             <li key={j}>
-              {l
-                .replace(/^-\s+/, "")
-                .trim()
-                .split("**")
-                .map((part, k) =>
-                  k % 2 === 1 ? (
-                    <strong key={k} className="font-semibold text-white">
-                      {part}
-                    </strong>
-                  ) : (
-                    part
-                  ),
-                )}
+              {renderInline(l.replace(/^-\s+/, "").trim())}
             </li>
           ))}
         </ul>
@@ -228,15 +247,7 @@ function renderArticleBody(markdown: string) {
         key={i}
         className="mb-6 text-base leading-relaxed text-sf-muted sm:text-lg"
       >
-        {t.replace(/\n/g, " ").split("**").map((part, j) =>
-          j % 2 === 1 ? (
-            <strong key={j} className="font-semibold text-white">
-              {part}
-            </strong>
-          ) : (
-            part
-          ),
-        )}
+        {renderInline(t.replace(/\n/g, " "))}
       </p>
     );
   });
@@ -247,7 +258,25 @@ export default async function BlogArticlePage({ params }: Props) {
   const post = getPost(slug);
   if (!post) notFound();
 
-  const related = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  // Related reads: neighbouring servings in the series + the first-timer's
+  // guide, otherwise the newest posts.
+  const published = BLOG_POSTS.filter((p) => p.slug !== post.slug && !p.comingSoon);
+  const bySeries = (n: number) => published.find((p) => p.series?.number === n);
+  const newestFirst = [...published].sort((a, b) =>
+    b.publishedAt.localeCompare(a.publishedAt),
+  );
+  const candidates = post.series
+    ? [
+        bySeries(post.series.number + 1),
+        bySeries(post.series.number - 1),
+        published.find((p) => p.slug === "singapore-hawker-food-guide-first-timers"),
+        ...newestFirst,
+      ]
+    : newestFirst;
+  const related = candidates
+    .filter((p): p is (typeof BLOG_POSTS)[number] => Boolean(p))
+    .filter((p, idx, arr) => arr.findIndex((q) => q.slug === p.slug) === idx)
+    .slice(0, 3);
   const paragraphs = renderArticleBody(post.content);
 
   return (

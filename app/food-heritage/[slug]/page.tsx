@@ -4,6 +4,16 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteHeader } from "../../components/site-header";
 import { getFeaturedHawkerBySlug } from "../../lib/featured-hawkers";
+import { BLOG_POSTS } from "../../lib/blog-posts";
+
+/** Dish page → its "How to Order" guide, when one exists. */
+const HOW_TO_ORDER_BY_DISH: Record<string, string> = {
+  "hainanese-chicken-rice": "how-to-order-chicken-rice-singapore",
+  "roti-prata": "how-to-order-roti-prata-singapore",
+  "char-kway-teow": "how-to-order-char-kway-teow-singapore",
+  "economy-rice": "how-to-order-economy-rice-singapore",
+  "teh-tarik": "how-to-order-kopi-teh-singapore",
+};
 import {
   FOOD_HERITAGE_DISHES,
   getAllFoodHeritageSlugs,
@@ -27,12 +37,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const dish = getDishBySlug(slug);
   if (!dish) return { title: "Dish not found | ShiokFlavour" };
+  const price = dish.priceRange.split(" (")[0].trim();
+  const title =
+    dish.seoTitle ??
+    `${dish.name} in Singapore: Where to Eat, Price & History | ShiokFlavour`;
+  const description =
+    dish.seoDescription ??
+    `Where to eat ${dish.name} in Singapore: ${
+      dish.bestStalls.length >= 2
+        ? `${dish.bestStalls.length} stalls worth the queue, `
+        : ""
+    }what it costs${
+      price.length <= 20 ? ` (${price})` : ""
+    }, how locals eat it, and the story behind the dish.`;
   return {
-    title: `${dish.name} | Singapore Food Heritage | ShiokFlavour`,
-    description: dish.description.slice(0, 155).trim() + "…",
+    title,
+    description,
     openGraph: {
-      title: `${dish.name} | Singapore Food Heritage`,
-      description: dish.description.slice(0, 200),
+      title,
+      description,
       images: [{ url: dish.imageUrl, alt: dish.name }],
     },
   };
@@ -195,6 +218,29 @@ export default async function FoodHeritageDishPage({ params }: Props) {
 
                 {/* How to Eat Like a Local */}
                 <HowToEat steps={dish.howToEat} />
+
+                {(() => {
+                  const guide = BLOG_POSTS.find(
+                    (p) => p.slug === HOW_TO_ORDER_BY_DISH[dish.slug] && !p.comingSoon,
+                  );
+                  if (!guide) return null;
+                  return (
+                    <Link
+                      href={`/blog/${guide.slug}`}
+                      className="group block rounded-2xl border border-sf-primary/40 bg-sf-primary/10 p-6 transition hover:border-sf-primary sm:p-8"
+                    >
+                      <p className="text-[15px] font-semibold uppercase tracking-[0.2em] text-sf-primary">
+                        How to Order · Serving #{guide.series?.number}
+                      </p>
+                      <p className="mt-2 text-xl font-semibold text-sf-cream group-hover:text-white">
+                        {guide.title} →
+                      </p>
+                      <p className="mt-2 text-sm leading-relaxed text-sf-muted">
+                        {guide.subtitle}
+                      </p>
+                    </Link>
+                  );
+                })()}
 
                 <ShiokOMeter scores={dish.shiokOMeter} />
 

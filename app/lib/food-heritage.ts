@@ -1,6 +1,9 @@
 export type FoodHeritageDish = {
   name: string;
   slug: string;
+  /** Optional hand-written Google title / snippet. */
+  seoTitle?: string;
+  seoDescription?: string;
   category: string;
   description: string;
   origin: string;
@@ -157,6 +160,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "maxwell-food-centre",
       "toa-payoh-lorong-8-market",
       "tampines-round-market",
+      "alexandra-village-food-centre",
     ],
     howToEat: [
       "Smell the rice first — good chicken rice is fragrant with pandan and chicken fat even before you eat",
@@ -256,6 +260,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "geylang-serai-market",
       "old-airport-road-food-centre",
       "tiong-bahru-market",
+      "alexandra-village-food-centre",
     ],
     howToEat: [
       "Use only a spoon — Katong laksa noodles are pre-cut short for exactly this reason",
@@ -1049,6 +1054,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "amoy-street-food-centre",
       "tiong-bahru-market",
       "tampines-round-market",
+      "alexandra-village-food-centre",
     ],
     howToEat: [
       "Order dry — the sauce-tossed version shows the char siew quality better than the soup version",
@@ -1126,9 +1132,13 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Economy Rice",
     slug: "economy-rice",
+    seoTitle:
+      "Economy Rice in Singapore: What It Is, Prices & Best Stalls | ShiokFlavour",
+    seoDescription:
+      "What is economy rice (cai png, 菜饭)? How Singapore's mixed rice works, what S$4–5 gets you, how the auntie prices your plate, and the best stalls to try.",
     category: "Singaporean Classics",
     description:
-      "Economy rice — cai fan in Hokkien, mixed rice in plain English — is the most democratic meal Singapore produces. White rice, a selection of cooked dishes from a display counter, a total that still rarely tops six dollars. You point. The auntie scoops. You pay by how many dishes you chose. The format is Chinese in origin, the selection is entirely Singaporean: braised pork belly sits next to curry chicken sits next to sambal kangkong sits next to luncheon meat. Economy rice is where Singapore eats without thinking about it. It is the meal that construction workers, office directors, schoolchildren, and retirees all eat from the same counter without any ceremony whatsoever.",
+      "Economy rice — cai png in Hokkien, cai fan in Mandarin, mixed rice in plain English — is the most democratic meal Singapore produces. White rice, a selection of cooked dishes from a display counter, a total that still rarely tops six dollars. You point. The auntie scoops. You pay by how many dishes you chose. The format is Chinese in origin, the selection is entirely Singaporean: braised pork belly sits next to curry chicken sits next to sambal kangkong sits next to luncheon meat. Economy rice is where Singapore eats without thinking about it. It is the meal that construction workers, office directors, schoolchildren, and retirees all eat from the same counter without any ceremony whatsoever.",
     origin:
       "Chinese cai fan (菜饭) tradition adapted by Singaporean hawkers into a multi-dialect, multi-cuisine mixed rice format unique to the island.",
     whereToFind:
@@ -1518,6 +1528,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "adam-road-food-centre",
       "geylang-serai-market",
       "tekka-centre",
+      "bedok-interchange-hawker-centre",
     ],
     howToEat: [
       "Mix the sambal into the rice first — it coats every grain and distributes the heat evenly across the plate",
@@ -1586,6 +1597,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "geylang-serai-market",
       "tekka-centre",
       "adam-road-food-centre",
+      "bedok-interchange-hawker-centre",
     ],
     howToEat: [
       "Squeeze calamansi over the entire bowl before mixing — the acid cuts through the thick, sweet gravy",
@@ -1818,6 +1830,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "bedok-85-fengshan-market",
       "marine-parade-food-centre",
       "old-airport-road-food-centre",
+      "bedok-interchange-hawker-centre",
     ],
     howToEat: [
       "Mix the peanut sauce thoroughly from the bottom — it thickens as it cools and pools beneath the noodles",
@@ -2129,6 +2142,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "old-airport-road-food-centre",
       "toa-payoh-lorong-8-market",
       "bedok-interchange-hawker-centre",
+      "peoples-park-food-centre",
     ],
     howToEat: [
       "Add black vinegar immediately and generously — the dish is designed for it and tastes incomplete without the acid",
@@ -2177,6 +2191,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "tekka-centre",
       "old-airport-road-food-centre",
       "bedok-interchange-hawker-centre",
+      "alexandra-village-food-centre",
     ],
     howToEat: [
       "Taste the broth first before adding anything — it should be intensely savoury and slightly sweet from the prawn",
@@ -2225,6 +2240,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "maxwell-food-centre",
       "amoy-street-food-centre",
       "tampines-round-market",
+      "peoples-park-food-centre",
     ],
     howToEat: [
       "Choose a mix of vegetables and tofu rather than all tofu — the variety of textures is what makes yong tau foo interesting",
@@ -4785,4 +4801,42 @@ export function getDishBySlug(slug: string): FoodHeritageDish | undefined {
 
 export function getAllFoodHeritageSlugs(): string[] {
   return FOOD_HERITAGE_DISHES.map((d) => d.slug);
+}
+/** Extra names people (and our hawker pages) use for heritage dishes. */
+const DISH_NAME_ALIASES: Record<string, string> = {
+  "chicken rice": "hainanese-chicken-rice",
+  "prawn noodles": "hae-mee",
+  "prawn mee": "hae-mee",
+  "wonton mee": "wanton-mee",
+  "wonton noodles": "wanton-mee",
+  "wanton noodles": "wanton-mee",
+  "carrot cake": "chai-tow-kway",
+  "oyster omelette": "orh-luak",
+  "sambal stingray": "bbq-stingray",
+  "thunder tea rice": "lei-cha-fan",
+  "fried kway teow": "char-kway-teow",
+  prata: "roti-prata",
+};
+
+/**
+ * Best-effort match from a free-text dish or stall name (e.g. "Bedok Chwee Kueh",
+ * "Claypot Laksa") to a heritage dish slug. Longest matching name wins.
+ */
+export function findDishSlugForName(text: string): string | undefined {
+  const t = ` ${text.toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim()} `;
+  if (t.includes(" soya sauce ")) return undefined;
+  const keys: [string, string][] = Object.entries(DISH_NAME_ALIASES);
+  for (const d of FOOD_HERITAGE_DISHES) {
+    keys.push([d.name.toLowerCase().replace(/\s*\(.*?\)/g, "").trim(), d.slug]);
+    const alt = d.name.match(/\((.*?)\)/);
+    if (alt) keys.push([alt[1].toLowerCase(), d.slug]);
+  }
+  let best: [string, string] | undefined;
+  for (const [k, slug] of keys) {
+    const norm = k.replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
+    if (norm && t.includes(` ${norm} `) && (!best || norm.length > best[0].length)) {
+      best = [norm, slug];
+    }
+  }
+  return best?.[1];
 }

@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.shiokflavour.com"),
   title: "ShiokFlavour | Discover Singapore's Best Hawker & Restaurant Food",
   description:
     "Your guide to the best hawker centres and restaurants across Singapore. Search by location or craving and plan your next flavour trail.",
