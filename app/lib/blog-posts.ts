@@ -68,11 +68,15 @@ If this is your first hawker centre experience, start here:
 
 **Char Kway Teow** — Flat rice noodles stir-fried over fierce heat with dark soy, egg, bean sprouts, and cockles. The wok hei — the smoky breath of the wok — is the whole point. Order from a stall that uses charcoal if you can find one.
 
+![Char kway teow](/images/food/char-kway-teow.jpg)
+
 **Laksa** — Coconut curry broth, rice noodles, fish cake, and cockles. Rich, spicy, and deeply Singaporean. Katong-style laksa is the version most locals will point you to.
 
 **Roti Prata** — At Indian Muslim stalls, usually open from early morning. A flaky, griddled flatbread served with fish or mutton curry for dipping. Order plain first. If it is good, order egg.
 
 **Ice Kachang** — For dessert. Shaved ice, coloured syrups, red beans, corn, and jelly. It looks alarming. It is perfect.
+
+![Ice kachang](/images/food/ice-kachang.jpg)
 
 ## How Much Should You Spend?
 
@@ -180,6 +184,8 @@ Beyond the modifier system, some drinks have nicknames that older kopitiam regul
 Teh tarik deserves its own mention. It is not simply tea with milk. It is tea poured in a long, sustained stream between two containers, over and over, until it cools, froths, and becomes something different from the sum of its parts.
 
 The pulling creates micro-bubbles that give the tea a silky texture no stirring can replicate. At hawker centres, the teh tarik uncle works with a rhythm that is half performance, half technique. The height of the pour is not showing off. It is the method.
+
+![Teh tarik](/images/food/teh-tarik.jpg)
 
 Order it hot. Watch how it is made. It is worth the wait.
 
