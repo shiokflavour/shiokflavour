@@ -89,16 +89,16 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Chin Mee Chin Confectionery",
         type: "eat & drink",
         intro:
-          "One of the last surviving Hainanese kopitiams in Singapore. The charcoal-grilled kaya toast arrives with a cold slab of butter that melts on contact — the kaya underneath is house-made, fragrant with pandan and coconut. The kopi is thick, dark, and slightly sweet in a way that no chain coffee shop has ever managed to replicate. This is the breakfast Singapore was built on.",
+          "One of the last surviving Hainanese kopitiams in Singapore. The kaya toast arrives with a cold slab of butter that melts on contact — the kaya underneath is house-made, fragrant with pandan and coconut. The kopi is thick, dark, and slightly sweet in a way that no chain coffee shop has ever managed to replicate. This is the breakfast Singapore was built on.",
         address: "204 East Coast Road, Singapore 428903",
         mapsUrl:
           "https://maps.google.com/?q=Chin+Mee+Chin+Confectionery+Singapore",
         whatToOrder: [
-          "Kaya toast with cold butter — the charcoal-grilled version is the point",
+          "Kaya toast with cold butter — on their house-baked bread, that is the point",
           "Soft boiled eggs — season with dark soy and white pepper, not salt",
           "Kopi C — coffee with evaporated milk. Order it here. This is the right place.",
         ],
-        tip: "Open since 1925. The ceiling fans are original. The marble tables are original. The kaya recipe is original. Sit slowly. Do not look at your phone. This is the right way to start a morning in Singapore.",
+        tip: "Open since 1925 — it marked its 100th year in 2025. The shop closed in 2018 and reopened in 2022 under new operators with a refreshed menu, but the old-school shopfront and marble-top tables keep the mood. Open daily from 8am (Wednesdays until 11.30am only). Sit slowly. Do not look at your phone. This is the right way to start a morning in Singapore.",
         duration: "30–40 mins",
         image: "/images/trails/katong/chin-mee-chin.jpg",
       },
@@ -107,16 +107,16 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Mr & Mrs Mohgan's Super Crispy Roti Prata",
         type: "eat",
         intro:
-          "Mr Mohgan has been making prata since he was twelve years old. That is over forty years of muscle memory in every flick of the wrist. The result is a flatbread with shatteringly crisp edges and a soft, layered interior — the kind you keep tearing pieces off even when you think you are done. Paired with fish curry that is bright, slightly sour, and deeply spiced. This is the best roti prata in Singapore. Many people who have eaten a lot of prata will tell you so.",
+          "Mr Mohgan started making prata as a boy, and after he passed away in March 2022, Mrs Mohgan kept the griddle going. Regulars say the prata is as crispy as ever. The result is a flatbread with shatteringly crisp edges and a soft, layered interior — the kind you keep tearing pieces off even when you think you are done. Paired with fish curry that is bright, slightly sour, and deeply spiced. Many food writers rank it among the best roti prata in Singapore, and plenty of people who have eaten a lot of prata will agree.",
         address: "Tin Yeang Restaurant, 300 Joo Chiat Road, Singapore 427551",
         mapsUrl:
           "https://maps.google.com/?q=Mr+Mrs+Mohgan+Roti+Prata+Joo+Chiat",
         whatToOrder: [
           "Plain prata first — this is the test. If it is excellent, order egg.",
-          "Coin prata — their signature. Six small crispy discs. Order a set.",
+          "Coin prata — small crispy discs, great for sharing.",
           "Fish curry for dipping — not mutton, not dal. Fish curry here.",
         ],
-        tip: "Ranked the best roti prata in Singapore by multiple independent food writers. Mr Mohgan has been making prata since he was twelve years old. Opens at 6.30am. Closed Wednesdays. There will be a queue. It moves.",
+        tip: "Ranked among the best roti prata in Singapore by multiple independent food writers. Now run by Mrs Mohgan, who carried on after her husband passed away in 2022. Opens at 6.30am and closes around 1pm (11.30am on Tuesdays). Closed Wednesdays. There will be a queue. It moves.",
         duration: "20–30 mins",
         image: "/images/trails/katong/mohgan-prata.jpg",
       },
@@ -125,11 +125,11 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Koon Seng Road Heritage Walk",
         type: "walk",
         intro:
-          "Step off East Coast Road and into Koon Seng Road for five minutes. The two rows of Peranakan terrace houses here — pastel-coloured, two storeys, ornate ceramic tiles, each one slightly different from the one next door — are among the finest preserved examples of Straits Chinese architecture in Southeast Asia. This is also Singapore's first designated Heritage Town. You will not find this in the brochure. Walk slowly.",
+          "Step off Joo Chiat Road and into Koon Seng Road for five minutes. The two rows of Peranakan terrace houses here — pastel-coloured, two storeys, ornate ceramic tiles, each one slightly different from the one next door — are some of the most photographed Peranakan-style shophouses in Singapore. Joo Chiat, the wider neighbourhood, was designated Singapore's first Heritage Town in 2011. You will not find this in the brochure. Walk slowly.",
         address: "Koon Seng Road, Singapore 427037",
         mapsUrl: "https://maps.google.com/?q=Koon+Seng+Road+Singapore",
         whatToOrder: [],
-        tip: "Walk five minutes north to Koon Seng Road. The two rows of Peranakan terrace houses here — pastel coloured, two storeys, ornate ceramic tiles — are among the best preserved in Singapore. Look at the shutters. Look at the tiles. Look at how each house is slightly different from the one next to it. This neighbourhood was designated Singapore's first Heritage Town in 2011. While you're here: the Katong Antique House is at 208 East Coast Road — worth booking in advance for a proper Peranakan artefact tour. Free to walk past, S$20–30 for a guided visit.",
+        tip: "Walk five minutes north to Koon Seng Road. The two rows of Peranakan terrace houses here — pastel coloured, two storeys, ornate ceramic tiles — are among the best preserved in Singapore. Look at the shutters. Look at the tiles. Look at how each house is slightly different from the one next to it. This neighbourhood was designated Singapore's first Heritage Town in 2011. While you're here: the Katong Antique House is at 208 East Coast Road — worth booking in advance for a proper Peranakan artefact tour. Free to walk past; visits are by reservation only.",
         duration: "15–20 mins",
         image: "/images/trails/katong/koon-seng-road.jpg",
       },
@@ -138,12 +138,12 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Katong Antique House",
         type: "experience",
         intro:
-          "Behind the facade of a conserved Peranakan shophouse on East Coast Road is one of the most intimate museum experiences in Singapore. Owner Peter Wee has spent decades collecting family heirlooms — hand-beaded slippers, colonial-era photographs, porcelain, furniture — each piece with a story. This is not a curated museum. It is a family home that happens to be full of extraordinary things. Worth every minute of the visit.",
-        address: "208 East Coast Road, Singapore 428903",
+          "Behind the facade of a conserved Peranakan shophouse on East Coast Road is one of the most intimate museum experiences in Singapore. The late Peter Wee, a fourth-generation Peranakan and former president of the Peranakan Association, spent decades collecting family heirlooms — hand-beaded slippers, colonial-era photographs, porcelain, furniture — each piece with a story. This is not a curated museum. It is a family home that happens to be full of extraordinary things. Worth every minute of the visit.",
+        address: "208 East Coast Road, Singapore 428907",
         mapsUrl:
           "https://maps.google.com/?q=Katong+Antique+House+208+East+Coast+Road+Singapore",
         whatToOrder: [],
-        tip: "A Peranakan home turned private museum, filled with family heirlooms, antique porcelain, hand-beaded slippers and colonial-era photographs collected by owner Peter Wee. Best experienced by appointment — call ahead. Free to walk past and admire the facade, S$20–30 for a guided visit. If you book nothing else on this trail, book this.",
+        tip: "A Peranakan home turned private museum, filled with family heirlooms, antique porcelain, hand-beaded slippers and colonial-era photographs collected by the late Peter Wee. Visits are by reservation only — book ahead online. Free to walk past and admire the facade. If you book nothing else on this trail, book this.",
         duration: "30–45 mins (by appointment)",
         image: "/images/trails/katong/katong-antique-house.jpg",
       },
@@ -152,12 +152,12 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Sri Senpaga Vinayagar Temple",
         type: "experience",
         intro:
-          "Built in 1855 and dedicated to Lord Ganesha, this is one of Singapore's oldest Hindu temples and arguably its most ornate. The gopuram — the intricately carved tower above the entrance — rises seven tiers above the street, dense with sculpted figures. Remove your shoes before entering. Stand in front of it and look up. This is Singapore in one frame: a Tamil temple from 1855, two minutes from a Peranakan kopitiam and a Muslim prata stall, on the same street.",
-        address: "19 Ceylon Road, Singapore 429006",
+          "Founded in the 1850s by the Ceylon Tamil community and dedicated to Lord Ganesha, this is one of Singapore's oldest Hindu temples. The rajagopuram — the intricately carved tower above the entrance — rises 21 metres above the street, dense with sculpted figures. Remove your shoes before entering. Stand in front of it and look up. This is Singapore in one frame: a Tamil temple with roots in the 1850s, a short walk from a Peranakan kopitiam and an Indian prata stall.",
+        address: "19 Ceylon Road, Singapore 429613",
         mapsUrl:
           "https://maps.google.com/?q=Sri+Senpaga+Vinayagar+Temple+Ceylon+Road+Singapore",
         whatToOrder: [],
-        tip: "One of Singapore's oldest and most ornate Hindu temples, built in 1855 and dedicated to Lord Ganesha. Free entry, walk-in welcome. Remove your shoes before entering. The gopuram — the intricately carved tower above the entrance — is worth studying closely. This is Singapore in one frame: a century-old Tamil temple, two minutes from a Peranakan kopitiam and a Muslim prata stall.",
+        tip: "One of Singapore's oldest Hindu temples, founded in the 1850s and dedicated to Lord Ganesha, and gazetted as a historic site in 2003. Free entry, walk-in welcome. Remove your shoes before entering. The gopuram — the intricately carved tower above the entrance — is worth studying closely. This is Singapore in one frame: a Tamil temple with roots in the 1850s, a short walk from a Peranakan kopitiam and an Indian prata stall.",
         duration: "10–15 mins",
         image: "/images/trails/katong/sri-senpaga-temple.jpg",
       },
@@ -166,7 +166,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Kim Choo Kueh Chang",
         type: "eat",
         intro:
-          "Making kueh since 1945 out of the same East Coast Road shophouse. The kueh pie tee shells are fried fresh — small crispy cups filled with braised turnip, prawn and a drizzle of dark sauce. The kueh dadar is a pandan crepe wrapped around grated coconut and palm sugar, green and fragrant and gone in two bites. These are the snacks that Peranakan families have been making for generations. Buy more than you think you need.",
+          "Making kueh since 1945, when Lee Kim Choo started selling from a roadside stall at Joo Chiat Place. The kueh pie tee shells are fried fresh — small crispy cups filled with braised turnip, prawn and a drizzle of dark sauce. The kueh dadar is a pandan crepe wrapped around grated coconut and palm sugar, green and fragrant and gone in two bites. These are the snacks that Peranakan families have been making for generations. Buy more than you think you need.",
         address: "109 East Coast Road, Singapore 428800",
         mapsUrl: "https://maps.google.com/?q=Kim+Choo+Kueh+Chang+Katong",
         whatToOrder: [
@@ -183,15 +183,15 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "328 Katong Laksa",
         type: "eat",
         intro:
-          "This is the laksa that made Katong famous. A rich coconut curry broth — thick, slightly sweet, deeply spiced — served with short-cut rice noodles, plump prawns, cockles and fish cake. The noodles are cut short deliberately so the entire bowl is eaten with just a spoon. No chopsticks. No fork. In 2013 this stall beat Gordon Ramsay in a laksa cook-off on television. The uncle at the stall was not particularly impressed. The broth has not changed.",
+          "This is the most famous name in Katong laksa. A rich coconut curry broth — thick, slightly sweet, deeply spiced — served with short-cut rice noodles, plump prawns, cockles and fish cake. The noodles are cut short deliberately so the entire bowl is eaten with just a spoon. No chopsticks. No fork. In 2013 it beat Gordon Ramsay at the Singtel Hawker Heroes Challenge. The broth, founder Nancy Koh's recipe, has not changed.",
         address: "51 East Coast Road, Singapore 428770",
         mapsUrl: "https://maps.google.com/?q=328+Katong+Laksa+East+Coast+Road",
         whatToOrder: [
           "Laksa — always. This is why you are here.",
-          "Add cockles if they are fresh that day — ask the uncle",
+          "Add cockles if they are fresh that day — ask at the counter",
           "A side of otah if available — spiced fish cake grilled in banana leaf",
         ],
-        tip: "The noodles are cut short so the entire bowl is eaten with just a spoon — no chopsticks, no fork. This is deliberate. The broth should be rich, coconut-heavy, and slightly sweet. The sambal on the side is serious. Beat Gordon Ramsay in a laksa cook-off in 2013. The uncle was not impressed.",
+        tip: "The noodles are cut short so the entire bowl is eaten with just a spoon — no chopsticks, no fork. This is deliberate. The broth should be rich, coconut-heavy, and slightly sweet. The sambal on the side is serious. Beat Gordon Ramsay at the 2013 Hawker Heroes Challenge.",
         duration: "20–30 mins",
         image: "/images/trails/katong/328-katong-laksa.jpg",
       },
@@ -251,11 +251,11 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         og: {
           pathLabel: "The OG",
           name: "Tiong Bahru Pau",
-          address: "Block 57 Eng Hoon Street, Tiong Bahru Estate",
+          address: "Tiong Bahru Market, 30 Seng Poh Road, #02-18/19, Singapore 168898",
           mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Pau+Singapore",
           badges: ["CASH ONLY", "STANDING ROOM", "SINCE 1978"],
           description:
-            "Two pau, eaten standing up at the void deck. The uncle doesn't do complicated. Point. Pay. Eat. This is how Singapore had breakfast for seventy years before anyone said flat white.",
+            "Two pau, eaten at a shared table upstairs in Tiong Bahru Market. The uncle doesn't do complicated. Point. Pay. Eat. This is how Singapore had breakfast for seventy years before anyone said flat white.",
           whatToOrder: [
             { item: "Big pau — char siew & egg", price: "$1.60" },
             { item: "Liao sa pau — salted egg custard", price: "$1.80" },
@@ -271,7 +271,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Bakery+Eng+Hoon+Street",
           badges: ["CARD OKAY", "SIT & STAY", "SINCE 2012"],
           description:
-            "A Parisian pastry shop that opened on the same street as the pau stall a decade ago — and quietly became the most photographed bakery in Singapore. The kouign amann is the signature. Caramelised, flaky, heavy. Worth the queue.",
+            "A Parisian-style bakery that opened in 2012, a short walk from the market — and quietly became one of the most photographed bakeries in Singapore. The kouign amann is the signature. Caramelised, flaky, heavy. Worth the queue.",
           whatToOrder: [
             { item: "Kouign amann — caramelised & flaky", price: "$4.80" },
             { item: "Butter croissant", price: "$4.20" },
@@ -297,8 +297,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
             "Singapore's first public housing estate, built in an Art Deco style that was sweeping the world at the time. Rounded corners. Porthole windows. Walk slowly and look up — these aren't museum buildings, people still live here.",
           whatToOrder: [
             { item: "Block 78 Moh Guan Terrace — the photographed facade", price: "Free" },
-            { item: "Monkey God Temple — 1930s, still in active use", price: "Free" },
-            { item: "Qi Tian Gong shrine & surrounding shophouses", price: "Free" },
+            { item: "Qi Tian Gong (Monkey God Temple), Eng Hoon Street — still in active use", price: "Free" },
+            { item: "Moh Guan Terrace & Guan Chuan Street shophouse blocks", price: "Free" },
           ],
           voicedTip: "People live here. Keep voice down, walk slow.",
           image: "/images/trails/tiong-bahru/seng-poh.jpg",
@@ -313,7 +313,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
             "One short street that became the quiet heart of the new Tiong Bahru. Indie bookshops. Small design boutiques. No crowds. This is the neighbourhood everyone writes about but nobody actually disturbs.",
           whatToOrder: [
             { item: "Woods in the Books — children's bookshop", price: "Free" },
-            { item: "Nana & Bird — Singapore designer boutique", price: "Free" },
+            { item: "Nana & Bird — Singapore designer boutique (round the corner on Eng Hoon St)", price: "Free" },
             { item: "Cat Socrates — quirky gift shop", price: "Free" },
           ],
           voicedTip: "Weekday mornings quiet. Weekends bring the brunch crowd. Come early.",
@@ -325,22 +325,21 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 3,
         category: "Mid-morning snack · Pick your path",
         headline: "Still hungry?",
-        lede: "A forty-year-old pineapple tart, or a cupcake that tastes like Brooklyn.",
+        lede: "A S$1.20 bowl of tau huay, or a cupcake that tastes like Brooklyn.",
         og: {
           pathLabel: "The OG",
-          name: "Tiong Bahru Galicier Pastry",
-          address: "55 Tiong Bahru Road, #01-39, Singapore 160055",
-          mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Galicier+Pastry",
-          badges: ["CASH ONLY", "HAND-MADE", "SINCE 1979"],
+          name: "Teck Seng Soya Bean Milk",
+          address: "Tiong Bahru Market, 30 Seng Poh Road, #02-69, Singapore 168898",
+          mapsUrl: "https://maps.google.com/?q=Teck+Seng+Soya+Bean+Milk+Tiong+Bahru+Market",
+          badges: ["CASH BEST", "CLOSED MONDAYS", "OPENS 2AM"],
           description:
-            "Galicier has been making kueh the traditional way since 1979. Everything is hand-made, sold over the counter, and gone by early afternoon. Buy a mixed box of six to share — it's how locals eat their way through an afternoon.",
+            "Upstairs in Tiong Bahru Market, this soya bean stall still sells a bowl of silky tau huay for about the price of a bus ride. It opens in the small hours and closes after lunch, so come before 2.30pm. Order it warm or cold, and the soya milk to go.",
           whatToOrder: [
-            { item: "Ondeh ondeh — molten gula melaka", price: "$0.80" },
-            { item: "Kueh salat — pandan custard on rice", price: "$1.20" },
-            { item: "Pineapple tart (CNY season)", price: "$1.50" },
+            { item: "Tau huay (soya beancurd), warm or cold", price: "$1.20" },
+            { item: "Soya bean milk", price: "$1.20" },
           ],
-          voicedTip: "Buy six. One for you, five for the family you'll visit later.",
-          image: "/images/trails/tiong-bahru/galicier.jpg",
+          voicedTip: "Ask for less sweet if you want to taste the bean.",
+          image: "/images/food/tau-huay.jpg",
         },
         returnee: {
           pathLabel: "The Returnee",
@@ -358,26 +357,26 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           voicedTip: "Get a cupcake to go. Eat it in the courtyard. Slower that way.",
           image: "/images/trails/tiong-bahru/plain-vanilla.jpg",
         },
-        shiokMove: "Galicier's ondeh ondeh costs 80 cents. Plain Vanilla's cupcake costs $4.50. Both are exactly what they're meant to be.",
+        shiokMove: "Teck Seng's tau huay costs $1.20. Plain Vanilla's cupcake costs $4.50. Both are exactly what they're meant to be.",
       },
       {
         number: 4,
         category: "Lunch · Pick your path",
         headline: "How do you want to finish?",
-        lede: "Four Michelin Bib stalls under one roof, or sourdough in a sunlit room.",
+        lede: "A hawker hall full of Michelin-recognised stalls, or sourdough in a sunlit room.",
         og: {
           pathLabel: "The OG",
           name: "Tiong Bahru Market",
           address: "30 Seng Poh Road, Singapore 168898",
           mapsUrl: "https://maps.google.com/?q=Tiong+Bahru+Market+Singapore",
-          badges: ["CASH BEST", "SHARED TABLES", "4 MICHELIN BIBS"],
+          badges: ["CASH BEST", "SHARED TABLES", "MICHELIN-LISTED"],
           description:
-            "Singapore's most beautiful hawker building, in Singapore's most fashionable neighbourhood. Four Michelin Bib Gourmand stalls under one roof. Shared tables, tissue packets to claim seats, and chwee kueh that sells out by noon.",
+            "Singapore's most beautiful hawker building, in Singapore's most fashionable neighbourhood. Several Michelin Bib Gourmand and Michelin-selected stalls under one roof. Shared tables, tissue packets to claim seats, and lunch stalls that start closing by early afternoon.",
           whatToOrder: [
-            { item: "Jian Bo Shui Kueh — chwee kueh (6 pcs)", price: "$3.00" },
+            { item: "Jian Bo Shui Kueh — chwee kueh (5 pcs)", price: "$3.50" },
             { item: "Hainanese Chicken Rice #02-82", price: "$3.80" },
-            { item: "Lor Mee 178 — extra vinegar", price: "$4.00" },
-            { item: "Hong Heng Prawn Mee", price: "$5.00" },
+            { item: "Lor Mee 178 — extra vinegar", price: "$4.50" },
+            { item: "Hong Heng Fried Sotong Prawn Mee (fried Hokkien mee)", price: "$5.00" },
           ],
           voicedTip: "Order from two stalls. Share everything. That's how we do.",
           image: "/images/trails/tiong-bahru/market.jpg",
@@ -387,7 +386,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           name: "Micro Bakery Kitchen",
           address: "78 Yong Siak Street, Singapore 163078",
           mapsUrl: "https://maps.google.com/?q=Micro+Bakery+Kitchen+Yong+Siak",
-          badges: ["CARD ONLY", "BOOK AHEAD", "SINCE 2018"],
+          badges: ["CARD ONLY", "BOOK AHEAD", "WED–SUN"],
           description:
             "If you want to end the morning slowly with a seat, good coffee and sourdough — this is the finish. Five minutes from the market on foot. A completely different tempo, the same postcode.",
           whatToOrder: [
@@ -426,7 +425,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "The 1950s Coffee & Chinatown Morning Walk",
         type: "eat",
         intro:
-          "A dollar. That's what a kopi costs here. Michelin-listed, decades-old, second floor of Chinatown Complex — and the uncle behind the counter pulls it the same way he always has. Cloth sock. Robusta beans. No shortcuts.\n\nOrder your kopi. Crack your soft boiled eggs into the saucer, add dark soy and white pepper. Eat slowly. You have nowhere to be yet.\n\nWhen you're done, step outside. Chinatown at 8am belongs to the people who live here — the light is softer, the streets quieter, the shophouses on Pagoda Street glowing in dusty reds and yellows. Sri Mariamman Temple has been standing at the end of South Bridge Road since 1827. Duck into Sago Street. Wander without a plan. That's the point.",
+          "Pocket change. That's what a kopi costs here. Michelin-listed, decades-old, second floor of Chinatown Complex — and the uncle behind the counter pulls it the same way he always has. Cloth sock. Robusta beans. No shortcuts.\n\nOrder your kopi. Crack your soft boiled eggs into the saucer, add dark soy and white pepper. Eat slowly. You have nowhere to be yet.\n\nWhen you're done, step outside. Chinatown at 8am belongs to the people who live here — the light is softer, the streets quieter, the shophouses on Pagoda Street glowing in dusty reds and yellows. Sri Mariamman Temple has been standing on South Bridge Road since 1827. Duck into Sago Street. Wander without a plan. That's the point.",
         address:
           "Chinatown Complex Food Centre, #02-048, 335 Smith Street, Singapore 050335",
         mapsUrl:
@@ -455,11 +454,11 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Maxwell Food Centre",
         type: "eat",
         intro:
-          "You're not hungry yet. Order half a plate anyway. Tian Tian's chicken rice is not something you skip because of timing. This stall has been here since 1987 and Anthony Bourdain queued for it on No Reservations. The chicken is poached until just cooked, the rice fragrant with chicken fat and pandan, the chilli sauce the best in Singapore. A half portion is SGD $5. There is no excuse.",
+          "You're not hungry yet. Order half a plate anyway. Tian Tian's chicken rice is not something you skip because of timing. This stall has been going since 1986 and famously won a nod from the late Anthony Bourdain. The chicken is poached until just cooked, the rice fragrant with chicken fat and pandan, the chilli sauce one that people cross the island for. A small plate is about SGD $5. There is no excuse.",
         address: "1 Kadayanallur Street, Tanjong Pagar, Singapore 069184",
         mapsUrl: "https://maps.google.com/?q=Maxwell+Food+Centre+Singapore",
         whatToOrder: [
-          "Tian Tian Chicken Rice — half portion, mixed (white and roast)",
+          "Tian Tian Chicken Rice — small plate, steamed or roasted",
           "Fresh sugarcane juice — cold, sweet, from the stall near the entrance",
         ],
         alsoTry: [
@@ -481,7 +480,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Gardens by the Bay",
         type: "walk",
         intro:
-          "From Maxwell, it's a 20-minute walk along the waterfront to Gardens by the Bay — and honestly, walk it. The route takes you past Clifford Pier and along Marina Bay before the Supertrees appear on the horizon. Or take the MRT — Tanjong Pagar to Raffles Place, transfer to the Downtown Line, two stops to Bayfront. Either way, you're there in under 25 minutes.",
+          "From Maxwell, the easiest way is the MRT: hop on the Thomson–East Coast Line at Maxwell station and ride four stops to Gardens by the Bay station (TE22) — Exit 1 leads straight into the gardens. It's about 15 minutes door to door. Feeling energetic? It's roughly a 40-minute walk via Marina Bay.",
         address: "18 Marina Gardens Drive, Singapore 018953",
         mapsUrl: "https://maps.google.com/?q=Gardens+by+the+Bay+Singapore",
         whatToOrder: [],
@@ -496,14 +495,14 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           },
           {
             item: "Cloud Forest",
-            note: "SGD $28 — misty mountain waterfall inside a glass dome",
+            note: "Misty mountain waterfall inside a glass dome — Cloud Forest + Flower Dome combo SGD $46 for non-residents",
           },
           {
             item: "Flower Dome",
-            note: "SGD $28 — world's largest glass greenhouse, cooler and quieter",
+            note: "World's largest glass greenhouse, cooler and quieter — included in the SGD $46 two-dome ticket",
           },
         ],
-        tip: "Skip the paid attractions and come back at 7.45pm for the Garden Rhapsody light show — Supertrees glow and pulse to music. Completely free.",
+        tip: "Skip the paid attractions and come back at 7.45pm or 8.45pm for the Garden Rhapsody light show — Supertrees glow and pulse to music. Completely free.",
         duration: "2 hours",
         image: "/images/trails/cbd/gardens-bay.jpg",
         isFree: true,
@@ -514,7 +513,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Lau Pa Sat",
         type: "eat",
         intro:
-          "Built in 1894, Lau Pa Sat is Singapore's most beautiful hawker centre — a Victorian cast iron structure in the middle of the CBD that somehow survived modernisation, war, and fifty years of urban development. At lunchtime it fills with office workers eating $5 plates next to tourists who can't believe what they're looking at. Order satay. Order a lot of satay.",
+          "Built in 1894, Lau Pa Sat is Singapore's most beautiful hawker centre — a Victorian cast iron structure in the middle of the CBD that was dismantled during MRT construction in the 1980s and painstakingly reassembled. At lunchtime it fills with office workers eating $5 plates next to tourists who can't believe what they're looking at. Order satay. Order a lot of satay.",
         address: "18 Raffles Quay, Singapore 048582",
         mapsUrl: "https://maps.google.com/?q=Lau+Pa+Sat+Singapore",
         whatToOrder: [
@@ -532,7 +531,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
             note: "Thick yellow noodles braised in prawn stock — squeeze the lime",
           },
         ],
-        tip: "Boon Tat Street outside transforms into open-air satay street from 7pm. You're coming back tonight — save room.",
+        tip: "Boon Tat Street outside transforms into open-air Satay Street from 7pm on weekdays (3pm on weekends). You're coming back tonight — save room.",
         duration: "1 hour",
         image: "/images/trails/cbd/lau-pa-sat.jpg",
       },
@@ -541,7 +540,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Marina Bay Waterfront Walk",
         type: "walk",
         intro:
-          "Walk off lunch along one of the most spectacular urban waterfronts in the world. The promenade from Lau Pa Sat to the Helix Bridge takes about 15 minutes on foot. Completely free — the Esplanade durians, the double helix bridge, Marina Bay Sands rising behind it like something from a science fiction film. Just walk. Let it wash over you.",
+          "Walk off lunch along one of the most spectacular urban waterfronts in the world. The walk from Lau Pa Sat to the Helix Bridge, via the Merlion and the Esplanade, takes about 30 minutes at an easy pace. Completely free — the Esplanade durians, the double helix bridge, Marina Bay Sands rising behind it like something from a science fiction film. Just walk. Let it wash over you.",
         address: "Helix Bridge, Marina Bay, Singapore",
         mapsUrl: "https://maps.google.com/?q=Helix+Bridge+Singapore",
         whatToOrder: [],
@@ -556,7 +555,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           },
           {
             item: "Marina Bay Sands observation deck",
-            note: "Optional — SGD $32, views are extraordinary",
+            note: "Optional, paid entry — check current prices online; views are extraordinary",
           },
           {
             item: "Merlion Park",
@@ -573,7 +572,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Amoy Street Food Centre",
         type: "eat",
         intro:
-          "Tucked behind the CBD's glass towers, Amoy Street Food Centre is the kind of place that rewards people who know where to look. By 4.30pm the lunch crowd has cleared, the best stalls have rested and restocked, and you can actually get a seat. Order something cold. Order something light. You've got dinner ahead of you.",
+          "Tucked behind the CBD's glass towers, Amoy Street Food Centre is the kind of place that rewards people who know where to look. By 4.30pm the lunch crowd has cleared and you can actually get a seat — but many stalls here are lunch-only and close by mid-afternoon (and on weekends), so treat this as a snack stop and go with what is open. Order something cold. Order something light. You've got dinner ahead of you.",
         address: "7 Maxwell Road, Singapore 069111",
         mapsUrl: "https://maps.google.com/?q=Amoy+Street+Food+Centre+Singapore",
         whatToOrder: [
@@ -598,7 +597,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         number: 7,
         name: "Ann Siang Hill",
         type: "walk",
-        intro: "Singapore's most beautiful heritage streets and almost nobody talks about them. Ann Siang Hill is a gentle slope of perfectly preserved shophouses that feels completely removed from the city around it. Club Street runs parallel — bars and restaurants that haven't tried too hard. The light at 5.30pm turns everything golden. This is where you take the photos that make everyone back home ask where you went.\n\nBut before you climb the hill — stop at 285 South Bridge Road. Tong Heng Confectionery has been making diamond-shaped egg tarts since 1939. The pastry is flaky, the filling is silky smooth egg custard, and they cost less than a dollar each. Buy two. Eat them while you walk up the hill. This is exactly the kind of thing ShiokFlavour exists to tell you about.",
+        intro: "Singapore's most beautiful heritage streets and almost nobody talks about them. Ann Siang Hill is a gentle slope of perfectly preserved shophouses that feels completely removed from the city around it. Club Street runs parallel — bars and restaurants that haven't tried too hard. The light at 5.30pm turns everything golden. This is where you take the photos that make everyone back home ask where you went.\n\nBut before you climb the hill — stop at 285 South Bridge Road. Tong Heng has been baking egg tarts in Chinatown since 1935, and its roots go back to a 1920s street stall. The diamond-shaped tarts have flaky pastry and silky smooth egg custard, and cost about $2.40 each. Buy two. Eat them while you walk up the hill. This is exactly the kind of thing ShiokFlavour exists to tell you about.",
         address: "Ann Siang Hill, Club Street, Singapore",
         mapsUrl: "https://maps.google.com/?q=Ann+Siang+Hill+Singapore",
         whatToOrder: [
@@ -608,7 +607,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           "Duxton Hill — one street over, equally beautiful, slightly more local crowd",
           "Optional: a drink at one of the bars on Club Street before dinner",
         ],
-        tip: "Tong Heng is closed on Sundays — plan accordingly. The egg tarts sell out by late afternoon so don't leave it too late. And the bars on Club Street and Duxton Hill start filling up around 6pm — perfect spot for a drink before dinner. You've well and truly earned it by now.",
+        tip: "Tong Heng is open daily, 9am to 7pm. The egg tarts sell out by late afternoon so don't leave it too late. And the bars on Club Street and Duxton Hill start filling up around 6pm — perfect spot for a drink before dinner. You've well and truly earned it by now.",
         duration: "1 hour",
         image: "/images/trails/cbd/ann-siang-hill.jpg",
       },
@@ -617,14 +616,13 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Hong Lim Market & Food Centre",
         type: "eat",
         intro:
-          "One of Singapore's oldest hawker centres and still one of its best. By 7pm Hong Lim is in full dinner swing — the carrot cake wok is perfectly seasoned after a full day of frying, the oyster omelette is crispy at the edges and eggy in the middle. Order both. Share between two. Add hokkien mee. Best $20 dinner in the city.",
+          "One of the CBD's oldest hawker centres and still one of its best. Be warned: most of Hong Lim's famous stalls are lunch operations, so by 7pm it is much quieter. The ones still firing are worth it — curry chicken bee hoon mee that runs until 9pm, and fish head bee hoon with a proper dinner service. Share between two. A very good $20 dinner.",
         address: "531A Upper Cross Street, Singapore 051531",
         mapsUrl:
           "https://maps.google.com/?q=Hong+Lim+Market+Food+Centre+Singapore",
         whatToOrder: [
-          "Carrot cake black — fried with dark caramel sauce, crispy and smoky — do not order white by mistake",
-          "Oyster omelette — fresh oysters, egg, potato starch, chilli sauce on the side",
-          "Hokkien mee — thick yellow noodles with prawn, squid, sambal, lime — squeeze hard",
+          "Ah Heng Curry Chicken Bee Hoon Mee (#02-58/59) — open daily until 9pm, rich curry over bee hoon and yellow noodles",
+          "Tang Kay Kee Fish Head Bee Hoon (#01-70) — dinner 5–9.30pm, closed Mondays",
         ],
         alsoTry: [
           { item: "Barley water", note: "Cold, sweet — the perfect dinner drink" },
@@ -633,7 +631,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
             note: "BBQ pork over rice — simple and satisfying",
           },
         ],
-        tip: "'Carrot cake' has no carrot. It's white radish and rice flour, fried in a wok. Black is better than white. This is not a debate.",
+        tip: "Come before 7pm if you can — many stalls here close by mid-afternoon, and the dinner options are limited.",
         duration: "1 hour",
         image: "/images/trails/cbd/hong-lim.jpg",
       },
@@ -642,7 +640,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         name: "Lau Pa Sat Satay Street",
         type: "eat & drink",
         intro:
-          "End where Singapore ends every good night. From 7pm Boon Tat Street closes to traffic and the satay stalls wheel out their grills. The smoke drifts through the CBD, the city towers glow above you, and the uncles fan charcoal with the calm of someone who has been doing this perfectly for thirty years. Order satay. Find a table. Sit down. You've earned this.",
+          "End where Singapore ends every good night. From 7pm on weekdays (3pm on weekends) Boon Tat Street closes to traffic and the satay stalls wheel out their grills. The smoke drifts through the CBD, the city towers glow above you, and the uncles fan charcoal with the calm of someone who has been doing this perfectly for thirty years. Order satay. Find a table. Sit down. You've earned this.",
         address: "Boon Tat Street, Singapore 048582",
         mapsUrl: "https://maps.google.com/?q=Boon+Tat+Street+Satay+Singapore",
         whatToOrder: [
@@ -660,7 +658,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
             note: "Grilled on banana leaf with sambal — bold and unmistakably Singapore",
           },
         ],
-        tip: "Tell the uncle how many sticks upfront — they cook to order, takes about 10 minutes. Use the time to find a table. Stalls open until midnight.",
+        tip: "Tell the uncle how many sticks upfront — they cook to order, takes about 10 minutes. Use the time to find a table. Satay Street runs until 3am.",
         duration: "Stay as long as you want",
         image: "/images/trails/cbd/satay-street.jpg",
       },
