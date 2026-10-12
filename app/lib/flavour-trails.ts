@@ -9,6 +9,8 @@ export type TrailStop = {
   tip: string;
   duration: string;
   image: string;
+  /** Shown under the image, e.g. "Illustration created with AI." */
+  imageCaption?: string;
   alsoTry?: { item: string; note?: string }[];
   highlights?: { item: string; note?: string }[];
   isFree?: boolean;
@@ -58,6 +60,7 @@ export type FlavourTrail = {
   bestTime: string;
   difficulty: 'Easy' | 'Moderate' | 'Serious Eating';
   heroImage: string;
+  heroCaption?: string;
   intro: string;
   pullQuote: string;
   trailStops?: TrailStop[];
@@ -67,6 +70,184 @@ export type FlavourTrail = {
 };
 
 export const FLAVOUR_TRAILS: FlavourTrail[] = [
+  {
+    slug: "little-india-kampong-glam-trail",
+    title: "The Little India & Kampong Glam Trail",
+    subtitle: "Tekka prata, Michelin-listed biryani, temple garlands, North Indian sweets, a 1908 murtabak and the golden domes of Sultan Mosque",
+    region: "Central Singapore",
+    duration: "Half day (5–6 hours)",
+    distance: "About 3.5km walking",
+    stops: 8,
+    bestTime: "Saturday, Sunday or Tuesday to Thursday, start by 8am. Avoid Mondays (several stops closed) and Fridays (Sultan Mosque closed to visitors).",
+    difficulty: "Moderate",
+    heroImage: "/images/trails/little-india/hero.jpg",
+    intro: "Little India and Kampong Glam sit a short walk apart, and together they tell one of the oldest stories in Singapore: of the traders, labourers, cooks and families from South India, the Malay world and the wider Muslim world who built their lives around these streets, and fed everyone else while they were at it.\n\nThis trail starts at Tekka Centre with prata and biryani, winds up Serangoon Road past garland stalls, a temple founded in the 1850s and a Chinese villa from 1900, stops for sweets, and then crosses into Kampong Glam for murtabak at a restaurant that has been on North Bridge Road since 1908. You will visit Sultan Mosque, walk Haji Lane and Bussorah Street, and finish with gelato under the golden domes.\n\nStart at Little India MRT by 8am. Finish at Bugis MRT in the afternoon. Bring cash, dress modestly for the temple and the mosque, and wear shoes you can slip off easily.",
+    pullQuote: "Two neighbourhoods, one long walk, and a plate of something good at every turn. This is the Singapore that was built by people who cooked for each other.",
+    trailStops: [
+      {
+        number: 1,
+        name: "Tekka Centre Breakfast",
+        type: "eat & drink",
+        intro: "Start where Little India starts its day. Tekka has been feeding this neighbourhood since 1915, when it opened as Kandang Kerbau market, Malay for buffalo pens, a nod to the cattle trade that once ran along these streets. The Hokkien nickname, Tek Kia Kha, came from the bamboo that grew along the Rochor Canal, and the name stuck through every rebuild until it became Tekka Centre in 2000. Downstairs, the hawker centre is already loud by 8am: prata hitting the griddle, biryani pots being lifted open, and tea being pulled from a height. Eat at Ar-Rahman first, then walk over to Allauddin's for a plate of biryani to share.",
+        address: "Tekka Centre, 665 Buffalo Road, Singapore 210665",
+        mapsUrl: "https://maps.google.com/?q=Tekka+Centre+665+Buffalo+Road+Singapore",
+        whatToOrder: [
+          "Plain prata at Ar-Rahman Cafe & Royal Prata (#01-247): minimum two pieces, dip into the curry, then decide whether you need egg",
+          "A hot teh tarik or masala tea from the same stall, the proper way to wake up in Little India",
+          "Mutton biryani set at Allauddin's Briyani (#01-229/232): one plate between two is the smart move on a trail this long",
+          "Save the chendol at Ar-Rahman for a hot day, or for a second visit",
+        ],
+        alsoTry: [
+          {
+            item: "Komala Vilas, 76-78 Serangoon Road",
+            note: "Prefer thosai? This vegetarian institution has been on Serangoon Road since 1947. Order the ghee masala dosai. Three minutes' walk from Tekka.",
+          },
+        ],
+        tip: "Allauddin's Briyani is listed in the MICHELIN Guide Singapore 2026, which notes the family has been selling biryani since the 1950s. It opens at 8am daily. Ar-Rahman opens from 7am and is closed on Mondays, so do not start this trail on a Monday. Both stalls are Muslim-owned. Bring cash and small notes. Before you leave, walk through the wet market next door: the spice and produce stalls are the real Tekka.",
+        duration: "45–60 mins",
+        image: "/images/food/roti-prata.jpg",
+      },
+      {
+        number: 2,
+        name: "Little India Heritage Walk",
+        type: "walk",
+        intro: "Step out of Tekka and onto Serangoon Road, one of the oldest roads in Singapore. Walk past the flower stalls threading jasmine and marigold into garlands, the gold shops, the spice merchants and the sari fabric stores. Turn into Campbell Lane, home of the Indian Heritage Centre, then wander up to Kerbau Road to find the former House of Tan Teng Niah. Built in 1900, it is the last surviving Chinese villa in Little India, and it belonged to a towkay who owned sugarcane-processing sweet factories along Serangoon Road. In one short walk you will see Tamil, Chinese and colonial Singapore sharing the same few streets.",
+        address: "Indian Heritage Centre, 5 Campbell Lane, Singapore 209924",
+        mapsUrl: "https://maps.google.com/?q=Indian+Heritage+Centre+5+Campbell+Lane+Singapore",
+        whatToOrder: [],
+        highlights: [
+          {
+            item: "Garland stalls along Serangoon Road",
+            note: "Jasmine, marigold and rose, strung by hand for temple offerings",
+          },
+          {
+            item: "Indian Heritage Centre, 5 Campbell Lane",
+            note: "Tuesday to Sunday, 10am to 6pm, last admission 5.30pm. Closed Mondays. Free for Singaporeans and PRs.",
+          },
+          {
+            item: "Former House of Tan Teng Niah, 37 Kerbau Road",
+            note: "A 1900 Chinese villa with carved pintu pagar half doors. Free to view from the street.",
+          },
+        ],
+        tip: "The Indian Heritage Centre opens at 10am, so if you finish breakfast early, do the street walk first and loop back. Free to walk; the Heritage Centre is free for Singaporeans and PRs, with tickets for other visitors. Look up as you walk: the upper floors of the shophouses carry most of the detail.",
+        duration: "45–60 mins",
+        image: "/images/trails/little-india/serangoon-road.jpg",
+        isFree: true,
+        hasPaidOption: true,
+        imageCaption: "Illustration created with AI.",
+      },
+      {
+        number: 3,
+        name: "Sri Veeramakaliamman Temple",
+        type: "experience",
+        intro: "Founded as early as 1855 by Indian pioneers, this temple began as a small shrine and grew into one of the most important Hindu temples in Singapore. It is dedicated to Kali, the goddess who destroys evil, and her many forms fill the interior. During the Second World War, people who sheltered here from the air raids were largely unharmed, a story still told in the neighbourhood. Stand across Serangoon Road first and take in the gopuram, the carved entrance tower, crowded with painted figures. Then go in quietly.",
+        address: "141 Serangoon Road, Singapore 218042",
+        mapsUrl: "https://maps.google.com/?q=Sri+Veeramakaliamman+Temple+141+Serangoon+Road+Singapore",
+        whatToOrder: [],
+        tip: "Free entry. Remove your shoes at the entrance, cover your shoulders and knees, and keep your voice down. Photography is allowed, but be considerate of worshippers and never photograph anyone at prayer. Go in the morning: like many Hindu temples, it closes for a break in the early afternoon, so check timings at the entrance if you are running late.",
+        duration: "15–20 mins",
+        image: "/images/trails/little-india/hindu-temple.jpg",
+        isFree: true,
+        imageCaption: "Illustration created with AI.",
+      },
+      {
+        number: 4,
+        name: "Moghul Sweet Shop",
+        type: "eat",
+        intro: "Walk back down Serangoon Road to Little India Arcade, a row of conserved shophouses dating to the 1920s, and find the sweet shop inside. The glass counter is a full spectrum of North Indian mithai: syrup-soaked gulab jamun, bright orange jalebi coiled like a puzzle, motichoor ladoo made of tiny beads of fried gram flour, dense karachi halwa. Sweets here are bought by the piece, which means you can try four things without guilt. It is a fitting stop after Tan Teng Niah's house: sugar built part of this street.",
+        address: "48 Serangoon Road, #01-16, Little India Arcade, Singapore 217959",
+        mapsUrl: "https://maps.google.com/?q=Moghul+Sweet+Shop+Little+India+Arcade+Singapore",
+        whatToOrder: [
+          "Gulab jamun: warm, soft, and very sweet. One is enough. Two is better.",
+          "Jalebi: crisp outside, syrup inside",
+          "Motichoor ladoo or a piece of karachi halwa to take away for later",
+          "A samosa if you want something savoury to balance it out",
+        ],
+        tip: "Open daily, 9.30am to 9pm. Pieces start from around S$1, so point at what looks good and build a small box. Ask for a mix to take away: you will want it on the walk to Kampong Glam.",
+        duration: "15–20 mins",
+        image: "/images/trails/little-india/indian-sweets.jpg",
+        imageCaption: "Illustration created with AI.",
+      },
+      {
+        number: 5,
+        name: "Singapore Zam Zam",
+        type: "eat",
+        intro: "From Little India Arcade, walk south-east across Rochor Canal towards Victoria Street and Arab Street, about 20 minutes on foot, and the golden dome of Sultan Mosque will appear over the shophouse roofs. Directly across North Bridge Road from it is Zam Zam, cooking murtabak and biryani on this street since 1908. A murtabak is a prata stuffed with spiced minced meat, egg and onion, folded into a thick parcel and griddled until the edges crisp. Here it comes sized small, medium or large, cut into squares, with a bowl of curry and a little pickled onion. It is one of the great Indian Muslim dishes of Singapore, and this is one of the places that made it famous.",
+        address: "697-699 North Bridge Road, Singapore 198675",
+        mapsUrl: "https://maps.google.com/?q=Singapore+Zam+Zam+697+North+Bridge+Road",
+        whatToOrder: [
+          "Mutton murtabak: the classic. A small is plenty after the morning you have had.",
+          "Deer murtabak if you want to try something you will not find at most stalls",
+          "Biryani if anyone in your group skipped Allauddin's this morning",
+          "Teh tarik to wash it all down",
+        ],
+        tip: "Muslim-owned and serving this street since 1908. Halal certification is reported differently by different guides, so if it matters to you, look for the MUIS certificate at the counter. Open daily. Watch the murtabak being folded at the griddle before you sit down. Lunch is busy, so aim for just before noon.",
+        duration: "40–50 mins",
+        image: "/images/food/murtabak.jpg",
+      },
+      {
+        number: 6,
+        name: "Arab Street, Haji Lane & Bussorah Street",
+        type: "walk",
+        intro: "Walk off lunch through the oldest corners of Kampong Glam. Arab Street still has its textile and rug merchants, bolts of fabric stacked to the ceiling. Haji Lane, one of the narrowest streets in the district, is lined with low shophouses painted in bold colours, murals and independent shops. Then turn onto Bussorah Street, the palm-lined pedestrian street that frames the mosque dome perfectly at its end. This is the classic Kampong Glam view, and it is worth standing still for.",
+        address: "Haji Lane, Singapore 189244",
+        mapsUrl: "https://maps.google.com/?q=Haji+Lane+Singapore",
+        whatToOrder: [],
+        highlights: [
+          {
+            item: "Arab Street",
+            note: "Textile and carpet shops, still trading in conserved shophouses",
+          },
+          {
+            item: "Haji Lane",
+            note: "Colourful shophouse lane, quieter before mid-afternoon",
+          },
+          {
+            item: "Bussorah Street",
+            note: "The palm-lined view to the mosque dome",
+          },
+        ],
+        tip: "Free to walk. Haji Lane gets crowded later in the day, so this early-afternoon window is a good time for it. Time the walk so you reach Bussorah Street just before 2pm, when the mosque reopens to visitors.",
+        duration: "30–40 mins",
+        image: "/images/trails/little-india/haji-lane.jpg",
+        isFree: true,
+        imageCaption: "Illustration created with AI.",
+      },
+      {
+        number: 7,
+        name: "Masjid Sultan (Sultan Mosque)",
+        type: "experience",
+        intro: "Its history goes back to 1824, when land was set aside here for a royal mosque. The building you see was completed in 1932, designed by the Irish architect Denis Santry of Swan & Maclaren, with golden onion domes that have defined the Kampong Glam skyline ever since. Look closely at the base of each dome: there is a belt of glass bottle ends, collected and donated by poorer residents who could not give money but wanted to give something. It is a National Monument, and it is still very much a working mosque.",
+        address: "3 Muscat Street, Singapore 198833",
+        mapsUrl: "https://maps.google.com/?q=Masjid+Sultan+3+Muscat+Street+Singapore",
+        whatToOrder: [],
+        tip: "Walk-in visits run Saturday to Thursday, 10am to 12pm and 2pm to 4pm. Closed to visitors on Fridays. Enter through Gate 5, facing Bussorah Street. Men need sleeved tops and long pants; women need long sleeves and ankle-length bottoms, and outfits must not be see-through. Robes are available at the counter, first come, first served. Shoes off. The main prayer halls are off-limits unless accompanied by a mosque official. Photography without flash is allowed.",
+        duration: "20–30 mins",
+        image: "/images/trails/little-india/sultan-mosque.jpg",
+        isFree: true,
+        imageCaption: "Illustration created with AI.",
+      },
+      {
+        number: 8,
+        name: "Momolato",
+        type: "eat",
+        intro: "End with something cold, a few doors up North Bridge Road from where you had lunch. Momolato is a homegrown gelato shop founded by Sharon Tay, who won the Asia Pacific leg of the Gelato World Tour. The flavours run from bright and floral to rich and nutty, with Middle Eastern touches like kunafa that suit this neighbourhood well. After a full day of prata, biryani, mithai and murtabak, a scoop of hibiscus is exactly the reset you need.",
+        address: "723 North Bridge Road, Singapore 198691",
+        mapsUrl: "https://maps.google.com/?q=Momolato+723+North+Bridge+Road+Singapore",
+        whatToOrder: [
+          "Hibiscus Apple: one of their most popular, tart and refreshing",
+          "Chocolate Hazelnut Kunafa if you want something richer",
+          "Ask for a taste of whatever is new on the counter: the flavours rotate",
+        ],
+        tip: "Listed as halal-certified in 2026 guides. Open from late morning into the evening, and later on weekends. Take your cup back out to Bussorah Street and watch the mosque domes turn gold in the late afternoon light. Bugis MRT is about ten minutes' walk away.",
+        duration: "15–20 mins",
+        image: "/images/trails/little-india/gelato.jpg",
+        imageCaption: "Illustration created with AI.",
+      },
+    ],
+    endNote: "You made it from Tekka to the domes of Sultan Mosque. If you ate everything on this list, the prata, the biryani, the gulab jamun, the murtabak and the gelato, you have eaten your way across more than a century of Singapore history in a single afternoon.\n\nThank you for walking this with us. The stalls on this trail are run by families who have kept recipes alive across generations, through rebuilds, renamings and a changing city. When you sit down and eat there, you are part of that story.\n\nCome back for Deepavali, when Serangoon Road is lit up, or for Ramadan, when Kampong Glam comes alive after dark. Both are worth the trip.\n\nEnjoy this trail? Share it with someone who deserves a good meal. And if you find a stall we missed, write to us. We are always hungry for a good tip.\n\n— The ShiokFlavour Team\nSingapore's hawker heritage, one plate at a time.",
+    heroCaption: "Illustration created with AI.",
+  },
   {
     slug: "katong-trail",
     title: "The Katong Trail",

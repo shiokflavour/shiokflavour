@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,6 +14,18 @@ import {
 } from "@/app/lib/flavour-trails";
 
 type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const trail = FLAVOUR_TRAILS.find((t) => t.slug === slug);
+  if (!trail) return {};
+  const name = trail.title.replace(/^The /, "");
+  return {
+    title: `${name}: Self-Guided ${name.includes("Singapore") ? "" : "Singapore "}Food Walk | ShiokFlavour`,
+    description: `${trail.stops} stops, ${trail.duration.toLowerCase()}: ${trail.subtitle.replace(/\.+$/, "")}. Addresses, what to order, opening days and local tips.`,
+    openGraph: { images: [trail.heroImage] },
+  };
+}
 
 function DualPathStopsSection({ trail }: { trail: FlavourTrail }) {
   if (!trail.dualPathStops || trail.dualPathStops.length === 0) return null;
@@ -270,6 +283,14 @@ export default async function TrailPage({ params }: Props) {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
+          {trail.heroCaption && (
+            <p className="absolute bottom-3 right-4 text-xs text-white/70">
+              {trail.heroCaption}{" "}
+              <Link href="/about#our-photos" className="underline underline-offset-2 hover:text-white">
+                About our photos
+              </Link>
+            </p>
+          )}
         </div>
       </section>
 
@@ -481,6 +502,11 @@ export default async function TrailPage({ params }: Props) {
                           className="h-auto w-full object-cover"
                           sizes="(max-width: 640px) 100vw, 256px"
                         />
+                        {stop.imageCaption && (
+                          <p className="bg-black/40 px-2 py-1.5 text-center text-[11px] text-white/60">
+                            {stop.imageCaption}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>

@@ -7,13 +7,6 @@ import { FLAVOUR_TRAILS } from "@/app/lib/flavour-trails";
 
 const COMING_SOON = [
   {
-    title: "CBD Lunch Run",
-    subtitle: "Maxwell, Amoy Street, Lau Pa Sat",
-    stops: 4,
-    duration: "90 mins",
-    region: "Central",
-  },
-  {
     title: "Old Airport Road Deep Dive",
     subtitle: "One of Singapore's most legendary food centres",
     stops: 8,
