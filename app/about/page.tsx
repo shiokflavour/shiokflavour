@@ -6,6 +6,7 @@ import { SiteFooter } from "../components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
 export const metadata = {
+  alternates: { canonical: "/about" },
   title: "About ShiokFlavour | Singapore's Hawker Heritage Guide",
   description:
     "ShiokFlavour is a cultural guide to Singapore's UNESCO-recognised hawker heritage — built for curious travellers and proud locals alike.",

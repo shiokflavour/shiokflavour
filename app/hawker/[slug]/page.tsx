@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title,
       description,
+      alternates: { canonical: `/hawker/${featured.slug}` },
       openGraph: {
         title,
         description,
@@ -50,6 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const hawker = await fetchHawkerByIdFromApi(slug);
   if (!hawker) return { title: "Not found | ShiokFlavour" };
   return {
+    alternates: { canonical: `/hawker/${encodeURIComponent(slug)}` },
     title: `${hawker.name}: Location & Food Guide | ShiokFlavour`,
     description: `${hawker.name} at ${hawker.address}. Find it on the map and explore Singapore hawker food guides, dishes and stalls on ShiokFlavour.`,
     openGraph: {

@@ -7,6 +7,13 @@ import { FEATURED_HAWKERS } from "@/app/lib/featured-hawkers";
 import { SiteHeader } from "./components/site-header";
 import { HomeHero } from "./components/home-hero";
 
+export const metadata = {
+  title: "ShiokFlavour: Singapore Hawker Food Guide, Best Stalls & Dish Stories",
+  description:
+    "Where to eat in Singapore's hawker centres: verified best stalls, 60 heritage dishes explained, food trails, prices and how to order like a local.",
+  alternates: { canonical: "/" },
+};
+
 const dishImageMap: Record<string, string> = {
   "hainanese-chicken-rice": "chicken-rice.jpg",
   "bobo-cha-cha": "ice-kachang.jpg",

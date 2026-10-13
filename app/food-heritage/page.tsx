@@ -5,6 +5,13 @@ import { SiteFooter } from "../components/site-footer";
 import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
+export const metadata = {
+  title: `${FOOD_HERITAGE_DISHES.length} Singapore Hawker Dishes: History, Prices & Where to Eat | ShiokFlavour`,
+  description:
+    "Every classic Singapore hawker dish explained: what it is, where it came from, what it costs and the stalls worth queueing for, from chicken rice to chendol.",
+  alternates: { canonical: "/food-heritage" },
+};
+
 const CATEGORY_ORDER = [
   "Singaporean Classics",
   "Malay & Muslim Heritage",

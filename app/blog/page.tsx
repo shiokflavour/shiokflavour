@@ -5,6 +5,13 @@ import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
 
+export const metadata = {
+  title: "Singapore Hawker Food Guides & Stories | ShiokFlavour",
+  description:
+    "How to order chicken rice, economy rice and prata, a 3-day food itinerary, halal hawker food and more: practical guides to eating well in Singapore.",
+  alternates: { canonical: "/blog" },
+};
+
 export default function BlogPage() {
   const seriesPosts = BLOG_POSTS.filter(
     (post) => post.series?.name === "How to Order"

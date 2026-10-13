@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${name}: Self-Guided ${name.includes("Singapore") ? "" : "Singapore "}Food Walk | ShiokFlavour`,
     description: `${trail.stops} stops, ${trail.duration.toLowerCase()}: ${trail.subtitle.replace(/\.+$/, "")}. Addresses, what to order, opening days and local tips.`,
+    alternates: { canonical: `/flavour-trail/${trail.slug}` },
     openGraph: { images: [trail.heroImage] },
   };
 }

@@ -66,6 +66,16 @@ Where this file and CLAUDE.md disagree, this file is newer.
 - Satay by the Bay closed 30 Sep 2026 (Wetlands by the Bay redevelopment). Don't recommend it.
 - AI illustrations on economy rice and chicken rice posts; About Our Photos section.
 
+## Indexing fix (13 Oct)
+- GSC 13 Oct: 28 indexed, 90 not (52 "Discovered", 38 "Crawled - currently not indexed",
+  incl. Maxwell, Lau Pa Sat, Tiong Bahru, chicken rice blog). Jumped from ~5 to 38 in early Oct.
+- Likely cause: every dish page shipped all 59 other dishes' full data to the client carousel
+  (~300KB of identical text per page). Fixed: carousel now gets 12 slim items (teh-tarik 416KB -> 92KB).
+- Added canonical tags to every page; added unique titles to pages that had none
+  (home, /food-heritage, /hawker-centres, /flavour-trail, /blog, kopi & prata decoders, discover, contact).
+- Little India & Kampong Glam trail live (12 Oct). Trails fact-checked; Galicier (closed 2022) replaced.
+- Re-check the Page indexing report in ~2 weeks.
+
 ## To do (priority order)
 1. More tourist-intent pages (e.g. hawker food near Orchard / Sentosa / Changi, late-night
    supper spots, best hawker centres for first-timers). Request indexing for each.

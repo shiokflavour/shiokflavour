@@ -5,7 +5,8 @@ import { ETIQUETTE_TIPS } from "@/app/lib/hawker-guide";
 import { KeepExploring } from "../keep-exploring";
 
 export const metadata = {
-  title: "Hawker Etiquette | The Unwritten Rules of Singapore Hawker Centres",
+  alternates: { canonical: "/hawker-guide/etiquette" },
+  title: "Hawker Centre Etiquette: The Unwritten Rules in Singapore | ShiokFlavour",
   description:
     "Choping seats with tissue, ordering at the stall, returning your tray. The unwritten rules nobody tells you — but everyone expects you to know.",
 };

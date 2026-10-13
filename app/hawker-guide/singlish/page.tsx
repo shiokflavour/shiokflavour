@@ -5,7 +5,8 @@ import { SINGLISH_TERMS } from "@/app/lib/hawker-guide";
 import { KeepExploring } from "../keep-exploring";
 
 export const metadata = {
-  title: "Singlish Glossary | The Local Food Language Decoded",
+  alternates: { canonical: "/hawker-guide/singlish" },
+  title: "Singlish Food Words: A Hawker Centre Glossary | ShiokFlavour",
   description:
     "Shiok, makan, jiak, dabao, kiasu, sian. The Singlish terms you'll hear at every hawker centre — meanings, pronunciation, and how to use them.",
 };

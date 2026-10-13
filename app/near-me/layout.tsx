@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
+  alternates: { canonical: "/near-me" },
   title: "Hawker Centres Near Me | ShiokFlavour",
   description: "Find the nearest Singapore hawker centres to your location — sorted by distance with must-try dishes, opening hours, and directions.",
   openGraph: {

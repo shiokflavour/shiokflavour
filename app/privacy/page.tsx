@@ -4,6 +4,7 @@ import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy" },
   title: "Privacy Policy | ShiokFlavour",
   description:
     "Privacy Policy for ShiokFlavour — Google Analytics, cookies, and how we handle your data.",

@@ -5,6 +5,7 @@ import ChopstickDivider from "@/app/components/chopstick-divider";
 import { HAWKER_GUIDES } from "./guides-data";
 
 export const metadata = {
+  alternates: { canonical: "/hawker-guide" },
   title: "Hawker Centre Guide: How to Order Like a Local in Singapore | ShiokFlavour",
   description:
     "Decode kopi and prata orders, chope a seat with a tissue packet, learn old-school kopitiam names and the Singlish you'll hear at the stall. The unwritten rules, explained.",

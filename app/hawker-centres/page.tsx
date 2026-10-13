@@ -4,6 +4,13 @@ import { SiteFooter } from "@/app/components/site-footer";
 import { SiteHeader } from "@/app/components/site-header";
 import { FEATURED_HAWKERS } from "@/app/lib/featured-hawkers";
 
+export const metadata = {
+  title: "Singapore Hawker Centres: Best Stalls at Every Centre | ShiokFlavour",
+  description:
+    "A guide to Singapore's best hawker centres, from Maxwell and Lau Pa Sat to neighbourhood favourites: what to eat, the stalls worth queueing for, and how to get there.",
+  alternates: { canonical: "/hawker-centres" },
+};
+
 function firstParam(value: string | string[] | undefined) {
   if (Array.isArray(value)) return value[0];
   return value;

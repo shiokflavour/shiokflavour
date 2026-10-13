@@ -55,6 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    alternates: { canonical: `/food-heritage/${dish.slug}` },
     openGraph: {
       title,
       description,
@@ -125,7 +126,21 @@ export default async function FoodHeritageDishPage({ params }: Props) {
   const dish = getDishBySlug(slug);
   if (!dish) notFound();
 
-  const otherDishes = FOOD_HERITAGE_DISHES.filter((d) => d.slug !== dish.slug);
+  // Only a slim list goes to the client carousel; sending every dish in full
+  // made each dish page carry ~300KB of other dishes' text.
+  const otherDishes = [
+    ...FOOD_HERITAGE_DISHES.filter((d) => d.slug !== dish.slug && d.category === dish.category),
+    ...FOOD_HERITAGE_DISHES.filter((d) => d.slug !== dish.slug && d.category !== dish.category),
+  ]
+    .slice(0, 12)
+    .map((d) => ({
+      slug: d.slug,
+      name: d.name,
+      imageUrl: d.imageUrl,
+      description: d.description.length > 140 ? `${d.description.slice(0, 137).trimEnd()}…` : d.description,
+      spiceLevel: d.spiceLevel,
+      halal: d.halal,
+    }));
   const tags = pairedWithTags(dish.bestPairedWith);
   const shiok = pickShiokFactorSentence(dish.description);
 

@@ -5,6 +5,13 @@ import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { FLAVOUR_TRAILS } from "@/app/lib/flavour-trails";
 
+export const metadata = {
+  title: "Singapore Food Trails: Self-Guided Hawker Food Walks | ShiokFlavour",
+  description:
+    "Walkable food trails through Katong, Tiong Bahru, the CBD, Little India and Kampong Glam: where to eat, what to order and what to see between bites.",
+  alternates: { canonical: "/flavour-trail" },
+};
+
 const COMING_SOON = [
   {
     title: "Old Airport Road Deep Dive",
