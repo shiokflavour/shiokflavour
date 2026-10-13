@@ -61,6 +61,8 @@ export type FlavourTrail = {
   difficulty: 'Easy' | 'Moderate' | 'Serious Eating';
   heroImage: string;
   heroCaption?: string;
+  /** Id from app/lib/tours.ts: shows a guided-tour card before the end note. */
+  tourId?: string;
   intro: string;
   pullQuote: string;
   trailStops?: TrailStop[];
@@ -72,6 +74,7 @@ export type FlavourTrail = {
 export const FLAVOUR_TRAILS: FlavourTrail[] = [
   {
     slug: "little-india-kampong-glam-trail",
+    tourId: "little-india",
     title: "The Little India & Kampong Glam Trail",
     subtitle: "Tekka prata, Michelin-listed biryani, temple garlands, North Indian sweets, a 1908 murtabak and the golden domes of Sultan Mosque",
     region: "Central Singapore",
@@ -99,8 +102,8 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         ],
         alsoTry: [
           {
-            item: "Komala Vilas, 76-78 Serangoon Road",
-            note: "Prefer thosai? This vegetarian institution has been on Serangoon Road since 1947. Order the ghee masala dosai. Three minutes' walk from Tekka.",
+            item: "Ananda Bhavan, 58 Serangoon Road",
+            note: "Prefer thosai? This South Indian vegetarian restaurant has been feeding Little India since 1924. Order a masala dosai. A short walk from Tekka.",
           },
         ],
         tip: "Allauddin's Briyani is listed in the MICHELIN Guide Singapore 2026, which notes the family has been selling biryani since the 1950s. It opens at 8am daily. Ar-Rahman opens from 7am and is closed on Mondays, so do not start this trail on a Monday. Both stalls are Muslim-owned. Bring cash and small notes. Before you leave, walk through the wet market next door: the spice and produce stalls are the real Tekka.",
@@ -250,6 +253,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
   },
   {
     slug: "katong-trail",
+    tourId: "katong",
     title: "The Katong Trail",
     subtitle:
       "Kaya toast, crispy prata, Peranakan shophouses and the laksa that made this neighbourhood famous",
@@ -586,6 +590,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
   },
   {
     slug: "cbd-day-trail",
+    tourId: "chinatown",
     title: "Singapore CBD Food Trail",
     subtitle:
       "From kaya toast at sunrise to satay under the city lights — the tastiest day you'll ever have in Singapore.",

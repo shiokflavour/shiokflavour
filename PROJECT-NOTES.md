@@ -76,6 +76,22 @@ Where this file and CLAUDE.md disagree, this file is newer.
 - Little India & Kampong Glam trail live (12 Oct). Trails fact-checked; Galicier (closed 2022) replaced.
 - Re-check the Page indexing report in ~2 weeks.
 
+## Travelpayouts (13 Oct)
+- Account verified; Drive script in app/layout.tsx. Project under review (a few days).
+- Drive settings: keep "Switch Links" ON (auto-converts Klook/GetYourGuide/Viator links to
+  affiliate links). After review completes, turn OFF Link Relevant Keywords, Insert
+  Recommendations, Display Smart Previews, Show Targeted Offers.
+- Affiliate disclosure on /privacy. Blog links to booking sites get rel="sponsored nofollow".
+- /blog/best-singapore-food-tours: 6 tours with plain GYG/Klook/Viator links (Oct 2026 prices
+  in USD). Recheck listings every few months; "Singapore Stories" (A Chef's Tour) GYG listing
+  was gone, so it was dropped.
+
+## Tour-feeder guides (13 Oct)
+- /blog/what-to-eat-in-chinatown-singapore, /blog/little-india-food-guide-singapore,
+  /blog/katong-joo-chiat-food-guide, /blog/late-night-food-singapore-supper. Each ends with a
+  "Prefer a guided tour?" [BUTTON] to the matching tour (rel=sponsored) + link to the tours page.
+- Komala Vilas flagship closed since Jan 2026: replaced with Ananda Bhavan (trail + masala thosai page).
+
 ## To do (priority order)
 1. More tourist-intent pages (e.g. hawker food near Orchard / Sentosa / Changi, late-night
    supper spots, best hawker centres for first-timers). Request indexing for each.

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { TourCard } from "@/app/components/tour-card";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteHeader } from "@/app/components/site-header";
@@ -27,7 +28,17 @@ function renderInline(text: string) {
         const cls =
           "font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary";
         return /^https?:\/\//i.test(link[2]) ? (
-          <a key={j} href={link[2]} target="_blank" rel="noopener noreferrer" className={cls}>
+          <a
+            key={j}
+            href={link[2]}
+            target="_blank"
+            rel={
+              /(getyourguide|klook|viator|tiqets|tp\.media|tp\.st|travelpayouts)\./i.test(link[2])
+                ? "sponsored nofollow noopener noreferrer"
+                : "noopener noreferrer"
+            }
+            className={cls}
+          >
             {link[1]}
           </a>
         ) : (
@@ -151,6 +162,10 @@ function renderArticleBody(markdown: string) {
         );
       }
     }
+    const tourMatch = t.match(/^\[TOUR:\s*([a-z0-9-]+)\s*(?:\|\s*(.+?))?\s*\]$/);
+    if (tourMatch) {
+      return <TourCard key={i} id={tourMatch[1]} lead={tourMatch[2]} />;
+    }
     if (t.startsWith("---")) {
       return <div key={i} className="my-8 border-t border-white/10" />;
     }
@@ -161,7 +176,7 @@ function renderArticleBody(markdown: string) {
           className="my-6 rounded-xl border-l-4 border-sf-primary bg-[#1a1a1a] px-6 py-4"
         >
           <p className="text-sm font-medium text-sf-muted">
-            {t.replace(/^> /, "")}
+            {renderInline(t.replace(/^> /, "").replace(/\n/g, " "))}
           </p>
         </div>
       );
@@ -225,7 +240,11 @@ function renderArticleBody(markdown: string) {
             <a
               href={url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={
+                /(getyourguide|klook|viator|tiqets|tp\.media|tp\.st|travelpayouts)\./i.test(url)
+                  ? "sponsored nofollow noopener noreferrer"
+                  : "noopener noreferrer"
+              }
               className={buttonClass}
             >
               {label}

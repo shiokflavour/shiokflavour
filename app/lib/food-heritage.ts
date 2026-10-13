@@ -5214,11 +5214,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         mapsUrl: "https://maps.google.com/?q=Heavens+Indian+Curry+Ghim+Moh+Market+20+Ghim+Moh+Road+Singapore",
       },
       {
-        name: "Komala Vilas",
-        address: "76-78 Serangoon Road",
+        name: "Ananda Bhavan",
+        address: "58 Serangoon Road",
         area: "Little India",
-        note: "A Little India vegetarian institution since 1947. Order the Mysore masala dosai with its fiery red chutney lining, and note the sambar, which reviewers praise.",
-        mapsUrl: "https://maps.google.com/?q=Komala+Vilas+76-78+Serangoon+Road+Singapore",
+        note: "A South Indian vegetarian institution in Little India, dating back to 1924. The masala dosai is the classic order.",
+        mapsUrl: "https://maps.google.com/?q=Ananda+Bhavan+58+Serangoon+Road+Singapore",
       },
     ],
     shiokOMeter: {

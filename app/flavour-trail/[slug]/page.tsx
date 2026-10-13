@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SiteHeader } from "@/app/components/site-header";
 import ChopstickDivider from "@/app/components/chopstick-divider";
+import { TourCard } from "@/app/components/tour-card";
 import {
   FLAVOUR_TRAILS,
   type DualPathStop,
@@ -520,6 +521,12 @@ export default async function TrailPage({ params }: Props) {
       </section>
 
       <ChopstickDivider />
+
+      {trail.tourId && (
+        <section className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <TourCard id={trail.tourId} lead="Rather go with a local guide?" />
+        </section>
+      )}
 
       {/* End note */}
       <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
