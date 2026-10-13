@@ -62,6 +62,23 @@ export default function PrivacyPage() {
 
           <section className="mt-12 space-y-4">
             <h2 className="text-xl font-semibold text-sf-primary">
+              Affiliate links
+            </h2>
+            <p className="leading-relaxed text-sf-muted">
+              Some links to tours, activities and travel bookings are affiliate
+              links, managed through{" "}
+              <strong className="font-medium text-sf-cream">
+                Travelpayouts
+              </strong>
+              . If you book through one, we may earn a small commission at no
+              extra cost to you. These partners may use cookies to track the
+              referral. Our food recommendations are never paid for: stalls and
+              dishes are chosen on their own merits.
+            </p>
+          </section>
+
+          <section className="mt-12 space-y-4">
+            <h2 className="text-xl font-semibold text-sf-primary">
               No sale of personal data
             </h2>
             <p className="leading-relaxed text-sf-muted">

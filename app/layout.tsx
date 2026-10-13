@@ -67,6 +67,13 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        {/* Travelpayouts Drive (affiliate links for tours and travel bookings) */}
+        <Script
+          id="travelpayouts-drive"
+          src="https://tp-em.com/NTg0ODUw.js?t=584850"
+          strategy="afterInteractive"
+          data-cmp-ab="2"
+        />
       </head>
       <body className="min-h-full flex flex-col bg-sf-bg text-sf-cream">
         <SiteHeader />
