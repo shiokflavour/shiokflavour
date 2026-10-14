@@ -9,7 +9,7 @@ export function TourCard({ id, lead }: { id: string; lead?: string }) {
       <div className="p-6 sm:p-7">
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-sf-primary/15 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-sf-primary">
-            {lead ?? "Prefer a guided tour?"}
+            {lead ?? "Shiok Pick"}
           </span>
           <span className="rounded-full border border-white/15 px-3 py-1 text-[11px] font-semibold text-white/70">
             {tour.platform}
