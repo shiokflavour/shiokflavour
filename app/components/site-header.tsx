@@ -168,7 +168,7 @@ export function SiteHeader() {
                             Food Heritage
                           </p>
                           <p className="text-xs leading-relaxed text-white/50">
-                            61 dishes, their stories, and where to find them
+                            60 dishes, their stories, and where to find them
                           </p>
                           <p className="mt-2 text-xs font-semibold text-sf-primary">
                             Discover dishes →
@@ -348,7 +348,7 @@ export function SiteHeader() {
                         Food Heritage
                       </p>
                       <p className="text-xs text-white/50">
-                        61 dishes, one story at a time
+                        60 dishes, one story at a time
                       </p>
                     </div>
                   </Link>
