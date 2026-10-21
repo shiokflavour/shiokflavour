@@ -103,7 +103,9 @@ export function buildHawkerFaqs(h: FeaturedHawker): FaqItem[] {
   out.push({
     q: `What are ${name}'s opening hours?`,
     a:
-      (h.hours === "Hours vary by stall"
+      (h.whenToGo?.hoursFaq
+        ? sentence(h.whenToGo.hoursFaq)
+        : h.hours === "Hours vary by stall"
         ? "Each stall keeps its own hours, so there's no single opening time. Many open from breakfast and close by mid-afternoon or evening."
         : sentence(h.hours)) + cleaning,
   });

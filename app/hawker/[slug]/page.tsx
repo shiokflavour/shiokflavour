@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import ClosureBadge from "@/app/components/closure-badge";
+import { WhenToGo } from "@/app/components/when-to-go";
 import { HawkerCentreCard } from "../../components/hawker-centre-card";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteHeader } from "../../components/site-header";
@@ -360,6 +361,8 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                 </p>
               </section>
 
+              <WhenToGo h={h} />
+
               <section aria-labelledby="story-heading">
                 <h2
                   id="story-heading"
@@ -618,7 +621,16 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                           Opening Hours
                         </dt>
                         <dd className="mt-1 text-sm text-sf-cream/95">
-                          {h.hours}
+                          {h.whenToGo ? (
+                            <>
+                              Stalls set their own hours.{" "}
+                              <a href="#when-to-go" className="font-semibold text-sf-primary underline underline-offset-4">
+                                See when to go
+                              </a>
+                            </>
+                          ) : (
+                            h.hours
+                          )}
                         </dd>
                       </div>
                     </div>

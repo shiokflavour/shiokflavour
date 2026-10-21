@@ -1272,9 +1272,9 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     name: "Economy Rice",
     slug: "economy-rice",
     seoTitle:
-      "Economy Rice in Singapore: What It Is, Prices & Best Stalls | ShiokFlavour",
+      "Economy Rice (Cai Png): Prices, Dishes & Best Stalls | ShiokFlavour",
     seoDescription:
-      "What is economy rice (cai png, 菜饭)? How Singapore's mixed rice works, what S$4–5 gets you, how the auntie prices your plate, and the best stalls to try.",
+      "Economy rice (cai png, 菜饭) explained: 2026 prices from S$2.50, the classic dishes, curry gravy, healthier picks and the best stalls in Singapore.",
     category: "Singaporean Classics",
     description:
       "Economy rice — cai png in Hokkien, cai fan in Mandarin, mixed rice in plain English — is the most democratic meal Singapore produces. White rice, a selection of cooked dishes from a display counter, a total that still rarely tops six dollars. You point. The auntie scoops. You pay by how many dishes you chose. The format is Chinese in origin, the selection is entirely Singaporean: braised pork belly sits next to curry chicken sits next to sambal kangkong sits next to luncheon meat. Economy rice is where Singapore eats without thinking about it. It is the meal that construction workers, office directors, schoolchildren, and retirees all eat from the same counter without any ceremony whatsoever.",
@@ -1282,7 +1282,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Chinese cai fan (菜饭) tradition adapted by Singaporean hawkers into a multi-dialect, multi-cuisine mixed rice format unique to the island.",
     whereToFind:
       "Every hawker centre in Singapore. Economy rice is not a destination dish — it is a daily constant. The best stall is the one nearest to where you are at noon.",
-    priceRange: "S$4–7 (one meat, two veg usually S$4–5; budget stalls from about S$3)",
+    priceRange: "S$3–5 for one meat and two veg (from about S$2.50 at budget stalls, more at food courts)",
     imageUrl: "/images/food/economy-rice.png",
     funFact:
       "The pricing at economy rice stalls is entirely discretionary — the auntie calculates the total in her head based on what she sees on your plate, and she is never wrong.",
@@ -1362,6 +1362,20 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         mapsUrl:
           "https://maps.google.com/?q=Xian+Jin+Mixed+Vegetable+Rice+Bedok+Food+Centre+%26+Market%2C+%2301-02%2C+216+Bedok+North+Street+1+Singapore",
       },
+      {
+        name: "Ye Ji Cooked Food",
+        address: "335 Smith Street, #02-020, Chinatown Complex Market & Food Centre",
+        area: "Chinatown",
+        note: "One of Chinatown Complex's most popular stalls, with over 20 home-style Cantonese dishes; har cheong gai and steamed minced pork are standouts. Dishes priced individually (meats about S$1.50, veg S$0.70, fish S$3.20), so a plate runs about S$5–6.50. Mon–Fri 8am–2.30pm.",
+        mapsUrl: "https://maps.google.com/?q=Ye+Ji+Cooked+Food+335+Smith+Street%2C+%2302-020%2C+Chinatown+Complex+Market+%26+Food+Centre%2C+Singapore+050335",
+      },
+      {
+        name: "V1 Jia Chang Cai",
+        address: "531A Upper Cross Street, #02-34, Hong Lim Market & Food Centre",
+        area: "Chinatown / Hong Lim",
+        note: "S$3 for rice with three dishes; the owner keeps prices low for elderly regulars. Try the ginger pig's liver, steamed egg and sweet and sour pork. Daily 9am–2pm.",
+        mapsUrl: "https://maps.google.com/?q=V1+Jia+Chang+Cai+531A+Upper+Cross+Street%2C+%2302-34%2C+Hong+Lim+Market+%26+Food+Centre%2C+Singapore+051531",
+      },
     ],
     shiokOMeter: { spiceHit: 2, messFactor: 1, flavourDepth: 6, queueGame: 5, shiokValue: 10 },
     faqs: [
@@ -1381,6 +1395,30 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
         q: "How do you order economy rice?",
         a: "Point at the dishes you want (the standard order is one meat and two vegetables), say whether you're eating in or taking away (\"dabao\"), and ask for curry gravy over the rice if you like it saucy.",
         link: {"label": "Read our full ordering guide →", "href": "/blog/how-to-order-economy-rice-singapore"},
+      },
+      {
+        q: "How much does economy rice cost in Singapore?",
+        a: "In 2026, one meat and two vegetables with rice usually costs about S$3 to S$5 at a hawker centre or coffee shop, and more at an air-conditioned food court. The cheapest stalls still sell a basic plate for around S$2.50 to S$3, and coffee shops in HDB's budget meal scheme must offer a one-meat, two-veg plate at S$3.50 or less. Fish, prawns and extra meat dishes push the price up quickly, so ask the total before the plate is packed if prices are not shown.",
+      },
+      {
+        q: "What dishes can you get at an economy rice stall?",
+        a: "A typical counter has 15 to 25 dishes. Expect meats such as sweet and sour pork, braised pork belly, curry chicken and fried chicken wings or drumsticks; fish and seafood such as fried fish fillet and sambal prawns; egg and tofu dishes such as steamed egg and braised tofu; and vegetables such as stir-fried cai xin, braised cabbage, brinjal and long beans.",
+      },
+      {
+        q: "Why is economy rice so cheap?",
+        a: "Stalls cook a few large trays of 15 to 25 dishes in bulk and serve them fast, so food and labour costs per plate stay low, and rice and vegetables are inexpensive fillers. Many stalls also keep prices low for older regulars, and HDB gives coffee shops a 5% rent discount if they offer a budget economy rice meal at S$3.50 or less.",
+      },
+      {
+        q: "Why does economy rice cost different amounts at the same stall?",
+        a: "Most stalls price by dish type rather than by weight, and few display a price for each tray. Fish, prawns, premium items and dishes with egg or mushroom can be charged as meat, so the same number of dishes can cost more depending on what you pick. If prices are not shown, ask the total before the plate is packed.",
+      },
+      {
+        q: "Is economy rice healthy?",
+        a: "It can be one of the more balanced hawker meals if you build the plate well. SingHealth dietitians suggest two vegetable dishes and one lean protein such as steamed fish, egg or tofu, less rice, brown rice if available, and skipping deep-fried items and heavy curry or sweet and sour gravy.",
+      },
+      {
+        q: "Can I ask for curry gravy on economy rice?",
+        a: "Yes, and many regulars do. When you finish choosing, ask for \"curry\" or \"lor\" (the dark braising sauce) to be poured over the rice, or say \"no gravy\" if you prefer it plain. The gravy is normally free, though it adds salt and fat.",
       },
     ],
   },
@@ -2178,11 +2216,11 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
     bestStalls: [
       {
         name: "Shi Wei Da Satay Bee Hoon",
-        address: "Bedok 85 Fengshan Food Centre, #01-69, 85 Bedok North Street 4",
+        address: "Bedok 85 Fengshan Food Centre, 85 Bedok North Street 4",
         area: "Bedok",
         note: "Mr Ng Kim Song roasts, skins and grinds his own peanuts for the gravy. The stall reopened on 5 January 2025 after closing in April 2024, and the current plate leaves out cockles and cuttlefish to keep prices low.",
         mapsUrl:
-          "https://maps.google.com/?q=Shi+Wei+Da+Satay+Bee+Hoon+Bedok+85+Fengshan+Food+Centre%2C+%2301-69%2C+85+Bedok+North+Street+4+Singapore",
+          "https://maps.google.com/?q=Shi+Wei+Da+Satay+Bee+Hoon+Bedok+85+Fengshan+Food+Centre%2C+85+Bedok+North+Street+4+Singapore",
       },
       {
         name: "Sin Chew Satay Bee Hoon",
@@ -2229,7 +2267,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       },
       {
         q: "Where can I eat satay bee hoon in Bedok?",
-        a: "Shi Wei Da at Bedok 85 Fengshan Food Centre (85 Bedok North Street 4, #01-69) is the best-known Bedok stall and received a Michelin Bib Gourmand in 2018. It closed in April 2024 and reopened on 5 January 2025, trading in the afternoon and evening. To keep prices low, the current plate leaves out cockles and cuttlefish.",
+        a: "Shi Wei Da at Bedok 85 Fengshan Food Centre (85 Bedok North Street 4) is the best-known Bedok stall and received a Michelin Bib Gourmand in 2018. It closed in April 2024 and reopened on 5 January 2025, trading in the afternoon and evening. To keep prices low, the current plate leaves out cockles and cuttlefish.",
       },
     ],
   },

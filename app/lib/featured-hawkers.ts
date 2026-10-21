@@ -32,6 +32,16 @@ export type FeaturedHawker = {
   localQuote?: string;
   timeline?: { year: string; event: string }[];
   legendaryStalls?: { name: string; dish: string; story: string }[];
+  /** Meal-by-meal "when to go" guide (stalls keep their own hours). */
+  whenToGo?: {
+    breakfast?: string;
+    lunch?: string;
+    dinner?: string;
+    lateNight?: string;
+    restDays?: string;
+    bestTime: string;
+    hoursFaq?: string;
+  };
 };
 
 export const FEATURED_HAWKERS: FeaturedHawker[] = [
@@ -40,7 +50,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     slug: "maxwell-food-centre",
     name: "Maxwell Food Centre",
     seoTitle:
-      "Maxwell Food Centre: Tian Tian Chicken Rice & Best Stalls | ShiokFlavour",
+      "Maxwell Food Centre: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Maxwell Food Centre guide: Tian Tian Hainanese chicken rice, Fuzhou oyster cake, Zhen Zhen Cantonese porridge and Ah Tai chicken rice in Chinatown.",
     address: "1 Kadayanallur Street, Tanjong Pagar",
@@ -119,13 +129,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Run by Wong Liang Tai, who was Tian Tian's head cook for about 20 years. It is a few stalls away and usually has a shorter queue. Reviewers often single out the steamed chicken.",
       },
     ],
+    whenToGo: {
+      breakfast: "Zhen Zhen Porridge (#01-54) opens at about 5.30am on Wednesdays and Fridays to Sundays for silky Cantonese congee with sliced fish and century egg, while Hock Lai Seng (#01-26) does fishball bak chor mee and 75 China Street Peanuts Soup (#01-57) ladles peanut soup from about 7am, Monday to Saturday.",
+      lunch: "Lunch is when the big names fire up: Tian Tian (#01-10/11) from about 10am, Ah Tai (#01-07) and Maxwell Fuzhou Oyster Cake (#01-05) from 11am and 9am respectively. Being a short walk from the CBD and Chinatown, queues are longest from about 12pm to 1.30pm on weekdays.",
+      dinner: "Plenty stays open for dinner: Tian Tian runs until about 8pm, Ah Tai until about 7.30pm, Maxwell Fuzhou Oyster Cake until about 8pm, and Fu Ji Fuzhou Fish Ball Wanton Noodles (#01-06) and Old Nyonya (#01-04) until about 9pm.",
+      restDays: "Tian Tian is closed on Mondays, Ah Tai on Tuesdays, Maxwell Fuzhou Oyster Cake on Sundays, and Zhen Zhen Porridge on Mondays, Tuesdays and Thursdays. The whole centre also shuts for NEA cleaning for a few days each quarter.",
+      bestTime: "Go mid-morning on a weekday, after the porridge crowd and before the 12pm office rush hits Tian Tian.",
+      hoursFaq: "Maxwell Food Centre has no single opening hours, as each stall sets its own. The earliest stalls start from about 5.30am to 7am, most are going by late morning, and a good number stay open until 8pm or 9pm. Tian Tian Hainanese Chicken Rice opens from about 10am to 8pm, Tuesday to Sunday.",
+    },
   },
   {
     id: 2,
     slug: "lau-pa-sat",
     name: "Lau Pa Sat",
     seoTitle:
-      "Lau Pa Sat: Satay Street, Best Stalls & What to Eat | ShiokFlavour",
+      "Lau Pa Sat: Opening Hours, Best Stalls & What to Eat | ShiokFlavour",
     seoDescription:
       "Lau Pa Sat guide: Satay Street on Boon Tat Street, Lao Fu Zi char kway teow, Warong Pak Sapari mee soto and more in a 1894 national monument.",
     address: "18 Raffles Quay, CBD",
@@ -205,13 +223,22 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Indonesian-style nasi lemak built around spiced ayam taliwang. Halal-certified and open late, making it a good alternative to satay for a night visit.",
       },
     ],
+    whenToGo: {
+      breakfast: "Lau Pa Sat itself never closes, but breakfast choice is modest: Maya Indian Veggie Delight (stall 47) opens from about 8am, Warong Pak Sapari (stall 58) from about 9am for halal mee soto, and Thunder Spize (stall 25) runs 24 hours.",
+      lunch: "Lunch is the main event for the surrounding offices, with Lao Fu Zi Fried Kway Teow (stalls 74 and 75), Warong Pak Sapari and Ipoh Hainanese Chicken Rice (stall 14) among the draws. Expect it to be packed from about 12pm to 1.30pm on weekdays.",
+      dinner: "Most stalls carry on into the evening, including Warong Pak Sapari until about 9pm and Lao Fu Zi, Pu Tian Xing Hua Mei Shi (stall 39) and Ipoh Hainanese Chicken Rice until about 10pm. Satay Street on Boon Tat Street fires up from 7pm on weekdays and 3pm at weekends.",
+      lateNight: "This is one of the best late-night spots in the CBD: Satay Street, including Best Satay 7 & 8 (FC4 and FC5), grills until about 3am every night, and Thunder Spize inside the market is open around the clock.",
+      restDays: "Satay Street and the main stalls listed here trade daily, though Lao Fu Zi opens later on Saturdays (from about 1pm). Lau Pa Sat also closes for occasional cleaning and maintenance, so check before a special trip.",
+      bestTime: "Come after 7pm on a weekday, when the satay smoke rolls down Boon Tat Street and the office lunch crowd is long gone.",
+      hoursFaq: "Lau Pa Sat is open 24 hours a day, but individual stalls keep their own hours. Most run from late morning until about 9pm or 10pm, and Satay Street outside operates from 7pm to 3am on weekdays and from 3pm to 3am at weekends.",
+    },
   },
   {
     id: 3,
     slug: "old-airport-road-food-centre",
     name: "Old Airport Road Food Centre",
     seoTitle:
-      "Old Airport Road Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Old Airport Road Food Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Old Airport Road Food Centre guide: Nam Sing Hokkien mee, Lao Fu Zi char kway teow, Xin Mei Xiang lor mee, Toa Payoh Rojak and Michelin Bib stalls.",
     address: "51 Old Airport Road, Geylang",
@@ -273,7 +300,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       {
         name: "Nam Sing Hokkien Fried Mee",
         dish: "Hokkien Mee",
-        story: "The only thing on the menu: egg noodles and bee hoon tossed in a broth of prawn shells and tomalley. The stall has served this one dish since the 1960s and holds a 2026 Michelin Bib Gourmand. Closed Mondays and Wednesdays.",
+        story: "The only thing on the menu: egg noodles and bee hoon tossed in a broth of prawn shells and tomalley. The stall has served this one dish since the 1960s and holds a 2026 Michelin Bib Gourmand. Closed Mondays.",
       },
       {
         name: "Lao Fu Zi Fried Kway Teow",
@@ -291,13 +318,22 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Named after the estate where it started, this stall moved here more than two decades ago. The draw is a generous sauce made with Penang prawn paste over crisp youtiao, turnip and pineapple. Add grilled cuttlefish or century egg.",
       },
     ],
+    whenToGo: {
+      breakfast: "Xin Mei Xiang Zheng Zong Lor Mee (#01-116) starts from about 7am, and Toast Hut (#01-52) does kaya butter toast from about 6.30am, Monday to Saturday. Many of the famous stalls, including Nam Sing, do not open until 10am or later.",
+      lunch: "Lunch brings out the big names: Nam Sing Hokkien Fried Mee (#01-32) from about 10am, Lao Fu Zi Fried Kway Teow (#01-12) from about 11.45am and Toa Payoh Rojak (#01-108) from about noon. Weekend lunchtimes are the busiest, and Nam Sing can sell out.",
+      dinner: "Nam Sing closes at about 6pm, but Lao Fu Zi fries until about 10pm, and Toa Payoh Rojak runs until about 7pm. Western Barbecue (#01-53) and Tong Kee Charcoal BBQ (#01-24) are evening favourites for grills.",
+      lateNight: "Lao Fu Zi keeps going until about 10pm and Western Barbecue until about 11pm, making this a decent supper stop in the east.",
+      restDays: "Nam Sing is closed on Mondays, and Lao Fu Zi on Wednesdays and Saturdays. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Aim for 10am to noon or 2pm to 4pm, which dodges the lunch queues and gets you to Nam Sing before it sells out.",
+      hoursFaq: "Old Airport Road Food Centre has no single opening hours; stalls set their own, with the earliest starting from about 6.30am and the last few closing at around 10pm to 11pm. Nam Sing Hokkien Fried Mee opens from about 10am to 6pm, Tuesday to Sunday.",
+    },
   },
   {
     id: 4,
     slug: "chinatown-complex-food-centre",
     name: "Chinatown Complex Food Centre",
     seoTitle:
-      "Chinatown Complex Food Centre: Best Stalls & Michelin Picks | ShiokFlavour",
+      "Chinatown Complex Food Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Chinatown Complex guide: Hawker Chan soya sauce chicken, Lian He Ben Ji claypot rice, Ann Chin popiah and Xiu Ji ikan bilis yong tau foo.",
     address: "335 Smith Street, Chinatown",
@@ -377,13 +413,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Earned a Bib Gourmand in 2026. Its roots go back to a 1960s roadside stall on Sago Lane. Fixed sets of handmade stuffed tau pok, tau kwa and fishballs come in a clear anchovy-and-fishbone broth. It opens before dawn.",
       },
     ],
+    whenToGo: {
+      breakfast: "Early risers are well served: Xiu Ji Ikan Bilis Yong Tau Foo (#02-088) opens from about 5am, Woo Ji Cooked Food (#02-056) sells $2.50 laksa from about 6am (Wednesday to Saturday), and Chef Leung's hand-milled chee cheong fun (#02-096) starts from about 6.30am.",
+      lunch: "Lunch is peak time, with Hawker Chan (#02-126), Ann Chin Popiah (#02-112) and Zhong Guo La Mian Xiao Long Bao (#02-135) drawing long queues; the busiest stretch is roughly 11.30am to 1.30pm. Many breakfast stalls, including Xiu Ji, close by early afternoon.",
+      dinner: "Lian He Ben Ji Claypot Rice (#02-198/199) only opens from about 3pm to 9pm, so it is a dinner stall, and Ann Chin Popiah, Old Amoy Chendol (#02-008) and Zhong Guo La Mian Xiao Long Bao stay open until about 8pm to 8.30pm. Smith Street Taps (#02-062) pours craft beer from 6pm.",
+      restDays: "Lian He Ben Ji and Xiu Ji are both closed on Mondays and Thursdays, and Zhong Guo La Mian Xiao Long Bao on Mondays and Tuesdays; Ann Chin Popiah opens daily. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Come early for yong tau foo and chee cheong fun, then come back after 5pm for claypot rice, but order it quickly as each pot takes around 30 to 40 minutes.",
+      hoursFaq: "Chinatown Complex Food Centre has no single opening hours, as each of its 200-plus stalls sets its own. A few start as early as 5am to 6.30am, most are busiest from breakfast through lunch, and a smaller group stays open until about 8pm or 9pm. Lian He Ben Ji Claypot Rice opens from about 3pm to 9pm.",
+    },
   },
   {
     id: 5,
     slug: "newton-food-centre",
     name: "Newton Food Centre",
     seoTitle:
-      "Newton Food Centre: Best Stalls & Michelin Picks | ShiokFlavour",
+      "Newton Food Centre: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Newton Food Centre guide: Hup Kee oyster omelette, Heng carrot cake, Alliance Seafood BBQ seafood, Kwang Kee fish soup and Kwee Heng duck rice.",
     address: "500 Clemenceau Avenue North, Newton",
@@ -462,13 +506,22 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Michelin Bib Gourmand. Known for sweet fish porridge, fried fish bee hoon and a fish head soup made with pre-fried mackerel head in a scallion broth. Daytime hours, closed Mondays.",
       },
     ],
+    whenToGo: {
+      breakfast: "Newton is mostly an afternoon and evening centre, but Hajah Monah Kitchen (#01-83) opens from about 6am (7.30am on Wednesdays) for nasi padang with beef rendang, and Kwee Heng Duck Noodle (#01-13) starts from about 9am.",
+      lunch: "Kwang Kee Teochew Fish Porridge (#01-20) opens from about 11am and is best at lunch, alongside Kwee Heng's braised duck and Newton Old Signboard 25's Hokkien prawn mee (#01-25). Lunch is far calmer than dinner here.",
+      dinner: "Evening is Newton's main event: Hup Kee Fried Oyster Omelette (#01-73) opens from about 5.30pm, Heng Carrot Cake (#01-28) from about 6pm, and Alliance Seafood (#01-27) serves chilli crab until about 10.30pm. TKR Satay (#01-33) starts grilling from about 4pm.",
+      lateNight: "Newton is a proper supper spot: Hup Kee runs until about midnight (Wednesday to Saturday), Heng until about 11pm, TKR Satay until about 12.30am, and R&B Express (#01-76) grills chicken wings until about 3am.",
+      restDays: "Heng is closed on Tuesdays, Hup Kee opens only Wednesday to Saturday, Kwang Kee and Alliance Seafood are closed on Mondays, and Kwee Heng is closed on Wednesdays and Sundays. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Come for dinner from Wednesday to Saturday, the only nights when both Hup Kee and Heng are frying.",
+      hoursFaq: "Newton Food Centre has no single opening hours, and it leans late: a few stalls open from 6am to 9am, many start at lunchtime, and a good number trade until 10.30pm, midnight or later. Heng Carrot Cake opens from about 6pm to 11pm, every day except Tuesday.",
+    },
   },
   {
     id: 6,
     slug: "tekka-centre",
     name: "Tekka Centre",
     seoTitle:
-      "Tekka Centre Little India: Best Stalls & What to Eat | ShiokFlavour",
+      "Tekka Centre: Opening Hours, Best Stalls & What to Eat | ShiokFlavour",
     seoDescription:
       "Tekka Centre food guide: Delhi Lahori naan and kebabs, Allauddin's Briyani, 545 Whampoa prawn noodles, Heng Gi duck rice and Indian-Muslim classics.",
     address: "665 Buffalo Road, Little India",
@@ -548,13 +601,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A Teochew braising stall listed in the Michelin Guide. Goose went off the menu after imports stopped; order the soya braised duck, pork belly or offal. Morning to early afternoon, closed Sundays.",
       },
     ],
+    whenToGo: {
+      breakfast: "545 Whampoa Prawn Noodles (#01-326) opens from about 7am on weekdays, Heng Gi Goose and Duck Rice (#01-335) from about 7am, Monday to Saturday, and Zham Zham Muslim Food (#01-217) serves biryani from about 6am daily.",
+      lunch: "Lunch is when everything is open at once, from Allauddin's Briyani (#01-229/232) to Delhi Lahori's butter chicken and naan (#01-266). Weekends are the busiest, especially Sunday, when Little India is packed.",
+      dinner: "Many Chinese stalls close by 1.30pm to 3pm, but Allauddin's Briyani runs until about 8pm and Poona Punjabi Dhaba (#01-302) serves tandoori chicken until about 10.30pm on weekdays and 11pm at weekends.",
+      restDays: "545 Whampoa is closed at weekends, Heng Gi on Sundays, while Allauddin's Briyani opens daily. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Go on a weekday morning to catch 545 Whampoa and Heng Gi before they shut at about 1.30pm.",
+      hoursFaq: "Tekka Centre has no single opening hours, as stalls set their own. Most open from about 6am to 8am and close by mid-afternoon, while a handful of Indian stalls stay open until 8pm to 11pm. Allauddin's Briyani opens from about 8am to 8pm daily.",
+    },
   },
   {
     id: 7,
     slug: "adam-road-food-centre",
     name: "Adam Road Food Centre",
     seoTitle:
-      "Adam Road Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Adam Road Food Centre: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "Adam Road Food Centre guide: Selera Rasa nasi lemak, Noo Cheng big prawn noodle, Bahrakath mutton soup and Warong Pak Sapari mee soto.",
     address:
@@ -634,13 +695,22 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Bib Gourmand. This Malay stall has been going for more than five decades and is known for mee soto and thick mee rebus gravy. Michelin also rates its tendon and tripe soups.",
       },
     ],
+    whenToGo: {
+      breakfast: "Selera Rasa Nasi Lemak (#01-02) opens from about 7am and Selamat Datang Warong Pak Sapari (#01-09) from about 8am for mee soto and mee rebus. The Selera Rasa queue builds quickly, so arrive before 9am.",
+      lunch: "Lunch adds Adam Rd Noo Cheng Big Prawn Noodle (#01-27) and Bahrakath Mutton Soup (#01-10), both from about 11am. The busiest window is about 12pm to 1pm, especially at weekends when Botanic Gardens visitors drop in.",
+      dinner: "Warong Pak Sapari closes by about 3pm and Selera Rasa by late afternoon, but Noo Cheng returns for a dinner session from about 6pm to 10pm (9pm on Saturdays), and Bahrakath ladles mutton soup right through the evening.",
+      lateNight: "Bahrakath Mutton Soup stays open until about midnight from Tuesday to Sunday, which makes Adam Road a handy supper stop.",
+      restDays: "Selera Rasa and Warong Pak Sapari are closed on Fridays, while Noo Cheng and Bahrakath are closed on Mondays. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Get there before 9am for nasi lemak without the long wait, or skip Mondays and Fridays when two of the big names are shut.",
+      hoursFaq: "Adam Road Food Centre has no single opening hours, as each stall keeps its own. Breakfast stalls open from about 7am to 8am and close by mid-afternoon, while a few stay open until 10pm or midnight. Adam Rd Noo Cheng Big Prawn Noodle opens from about 11am to 4.30pm and 6pm to 10pm, Tuesday to Sunday.",
+    },
   },
   {
     id: 8,
     slug: "bedok-interchange-hawker-centre",
     name: "Bedok Interchange Hawker Centre",
     seoTitle:
-      "Bedok Interchange Hawker Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Bedok Interchange Hawker Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Next to Bedok MRT: Michelin Bib Gourmand chwee kueh, budget nasi lemak, Thai food, lor mee and mee rebus. The best stalls at Bedok Interchange Hawker Centre.",
     address:
@@ -719,13 +789,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         a: "Chwee kueh. The original Bedok Chwee Kueh stall is here, and the brand has been listed in the Michelin Bib Gourmand. Cheap nasi lemak, Thai food and Malay breakfasts like mee rebus are popular too.",
       },
     ],
+    whenToGo: {
+      breakfast: "This is a strong breakfast stop: Ming Hui Nasi Lemak (#01-34) opens from about 5am, Bedok Chwee Kueh (#01-19) from about 7am, and Mei Xiang Lor Mee (#01-10) from about 7.30am (closed Mondays).",
+      lunch: "At lunch, add Kin Khao Yang Authentic Thai Food (#01-02) for basil minced meat rice and tom yum, Pin Xiang Hainanese Chicken Rice (#01-03) and Hock Hai Curry Chicken Noodle (#01-58). Expect the biggest crowds at weekend lunchtimes.",
+      dinner: "Plenty stays open in the evening: Inspirasi (#01-64) serves mee rebus and soto ayam until about 9.30pm, Kin Khao Yang and Ma La Xiang Guo (#01-48) run until about 10pm, and Bedok Chwee Kueh until about 7.30pm.",
+      restDays: "Inspirasi is closed on Sundays, Mei Xiang Lor Mee on Mondays and Hock Hai on Mondays and Tuesdays, while Bedok Chwee Kueh and Ming Hui open daily. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Come for breakfast: chwee kueh and nasi lemak are at their best first thing, before the bus-interchange lunch crowd arrives.",
+      hoursFaq: "Bedok Interchange Hawker Centre has no single opening hours, as each stall keeps its own. Stalls open from as early as 5am and a good number trade until 9pm or 10pm, so you can eat here from breakfast to dinner. Bedok Chwee Kueh is open daily from about 7am to 7.30pm.",
+    },
   },
   {
     id: 9,
     slug: "bedok-85-fengshan-market",
     name: "Bedok 85 Fengshan Market",
     seoTitle:
-      "Bedok 85 Fengshan Food Centre: Best Stalls & Supper Picks | ShiokFlavour",
+      "Bedok 85 Fengshan Food Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Bedok 85 (Fengshan Food Centre) supper guide: Xing Ji and Seng Hiang bak chor mee, Shi Wei Da satay bee hoon, Chai Chee pork porridge and BBQ stingray.",
     address:
@@ -797,7 +875,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       {
         name: "Shi Wei Da",
         dish: "Satay bee hoon",
-        story: "Mr Ng Kim Song's 2018 Bib Gourmand stall makes everything from scratch, including roasting and grinding the peanuts for its sweet-spicy gravy. Reopened at #01-69 in January 2025 after closing in April 2024. Opens mid-afternoon and sells out.",
+        story: "Mr Ng Kim Song's 2018 Bib Gourmand stall makes everything from scratch, including roasting and grinding the peanuts for its sweet-spicy gravy. Reopened in January 2025 after closing in April 2024. Opens mid-afternoon and sells out.",
       },
       {
         name: "Chai Chee Pork Porridge",
@@ -805,13 +883,22 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Silky Cantonese congee from two stalls here: morning service and an evening stall (#01-23) open till midnight, closed Mondays. Get the mixed porridge with century egg and cuttlefish, and dunk the you tiao.",
       },
     ],
+    whenToGo: {
+      breakfast: "The morning belongs to the wet market, but a few food stalls open early: Chai Chee Pork Porridge's day stall (#01-64) and Swatow Wanton Noodle (#01-50) from about 7am, and Fu Zhou Oyster Cake (#01-39) and Shanghai Xiao Long Bao (#01-16) from about 8am.",
+      lunch: "Lunch is quieter than the evening. 85 Big Prawn Noodles (#01-26) serves from about 9am to 3pm, and Xing Ji Rou Cuo Mian (#01-07) starts ladling bak chor mee from about 12.30pm.",
+      dinner: "Evening is when Bedok 85 comes alive: Seng Hiang Bak Chor Mee (#01-08) opens at about 4pm next to Xing Ji, Shi Wei Da sells satay bee hoon from about 4pm until sold out, and Chomp Chomp BBQ (#01-44) grills stingray from about 5pm.",
+      lateNight: "This is a true supper spot: 85 Bedok North Fried Oyster (#01-09/10) and the evening Chai Chee Pork Porridge stall (#01-23) run until about 2am, Chomp Chomp BBQ until about 12.30am, Seng Hiang until midnight and Xing Ji until about 11.30pm.",
+      restDays: "Xing Ji is closed on Thursdays, Seng Hiang on Wednesdays, Shi Wei Da on Tuesdays and the evening Chai Chee porridge stall on Mondays. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Come after dark for supper, but get to Shi Wei Da soon after 4pm before the satay bee hoon sells out.",
+      hoursFaq: "Bedok 85 (Fengshan Food Centre) has no single opening hours, as each stall sets its own. A few stalls open from about 7am, but the centre really gets going from 4pm, and several stalls trade until midnight or 2am. Seng Hiang Bak Chor Mee is open from about 4pm to midnight, closed Wednesdays.",
+    },
   },
   {
     id: 10,
     slug: "tampines-round-market",
     name: "Tampines Round Market",
     seoTitle:
-      "Tampines Round Market: Best Stalls & What to Eat | ShiokFlavour",
+      "Tampines Round Market: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Tampines Round Market guide: Bib Gourmand Rajarani Thosai, Yi Pin Wei duck kway chap, 137 lor mee, Xing Ji wanton mee and Sarawak kolo mee.",
     address:
@@ -887,13 +974,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A queue magnet at #01-09 for thick, gravy-laden lor mee topped with fried fish. It sells out early, so arrive at breakfast time. Closed Mondays.",
       },
     ],
+    whenToGo: {
+      breakfast: "This is a breakfast centre first and foremost. Rajarani Thosai (#01-33) opens from about 7am for thosai and coconut appam made from scratch, and the queues for lor mee at 137 Lor Mee Prawn Mee (#01-09), Sarawak kolo mee at Yummy Sarawak Kolo Mee (#01-45) and wanton mee at Xing Ji (#01-35) build from early morning.",
+      lunch: "Late morning to lunch is the time for Yi Pin Wei Braised Duck Kway Chap, a new 2026 Bib Gourmand, alongside the noodle stalls, but many of the famous names sell out or wind down by early afternoon. Weekends are the busiest, when estate regulars and Bib Gourmand hunters arrive together.",
+      dinner: "Most stalls here close by early to mid afternoon, so this is not a dinner destination; Rajarani Thosai, for one, finishes at about 1.30pm. Only a handful of stalls keep going into the evening.",
+      restDays: "Rajarani Thosai is closed on Wednesdays, and several other favourites take a Monday, Tuesday or Wednesday off, so check before you travel. The centre also closes for NEA cleaning a few days each quarter, so check before you go.",
+      bestTime: "Come for breakfast: the best stalls sell out early and the centre is winding down by early afternoon.",
+      hoursFaq: "Tampines Round Market has no single opening hours, as each stall sets its own. Most cooked-food stalls open from about 6am or 7am and close by early afternoon, with only a few open later. Bib Gourmand Rajarani Thosai (#01-33), for example, trades from about 7am to 1.30pm, Thursday to Tuesday.",
+    },
   },
   {
     id: 11,
     slug: "geylang-serai-market",
     name: "Geylang Serai Market",
     seoTitle:
-      "Geylang Serai Market Food Centre: Best Malay Stalls | ShiokFlavour",
+      "Geylang Serai Market: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Where to eat at Geylang Serai Market: Sinar Pagi nasi padang, Original Alhambra satay, Hajjah Mona nasi padang and Hamid's family briyani.",
     address:
@@ -923,7 +1018,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     tipForVisitors:
       "Go for breakfast or lunch: several of the best-known stalls close mid-afternoon and popular nasi padang dishes can sell out by lunchtime. The food centre is on the second floor, above the wet market.",
     halal: false,
-    openLate: true,
+    openLate: false,
     budgetPerPax:
       "$5–$10",
     story:
@@ -969,13 +1064,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A three-generation family stall selling nasi briyani since 1964. Get the briyani kambing for tender, non-gamey mutton, or the slow-cooked chicken. Closed Mondays.",
       },
     ],
+    whenToGo: {
+      breakfast: "Malay breakfast stalls upstairs open early for mee rebus, lontong and thosai, and Sinar Pagi Nasi Padang (#02-137) starts laying out its Kapau-style spread from about 7am to 8am. Original Alhambra Satay (#02-145) opens from about 9.30am (8.30am on Saturdays).",
+      lunch: "Lunch is the main event: queue for Sinar Pagi, Hajjah Mona's nasi padang and Geylang (Hamid's) Briyani (#02-146), and arrive before about 12.30pm, as popular dishes sell out. Weekends are busiest, with families shopping in the wet market below.",
+      dinner: "Most stalls close by mid to late afternoon. Original Alhambra Satay is one of the few that keeps grilling into the evening, until about 7.45pm daily.",
+      restDays: "Geylang (Hamid's) Briyani is closed on Mondays, while Original Alhambra Satay opens every day. The market also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Come for breakfast or an early lunch: the best nasi padang dishes are often gone by early afternoon.",
+      hoursFaq: "Geylang Serai Market's food centre has no single opening hours, as each stall sets its own. Most stalls open from about 7am to 9am and close between 3pm and 5pm, with only a few, such as Original Alhambra Satay (until about 7.45pm), open in the evening. The wet market downstairs is busiest in the morning.",
+    },
   },
   {
     id: 12,
     slug: "amoy-street-food-centre",
     name: "Amoy Street Food Centre",
     seoTitle:
-      "Amoy Street Food Centre: Best Stalls & Michelin Picks | ShiokFlavour",
+      "Amoy Street Food Centre: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "Amoy Street Food Centre guide: A Noodle Story ramen, Han Kee fish soup, J2 curry puffs, Hong Kee beef noodles and more Michelin Bib Gourmand stalls.",
     address: "7 Maxwell Road, Tanjong Pagar",
@@ -1051,13 +1154,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A Hainanese-style beef noodle stall with decades of history and a stock simmered for hours. Get it dry or in soup. Michelin Bib Gourmand.",
       },
     ],
+    whenToGo: {
+      breakfast: "Ah Seng (Hai Nam) Coffee (#02-95) starts from about 5.30am with kaya toast, Ah Ter Teochew Fishball Noodles (#01-14) from about 7am, and J2 Famous Crispy Curry Puff (#01-21) from about 8am on weekdays. Hong Kee Beef Noodles (#01-42) opens from about 9am.",
+      lunch: "Lunch is the main event, with A Noodle Story (#01-39), Han Kee Fish Soup (#02-129) and J2 all drawing long queues; it is busiest from about 12pm to 1.30pm on weekdays, when the CBD empties out to eat.",
+      dinner: "Most stalls here close by 2.30pm to 3pm; A Noodle Story is one of the few open for dinner, until about 8pm on weekdays, and Quan Ji (#01-56/57) cooks zi char until about 9.30pm from Tuesday to Saturday.",
+      restDays: "A Noodle Story, Han Kee and J2 open on weekdays only and are closed at weekends, while Hong Kee opens daily. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Go on a weekday before 11.30am or after 1.30pm, as most Michelin-listed stalls here are shut at weekends.",
+      hoursFaq: "Amoy Street Food Centre has no single opening hours, and it runs on office time: most stalls open from about 7am to 10am and close by 2.30pm to 3pm, with only a handful open into the evening. Many stalls are closed at weekends. Han Kee Fish Soup opens from about 11am to 3pm, Monday to Friday.",
+    },
   },
   {
     id: 13,
     slug: "tiong-bahru-market",
     name: "Tiong Bahru Market",
     seoTitle:
-      "Tiong Bahru Market: Best Hawker Stalls & What to Eat | ShiokFlavour",
+      "Tiong Bahru Market: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Tiong Bahru Market food guide: Jian Bo chwee kueh, Hong Heng Hokkien mee, boneless chicken rice, Koh Brother pig's organ soup and Lor Mee 178.",
     address: "30 Seng Poh Road, Tiong Bahru",
@@ -1137,13 +1248,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A peppery broth with tripe, liver, meatballs and sliced pork, sharpened with salted mustard greens. It began as a pushcart in 1955, is now run by the founder's descendants, and holds a 2026 Michelin Bib Gourmand.",
       },
     ],
+    whenToGo: {
+      breakfast: "Tiong Bahru is a proper breakfast market: Jian Bo Shui Kueh (#02-05) steams chwee kueh from about 7am, Lor Mee 178 (#02-23) opens at about 7am (closed Wednesdays), and Hui Ji Fishball (#02-44) starts from about 5.30am. Grab a kopi from 238 Coffee Stall (#02-81), open from about 6am.",
+      lunch: "Lunch is when the Bib Gourmand stalls are all running: Hong Heng Fried Sotong Prawn Mee (#02-01) fries Hokkien mee from about 10.30am to 2.30pm, alongside Tiong Bahru Hainanese Boneless Chicken Rice (#02-82) and Koh Brothers Pig's Organ Soup (#02-29). Weekends from late morning are the most crowded.",
+      dinner: "Many stalls wind down by mid-afternoon, but you can still eat well in the evening: Jian Bo Shui Kueh runs until about 8pm, Koh Brothers reopens from about 5pm to 7.30pm (Tuesday to Saturday), and Shan Ji La Mian Xiao Long Bao (#02-41) stays open until about 10pm.",
+      restDays: "Hong Heng is closed on Sundays and Mondays, the boneless chicken rice and Koh Brothers on Mondays, and Lor Mee 178 on Wednesdays, while Jian Bo opens daily. The market also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Come for a late breakfast on a weekday, then stay for Hong Heng's Hokkien mee when it opens at 10.30am.",
+      hoursFaq: "Tiong Bahru Market has no single opening hours, as each stall sets its own. Most cooked food stalls open from about 6am or 7am and close by 2pm to 3pm, with a handful such as Jian Bo Shui Kueh (until about 8pm) and Shan Ji La Mian Xiao Long Bao (until about 10pm) trading into the evening. Bib Gourmand Hong Heng Fried Sotong Prawn Mee opens Tuesday to Saturday, 10.30am to 2.30pm.",
+    },
   },
   {
     id: 14,
     slug: "abc-brickworks-market",
     name: "ABC Brickworks Market",
     seoTitle:
-      "ABC Brickworks Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "ABC Brickworks: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "ABC Brickworks Food Centre guide: Bib Gourmand Ah Er Soup and Jason Penang Cuisine assam laksa, Jin Jin Dessert's Power Chendol, Fatty Cheong char siew.",
     address:
@@ -1223,12 +1342,20 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Known for charcoal-roasted char siew marinated overnight. Ask for the fattier 'bu jian tian' cut, or get a combination plate with roast pork.",
       },
     ],
+    whenToGo: {
+      breakfast: "Early risers have proper options: Swee Kee Wanton Noodles (#01-39) opens from about 5.30am and Wah Leng Wanton Noodle (#01-117) from about 6am, while Sin Thor Eunos Bak Kut Teh (#01-04) starts from about 8am and San Xiang Bak Chor Mee (#01-132) from about 8.30am.",
+      lunch: "Lunch brings out the two Bib Gourmands: Jason Penang Cuisine (#01-112) for assam laksa from 11am to 2pm, and Ah Er Soup (#01-141) for slow-boiled soups with pumpkin rice, plus Fatty Cheong (#01-120) for charcoal char siew from 11am. Weekday lunch fills up with nearby office workers, so arrive before noon.",
+      dinner: "ABC is one of the better heartland centres for dinner. Jason Penang Cuisine reopens from 5.30pm to 8pm, Ah Er Soup runs an evening session until about 8pm, Yuan Yuan Claypot Rice (#01-38) fires up from 4.30pm, Soon Huat Teochew Satay Beehoon trades from 4pm to 9pm, and Jin Jin Hot/Cold Dessert (#01-21) serves its Gangster Ice until about 9.30pm.",
+      restDays: "Ah Er Soup is closed on Mondays, Jason Penang Cuisine on Mondays and Tuesdays, Jin Jin Dessert on Wednesdays, Fatty Cheong on Thursdays, and Yuan Yuan Claypot Rice opens only Friday to Monday. The centre also closes for NEA cleaning a few days each quarter, so check before you go.",
+      bestTime: "Go for an early dinner from about 5.30pm, when both Bib Gourmands and the claypot and satay bee hoon stalls are all firing.",
+      hoursFaq: "ABC Brickworks Food Centre has no single opening hours, as each stall keeps its own. The breakfast noodle stalls open from about 5.30am to 6am, the lunch crowd peaks around midday, and plenty of stalls run evening sessions until about 8pm to 9.30pm. Bib Gourmand Jason Penang Cuisine, for example, opens 11am to 2pm and 5.30pm to 8pm, Wednesday to Sunday.",
+    },
   },
   {
     id: 15,
     slug: "holland-drive-market-food-centre",
     seoTitle:
-      "Holland Drive Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Holland Drive Food Centre: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "Holland Drive Food Centre near Buona Vista: Bib Gourmand Ru Ji Kitchen fishball noodles, New Lucky charcoal claypot rice, kway chap and nasi padang.",
     name:
@@ -1306,13 +1433,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A Muslim-owned Malay stall with breakfast first, then a wide nasi padang spread with dishes like curry chicken and mutton rendang. Popular dishes sell out early on weekdays.",
       },
     ],
+    whenToGo: {
+      breakfast: "Head upstairs early for breakfast: Ru Ji Kitchen (#02-28/29) serves its fishball mee pok from about 7am, Yap Kee Wanton Egg Noodles (#02-04) opens from about 6.30am, and Cheng Heng Kway Chap and Braised Duck Rice (#02-05) ladles kway chap from about 7am.",
+      lunch: "Lunch is short and sharp here, with Ru Ji closing at about 1pm and New Lucky Claypot Rice (#02-19) running only a brief 10.30am to 12.30pm session, so pre-order your claypot by phone. Weekends draw the biggest crowds from the Holland Village and Buona Vista estates.",
+      dinner: "Most stalls close by about 2.30pm, but New Lucky Claypot Rice reopens from 5pm to 7.30pm for charcoal claypot rice, The Four-Eyes Zai Fried Hokkien Mee (#02-33) fries from 5pm to 8.30pm Monday to Saturday, and Gaziantep Delight (#02-13) serves doner until about 7.30pm from Wednesday to Sunday.",
+      restDays: "Ru Ji Kitchen is closed on Mondays, New Lucky Claypot Rice on Wednesdays, Cheng Heng Kway Chap on Mondays and Thursdays, and Yap Kee Wanton Egg Noodles on Wednesdays and Sundays. The centre also closes for NEA cleaning a few days each quarter, so check before you go.",
+      bestTime: "Come before 1pm, and ideally for breakfast: Ru Ji Kitchen shuts at about 1pm and the claypot rice lunch session ends at 12.30pm.",
+      hoursFaq: "Holland Drive Market & Food Centre has no single opening hours, as each stall sets its own. Most cooked-food stalls upstairs open from about 6.30am or 7am and close by about 2.30pm, with a few returning for dinner until about 7.30pm to 8.30pm. Bib Gourmand Ru Ji Kitchen, for example, opens from 7am to 1pm, Tuesday to Sunday.",
+    },
   },
   {
     id: 16,
     slug: "clementi-448-market",
     name: "Clementi 448 Market",
     seoTitle:
-      "Clementi 448 Market & Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Clementi 448 Market: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Clementi 448 food guide: Michelin Bib Gourmand Song Fish Soup, the queue-worthy Fried Carrot Cake, Boon Kee wanton mee and Kee Hock hor fun.",
     address: "448 Clementi Avenue 3, Clementi",
@@ -1387,13 +1522,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Cze char-style hor fun at #01-43. Reviewers single out the sliced fish or beef hor fun and the pork ribs rice. Ask for red chilli if you want more heat than the default green.",
       },
     ],
+    whenToGo: {
+      breakfast: "Mornings are the time for the third-generation Fried Carrot Cake stall (#01-45), whose batch-fried black and white carrot cake draws a long queue, and Boon Kee Wanton Noodle (#01-40) for wanton and soya sauce chicken noodles.",
+      lunch: "Bib Gourmand Song Fish Soup (#01-38) opens its lunch session from 10am to 2pm for sliced fish bee hoon soup, and the noon rush brings in families and workers from Clementi town centre. Weekends are the busiest, especially at the carrot cake stall.",
+      dinner: "The centre runs from about 7am to 9pm, and Song Fish Soup reopens for dinner from 4pm to 8pm, Monday to Saturday. Many of the breakfast and noodle stalls have shut by mid-afternoon, so the evening choice is smaller.",
+      restDays: "Song Fish Soup is closed on Sundays and the Fried Carrot Cake stall on Mondays. The centre also closes for NEA cleaning a few days each quarter, so check before you go.",
+      bestTime: "Come in the morning for the carrot cake, then stay for Song Fish Soup when it opens at 10am.",
+      hoursFaq: "Clementi 448 Market & Food Centre is generally open from about 7am to 9pm daily, but each stall keeps its own hours. Many breakfast and noodle stalls close by mid-afternoon, while a smaller group trades into the evening. Bib Gourmand Song Fish Soup (#01-38) opens 10am to 2pm and 4pm to 8pm, Monday to Saturday. The centre reopened on 29 June 2026 after a three-month renovation.",
+    },
   },
   {
     id: 17,
     slug: "jurong-west-505-market",
     name: "Jurong West 505 Market",
     seoTitle:
-      "Jurong West 505 Market & Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Jurong West 505 Market: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Jurong West 505 food guide: Bib Gourmand tutu kueh at Du Du, Soh Kee chicken porridge, Jian Bo chwee kueh and Hakka thunder tea rice.",
     address:
@@ -1451,7 +1594,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       {
         name: "Du Du Cooked Food (Du Du Shou Shi)",
         dish: "Tutu kueh",
-        story: "Steamed rice-flour cakes with peanut or coconut filling, chewy outside and sweet and nutty within. Michelin awarded it a Bib Gourmand in 2026 and advises eating them hot, so eat them at the stall. Closed Mondays.",
+        story: "Steamed rice-flour cakes with peanut or coconut filling, chewy outside and sweet and nutty within. Michelin awarded it a Bib Gourmand in 2026 and advises eating them hot, so eat them at the stall. Closed Mondays and Fridays.",
       },
       {
         name: "Soh Kee Cooked Food",
@@ -1469,13 +1612,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A bowl of rice with greens, nuts and tofu, served with a herbal green tea soup. Seth Lui reports it was named one of Singapore's Best Foods 2024. Morning-to-afternoon hours, closed Mondays.",
       },
     ],
+    whenToGo: {
+      breakfast: "Breakfast starts early: Jian Bo Shui Kueh (#01-27) steams chwee kueh from about 5.30am, Traditional Hakka Lui Cha (#01-12) serves thunder tea rice from about 6am, and Yong Xing Economic Bee Hoon & Nasi Lemak (#01-09) opens from about 6am.",
+      lunch: "Lunch is the time to try the two Bib Gourmands: Du Du Shou Shi (#01-19) for hot tutu kueh with peanut or coconut, and Soh Kee Cooked Food (#01-44) for smooth Cantonese chicken porridge. Weekends bring the biggest crowds, as Soh Kee only opens Thursday to Sunday.",
+      dinner: "A fair number of stalls carry on into the evening: Jian Bo Shui Kueh and Wen Guang Handmade Fishball Noodle (#01-25) both run until about 9pm, Du Du serves tutu kueh until about 7pm, and Soh Kee stays open until 7.30pm on Thursdays and Fridays.",
+      restDays: "Du Du Shou Shi is closed on Mondays and Fridays, Soh Kee Cooked Food opens only Thursday to Sunday (and closes at 1pm on Sundays), and Traditional Hakka Lui Cha is closed on Mondays. The centre also closes for NEA cleaning a few days each quarter, so check before you go.",
+      bestTime: "Go on a Thursday or Saturday morning, when both Bib Gourmands are open.",
+      hoursFaq: "Jurong West 505 Market & Food Centre is generally open from about 6am to 9pm daily, but each stall sets its own hours. Breakfast stalls open from around 5.30am to 6am, and a handful run until 9pm. Bib Gourmand Soh Kee Cooked Food (#01-44), for example, opens only Thursday to Sunday, from 8am or 9.30am, closing at 7.30pm on Thursdays and Fridays and earlier at weekends.",
+    },
   },
   {
     id: 18,
     slug: "yishun-park-hawker-centre",
     name: "Yishun Park Hawker Centre",
     seoTitle:
-      "Yishun Park Hawker Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Yishun Park Hawker Centre: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "Yishun Park Hawker Centre guide: Michelin-listed Nasi Lemak Ayam Taliwang, Smokin' Joe charcoal grill, Ah Tan Wings har cheong gai, Munchi Pancakes.",
     address:
@@ -1551,13 +1702,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Started in a Yishun coffee shop in 2016 and moved here in 2017; this is now the brand's original store. Classic peanut is the benchmark, while charcoal and matcha skins with modern fillings show why it took off.",
       },
     ],
+    whenToGo: {
+      breakfast: "Nasi Lemak Ayam Taliwang (#01-33) serves its Michelin-listed nasi lemak from about 6.30am (7.30am on Fridays), with JJ Prawn Noodles (#01-21) from about 7am and Munchi Pancakes (#01-43) from about 8am.",
+      lunch: "Lunch draws crowds to Ah Tan Wings (#01-40) for prawn paste wings, One Mouth Noodle (#01-12) for char siew wanton noodles and Bismi Biryani (#01-05); weekend lunchtimes are busiest.",
+      dinner: "Unusually for a heartland centre, most stalls stay open for dinner: Smokin' Joe Western Charcoal Grill (#01-37) and Jinggho Shokudo (#01-17) run until about 9pm, as do Ah Tan Wings and Nasi Lemak Ayam Taliwang, while Flavourful Fish Soup (#01-14) serves until about 10pm.",
+      restDays: "Smokin' Joe, One Mouth Noodle, Bismi Biryani and Jinggho Shokudo are closed on Mondays, and JJ Prawn Noodles on Tuesdays, while Ah Tan Wings and Munchi Pancakes are listed as open daily. The centre also closes for NEA cleaning a few days each quarter, so check the closure list first.",
+      bestTime: "Come for an early dinner: almost every stall is open, and it is calmer than the weekend lunch rush.",
+      hoursFaq: "Yishun Park Hawker Centre itself is open daily from about 6am to 10pm, but each stall keeps its own hours. Most stalls trade from late morning to about 8 or 9pm, and a few breakfast stalls open from 6 to 7am. Nasi Lemak Ayam Taliwang opens from about 6.30am to 9pm (7.30am on Fridays).",
+    },
   },
   {
     id: 19,
     slug: "sembawang-hills-food-centre",
     name: "Sembawang Hills Food Centre",
     seoTitle:
-      "Sembawang Hills Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Sembawang Hills Food Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Sembawang Hills Food Centre on Upper Thomson Road: Jing Ji Teochew fishball noodles, Ping Kee Popiah, Jia Jia Xing pig's organ soup and chwee kueh.",
     address:
@@ -1625,13 +1784,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Clean-tasting pig's organ soup with lean pork and meatballs, but the pig's trotter in braised sauce is the order to pair with yam rice.",
       },
     ],
+    whenToGo: {
+      breakfast: "Breakfast is the best meal here: Jing Ji Fishball Noodle (#01-23) opens from about 6am for Teochew meatball noodles, Five Star Teochew Kway Chap (#01-28) from about 7am, and Yong Kee (#01-02) sells curry puffs from about 7am.",
+      lunch: "Lunch brings Jia Jia Xing Pig's Organ Soup (#01-10) for trotters in black vinegar, Thompson Homemade Shui Kway (#01-16) and Ping Kee Popiah (#01-32); weekends are busiest, and Jing Ji and Seng Huat Duck Rice close around 1pm.",
+      dinner: "Many stalls wind down by mid-afternoon, but Jia Jia Xing runs until about 7.30pm, Five Star Teochew Kway Chap and Jin Men (#01-20) until about 8.30pm, and Ping Kee Popiah until about 8pm on some weekdays.",
+      restDays: "Jing Ji Fishball Noodle is closed on Mondays, Tuesdays and Fridays, Ping Kee Popiah and Thompson Homemade Shui Kway on Mondays, and Yong Kee on Mondays and Thursdays. The centre also closes for NEA cleaning a few days each quarter, so check the closure list first.",
+      bestTime: "Come before 1pm on a Wednesday, Thursday, Saturday or Sunday, the only days Jing Ji Fishball Noodle opens.",
+      hoursFaq: "Sembawang Hills Food Centre has no single opening hours, though the centre is generally listed as 6am to 9pm and each stall keeps its own times. Most of its famous stalls trade from early morning to early or mid-afternoon, with a handful open until about 8.30pm. Jing Ji Fishball Noodle opens only from about 6am to 1pm on Wednesdays, Thursdays, Saturdays and Sundays.",
+    },
   },
   {
     id: 20,
     slug: "chong-pang-market",
     name: "Chong Pang Market",
     seoTitle:
-      "Chong Pang Market: Best Stalls & Michelin Picks | ShiokFlavour",
+      "Chong Pang Market: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Chong Pang Market in Yishun: Bib Gourmand Hainan Zi char kway teow, Ji De Lai chicken rice, Xiang Xiang fishball noodles and Old Chong Pang ngoh hiang.",
     address:
@@ -1711,12 +1878,20 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A long-running ngoh hiang stall that fries to order. Build a plate of liver roll, egg-chestnut pancake, prawn cracker and pink pork sausage, with bee hoon on the side.",
       },
     ],
+    whenToGo: {
+      breakfast: "Chong Pang wakes early: Xiang Xiang Fishball Noodle (#01-177) opens from about 6am, Yao Fa Teochew Mushroom Meat Noodle (#01-128) from about 7am (often sold out by 1pm), and Bedok Chwee Kueh (#01-142) from about 6.45am.",
+      lunch: "Lunch is when the two Bib Gourmand stalls are busiest: Hainan Zi (#01-129) for wok-fried char kway teow and fried oyster, and Ji De Lai Hainanese Chicken Rice (#01-152). Expect queues on weekends.",
+      dinner: "More stalls stay open for dinner than at most heartland centres: Hainan Zi cooks until about 9pm, Old Chong Pang Wu Xiang Xia Bing (#01-166) reopens from 5.30pm to about 10pm, and Nee Soon Fish Head Mee Hoon (#01-154) runs until about 8.30pm.",
+      restDays: "Xiang Xiang Fishball Noodle, Yao Fa, Old Chong Pang Wu Xiang and Nee Soon Fish Head Mee Hoon are closed on Mondays, while Hainan Zi is listed as open daily. The centre also closes for NEA cleaning a few days each quarter, so check the closure list first.",
+      bestTime: "Come mid-morning on a weekday: the fishball and minced meat noodle stalls are still open and Hainan Zi has started frying.",
+      hoursFaq: "Chong Pang Market & Food Centre has no single opening hours; each stall keeps its own, and the wet market runs mainly in the morning. Many cooked-food stalls open from about 6am to 3 or 4pm, while a good handful trade until 8.30 to 10pm. Bib Gourmand stall Hainan Zi is listed as open daily from about 8.30am to 9pm.",
+    },
   },
   {
     id: 21,
     slug: "marsiling-mall-hawker-centre",
     seoTitle:
-      "Marsiling Mall Hawker Centre (ex-Woodlands Centre): Best Stalls | ShiokFlavour",
+      "Marsiling Mall Hawker Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Marsiling Mall Hawker Centre, new home of the old Woodlands Town Centre hawkers: Yan Ji Seafood Soup, Ye Lai Xiang Laksa, Sin Heng Kee porridge and more.",
     name:
@@ -1794,13 +1969,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Moved in from the Old Woodlands Town Centre when Marsiling Mall opened in 2017. Known for dry fried hokkien prawn mee and cockle-laden kway teow mee. Closed Sundays.",
       },
     ],
+    whenToGo: {
+      breakfast: "Ye Lai Xiang Laksa (#01-73) opens from about 7.30am for laksa and lor mee, and Sin Heng Kee Porridge (#01-10) and Gao Ji Shu Shi Nasi Lemak (#01-60) are other early-morning favourites.",
+      lunch: "Lunch is the peak, with Yan Ji Seafood Soup (#01-26) opening late morning for its seafood soup and Lian Xiang Shu Shi (#01-61) frying cockle kway teow mee; weekend lunchtimes are the busiest.",
+      dinner: "Several old-timers close by mid-afternoon, but Yan Ji Seafood Soup has stayed open until about 8.30pm, and Ah Yi Handmade Noodle (#01-66) and Fu Qiang Pig's Organ Soup (#01-17) also trade into the evening.",
+      restDays: "Ye Lai Xiang Laksa is closed on Thursdays and Yan Ji Seafood Soup on Mondays. The centre also closes for NEA cleaning a few days each quarter, so check the closure list first.",
+      bestTime: "Plan for a late breakfast or early lunch on any day except Monday or Thursday, when you can catch both Ye Lai Xiang and Yan Ji.",
+      hoursFaq: "Marsiling Mall Hawker Centre has no single opening hours, as each stall sets its own. Many stalls trade from early morning until mid-afternoon, with a fair number open until about 8 to 8.30pm. Ye Lai Xiang Laksa opens from about 7.30am to 3pm, Friday to Wednesday.",
+    },
   },
   {
     id: 22,
     slug: "toa-payoh-lorong-8-market",
     name: "Toa Payoh Lorong 8 Market",
     seoTitle:
-      "Toa Payoh Lorong 8 Market & Food Centre: Best Stalls | ShiokFlavour",
+      "Toa Payoh Lorong 8 Market: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "Toa Payoh Lorong 8 hawker guide: Hock Kee peppery bak kut teh, Guan Kee kway chap, Hai Kee wanton noodles and handmade mee hoon kway.",
     address:
@@ -1876,12 +2059,20 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Formerly Seletar Sheng Mian, a family brand that began at the old Seletar Hills Food Centre. The founder's sons now make the handmade mee hoon kway, served dry or in pork-bone soup with a runny egg and ikan bilis. Expect queues. (#01-05)",
       },
     ],
+    whenToGo: {
+      breakfast: "For breakfast, Hai Kee Noodle (#01-59) serves hand-wrapped wanton noodles from about 8am (Thursday to Monday), and Coffee House Banh Mi (#01-10) opens from about 8.30am; Nine Stone Avenue (#01-05) is also a morning stall for handmade mee hoon kway.",
+      lunch: "Lunch is the centre's busiest time, with Hock Kee (Lor. 8) Bak Kut Teh (#01-64) ladling peppery soup from about 10am, Guan Kee Kway Chap (#01-24) and Alauddin's Briyani (#01-79) all drawing queues; weekends are busiest.",
+      dinner: "Several noodle stalls close by mid-afternoon, but Hock Kee Bak Kut Teh stays open until about 9pm, and No.9 Thai Kitchen (#01-09) and Wanted Western Delights (#01-55) also serve until about 9 to 9.30pm.",
+      restDays: "Hock Kee Bak Kut Teh is closed on Mondays, Hai Kee Noodle on Tuesdays (and possibly Wednesdays), and No.9 Thai Kitchen on Tuesdays. The centre also closes for NEA cleaning a few days each quarter, so check the closure list first.",
+      bestTime: "Go in the morning for the noodle stalls, then stay for bak kut teh, which runs from 10am right through dinner.",
+      hoursFaq: "Toa Payoh Lorong 8 Market & Food Centre has no single opening hours; each of its roughly 80 stalls keeps its own. Many stalls open from about 8am and close by mid-afternoon, while a good number trade until about 8 to 9pm. Hock Kee (Lor. 8) Bak Kut Teh opens Tuesday to Sunday from about 10am to 9pm.",
+    },
   },
   {
     id: 23,
     slug: "golden-shoe-market-street",
     seoTitle:
-      "Market Street Hawker Centre (Golden Shoe): Best Stalls | ShiokFlavour",
+      "Market Street Hawker Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Market Street Hawker Centre (ex-Golden Shoe) at CapitaSpring: Golden Nur briyani, Ah Liang Ipoh hor fun, Yummy Nyonya rendang and wanton mee.",
     name:
@@ -1954,13 +2145,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A Peranakan family's mix-and-match Nyonya rice stall, first opened at Golden Shoe in 2013. The tender beef rendang is the pick. Ayam buah keluak and chap chye are also on offer. Weekdays only.",
       },
     ],
+    whenToGo: {
+      breakfast: "A few stalls open early for the office crowd: Bee Kee Wanton Noodle (#03-07) and Golden Nur (#03-11) both start from about 7am, and Coffee Break (#03-03) pours flavoured kopi and toast from about 7.30am. Most are weekdays only.",
+      lunch: "This is a weekday lunch room. Queue for Ah Liang Ipoh Hor Fun (#02-04), Golden Nur's crispy chicken briyani and Yummy Nyonya's beef rendang (#02-22), and expect the busiest window from noon to about 1.30pm.",
+      dinner: "Most stalls close by mid-afternoon. A few stay open into the early evening on weekdays: Ah Liang until about 7.30pm (Monday to Thursday; Friday until about 4pm), Golden Nur until about 7pm and Yuguo Curry Rice (#03-26) until about 8pm.",
+      restDays: "Most stalls, including Golden Nur, Ah Liang and Yummy Nyonya, are closed on Saturdays and Sundays; Tiong Bahru Wanton Mee (#02-19) is one of the few open on Saturday mornings. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Go on a weekday before noon or after 1.30pm to miss the Raffles Place lunch rush; weekends are largely shuttered.",
+      hoursFaq: "Market Street Hawker Centre (Golden Shoe) has no single opening hours, and most stalls trade Monday to Friday only. Typically stalls open from about 7am to 10am and close by 2.30pm to 3pm, with a few such as Golden Nur (7am to 7pm) and Ah Liang Ipoh Hor Fun (until about 7.30pm Monday to Thursday) open later. Weekends are very quiet.",
+    },
   },
   {
     id: 24,
     slug: "hong-lim-market-food-centre",
     name: "Hong Lim Market & Food Centre",
     seoTitle:
-      "Hong Lim Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Hong Lim Food Centre: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Hong Lim Food Centre guide: Outram Park char kway teow, Ji Ji wanton noodle, Tai Wah bak chor mee and Heng Kee curry chicken bee hoon.",
     address:
@@ -2018,7 +2217,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       {
         name: "Outram Park Fried Kway Teow Mee",
         dish: "Char kway teow",
-        story: "Bib Gourmand and one of Singapore's best-known char kway teow stalls. The noodles are smoky and come with egg and cockles; add extra of either. Waits can stretch to an hour or more. Closed Sundays.",
+        story: "Bib Gourmand and one of Singapore's best-known char kway teow stalls. The noodles are smoky and come with egg and cockles; add extra of either. Waits can stretch to an hour or more. Closed Sundays and Mondays.",
       },
       {
         name: "Ji Ji Noodle House",
@@ -2036,13 +2235,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Bib Gourmand. It was founded in the 1970s and is now run by the second generation. The curry is mild and well balanced, with custom-made tofu puffs, fish cake and tender chicken. It is on level 1, not the similarly named Ah Heng upstairs.",
       },
     ],
+    whenToGo: {
+      breakfast: "Outram Park Fried Kway Teow Mee (#02-17) fires up its wok from about 6am, Ah Heng Duck Rice (#02-64) opens from about 6.30am and Tai Wah Pork Noodle (#02-16) from about 7.30am, so an early start beats the queues.",
+      lunch: "Lunch is peak time, with CBD and Chinatown workers queueing for Outram Park's char kway teow, Ji Ji's wanton noodles (#02-48/49), Tai Wah's bak chor mee and Heng Kee's curry chicken bee hoon (#01-58). It is busiest from 12pm to 1.30pm on weekdays.",
+      dinner: "Most of the famous stalls close by about 3pm. For dinner, Ah Heng Curry Chicken Bee Hoon Mee (#02-58/59) runs until about 9pm, Tang Kay Kee Fish Head Bee Hoon (#01-70) does an evening session until about 9.30pm, and Ji Ji reopens from about 5pm to 7pm.",
+      restDays: "Outram Park is closed on Sundays and Mondays, Tai Wah on Mondays, Heng Kee on Sundays and Ji Ji on Thursdays. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Arrive before 11.30am, or after 1.30pm on a weekday, to dodge the worst of the office crowd.",
+      hoursFaq: "Hong Lim Market & Food Centre has no single opening hours, since each stall keeps its own. Most stalls open from about 6am to 10am and close by 3pm, with a handful such as Ah Heng Curry Chicken Bee Hoon Mee open until about 9pm. Bib Gourmand Outram Park Fried Kway Teow Mee opens Tuesday to Saturday, 6am to 3pm.",
+    },
   },
   {
     id: 25,
     slug: "peoples-park-food-centre",
     name: "People's Park Food Centre",
     seoTitle:
-      "People's Park Food Centre (Chinatown): Best Stalls & What to Eat | ShiokFlavour",
+      "People's Park Food Centre: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "What to eat at People's Park Food Centre in Chinatown: mala xiang guo, loh mei, old-school dim sum buns and xiao long bao, plus the market's 100-year story.",
     address: "32 New Market Road, Chinatown",
@@ -2133,13 +2340,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         a: "A strong Sichuan and northern Chinese streak, from mala xiang guo to xiao long bao, alongside old-school Cantonese favourites like loh mei and char siew bao.",
       },
     ],
+    whenToGo: {
+      breakfast: "Breakfast is limited here. Chop Hean Kuan (#01-1018) has char siew bao, siew mai and egg tarts from about 9am (closed Mondays), and Yi Pin Beef King (#01-1074) is reported to open from about 8am.",
+      lunch: "Most stalls are running by late morning: Ri Ri Hong Mala Xiang Guo (#01-1152), Hometown Hainan Fen (#01-1100) and Yong Xiang Xing Dou Fu's yong tau foo (#01-1084, about 12pm to 3pm) are lunchtime favourites. Weekend afternoons get crowded with Chinatown shoppers.",
+      dinner: "This is one of Chinatown's better dinner centres: Ri Ri Hong Mala (until about 9.30pm), Chuan Wei Fang Xiang La Xie (until about 9pm), Loh Mei Specialist (#01-1106A, until about 8pm) and Hong Peng La Mian Xiao Long Bao (#01-1064, until about 10pm) all stay open.",
+      restDays: "Chop Hean Kuan, Fatt Soon Kueh and Yong Xiang Xing Dou Fu are closed on Mondays, Hometown Hainan Fen on Sundays, while Ri Ri Hong and Loh Mei Specialist open daily. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Come for an early dinner, when the mala, xiao long bao and loh mei stalls are all open and the lunch rush has gone.",
+      hoursFaq: "People's Park Food Centre has no single opening hours, as stalls set their own. Most open from about 10am and many trade until 8pm to 9.30pm, which makes it more of an all-day centre than most, though few stalls are open before 9am. Ri Ri Hong Mala Xiang Guo opens daily from about 10am to 9.30pm.",
+    },
   },
   {
     id: 26,
     slug: "east-coast-lagoon-food-village",
     name: "East Coast Lagoon Food Village",
     seoTitle:
-      "East Coast Lagoon Food Village: Best Stalls & What to Eat | ShiokFlavour",
+      "East Coast Lagoon Food Village: Opening Hours & Best Stalls",
     seoDescription:
       "Seaside hawker centre in East Coast Park: Haron Satay, Stingray Forever sambal stingray, Song Kee oyster omelette and Lagoon Famous Carrot Cake.",
     address:
@@ -2219,13 +2434,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Formerly Lagoon Carrot Cake, this #01-40 stall has served customers for more than 50 years. Get a plate of crisp white and sweet black carrot cake, and add a roll of its popiah.",
       },
     ],
+    whenToGo: {
+      breakfast: "Very little is open at breakfast here. The centre gets going from late morning, and most of the famous stalls do not light their grills until the afternoon.",
+      lunch: "Lunch is quieter, with a few daytime stalls such as Zuo Ji Duck Rice and Han Jia Bak Kut Teh Pork Leg, and Lagoon Famous Carrot Cake (#01-40) opening from about noon. The real crowds come on weekend afternoons and evenings, when families and cyclists from East Coast Park pile in.",
+      dinner: "Dinner is the main event: Haron Satay 55 (#01-55), Stingray Forever BBQ Seafood (#01-43), Song Kee Fried Oyster (#01-15) and the BBQ chicken wing stalls are all evening-focused, so go from about 5pm onwards for the full line-up by the sea.",
+      restDays: "Haron Satay 55 has typically closed on Mondays and Tuesdays, Song Kee Fried Oyster on Tuesdays and Wednesdays, and Lagoon Famous Carrot Cake on Tuesdays. The centre also closes for NEA cleaning a few days each quarter, so check before you go.",
+      bestTime: "Come at dusk, from around 5pm to 7pm, when the grills are lit, the full line-up is open and the sea breeze kicks in.",
+      hoursFaq: "East Coast Lagoon Food Village has no single opening hours, as each stall sets its own. A few daytime stalls open from late morning, but most of the famous ones open from mid-afternoon and run until about 9pm to 11pm, with some going later. For the fullest choice, come in the evening.",
+    },
   },
   {
     id: 27,
     slug: "marine-parade-food-centre",
     name: "Marine Parade Food Centre",
     seoTitle:
-      "Marine Parade Central Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Marine Parade Food Centre: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "Marine Parade Central Market & Food Centre (Promenade Market @ 84): Neptune dim sum, Kun Ji duck rice, New World Congee and D'Authentic nasi lemak.",
     address:
@@ -2305,12 +2528,20 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A long-running morning stall at #01-36 where you build your own plate from more than a dozen toppings: fried chicken wing, egg, ikan bilis, tempeh, begedil and sambal. It closes by early afternoon and on Fridays.",
       },
     ],
+    whenToGo: {
+      breakfast: "Breakfast is well covered: Neptune Hong Kong Dim Sum (#01-26) steams har gow and siew mai from about 7am, D'Authentic Nasi Lemak (#01-36) builds plates from 7am, and Fei Yuan Teochew Noodle (#01-31) serves fishball mee from 7am, with Coffee Queen (#01-11) for teh from 6.45am.",
+      lunch: "At lunch, Kun Ji Duck Rice (#01-25), New World Congee (#01-45) and Soon Lee Fish Soup (#01-18) are the main draws, and the centre is busiest around midday and at weekends, when Parkway Parade shoppers join the estate regulars.",
+      dinner: "The centre stays open until about 10pm, but most of the famous stalls finish by 7pm to 8.30pm. Neptune and Kun Ji run until about 7pm, New World Congee has an evening session from 5.30pm to 8pm, and Soon Lee Fish Soup serves until about 8.30pm.",
+      restDays: "Neptune Hong Kong Dim Sum is closed on Wednesdays, Kun Ji Duck Rice on Tuesdays, and both New World Congee and D'Authentic Nasi Lemak on Fridays. The centre also closes for NEA cleaning a few days each quarter, so check before you go.",
+      bestTime: "Come for a morning dim sum and nasi lemak run: D'Authentic is done by 2pm and the dim sum is freshest early.",
+      hoursFaq: "The centre at Block 84 Marine Parade Central, now signposted as Promenade Market @ 84, is open from about 7am to 10pm daily, but each stall sets its own hours. Most stalls trade from early morning until mid-afternoon or early evening, with a smaller group open until about 8.30pm. Neptune Hong Kong Dim Sum (#01-26), for example, opens 7am to 7pm, closed on Wednesdays.",
+    },
   },
   {
     id: 28,
     slug: "jalan-berseh-food-centre",
     seoTitle:
-      "Berseh Food Centre (Jalan Besar): Best Stalls & What to Eat | ShiokFlavour",
+      "Berseh Food Centre: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
       "Berseh Food Centre guide: Bib Gourmand Kelantan Kway Chap, Fu Zhou Poh Hwa oyster cakes, Sheng Kee curry chicken noodles and Fu He turtle soup.",
     name:
@@ -2373,7 +2604,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       {
         name: "Kelantan Kway Chap",
         dish: "Kway chap",
-        story: "Bib Gourmand since 2022. Flat rice sheets in soy-spiced broth with braised pork belly, intestines, skin and egg; dip into the house chilli. Larger braised platters suit groups. Closed Sundays and Mondays.",
+        story: "Bib Gourmand since 2022. Flat rice sheets in soy-spiced broth with braised pork belly, intestines, skin and egg; dip into the house chilli. Larger braised platters suit groups. Closed Mondays.",
       },
       {
         name: "Fu Zhou Poh Hwa Oyster Cake",
@@ -2391,13 +2622,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Long the area's go-to for Cantonese turtle soup, also known as Fu He Delights. Try the herbal soft-shelled turtle soup, or the slow-cooked lamb rib soup. Listed in the 2026 MICHELIN Guide. Closed Fridays.",
       },
     ],
+    whenToGo: {
+      breakfast: "Breakfast is limited, but Bib Gourmand Kelantan Kway Chap (#02-39) opens from about 7.30am, so you can start the day with kway chap and braised pork belly. Most other well-known stalls open from late morning.",
+      lunch: "Lunch is the busiest time, with Kelantan Kway Chap, Fu He Turtle Soup (#02-40) from 11am for herbal turtle soup, and Fu Zhou Poh Hwa Oyster Cake for hot-from-the-fryer oyster cakes. Weekday lunch fills up with workers from around Jalan Besar.",
+      dinner: "A few big names stay open into the early evening: Kelantan Kway Chap until about 7pm and Fu He Turtle Soup until about 8pm. Beyond that the choice thins out, and Lim's Fried Oyster, once the late-night draw, closed in August 2025.",
+      restDays: "Kelantan Kway Chap is closed on Mondays and Fu He Turtle Soup on Fridays. The centre also closes for NEA cleaning a few days each quarter, so check before you go.",
+      bestTime: "Come at lunchtime on a Tuesday, Wednesday or Thursday, when both Kelantan Kway Chap and Fu He Turtle Soup are open.",
+      hoursFaq: "Berseh Food Centre has no single opening hours, as each stall keeps its own. Most stalls open from morning or late morning and close by early evening, with a few running until about 8pm. Bib Gourmand Kelantan Kway Chap (#02-39), for example, opens 7.30am to 7pm, Tuesday to Sunday. The centre reopened after its renovation from late September to late December 2025.",
+    },
   },
   {
     id: 29,
     slug: "ghim-moh-market-food-centre",
     name: "Ghim Moh Market & Food Centre",
     seoTitle:
-      "Ghim Moh Market & Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Ghim Moh Market & Food Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Ghim Moh Food Centre guide: Ghim Moh Chwee Kueh, Bib Gourmand Chuan Kee braised duck rice, Ghim Moh Carrot Cake and Hin Fried Hor Fun.",
     address:
@@ -2471,13 +2710,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Family-run stall that makes its carrot cake and chye poh from scratch daily. Choose black or white, or ask for half-and-half. Go early, because portions are limited and the queue forms from around 6.30am.",
       },
     ],
+    whenToGo: {
+      breakfast: "Ghim Moh is a proper breakfast centre: Ghim Moh Chwee Kueh (#01-54) steams from about 6.30am daily, Ghim Moh Carrot Cake (#01-16) fries black or white carrot cake from about 6.30am (Wednesday to Sunday), and Heavens (#01-26) makes appam from about 6am.",
+      lunch: "Lunch brings Chuan Kee Boneless Braised Duck (#01-04) for its Bib Gourmand duck rice, plus Thiam Kee 1977 Hainanese Chicken Rice (#01-19) and 63 Laksa (#01-20). Weekends are busiest, and many breakfast stalls are done by 1 to 2pm.",
+      dinner: "Many stalls close by early afternoon, but Chuan Kee Braised Duck stays open until about 8pm, Hin Fried Hor Fun (#01-56) reopens from 5pm to about 8.30pm, and Fort Canning Hill (Huat Kee) Bak Kut Teh (#01-61) runs until about 8.30pm.",
+      restDays: "Chuan Kee Braised Duck is closed on Sundays, Ghim Moh Carrot Cake on Mondays and Tuesdays, and Heavens and Hin Fried Hor Fun on Mondays, while Ghim Moh Chwee Kueh opens daily. The centre also closes for NEA cleaning a few days each quarter, so check the closure list first.",
+      bestTime: "Come before 9am: the carrot cake queue starts around 6.30am and sells out, and the chwee kueh is at its freshest.",
+      hoursFaq: "Ghim Moh Market & Food Centre has no single opening hours, as each stall keeps its own. Most stalls trade from about 6.30am to between 1pm and 3pm, with a few, such as Chuan Kee Boneless Braised Duck (about 9.30am to 8pm, closed Sundays), staying open into the evening. Ghim Moh Chwee Kueh opens daily from about 6.30am to 5pm.",
+    },
   },
   {
     id: 30,
     slug: "alexandra-village-food-centre",
     name: "Alexandra Village Food Centre",
     seoTitle:
-      "Alexandra Village Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Alexandra Village Food Centre: Opening Hours & Best Stalls",
     seoDescription:
       "Alexandra Village Food Centre in Bukit Merah: Michelin Bib Gourmand claypot laksa, Hokkien Street prawn mee, xiao long bao and soya sauce chicken. The best stalls.",
     address: "120 Bukit Merah Lane 1, Alexandra",
@@ -2559,12 +2806,20 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         a: "Depot Road Zhen Shan Mei Claypot Laksa, which was awarded a Michelin Bib Gourmand in 2016 for laksa served bubbling in a claypot.",
       },
     ],
+    whenToGo: {
+      breakfast: "Dover Road Kai Kee Wanton Noodle (#01-09) opens from about 7am (closed Tuesdays), Xiang Jiang Soya Sauce Chicken (#01-77) from about 8am and The Old Stall Hokkien Street Famous Prawn Mee (#01-58) from about 8.30am. Depot Road Zhen Shan Mei Claypot Laksa (#01-75) starts at about 9am.",
+      lunch: "Lunch is when everything is open: claypot laksa at Depot Road, prawn mee at The Old Stall, xiao long bao at Zhang Ji (#01-56) and hor fun at Hor Fun Premium (#01-30). Weekend late mornings are busiest, with Bukit Merah families.",
+      dinner: "Many stalls close by 2pm to 3pm, but the evening crowd is well served: Old Punggol Satay (#01-52) from about 4pm, Star Yong Kwang BBQ Seafood (#01-04) until about 9.45pm, and Xiang Jiang, Zhang Ji and Hor Fun Premium until about 8pm to 8.30pm.",
+      restDays: "Depot Road Zhen Shan Mei is closed on Wednesdays and Sundays, The Old Stall prawn mee on Mondays and Thursdays, Zhang Ji on Mondays and Tuesdays, and Xiang Jiang on Mondays. The centre also closes for NEA cleaning a few days each quarter.",
+      bestTime: "Go on a weekday morning around 10am for claypot laksa and prawn mee before the noon queues build.",
+      hoursFaq: "Alexandra Village Food Centre has no single opening hours, as each stall sets its own. Most stalls open from about 7am to 9am and close by 2pm to 3pm, while a handful such as Star Yong Kwang BBQ Seafood and Old Punggol Satay trade until about 8.30pm to 9.45pm. Depot Road Zhen Shan Mei Claypot Laksa opens from about 9am to 3pm, closed Wednesdays and Sundays.",
+    },
   },
   {
     id: 31,
     slug: "shunfu-market-food-centre",
     seoTitle:
-      "Shunfu Mart Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Shunfu Mart Food Centre: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "Shunfu Mart near Marymount MRT: Hakka soon kueh, fried kway teow with otah and famous muffins. Best stalls, tips and history.",
     name:
@@ -2640,13 +2895,21 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "A Shunfu Mart mainstay with a regular queue. Char kway teow with cockles, lap cheong and fish cake; add the house-made otah, which often sells out.",
       },
     ],
+    whenToGo: {
+      breakfast: "Breakfast is the strongest meal here: Chocolat N' Spice (#02-12) sells its muffins from about 7.30am (Tuesday to Saturday), Mei Zhen Hakka Delicacies (#02-26) opens early for soon kueh and abacus yam balls, and Quan Ann Prawn Mee (#02-11) is a long-running morning stall.",
+      lunch: "At lunch, Lai Heng Fried Kway Teow (#02-20) fries char kway teow with otah on the side, and Leong Hainanese Chicken Rice (#02-22) is another regular pick. Weekends are busiest, and the Hakka kueh and muffins often sell out by early afternoon.",
+      dinner: "This is mostly a breakfast and lunch centre, and few stalls stay open beyond late afternoon; do not plan on dinner here.",
+      restDays: "Chocolat N' Spice is closed on Sundays and Mondays, and Mei Zhen Hakka Delicacies on Mondays and Tuesdays. The centre also closes for NEA cleaning a few days each quarter, so check the closure list first.",
+      bestTime: "Go on a Wednesday to Saturday morning, when both Mei Zhen and Chocolat N' Spice are open and still fully stocked.",
+      hoursFaq: "Shunfu Mart Food Centre has no single opening hours; each stall sets its own. Most stalls open early in the morning and wind down by mid-afternoon, with only a handful trading later. Chocolat N' Spice, the muffin stall, opens Tuesday to Saturday from about 7.30am to 2.30pm.",
+    },
   },
   {
     id: 32,
     slug: "pasir-panjang-food-centre",
     name: "Pasir Panjang Food Centre",
     seoTitle:
-      "Pasir Panjang Food Centre: Best Stalls & What to Eat | ShiokFlavour",
+      "Pasir Panjang Food Centre: Opening Hours & Best Stalls | ShiokFlavour",
     seoDescription:
       "Pasir Panjang Food Centre guide: Ivy's Hainanese herbal mutton soup, Alan Banana Leaves BBQ seafood, Yusoff Haji Jalal satay and KS fruit rojak.",
     address:
@@ -2726,6 +2989,14 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "Classic fruit rojak tossed in thick prawn-paste sauce at #01-45. Ask for the version with cuttlefish and century egg. Closed Sundays.",
       },
     ],
+    whenToGo: {
+      breakfast: "Very little is open for breakfast here; Jubilant Hainanese Chicken Rice (#01-32) has opened from about 9.30am, but this is really a lunch and dinner centre.",
+      lunch: "Ivy's Hainanese Herbal Mutton Soup (#01-14) is the lunchtime draw, serving claypot mutton and tendon soup from about 11.30am, with Mr Dum Biryani (#01-44) and Fatty Ipoh Noodles (#01-10) as other daytime options.",
+      dinner: "Dinner is the main event: Alan Banana Leaves BBQ Seafood (#01-24) fires up from about 5pm (4pm at weekends) for BBQ stingray and cereal prawns, Yusoff Haji Jalal Satay (#01-21) grills from about 6pm, and 216 Choa Chu Kang BBQ Chicken Wings (#01-26) opens from about 5pm.",
+      restDays: "Ivy's Mutton Soup is closed on Sundays, while Alan Banana Leaves BBQ Seafood, Yusoff Haji Jalal Satay and the BBQ chicken wing stall are all closed on Mondays and Tuesdays. The centre also closes for NEA cleaning a few days each quarter, so check the closure list first.",
+      bestTime: "Come for dinner from Wednesday to Sunday, when the seafood, satay and wing stalls are all firing.",
+      hoursFaq: "Pasir Panjang Food Centre has no single opening hours, though the centre is generally listed as open from about 7am to 8.30pm, with some evening stalls trading later. Daytime stalls such as Ivy's Hainanese Herbal Mutton Soup (about 11.30am to 7.30pm, closed Sundays) handle lunch, while the BBQ seafood and satay stalls open only in the evening. The centre reopened in early 2026 after renovation, so check that your stall is back before a special trip.",
+    },
   },
 ];
 
