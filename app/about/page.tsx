@@ -9,7 +9,7 @@ export const metadata = {
   alternates: { canonical: "/about" },
   title: "About ShiokFlavour | Singapore's Hawker Heritage Guide",
   description:
-    "ShiokFlavour is a cultural guide to Singapore's UNESCO-recognised hawker heritage — built for curious travellers and proud locals alike.",
+    "ShiokFlavour is a cultural guide to Singapore's UNESCO-recognised hawker heritage, built for curious travellers and proud locals alike.",
 };
 
 export default function AboutPage() {

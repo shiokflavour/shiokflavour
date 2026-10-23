@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: "/hawker-guide/old-school-names" },
   title: "Old-School Kopitiam Drink Names Explained | ShiokFlavour",
   description:
-    "Tak Kiu, Michael Jackson, Diao He, Orh Gao — the nicknames a generation of Singaporeans gave their drinks, and the stories behind each one.",
+    "Tak Kiu, Michael Jackson, Diao He, Orh Gao: the nicknames a generation of Singaporeans gave their drinks, and the stories behind each one.",
 };
 
 export default function OldSchoolNamesPage() {

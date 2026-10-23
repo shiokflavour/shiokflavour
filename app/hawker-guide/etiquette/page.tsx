@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: "/hawker-guide/etiquette" },
   title: "Hawker Centre Etiquette: The Unwritten Rules in Singapore | ShiokFlavour",
   description:
-    "Choping seats with tissue, ordering at the stall, returning your tray. The unwritten rules nobody tells you — but everyone expects you to know.",
+    "Choping seats with tissue, ordering at the stall, returning your tray. The unwritten rules nobody tells you, but everyone expects you to know.",
 };
 
 export default function EtiquettePage() {

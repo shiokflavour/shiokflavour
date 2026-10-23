@@ -450,6 +450,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Ice Kachang",
     slug: "ice-kachang",
+    seoTitle: "Ice Kachang Singapore: What's In It, Price & Best Stalls",
+    seoDescription: "Ice kachang explained: shaved ice, red beans, attap chee and bright syrups. What a bowl costs (S$2.50–5) and where to get it, from Jin Jin Hot/Cold Dessert.",
     category: "Singaporean Classics",
     description:
       "Ice kachang (ABC in Malaysia) turns the tropics into dessert: shaved ice mound, syrups, jellies, red beans, corn, attap chee, and often evaporated milk. It grew from simple ice balls sold by street vendors into rainbow towers assembled at hawker drink stalls. Each layer is a memory of migration—adzuki from East Asia, pandan and rose from the region, corn and jelly from trade routes. On humid afternoons, ice kachang is collective relief; UNESCO's recognition of hawker culture includes these sweet stalls that anchor neighbourhoods as much as savoury cooks do.",
@@ -539,6 +541,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Kaya Toast",
     slug: "kaya-toast",
+    seoTitle: "Kaya Toast Singapore: Best Kopitiams, Sets & Prices",
+    seoDescription: "How to eat kaya toast with soft-boiled eggs and kopi, what a set costs (S$5–7.50), and the kopitiams worth a visit: Ah Seng (Hai Nam), Tong Ah, Chin Mee Chin.",
     category: "Singaporean Classics",
     description:
       "Kaya toast is breakfast diplomacy: charcoal-grilled thin bread, cold butter slabs, and kaya—a slow-cooked jam of coconut milk, eggs, and pandan or caramel sugar. Hainanese kopitiams popularised the set with soft-boiled eggs and kopi, creating a ritual as recognisable as any landmark. The spread encodes British colonial bread-and-jam habits filtered through Hainanese apprenticeship in European hotels. Today, UNESCO-framed hawker culture isn't only about full meals; it's about these affordable, daily rituals in coffeeshop cubicles where three languages cross at one table.",
@@ -636,6 +640,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Chilli Crab",
     slug: "chilli-crab",
+    seoTitle: "Chilli Crab Singapore: Where to Eat, Price & Origin",
+    seoDescription: "Where to eat chilli crab in Singapore, what a crab really costs (about S$80–100/kg), why you order mantou, and how it began. Alliance, Keng Eng Kee, Roland.",
     category: "Singaporean Classics",
     description:
       "Chilli crab is Singapore's theatrical seafood icon: mud crabs in a tomato-chilli-egg gravy sweet, spicy, and sticky enough to demand mantou for mopping. Often credited to 1950s street vendors who pushed the recipe from simpler profiles toward the lush sauce we know, the dish is now served everywhere from zi char stalls to white-tablecloth rooms. It embodies port-city abundance—crabs from regional waters, sauces from Chinese technique and Malay chilli sensibility. Hawker and zi char heritage keeps the dish in reach of ordinary celebrations, aligning with UNESCO's spotlight on living food traditions tied to community life.",
@@ -866,6 +872,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Bobo Cha Cha",
     slug: "bobo-cha-cha",
+    seoTitle: "Bobo Cha Cha Singapore: Nyonya Coconut Milk Dessert",
+    seoDescription: "Bobo cha cha explained: the Nyonya coconut milk dessert of sweet potato, yam and sago. What a bowl costs (S$2–4) and where to find it in Singapore.",
     category: "Peranakan (Nyonya)",
     description:
       "Bobo cha cha is dessert soup as comfort: yam, sweet potato, tapioca pearls, and sometimes banana swimming in coconut milk sweetened gently with pandan warmth. The name's playful reduplication matches its stubby, colourful cubes—Nyonya and broader Peranakan households simmered it for festivals and family tables, and hawker dessert stalls kept it in rotation beside ice kachang. Coconut and tubers co-starring in a bowl tell Southeast Asia's agrarian story. In the UNESCO framing of hawker culture, gems like bobo cha cha prove heritage isn't only savoury staples but also the slow-simmered sweets that mark birthdays and hometown memory.",
@@ -948,6 +956,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Bak Chor Mee",
     slug: "bak-chor-mee",
+    seoTitle: "Bak Chor Mee Singapore: Best Stalls, Dry Style & Prices",
+    seoDescription: "Teochew minced pork noodles: how to order it dry with vinegar and chilli, what a bowl costs (S$5–8), and Hill Street Tai Hwa, Tai Wah and Tian Nan Xing.",
     category: "Singaporean Classics",
     description:
       "Bak chor mee — minced pork noodles — is Singapore's most personal bowl. Every regular has a preferred stall, a preferred noodle type, and a preferred ratio of vinegar to chilli. The best-known versions are Teochew in origin: thin egg noodles tossed dry in a dark vinegar-lard sauce with minced pork, liver, fish cake, and braised mushrooms. The sauce is the thing — sharp, slightly sweet, pungent with pork fat and punchy with black vinegar. It is not beautiful. It is not photogenic. It is, by the consensus of people who eat seriously, one of the finest bowls Singapore produces.",
@@ -1046,6 +1056,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Hokkien Mee",
     slug: "hokkien-mee",
+    seoTitle: "Hokkien Mee Singapore: Best Stalls, Origin & Prices",
+    seoDescription: "Singapore Hokkien prawn mee: how it began at Rochor Road in the 1940s, what a plate costs (S$5–10), and the stalls to try: Nam Sing, Hong Heng and Come Daily.",
     category: "Singaporean Classics",
     description:
       "Singapore Hokkien mee is not Penang Hokkien mee — that distinction matters enormously to the people who eat both. The Singapore version is a wok-fried marriage of yellow egg noodles and white rice noodles in a rich prawn-and-pork broth, finished with sambal, calamansi, and lard. It was invented by Hokkien labourers at Rochor Road in the 1940s who cooked on charcoal over high heat and fed the dockworkers who built this city. The best versions today still carry that industrial wok energy — smoky, uncomplicated, deeply satisfying in the way that food cooked for hungry people always is.",
@@ -1425,6 +1437,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Satay",
     slug: "satay",
+    seoTitle: "Satay Singapore: Satay Street, Prices & Best Stalls",
+    seoDescription: "Satay in Singapore: price per stick (S$0.80–1.20), the 10-stick minimum, peanut sauce and ketupat, and where to go, from Satay Street to Haron Satay.",
     category: "Singaporean Classics",
     description:
       "Satay is Singapore's most sociable dish — you don't eat it alone, you don't eat it quietly, and you don't eat it fast. Skewers of marinated beef, chicken, or mutton grilled over real charcoal until the edges catch and caramelise, served with a thick, slightly sweet peanut sauce, ketupat (compressed rice), raw onion, and cucumber. The dish arrived with Malay and Javanese hawkers who set up charcoal grills along the Singapore River in the 1940s. Today the smoke from the satay stalls at Lau Pa Sat and Newton still carries that history. The formula has not changed because it does not need to.",
@@ -1516,6 +1530,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Roti John",
     slug: "roti-john",
+    seoTitle: "Roti John Singapore: Origin Story & Best Stalls",
+    seoDescription: "Roti John, Singapore's omelette baguette: the 1960s and 70s origin story, what it costs (S$4–9) and where to eat it, including Rosy & Nora and The Bread Gang.",
     category: "Singaporean Classics",
     description:
       "Roti John is Singapore's original fusion — a French baguette (the 'roti') fried egg-and-minced-meat side down on a griddle, sliced open, and loaded with sambal, mayonnaise, and sometimes cheese. Popular legend credits a 1960s Malay hawker in Sembawang who made a minced-meat omelette sandwich for an Englishman who wanted a burger. 'John' was then a common way to address Westerners. The resulting creation belongs to no single cuisine and is entirely Singaporean. Late-night hawker markets, Ramadan bazaars, and Malay food stalls serve it as supper: messy, filling, and satisfying in a way that nothing healthy ever quite manages.",
@@ -1605,6 +1621,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Popiah",
     slug: "popiah",
+    seoTitle: "Popiah Singapore: What Is It, Best Stalls & Prices",
+    seoDescription: "What popiah is: Hokkien fresh spring rolls of braised turnip in a thin skin. What a roll costs (S$2–4) and the best stalls, from Kway Guan Huat to Ping Kee.",
     category: "Singaporean Classics",
     description:
       "Popiah is Singapore's fresh spring roll — a thin wheat skin wrapped around a filling of braised turnip, beansprouts, egg, pork, prawns, crushed peanuts, and a smear of sweet sauce and chilli. The Hokkien version brought from Fujian province was adapted in Singapore's hawker centres into a community ritual: popiah-making parties where families assemble their own rolls from a spread of ingredients are as much a cultural practice as a meal. At hawker stalls, the popiah master rolls each one to order with a precision that looks casual and takes years. The result is a neat cylinder of Singapore's entire social history.",
@@ -1671,6 +1689,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Chwee Kueh",
     slug: "chwee-kueh",
+    seoTitle: "Chwee Kueh Singapore: Best Stalls, Price & History",
+    seoDescription: "Teochew steamed rice cakes topped with chye poh: what chwee kueh costs (S$2–3.50 for 4–5), how to eat it, and Jian Bo, Ghim Moh and Bedok Chwee Kueh.",
     category: "Singaporean Classics",
     description:
       "Chwee kueh is one of Singapore's most quietly perfect foods: small steamed rice cakes with a dimple in the centre, filled with preserved radish (chai poh), and served with sambal chilli on the side. The texture is the whole point — silky, slightly wobbly, and resistant enough to hold its shape when you bite through. Teochew hawkers brought the dish from Swatow and it became a Singapore breakfast staple sold from wooden push-carts and later from hawker stalls where the same recipe has been running unchanged for fifty years. You eat six. You think you want more. You are full.",
@@ -1844,6 +1864,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Mee Rebus",
     slug: "mee-rebus",
+    seoTitle: "Mee Rebus Singapore: Best Stalls, Price & History",
+    seoDescription: "Mee rebus explained: yellow noodles in thick, sweet potato gravy. What a bowl costs (S$3–5) and where to eat it, from Warong Pak Sapari to Inspirasi.",
     category: "Malay & Muslim Heritage",
     description:
       "Mee rebus is a bowl of contradictions that resolves beautifully: yellow egg noodles in a thick, sweet-savoury gravy made from sweet potato, dried shrimp, and spices, topped with a hard-boiled egg, green chilli, fried tofu, and calamansi. The gravy is the key — it should be thick enough to coat the noodles completely, slightly sweet from the sweet potato starch, and deeply savoury from the dried shrimp and prawn paste base. A Malay and Indian-Malay heritage dish, it sits at the intersection of two culinary traditions and belongs comfortably to both.",
@@ -1909,6 +1931,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Mee Siam",
     slug: "mee-siam",
+    seoTitle: "Mee Siam Singapore: Origin, Best Stalls & Price",
+    seoDescription: "Singapore mee siam is not a Thai dish. Where the tangy rice vermicelli came from, what a bowl costs (S$3.50–5), and Jia Xiang, Shi Xian and Hup Hup.",
     category: "Malay & Muslim Heritage",
     description:
       "Mee siam is Singapore's most misunderstood noodle — people order it expecting laksa and get something completely different: thin rice vermicelli in a tangy, slightly sweet tamarind-based gravy with dried shrimp, fermented soybean, and a squeeze of calamansi. The name suggests Siamese (Thai) origins but the dish as it exists in Singapore is entirely local — a Malay-Peranakan creation with no direct equivalent in Thailand. The flavour is bright and sharp where laksa is rich and heavy. Mee siam is the noodle you order when you want something that wakes you up rather than puts you to sleep.",
@@ -1976,6 +2000,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Lontong",
     slug: "lontong",
+    seoTitle: "Lontong Singapore: What Is It, Best Stalls & Price",
+    seoDescription: "Lontong explained: compressed rice cakes in sayur lodeh vegetable curry, a Malay breakfast classic. What a bowl costs (S$3–5) and where to eat it.",
     category: "Malay & Muslim Heritage",
     description:
       "Lontong is Singapore's Malay comfort food in its most complete form: compressed rice cakes in a rich coconut vegetable curry, with tempeh, hard-boiled egg, and a sambal on the side. The dish is Indonesian-Malay in origin and is eaten as a festive meal during Hari Raya, as a weekend breakfast, and as the kind of meal you make when you want something that feels like home. The coconut vegetable curry — lodeh — is the soul of the dish: patiently simmered with lemongrass, galangal, and coconut milk until the vegetables collapse into the sauce and the whole thing smells like every grandmother's kitchen in the Malay kampung.",
@@ -2041,6 +2067,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Murtabak",
     slug: "murtabak",
+    seoTitle: "Murtabak Singapore: What Is It, Best Shops & Price",
+    seoDescription: "What murtabak is: stuffed pan-fried bread with minced mutton or chicken and egg. What it costs (S$7–20) and the North Bridge Road rivals, Zam Zam and Victory.",
     category: "Malay & Muslim Heritage",
     description:
       "Murtabak is one of Singapore's most generous foods: a thick, flaky pancake stuffed with minced mutton or chicken, egg, and onion, fried on a large griddle until the outside is golden and the inside is set. Indian-Muslim hawkers brought the dish from the subcontinent and it became a Singapore institution, particularly during Ramadan when the murtabak stalls at Geylang Serai draw queues that stretch for hours. The best murtabak is heavy enough to feed two people, slightly greasy in the way that only griddle-fried things can be, and served with a thin curry and pickled onion for cutting through the richness.",
@@ -2106,6 +2134,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Nasi Padang",
     slug: "nasi-padang",
+    seoTitle: "Nasi Padang Singapore: Origin, How to Order & Best Stalls",
+    seoDescription: "Nasi padang explained: its Minangkabau roots in West Sumatra, how pricing works (S$5–15 a plate), what to pick, and Hjh Maimunah and Sinar Pagi.",
     category: "Malay & Muslim Heritage",
     description:
       "Nasi Padang is the most generous eating format in Singapore: white rice with as many dishes as you want from a spread of Minangkabau-style Malay curries, dry-fried meats, and vegetables. The origin is Padang, West Sumatra — the Minangkabau people of that region developed a cuisine of intense, slow-cooked flavours that the Malay community brought to Singapore generations ago. The rendang here is not the tourist rendang of hotel restaurants. It is dark, dry, and fragrant from hours of cooking — the kind of dish that gets better the longer it sits in its own rendered fat.",
@@ -2275,6 +2305,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Ayam Buah Keluak",
     slug: "ayam-buah-keluak",
+    seoTitle: "Ayam Buah Keluak: Peranakan Dish Explained & Where to Eat",
+    seoDescription: "Ayam buah keluak, the Peranakan chicken stew with black keluak nuts: how it's made, what it costs (S$13–30) and where to try it, from Guan Hoe Soon.",
     category: "Peranakan (Nyonya)",
     description:
       "Ayam buah keluak is the dish that defines Peranakan cuisine in Singapore: chicken braised in a dark, earthy rempah with buah keluak — Indonesian black nuts that contain a bitter, deeply complex paste that tastes like nothing else on earth. The nut is toxic when raw and must be soaked, boiled, and prepared over multiple days before it is safe to eat. This is not a quick dish. It is a commitment. The paste inside each nut is scooped out, mixed with the braising liquid, and either returned to the shell or mixed into the dish. The flavour is described differently by everyone who tries it — earthy, bitter, chocolatey, medicinal — and is completely unlike anything else in the hawker world.",
@@ -2340,6 +2372,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Kueh Pie Tee",
     slug: "kueh-pie-tee",
+    seoTitle: "Kueh Pie Tee Singapore: Nyonya Top Hats & Where to Eat",
+    seoDescription: "Kueh pie tee, the Nyonya 'top hats': crisp cups filled with turnip and prawn. What a plate costs (S$10–20) and where to eat it, from Candlenut to Violet Oon.",
     category: "Peranakan (Nyonya)",
     description:
       "Kueh pie tee is Peranakan elegance in miniature: a thin, crispy pastry cup filled with braised jicama (bangkuang) and prawn, topped with fresh coriander, chilli sauce, and sometimes a small prawn perched on top. The cups are fried in a special mould, each one a perfect crispy vessel for the sweet, savoury filling inside. It is a Nyonya party dish — assembled by hand, eaten in one bite, and completely impossible to eat without immediately wanting another. The contrast between the shattering pastry cup and the soft, braised filling is the entire engineering achievement of the dish.",
@@ -2405,6 +2439,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Ngoh Hiang",
     slug: "ngoh-hiang",
+    seoTitle: "Ngoh Hiang Singapore: Five-Spice Rolls, Stalls & Price",
+    seoDescription: "Ngoh hiang explained: five-spice pork rolls and fritters picked by the piece. What it costs (S$4–12) and where to go, from Hup Kee to China Street Fritters.",
     category: "Peranakan (Nyonya)",
     description:
       "Ngoh hiang is Singapore's most satisfying fried platter: a spread of minced pork and prawn rolls wrapped in tofu skin and deep-fried, served alongside fried fish cake, prawn fritters, and other morsels, dipped in a sweet sauce or chilli. The Hokkien and Teochew communities brought the concept; the Peranakan community adapted it into a feast format; hawker stalls reduced it to a daily snack. At its best, the minced pork roll — the classic piece — is aromatic with five spice, crispy on the outside, and juicy within. It is the kind of food that is difficult to stop eating once started.",
@@ -2470,6 +2506,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Ondeh Ondeh",
     slug: "ondeh-ondeh",
+    seoTitle: "Ondeh Ondeh Singapore: Best Kueh Shops & Price",
+    seoDescription: "Ondeh ondeh: pandan glutinous rice balls that burst with gula melaka, rolled in coconut. What a box costs (S$2–5) and where to buy, from Lina to Kim Choo.",
     category: "Peranakan (Nyonya)",
     description:
       "Ondeh ondeh is a Peranakan kueh that delivers one of food's great surprises: a small green ball of glutinous rice flour, rolled in fresh coconut, that explodes on the first bite with liquid gula melaka (palm sugar) syrup. The moment of biting through the soft, pandan-scented shell into the warm, sweet caramel centre is the entire point of the dish. Nyonya kueh-makers have been perfecting this experience for centuries. The shell must be thin enough to release the sugar immediately but thick enough to hold it during handling. The balance is the skill. The result is the reason that ondeh ondeh is one of Singapore's most beloved sweets.",
@@ -2639,6 +2677,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Lor Mee",
     slug: "lor-mee",
+    seoTitle: "Lor Mee Singapore: Best Stalls, Price & History",
+    seoDescription: "Hokkien braised noodles in thick, starchy gravy, with black vinegar and garlic. What lor mee costs (S$4–8) and Xin Mei Xiang, 178 Lor Mee and Yuan Chun.",
     category: "Chinese Dialect Heritage",
     description:
       "Lor mee is a Hokkien noodle dish that looks alarming and tastes extraordinary: thick, starchy gravy — thickened with cornstarch until it's almost gelatinous — poured over flat noodles with braised pork, fish cake, a hard-boiled egg, and a heavy pour of black vinegar. The gravy's thickness is the point: it clings to every strand of noodle and every piece of pork, ensuring that each bite is fully coated. The vinegar added tableside cuts through the richness with sharp precision. It is a dish that rewards the brave and confounds the uninitiated. Ask for extra vinegar. Always.",
@@ -2705,6 +2745,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Hae Mee",
     slug: "hae-mee",
+    seoTitle: "Prawn Noodles (Hae Mee) Singapore: Best Stalls & Price",
+    seoDescription: "Hae mee explained: prawn noodles in a broth of prawn shells and pork bones. What it costs (S$5–8, big prawn S$10–20+) and Zhi Wei Xian and Noo Cheng.",
     category: "Chinese Dialect Heritage",
     description:
       "Hae mee — prawn noodles — is one of Singapore's great broth dishes: yellow egg noodles and bee hoon in a deeply reduced prawn-and-pork broth, served with prawns, pork ribs, pork slices, and crispy lard. The broth is the entire achievement. Prawn shells and heads are roasted until caramelised, then simmered with pork bones for hours until the broth turns a deep, coral orange and tastes of concentrated prawn essence. This is Hokkien cooking at its most technically demanding. The dish was created by Hokkien hawkers who used the shells and heads that wealthier restaurants discarded to make something richer than anything those restaurants served.",
@@ -2774,6 +2816,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Yong Tau Foo",
     slug: "yong-tau-foo",
+    seoTitle: "What Is Yong Tau Foo? Singapore Guide, Prices & Stalls",
+    seoDescription: "Yong tau foo means 'stuffed tofu' in Hakka. How to pick your pieces, soup or dry, what it costs (S$3.50–8) and stalls like Xiu Ji and Yong Xiang Xing.",
     category: "Chinese Dialect Heritage",
     description:
       "Yong tau foo is the most democratic dish in Singapore: you choose your own pieces from a display of stuffed vegetables, tofu, and fish paste items, then choose soup or dry, and the price reflects exactly what you chose. The concept is Hakka — 'stuffed tofu' in Hakka dialect — but Singapore's version expanded far beyond tofu to include bitter gourd, chilli, eggplant, fish cake, and anything else the hawker decides to stuff with fish or meat paste that morning. It is a dish that rewards the curious and never punishes the cautious. Order what looks good. There are no wrong answers.",
@@ -2843,6 +2887,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Bak Chang",
     slug: "bak-chang",
+    seoTitle: "Bak Chang Singapore: Rice Dumplings, Price & Where to Buy",
+    seoDescription: "Bak chang explained: pyramid rice dumplings tied to the legend of Qu Yuan and the Dragon Boat Festival. What they cost (S$2.50–7), plus Hoo Kee and Hiong Kee.",
     category: "Chinese Dialect Heritage",
     description:
       "Bak chang — glutinous rice dumpling — is Singapore's most labour-intensive hawker food: glutinous rice packed around a filling of braised pork belly, salted egg yolk, mushrooms, and chestnuts, wrapped tightly in bamboo leaves and boiled for hours. The result is dense, fragrant, and deeply satisfying — the bamboo leaf imparts a faint grassy note, the salted egg yolk adds richness, and the braised pork makes every bite substantial. Traditionally eaten during the Dragon Boat Festival, bak chang is now available year-round at hawker stalls that have been making the same recipe for three generations.",
@@ -3009,6 +3055,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Fish Head Curry",
     slug: "fish-head-curry",
+    seoTitle: "Fish Head Curry Singapore: Origin, Price & Best Places",
+    seoDescription: "Fish head curry is said to have been invented in Singapore in 1949. What a head to share costs (S$25–45), Indian vs Chinese styles, and Muthu's and Zai Shun.",
     category: "Indian & South Asian Heritage",
     description:
       "Fish head curry is Singapore's most theatrical dish: the head of a red snapper or grouper, halved and submerged in a rich, tangy curry of tamarind, coconut milk, and ground spices, served on a banana leaf with rice. The dish is entirely Singaporean — said to have been created in 1949 by Marian Jacob Gomez, a Malayalee immigrant from Kerala who combined Indian curry technique with the Chinese community's appreciation for fish head, producing something that neither tradition had cooked before. Today fish head curry is eaten by every community in Singapore and belongs completely to none of them. The cheek meat is the best part. The eye is for the brave.",
@@ -3075,6 +3123,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Biryani",
     slug: "biryani",
+    seoTitle: "Biryani Singapore: Best Stalls, Price & History",
+    seoDescription: "Singapore biryani explained: fragrant rice with chicken or mutton, what a plate costs (S$6–15), and where to eat it, from Allauddin's at Tekka to Bismillah.",
     category: "Indian & South Asian Heritage",
     description:
       "Singapore biryani is not the biryani of Hyderabad or Lucknow — it is the biryani of the Indian Muslim community that arrived in Singapore from Tamil Nadu and Penang, cooked in the dum style, fragrant with whole spices, saffron, and ghee, served with raita and a curry on the side. The rice must be long-grained and separate. The meat must be tender without falling apart. The spicing must be present but not dominating. At hawker centres like Tekka, the biryani is plated fresh from large pots with speed and precision — the auntie's ability to portion the rice, meat, and garnish in one fluid motion is a skill developed over decades.",
@@ -3141,6 +3191,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Teh Tarik",
     slug: "teh-tarik",
+    seoTitle: "Teh Tarik Singapore: How It's Made, Price & Where to Drink",
+    seoDescription: "Teh tarik, the 'pulled tea': why it's poured from a height, what a cup costs (S$1.30–3), how to order it and where to drink it in Singapore.",
     category: "Indian & South Asian Heritage",
     description:
       "Teh tarik — pulled tea — is Singapore's most theatrical drink: strong black tea brewed with condensed milk, then poured in a high, sustained stream between two containers until it cools, froths, and becomes something different from the sum of its parts. The pulling creates micro-bubbles that give the tea a silky, light texture that no stirring can replicate. It is an Indian Muslim tradition that Singapore adopted completely and made its own. At hawker centres, the teh tarik uncle works with a rhythm that is half performance, half technique. The height of the pour is not showing off — it is the actual method.",
@@ -3206,6 +3258,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Vadai",
     slug: "vadai",
+    seoTitle: "Vadai Singapore: Indian Fritters, Price & Where to Buy",
+    seoDescription: "Vadai explained: crisp South Indian lentil fritters, from prawn-topped to doughnut-shaped. What they cost (S$1–2) and where to buy them, like Gina's Vadai.",
     category: "Indian & South Asian Heritage",
     description:
       "Vadai is Singapore's most satisfying South Indian snack: a lentil fritter fried until deeply golden and crispy, with a centre that stays soft and slightly yielding. The Medu vadai — the ring-shaped version made from urad dal — is the classic: crispy, lacy edges from the batter, an almost doughnut-like shape, and a flavour of lentil, cumin, and curry leaf. Tekka Centre's Indian stalls sell vadai alongside breakfast thali and alongside coffee. It is eaten hot from the oil, carried in a banana leaf, and consumed standing at the stall while ordering something else. The best vadai disappears in two bites.",
@@ -3257,6 +3311,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Appam",
     slug: "appam",
+    seoTitle: "Appam Singapore: Where to Eat, Price & History",
+    seoDescription: "Appam explained: lacy Tamil rice pancakes, plain or with banana or chocolate. What one costs (S$1–4) and where to eat it, from Mr Appam to Rajarani Thosai.",
     category: "Indian & South Asian Heritage",
     description:
       "Appam is the most delicate item in Singapore's South Indian hawker repertoire: a bowl-shaped rice flour and coconut milk pancake, fermented overnight until the batter is slightly tangy, cooked in a small rounded wok until the edges are lacy and crispy while the centre remains soft and custardy. It is eaten with coconut milk, vegetable stew (ishtu), or a simple sweet coconut and jaggery sauce. The Tamil and Sri Lankan Tamil communities brought appam to Singapore and it remains a weekend breakfast institution in Little India. The laciness of a well-made appam is a sign of proper fermentation — rushing it produces a thick, heavy pancake that is a different and inferior dish.",
@@ -3331,6 +3387,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Carrot Cake (Chai Tow Kway)",
     slug: "chai-tow-kway",
+    seoTitle: "Carrot Cake Singapore (Chai Tow Kway): White vs Black",
+    seoDescription: "Singapore carrot cake has no carrot in it. White vs black chai tow kway explained, what a plate costs (S$3–6), and Chey Sua, Fu Ming and Ghim Moh Carrot Cake.",
     category: "Singaporean Classics",
     description:
       "Carrot cake has nothing to do with carrots. The name comes from the Teochew word for white radish — chai tow — which is steamed with rice flour into soft, dense white blocks, then broken into chunks and wok-fried. When you reach the stall, the hawker will ask you one thing: black or white?\n\nWhite is the purist's choice. The radish cake is fried with egg and chai poh (preserved salted radish) over fierce heat. The result is pale, savoury, and slightly smoky — you taste the wok, the egg, and the gentle saltiness of the radish. No sweetness. No distraction. The dish speaking for itself.\n\nBlack is for people who want more. The hawker adds thick dark soy sauce to the wok and tosses everything until the caramel coats every chunk and chars at the edges. It is sweeter, bolder, and more intense — the sauce clings, the edges catch, and every bite has a deep smoky sweetness that the white version deliberately avoids.\n\nHow to decide: If you have never tried it, order black — the flavour hits immediately and you will know within two bites whether this is your kind of dish. If you prefer clean, eggy, savoury food without any sweetness, go white. If you like bold, caramelised, slightly sweet dishes, go black. Both are correct. Singapore has been arguing about this for decades and shows no sign of stopping. Hokkien and Teochew hawkers developed the dish from southern Chinese preserved radish traditions and it became a breakfast staple so embedded in hawker culture that UNESCO's recognition of Singapore's food scene implicitly includes the morning uncle frying kway at 6am.",
@@ -3425,6 +3483,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Oyster Omelette (Orh Luak)",
     slug: "orh-luak",
+    seoTitle: "Orh Luak (Oyster Omelette) Singapore: Best Stalls & Price",
+    seoDescription: "Orh luak explained: oysters fried with egg and starch for a crisp, chewy bite. What a plate costs (S$5–12) and Hup Kee, Ah Chuan and Heng at Newton.",
     category: "Singaporean Classics",
     description:
       "Orh luak — oyster omelette — is one of the most demanding dishes in the hawker repertoire: fresh oysters, a starchy egg batter made from sweet potato flour, and an incredibly hot wok that must achieve crispy edges and a soft, almost custardy centre simultaneously. The sweet potato starch is the ingredient that makes orh luak what it is — it creates a texture that is not quite omelette, not quite pancake, but something entirely its own: gooey and yielding in the middle, crispy where the batter meets the wok's edge. Teochew and Hokkien hawkers developed the dish from the southern Chinese coastal tradition of cooking shellfish in batter, and Singapore's version became one of the most beloved plates in the hawker world. A great orh luak is a technical achievement. A mediocre one is just greasy eggs.",
@@ -3523,6 +3583,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "BBQ Stingray",
     slug: "bbq-stingray",
+    seoTitle: "BBQ Stingray Singapore: Sambal Stingray Stalls & Price",
+    seoDescription: "Sambal stingray grilled on banana leaf: what it costs (S$12–20 by size), how to eat it with chinchalok, and Chomp Chomp, Star Yong Kwang and Jiao Cai.",
     category: "Singaporean Classics",
     description:
       "BBQ stingray is one of Singapore's most specific pleasures: a stingray wing slathered in sambal, laid on banana leaf and grilled or cooked on a hotplate until the flesh flakes and the sambal chars at the edges. The banana leaf both protects and flavours the fish — the grassy fragrance infuses the flesh during cooking and imparts a smokiness that banana leaf achieves and nothing else replicates. Served with a sharp calamansi squeeze and extra sambal, it is a night market and seaside food centre dish that became permanently associated with the atmosphere of East Coast Lagoon Food Village. The stingray is caught in regional waters, the sambal is made fresh, and the entire experience is best eaten at a table where you can smell the charcoal and hear the sea.",
@@ -3621,6 +3683,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Fishball Noodles",
     slug: "fishball-noodles",
+    seoTitle: "Fishball Noodles Singapore: Mee Pok, Best Stalls & Price",
+    seoDescription: "Teochew fishball noodles explained: mee pok dry with chilli or in soup, what a bowl costs (S$4–6.50), and LiXin, Xin Lu and Hui Ji Fishball Noodles.",
     category: "Singaporean Classics",
     description:
       "Fishball noodles is Singapore's most reliable bowl: thin yellow noodles or bee hoon in a clear pork-and-anchovy broth, topped with bouncy fishballs, fishcake slices, and minced pork, with a small side of chilli sauce. The dish is Teochew in origin — fishballs made from fresh fish pounded until springy were a signature of Teochew coastal cooking, and the hawkers who sold them in Singapore's streets built a simple, inexpensive bowl around them. Eaten for breakfast or lunch, it is the dish that most Singaporeans ate at school canteens and at void-deck stalls every week for the entirety of their childhood. The broth should be clean and savoury. The fishballs must bounce when pressed. These are the only two requirements.",
@@ -3717,6 +3781,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Tau Huay (Soya Bean Curd)",
     slug: "tau-huay",
+    seoTitle: "Tau Huay Singapore: Soya Beancurd, Best Stalls & Price",
+    seoDescription: "Tau huay explained: silky soya beancurd, warm in syrup or cold. What a bowl costs (S$1–3) and where to go, from Whampoa Soya Bean to Rochor Original Beancurd.",
     category: "Singaporean Classics",
     description:
       "Tau huay is Singapore's most meditative dessert: silken soya bean curd so delicate it shatters with a spoon, served warm in a thin clear syrup or cold with syrup poured over shaved ice. The texture is the entire achievement — barely set, trembling, and dissolving the moment it reaches the tongue. Street vendors sold it from wooden buckets balanced on shoulder poles through Singapore's prewar streets. Today, dedicated tau huay shops and hawker stalls serve it to queues that form outside before opening. The cold version with grass jelly has become a modern variation. The warm, plain version served in a porcelain bowl with a wooden spoon is the original and, by a significant margin, the most honest version of what tau huay is.",
@@ -3813,6 +3879,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Curry Puff",
     slug: "curry-puff",
+    seoTitle: "Curry Puff Singapore: Best Stalls, Price & History",
+    seoDescription: "Curry puffs explained: flaky pastry with curried potato and chicken, from colonial roots to hawker staple. What one costs (S$1.80–2.50) and J2 and Rolina.",
     category: "Singaporean Classics",
     description:
       "The curry puff is Singapore's most portable heritage food: a golden, crimped pastry shell filled with curried potato, onion, and chicken or egg, fried until the crust shatters and the filling is fragrant with spice. The format came from British and Portuguese colonial pasties filtered through Indian-Muslim and Nyonya kitchen traditions — the result is something that belongs to every community in Singapore and was sold by every kind of hawker from Malay stalls to Chinese bakeries. Old Chang Kee built an empire from it. The best versions are still the ones where the pastry is made fresh, the curry filling is properly spiced and not too wet, and the whole thing is eaten hot from the fryer, burning your fingers slightly, which is part of the experience.",
@@ -3909,6 +3977,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Sugarcane Juice",
     slug: "sugarcane-juice",
+    seoTitle: "Sugarcane Juice Singapore: Price & Where to Get It",
+    seoDescription: "Fresh-pressed sugarcane juice at hawker drink stalls: what a cup costs (S$2–3.50), lemon or sour plum add-ons, how to order less ice and where it came from.",
     category: "Singaporean Classics",
     description:
       "Sugarcane juice is Singapore's oldest thirst-quencher: fresh cane stalks fed through a cold-pressed machine, producing a pale green liquid that is sweet, slightly grassy, and cut with calamansi or lemon. Street vendors pressed it on wooden carts from the 1900s — Chinese immigrants brought the sugarcane pressing tradition from Fujian and Guangdong, where fresh cane juice was already a market staple. Today, sugarcane stalls are present in almost every hawker centre and wet market, the machine grinding and pressing continuously from morning until the last queue disperses. After a plate of laksa or a messy chilli crab, a glass of cold sugarcane juice is not a dessert — it is a necessity. The sweetness is the natural sugar of the cane, undiluted and unmistakable.",
@@ -3977,6 +4047,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Bubur Lambuk",
     slug: "bubur-lambuk",
+    seoTitle: "Bubur Lambuk: Singapore's Ramadan Porridge Explained",
+    seoDescription: "Bubur lambuk is the spiced rice porridge that mosques cook and give out free during Ramadan. How it's made, how to get some, and the tradition behind it.",
     category: "Malay & Muslim Heritage",
     description:
       "Bubur lambuk is Singapore's most communal food: a spiced rice porridge cooked in enormous woks with coconut milk, lemongrass, and dried shrimp, distributed free from mosques across Singapore daily during Ramadan, usually in the late afternoon before iftar. The dish is Malay in origin and its entire meaning is inseparable from the month of fasting — made by mosque volunteers who stir the enormous pots from the afternoon, then ladled into containers and handed to whoever arrives at the gates. Kampong Glam's Sultan Mosque is among the mosques that prepare it. The recipe is spiced gently — ginger, lemongrass, galangal — so it is soft and restorative for breaking fast. Outside of Ramadan it is hard to find, and it is never quite the same without the context of communal giving.",
@@ -4053,6 +4125,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Otak-Otak",
     slug: "otak-otak",
+    seoTitle: "Otak-Otak Singapore: Otah Explained, Price & Best Stalls",
+    seoDescription: "Otah explained: spiced fish paste grilled in leaf wrappers. What a piece costs (S$0.70–2), Malay vs Peranakan styles, and Hiang Soon Otar and Hougang Otah.",
     category: "Malay & Muslim Heritage",
     description:
       "Otak-otak is spiced fish paste grilled inside banana or coconut leaf — the name means 'brains' in Malay, a reference to the soft, yielding texture of the finished paste rather than any actual ingredient. The Malay and Peranakan communities of the Straits developed two distinct versions: the Malay version, strongly associated with the East Coast and Muar in Malaysia, is a flat, charcoal-grilled packet with a smoky, spiced fish paste that is almost custard-like inside. The Peranakan version is thicker, made with coconut milk and a more complex rempah, and cooked in coconut leaf. Both are served warm, both are eaten in one or two bites, and both are better than they have any right to be given their simplicity. In Singapore, otak-otak is the companion dish — the thing you add to a laksa order, the side you bring to a BBQ, the snack you eat standing at a hawker stall at midnight.",
@@ -4149,6 +4223,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Sup Tulang",
     slug: "sup-tulang",
+    seoTitle: "Sup Tulang Singapore: Mutton Bone Marrow & Where to Eat",
+    seoDescription: "Sup tulang explained: mutton bones in red gravy, eaten by sucking out the marrow. What a plate costs (about S$10–15) and Haji Kadir & M Baharudeen and Deen.",
     category: "Malay & Muslim Heritage",
     description:
       "Sup tulang — mutton bone soup — is Singapore's most unapologetically primal dish: enormous mutton leg bones sawn open to expose the marrow, simmered in a dark, spiced broth of tomato, ginger, and bone-deep richness, served with a straw to extract the marrow directly from the cavity. Indian-Muslim hawkers on Jalan Sultan created sup tulang, and it found its most devoted following at Golden Mile Food Centre on Beach Road, where the bones arrive in deep red broth at tables occupied by people who have made a deliberate decision to eat something extraordinary at midnight. The marrow is the point — soft, rich, and available only by sucking it through the bone with a straw, which is the single most satisfying action in Singapore's entire food landscape.",
@@ -4245,6 +4321,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Nasi Goreng",
     slug: "nasi-goreng",
+    seoTitle: "Nasi Goreng Singapore: Where to Eat, Price & History",
+    seoDescription: "Nasi goreng explained: Malay-style fried rice with sambal, egg and sides. What a plate costs (S$5–8) and where to eat it, including Kampong Glam Cafe.",
     category: "Malay & Muslim Heritage",
     description:
       "Nasi goreng — fried rice — is the Malay archipelago's most universal dish and a favourite Singapore supper. Rice fried in a hot wok with shrimp paste, dark soy, egg, and aromatics, served with a fried egg on top, cucumber slices, and a prawn cracker alongside. The dish arrived with the Malay and Indonesian communities that have lived in Singapore since before the colonial era, and their influence on the recipe is fundamental: the shrimp paste (belacan) and the sweet, dark kecap manis are the two ingredients that make Malay nasi goreng categorically different from Chinese fried rice. Singapore's version is darker, funkier, and more deeply flavoured than most — and at mamak stalls that run through the night, a plate of nasi goreng at 2am is one of the most satisfying meals the city offers.",
@@ -4334,6 +4412,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Bandung",
     slug: "bandung",
+    seoTitle: "Bandung Drink Singapore: Rose Syrup Milk Explained",
+    seoDescription: "Bandung is pink rose syrup with milk, a hawker drink stall staple. What a glass costs (S$1.50–3), how it's made, how to order it and the story behind it.",
     category: "Malay & Muslim Heritage",
     description:
       "Bandung is Singapore's most cheerfully pink drink: rose syrup stirred into cold evaporated milk until it turns a vivid coral-pink, served over ice. Despite the name, the drink has nothing to do with the Indonesian city of Bandung — the Malay word bandung simply means 'pair' or 'blend', reflecting the two-ingredient simplicity of the drink. Indian-Muslim hawkers popularised bandung across Singapore and it became a fixture of Malay weddings, Ramadan bazar stalls, and mamak drink counters. It is sweet in a way that is entirely deliberate — the sweetness is the point, the colour is the invitation, and the rose fragrance is the reason people who have been drinking it since childhood still order it every time without thinking. On a hot afternoon, a glass of cold bandung is not a sophisticated choice. It is the correct one.",
@@ -4402,6 +4482,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Chendol",
     slug: "chendol",
+    seoTitle: "Chendol Singapore: Best Stalls, Price & Durian Chendol",
+    seoDescription: "Chendol explained: shaved ice, green pandan jelly, coconut milk and gula melaka. What a bowl costs (S$2–3.50) and Cendol Geylang Serai, Old Amoy and Jin Jin.",
     category: "Peranakan (Nyonya)",
     description:
       "Chendol is Southeast Asia's most beloved cold dessert and Singapore's definitive answer to the heat: shaved ice mounded over pandan-green rice flour noodles, doused with coconut milk and dark gula melaka (palm sugar) syrup, sometimes with red beans or corn added. The Peranakan and Malay communities shared ownership of chendol across the Straits, and Penang and Singapore have maintained a polite but deeply serious rivalry about which city makes the better version for as long as both have existed. Singapore's version is typically served cold, layered in a bowl or tall glass, with the gula melaka poured over at the last moment by the vendor — the streaks of dark syrup cutting through the white coconut milk and green jelly is one of the most visually satisfying things in the hawker world. The flavour is the meeting of pandan's floral sweetness, coconut's richness, and gula melaka's smoky caramel.",
@@ -4500,6 +4582,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Nasi Ulam",
     slug: "nasi-ulam",
+    seoTitle: "Nasi Ulam Singapore: Peranakan Herb Rice & Where to Eat",
+    seoDescription: "Nasi ulam explained: Nyonya rice tossed with finely cut herbs, a true test of knife skill. What it costs (S$6–9) and where to find it in Singapore.",
     category: "Peranakan (Nyonya)",
     description:
       "Nasi ulam is Peranakan cuisine's most underrepresented masterpiece: cold cooked rice mixed with a generous quantity of fresh herbs — torch ginger flower, kaffir lime leaf, Vietnamese coriander, lemongrass, turmeric leaf — sliced thin and tossed through the rice with toasted coconut, dried shrimp, and sometimes salted fish. The result is a herb salad that also happens to be a rice dish, intensely fragrant and completely different from anything else in Singapore's hawker repertoire. Nyonya grandmothers made nasi ulam with whatever grew in the kitchen garden — the recipe was an exercise in abundance, using herbs as a primary ingredient rather than a garnish. Today it is increasingly rare in hawker centres, preserved mainly by Peranakan restaurants and heritage cooks who understand what is being lost.",
@@ -4596,6 +4680,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Kueh Lapis",
     slug: "kueh-lapis",
+    seoTitle: "Kueh Lapis Singapore: Rainbow Layer Cake & Where to Buy",
+    seoDescription: "Steamed rainbow kueh lapis, peeled layer by layer: how it's made, what a piece costs (S$1–2) and where to buy it, from Kim Choo to Bengawan Solo.",
     category: "Peranakan (Nyonya)",
     description:
       "Kueh lapis is the most patient dessert in Singapore: a steamed layered cake built one thin stratum at a time, alternating pink and white layers of rice flour, coconut milk, and pandan or rose colouring, until the completed cake stands five centimetres tall in perfect horizontal bands. The technique requires steaming each layer individually before adding the next — rushing produces fused, indistinct layers; patience produces the clean, jewel-like cross-section that makes kueh lapis the most photographed kueh in any display. The flavour is mild and deliberately restrained — coconut milk sweetness, a faint pandan fragrance, and the slight chewiness of well-set rice flour. The experience is partly visual and partly textural: peeling each layer individually is the traditional way to eat it, and the peel of each thin, slightly elastic stratum is one of the small, specific pleasures of Peranakan kueh culture.",
@@ -4694,6 +4780,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Teochew Porridge (Muay)",
     slug: "teochew-porridge",
+    seoTitle: "Teochew Porridge Singapore: How to Order & Best Stalls",
+    seoDescription: "Teochew muay explained: watery rice porridge with braised and salted sides you point at. How pricing works (S$5–12 a person), plus Ann Hoo and Ye Lai Xiang.",
     category: "Chinese Dialect Heritage",
     description:
       "Teochew porridge — muay in the Teochew dialect — is not congee. The distinction matters. Congee is cooked until the rice disintegrates into a thick, creamy mass. Muay is cooked until the grains are just tender but still distinct, swimming in a clear, thin broth that is essentially rice-flavoured water. The porridge is mild by design — a neutral base around which an array of small side dishes is arranged: preserved vegetables, braised tofu, century egg, salted egg, fried fish, dark soy braised meats, and whatever else the stall has prepared that morning. The entire ritual of Teochew porridge is the selection and combination of these sides, eaten in small bites alongside the soothing, understated porridge. It is the opposite of bold food. It is the kind of meal that makes you feel genuinely well after eating it.",
@@ -4790,6 +4878,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Thunder Tea Rice (Lei Cha Fan)",
     slug: "lei-cha-fan",
+    seoTitle: "Thunder Tea Rice Singapore (Lei Cha): Best Stalls & Price",
+    seoDescription: "Hakka thunder tea rice explained: rice, chopped greens and a ground herbal tea soup. What it costs (S$4–8) and Lin Da Ma Lei Cha and Hakka Thunder Tea Rice.",
     category: "Chinese Dialect Heritage",
     description:
       "Thunder tea rice is the Hakka community's most distinctive contribution to Singapore's hawker landscape: a bowl of plain rice surrounded by small portions of stir-fried vegetables, preserved radish, peanuts, tofu, and anchovies, served with a separate bowl of a thick, intensely green tea broth made from ground green tea, herbs, and sesame to be poured over everything. The name — lei cha, meaning pounded tea — refers to the ancient Hakka method of grinding tea leaves and herbs into a paste before mixing with water. The dish is often vegetarian (though many versions add ikan bilis or dried shrimp), deeply nutritious, and unlike anything else in the hawker world. To first-time eaters the tea broth is challenging — grassy, slightly bitter, and very green. To those who return to it regularly, that bitterness is precisely the reason they come back.",
@@ -4886,6 +4976,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Braised Duck Rice (Lor Ark)",
     slug: "lor-ark",
+    seoTitle: "Braised Duck Rice Singapore: Best Stalls & Price",
+    seoDescription: "Teochew braised duck (lor ark) in dark, spiced sauce: what a plate costs (S$4–7), how to order it, and Chuan Kee Boneless, Heng Gi and Jin Ji.",
     category: "Chinese Dialect Heritage",
     description:
       "Braised duck rice is Teochew cooking at its most patient and most rewarding: a whole duck simmered for hours in a master stock of dark soy, five spice, galangal, and aromatics until the meat yields completely and the skin turns a deep mahogany. Sliced over rice with braised tofu, braised egg, preserved vegetables, and the master stock poured over as a gravy, it is one of the most comforting and completely satisfying plates in Singapore's hawker world. Teochew hawkers built the dish from the tradition of lor (卤) — master-stock braising — and applied it to the duck that Teochew communities have prized since their fishing village origins in Guangdong. The best stalls maintain the same master stock pot for years, refreshing and seasoning it continuously until it has accumulated a complexity that no newly started pot can replicate.",
@@ -4986,6 +5078,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Soon Kueh",
     slug: "soon-kueh",
+    seoTitle: "Soon Kueh Singapore: Teochew Kueh, Best Stalls & Price",
+    seoDescription: "Soon kueh explained: Teochew dumplings filled with turnip and bamboo shoot, steamed or pan-fried. What one costs (S$1.10–1.80), plus Lai Heng and Tiong Bahru.",
     category: "Chinese Dialect Heritage",
     description:
       "Soon kueh is a Teochew steamed dumpling that deserves far more attention than it receives: a translucent, slightly chewy wheat starch skin wrapped around a filling of bamboo shoots, dried shrimp, turnip, and mushroom, served with dark soy and a chilli dipping sauce. The wrapper is the achievement — made from wheat starch and tapioca flour, it becomes almost glass-like when steamed, allowing the filling to be visible through the skin, and yielding to a gentle bite with a slight resistance that the best dim sum wrappers aspire to. Teochew hawkers sold soon kueh from push-carts through Singapore's prewar streets alongside chwee kueh and other steamed rice snacks. Today it appears at Teochew kueh stalls, dim sum trolleys, and heritage hawker centres, and is consistently underordered by people who don't know what they're missing.",
@@ -5083,6 +5177,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Ang Ku Kueh",
     slug: "ang-ku-kueh",
+    seoTitle: "Ang Ku Kueh Singapore: Meaning, Fillings & Where to Buy",
+    seoDescription: "Ang ku kueh, the red tortoise cake for birthdays and a baby's first month: fillings explained, what a piece costs (S$1–2) and Ji Xiang Confectionery.",
     category: "Chinese Dialect Heritage",
     description:
       "Ang ku kueh — red tortoise cake — is one of Singapore's oldest and most meaningful confections: a bright red glutinous rice flour shell moulded into the shape of a tortoise, filled with sweet mung bean or peanut paste, and placed on a square of banana leaf. The name and form carry Hokkien and Teochew tradition: the tortoise is a symbol of longevity, the red colour signals prosperity, and the entire object is designed to be given rather than kept. Ang ku kueh appears at birthdays (particularly first-month celebrations), temple offerings, and special occasions where the giving of food carries as much meaning as the eating of it. At hawker stalls and traditional kueh shops, it is sold daily in both classic red and modern variations — but the original red mung bean version, made properly with fresh-ground paste and steamed until the skin is slightly shiny and yielding, is the one that carries the heritage.",
@@ -5174,6 +5270,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Masala Thosai",
     slug: "masala-thosai",
+    seoTitle: "Masala Thosai Singapore: Best Stalls, Price & History",
+    seoDescription: "Masala thosai explained: a crisp rice and lentil crepe with spiced potato, sambar and chutneys. What it costs (S$4–8) and Rajarani Thosai and Ananda Bhavan.",
     category: "Indian & South Asian Heritage",
     description:
       "Masala thosai is Singapore's most substantial South Indian breakfast: a large, thin, crispy dosa crepe made from fermented rice and urad dal batter, wrapped around a filling of spiced potato masala — turmeric-yellow mashed potato with mustard seeds, curry leaf, onion, and green chilli — served with coconut chutney and sambar. The dish is Tamil Nadu's most recognised export and in Singapore's Little India it has been served at the same restaurants and stalls for decades, the dosa pan heating from before dawn while the batter ferments overnight. The proper masala thosai is enormous — extending well beyond the edge of the plate — paper-thin at its widest, slightly thicker where the potato filling sits, and crispy enough to shatter when broken. It is simultaneously very simple food and the result of considerable technical precision.",
@@ -5271,6 +5369,8 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Naan",
     slug: "naan",
+    seoTitle: "Naan Singapore: Halal Naan, Best Places & Price",
+    seoDescription: "Halal tandoor naan in Singapore: plain, butter, garlic and cheese, what a naan costs (S$1.50–6) and where to eat it, from Delhi Lahori at Tekka to Usman.",
     category: "Indian & South Asian Heritage",
     description:
       "Naan is the leavened flatbread of North Indian and Pakistani cooking that found a permanent place in Singapore's Indian-Muslim restaurant heritage — stretched by hand, slapped against the interior wall of a tandoor oven, and pulled out charred in spots, blistered across its surface, and soft enough to fold completely around a piece of mutton. In Singapore, naan is most associated with the North Indian and Pakistani eateries of Little India. Because it needs a tandoor, it is mostly a restaurant dish, though a few hawker stalls run their own, including Michelin Bib Gourmand stall Delhi Lahori at Tekka Centre. The best naan in Singapore is slathered with butter or garlic butter immediately after emerging from the oven, and eaten while it is too hot to hold comfortably, which is precisely the correct temperature.",

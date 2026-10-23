@@ -16,14 +16,38 @@ import {
 
 type Props = { params: Promise<{ slug: string }> };
 
+const TRAIL_SEO: Record<string, { title: string; description: string }> = {
+  "cbd-day-trail": {
+    title: "Singapore CBD Food Trail: Self-Guided Food Walk",
+    description:
+      "A self-guided CBD food walk in 9 stops, from kaya toast at sunrise to satay at night, with addresses, what to order and opening days.",
+  },
+  "katong-trail": {
+    title: "Katong Food Trail: Self-Guided Singapore Food Walk",
+    description:
+      "A self-guided Katong food walk in 8 stops: kaya toast, crispy prata, Peranakan shophouses and Katong laksa, with addresses and what to order.",
+  },
+  "little-india-kampong-glam-trail": {
+    title: "Little India & Kampong Glam Food Walk: Self-Guided Trail",
+    description:
+      "A self-guided Little India and Kampong Glam food walk in 8 stops: Tekka prata, biryani, Indian sweets and a 1908 murtabak shop, with addresses and tips.",
+  },
+  "tiong-bahru-trail": {
+    title: "Tiong Bahru Food Trail: Self-Guided Singapore Food Walk",
+    description:
+      "A self-guided walk through Tiong Bahru's 1930s Art Deco estate: old-school pau and soya bean milk, Tiong Bahru Bakery and Yong Siak Street, with tips.",
+  },
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const trail = FLAVOUR_TRAILS.find((t) => t.slug === slug);
   if (!trail) return {};
   const name = trail.title.replace(/^The /, "");
+  const seo = TRAIL_SEO[trail.slug];
   return {
-    title: `${name}: Self-Guided ${name.includes("Singapore") ? "" : "Singapore "}Food Walk | ShiokFlavour`,
-    description: `${trail.stops} stops, ${trail.duration.toLowerCase()}: ${trail.subtitle.replace(/\.+$/, "")}. Addresses, what to order, opening days and local tips.`,
+    title: seo?.title ?? `${name}: Self-Guided ${name.includes("Singapore") ? "" : "Singapore "}Food Walk | ShiokFlavour`,
+    description: seo?.description ?? `${trail.stops} stops, ${trail.duration.toLowerCase()}: ${trail.subtitle.replace(/\.+$/, "")}. Addresses, what to order, opening days and local tips.`,
     alternates: { canonical: `/flavour-trail/${trail.slug}` },
     openGraph: { images: [trail.heroImage] },
   };

@@ -21,11 +21,9 @@ export type BlogPost = {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "singapore-hawker-food-guide-first-timers",
+    seoTitle: "Singapore Hawker Centre Guide for First-Timers (2026)",
+    seoDescription: "Never eaten at a hawker centre? How to chope a seat with a tissue packet, order at the stall, pay with cash or PayNow, what to eat first and what it costs.",
     title: "The Complete Singapore Hawker Food Guide for First-Timers",
-    seoTitle:
-      "Singapore Hawker Centre Guide for First-Timers: How to Order & Pay | ShiokFlavour",
-    seoDescription:
-      "Never eaten at a hawker centre? How to chope a seat with a tissue packet, order at the stall, pay with cash or PayNow, what to eat first and what it costs.",
     subtitle: "Everything you need to know before you eat",
     category: "Guide",
     readTime: "8 min read",
@@ -114,6 +112,8 @@ Go hungry. Bring tissue. Eat everything.`,
   },
   {
     slug: "how-to-order-kopi-teh-singapore",
+    seoTitle: "How to Order Kopi and Teh in Singapore Like a Local",
+    seoDescription: "Kopi O, kopi C, siew dai, gau, peng: the kopitiam ordering code explained, so 'coffee, no sugar' gets you what you actually wanted. Teh orders too.",
     title: "How To Order Kopi and Teh Like a Local",
     subtitle: "A field guide to Singapore's kopitiam drink system",
     category: "Guide",
@@ -204,6 +204,8 @@ Your first order: **Kopi C Peng Siu Dai** — iced coffee with evaporated milk, 
   },
   {
     slug: "how-to-order-roti-prata-singapore",
+    seoTitle: "How to Order Roti Prata in Singapore Like a Local",
+    seoDescription: "Kosong, plaster, egg or tissue? How to order prata at the stall, which curry to ask for, and how to read the drinks board without holding up the queue.",
     title: "How to Order Roti Prata",
     subtitle: "The unwritten menu of Singapore's most-shared plate",
     category: "Guide",
@@ -360,11 +362,9 @@ Try one yourself, sometime. Order a plain prata. Ask for sugar instead of curry.
   },
   {
     slug: "how-to-order-chicken-rice-singapore",
+    seoTitle: "How to Order Chicken Rice in Singapore: Sauces & What to Say",
+    seoDescription: "Roasted or steamed? Which rice, the three sauces and the soup: the chicken rice decision tree, the exact words to say at the stall, and where to eat it.",
     title: "How to Order Hainanese Chicken Rice",
-    seoTitle:
-      "How to Order Chicken Rice in Singapore: Roasted or Steamed, Sauces & What to Say | ShiokFlavour",
-    seoDescription:
-      "Roasted or steamed? Which rice, which three sauces, and what about the soup? The chicken rice decision tree, the exact words to use at the stall, and where to eat it.",
     subtitle:
       "The chicken rice decision tree. Which chicken, which rice, which sauce, and what to say at the stall.",
     category: "Guide",
@@ -522,6 +522,8 @@ Order carefully. Eat slowly. Sip the soup.
   },
   {
     slug: "how-to-order-char-kway-teow-singapore",
+    seoTitle: "How to Order Char Kway Teow in Singapore: 5 Choices",
+    seoDescription: "Lard or no lard, cockles or not, the noodle mix, sweet or savoury, chilli or none: the five choices behind a plate of char kway teow and what to say.",
     title: "How to Order Char Kway Teow",
     subtitle:
       "Five decisions stand between you and the perfect plate. Here's every fork, and exactly what to say at the stall.",
@@ -608,11 +610,9 @@ Five decisions. One plate. Make them like you mean it.
   },
   {
     slug: "how-to-order-economy-rice-singapore",
+    seoTitle: "How to Order Economy Rice in Singapore: What to Say & Cost",
+    seoDescription: "Eat here or dabao, one meat or two, and the free thing everyone forgets. How economy rice pricing works and exactly what to say at the counter.",
     title: "How to Order Economy Rice",
-    seoTitle:
-      "How to Order Economy Rice in Singapore: What to Say & What It Costs | ShiokFlavour",
-    seoDescription:
-      "Eat here or dabao, one meat or two, and the free thing everyone forgets. How economy rice pricing works and exactly what to say at the counter.",
     subtitle:
       "Eat here or dabao, one meat or two, and the free thing everyone forgets. The whole system, and exactly what to say at the counter.",
     category: "Guide",
@@ -741,6 +741,8 @@ Five decisions. Forty seconds. Lunch.
   },
   {
     slug: "10-hawker-dishes-must-try-singapore",
+    seoTitle: "10 Hawker Dishes You Must Try in Singapore (Ranked)",
+    seoDescription: "Every food guide has a list. This one has opinions: the ten dishes that define Singapore hawker culture, ranked, argued and defended, with where to eat them.",
     title: "10 Hawker Dishes You Must Try Before Leaving Singapore",
     subtitle: "Not a listicle. A ranked argument.",
     category: "Ranking",
@@ -937,6 +939,8 @@ Eat in this order. Argue with this list. Come back hungry.`,
   },
   {
     slug: "singapore-hawker-culture-unesco-heritage",
+    seoTitle: "Why Singapore Hawker Culture Is UNESCO Heritage",
+    seoDescription: "In December 2020, UNESCO added Singapore's hawker culture to its Intangible Cultural Heritage list. What that recognition means, and what it does not.",
     title: "Why Singapore Hawker Food Is UNESCO Heritage",
     subtitle: "And what that actually means for the uncles and aunties",
     category: "Culture",
