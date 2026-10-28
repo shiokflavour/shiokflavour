@@ -35,6 +35,8 @@ export type FoodHeritageDish = {
     queueGame: number;
     shiokValue: number;
   };
+  /** Last meaningful content update (YYYY-MM-DD), used for the sitemap. */
+  updatedAt?: string;
 };
 
 export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
@@ -1283,6 +1285,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Economy Rice",
     slug: "economy-rice",
+    updatedAt: "2026-10-21",
     seoTitle:
       "Economy Rice (Cai Png): Prices, Dishes & Best Stalls | ShiokFlavour",
     seoDescription:
@@ -2201,6 +2204,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
   {
     name: "Satay Bee Hoon",
     slug: "satay-bee-hoon",
+    updatedAt: "2026-10-21",
     seoTitle:
       "Satay Bee Hoon Singapore: Best Stalls, Origin & Calories",
     seoDescription:

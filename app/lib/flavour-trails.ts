@@ -67,6 +67,8 @@ export type FlavourTrail = {
   tourId?: string;
   /** Cafe guide for the same neighbourhood, shown as a box at the end of the trail. */
   cafeGuide?: { href: string; areaName: string; count: number };
+  /** Last meaningful content update (YYYY-MM-DD), used for the sitemap. */
+  updatedAt?: string;
   intro: string;
   pullQuote: string;
   trailStops?: TrailStop[];
@@ -409,6 +411,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
     slug: "tiong-bahru-trail",
     title: "The Tiong Bahru Trail",
     cafeGuide: { href: "/cafes/tiong-bahru", areaName: "Tiong Bahru", count: 11 },
+    updatedAt: "2026-10-28",
     subtitle:
       "Two neighbourhoods. One postcode. Four decisions.",
     region: "Central Singapore",
