@@ -225,6 +225,14 @@ function DualPathStopsSection({ trail }: { trail: FlavourTrail }) {
                     {stop.returnee.voicedTip}
                   </p>
                 </div>
+                {stop.returnee.cafeGuide ? (
+                  <Link
+                    href={stop.returnee.cafeGuide}
+                    className="mt-3 inline-block text-sm font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary"
+                  >
+                    Today&apos;s hours and what&apos;s open now →
+                  </Link>
+                ) : null}
               </div>
             </div>
 
@@ -543,6 +551,23 @@ export default async function TrailPage({ params }: Props) {
       </section>
 
       <ChopstickDivider />
+
+      {trail.cafeGuide && (
+        <section className="mx-auto max-w-3xl px-4 pb-10 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-sf-primary/30 bg-sf-primary/[0.06] p-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">Want to stay longer?</p>
+            <p className="mt-2 text-base leading-relaxed text-sf-cream/90">
+              The trail covers four stops. {trail.cafeGuide.areaName} has {trail.cafeGuide.count} cafes worth knowing: see which are open now, find them on the map and get walking directions.
+            </p>
+            <Link
+              href={trail.cafeGuide.href}
+              className="mt-4 inline-block rounded-full bg-sf-primary px-5 py-2.5 text-sm font-semibold text-white"
+            >
+              {trail.cafeGuide.areaName} cafe guide →
+            </Link>
+          </div>
+        </section>
+      )}
 
       {trail.tourId && (
         <section className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

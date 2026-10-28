@@ -32,6 +32,8 @@ export type PathOption = {
   whatToOrder: OrderItem[];
   voicedTip: string;
   image: string;
+  /** Link to this place's card in a cafe guide, e.g. /cafes/tiong-bahru#cafe-pralet */
+  cafeGuide?: string;
 };
 
 export type DualPathStop = {
@@ -63,6 +65,8 @@ export type FlavourTrail = {
   heroCaption?: string;
   /** Id from app/lib/tours.ts: shows a guided-tour card before the end note. */
   tourId?: string;
+  /** Cafe guide for the same neighbourhood, shown as a box at the end of the trail. */
+  cafeGuide?: { href: string; areaName: string; count: number };
   intro: string;
   pullQuote: string;
   trailStops?: TrailStop[];
@@ -404,6 +408,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
   {
     slug: "tiong-bahru-trail",
     title: "The Tiong Bahru Trail",
+    cafeGuide: { href: "/cafes/tiong-bahru", areaName: "Tiong Bahru", count: 11 },
     subtitle:
       "Two neighbourhoods. One postcode. Four decisions.",
     region: "Central Singapore",
@@ -464,6 +469,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           ],
           voicedTip: "Come at 8am. Kouign amann straight from the oven, still warm, no queue.",
           image: "/images/trails/tiong-bahru/bakery.jpg",
+          cafeGuide: "/cafes/tiong-bahru#cafe-tiong-bahru-bakery",
         },
         shiokMove: "Do both. Two minutes apart. Pau first, croissant for the road.",
       },
@@ -495,16 +501,15 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           mapsUrl: "https://maps.google.com/?q=Yong+Siak+Street+Tiong+Bahru",
           badges: ["FREE", "20 MINS", "2010s"],
           description:
-            "One short street that became the quiet heart of the new Tiong Bahru. Indie bookshops. Small design boutiques. No crowds. This is the neighbourhood everyone writes about but nobody actually disturbs.",
+            "One short, leafy street that became the quiet heart of the new Tiong Bahru: pre-war Art Deco blocks, a cat-themed gift shop and a courtyard sourdough bakery. No crowds. This is the neighbourhood everyone writes about but nobody actually disturbs.",
           whatToOrder: [
-            { item: "Woods in the Books — children's bookshop", price: "Free" },
-            { item: "Nana & Bird — Singapore designer boutique (round the corner on Eng Hoon St)", price: "Free" },
-            { item: "Cat Socrates — quirky gift shop", price: "Free" },
+            { item: "Cat Socrates: cat-themed gifts, books and postcards (78 Yong Siak St)", price: "Free" },
+            { item: "The 1930s Art Deco blocks: look up for the curved balconies", price: "Free" },
           ],
           voicedTip: "Weekday mornings quiet. Weekends bring the brunch crowd. Come early.",
           image: "/images/trails/tiong-bahru/yong-siak.jpg",
         },
-        shiokMove: "These two streets are parallel — five minutes walk from one to the other. Do both. One for history, one for coffee-scented bookshelves.",
+        shiokMove: "These two streets are parallel, five minutes' walk apart. Do both: one for history, one for coffee and a browse.",
       },
       {
         number: 3,
@@ -541,6 +546,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           ],
           voicedTip: "Get a cupcake to go. Eat it in the courtyard. Slower that way.",
           image: "/images/trails/tiong-bahru/plain-vanilla.jpg",
+          cafeGuide: "/cafes/tiong-bahru#cafe-plain-vanilla",
         },
         shiokMove: "Teck Seng's tau huay costs $1.20. Plain Vanilla's cupcake costs $4.50. Both are exactly what they're meant to be.",
       },
@@ -581,6 +587,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
           ],
           voicedTip: "Book ahead on weekends. Quietest just after 1pm.",
           image: "/images/trails/tiong-bahru/micro-bakery.jpg",
+          cafeGuide: "/cafes/tiong-bahru#cafe-micro-bakery-kitchen",
         },
         shiokMove: "Tiong Bahru Market costs $15 for a feast. Micro Bakery costs $40 for lunch. Pick by mood, not wallet.",
       },

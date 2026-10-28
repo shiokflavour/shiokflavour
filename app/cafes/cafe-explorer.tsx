@@ -57,6 +57,13 @@ export function CafeExplorer({ cafes, areaName }: { cafes: Cafe[]; areaName: str
       : readStored().filter((s) => valid.has(s));
     setShortlist(initial);
     setCanShare(typeof navigator !== "undefined" && typeof navigator.share === "function");
+    if (window.location.hash.startsWith("#cafe-")) {
+      const card = document.getElementById(window.location.hash.slice(1));
+      if (card) {
+        card.querySelector("details")?.setAttribute("open", "");
+        window.setTimeout(() => card.scrollIntoView({ block: "start" }), 50);
+      }
+    }
     return () => window.clearInterval(t);
   }, [cafes]);
 
