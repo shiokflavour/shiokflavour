@@ -191,6 +191,16 @@ export function SiteHeader() {
                 Hawker Centres
               </Link>
               <Link
+                href="/cafes"
+                className={`text-sm transition-colors ${
+                  isActive("/cafes")
+                    ? "font-semibold text-sf-primary"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
+                Cafes
+              </Link>
+              <Link
                 href="/hawker-guide"
                 className={`text-sm transition-colors ${
                   isActive("/hawker-guide")
@@ -365,6 +375,13 @@ export function SiteHeader() {
                   className="rounded-xl px-3 py-3 text-sm font-medium text-white/70 transition-all hover:bg-white/5 hover:text-white"
                 >
                   Hawker Centres
+                </Link>
+                <Link
+                  href="/cafes"
+                  onClick={() => setMobileOpen(false)}
+                  className="rounded-xl px-3 py-3 text-sm font-medium text-white/70 transition-all hover:bg-white/5 hover:text-white"
+                >
+                  Cafes
                 </Link>
                 <Link
                   href="/hawker-guide"

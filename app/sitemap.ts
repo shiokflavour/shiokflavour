@@ -3,6 +3,7 @@ import { BLOG_POSTS } from "./lib/blog-posts";
 import { FLAVOUR_TRAILS } from "./lib/flavour-trails";
 import { FOOD_HERITAGE_DISHES } from "./lib/food-heritage";
 import { FEATURED_HAWKERS } from "./lib/featured-hawkers";
+import { CAFE_AREAS } from "./lib/cafes";
 
 const BASE_URL = "https://www.shiokflavour.com";
 
@@ -19,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/hawker-guide/old-school-names`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${BASE_URL}/hawker-guide/etiquette`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${BASE_URL}/hawker-guide/singlish`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${BASE_URL}/cafes`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.85 },
+    ...CAFE_AREAS.map((a) => ({ url: `${BASE_URL}/cafes/${a.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.85 })),
     { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.5 },
