@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { FLAVOUR_TRAILS } from "@/app/lib/flavour-trails";
 
@@ -32,7 +30,6 @@ const COMING_SOON = [
 export default function FlavourTrailPage() {
   return (
     <>
-      <SiteHeader />
       <section className="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
         <p className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-sf-primary">
           Flavour Trail
@@ -139,7 +136,6 @@ export default function FlavourTrailPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </>
   );
 }

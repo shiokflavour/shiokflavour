@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SiteHeader } from "../components/site-header";
-import { SiteFooter } from "../components/site-footer";
 import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
@@ -100,7 +98,6 @@ export default async function FoodHeritagePage({
   if (categorySlug && activeCat) {
     return (
       <div>
-        <SiteHeader />
 
         <div className="mx-auto max-w-7xl px-4 pb-32 pt-8 sm:px-6 lg:px-8">
           <Link
@@ -179,14 +176,12 @@ export default async function FoodHeritagePage({
             })}
           </div>
         </div>
-        <SiteFooter />
       </div>
     );
   }
 
   return (
     <div>
-      <SiteHeader />
 
       <section className="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
         <p className="mb-6 text-[15px] font-semibold uppercase tracking-[0.25em] text-sf-primary">
@@ -356,7 +351,6 @@ export default async function FoodHeritagePage({
         </section>
       ))}
 
-      <SiteFooter />
     </div>
   );
 }

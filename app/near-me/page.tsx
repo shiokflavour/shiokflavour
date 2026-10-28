@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { SiteHeader } from "../components/site-header";
-import { SiteFooter } from "../components/site-footer";
 import { FEATURED_HAWKERS, type FeaturedHawker } from "../lib/featured-hawkers";
 
 function getDistanceKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
@@ -58,7 +56,6 @@ export default function NearMePage() {
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
-      <SiteHeader />
       <main className="flex-1">
 
         {/* Hero */}
@@ -247,7 +244,6 @@ export default function NearMePage() {
           </section>
         )}
       </main>
-      <SiteFooter />
     </div>
   );
 }

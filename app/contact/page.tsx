@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
 export default function ContactPage() {
@@ -31,7 +29,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <SiteHeader />
 
       <section className="mx-auto max-w-7xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
         <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-sf-primary">
@@ -179,7 +176,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </>
   );
 }

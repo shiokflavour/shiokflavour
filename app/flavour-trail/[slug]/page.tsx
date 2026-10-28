@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { SiteHeader } from "@/app/components/site-header";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { TourCard } from "@/app/components/tour-card";
 import {
@@ -252,7 +251,6 @@ export default async function TrailPage({ params }: Props) {
 
   return (
     <>
-      <SiteHeader />
 
       {/* Hero */}
       <section className="pb-0 pt-16">

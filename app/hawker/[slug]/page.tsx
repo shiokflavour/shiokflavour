@@ -5,8 +5,6 @@ import { notFound, redirect } from "next/navigation";
 import ClosureBadge from "@/app/components/closure-badge";
 import { WhenToGo } from "@/app/components/when-to-go";
 import { HawkerCentreCard } from "../../components/hawker-centre-card";
-import { SiteFooter } from "../../components/site-footer";
-import { SiteHeader } from "../../components/site-header";
 import {
   fetchHawkerByIdFromApi,
   type HawkerCentre,
@@ -203,7 +201,6 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
 
   return (
     <div className="flex min-h-full flex-1 flex-col bg-sf-bg">
-      <SiteHeader />
       <HawkerStructuredData hawker={h} />
 
       {/* New Hero — split layout, no blurry background image */}
@@ -737,7 +734,6 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
         ) : null}
       </main>
 
-      <SiteFooter />
     </div>
   );
 }
@@ -751,7 +747,6 @@ function ApiHawkerPage({ hawker }: { hawker: HawkerCentre }) {
 
   return (
     <div className="flex min-h-full flex-1 flex-col bg-sf-bg">
-      <SiteHeader />
 
       <div className="relative w-full aspect-[16/6] min-h-[180px] bg-gradient-to-br from-[#1c1c1e] via-sf-bg to-sf-primary/20">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
@@ -810,7 +805,6 @@ function ApiHawkerPage({ hawker }: { hawker: HawkerCentre }) {
         </div>
       </main>
 
-      <SiteFooter />
     </div>
   );
 }

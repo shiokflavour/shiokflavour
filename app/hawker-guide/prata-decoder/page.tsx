@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import { PRATA_BASES, PRATA_CURRIES } from "@/app/lib/hawker-guide";
 import { KeepExploring } from "../keep-exploring";
 
@@ -37,7 +35,6 @@ export default function PrataDecoderPage() {
 
   return (
     <>
-      <SiteHeader />
 
       {/* Hero */}
       <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -236,7 +233,6 @@ export default function PrataDecoderPage() {
 
       <KeepExploring currentId="prata-decoder" />
 
-      <SiteFooter />
     </>
   );
 }

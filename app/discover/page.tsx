@@ -1,13 +1,10 @@
 "use client";
 
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
 export default function DiscoverPage() {
   return (
     <>
-      <SiteHeader />
 
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
@@ -291,7 +288,6 @@ export default function DiscoverPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </>
   );
 }

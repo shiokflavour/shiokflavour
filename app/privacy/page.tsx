@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SiteFooter } from "../components/site-footer";
-import { SiteHeader } from "../components/site-header";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
@@ -13,7 +11,6 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <div className="flex min-h-full flex-1 flex-col">
-      <SiteHeader />
       <main className="flex-1 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-sf-primary">
@@ -140,7 +137,6 @@ export default function PrivacyPage() {
           </p>
         </div>
       </main>
-      <SiteFooter />
     </div>
   );
 }

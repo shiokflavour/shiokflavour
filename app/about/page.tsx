@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { FOOD_HERITAGE_DISHES } from "../lib/food-heritage";
 import { FEATURED_HAWKERS } from "../lib/featured-hawkers";
-import { SiteHeader } from "../components/site-header";
-import { SiteFooter } from "../components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
 export const metadata = {
@@ -28,7 +26,6 @@ export default function AboutPage() {
         }
         .fire-glow { animation: fireGlow 2.5s ease-in-out infinite; }
       `}</style>
-      <SiteHeader />
       <main className="flex-1">
         {/* Hero — warm gradient, large statement */}
         <section className="relative overflow-hidden bg-gradient-to-br from-sf-surface via-black/80 to-sf-bg px-4 pt-24 pb-20 sm:px-6 lg:px-8">
@@ -301,7 +298,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <SiteFooter />
     </div>
   );
 }

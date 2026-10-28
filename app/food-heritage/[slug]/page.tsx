@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { SiteFooter } from "../../components/site-footer";
-import { SiteHeader } from "../../components/site-header";
 import { getFeaturedHawkerBySlug } from "../../lib/featured-hawkers";
 import { BLOG_POSTS } from "../../lib/blog-posts";
 import { buildDishFaqs } from "../../lib/faqs";
@@ -146,7 +144,6 @@ export default async function FoodHeritageDishPage({ params }: Props) {
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
-      <SiteHeader />
       <main className="flex-1">
         <DishStructuredData dish={dish} />
 
@@ -363,7 +360,6 @@ export default async function FoodHeritageDishPage({ params }: Props) {
           </div>
         </div>
       </main>
-      <SiteFooter />
     </div>
   );
 }

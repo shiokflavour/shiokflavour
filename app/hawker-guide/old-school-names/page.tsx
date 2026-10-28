@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import { DRINKS } from "@/app/lib/hawker-guide";
 import { KeepExploring } from "../keep-exploring";
 
@@ -16,7 +14,6 @@ export default function OldSchoolNamesPage() {
 
   return (
     <>
-      <SiteHeader />
 
       {/* Hero */}
       <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -89,7 +86,6 @@ export default function OldSchoolNamesPage() {
 
       <KeepExploring currentId="old-school-names" />
 
-      <SiteFooter />
     </>
   );
 }

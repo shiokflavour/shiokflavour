@@ -1,7 +1,5 @@
 import { HawkerCentresBrowse } from "@/app/components/hawker-centres-client";
 import { HawkerCentreCard } from "@/app/components/hawker-centre-card";
-import { SiteFooter } from "@/app/components/site-footer";
-import { SiteHeader } from "@/app/components/site-header";
 import { FEATURED_HAWKERS } from "@/app/lib/featured-hawkers";
 
 export const metadata = {
@@ -27,7 +25,6 @@ export default async function HawkerCentresPage({
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
-      <SiteHeader />
 
       <main className="flex-1 border-t border-white/5 bg-black/20 px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
@@ -71,7 +68,6 @@ export default async function HawkerCentresPage({
         </div>
       </main>
 
-      <SiteFooter />
     </div>
   );
 }

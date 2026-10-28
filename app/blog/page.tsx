@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
 
@@ -24,7 +22,6 @@ export default function BlogPage() {
 
   return (
     <>
-      <SiteHeader />
 
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
@@ -201,7 +198,6 @@ export default function BlogPage() {
         )}
       </section>
 
-      <SiteFooter />
     </>
   );
 }

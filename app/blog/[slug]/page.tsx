@@ -3,8 +3,6 @@ import Link from "next/link";
 import { TourCard } from "@/app/components/tour-card";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
 
@@ -335,7 +333,6 @@ export default async function BlogArticlePage({ params }: Props) {
 
   return (
     <>
-      <SiteHeader />
 
       <section className="pb-0 pt-16">
         <div className="mx-auto mb-10 max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -644,7 +641,6 @@ export default async function BlogArticlePage({ params }: Props) {
         </div>
       </section>
 
-      <SiteFooter />
     </>
   );
 }

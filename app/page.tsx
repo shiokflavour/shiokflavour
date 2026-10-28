@@ -4,7 +4,6 @@ import { BLOG_POSTS } from "@/app/lib/blog-posts";
 import { FLAVOUR_TRAILS } from "@/app/lib/flavour-trails";
 import { FOOD_HERITAGE_DISHES } from "@/app/lib/food-heritage";
 import { FEATURED_HAWKERS } from "@/app/lib/featured-hawkers";
-import { SiteHeader } from "./components/site-header";
 import { HomeHero } from "./components/home-hero";
 
 export const metadata = {
@@ -62,7 +61,6 @@ export default function HomePage() {
 
   return (
     <>
-      <SiteHeader />
       <main className="bg-sf-bg text-sf-cream">
         <HomeHero />
 

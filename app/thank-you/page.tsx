@@ -1,12 +1,9 @@
 import Link from "next/link";
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 
 export default function ThankYouPage() {
   return (
     <>
-      <SiteHeader />
 
       <section className="flex min-h-[80vh] flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
         {/* Animated icon */}
@@ -60,7 +57,6 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      <SiteFooter />
 
       <style>{`
         @keyframes fireGlow {

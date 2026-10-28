@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { SiteHeader } from "@/app/components/site-header";
-import { SiteFooter } from "@/app/components/site-footer";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { HAWKER_GUIDES } from "./guides-data";
 
@@ -14,7 +12,6 @@ export const metadata = {
 export default function HawkerGuideHubPage() {
   return (
     <>
-      <SiteHeader />
 
       {/* Hero */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -134,7 +131,6 @@ export default function HawkerGuideHubPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </>
   );
 }
