@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { FaqSection } from "@/app/components/faq-section";
 import { CafeExplorer } from "../cafe-explorer";
 import { LepakMatcher } from "../lepak-matcher";
+import { OpenTimeline } from "../open-timeline";
+import { CafeMap } from "../cafe-map";
 import { CAFE_AREAS, COMING_SOON_AREAS, getCafeArea, type CafeArea } from "@/app/lib/cafes";
 
 type Props = { params: Promise<{ area: string }> };
@@ -106,6 +108,14 @@ export default async function CafeAreaPage({ params }: Props) {
             ))}
           </div>
         </section>
+
+        <div className="mt-12">
+          <CafeMap area={area} />
+        </div>
+
+        <div className="mt-12">
+          <OpenTimeline cafes={area.cafes} />
+        </div>
 
         <div className="mt-10">
           <LepakMatcher cafes={area.cafes} />

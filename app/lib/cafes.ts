@@ -21,6 +21,18 @@ export type VibeTag =
 export type Who = "solo" | "date" | "friends" | "family";
 export type Craving = "coffee" | "brunch" | "sweet" | "oldschool";
 
+export type Look = "bakery" | "brunch" | "coffee" | "matcha" | "dessert" | "oldschool";
+export type IconKey = "croissant" | "cake" | "cookie" | "sandwich" | "egg" | "utensils" | "coffee" | "leaf" | "icecream" | "soup";
+
+export const LOOKS: Record<Look, { label: string; color: string }> = {
+  bakery: { label: "Bakery", color: "#E9A23B" },
+  brunch: { label: "Brunch", color: "#9B8CF0" },
+  coffee: { label: "Coffee", color: "#3CB98A" },
+  matcha: { label: "Matcha", color: "#8CC152" },
+  dessert: { label: "Dessert", color: "#EC6F9E" },
+  oldschool: { label: "Old-school", color: "#E8622A" },
+};
+
 export type Span = [number, number];
 export type WeekHours = (Span[] | null)[];
 
@@ -42,6 +54,10 @@ export type Cafe = {
   story?: string;
   who: Who[];
   craves: Craving[];
+  look: Look;
+  icon: IconKey;
+  lat: number;
+  lng: number;
 };
 
 export type CafePairing = {
@@ -65,7 +81,8 @@ export type CafeArea = {
   quickPicks: { label: string; slug: string }[];
   cafes: Cafe[];
   pairings: CafePairing[];
-  nearby: { name: string; text: string; address: string; hoursText: string }[];
+  nearby: { name: string; text: string; address: string; hoursText: string; lat: number; lng: number }[];
+  landmarks: { name: string; kind: "market" | "mrt"; lat: number; lng: number; href?: string }[];
   goodToKnow: string[];
   faqs: { q: string; a: string; link?: { href: string; label: string } }[];
   related: { href: string; label: string }[];
@@ -138,6 +155,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
       "The first Tiong Bahru Bakery opened here in 2012. It reopened in September 2025 after a full redesign.",
     who: ["solo", "date", "friends", "family"],
     craves: ["brunch", "sweet", "coffee"],
+    look: "bakery",
+    icon: "croissant",
+    lat: 1.284454,
+    lng: 103.8336531,
   },
   {
     slug: "merci-marcel",
@@ -170,6 +191,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     ],
     who: ["date", "friends"],
     craves: ["brunch"],
+    look: "brunch",
+    icon: "utensils",
+    lat: 1.2844364,
+    lng: 103.8336932,
   },
   {
     slug: "plain-vanilla",
@@ -188,6 +213,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     walk: "About 10 min walk from Tiong Bahru MRT",
     who: ["friends", "family", "date"],
     craves: ["sweet", "brunch"],
+    look: "bakery",
+    icon: "cake",
+    lat: 1.2823481,
+    lng: 103.8305203,
   },
   {
     slug: "flock-cafe",
@@ -208,6 +237,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     goodToKnow: ["Indoor communal tables plus a few outdoor ones.", "Not halal-certified."],
     who: ["solo", "friends", "family"],
     craves: ["brunch", "coffee"],
+    look: "brunch",
+    icon: "egg",
+    lat: 1.2835798,
+    lng: 103.8302241,
   },
   {
     slug: "pralet",
@@ -235,6 +268,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     story: "Formerly Caffe Pralet, founded in 2006 by the team behind Creative Culinaire.",
     who: ["solo", "friends"],
     craves: ["sweet", "coffee"],
+    look: "bakery",
+    icon: "cookie",
+    lat: 1.2835634,
+    lng: 103.8344442,
   },
   {
     slug: "micro-bakery-kitchen",
@@ -262,6 +299,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     goodToKnow: ["Not halal-certified."],
     who: ["solo", "date"],
     craves: ["brunch"],
+    look: "bakery",
+    icon: "sandwich",
+    lat: 1.2826384,
+    lng: 103.8304851,
   },
   {
     slug: "creamier",
@@ -289,6 +330,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     goodToKnow: ["Not halal-certified."],
     who: ["friends", "family", "date"],
     craves: ["sweet"],
+    look: "dessert",
+    icon: "icecream",
+    lat: 1.2828794,
+    lng: 103.8303658,
   },
   {
     slug: "glass-roasters",
@@ -315,6 +360,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     walk: "About 8 min walk from Tiong Bahru MRT",
     who: ["solo"],
     craves: ["coffee"],
+    look: "coffee",
+    icon: "coffee",
+    lat: 1.2844512,
+    lng: 103.8330607,
   },
   {
     slug: "hello-arigato",
@@ -343,6 +392,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     goodToKnow: ["About 32 seats in a bright corner unit.", "Not halal-certified."],
     who: ["date", "friends"],
     craves: ["brunch", "coffee"],
+    look: "brunch",
+    icon: "sandwich",
+    lat: 1.2848582,
+    lng: 103.8331042,
   },
   {
     slug: "matchaya",
@@ -361,6 +414,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
     story: "Opened in 2026 in the unit that was Drips Bakery Cafe for more than a decade.",
     who: ["friends", "date", "solo"],
     craves: ["sweet", "coffee"],
+    look: "matcha",
+    icon: "leaf",
+    lat: 1.2836279,
+    lng: 103.8340352,
   },
   {
     slug: "hua-bee",
@@ -388,6 +445,10 @@ const TIONG_BAHRU_CAFES: Cafe[] = [
       "Marble tables and blue tiles, trading since the 1940s. After dark the space becomes a bar run by a different team.",
     who: ["solo", "family"],
     craves: ["oldschool", "coffee"],
+    look: "oldschool",
+    icon: "soup",
+    lat: 1.2836784,
+    lng: 103.8303966,
   },
 ];
 
@@ -445,13 +506,22 @@ export const CAFE_AREAS: CafeArea[] = [
         text: "A bakery founded in 1988, with a S$4.50 traditional toast set and chicken curry with bread. Near Havelock MRT.",
         address: "249 Outram Rd, Singapore 169048",
         hoursText: "Daily 7.30am–7.30pm",
+        lat: 1.2847407,
+        lng: 103.8349713,
       },
       {
         name: "Cloudfields",
         text: "Level 2 cafe with rendang pasta and a warm date-night feel. Its building was sold en bloc in 2026, so it may not stay long.",
         address: "313 Outram Rd, Level 2, Singapore 169073",
         hoursText: "Daily 10am–10pm",
+        lat: 1.2871692,
+        lng: 103.8346657,
       },
+    ],
+    landmarks: [
+      { name: "Tiong Bahru Market", kind: "market", lat: 1.2850771, lng: 103.8328072, href: "/hawker/tiong-bahru-market" },
+      { name: "Tiong Bahru MRT (EW17)", kind: "mrt", lat: 1.2860476, lng: 103.8270447 },
+      { name: "Havelock MRT (TE16)", kind: "mrt", lat: 1.2894942, lng: 103.8332802 },
     ],
     goodToKnow: [
       "Tiong Bahru MRT (East-West Line) is a 5 to 10 minute walk from most cafes. Havelock MRT (Thomson-East Coast Line) is closer to the Outram Road side.",

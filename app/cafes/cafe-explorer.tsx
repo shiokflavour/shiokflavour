@@ -10,6 +10,7 @@ import {
   type Cafe,
   type VibeTag,
 } from "@/app/lib/cafes";
+import { CafeTile } from "./cafe-icon";
 
 const STORAGE_KEY = "sf-cafe-shortlist";
 
@@ -161,12 +162,12 @@ export function CafeExplorer({ cafes, areaName }: { cafes: Cafe[]; areaName: str
               className="scroll-mt-28 rounded-2xl border border-white/10 bg-sf-surface/50 p-5 sm:p-6"
             >
               <div className="flex gap-4">
-                <div
-                  className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-sf-primary/10 text-2xl font-bold text-sf-primary sm:h-20 sm:w-20"
-                  aria-hidden
-                >
-                  {c.name.charAt(0)}
-                </div>
+                <CafeTile
+                  look={c.look}
+                  icon={c.icon}
+                  order={c.orderThis[0].replace(/\s*\(.*\)$/, "")}
+                  className="h-24 w-24 sm:h-28 sm:w-28"
+                />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-3">
                     <div>
