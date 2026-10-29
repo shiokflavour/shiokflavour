@@ -42,6 +42,10 @@ export type FeaturedHawker = {
     bestTime: string;
     hoursFaq?: string;
   };
+  /** Cafe guide for the same neighbourhood ("tapao then lepak"). */
+  cafeGuide?: { href: string; areaName: string; count: number };
+  /** Last meaningful content update (YYYY-MM-DD), used for the sitemap. */
+  updatedAt?: string;
 };
 
 export const FEATURED_HAWKERS: FeaturedHawker[] = [
@@ -1166,6 +1170,8 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   {
     id: 13,
     slug: "tiong-bahru-market",
+    cafeGuide: { href: "/cafes/tiong-bahru", areaName: "Tiong Bahru", count: 11 },
+    updatedAt: "2026-10-28",
     name: "Tiong Bahru Market",
     seoTitle:
       "Tiong Bahru Market: Opening Hours, Best Stalls & What to Eat",

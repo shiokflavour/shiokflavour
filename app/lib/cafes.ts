@@ -76,6 +76,8 @@ export type CafeArea = {
   strapline: string;
   intro: string[];
   lastChecked: string;
+  /** Last meaningful content update (YYYY-MM-DD), used for the sitemap. */
+  updatedAt: string;
   heroImage: string;
   heroAlt: string;
   quickPicks: { label: string; slug: string }[];
@@ -465,6 +467,7 @@ export const CAFE_AREAS: CafeArea[] = [
       "Here a S$1.10 kopi and an S$8.50 latte share the same few streets. Every cafe below was checked in October 2026, so no closed favourites.",
     ],
     lastChecked: "October 2026",
+    updatedAt: "2026-10-28",
     heroImage: "/images/trails/tiong-bahru/hero.jpg",
     heroAlt: "Tiong Bahru Market, at the heart of the estate",
     quickPicks: [

@@ -598,6 +598,30 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                 </section>
               ) : null}
 
+              {h.cafeGuide ? (
+                <section
+                  aria-labelledby="lepak-heading"
+                  className="rounded-2xl border border-sf-primary/30 bg-sf-primary/[0.06] p-6 sm:p-8"
+                >
+                  <h2
+                    id="lepak-heading"
+                    className="text-[15px] font-bold uppercase tracking-[0.2em] text-sf-primary"
+                  >
+                    Done eating? Go lepak
+                  </h2>
+                  <p className="mt-3 text-base leading-relaxed text-sf-cream/90">
+                    {h.cafeGuide.areaName}&apos;s best cafes are a few minutes&apos; walk from {h.name}. Our cafe guide
+                    covers {h.cafeGuide.count} of them, with what&apos;s open now, what to order and a map to find them.
+                  </p>
+                  <Link
+                    href={h.cafeGuide.href}
+                    className="mt-5 inline-block rounded-full bg-sf-primary px-5 py-2.5 text-sm font-semibold text-white"
+                  >
+                    {h.cafeGuide.areaName} cafe guide →
+                  </Link>
+                </section>
+              ) : null}
+
               <FaqSection
                 faqs={buildHawkerFaqs(h)}
                 title={`${h.name}: questions people ask`}

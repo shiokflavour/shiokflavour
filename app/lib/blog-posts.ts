@@ -8,6 +8,8 @@ export type BlogPost = {
   category: "Guide" | "Story" | "Ranking" | "Culture" | "Hawker Deep Dive";
   readTime: string;
   publishedAt: string;
+  /** Last meaningful content update (YYYY-MM-DD), used for the sitemap. */
+  updatedAt?: string;
   heroImage: string;
   excerpt: string;
   content: string;
@@ -1066,6 +1068,7 @@ That is not nothing. That is the whole point.`,
   },
   {
     slug: "little-india-food-guide-singapore",
+    updatedAt: "2026-10-26",
     title: "Little India Singapore Food Guide: What to Eat and Where",
     seoTitle: "Little India Singapore Food: What to Eat & Where (2026)",
     seoDescription: "What to eat in Little India Singapore: Tekka Centre biryani and prata, Michelin Bib Gourmand naan, fish head curry, thosai, Indian sweets and teh tarik.",
