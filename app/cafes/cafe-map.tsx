@@ -12,7 +12,7 @@ declare global {
 
 const LEAFLET_VERSION = "1.9.4";
 
-function loadLeaflet(): Promise<any> {
+export function loadLeaflet(): Promise<any> {
   if (window.L) return Promise.resolve(window.L);
   return new Promise((resolve, reject) => {
     if (!document.getElementById("leaflet-css")) {
@@ -33,13 +33,13 @@ function loadLeaflet(): Promise<any> {
   });
 }
 
-const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+export const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
-function directionsUrl(lat: number, lng: number) {
+export function directionsUrl(lat: number, lng: number) {
   return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=walking`;
 }
 
-function pinHtml(color: string, label?: string) {
+export function pinHtml(color: string, label?: string) {
   return `<span style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:9999px;background:${color};border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5);color:#fff;font:700 9px/1 system-ui">${label ?? ""}</span>`;
 }
 

@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
+import { headingId } from "@/app/lib/bay-guide";
+import { ArticleWidget, OrderTiles } from "@/app/blog/widgets";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -75,7 +77,11 @@ function renderArticleBody(markdown: string) {
     const t = block.trim();
     if (t.startsWith("### ")) {
       return (
-        <h3 key={i} className="mt-10 mb-4 text-xl font-bold text-white sm:text-2xl">
+        <h3
+          key={i}
+          id={headingId(t.replace(/^### /, ""))}
+          className="mt-10 mb-4 scroll-mt-32 text-xl font-bold text-white sm:text-2xl"
+        >
           {t.replace(/^### /, "")}
         </h3>
       );
@@ -91,7 +97,10 @@ function renderArticleBody(markdown: string) {
           <div className="mb-1 flex items-center gap-3">
             <div className="h-px flex-1 bg-sf-primary/30" />
           </div>
-          <h2 className="border-b border-white/10 pb-3 text-3xl font-bold text-white sm:text-4xl">
+          <h2
+            id={headingId(title)}
+            className="scroll-mt-32 border-b border-white/10 pb-3 text-3xl font-bold text-white sm:text-4xl"
+          >
             {title}
           </h2>
         </div>
@@ -159,6 +168,28 @@ function renderArticleBody(markdown: string) {
           </figure>
         );
       }
+    }
+    const widgetMatch = t.match(/^\[WIDGET:\s*([a-z0-9-]+)\s*\]$/);
+    if (widgetMatch) {
+      return <ArticleWidget key={i} id={widgetMatch[1]} />;
+    }
+    const orderMatch = t.match(/^\[ORDER:\s*([a-z0-9-]+)\s*\]$/);
+    if (orderMatch) {
+      return <OrderTiles key={i} slug={orderMatch[1]} />;
+    }
+    const noteMatch = t.match(/^\[NOTE:\s*([^|\]]+?)\s*\|\s*([\s\S]+?)\s*\]$/);
+    if (noteMatch) {
+      return (
+        <aside key={i} className="my-8 rounded-2xl bg-white/[0.03] px-6 py-5 ring-1 ring-white/10">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-8 bg-sf-primary" aria-hidden />
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">{noteMatch[1]}</p>
+          </div>
+          <p className="mt-3 text-base leading-relaxed text-sf-cream/90 sm:text-lg">
+            {renderInline(noteMatch[2].replace(/\n/g, " "))}
+          </p>
+        </aside>
+      );
     }
     const tourMatch = t.match(/^\[TOUR:\s*([a-z0-9-]+)\s*(?:\|\s*(.+?))?\s*\]$/);
     if (tourMatch) {
@@ -354,7 +385,7 @@ export default async function BlogArticlePage({ params }: Props) {
           <p className="mb-8 text-lg leading-relaxed text-sf-muted sm:text-xl">
             {post.subtitle}
           </p>
-          <div className="mb-10 flex items-center gap-4 text-sm text-sf-muted">
+          <div className="mb-10 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-sf-muted">
             <span>{post.readTime}</span>
             <span>·</span>
             <span>
@@ -364,6 +395,19 @@ export default async function BlogArticlePage({ params }: Props) {
                 year: "numeric",
               })}
             </span>
+            {post.updatedAt && post.updatedAt !== post.publishedAt ? (
+              <>
+                <span>·</span>
+                <span className="text-sf-cream/80">
+                  Checked and updated{" "}
+                  {new Date(post.updatedAt).toLocaleDateString("en-SG", {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </span>
+              </>
+            ) : null}
           </div>
         </div>
 
