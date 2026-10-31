@@ -12,6 +12,8 @@ import { directionsUrl, esc, loadLeaflet, pinHtml } from "@/app/cafes/cafe-map";
 type Now = { day: number; minutes: number };
 type Tone = "good" | "later" | "off";
 
+const fmt = (m: number) => (m >= 1440 ? "midnight" : formatTime(m));
+
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 /** Live status against our "good time to go" window. */
@@ -24,7 +26,7 @@ export function windowStatus(c: GuideCentre, now: Now): { label: string; tone: T
       : { label: `${c.allDayLabel} · ${c.live.offPrefix} ${formatTime(l.opensAt ?? 1140)}`, tone: "good" };
   }
   const st = openStatus(c.window, now.day, now.minutes);
-  if (st.open) return { label: `Good time now · until about ${formatTime(st.closesAt!)}`, tone: "good" };
+  if (st.open) return { label: `Good time now · until about ${fmt(st.closesAt!)}`, tone: "good" };
   if (st.opensAt !== undefined) return { label: `Better from ${formatTime(st.opensAt)}`, tone: "later" };
   for (let k = 1; k <= 7; k++) {
     const d = (now.day + k) % 7;
@@ -291,7 +293,7 @@ export function GuideMap({ guideId }: { guideId: string }) {
             g.centres.forEach((c, i) => {
               const st = windowStatus(c, now);
               const icon = L.divIcon({ className: "", html: pinHtml(c.color, String(i + 1)), iconSize: [22, 22], iconAnchor: [11, 11] });
-              L.marker([c.lat, c.lng], { icon, title: c.name, alt: c.name })
+              L.marker([c.lat, c.lng], { icon, title: c.name, alt: c.name, zIndexOffset: 1000 })
                 .addTo(map)
                 .bindPopup(
                   `<div style="min-width:190px"><strong style="font-size:14px">${esc(c.name)}</strong><br/><span style="font-size:12px;opacity:.85">${esc(st.label)}</span><br/><span style="font-size:12px">Order: ${esc(c.orders[0].dish)}</span><br/><span style="font-size:12px;opacity:.85">${esc(c.routes[g.from[0].id])}</span><div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap"><a href="#${headingId(c.heading)}" style="font-weight:700">What to order</a><a href="${directionsUrl(c.lat, c.lng)}" target="_blank" rel="noopener noreferrer" style="font-weight:700">Walking directions</a></div></div>`,
@@ -323,7 +325,7 @@ export function GuideMap({ guideId }: { guideId: string }) {
 
   return (
     <section aria-label={g.mapLabel} className="my-8">
-      <div className="relative overflow-hidden rounded-2xl border border-white/10">
+      <div className="relative isolate z-0 overflow-hidden rounded-2xl border border-white/10">
         <div ref={holder} className="sf-cafe-map h-[380px] w-full bg-[#2a2a2c] sm:h-[440px]" />
         {state !== "ready" ? (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center text-sm text-sf-muted">

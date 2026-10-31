@@ -57,7 +57,7 @@ const BAY_CENTRES: GuideCentre[] = [
         dish: "Mee soto and mee rebus",
         stall: "Warong Pak Sapari",
         unit: "#58",
-        note: "Michelin-recognised Malay stall. Long queues, and dishes sell out.",
+        note: "Malay classics with a loyal following. Long queues, and dishes sell out.",
         href: "/food-heritage/mee-rebus",
         icon: "soup",
       },

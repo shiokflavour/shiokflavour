@@ -169,7 +169,7 @@ export function CafeMap({ area }: { area: CafeArea }) {
         </button>
       </div>
       {locError ? <p className="mt-2 text-xs text-sf-muted">{locError}</p> : null}
-      <div className="relative mt-4 overflow-hidden rounded-2xl border border-white/10">
+      <div className="relative isolate z-0 mt-4 overflow-hidden rounded-2xl border border-white/10">
         <div ref={holder} className="sf-cafe-map h-[360px] w-full bg-[#2a2a2c] sm:h-[420px]" />
         {state !== "ready" ? (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center text-sm text-sf-muted">
