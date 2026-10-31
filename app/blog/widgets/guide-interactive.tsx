@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Footprints, MapPin, TrainFront } from "lucide-react";
+import { Bus, Footprints, MapPin, TrainFront } from "lucide-react";
 import { formatTime, openStatus, singaporeNow } from "@/app/lib/cafes";
-import { BAY_CENTRES, BAY_LANDMARKS, SATAY_STREET, headingId, type BayCentre } from "@/app/lib/bay-guide";
+import { headingId, type AreaGuide, type GuideCentre, type GuidePlan } from "@/app/lib/area-guide-types";
+import { getGuide } from "@/app/lib/area-guides";
 import { directionsUrl, esc, loadLeaflet, pinHtml } from "@/app/cafes/cafe-map";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -11,19 +12,21 @@ import { directionsUrl, esc, loadLeaflet, pinHtml } from "@/app/cafes/cafe-map";
 type Now = { day: number; minutes: number };
 type Tone = "good" | "later" | "off";
 
+const fmt = (m: number) => (m >= 1440 ? "midnight" : formatTime(m));
+
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const centre = (slug: string) => BAY_CENTRES.find((c) => c.slug === slug)!;
 
 /** Live status against our "good time to go" window. */
-export function windowStatus(c: BayCentre, now: Now): { label: string; tone: Tone } {
-  if (c.slug === "lau-pa-sat") {
-    const satay = openStatus(SATAY_STREET, now.day, now.minutes);
-    return satay.open
-      ? { label: "Open 24 hours · Satay Street is on", tone: "good" }
-      : { label: `Open 24 hours · satay from ${formatTime(satay.opensAt ?? 1140)}`, tone: "good" };
+export function windowStatus(c: GuideCentre, now: Now): { label: string; tone: Tone } {
+  if (c.allDayLabel) {
+    if (!c.live) return { label: c.allDayLabel, tone: "good" };
+    const l = openStatus(c.live.hours, now.day, now.minutes);
+    return l.open
+      ? { label: `${c.allDayLabel} · ${c.live.on}`, tone: "good" }
+      : { label: `${c.allDayLabel} · ${c.live.offPrefix} ${formatTime(l.opensAt ?? 1140)}`, tone: "good" };
   }
   const st = openStatus(c.window, now.day, now.minutes);
-  if (st.open) return { label: `Good time now · until about ${formatTime(st.closesAt!)}`, tone: "good" };
+  if (st.open) return { label: `Good time now · until about ${fmt(st.closesAt!)}`, tone: "good" };
   if (st.opensAt !== undefined) return { label: `Better from ${formatTime(st.opensAt)}`, tone: "later" };
   for (let k = 1; k <= 7; k++) {
     const d = (now.day + k) % 7;
@@ -42,7 +45,7 @@ const TONE: Record<Tone, string> = {
   off: "bg-white/5 text-sf-muted ring-white/10",
 };
 
-function StatusPill({ c, now }: { c: BayCentre; now: Now | null }) {
+function StatusPill({ c, now }: { c: GuideCentre; now: Now | null }) {
   if (!now) return <span className="inline-block h-6" aria-hidden />;
   const s = windowStatus(c, now);
   return (
@@ -76,107 +79,58 @@ function Kicker({ children }: { children: React.ReactNode }) {
 /* Where are you now?                                                  */
 /* ------------------------------------------------------------------ */
 
-type Spot = "mbs" | "gardens" | "show";
-type Step = { icon: "walk" | "train" | "pin"; text: string };
-type Plan = { pick: BayCentre; why: string; steps: Step[]; time: string; also?: { text: string; href: string } };
+const STEP_ICON = { walk: Footprints, train: TrainFront, bus: Bus, pin: MapPin };
 
-function planFor(spot: Spot, now: Now | null): Plan {
-  const lps = centre("lau-pa-sat");
-  const max = centre("maxwell");
-  if (spot === "mbs") {
-    return {
-      pick: lps,
-      why: "The nearest real hawker centre, under Victorian cast iron, and it never closes.",
-      steps: [
-        { icon: "walk", text: "Follow signs from The Shoppes (B2) to Bayfront station" },
-        { icon: "train", text: "Downtown Line, 1 stop towards Bukit Panjang, to Downtown (DT17)" },
-        { icon: "pin", text: "Exit A or E. Lau Pa Sat is a 5-minute walk" },
-      ],
-      time: "About 15 minutes door to door",
-      also: { text: "Lunchtime? Maxwell's chicken rice is 3 stops further.", href: `#${headingId(max.heading)}` },
-    };
-  }
-  if (spot === "gardens") {
-    const evening = now ? now.minutes >= 960 || now.minutes < 360 : false;
-    if (evening) {
-      return {
-        pick: lps,
-        why: "Maxwell's headline stalls wind down by evening. Lau Pa Sat is just getting started.",
-        steps: [
-          { icon: "walk", text: "Walk to Gardens by the Bay station (TE22) on the Marina Barrage side" },
-          { icon: "train", text: "Thomson-East Coast Line towards Woodlands North, to Shenton Way (TE19)" },
-          { icon: "pin", text: "Exit 3 (Park Street), then a short walk to Lau Pa Sat" },
-        ],
-        time: "About 20 minutes",
-        also: { text: "Staying for the light show? See the evening plan.", href: "#after-garden-rhapsody" },
-      };
-    }
-    return {
-      pick: max,
-      why: "One train, no change, and the station opens almost opposite Tian Tian's queue.",
-      steps: [
-        { icon: "walk", text: "Walk to Gardens by the Bay station (TE22) on the Marina Barrage side" },
-        { icon: "train", text: "Thomson-East Coast Line towards Woodlands North, to Maxwell (TE18)" },
-        { icon: "pin", text: "Maxwell Food Centre is right outside the exit" },
-      ],
-      time: "About 20 minutes",
-      also: { text: "Heading back after dark? Switch to Lau Pa Sat for satay.", href: `#${headingId(lps.heading)}` },
-    };
-  }
-  return {
-    pick: lps,
-    why: "When the Supertrees go dark, Boon Tat Street lights up. Satay Street runs late every night.",
-    steps: [
-      { icon: "walk", text: "Walk from Supertree Grove across the bridge to Bayfront station, about 10 minutes" },
-      { icon: "train", text: "Downtown Line, 1 stop to Downtown (DT17)" },
-      { icon: "pin", text: "Exit A or E, then follow the smoke to Satay Street" },
-    ],
-    time: "Eating by about 8.25pm after the 7.45pm show",
-    also: { text: "See the evening, minute by minute.", href: "#after-garden-rhapsody" },
-  };
+function choosePlan(plans: AreaGuide["picker"]["spots"][number]["plans"], now: Now | null): GuidePlan {
+  if (!now) return plans[0].plan;
+  const hit = plans.find((p) => p.from === undefined || (now.minutes >= p.from && now.minutes < (p.to ?? 1440)));
+  return (hit ?? plans[plans.length - 1]).plan;
 }
 
-const STEP_ICON = { walk: Footprints, train: TrainFront, pin: MapPin };
-
-export function BayPicker() {
+export function GuidePicker({ guideId }: { guideId: string }) {
+  const g = getGuide(guideId)!;
   const now = useSgNow();
-  const [spot, setSpot] = useState<Spot>("mbs");
+  const [spot, setSpot] = useState(g.picker.spots[0].id);
   const [touched, setTouched] = useState(false);
 
   useEffect(() => {
-    if (!now || touched) return;
-    if (now.minutes >= 1170 && now.minutes < 1380) setSpot("show");
-  }, [now, touched]);
+    const a = g.picker.auto;
+    if (!now || touched || !a) return;
+    if (now.minutes >= a.from && now.minutes < a.to) setSpot(a.spot);
+  }, [now, touched, g]);
 
-  const plan = planFor(spot, now);
-  const tabs: [Spot, string][] = [
-    ["mbs", "At Marina Bay Sands"],
-    ["gardens", "At Gardens by the Bay"],
-    ["show", "After the light show"],
-  ];
+  const current = g.picker.spots.find((s) => s.id === spot) ?? g.picker.spots[0];
+  const plan = choosePlan(current.plans, now);
+  const pick = g.centres.find((c) => c.slug === plan.pick)!;
+  const headingDomId = `${g.id}-picker-heading`;
 
   return (
-    <section aria-labelledby="bay-picker-heading" className="my-10 rounded-2xl border border-white/10 bg-[#1a1a1a] p-5 sm:p-7">
-      <Kicker>Hungry right now?</Kicker>
-      <h2 id="bay-picker-heading" className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-        Where are you standing?
+    <section aria-labelledby={headingDomId} className="my-10 rounded-2xl border border-white/10 bg-[#1a1a1a] p-5 sm:p-7">
+      <Kicker>{g.picker.kicker}</Kicker>
+      <h2 id={headingDomId} className="mt-3 text-2xl font-bold text-white sm:text-3xl">
+        {g.picker.question}
       </h2>
-      <div role="tablist" aria-label="Where are you now" className="mt-5 grid grid-cols-3 gap-1 rounded-xl bg-black/30 p-1">
-        {tabs.map(([id, label]) => (
+      <div
+        role="tablist"
+        aria-label="Where are you now"
+        className="mt-5 grid gap-1 rounded-xl bg-black/30 p-1"
+        style={{ gridTemplateColumns: `repeat(${g.picker.spots.length}, minmax(0, 1fr))` }}
+      >
+        {g.picker.spots.map((s) => (
           <button
-            key={id}
+            key={s.id}
             role="tab"
             type="button"
-            aria-selected={spot === id}
+            aria-selected={spot === s.id}
             onClick={() => {
-              setSpot(id);
+              setSpot(s.id);
               setTouched(true);
             }}
             className={`rounded-lg px-2 py-2.5 text-xs font-semibold leading-tight transition-colors sm:text-sm ${
-              spot === id ? "bg-sf-primary text-white" : "text-sf-muted hover:text-white"
+              spot === s.id ? "bg-sf-primary text-white" : "text-sf-muted hover:text-white"
             }`}
           >
-            {label}
+            {s.label}
           </button>
         ))}
       </div>
@@ -184,10 +138,10 @@ export function BayPicker() {
       <div role="tabpanel" className="mt-6">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sf-muted">Go to</p>
         <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2">
-          <p className="text-3xl font-bold" style={{ color: plan.pick.color }}>
-            {plan.pick.name}
+          <p className="text-3xl font-bold" style={{ color: pick.color }}>
+            {pick.name}
           </p>
-          <StatusPill c={plan.pick} now={now} />
+          <StatusPill c={pick} now={now} />
         </div>
         <p className="mt-2 text-base leading-relaxed text-sf-cream/90">{plan.why}</p>
 
@@ -208,13 +162,13 @@ export function BayPicker() {
 
         <div className="mt-5 flex flex-wrap gap-3">
           <a
-            href={`#${headingId(plan.pick.heading)}`}
+            href={`#${headingId(pick.heading)}`}
             className="rounded-xl bg-sf-primary px-4 py-2.5 text-sm font-semibold text-white hover:bg-sf-primary/90"
           >
             What to order there
           </a>
           <a
-            href={`https://www.google.com/maps/dir/?api=1&destination=${plan.pick.lat},${plan.pick.lng}&travelmode=transit`}
+            href={`https://www.google.com/maps/dir/?api=1&destination=${pick.lat},${pick.lng}&travelmode=transit`}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-sf-cream hover:border-sf-primary hover:text-sf-primary"
@@ -236,11 +190,12 @@ export function BayPicker() {
 /* At a glance                                                         */
 /* ------------------------------------------------------------------ */
 
-export function BayTable() {
+export function GuideTable({ guideId }: { guideId: string }) {
+  const g = getGuide(guideId)!;
   const now = useSgNow();
-  const [from, setFrom] = useState<"mbs" | "gardens">("mbs");
+  const [from, setFrom] = useState(g.from[0].id);
   return (
-    <section aria-label="The six hawker centres at a glance" className="my-8">
+    <section aria-label={`The ${g.centres.length} hawker centres at a glance`} className="my-8">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-sf-muted">
           {now ? (
@@ -251,28 +206,25 @@ export function BayTable() {
             "Checking the time in Singapore."
           )}
         </p>
-        <div className="flex gap-1 rounded-full bg-black/30 p-1 text-xs font-semibold">
-          {(
-            [
-              ["mbs", "From MBS"],
-              ["gardens", "From the Gardens"],
-            ] as const
-          ).map(([id, label]) => (
-            <button
-              key={id}
-              type="button"
-              aria-pressed={from === id}
-              onClick={() => setFrom(id)}
-              className={`rounded-full px-3 py-1.5 ${from === id ? "bg-sf-primary text-white" : "text-sf-muted hover:text-white"}`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+        {g.from.length > 1 ? (
+          <div className="flex gap-1 rounded-full bg-black/30 p-1 text-xs font-semibold">
+            {g.from.map((f) => (
+              <button
+                key={f.id}
+                type="button"
+                aria-pressed={from === f.id}
+                onClick={() => setFrom(f.id)}
+                className={`rounded-full px-3 py-1.5 ${from === f.id ? "bg-sf-primary text-white" : "text-sf-muted hover:text-white"}`}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+        ) : null}
       </div>
 
       <ul className="mt-4 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-[#1a1a1a]">
-        {BAY_CENTRES.map((c, i) => (
+        {g.centres.map((c, i) => (
           <li key={c.slug} className="grid gap-x-5 gap-y-2 p-4 sm:grid-cols-[1.3fr_1.4fr_1fr] sm:items-center">
             <div className="flex items-start gap-3">
               <span
@@ -292,7 +244,7 @@ export function BayTable() {
             <div className="pl-10 text-sm text-sf-cream/90 sm:pl-0">
               <span className="flex items-start gap-2">
                 <TrainFront className="mt-0.5 h-4 w-4 shrink-0 text-sf-muted" strokeWidth={2} />
-                {from === "mbs" ? c.fromBayfront : c.fromGardens}
+                {c.routes[from]}
               </span>
               <p className="mt-1 text-xs text-sf-muted">{c.closures}</p>
             </div>
@@ -313,7 +265,8 @@ export function BayTable() {
 /* Map                                                                 */
 /* ------------------------------------------------------------------ */
 
-export function BayMap() {
+export function GuideMap({ guideId }: { guideId: string }) {
+  const g = getGuide(guideId)!;
   const holder = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
   const [state, setState] = useState<"idle" | "loading" | "ready" | "error">("idle");
@@ -337,17 +290,17 @@ export function BayMap() {
             }).addTo(map);
             const now = singaporeNow();
             const pts: [number, number][] = [];
-            BAY_CENTRES.forEach((c, i) => {
+            g.centres.forEach((c, i) => {
               const st = windowStatus(c, now);
               const icon = L.divIcon({ className: "", html: pinHtml(c.color, String(i + 1)), iconSize: [22, 22], iconAnchor: [11, 11] });
-              L.marker([c.lat, c.lng], { icon, title: c.name, alt: c.name })
+              L.marker([c.lat, c.lng], { icon, title: c.name, alt: c.name, zIndexOffset: 1000 })
                 .addTo(map)
                 .bindPopup(
-                  `<div style="min-width:190px"><strong style="font-size:14px">${esc(c.name)}</strong><br/><span style="font-size:12px;opacity:.85">${esc(st.label)}</span><br/><span style="font-size:12px">Order: ${esc(c.orders[0].dish)}</span><br/><span style="font-size:12px;opacity:.85">${esc(c.fromBayfront)}</span><div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap"><a href="#${headingId(c.heading)}" style="font-weight:700">What to order</a><a href="${directionsUrl(c.lat, c.lng)}" target="_blank" rel="noopener noreferrer" style="font-weight:700">Walking directions</a></div></div>`,
+                  `<div style="min-width:190px"><strong style="font-size:14px">${esc(c.name)}</strong><br/><span style="font-size:12px;opacity:.85">${esc(st.label)}</span><br/><span style="font-size:12px">Order: ${esc(c.orders[0].dish)}</span><br/><span style="font-size:12px;opacity:.85">${esc(c.routes[g.from[0].id])}</span><div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap"><a href="#${headingId(c.heading)}" style="font-weight:700">What to order</a><a href="${directionsUrl(c.lat, c.lng)}" target="_blank" rel="noopener noreferrer" style="font-weight:700">Walking directions</a></div></div>`,
                 );
               pts.push([c.lat, c.lng]);
             });
-            for (const lm of BAY_LANDMARKS) {
+            for (const lm of g.landmarks) {
               const icon = L.divIcon({
                 className: "",
                 html: pinHtml(lm.kind === "mrt" ? "#2b6cb0" : "#1f7a5a", lm.kind === "mrt" ? "M" : "★"),
@@ -368,11 +321,11 @@ export function BayMap() {
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [g]);
 
   return (
-    <section aria-label="Map of hawker centres near Marina Bay" className="my-8">
-      <div className="relative overflow-hidden rounded-2xl border border-white/10">
+    <section aria-label={g.mapLabel} className="my-8">
+      <div className="relative isolate z-0 overflow-hidden rounded-2xl border border-white/10">
         <div ref={holder} className="sf-cafe-map h-[380px] w-full bg-[#2a2a2c] sm:h-[440px]" />
         {state !== "ready" ? (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center text-sm text-sf-muted">
@@ -381,7 +334,7 @@ export function BayMap() {
         ) : null}
       </div>
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-sf-muted">
-        {BAY_CENTRES.map((c, i) => (
+        {g.centres.map((c, i) => (
           <li key={c.slug} className="flex items-center gap-1.5">
             <span
               className="flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold text-white"
@@ -399,7 +352,7 @@ export function BayMap() {
         </li>
         <li className="flex items-center gap-1.5">
           <span className="h-3 w-3 rounded-full bg-[#1f7a5a]" aria-hidden />
-          MBS and the Supertrees
+          {g.landmarkLegend}
         </li>
       </ul>
       <style>{`.sf-cafe-map .leaflet-popup-content-wrapper,.sf-cafe-map .leaflet-popup-tip{background:#1f1f21;color:#f5f0e8}.sf-cafe-map .leaflet-popup-content a{color:#e8622a}.sf-cafe-map.leaflet-container{font:inherit}`}</style>
@@ -411,20 +364,13 @@ export function BayMap() {
 /* Sticky section menu                                                 */
 /* ------------------------------------------------------------------ */
 
-const NAV: [string, string][] = [
-  ["At a glance", "The Six Centres At A Glance"],
-  ["From the Gardens", "Coming From Gardens By The Bay"],
-  ...BAY_CENTRES.map((c): [string, string] => [c.short, c.heading]),
-  ["One meal only", "If You Only Have One Meal"],
-  ["Quick answers", "Quick Answers"],
-];
-
-export function BayNav() {
+export function GuideNav({ guideId }: { guideId: string }) {
+  const g = getGuide(guideId)!;
   const [active, setActive] = useState<string | null>(null);
   const bar = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const ids = NAV.map(([, h]) => headingId(h));
+    const ids = g.nav.map(([, h]) => headingId(h));
     const onScroll = () => {
       let current: string | null = null;
       for (const id of ids) {
@@ -436,7 +382,7 @@ export function BayNav() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [g]);
 
   useEffect(() => {
     if (!active || !bar.current) return;
@@ -447,7 +393,7 @@ export function BayNav() {
   return (
     <nav aria-label="Jump to a section" className="sticky top-16 z-30 -mx-4 my-8 border-y border-white/10 bg-[#111111]/95 px-4 py-2 backdrop-blur-sm sm:mx-0 sm:rounded-xl sm:border">
       <div ref={bar} className="flex gap-2 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
-        {NAV.map(([label, h]) => {
+        {g.nav.map(([label, h]) => {
           const id = headingId(h);
           return (
             <a
