@@ -4,54 +4,13 @@
  * stalls worth the trip are trading, not official opening hours.
  */
 import type { WeekHours } from "./cafes";
-
-export type DishIcon =
-  | "flame"
-  | "soup"
-  | "fish"
-  | "beef"
-  | "drumstick"
-  | "pot"
-  | "coffee"
-  | "puff"
-  | "noodles"
-  | "dumpling"
-  | "roll";
-
-export type BayOrder = {
-  dish: string;
-  stall: string;
-  unit: string;
-  note: string;
-  href?: string;
-  icon: DishIcon;
-};
-
-export type BayCentre = {
-  slug: string;
-  name: string;
-  short: string;
-  href: string;
-  /** Exact text of the article's h2 for this centre, used for jump links. */
-  heading: string;
-  color: string;
-  lat: number;
-  lng: number;
-  stops: number;
-  fromBayfront: string;
-  fromGardens: string;
-  bestFor: string;
-  closures: string;
-  window: WeekHours;
-  windowText: string;
-  orders: BayOrder[];
-};
+import type { AreaGuide, GuideCentre, GuideLandmark } from "./area-guide-types";
 
 const DAILY = (o: number, c: number): WeekHours => Array.from({ length: 7 }, () => [[o, c]]);
 const WEEKDAYS = (o: number, c: number): WeekHours => [null, [[o, c]], [[o, c]], [[o, c]], [[o, c]], [[o, c]], null];
 
 /** Satay Street, Boon Tat Street: 7pm to 3am weekdays, from 3pm at weekends. */
-export const SATAY_STREET: WeekHours = [
+const SATAY_STREET: WeekHours = [
   [[0, 180], [900, 1440]], // Sun
   [[0, 180], [1140, 1440]], // Mon
   [[0, 180], [1140, 1440]],
@@ -61,7 +20,7 @@ export const SATAY_STREET: WeekHours = [
   [[0, 180], [900, 1440]], // Sat
 ];
 
-export const BAY_CENTRES: BayCentre[] = [
+const BAY_CENTRES: GuideCentre[] = [
   {
     slug: "lau-pa-sat",
     name: "Lau Pa Sat",
@@ -71,13 +30,12 @@ export const BAY_CENTRES: BayCentre[] = [
     color: "#E8622A",
     lat: 1.2803,
     lng: 103.8503,
-    stops: 1,
-    fromBayfront: "1 stop to Downtown (DT17), Exit A or E",
-    fromGardens: "TEL to Shenton Way (TE19), Exit 3",
+    routes: { mbs: "1 stop to Downtown (DT17), Exit A or E", gardens: "TEL to Shenton Way (TE19), Exit 3" },
     bestFor: "Dinner and late nights",
     closures: "Never. The hall is open 24 hours",
     window: DAILY(0, 1440),
-    windowText: "Open 24 hours. Satay Street from 7pm (3pm at weekends)",
+    allDayLabel: "Open 24 hours",
+    live: { hours: SATAY_STREET, on: "Satay Street is on", offPrefix: "satay from" },
     orders: [
       {
         dish: "Satay",
@@ -114,13 +72,10 @@ export const BAY_CENTRES: BayCentre[] = [
     color: "#9B8CF0",
     lat: 1.284076,
     lng: 103.850105,
-    stops: 1,
-    fromBayfront: "1 stop to Downtown (DT17), then 10 min walk",
-    fromGardens: "TEL to Shenton Way (TE19), then walk",
+    routes: { mbs: "1 stop to Downtown (DT17), then 10 min walk", gardens: "TEL to Shenton Way (TE19), then walk" },
     bestFor: "A weekday CBD lunch",
     closures: "Most stalls Monday to Friday only",
     window: WEEKDAYS(420, 900),
-    windowText: "Weekdays 7am to 3pm. A few stalls on Saturday morning",
     orders: [
       {
         dish: "Wanton mee",
@@ -156,13 +111,10 @@ export const BAY_CENTRES: BayCentre[] = [
     color: "#3CB98A",
     lat: 1.279129,
     lng: 103.846985,
-    stops: 2,
-    fromBayfront: "2 stops to Telok Ayer (DT18), Exit A",
-    fromGardens: "TEL to Maxwell (TE18), then walk",
+    routes: { mbs: "2 stops to Telok Ayer (DT18), Exit A", gardens: "TEL to Maxwell (TE18), then walk" },
     bestFor: "Michelin stalls on a weekday",
     closures: "Star stalls closed at weekends",
     window: [[[540, 870]], [[480, 870]], [[480, 870]], [[480, 870]], [[480, 870]], [[480, 870]], [[540, 870]]],
-    windowText: "Weekdays 8am to 2.30pm. Weekends quieter, star stalls shut",
     orders: [
       {
         dish: "Singapore-style ramen",
@@ -197,13 +149,10 @@ export const BAY_CENTRES: BayCentre[] = [
     color: "#E9A23B",
     lat: 1.280551,
     lng: 103.844459,
-    stops: 3,
-    fromBayfront: "3 stops to Chinatown (DT19), then walk",
-    fromGardens: "TEL direct to Maxwell (TE18), no change",
+    routes: { mbs: "3 stops to Chinatown (DT19), then walk", gardens: "TEL direct to Maxwell (TE18), no change" },
     bestFor: "Chicken rice at lunch",
     closures: "Tian Tian closed Mondays",
     window: DAILY(600, 1110),
-    windowText: "Daily 10am to early evening. Headline stalls done by night",
     orders: [
       {
         dish: "Hainanese chicken rice",
@@ -239,13 +188,10 @@ export const BAY_CENTRES: BayCentre[] = [
     color: "#EC6F9E",
     lat: 1.2823,
     lng: 103.84288,
-    stops: 3,
-    fromBayfront: "3 stops to Chinatown (DT19)",
-    fromGardens: "TEL to Maxwell (TE18), then walk",
+    routes: { mbs: "3 stops to Chinatown (DT19)", gardens: "TEL to Maxwell (TE18), then walk" },
     bestFor: "An early dinner",
     closures: "Claypot stall closed Mon and Thu",
     window: DAILY(480, 1260),
-    windowText: "Daily. Liveliest 5pm to 8pm, claypot from 3pm",
     orders: [
       {
         dish: "Claypot rice",
@@ -280,13 +226,10 @@ export const BAY_CENTRES: BayCentre[] = [
     color: "#8CC152",
     lat: 1.28447,
     lng: 103.845863,
-    stops: 3,
-    fromBayfront: "3 stops to Chinatown (DT19), then walk",
-    fromGardens: "TEL to Maxwell (TE18), then walk",
+    routes: { mbs: "3 stops to Chinatown (DT19), then walk", gardens: "TEL to Maxwell (TE18), then walk" },
     bestFor: "Breakfast with the locals",
     closures: "Many stalls rest on Sundays",
     window: [null, [[420, 900]], [[420, 900]], [[420, 900]], [[420, 900]], [[420, 900]], [[420, 900]]],
-    windowText: "Mornings to mid-afternoon. Many stalls rest on Sundays",
     orders: [
       {
         dish: "Char kway teow",
@@ -315,15 +258,7 @@ export const BAY_CENTRES: BayCentre[] = [
   },
 ];
 
-export type BayLandmark = {
-  name: string;
-  kind: "mrt" | "sight";
-  lat: number;
-  lng: number;
-  note?: string;
-};
-
-export const BAY_LANDMARKS: BayLandmark[] = [
+const BAY_LANDMARKS: GuideLandmark[] = [
   { name: "Bayfront MRT (DT16 / CE1)", kind: "mrt", lat: 1.2819, lng: 103.859, note: "Connects underground to The Shoppes" },
   { name: "Gardens by the Bay MRT (TE22)", kind: "mrt", lat: 1.2789, lng: 103.8686 },
   { name: "Downtown MRT (DT17)", kind: "mrt", lat: 1.2796, lng: 103.8528 },
@@ -334,7 +269,7 @@ export const BAY_LANDMARKS: BayLandmark[] = [
   { name: "Supertree Grove", kind: "sight", lat: 1.2816, lng: 103.8639, note: "Garden Rhapsody, 7.45pm and 8.45pm" },
 ];
 
-export const BAY_FAQS: { q: string; a: string }[] = [
+const BAY_FAQS: { q: string; a: string }[] = [
   {
     q: "Is there a hawker centre at Gardens by the Bay?",
     a: "Not any more. Satay by the Bay, the hawker-style food centre inside the Gardens, closed on 1 October 2026 for the Wetlands by the Bay development. The nearest hawker centre is now Lau Pa Sat, reached via Bayfront and one Downtown Line stop, or via Shenton Way on the Thomson-East Coast Line.",
@@ -357,11 +292,126 @@ export const BAY_FAQS: { q: string; a: string }[] = [
   },
 ];
 
-/** Same rule as the article's h2 ids. */
-export function headingId(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
+
+const LPS_ID = "lau-pa-sat-the-closest-and-open-around-the-clock";
+const MAXWELL_ID = "maxwell-food-centre-the-chicken-rice-pilgrimage";
+
+export const BAY_GUIDE: AreaGuide = {
+  id: "bay",
+  mapLabel: "Map of hawker centres near Marina Bay",
+  from: [
+    { id: "mbs", label: "From MBS" },
+    { id: "gardens", label: "From the Gardens" },
+  ],
+  centres: BAY_CENTRES,
+  landmarks: BAY_LANDMARKS,
+  landmarkLegend: "MBS and the Supertrees",
+  faqs: BAY_FAQS,
+  nav: [
+    ["At a glance", "The Six Centres At A Glance"],
+    ["From the Gardens", "Coming From Gardens By The Bay"],
+    ...BAY_CENTRES.map((c): [string, string] => [c.short, c.heading]),
+    ["One meal only", "If You Only Have One Meal"],
+    ["Quick answers", "Quick Answers"],
+  ],
+  picker: {
+    kicker: "Hungry right now?",
+    question: "Where are you standing?",
+    auto: { from: 1170, to: 1380, spot: "show" },
+    spots: [
+      {
+        id: "mbs",
+        label: "At Marina Bay Sands",
+        plans: [
+          {
+            plan: {
+              pick: "lau-pa-sat",
+              why: "The nearest real hawker centre, under Victorian cast iron, and it never closes.",
+              steps: [
+                { icon: "walk", text: "Follow signs from The Shoppes (B2) to Bayfront station" },
+                { icon: "train", text: "Downtown Line, 1 stop towards Bukit Panjang, to Downtown (DT17)" },
+                { icon: "pin", text: "Exit A or E. Lau Pa Sat is a 5-minute walk" },
+              ],
+              time: "About 15 minutes door to door",
+              also: { text: "Lunchtime? Maxwell's chicken rice is 3 stops further.", href: `#${MAXWELL_ID}` },
+            },
+          },
+        ],
+      },
+      {
+        id: "gardens",
+        label: "At Gardens by the Bay",
+        plans: [
+          {
+            from: 360,
+            to: 960,
+            plan: {
+              pick: "maxwell",
+              why: "One train, no change, and the station opens almost opposite Tian Tian's queue.",
+              steps: [
+                { icon: "walk", text: "Walk to Gardens by the Bay station (TE22) on the Marina Barrage side" },
+                { icon: "train", text: "Thomson-East Coast Line towards Woodlands North, to Maxwell (TE18)" },
+                { icon: "pin", text: "Maxwell Food Centre is right outside the exit" },
+              ],
+              time: "About 20 minutes",
+              also: { text: "Heading back after dark? Switch to Lau Pa Sat for satay.", href: `#${LPS_ID}` },
+            },
+          },
+          {
+            plan: {
+              pick: "lau-pa-sat",
+              why: "Maxwell's headline stalls wind down by evening. Lau Pa Sat is just getting started.",
+              steps: [
+                { icon: "walk", text: "Walk to Gardens by the Bay station (TE22) on the Marina Barrage side" },
+                { icon: "train", text: "Thomson-East Coast Line towards Woodlands North, to Shenton Way (TE19)" },
+                { icon: "pin", text: "Exit 3 (Park Street), then a short walk to Lau Pa Sat" },
+              ],
+              time: "About 20 minutes",
+              also: { text: "Staying for the light show? See the evening plan.", href: "#after-garden-rhapsody" },
+            },
+          },
+        ],
+      },
+      {
+        id: "show",
+        label: "After the light show",
+        plans: [
+          {
+            plan: {
+              pick: "lau-pa-sat",
+              why: "When the Supertrees go dark, Boon Tat Street lights up. Satay Street runs late every night.",
+              steps: [
+                { icon: "walk", text: "Walk from Supertree Grove across the bridge to Bayfront station, about 10 minutes" },
+                { icon: "train", text: "Downtown Line, 1 stop to Downtown (DT17)" },
+                { icon: "pin", text: "Exit A or E, then follow the smoke to Satay Street" },
+              ],
+              time: "Eating by about 8.25pm after the 7.45pm show",
+              also: { text: "See the evening, minute by minute.", href: "#after-garden-rhapsody" },
+            },
+          },
+        ],
+      },
+    ],
+  },
+  timeline: {
+    kicker: "An evening by the bay",
+    steps: [
+      { time: "7.45pm", title: "Garden Rhapsody", body: "Lie back under the Supertrees. The show runs about 15 minutes.", mins: 15 },
+      { time: "8.00pm", title: "Walk to Bayfront", body: "Across the bridge to Marina Bay Sands and down to the station.", mins: 10 },
+      { time: "8.10pm", title: "One stop on the Downtown Line", body: "Bayfront to Downtown. Two minutes on the train, a few more waiting.", mins: 6 },
+      { time: "8.20pm", title: "Exit A or E", body: "Follow the charcoal smoke to Boon Tat Street.", mins: 5 },
+      { time: "8.25pm", title: "Satay Street", body: "Chope a table, order a mix of sticks, find a cold drink inside the hall.", mins: 0 },
+    ],
+    footer: "Catching the 8.45pm show instead? Add an hour. Satay Street runs until 3am on weeknights, so there is no rush.",
+  },
+  prices: {
+    kicker: "What a main costs",
+    max: 16,
+    rows: [
+      { label: "A plate at a hawker centre", range: "S$4 to S$7", lo: 4, hi: 7, color: "#E8622A" },
+      { label: "A plate at Rasapura Masters, MBS", range: "S$10 to S$15", lo: 10, hi: 15, color: "#8a8a8e" },
+    ],
+    caption:
+      "Roughly double, for air conditioning and an address. The train fare to the real thing costs less than the difference.",
+  },
+};

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Beef, Coffee, CookingPot, Croissant, Drumstick, Fish, Flame, Salad, Shell, Soup, UtensilsCrossed } from "lucide-react";
-import { BAY_CENTRES, BAY_FAQS, type DishIcon } from "@/app/lib/bay-guide";
+import { Wheat } from "lucide-react";
+import { AREA_GUIDES, getGuide } from "@/app/lib/area-guides";
+import type { DishIcon } from "@/app/lib/area-guide-types";
 
 const ICONS = {
   flame: Flame,
@@ -14,11 +16,15 @@ const ICONS = {
   noodles: UtensilsCrossed,
   dumpling: Shell,
   roll: Salad,
+  rice: Wheat,
+  shell: Shell,
 } satisfies Record<DishIcon, unknown>;
 
 /** Photo-free "order this" tiles for one centre. */
 export function OrderTiles({ slug }: { slug: string }) {
-  const c = BAY_CENTRES.find((x) => x.slug === slug);
+  const c = Object.values(AREA_GUIDES)
+    .flatMap((g) => g.centres)
+    .find((x) => x.slug === slug);
   if (!c) return null;
   return (
     <div className="my-6">
@@ -66,20 +72,16 @@ export function OrderTiles({ slug }: { slug: string }) {
   );
 }
 
-/** The evening after Garden Rhapsody, minute by minute. */
-export function BayEvening() {
-  const steps = [
-    { time: "7.45pm", title: "Garden Rhapsody", body: "Lie back under the Supertrees. The show runs about 15 minutes.", mins: 15 },
-    { time: "8.00pm", title: "Walk to Bayfront", body: "Across the bridge to Marina Bay Sands and down to the station.", mins: 10 },
-    { time: "8.10pm", title: "One stop on the Downtown Line", body: "Bayfront to Downtown. Two minutes on the train, a few more waiting.", mins: 6 },
-    { time: "8.20pm", title: "Exit A or E", body: "Follow the charcoal smoke to Boon Tat Street.", mins: 5 },
-    { time: "8.25pm", title: "Satay Street", body: "Chope a table, order a mix of sticks, find a cold drink inside the hall.", mins: 0 },
-  ];
+/** A minute-by-minute plan, drawn as a vertical timeline. */
+export function GuideTimeline({ guideId }: { guideId: string }) {
+  const t = getGuide(guideId)?.timeline;
+  if (!t) return null;
+  const steps = t.steps;
   return (
     <div className="my-8 rounded-2xl border border-white/10 bg-[#1a1a1a] p-5 sm:p-7">
       <div className="flex items-center gap-3">
         <span className="h-px w-8 bg-sf-primary" aria-hidden />
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">An evening by the bay</p>
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">{t.kicker}</p>
       </div>
       <ol className="relative mt-6 space-y-6 border-l border-white/15 pl-6">
         {steps.map((s, i) => (
@@ -104,25 +106,20 @@ export function BayEvening() {
           </li>
         ))}
       </ol>
-      <p className="mt-6 border-t border-white/10 pt-4 text-sm leading-relaxed text-sf-cream/90">
-        Catching the 8.45pm show instead? Add an hour. Satay Street runs until 3am on weeknights, so there is no rush.
-      </p>
+      <p className="mt-6 border-t border-white/10 pt-4 text-sm leading-relaxed text-sf-cream/90">{t.footer}</p>
     </div>
   );
 }
 
-/** Hawker plate versus mall food court, drawn to scale. */
-export function PriceContrast() {
-  const rows = [
-    { label: "A plate at a hawker centre", range: "S$4 to S$7", lo: 4, hi: 7, color: "#E8622A" },
-    { label: "A plate at Rasapura Masters, MBS", range: "S$10 to S$15", lo: 10, hi: 15, color: "#8a8a8e" },
-  ];
-  const max = 16;
+/** Price ranges drawn to scale. */
+export function GuidePrices({ guideId }: { guideId: string }) {
+  const p = getGuide(guideId)?.prices;
+  if (!p) return null;
   return (
     <figure className="my-8 rounded-2xl border border-white/10 bg-[#1a1a1a] p-5 sm:p-6">
-      <figcaption className="text-xs font-bold uppercase tracking-[0.2em] text-sf-muted">What a main costs</figcaption>
+      <figcaption className="text-xs font-bold uppercase tracking-[0.2em] text-sf-muted">{p.kicker}</figcaption>
       <div className="mt-5 space-y-5">
-        {rows.map((r) => (
+        {p.rows.map((r) => (
           <div key={r.label}>
             <div className="flex items-baseline justify-between gap-3">
               <span className="text-sm text-sf-cream/90">{r.label}</span>
@@ -131,30 +128,29 @@ export function PriceContrast() {
             <div className="relative mt-2 h-3 rounded-full bg-white/5">
               <span
                 className="absolute inset-y-0 rounded-full"
-                style={{ left: `${(r.lo / max) * 100}%`, width: `${((r.hi - r.lo) / max) * 100}%`, backgroundColor: r.color }}
+                style={{ left: `${(r.lo / p.max) * 100}%`, width: `${((r.hi - r.lo) / p.max) * 100}%`, backgroundColor: r.color }}
                 aria-hidden
               />
             </div>
           </div>
         ))}
       </div>
-      <p className="mt-5 text-sm leading-relaxed text-sf-muted">
-        Roughly double, for air conditioning and an address. The train fare to the real thing costs less than the difference.
-      </p>
+      <p className="mt-5 text-sm leading-relaxed text-sf-muted">{p.caption}</p>
     </figure>
   );
 }
 
 /** Tap-to-open answers, with FAQPage structured data. */
-export function BayFaq() {
+export function GuideFaq({ guideId }: { guideId: string }) {
+  const faqs = getGuide(guideId)?.faqs ?? [];
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: BAY_FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   };
   return (
     <div className="my-6 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-[#1a1a1a]">
-      {BAY_FAQS.map((f) => (
+      {faqs.map((f) => (
         <details key={f.q} className="group">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-base font-semibold text-white hover:text-sf-primary [&::-webkit-details-marker]:hidden">
             {f.q}

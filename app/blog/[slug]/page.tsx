@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
-import { headingId } from "@/app/lib/bay-guide";
+import { headingId } from "@/app/lib/area-guide-types";
 import { ArticleWidget, OrderTiles } from "@/app/blog/widgets";
 
 type Props = { params: Promise<{ slug: string }> };
