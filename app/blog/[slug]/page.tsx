@@ -115,8 +115,8 @@ function renderArticleBody(markdown: string) {
         const imgSrc = match[2];
         const caption = match[3];
         const imageToSlug: Record<string, string> = {
-          "/images/food/chicken-rice.jpg": "hainanese-chicken-rice",
-          "/images/food/char-kway-teow.jpg": "char-kway-teow",
+          "/images/food/chicken-rice.png": "hainanese-chicken-rice",
+          "/images/food/char-kway-teow.png": "char-kway-teow",
           "/images/food/laksa.jpg": "laksa",
           "/images/food/roti-prata.jpg": "roti-prata",
           "/images/food/bak-kut-teh.jpg": "bak-kut-teh",
@@ -468,12 +468,12 @@ export default async function BlogArticlePage({ params }: Props) {
                     {
                       name: "Hainanese Chicken Rice",
                       slug: "hainanese-chicken-rice",
-                      img: "/images/food/chicken-rice.jpg",
+                      img: "/images/food/chicken-rice.png",
                     },
                     {
                       name: "Char Kway Teow",
                       slug: "char-kway-teow",
-                      img: "/images/food/char-kway-teow.jpg",
+                      img: "/images/food/char-kway-teow.png",
                     },
                     {
                       name: "Laksa",

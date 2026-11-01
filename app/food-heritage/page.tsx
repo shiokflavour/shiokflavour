@@ -24,7 +24,7 @@ const categories = [
   {
     name: "Singaporean Classics" satisfies CategoryName,
     slug: "singaporean-classics",
-    imageUrl: "/images/food/chicken-rice.jpg",
+    imageUrl: "/images/food/chicken-rice.png",
     moodLine: "No passport required. No explanation needed.",
     dishTeaser: "Chicken Rice · Char Kway Teow · Satay · Hokkien Mee · and 10 more",
   },

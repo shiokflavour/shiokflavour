@@ -2840,7 +2840,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       "Neighbourhood Gem",
     hours:
       "Hours vary by stall",
-    imageUrl: "/images/food/char-kway-teow.jpg",
+    imageUrl: "/images/food/char-kway-teow.png",
     description:
       "A quiet estate food centre above a wet market off Marymount Road, loved for Hakka kueh, char kway teow with otah and a muffin stall with a cult following.",
     mustTry: [
