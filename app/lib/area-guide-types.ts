@@ -108,6 +108,10 @@ export type AreaGuide = {
   timeline?: GuideTimeline;
   prices?: GuidePrices;
   mapLabel: string;
+  /** "window" (default): our suggested time to go. "hours": real opening hours. */
+  statusMode?: "window" | "hours";
+  /** Headline shown above the table, e.g. "Open right now". */
+  tableNote?: string;
 };
 
 /** Same rule as the article's h2 ids. */
