@@ -14,13 +14,13 @@ export const metadata = {
 };
 
 const dishImageMap: Record<string, string> = {
-  "hainanese-chicken-rice": "chicken-rice.jpg",
+  "hainanese-chicken-rice": "chicken-rice.png",
   "bobo-cha-cha": "ice-kachang.jpg",
   rojak: "satay.jpg",
   appam: "appam.webp",
   "bak-chang": "bak-chang.webp",
   "ngoh-hiang": "ngoh-hiang.webp",
-  "char-kway-teow": "char-kway-teow.jpg",
+  "char-kway-teow": "char-kway-teow.png",
   laksa: "laksa.jpg",
   "ice-kachang": "ice-kachang.jpg",
   "kaya-toast": "kaya-toast.jpg",
