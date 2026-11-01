@@ -3598,7 +3598,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "BBQ sambal stingray is sold at the hawker centre BBQ seafood stalls that open from late afternoon into the night, such as Bedok 85 Fengshan, Alexandra Village, Chomp Chomp and Newton. Most are Chinese-run and not halal, so look for a halal-certified stall if you need one.",
     priceRange:
       "S$12–20 (sold by size, typically small/medium/large; 2023–26 reviews give S$12–20 at most hawker BBQ seafood stalls)",
-    imageUrl: "/images/food/bbq-stingray.jpg",
+    imageUrl: "/images/food/bbq-stingray-ai.jpg",
     funFact:
       "The stingray's cartilaginous skeleton means it has no bones — every piece of flesh is clean and accessible, making it one of the most rewarding fish to eat at a hawker centre despite its intimidating appearance.",
     bestPairedWith:
@@ -4336,7 +4336,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Most Malay and Muslim (mamak) food stalls in hawker centres and kopitiams cook nasi goreng, and some Muslim eateries stay open late or around the clock.",
     priceRange:
       "S$5–8 (hawker and kopitiam plates; more with fried chicken or seafood)",
-    imageUrl: "/images/food/nasi-goreng.jpg",
+    imageUrl: "/images/food/nasi-goreng-ai.jpg",
     funFact:
       "The best nasi goreng uses day-old rice rather than freshly cooked — the drier, slightly firmer grains fry separately in the wok instead of clumping together into a sticky mass.",
     bestPairedWith:
@@ -4893,7 +4893,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Lei cha stalls are found in CBD hawker centres such as Amoy Street and Tanjong Pagar Plaza, and in heartland centres such as Margaret Drive. Many open for breakfast and lunch only.",
     priceRange:
       "S$4–8 per bowl (brown rice and yong tau foo add-ons extra)",
-    imageUrl: "/images/food/lei-cha-fan.jpg",
+    imageUrl: "/images/food/lei-cha-fan-ai.jpg",
     funFact:
       "The green colour of the thunder tea broth comes from a blend that can include over a dozen different herbs and leaves — basil, mint, peppermint, green tea, and medicinal herbs like the Hakka have used for centuries.",
     bestPairedWith:
