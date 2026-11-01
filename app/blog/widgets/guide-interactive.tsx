@@ -16,8 +16,16 @@ const fmt = (m: number) => (m >= 1440 ? "midnight" : formatTime(m));
 
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-/** Live status against our "good time to go" window. */
-export function windowStatus(c: GuideCentre, now: Now): { label: string; tone: Tone } {
+/** When a span runs to midnight and the next day opens at 00:00, follow it through. */
+function realClose(c: GuideCentre, day: number, closesAt: number): number {
+  if (closesAt < 1440) return closesAt;
+  const next = c.window[(day + 1) % 7];
+  const spill = next?.find(([o]) => o === 0);
+  return spill ? spill[1] : 1440;
+}
+
+/** Live status: our "good time to go" window, or real opening hours. */
+export function windowStatus(c: GuideCentre, now: Now, mode: "window" | "hours" = "window"): { label: string; tone: Tone } {
   if (c.allDayLabel) {
     if (!c.live) return { label: c.allDayLabel, tone: "good" };
     const l = openStatus(c.live.hours, now.day, now.minutes);
@@ -26,17 +34,22 @@ export function windowStatus(c: GuideCentre, now: Now): { label: string; tone: T
       : { label: `${c.allDayLabel} · ${c.live.offPrefix} ${formatTime(l.opensAt ?? 1140)}`, tone: "good" };
   }
   const st = openStatus(c.window, now.day, now.minutes);
-  if (st.open) return { label: `Good time now · until about ${fmt(st.closesAt!)}`, tone: "good" };
-  if (st.opensAt !== undefined) return { label: `Better from ${formatTime(st.opensAt)}`, tone: "later" };
+  if (st.open) {
+    const close = fmt(realClose(c, now.day, st.closesAt!));
+    return { label: mode === "hours" ? `Open now · until ${close}` : `Good time now · until about ${close}`, tone: "good" };
+  }
+  if (st.opensAt !== undefined) {
+    return { label: mode === "hours" ? `Opens ${formatTime(st.opensAt)}` : `Better from ${formatTime(st.opensAt)}`, tone: "later" };
+  }
   for (let k = 1; k <= 7; k++) {
     const d = (now.day + k) % 7;
-    const spans = c.window[d];
+    const spans = c.window[d]?.filter(([o]) => o > 0 || c.window[d]!.length === 1);
     if (spans && spans.length) {
       const when = k === 1 ? "Tomorrow" : `Back ${DAYS[d]}`;
-      return { label: `${when} from ${formatTime(spans[0][0])}`, tone: "off" };
+      return { label: `${mode === "hours" ? "Closed · " : ""}${when} from ${formatTime(spans[0][0])}`, tone: "off" };
     }
   }
-  return { label: "Not today", tone: "off" };
+  return { label: mode === "hours" ? "Closed today" : "Not today", tone: "off" };
 }
 
 const TONE: Record<Tone, string> = {
@@ -45,9 +58,9 @@ const TONE: Record<Tone, string> = {
   off: "bg-white/5 text-sf-muted ring-white/10",
 };
 
-function StatusPill({ c, now }: { c: GuideCentre; now: Now | null }) {
+function StatusPill({ c, now, mode }: { c: GuideCentre; now: Now | null; mode?: "window" | "hours" }) {
   if (!now) return <span className="inline-block h-6" aria-hidden />;
-  const s = windowStatus(c, now);
+  const s = windowStatus(c, now, mode);
   return (
     <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold ring-1 ${TONE[s.tone]}`}>
       <span className="h-1.5 w-1.5 rounded-full bg-current" aria-hidden />
@@ -113,8 +126,8 @@ export function GuidePicker({ guideId }: { guideId: string }) {
       <div
         role="tablist"
         aria-label="Where are you now"
-        className="mt-5 grid gap-1 rounded-xl bg-black/30 p-1"
-        style={{ gridTemplateColumns: `repeat(${g.picker.spots.length}, minmax(0, 1fr))` }}
+        className={`mt-5 gap-1 rounded-xl bg-black/30 p-1 ${g.picker.spots.length > 3 ? "flex flex-wrap" : "grid"}`}
+        style={g.picker.spots.length > 3 ? undefined : { gridTemplateColumns: `repeat(${g.picker.spots.length}, minmax(0, 1fr))` }}
       >
         {g.picker.spots.map((s) => (
           <button
@@ -141,7 +154,7 @@ export function GuidePicker({ guideId }: { guideId: string }) {
           <p className="text-3xl font-bold" style={{ color: pick.color }}>
             {pick.name}
           </p>
-          <StatusPill c={pick} now={now} />
+          <StatusPill c={pick} now={now} mode={g.statusMode} />
         </div>
         <p className="mt-2 text-base leading-relaxed text-sf-cream/90">{plan.why}</p>
 
@@ -194,8 +207,13 @@ export function GuideTable({ guideId }: { guideId: string }) {
   const g = getGuide(guideId)!;
   const now = useSgNow();
   const [from, setFrom] = useState(g.from[0].id);
+  const [openOnly, setOpenOnly] = useState(false);
+  const hours = g.statusMode === "hours";
+  const rows = g.centres
+    .map((c, i) => ({ c, i }))
+    .filter(({ c }) => !openOnly || !now || windowStatus(c, now, g.statusMode).tone === "good");
   return (
-    <section aria-label={`The ${g.centres.length} hawker centres at a glance`} className="my-8">
+    <section aria-label={hours ? "Supper spots and opening hours" : `The ${g.centres.length} hawker centres at a glance`} className="my-8">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-sf-muted">
           {now ? (
@@ -206,6 +224,16 @@ export function GuideTable({ guideId }: { guideId: string }) {
             "Checking the time in Singapore."
           )}
         </p>
+        {hours ? (
+          <button
+            type="button"
+            aria-pressed={openOnly}
+            onClick={() => setOpenOnly((v) => !v)}
+            className={`rounded-full px-3 py-1.5 text-xs font-semibold ${openOnly ? "bg-sf-primary text-white" : "bg-black/30 text-sf-muted hover:text-white"}`}
+          >
+            {openOnly ? "Showing open now" : "Show open now only"}
+          </button>
+        ) : null}
         {g.from.length > 1 ? (
           <div className="flex gap-1 rounded-full bg-black/30 p-1 text-xs font-semibold">
             {g.from.map((f) => (
@@ -224,7 +252,10 @@ export function GuideTable({ guideId }: { guideId: string }) {
       </div>
 
       <ul className="mt-4 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-[#1a1a1a]">
-        {g.centres.map((c, i) => (
+        {rows.length === 0 ? (
+          <li className="p-4 text-sm text-sf-muted">Nothing on this list is open right now. Try again after 4pm.</li>
+        ) : null}
+        {rows.map(({ c, i }) => (
           <li key={c.slug} className="grid gap-x-5 gap-y-2 p-4 sm:grid-cols-[1.3fr_1.4fr_1fr] sm:items-center">
             <div className="flex items-start gap-3">
               <span
@@ -249,13 +280,14 @@ export function GuideTable({ guideId }: { guideId: string }) {
               <p className="mt-1 text-xs text-sf-muted">{c.closures}</p>
             </div>
             <div className="pl-10 sm:pl-0">
-              <StatusPill c={c} now={now} />
+              <StatusPill c={c} now={now} mode={g.statusMode} />
             </div>
           </li>
         ))}
       </ul>
       <p className="mt-2 text-xs leading-relaxed text-sf-muted">
-        &ldquo;Good time now&rdquo; is our guide to when the stalls worth the trip are trading. Every stall sets its own hours and some sell out early.
+        {g.tableNote ??
+          "\u201cGood time now\u201d is our guide to when the stalls worth the trip are trading. Every stall sets its own hours and some sell out early."}
       </p>
     </section>
   );
@@ -291,12 +323,12 @@ export function GuideMap({ guideId }: { guideId: string }) {
             const now = singaporeNow();
             const pts: [number, number][] = [];
             g.centres.forEach((c, i) => {
-              const st = windowStatus(c, now);
+              const st = windowStatus(c, now, g.statusMode);
               const icon = L.divIcon({ className: "", html: pinHtml(c.color, String(i + 1)), iconSize: [22, 22], iconAnchor: [11, 11] });
               L.marker([c.lat, c.lng], { icon, title: c.name, alt: c.name, zIndexOffset: 1000 })
                 .addTo(map)
                 .bindPopup(
-                  `<div style="min-width:190px"><strong style="font-size:14px">${esc(c.name)}</strong><br/><span style="font-size:12px;opacity:.85">${esc(st.label)}</span><br/><span style="font-size:12px">Order: ${esc(c.orders[0].dish)}</span><br/><span style="font-size:12px;opacity:.85">${esc(c.routes[g.from[0].id])}</span><div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap"><a href="#${headingId(c.heading)}" style="font-weight:700">What to order</a><a href="${directionsUrl(c.lat, c.lng)}" target="_blank" rel="noopener noreferrer" style="font-weight:700">Walking directions</a></div></div>`,
+                  `<div style="min-width:190px"><strong style="font-size:14px">${esc(c.name)}</strong><br/><span style="font-size:12px;opacity:.85">${esc(st.label)}</span><br/><span style="font-size:12px">${c.orders[0] ? `Order: ${esc(c.orders[0].dish)}` : esc(c.bestFor)}</span><br/><span style="font-size:12px;opacity:.85">${esc(c.routes[g.from[0].id])}</span><div style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap"><a href="#${headingId(c.heading)}" style="font-weight:700">What to order</a><a href="${directionsUrl(c.lat, c.lng)}" target="_blank" rel="noopener noreferrer" style="font-weight:700">Walking directions</a></div></div>`,
                 );
               pts.push([c.lat, c.lng]);
             });
@@ -346,14 +378,18 @@ export function GuideMap({ guideId }: { guideId: string }) {
             {c.short}
           </li>
         ))}
-        <li className="flex items-center gap-1.5">
-          <span className="h-3 w-3 rounded-full bg-[#2b6cb0]" aria-hidden />
-          MRT
-        </li>
-        <li className="flex items-center gap-1.5">
-          <span className="h-3 w-3 rounded-full bg-[#1f7a5a]" aria-hidden />
-          {g.landmarkLegend}
-        </li>
+        {g.landmarks.some((l) => l.kind === "mrt") ? (
+          <li className="flex items-center gap-1.5">
+            <span className="h-3 w-3 rounded-full bg-[#2b6cb0]" aria-hidden />
+            MRT
+          </li>
+        ) : null}
+        {g.landmarks.some((l) => l.kind === "sight") ? (
+          <li className="flex items-center gap-1.5">
+            <span className="h-3 w-3 rounded-full bg-[#1f7a5a]" aria-hidden />
+            {g.landmarkLegend}
+          </li>
+        ) : null}
       </ul>
       <style>{`.sf-cafe-map .leaflet-popup-content-wrapper,.sf-cafe-map .leaflet-popup-tip{background:#1f1f21;color:#f5f0e8}.sf-cafe-map .leaflet-popup-content a{color:#e8622a}.sf-cafe-map.leaflet-container{font:inherit}`}</style>
     </section>
