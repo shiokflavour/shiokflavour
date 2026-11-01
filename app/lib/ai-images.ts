@@ -14,6 +14,7 @@ export const AI_IMAGES = new Set<string>([
   "/images/food/ice-kachang.png",
   "/images/food/kaya-toast.png",
   "/images/food/nasi-lemak.png",
+  "/images/food/orh-luak.png",
   "/images/food/rojak.png",
   "/images/food/roti-john.png",
   "/images/food/satay.png",
