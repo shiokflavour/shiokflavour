@@ -347,7 +347,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     tag: "Michelin Alert",
     hours:
       "Hours vary by stall",
-    imageUrl: "/images/hawkers/chinatown-complex.jpg",
+    imageUrl: "/images/blog/chicken-rice-stall.jpg",
     description:
       "One of Singapore's biggest hawker centres, with 200+ stalls above a wet market. Home to Hawker Chan and Bib Gourmand claypot rice and yong tau foo.",
     mustTry: [
@@ -1463,7 +1463,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     tag: "Local Favourite",
     hours:
       "7am–9pm (stall hours vary)",
-    imageUrl: "/images/hawkers/clementi-448.jpg",
+    imageUrl: "/images/blog/economy-rice-counter.jpg",
     description:
       "Clementi's 1980-built market and food centre, home to Bib Gourmand fish soup, a 1960s-rooted carrot cake stall and old-school wanton mee.",
     mustTry: [
@@ -2653,7 +2653,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     tag: "Local Favourite",
     hours:
       "Hours vary by stall",
-    imageUrl: "/images/hawkers/ghim-moh.jpg",
+    imageUrl: "/images/food/hokkien-mee.png",
     description:
       "Buona Vista's breakfast hub, home to 1959-founded Ghim Moh Chwee Kueh, Bib Gourmand braised duck and an early-morning carrot cake queue.",
     mustTry: [

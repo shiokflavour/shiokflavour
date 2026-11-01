@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AiBadge } from "@/app/components/ai-badge";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
@@ -313,6 +314,7 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <AiBadge src={h.imageUrl} className="right-3 top-3" />
                 {showMichelin && (
                   <div className="absolute bottom-3 left-3">
                     <span className="inline-flex items-center gap-1 rounded-full border border-yellow-500/40 bg-black/70 px-3 py-1 text-[15px] font-semibold text-yellow-400 backdrop-blur-sm">

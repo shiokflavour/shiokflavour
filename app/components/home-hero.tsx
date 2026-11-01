@@ -8,7 +8,6 @@ const heroImages = [
   "/images/hawkers/maxwell-food-centre.jpg",
   "/images/hawkers/lau-pa-sat.jpg",
   "/images/hawkers/old-airport-road.jpg",
-  "/images/hawkers/chinatown-complex.jpg",
   "/images/hawkers/newton.jpg",
   "/images/hawkers/tiong-bahru.jpg",
   "/images/hawkers/east-coast-lagoon.jpg",

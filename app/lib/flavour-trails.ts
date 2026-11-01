@@ -31,6 +31,7 @@ export type PathOption = {
   description: string;
   whatToOrder: OrderItem[];
   voicedTip: string;
+  /** Empty string shows a photo-free tile instead of an image. */
   image: string;
   /** Link to this place's card in a cafe guide, e.g. /cafes/tiong-bahru#cafe-pralet */
   cafeGuide?: string;
@@ -548,7 +549,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
             { item: "Flat white", price: "$6.00" },
           ],
           voicedTip: "Get a cupcake to go. Eat it in the courtyard. Slower that way.",
-          image: "/images/trails/tiong-bahru/plain-vanilla.jpg",
+          image: "",
           cafeGuide: "/cafes/tiong-bahru#cafe-plain-vanilla",
         },
         shiokMove: "Teck Seng's tau huay costs $1.20. Plain Vanilla's cupcake costs $4.50. Both are exactly what they're meant to be.",
@@ -806,6 +807,7 @@ export const FLAVOUR_TRAILS: FlavourTrail[] = [
         tip: "Tong Heng is open daily, 9am to 7pm. The egg tarts sell out by late afternoon so don't leave it too late. And the bars on Club Street and Duxton Hill start filling up around 6pm — perfect spot for a drink before dinner. You've well and truly earned it by now.",
         duration: "1 hour",
         image: "/images/trails/cbd/ann-siang-hill.jpg",
+        imageCaption: "Photo: Marcin Konsek / Wikimedia Commons, CC BY-SA 4.0",
       },
       {
         number: 8,
