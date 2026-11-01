@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ChopstickDivider from "@/app/components/chopstick-divider";
 import { BLOG_POSTS } from "@/app/lib/blog-posts";
+import { AiBadge } from "@/app/components/ai-badge";
+import { isAiImage } from "@/app/lib/ai-images";
 import { headingId } from "@/app/lib/area-guide-types";
 import { ArticleWidget, OrderTiles } from "@/app/blog/widgets";
 
@@ -421,6 +423,7 @@ export default async function BlogArticlePage({ params }: Props) {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
+          <AiBadge src={post.heroImage} className="bottom-3 right-4" />
         </div>
       </section>
 
@@ -428,7 +431,7 @@ export default async function BlogArticlePage({ params }: Props) {
         <div className="flex flex-col gap-12 lg:flex-row">
           <article className="prose-article min-w-0 max-w-3xl flex-1 text-base sm:text-lg">
             {paragraphs}
-            {post.content.includes("Illustration created with AI") ? (
+            {post.content.includes("Illustration created with AI") || isAiImage(post.heroImage) ? (
               <div className="mt-12 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm leading-relaxed text-sf-muted">
                 <span className="font-semibold text-sf-cream">About the photos: </span>
                 images in this article are AI-generated illustrations, curated

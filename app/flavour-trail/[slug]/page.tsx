@@ -117,12 +117,20 @@ function DualPathStopsSection({ trail }: { trail: FlavourTrail }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* OG CARD */}
               <div className="bg-[#3d2e0f] rounded-2xl p-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={stop.og.image}
-                  alt={stop.og.name}
-                  className="w-full aspect-[16/9] object-cover rounded-xl mb-4"
-                />
+                {stop.og.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={stop.og.image}
+                    alt={stop.og.name}
+                    className="w-full aspect-[16/9] object-cover rounded-xl mb-4"
+                  />
+                ) : (
+                  <div className="mb-4 flex aspect-[16/9] w-full flex-col items-center justify-center gap-2 rounded-xl bg-white/[0.04] ring-1 ring-white/10" aria-hidden>
+                    <span className="h-px w-8 bg-sf-primary" />
+                    <span className="text-lg font-semibold text-white/80">{stop.og.name}</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-white/40">Photo coming soon</span>
+                  </div>
+                )}
                 <p className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#fac775] mb-3">
                   The OG · {stopNumber}A
                 </p>
@@ -172,12 +180,20 @@ function DualPathStopsSection({ trail }: { trail: FlavourTrail }) {
 
               {/* RETURNEE CARD */}
               <div className="bg-[#1a1a1a] rounded-2xl p-6 border border-white/10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={stop.returnee.image}
-                  alt={stop.returnee.name}
-                  className="w-full aspect-[16/9] object-cover rounded-xl mb-4"
-                />
+                {stop.returnee.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={stop.returnee.image}
+                    alt={stop.returnee.name}
+                    className="w-full aspect-[16/9] object-cover rounded-xl mb-4"
+                  />
+                ) : (
+                  <div className="mb-4 flex aspect-[16/9] w-full flex-col items-center justify-center gap-2 rounded-xl bg-white/[0.04] ring-1 ring-white/10" aria-hidden>
+                    <span className="h-px w-8 bg-sf-primary" />
+                    <span className="text-lg font-semibold text-white/80">{stop.returnee.name}</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-white/40">Photo coming soon</span>
+                  </div>
+                )}
                 <p className="text-[10px] tracking-[0.25em] uppercase font-bold text-white mb-3">
                   The Returnee · {stopNumber}B
                 </p>

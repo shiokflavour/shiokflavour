@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AiBadge } from "@/app/components/ai-badge";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getFeaturedHawkerBySlug } from "../../lib/featured-hawkers";
@@ -199,6 +200,7 @@ export default async function FoodHeritageDishPage({ params }: Props) {
             <div className="lg:col-span-1">
               <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl shadow-lg shadow-black/40 ring-1 ring-white/10 lg:max-w-none">
                 <FoodHeritageHeroImage src={dish.imageUrl} alt={dish.name} className="object-cover" />
+                <AiBadge src={dish.imageUrl} />
               </div>
             </div>
           </div>
