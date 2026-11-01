@@ -3498,7 +3498,7 @@ export const FOOD_HERITAGE_DISHES: FoodHeritageDish[] = [
       "Most hawker centres have a stall frying orh luak, often alongside carrot cake or fried kway teow; Newton Food Centre and Old Airport Road Food Centre each have several well-known stalls, and evening supper centres like Chomp Chomp are popular spots.",
     priceRange:
       "S$5–12 (small plates from about S$5–8, larger sizes S$10–12)",
-    imageUrl: "/images/food/orh-luak.jpg",
+    imageUrl: "/images/food/orh-luak.png",
     funFact:
       "The quality of orh luak depends almost entirely on the freshness of the oysters — veteran hawkers receive their oyster deliveries daily and sell out before the evening. Day-old oysters are the primary reason mediocre orh luak exists.",
     bestPairedWith:
