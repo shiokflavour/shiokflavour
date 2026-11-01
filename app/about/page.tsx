@@ -220,9 +220,16 @@ export default function AboutPage() {
             They show what a dish or scene typically looks like, never a
             specific stall.
           </p>
+          <p className="text-lg leading-relaxed text-sf-muted mb-5">
+            This started with one person and a lot of hawker meals. As the
+            ShiokFlavour community grows, the plan is to replace illustrations
+            with real photos: our own, ones shared by hawkers, and ones sent in
+            by readers. If you have a photo of a stall or a dish you love, we
+            would love to see it.
+          </p>
           <p className="text-lg leading-relaxed text-sf-primary font-medium">
             The words, stall picks and prices are researched and checked by
-            hand. Spotted something wrong?{" "}
+            hand. Spotted something wrong, or have a photo to share?{" "}
             <Link
               href="/contact"
               className="underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary"

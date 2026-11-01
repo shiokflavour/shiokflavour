@@ -104,6 +104,27 @@ export function SiteFooter() {
           </div>
         </div>
 
+        {/* A note on our photos */}
+        <div className="mb-10 max-w-2xl">
+          <div className="mb-4 h-px w-8 bg-sf-primary" />
+          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-white">
+            A note on our photos
+          </p>
+          <p className="text-sm leading-relaxed text-sf-muted">
+            ShiokFlavour is a passion project, run by one person. Many of our
+            images are AI illustrations, flagged on the pages where they
+            appear, because photographing every plate in Singapore is more than
+            one pair of hands can manage. As this community grows, so will the site, with
+            more real photos along the way.{" "}
+            <Link
+              href="/about#our-photos"
+              className="font-semibold text-sf-primary underline decoration-sf-primary/40 underline-offset-4 hover:decoration-sf-primary"
+            >
+              About our photos
+            </Link>
+          </p>
+        </div>
+
         {/* Bottom row — copyright + attribution */}
         <div className="flex flex-col items-start justify-between gap-3 border-t border-white/5 pt-8 sm:flex-row sm:items-center">
           <p className="text-sm text-sf-muted">
