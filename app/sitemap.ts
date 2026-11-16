@@ -13,7 +13,7 @@ const BASE_URL = "https://www.shiokflavour.com";
  * content change, set `updatedAt` on that item (or bump the section default below).
  */
 const DEFAULTS = {
-  hawker: "2026-10-21", // "When to go" sections added to every hawker page
+  hawker: "2026-11-16", // "Open now" panel and hours on every hawker page
   dish: "2026-10-23", // unique titles and descriptions
   trail: "2026-10-23",
 };
@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blog = BLOG_POSTS.map((p) => ({ slug: p.slug, updated: p.updatedAt ?? p.publishedAt }));
   const trails = FLAVOUR_TRAILS.map((t) => ({ slug: t.slug, updated: t.updatedAt ?? DEFAULTS.trail }));
   const dishes = FOOD_HERITAGE_DISHES.map((d) => ({ slug: d.slug, updated: d.updatedAt ?? DEFAULTS.dish }));
-  const hawkers = FEATURED_HAWKERS.map((h) => ({ slug: h.slug, updated: h.updatedAt ?? DEFAULTS.hawker }));
+  const hawkers = FEATURED_HAWKERS.map((h) => ({ slug: h.slug, updated: latest([h.updatedAt ?? DEFAULTS.hawker, DEFAULTS.hawker]) }));
   const cafes = CAFE_AREAS.map((a) => ({ slug: a.slug, updated: a.updatedAt }));
 
   // Hub pages list their children, so they change when a child changes.
