@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import ClosureBadge from "@/app/components/closure-badge";
+import OpenNowPanel from "@/app/components/open-now-panel";
+import { HAWKER_HOURS, coreSummary } from "@/app/lib/hawker-hours";
 import { WhenToGo } from "@/app/components/when-to-go";
 import { HawkerCentreCard } from "../../components/hawker-centre-card";
 import {
@@ -31,7 +33,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       featured.seoTitle ??
       `${featured.name}: Best Stalls & What to Eat | ShiokFlavour`;
+    const hrs = HAWKER_HOURS[featured.slug];
+    const hoursLead = hrs
+      ? `${featured.name} opening hours: most stalls ${coreSummary(hrs)}${hrs.allDay ? ", hall open 24 hours" : ""}. Live open-now check, rest days, cleaning dates`
+      : null;
+    const picks = featured.mustTry.slice(0, 2).map((x) => x.split(" (")[0].split(" — ")[0]);
+    const options = hoursLead
+      ? [`${hoursLead}, plus ${picks.join(" and ")}.`, `${hoursLead}, plus ${picks[0]}.`, `${hoursLead}.`]
+      : [];
     const description =
+      options.find((d) => d.length <= 160) ??
       featured.seoDescription ??
       `What to eat at ${featured.name}: ${featured.mustTry
         .slice(0, 3)
@@ -237,7 +248,11 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
               <h1 className="text-4xl font-bold tracking-tight text-sf-cream sm:text-5xl lg:text-6xl">
                 {h.name}
               </h1>
-              <ClosureBadge hawkerName={h.name} />
+              {HAWKER_HOURS[h.slug] ? (
+                <OpenNowPanel slug={h.slug} name={h.name} restDays={h.whenToGo?.restDays} />
+              ) : (
+                <ClosureBadge hawkerName={h.name} />
+              )}
               <p className="text-base text-sf-muted">{h.address}</p>
 
               {/* Quick stats row */}
@@ -249,9 +264,9 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                   </p>
                 </div>
                 <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3 text-center">
-                  <p className="mb-1 text-[15px] text-sf-muted">Hours</p>
+                  <p className="mb-1 text-[15px] text-sf-muted">{HAWKER_HOURS[h.slug] ? "Most stalls" : "Hours"}</p>
                   <p className="text-sm font-semibold leading-tight text-sf-cream">
-                    {h.hours.split("(")[0].trim()}
+                    {HAWKER_HOURS[h.slug] ? coreSummary(HAWKER_HOURS[h.slug]) : h.hours.split("(")[0].trim()}
                   </p>
                 </div>
                 <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3 text-center">
@@ -646,7 +661,9 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                         <dd className="mt-1 text-sm text-sf-cream/95">
                           {h.whenToGo ? (
                             <>
-                              Stalls set their own hours.{" "}
+                              {HAWKER_HOURS[h.slug]
+                                ? `Most stalls ${coreSummary(HAWKER_HOURS[h.slug])}; each stall sets its own hours. `
+                                : "Stalls set their own hours. "}
                               <a href="#when-to-go" className="font-semibold text-sf-primary underline underline-offset-4">
                                 See when to go
                               </a>
