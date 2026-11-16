@@ -1,6 +1,8 @@
 import { AREA_GUIDES } from "@/app/lib/area-guides";
 import { GuideMap, GuideNav, GuidePicker, GuideTable } from "./guide-interactive";
 import { GuideFaq, GuidePrices, GuideTimeline, OrderTiles } from "./guide-static";
+import { TourMatcher, TourTable } from "./tours";
+import { TourFaq } from "./tours-faq";
 
 const PARTS: Record<string, (guideId: string) => React.ReactNode> = {
   picker: (id) => <GuidePicker guideId={id} />,
@@ -16,7 +18,15 @@ const PARTS: Record<string, (guideId: string) => React.ReactNode> = {
 const ALIASES: Record<string, string> = { "bay-evening": "bay-timeline" };
 
 /** Widgets an article can place with a line like [WIDGET: bay-picker] or [WIDGET: orchard-map]. */
+/** Standalone widgets that are not tied to an area guide. */
+const STANDALONE: Record<string, () => React.ReactNode> = {
+  "tours-matcher": () => <TourMatcher />,
+  "tours-table": () => <TourTable />,
+  "tours-faq": () => <TourFaq />,
+};
+
 export function ArticleWidget({ id }: { id: string }) {
+  if (STANDALONE[id]) return <>{STANDALONE[id]()}</>;
   const name = ALIASES[id] ?? id;
   const dash = name.indexOf("-");
   const guideId = name.slice(0, dash);

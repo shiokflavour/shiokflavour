@@ -24,6 +24,16 @@ import {
 
 type Props = { params: Promise<{ slug: string }> };
 
+/** Hawker centres that guided food tours pass through, with a line for the "Prefer a guide?" box. */
+const TOUR_AREAS: Record<string, string> = {
+  "maxwell-food-centre": "Several Chinatown food tours stop at or near Maxwell.",
+  "chinatown-complex-food-centre": "Chinatown is the most toured food neighbourhood in Singapore.",
+  "lau-pa-sat": "The most popular night food tour ends right here, on Satay Street.",
+  "tekka-centre": "A guided Little India food tour spends three hours in this neighbourhood.",
+  "amoy-street-food-centre": "Chinatown and Telok Ayer food tours pass close by.",
+  "hong-lim-market-food-centre": "Chinatown food tours pass close by.",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   let featured = getFeaturedHawkerBySlug(slug);
@@ -635,6 +645,24 @@ function FeaturedHawkerPage({ h }: { h: FeaturedHawker }) {
                     className="mt-5 inline-block rounded-full bg-sf-primary px-5 py-2.5 text-sm font-semibold text-white"
                   >
                     {h.cafeGuide.areaName} cafe guide →
+                  </Link>
+                </section>
+              ) : null}
+
+              {TOUR_AREAS[h.slug] ? (
+                <section aria-labelledby="tours-heading" className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+                  <h2 id="tours-heading" className="text-[15px] font-bold uppercase tracking-[0.2em] text-sf-primary">
+                    Prefer a guide?
+                  </h2>
+                  <p className="mt-3 text-base leading-relaxed text-sf-cream/90">
+                    {TOUR_AREAS[h.slug]} Our comparison of Singapore food tours sets out price, tastings and timing side by
+                    side, with free self-guided trails if you would rather go it alone.
+                  </p>
+                  <Link
+                    href="/blog/best-singapore-food-tours"
+                    className="mt-5 inline-block rounded-full border border-sf-primary px-5 py-2.5 text-sm font-semibold text-sf-primary hover:bg-sf-primary hover:text-white"
+                  >
+                    Compare Singapore food tours →
                   </Link>
                 </section>
               ) : null}
