@@ -13,6 +13,7 @@ const HOW_TO_ORDER_BY_DISH: Record<string, string> = {
   "roti-prata": "how-to-order-roti-prata-singapore",
   "char-kway-teow": "how-to-order-char-kway-teow-singapore",
   "economy-rice": "how-to-order-economy-rice-singapore",
+  "nasi-padang": "how-to-order-nasi-padang-singapore",
   "teh-tarik": "how-to-order-kopi-teh-singapore",
 };
 import {

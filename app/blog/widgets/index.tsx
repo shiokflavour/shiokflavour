@@ -3,6 +3,7 @@ import { GuideMap, GuideNav, GuidePicker, GuideTable } from "./guide-interactive
 import { GuideFaq, GuidePrices, GuideTimeline, OrderTiles } from "./guide-static";
 import { TourMatcher, TourTable } from "./tours";
 import { TourFaq } from "./tours-faq";
+import { PadangDecoder } from "./padang-decoder";
 
 const PARTS: Record<string, (guideId: string) => React.ReactNode> = {
   picker: (id) => <GuidePicker guideId={id} />,
@@ -23,6 +24,7 @@ const STANDALONE: Record<string, () => React.ReactNode> = {
   "tours-matcher": () => <TourMatcher />,
   "tours-table": () => <TourTable />,
   "tours-faq": () => <TourFaq />,
+  "padang-decoder": () => <PadangDecoder />,
 };
 
 export function ArticleWidget({ id }: { id: string }) {
