@@ -213,7 +213,7 @@ export function GuideTable({ guideId }: { guideId: string }) {
     .map((c, i) => ({ c, i }))
     .filter(({ c }) => !openOnly || !now || windowStatus(c, now, g.statusMode).tone === "good");
   return (
-    <section aria-label={hours ? "Supper spots and opening hours" : `The ${g.centres.length} hawker centres at a glance`} className="my-8">
+    <section aria-label={hours ? "Places and opening hours" : `The ${g.centres.length} hawker centres at a glance`} className="my-8">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-sf-muted">
           {now ? (
@@ -253,7 +253,7 @@ export function GuideTable({ guideId }: { guideId: string }) {
 
       <ul className="mt-4 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-[#1a1a1a]">
         {rows.length === 0 ? (
-          <li className="p-4 text-sm text-sf-muted">Nothing on this list is open right now. Try again after 4pm.</li>
+          <li className="p-4 text-sm text-sf-muted">{g.emptyNote ?? "Nothing on this list is open right now. Try again after 4pm."}</li>
         ) : null}
         {rows.map(({ c, i }) => (
           <li key={c.slug} className="grid gap-x-5 gap-y-2 p-4 sm:grid-cols-[1.3fr_1.4fr_1fr] sm:items-center">

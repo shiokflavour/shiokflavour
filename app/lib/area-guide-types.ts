@@ -112,6 +112,8 @@ export type AreaGuide = {
   statusMode?: "window" | "hours";
   /** Headline shown above the table, e.g. "Open right now". */
   tableNote?: string;
+  /** Shown when "open now only" leaves the table empty. */
+  emptyNote?: string;
 };
 
 /** Same rule as the article's h2 ids. */
