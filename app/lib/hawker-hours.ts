@@ -39,7 +39,7 @@ export const HAWKER_HOURS: Record<string, HawkerHours> = {
   },
   "old-airport-road-food-centre": { core: daily([H(10), H(21)]), few: daily([H(6, 30), H(23)]) },
   "chinatown-complex-food-centre": { core: daily([H(7), H(15)]), few: daily([H(5), H(21)]) },
-  "newton-food-centre": { core: daily([H(12), H(22, 30)]), few: daily([H(6), H(26, 30)]) },
+  "newton-food-centre": { core: daily([H(12), H(22, 30)]), few: weekdays([H(7), H(26, 30)], [H(9), H(26, 30)], [H(9), H(26, 30)]) },
   "tekka-centre": { core: daily([H(7), H(15)]), few: daily([H(6), H(23)]) },
   "adam-road-food-centre": { core: daily([H(7, 30), H(15)]), few: daily([H(7), H(24)]) },
   "bedok-interchange-hawker-centre": { core: daily([H(7), H(21)]), few: daily([H(5), H(22)]) },

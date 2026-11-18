@@ -429,6 +429,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   {
     id: 5,
     slug: "newton-food-centre",
+    updatedAt: "2026-11-18",
     name: "Newton Food Centre",
     seoTitle:
       "Newton Food Centre: Opening Hours, Best Stalls & What to Eat",
@@ -511,13 +512,13 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
       },
     ],
     whenToGo: {
-      breakfast: "Newton is mostly an afternoon and evening centre, but Hajah Monah Kitchen (#01-83) opens from about 6am (7.30am on Wednesdays) for nasi padang with beef rendang, and Kwee Heng Duck Noodle (#01-13) starts from about 9am.",
+      breakfast: "Newton is mostly an afternoon and evening centre, but on weekdays Hajah Monah Kitchen (#01-83) opens from about 7am to 2pm for nasi padang with beef rendang (closed at weekends), and Kwee Heng Duck Noodle (#01-13) starts from about 9am.",
       lunch: "Kwang Kee Teochew Fish Porridge (#01-20) opens from about 11am and is best at lunch, alongside Kwee Heng's braised duck and Newton Old Signboard 25's Hokkien prawn mee (#01-25). Lunch is far calmer than dinner here.",
       dinner: "Evening is Newton's main event: Hup Kee Fried Oyster Omelette (#01-73) opens from about 5.30pm, Heng Carrot Cake (#01-28) from about 6pm, and Alliance Seafood (#01-27) serves chilli crab until about 10.30pm. TKR Satay (#01-33) starts grilling from about 4pm.",
       lateNight: "Newton is a proper supper spot: Hup Kee runs until about midnight (Wednesday to Saturday), Heng until about 11pm, TKR Satay until about 12.30am, and R&B Express (#01-76) grills chicken wings until about 3am.",
-      restDays: "Heng is closed on Tuesdays, Hup Kee opens only Wednesday to Saturday, Kwang Kee and Alliance Seafood are closed on Mondays, and Kwee Heng is closed on Wednesdays and Sundays. The centre also closes for NEA cleaning a few days each quarter.",
+      restDays: "Heng is closed on Tuesdays, Hup Kee opens only Wednesday to Saturday, Kwang Kee and Alliance Seafood are closed on Mondays, and Kwee Heng is closed on Wednesdays and Sundays, and Hajah Monah Kitchen on Saturdays and Sundays. The centre also closes for NEA cleaning a few days each quarter.",
       bestTime: "Come for dinner from Wednesday to Saturday, the only nights when both Hup Kee and Heng are frying.",
-      hoursFaq: "Newton Food Centre has no single opening hours, and it leans late: a few stalls open from 6am to 9am, many start at lunchtime, and a good number trade until 10.30pm, midnight or later. Heng Carrot Cake opens from about 6pm to 11pm, every day except Tuesday.",
+      hoursFaq: "Newton Food Centre has no single opening hours, and it leans late: a few stalls open from 7am to 9am, many start at lunchtime, and a good number trade until 10.30pm, midnight or later. Heng Carrot Cake opens from about 6pm to 11pm, every day except Tuesday.",
     },
   },
   {
@@ -990,11 +991,12 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
   {
     id: 11,
     slug: "geylang-serai-market",
+    updatedAt: "2026-11-18",
     name: "Geylang Serai Market",
     seoTitle:
       "Geylang Serai Market: Opening Hours, Best Stalls & What to Eat",
     seoDescription:
-      "Where to eat at Geylang Serai Market: Sinar Pagi nasi padang, Original Alhambra satay, Hajjah Mona nasi padang and Hamid's family briyani.",
+      "Where to eat at Geylang Serai Market: Sinar Pagi nasi padang, Original Alhambra satay, Hamid's family briyani and Malay breakfasts, with opening hours.",
     address:
       "1 Geylang Serai, Geylang",
     lat: 1.316888,
@@ -1009,7 +1011,7 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
     mustTry: [
       "Sinar Pagi Nasi Padang",
       "Alhambra Satay",
-      "Hajjah Mona Rawon",
+      "Mee rebus and lontong",
       "Geylang Briyani Kambing",
     ],
     famousFor:
@@ -1058,21 +1060,16 @@ export const FEATURED_HAWKERS: FeaturedHawker[] = [
         story: "The last surviving stall from the old Satay Club, now run by the founder's son. Beef, chicken (thigh meat) and mutton skewers are handmade and grilled over charcoal, served with a peanut sauce made with dried shrimp.",
       },
       {
-        name: "Hajjah Mona Nasi Padang",
-        dish: "Nasi padang, rawon",
-        story: "A family stall named after the founder, Razak Ismail's mother. Known for East Java-style rawon in buah keluak gravy, asam pedas, beef rendang and limpa rendang. Expect a queue.",
-      },
-      {
         name: "Geylang (Hamid's) Briyani Stall",
         dish: "Mutton briyani",
         story: "A three-generation family stall selling nasi briyani since 1964. Get the briyani kambing for tender, non-gamey mutton, or the slow-cooked chicken. Closed Mondays.",
       },
     ],
     whenToGo: {
-      breakfast: "Malay breakfast stalls upstairs open early for mee rebus, lontong and thosai, and Sinar Pagi Nasi Padang (#02-137) starts laying out its Kapau-style spread from about 7am to 8am. Original Alhambra Satay (#02-145) opens from about 9.30am (8.30am on Saturdays).",
-      lunch: "Lunch is the main event: queue for Sinar Pagi, Hajjah Mona's nasi padang and Geylang (Hamid's) Briyani (#02-146), and arrive before about 12.30pm, as popular dishes sell out. Weekends are busiest, with families shopping in the wet market below.",
+      breakfast: "Malay breakfast stalls upstairs open early for mee rebus, lontong and thosai, and Sinar Pagi Nasi Padang (#02-137) starts laying out its Kapau-style spread from about 8am. Original Alhambra Satay (#02-145) opens from about 9.30am (8.30am on Saturdays).",
+      lunch: "Lunch is the main event: queue for Sinar Pagi's nasi padang and Geylang (Hamid's) Briyani (#02-146), and arrive before about 12.30pm, as popular dishes sell out. Weekends are busiest, with families shopping in the wet market below.",
       dinner: "Most stalls close by mid to late afternoon. Original Alhambra Satay is one of the few that keeps grilling into the evening, until about 7.45pm daily.",
-      restDays: "Geylang (Hamid's) Briyani is closed on Mondays, while Original Alhambra Satay opens every day. The market also closes for NEA cleaning a few days each quarter.",
+      restDays: "Geylang (Hamid's) Briyani and Sinar Pagi are closed on Mondays, while Original Alhambra Satay opens every day. The market also closes for NEA cleaning a few days each quarter.",
       bestTime: "Come for breakfast or an early lunch: the best nasi padang dishes are often gone by early afternoon.",
       hoursFaq: "Geylang Serai Market's food centre has no single opening hours, as each stall sets its own. Most stalls open from about 7am to 9am and close between 3pm and 5pm, with only a few, such as Original Alhambra Satay (until about 7.45pm), open in the evening. The wet market downstairs is busiest in the morning.",
     },
