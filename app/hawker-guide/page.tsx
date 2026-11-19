@@ -85,7 +85,7 @@ export default function HawkerGuideHubPage() {
             What&apos;s Inside
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
-            Five Guides, One Hawker Centre
+            Six Guides, One Hawker Centre
           </h2>
           <p className="text-sf-muted text-base max-w-xl">
             Each guide stands on its own. Read whichever you need before your

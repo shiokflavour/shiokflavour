@@ -22,9 +22,10 @@ type Freq = "daily" | "weekly" | "monthly";
 
 const STATIC_PAGES: { path: string; updated: string; changeFrequency: Freq; priority: number }[] = [
   { path: "/discover", updated: "2026-04-11", changeFrequency: "monthly", priority: 0.9 },
-  { path: "/hawker-guide", updated: "2026-10-13", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/hawker-guide", updated: "2026-11-19", changeFrequency: "monthly", priority: 0.8 },
   { path: "/hawker-guide/kopi-decoder", updated: "2026-05-01", changeFrequency: "monthly", priority: 0.7 },
   { path: "/hawker-guide/prata-decoder", updated: "2026-05-01", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/hawker-guide/dish-names", updated: "2026-11-19", changeFrequency: "monthly", priority: 0.7 },
   { path: "/hawker-guide/old-school-names", updated: "2026-10-23", changeFrequency: "monthly", priority: 0.7 },
   { path: "/hawker-guide/etiquette", updated: "2026-10-23", changeFrequency: "monthly", priority: 0.7 },
   { path: "/hawker-guide/singlish", updated: "2026-10-13", changeFrequency: "monthly", priority: 0.7 },

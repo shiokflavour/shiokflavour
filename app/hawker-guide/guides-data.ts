@@ -1,5 +1,5 @@
 export type GuideEntry = {
-  id: "kopi-decoder" | "prata-decoder" | "old-school-names" | "etiquette" | "singlish";
+  id: "kopi-decoder" | "prata-decoder" | "dish-names" | "old-school-names" | "etiquette" | "singlish";
   title: string;
   eyebrow: string;
   description: string;
@@ -28,6 +28,16 @@ export const HAWKER_GUIDES: GuideEntry[] = [
     shortDescription: "Order your prata like a regular.",
     href: "/hawker-guide/prata-decoder",
     cta: "Decode your prata",
+  },
+  {
+    id: "dish-names",
+    title: "Dish Names Decoded",
+    eyebrow: "Interactive",
+    description:
+      "Char kway teow, cai png, nasi lemak, thosai. What 60 hawker dish names mean, how to write them in Chinese, Malay or Tamil, and a card to show the uncle at the stall.",
+    shortDescription: "What every dish name means, and how to order it.",
+    href: "/hawker-guide/dish-names",
+    cta: "Decode the menu",
   },
   {
     id: "old-school-names",
