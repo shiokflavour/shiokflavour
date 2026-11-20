@@ -119,6 +119,55 @@ function ShowUncle({ dish, onClose }: { dish: DishName; onClose: () => void }) {
   );
 }
 
+/** Hero feature block: explains "Show the uncle" and lets readers try it at once. */
+export function UncleCallout() {
+  const [open, setOpen] = useState(false);
+  const sample = DISH_NAMES.find((d) => d.slug === "char-kway-teow") ?? DISH_NAMES[0];
+  return (
+    <section
+      aria-labelledby="uncle-callout-heading"
+      className="mt-10 grid items-center gap-6 rounded-2xl border border-sf-primary/50 bg-sf-primary/10 p-6 sm:grid-cols-[1fr_auto] sm:p-8"
+    >
+      <div>
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">Ordering made easy</p>
+        <h2 id="uncle-callout-heading" className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+          Show the uncle
+        </h2>
+        <p className="mt-3 max-w-xl text-base leading-relaxed text-sf-cream/90 sm:text-lg">
+          No need to say a word. Tap <strong className="text-white">Show the uncle</strong>{" "}on any dish and your phone becomes
+          a big, full-screen order card in the stall&apos;s own script, with how many you want and whether it is takeaway.
+          Then just turn your screen to the stall.
+        </p>
+        <ol className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm font-semibold text-white">
+          <li><span className="text-sf-primary">1.</span> Find your dish</li>
+          <li><span className="text-sf-primary">2.</span> Tap Show the uncle</li>
+          <li><span className="text-sf-primary">3.</span> Hold up your phone</li>
+        </ol>
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="mt-6 rounded-full bg-sf-primary px-6 py-3 text-base font-bold text-white hover:bg-sf-primary/90"
+        >
+          Try it now
+        </button>
+      </div>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label="Preview the Show the uncle card for char kway teow"
+        className="mx-auto flex w-44 flex-col items-center rounded-[1.75rem] border-4 border-white/20 bg-[#FFF8EE] px-4 py-6 text-[#1a1a1a] shadow-2xl transition-transform hover:-rotate-2 sm:w-48"
+      >
+        <span className="whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.18em] text-[#E8622A]">Show the stall</span>
+        <span lang="zh-Hans" className="mt-4 whitespace-nowrap text-[2.75rem] font-bold leading-none">炒粿条</span>
+        <span className="mt-2 text-sm font-semibold text-black/60">Char Kway Teow</span>
+        <span className="mt-4 text-3xl font-bold">×2</span>
+        <span lang="zh-Hans" className="mt-2 text-xl font-bold text-[#E8622A]">打包</span>
+      </button>
+      {open ? <ShowUncle dish={sample} onClose={() => setOpen(false)} /> : null}
+    </section>
+  );
+}
+
 export function DishDecoder() {
   const [q, setQ] = useState("");
   const [origin, setOrigin] = useState<(typeof ORIGINS)[number]>("All");

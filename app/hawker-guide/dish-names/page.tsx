@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { DISH_NAME_FAQS, DISH_NAMES } from "@/app/lib/dish-names";
 import { KeepExploring } from "../keep-exploring";
-import { DishDecoder } from "./dish-decoder";
+import { DishDecoder, UncleCallout } from "./dish-decoder";
 
 export const metadata = {
   alternates: { canonical: "/hawker-guide/dish-names" },
@@ -43,11 +43,7 @@ export default function DishNamesPage() {
           Tamil. Laksa is still being argued about. Here are {DISH_NAMES.length} dishes: what each name means, how it is written,
           and a card to hold up when the queue is long and your Hokkien is short.
         </p>
-        <p className="mt-4 text-sm text-sf-muted max-w-2xl">
-          Tap <strong className="text-white">Show the uncle</strong> on any dish for a full-screen card in the stall&apos;s own
-          script, with how many you want and whether it is takeaway.
-        </p>
-        <div className="w-12 h-px bg-sf-primary mt-10" />
+        <UncleCallout />
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
