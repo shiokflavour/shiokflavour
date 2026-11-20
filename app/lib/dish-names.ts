@@ -146,7 +146,58 @@ export const DISH_NAME_FAQS: { q: string; a: string }[] = [
     a: "Murtabak is prata dough stuffed with spiced minced mutton or chicken, egg and onion, folded into a parcel and fried, then eaten with curry. The name comes from the Arabic for 'folded'.",
   },
   {
+    q: "How do you say less rice or no chilli at a hawker stall?",
+    a: "At a Chinese stall, less rice is 少饭 (shǎo fàn), more rice is 加饭 (jiā fàn) and no chilli is 不要辣 (bú yào là). At a Malay or Indian stall, say nasi sikit for less rice, tambah nasi for more rice and tak nak pedas for no chilli. Takeaway is 打包 (dǎ bāo) or bungkus.",
+  },
+  {
     q: "What does kosong mean at a hawker centre?",
     a: "Kosong is Malay for 'empty' or 'zero'. At a prata stall it means plain prata with no filling; at a drinks stall, kosong means no sugar.",
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/* Requests you can add to the "Show the uncle" card.                  */
+/* cn is shown at Chinese stalls, ms (Malay) everywhere else.          */
+/* Options in the same group cancel each other (less vs more rice).    */
+/* ------------------------------------------------------------------ */
+
+const DRINKS = new Set(["teh-tarik", "sugarcane-juice", "bandung"]);
+/** Chinese noodle dishes usually offered both dry and in soup. */
+const DRY_OR_SOUP = new Set(["bak-chor-mee", "wanton-mee", "fishball-noodles", "hae-mee", "yong-tau-foo"]);
+/** Dishes that normally come with chilli or a spicy sauce. */
+const NO_CHILLI = new Set(["rojak", "chendol", "ice-kachang", "bobo-cha-cha", "kueh-lapis", "ondeh-ondeh", "tau-huay", "ang-ku-kueh", "naan"]);
+
+export type DishRequest = {
+  id: string;
+  en: string;
+  cn: string;
+  pinyin: string;
+  ms: string;
+  group: string;
+  applies: (d: DishName) => boolean;
+};
+
+const isRice = (d: DishName) => d.type === "Rice" && d.slug !== "bubur-lambuk" && d.slug !== "teochew-porridge";
+const isNoodle = (d: DishName) => d.type === "Noodles";
+const isSavoury = (d: DishName) => d.type !== "Sweets & drinks" && !NO_CHILLI.has(d.slug);
+const isMeal = (d: DishName) => d.type === "Rice" || d.type === "Noodles" || d.type === "Mains";
+const isSweet = (d: DishName) => d.type === "Sweets & drinks";
+
+export const DISH_REQUESTS: DishRequest[] = [
+  { id: "less-rice", en: "Less rice", cn: "少饭", pinyin: "shǎo fàn", ms: "Nasi sikit", group: "rice", applies: isRice },
+  { id: "more-rice", en: "More rice", cn: "加饭", pinyin: "jiā fàn", ms: "Tambah nasi", group: "rice", applies: isRice },
+  { id: "less-noodles", en: "Less noodles", cn: "少面", pinyin: "shǎo miàn", ms: "Mee sikit", group: "noodles", applies: isNoodle },
+  { id: "more-noodles", en: "More noodles", cn: "加面", pinyin: "jiā miàn", ms: "Tambah mee", group: "noodles", applies: isNoodle },
+  { id: "extra", en: "Extra meat / toppings", cn: "加料", pinyin: "jiā liào", ms: "Tambah lauk", group: "extra", applies: isMeal },
+  { id: "dry", en: "Dry", cn: "干", pinyin: "gān", ms: "Kering", group: "style", applies: (d) => DRY_OR_SOUP.has(d.slug) },
+  { id: "soup", en: "Soup", cn: "汤", pinyin: "tāng", ms: "Sup", group: "style", applies: (d) => DRY_OR_SOUP.has(d.slug) },
+  { id: "no-chilli", en: "No chilli", cn: "不要辣", pinyin: "bú yào là", ms: "Tak nak pedas", group: "chilli", applies: isSavoury },
+  { id: "less-spicy", en: "Less spicy", cn: "少辣", pinyin: "shǎo là", ms: "Kurang pedas", group: "chilli", applies: isSavoury },
+  { id: "no-spring-onion", en: "No spring onion", cn: "不要葱", pinyin: "bú yào cōng", ms: "Tak nak daun bawang", group: "onion", applies: (d) => isNoodle(d) || d.slug === "hainanese-chicken-rice" || d.slug === "lor-ark" },
+  { id: "less-sweet", en: "Less sweet", cn: "少甜", pinyin: "shǎo tián", ms: "Kurang manis", group: "sweet", applies: isSweet },
+  { id: "less-ice", en: "Less ice", cn: "少冰", pinyin: "shǎo bīng", ms: "Kurang ais", group: "ice", applies: (d) => DRINKS.has(d.slug) },
+  { id: "no-ice", en: "No ice", cn: "不要冰", pinyin: "bú yào bīng", ms: "Tak nak ais", group: "ice", applies: (d) => DRINKS.has(d.slug) },
+];
+
+/** Takeaway, shown as its own toggle. */
+export const TAKEAWAY = { en: "Takeaway", cn: "打包", pinyin: "dǎ bāo", ms: "Bungkus" };

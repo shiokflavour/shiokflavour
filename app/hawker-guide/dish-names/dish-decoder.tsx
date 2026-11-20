@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { DISH_NAMES, WORD_FAMILIES, type DishName } from "@/app/lib/dish-names";
+import { DISH_NAMES, DISH_REQUESTS, TAKEAWAY, WORD_FAMILIES, type DishName, type DishRequest } from "@/app/lib/dish-names";
 
 const ORIGINS = ["All", "Chinese", "Malay", "Indian", "Peranakan"] as const;
 const TYPES = ["All", "Noodles", "Rice", "Mains", "Snacks", "Sweets & drinks"] as const;
@@ -29,10 +29,20 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
 function ShowUncle({ dish, onClose }: { dish: DishName; onClose: () => void }) {
   const [qty, setQty] = useState(1);
   const [takeaway, setTakeaway] = useState(false);
+  const [picked, setPicked] = useState<string[]>([]);
   const closeRef = useRef<HTMLButtonElement>(null);
-  const chinese = Boolean(dish.script && /[一-鿿]/.test(dish.script));
+  const chinese = Boolean(dish.script && /[\u4e00-\u9fff]/.test(dish.script));
   const big = dish.script ?? dish.name;
   const sub = dish.script ? dish.name : dish.cn;
+  const options = DISH_REQUESTS.filter((r) => r.applies(dish));
+  const chosen = options.filter((r) => picked.includes(r.id));
+
+  const toggle = (r: DishRequest) =>
+    setPicked((p) => {
+      if (p.includes(r.id)) return p.filter((id) => id !== r.id);
+      const sameGroup = options.filter((o) => o.group === r.group).map((o) => o.id);
+      return [...p.filter((id) => !sameGroup.includes(id)), r.id];
+    });
 
   useEffect(() => {
     closeRef.current?.focus();
@@ -46,12 +56,21 @@ function ShowUncle({ dish, onClose }: { dish: DishName; onClose: () => void }) {
     };
   }, [onClose]);
 
+  const lines = [...chosen.map((r) => ({ key: r.id, local: chinese ? r.cn : r.ms, hint: chinese ? `${r.pinyin} · ${r.en.toLowerCase()}` : r.en.toLowerCase() }))];
+  if (takeaway) {
+    lines.push({
+      key: "takeaway",
+      local: chinese ? TAKEAWAY.cn : TAKEAWAY.ms,
+      hint: chinese ? `${TAKEAWAY.pinyin} · takeaway` : "takeaway",
+    });
+  }
+
   return (
     <div
       role="dialog"
       aria-modal="true"
       aria-label={`Show the uncle: ${dish.name}`}
-      className="fixed inset-0 z-[100] flex flex-col bg-[#FFF8EE] text-[#1a1a1a]"
+      className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-[#FFF8EE] text-[#1a1a1a]"
     >
       <div className="flex items-center justify-between px-5 pt-5">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E8622A]">Show this to the stall</p>
@@ -65,16 +84,16 @@ function ShowUncle({ dish, onClose }: { dish: DishName; onClose: () => void }) {
         </button>
       </div>
 
-      <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
+      <div className="flex flex-1 flex-col items-center justify-center px-6 py-6 text-center">
         <p
           lang={chinese ? "zh-Hans" : dish.script ? "ta" : "ms"}
-          className={`font-bold leading-tight ${chinese ? "text-[clamp(4rem,22vw,11rem)]" : "text-[clamp(2.75rem,13vw,7rem)]"}`}
+          className={`font-bold leading-tight ${chinese ? "text-[clamp(3.5rem,20vw,10rem)]" : "text-[clamp(2.5rem,12vw,6.5rem)]"}`}
         >
           {big}
         </p>
-        {sub ? <p className="mt-3 text-2xl font-semibold text-black/60 sm:text-3xl">{sub}</p> : null}
+        {sub ? <p className="mt-2 text-2xl font-semibold text-black/60 sm:text-3xl">{sub}</p> : null}
 
-        <div className="mt-8 flex items-center gap-6">
+        <div className="mt-6 flex items-center gap-6">
           <button
             type="button"
             onClick={() => setQty((q) => Math.max(1, q - 1))}
@@ -96,24 +115,45 @@ function ShowUncle({ dish, onClose }: { dish: DishName; onClose: () => void }) {
           </button>
         </div>
 
-        {takeaway ? (
-          <p className="mt-6 text-4xl font-bold text-[#E8622A]">
-            {chinese ? "打包" : "Bungkus"}
-            <span className="ml-3 text-xl font-semibold text-black/50">{chinese ? "dǎ bāo · takeaway" : "takeaway"}</span>
-          </p>
+        {lines.length ? (
+          <ul className="mt-6 space-y-2" aria-live="polite">
+            {lines.map((l) => (
+              <li key={l.key} className="text-4xl font-bold text-[#E8622A] sm:text-5xl">
+                <span lang={chinese ? "zh-Hans" : "ms"}>{l.local}</span>
+                <span className="ml-3 align-middle text-base font-semibold text-black/50 sm:text-lg">{l.hint}</span>
+              </li>
+            ))}
+          </ul>
         ) : null}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-3 px-5 pb-8">
-        <button
-          type="button"
-          aria-pressed={takeaway}
-          onClick={() => setTakeaway((t) => !t)}
-          className={`rounded-full px-5 py-3 text-base font-bold ${takeaway ? "bg-[#E8622A] text-white" : "bg-black/10"}`}
-        >
-          {takeaway ? "Takeaway ✓" : "Takeaway?"}
-        </button>
-        <p className="w-full text-center text-sm text-black/50">Then smile, point and say thank you.</p>
+      <div className="px-5 pb-8">
+        <p className="mb-2 text-center text-xs font-bold uppercase tracking-[0.18em] text-black/40">Add a request</p>
+        <div className="mx-auto flex max-w-2xl flex-wrap items-center justify-center gap-2" role="group" aria-label="Requests">
+          {options.map((r) => {
+            const on = picked.includes(r.id);
+            return (
+              <button
+                key={r.id}
+                type="button"
+                aria-pressed={on}
+                onClick={() => toggle(r)}
+                className={`rounded-full px-4 py-2.5 text-sm font-bold sm:text-base ${on ? "bg-[#E8622A] text-white" : "bg-black/10"}`}
+              >
+                {r.en}
+              </button>
+            );
+          })}
+          <button
+            type="button"
+            aria-pressed={takeaway}
+            onClick={() => setTakeaway((t) => !t)}
+            className={`rounded-full px-4 py-2.5 text-sm font-bold sm:text-base ${takeaway ? "bg-[#E8622A] text-white" : "bg-black/10"}`}
+          >
+            Takeaway
+          </button>
+        </div>
+        <p className="mt-4 text-center text-sm text-black/50">Then smile, point and say thank you.</p>
       </div>
     </div>
   );
@@ -135,7 +175,8 @@ export function UncleCallout() {
         </h2>
         <p className="mt-3 max-w-xl text-base leading-relaxed text-sf-cream/90 sm:text-lg">
           No need to say a word. Tap <strong className="text-white">Show the uncle</strong>{" "}on any dish and your phone becomes
-          a big, full-screen order card in the stall&apos;s own script, with how many you want and whether it is takeaway.
+          a big, full-screen order card in the stall&apos;s own script: how many you want, plus requests like less rice,
+          extra meat, no chilli or takeaway.
           Then just turn your screen to the stall.
         </p>
         <ol className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm font-semibold text-white">

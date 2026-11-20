@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DISH_NAME_FAQS, DISH_NAMES } from "@/app/lib/dish-names";
+import { DISH_NAME_FAQS, DISH_NAMES, DISH_REQUESTS, TAKEAWAY } from "@/app/lib/dish-names";
 import { KeepExploring } from "../keep-exploring";
 import { DishDecoder, UncleCallout } from "./dish-decoder";
 
@@ -49,6 +49,43 @@ export default function DishNamesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <DishDecoder />
       </div>
+
+      <section aria-labelledby="requests-heading" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="flex items-center gap-3">
+          <span className="h-px w-8 bg-sf-primary" aria-hidden />
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-sf-primary">Have it your way</p>
+        </div>
+        <h2 id="requests-heading" className="mt-3 text-3xl font-bold text-white">
+          How to ask for less rice, no chilli or takeaway
+        </h2>
+        <p className="mt-3 text-sf-muted leading-relaxed">
+          Every hawker expects small requests. Here is what to say at a Chinese stall and at a Malay or Indian one. They are
+          all built into the Show the uncle card: tap a request and it appears on screen in the right language.
+        </p>
+        <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10">
+          <table className="w-full border-collapse bg-[#1a1a1a] text-left text-sm">
+            <thead>
+              <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-sf-muted">
+                <th className="p-3 font-semibold">You want</th>
+                <th className="p-3 font-semibold">Chinese stall</th>
+                <th className="p-3 font-semibold">Malay / Indian stall</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/10">
+              {[...DISH_REQUESTS, { id: "takeaway", ...TAKEAWAY }].map((r) => (
+                <tr key={r.id}>
+                  <td className="p-2.5 font-semibold text-white sm:p-3">{r.en}</td>
+                  <td className="p-2.5 text-sf-cream/90 sm:p-3">
+                    <span lang="zh-Hans" className="text-lg font-bold text-sf-primary">{r.cn}</span>
+                    <span className="block text-xs text-sf-muted sm:ml-2 sm:inline sm:text-sm">{r.pinyin}</span>
+                  </td>
+                  <td className="p-2.5 text-sf-cream/90 sm:p-3" lang="ms">{r.ms}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <section aria-labelledby="dish-names-faq" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="flex items-center gap-3">
